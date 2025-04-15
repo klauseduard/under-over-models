@@ -4,7 +4,9 @@
 
 ### COCOMO (Constructive Cost Model)
 
-COCOMO is a well-known regression-based algorithmic technique used for estimating software costs. It employs the size of the project, typically measured in Kilo Source Lines of Code (KSLOC), along with a set of cost drivers, including 5 scale factors and 17 effort multipliers, to estimate the total effort required in person-months.
+[**COCOMO**](https://en.wikipedia.org/wiki/COCOMO) is a well-known [regression](https://en.wikipedia.org/wiki/Regression_analysis)-based algorithmic
+technique used for estimating software costs. It employs the size of the project, typically measured in Kilo Source Lines of Code (KSLOC), along
+with a set of cost drivers, including 5 scale factors and 17 effort multipliers, to estimate the total effort required in person-months.
 
 ```mermaid
 flowchart TD
@@ -15,6 +17,7 @@ flowchart TD
     E --> F[Person-Months]
 ```
 ```mermaid
+%%{init: {'theme': 'forest'}}%%
 flowchart TD
     subgraph "Scale Factors"
     SF1[Precedentedness]
@@ -35,15 +38,22 @@ flowchart TD
     end
 ```
 
-A potential limitation of COCOMO is that the values of its parameter coefficients are often constant for similar types of projects. This assumption of uniformity might lead to underfitting, as the model may fail to capture the significant variations that can exist between different organizations or even between different projects within the same organization.
+A potential limitation of COCOMO is that the values of its parameter coefficients are often constant for similar types of projects.
+This assumption of uniformity might lead to underfitting, as the model may fail to capture the significant variations that can
+exist between different organizations or even between different projects within the same organization.
 
 <!-- TODO: Add visualization of COCOMO estimation vs actual effort scatter plot -->
 
-The difficulty in establishing a single, universally applicable parametric model suggests an inherent risk of oversimplification. Research indicates that integrating COCOMO with Artificial Neural Networks (ANN) can yield improved results, implying that COCOMO's standalone model might not fully account for the complex relationships between its parameters.
+The difficulty in establishing a single, universally applicable parametric model suggests an inherent risk of oversimplification.
+Research indicates that
+[integrating COCOMO with Artificial Neural Networks (ANN)](https://www.researchgate.net/publication/386371108_ANN-based_software_cost_estimation_with_input_from_COCOMO_CANN_model)
+can yield improved results, implying that COCOMO's standalone model might not fully account for the complex relationships between its parameters.
 
 ### Function Points (FPs)
 
-Function Points offer a measure of software size that is independent of the programming language or implementation details. This method focuses on quantifying the functionality delivered to the customer by considering five user function types:
+[Function Points](https://en.wikipedia.org/wiki/Function_point) offer a measure of software size that is independent
+of the programming language or implementation details. This method focuses on quantifying the functionality delivered
+to the customer by considering five user function types:
 - External inputs
 - External outputs
 - External inquiries
@@ -52,30 +62,64 @@ Function Points offer a measure of software size that is independent of the prog
 
 Each is categorized by complexity and adjusted using 14 general system characteristics.
 
-
 ```mermaid
-mindmap
-  root((Function Points))
-    (External Inputs)
-      [Simple]
-      [Average]
-      [Complex]
-    (External Outputs)
-      [Simple]
-      [Average]
-      [Complex]
-    (External Inquiries)
-      [Simple]
-      [Average]
-      [Complex]
-    (Internal Logical Files)
-      [Simple]
-      [Average]
-      [Complex]
-    (External Interface Files)
-      [Simple]
-      [Average]
-      [Complex]
+flowchart LR
+    FP(["Function Points"])
+    
+    subgraph Inputs ["External Inputs"]
+        EI_S[Simple]
+        EI_A[Average]
+        EI_C[Complex]
+    end
+    
+    subgraph Outputs ["External Outputs"]
+        EO_S[Simple]
+        EO_A[Average]
+        EO_C[Complex]
+    end
+    
+    subgraph Inquiries ["External Inquiries"]
+        EQ_S[Simple]
+        EQ_A[Average]
+        EQ_C[Complex]
+    end
+    
+    subgraph ILFiles ["Internal Logical Files"]
+        ILF_S[Simple]
+        ILF_A[Average]
+        ILF_C[Complex]
+    end
+    
+    subgraph EIFiles ["External Interface Files"]
+        EIF_S[Simple]
+        EIF_A[Average]
+        EIF_C[Complex]
+    end
+    
+    FP --> Inputs
+    FP --> Outputs
+    FP --> Inquiries
+    FP --> ILFiles
+    FP --> EIFiles
+    
+    %% Styling
+    classDef default fill:#f9f9f9,stroke:#333,stroke-width:1px
+    classDef root fill:#f96,stroke:#333,stroke-width:3px,color:#000,font-weight:bold
+    classDef simple fill:#e1f5fe,stroke:#03a9f4,stroke-width:1px
+    classDef average fill:#e8f5e9,stroke:#4caf50,stroke-width:1px
+    classDef complex fill:#fff3e0,stroke:#ff9800,stroke-width:1px
+    
+    class FP root
+    class EI_S,EO_S,EQ_S,ILF_S,EIF_S simple
+    class EI_A,EO_A,EQ_A,ILF_A,EIF_A average
+    class EI_C,EO_C,EQ_C,ILF_C,EIF_C complex
+    
+    %% Subgraph styling
+    style Inputs fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
+    style Outputs fill:#e8eaf6,stroke:#3f51b5,stroke-width:2px
+    style Inquiries fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+    style ILFiles fill:#e0f2f1,stroke:#009688,stroke-width:2px
+    style EIFiles fill:#fce4ec,stroke:#e91e63,stroke-width:2px
 ```
 
 While aiming for an objective measure, the process of defining and weighting these function points involves a degree of subjectivity. This subjectivity, coupled with the risk of developing overly complex models based on limited data or chance occurrences, raises the potential for overfitting. Criticisms of Function Points include its "black box" view of the system, its potential lack of suitability for modern technologies, oversimplified complexity classifications, and the subjective nature of weight assignments [[38]]. These limitations suggest that estimations based on Function Points might become too specific to past projects or individual interpretations, potentially overfitting the data used to derive them and hindering generalization to new projects with different characteristics.
