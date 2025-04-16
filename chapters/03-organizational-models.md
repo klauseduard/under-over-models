@@ -150,35 +150,6 @@ The principle of seeking "simplicity on the far side of complexity" suggests tha
 - Maintain adaptability
 - Avoid impediments to organizational evolution
 
-```mermaid
-graph LR
-    subgraph "Journey to Simplified Complexity"
-        I[Initial Simplicity] --> 
-        C[Natural Complexity] --> 
-        M[Managed Complexity] --> 
-        E[Elegant Simplicity]
-        
-        subgraph "Characteristics"
-            C1[Basic Understanding]
-            C2[Complex Reality]
-            C3[Structured Approach]
-            C4[Refined Solutions]
-        end
-        
-        I --- C1
-        C --- C2
-        M --- C3
-        E --- C4
-    end
-    
-    style I fill:#FFB366
-    style C fill:#FF6B6B
-    style M fill:#FFB366
-    style E fill:#90EE90
-    style C1 fill:#FFB366
-    style C2 fill:#FF6B6B
-    style C3 fill:#FFB366
-    style C4 fill:#90EE90
-```
+![To simplified complexity](../images/simplify-complexity.svg)
 
 [Back to Table of Contents](../README.md) 
