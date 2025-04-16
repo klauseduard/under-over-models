@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Journey to Simplified Complexity</text>
+  
+  <!-- Main Flow Boxes -->
+  <rect x="100" y="100" width="150" height="60" rx="10" fill="#FFB366" stroke="#333" stroke-width="2"/>
+  <rect x="300" y="100" width="150" height="60" rx="10" fill="#FF6B6B" stroke="#333" stroke-width="2"/>
+  <rect x="500" y="100" width="150" height="60" rx="10" fill="#FFB366" stroke="#333" stroke-width="2"/>
+  <rect x="700" y="100" width="150" height="60" rx="10" fill="#90EE90" stroke="#333" stroke-width="2"/>
+  
+  <!-- Characteristics Boxes -->
+  <rect x="100" y="230" width="150" height="60" rx="10" fill="#FFB366" stroke="#333" stroke-width="2"/>
+  <rect x="300" y="230" width="150" height="60" rx="10" fill="#FF6B6B" stroke="#333" stroke-width="2"/>
+  <rect x="500" y="230" width="150" height="60" rx="10" fill="#FFB366" stroke="#333" stroke-width="2"/>
+  <rect x="700" y="230" width="150" height="60" rx="10" fill="#90EE90" stroke="#333" stroke-width="2"/>
+  
+  <!-- Main Flow Labels -->
+  <text x="175" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Initial Simplicity</text>
+  <text x="375" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Natural Complexity</text>
+  <text x="575" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Managed Complexity</text>
+  <text x="775" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Elegant Simplicity</text>
+  
+  <!-- Characteristics Labels -->
+  <text x="175" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Basic Understanding</text>
+  <text x="375" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Complex Reality</text>
+  <text x="575" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Structured Approach</text>
+  <text x="775" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Refined Solutions</text>
+  
+  <!-- Flow Arrows -->
+  <path d="M 250 130 L 300 130" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 450 130 L 500 130" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 650 130 L 700 130" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- Connecting Lines -->
+  <path d="M 175 160 L 175 230" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <path d="M 375 160 L 375 230" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <path d="M 575 160 L 575 230" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <path d="M 775 160 L 775 230" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  
+  <!-- Characteristics Label -->
+  <text x="450" y="215" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Characteristics</text>
+  
+  <!-- Arrow Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
