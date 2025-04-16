@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Main Concepts -->
+  <g id="main-concepts">
+    <!-- Simplicity Node -->
+    <circle cx="400" cy="100" r="50" fill="#ffffff" stroke="#555555" stroke-width="2"/>
+    <text x="400" y="105" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Simplicity</text>
+    
+    <!-- Arrow to Effectiveness -->
+    <path d="M400,150 L400,190" stroke="#555555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Effectiveness Node -->
+    <circle cx="400" cy="240" r="50" fill="#ffffff" stroke="#555555" stroke-width="2"/>
+    <text x="400" y="245" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Effectiveness</text>
+  </g>
+
+  <!-- Benefits Section - Left Side -->
+  <g id="benefits">
+    <!-- Benefits Header -->
+    <rect x="100" y="320" width="200" height="50" rx="10" ry="10" fill="#90EE90" stroke="#32CD32" stroke-width="2"/>
+    <text x="200" y="350" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Benefits</text>
+    
+    <!-- Benefit Items -->
+    <rect x="75" y="400" width="250" height="40" rx="8" ry="8" fill="#bcf5bc" stroke="#32CD32" stroke-width="1.5"/>
+    <text x="200" y="425" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Quick Decision Making</text>
+    
+    <rect x="75" y="450" width="250" height="40" rx="8" ry="8" fill="#bcf5bc" stroke="#32CD32" stroke-width="1.5"/>
+    <text x="200" y="475" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Clear Communication</text>
+    
+    <rect x="75" y="500" width="250" height="40" rx="8" ry="8" fill="#bcf5bc" stroke="#32CD32" stroke-width="1.5"/>
+    <text x="200" y="525" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Lower Overhead</text>
+    
+    <!-- Connection from Simplicity to Benefits -->
+    <path d="M365,135 Q250,220 200,320" stroke="#32CD32" stroke-width="2" fill="none" stroke-dasharray="5,3" marker-end="url(#arrowhead-green)"/>
+  </g>
+
+  <!-- Limitations Section - Right Side -->
+  <g id="limitations">
+    <!-- Limitations Header -->
+    <rect x="500" y="320" width="200" height="50" rx="10" ry="10" fill="#FFB366" stroke="#FF8000" stroke-width="2"/>
+    <text x="600" y="350" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold" fill="#333">Limitations</text>
+    
+    <!-- Limitation Items -->
+    <rect x="475" y="400" width="250" height="40" rx="8" ry="8" fill="#ffd1a3" stroke="#FF8000" stroke-width="1.5"/>
+    <text x="600" y="425" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Limited Flexibility</text>
+    
+    <rect x="475" y="450" width="250" height="40" rx="8" ry="8" fill="#ffd1a3" stroke="#FF8000" stroke-width="1.5"/>
+    <text x="600" y="475" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Reduced Specialization</text>
+    
+    <rect x="475" y="500" width="250" height="40" rx="8" ry="8" fill="#ffd1a3" stroke="#FF8000" stroke-width="1.5"/>
+    <text x="600" y="525" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Oversimplified Solutions</text>
+    
+    <!-- Connection from Simplicity to Limitations -->
+    <path d="M435,135 Q550,220 600,320" stroke="#FF8000" stroke-width="2" fill="none" stroke-dasharray="5,3" marker-end="url(#arrowhead-orange)"/>
+  </g>
+
+  <!-- Arrow Markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#32CD32"/>
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FF8000"/>
+    </marker>
+  </defs>
+</svg>
