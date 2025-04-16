@@ -141,7 +141,7 @@ Just as excessive complexity in software can hinder understanding, maintenance, 
 
 ### The Principle of Compensatory Misfits
 
-The theory of "[compensatory misfits]((https://www.researchgate.net/publication/256060653_Misfits_in_Organization_Design_Information_Processing_as_a_Compensatory_Mechanism))" suggests that an underfitting structure in one area might be offset by an overfitting structure in another . However, fundamentally, a model that is too simple will fail to capture the intricate relationships and dynamics necessary for optimal performance in a complex world.
+The theory of "[compensatory misfits](https://www.researchgate.net/publication/256060653_Misfits_in_Organization_Design_Information_Processing_as_a_Compensatory_Mechanism)" suggests that an underfitting structure in one area might be offset by an overfitting structure in another . However, fundamentally, a model that is too simple will fail to capture the intricate relationships and dynamics necessary for optimal performance in a complex world.
 
 ### Seeking Balance
 
