@@ -32,7 +32,7 @@ Organizations mirror dissipative systems through:
 - Input/output exchanges
 - Dynamic equilibrium maintenance
 
-*See also: Erich Jantsch, [The Theory of Dissipative Structures (1975)](https://www.panarchy.org/jantsch/dissipativestructures.html)*
+> See also: Erich Jantsch, [The Theory of Dissipative Structures (1975)](https://www.panarchy.org/jantsch/dissipativestructures.html). Jantsch’s essay applies [Ilya Prigogine](https://www.nobelprize.org/prizes/chemistry/1977/prigogine/facts/)’s “dissipative‑structure” physics to social and cultural evolution. In his view, human systems—cities, offices, nations—behave like far‑from‑equilibrium physical systems that spontaneously reorganize when hit by sufficiently strong fluctuations. This reframes “progress” as a cycle of instability → mutation → temporary order.
 
 ```mermaid
 flowchart TB
