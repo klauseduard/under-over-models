@@ -4,6 +4,8 @@
 
 The challenges in software project estimation are often exacerbated by the presence of a "[long tail](https://en.wikipedia.org/wiki/Long_tail)" distribution of risks. This concept, borrowed from statistics, describes a scenario where a large number of low-probability events can collectively have a significant impact.
 
+![Long tail](../images/long-tail.svg)
+
 ### Common vs. Long-tail Risks
 ![Risk_distribution_in_software_projects](../images/risk_distribution_in_sw_projects.svg)
 
@@ -22,9 +24,9 @@ Just as an underfit machine learning model fails to capture the full variability
 
 ### Core Concepts
 A dissipative system is characterized by:
-- Open system properties
+- [Open system](https://en.wikipedia.org/wiki/Open_system_(systems_theory)) properties
 - Energy and matter exchange with environment
-- Operation far from thermodynamic equilibrium
+- Operation far from  [thermodynamic equilibrium](https://www.britannica.com/science/thermodynamic-equilibrium)
 
 ### Organizational Parallels
 Organizations mirror dissipative systems through:
@@ -113,6 +115,7 @@ graph LR
 Organizations must navigate between:
 - Oversimplification (underfitting)
 - Excessive specialization (overfitting)
+
 While maintaining:
 - Operational efficiency
 - Adaptive capacity
