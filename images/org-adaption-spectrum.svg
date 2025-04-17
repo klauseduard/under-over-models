@@ -1,1 +1,75 @@
-
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#ffffff" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Organizational Adaptation Spectrum</text>
+  <text x="400" y="70" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#666">Balance Between Stability and Change</text>
+  
+  <!-- Main Spectrum Arrow -->
+  <line x1="100" y1="150" x2="700" y2="150" stroke="#555" stroke-width="3" />
+  <polygon points="695,145 705,150 695,155" fill="#555"/>
+  
+  <!-- Main Categories -->
+  <circle cx="200" cy="150" r="20" fill="#9e9e9e" stroke="#555" stroke-width="1.5"/>
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">R</text>
+  <text x="200" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#555">Rigid</text>
+  
+  <circle cx="400" cy="150" r="20" fill="#78909c" stroke="#555" stroke-width="1.5"/>
+  <text x="400" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">B</text>
+  <text x="400" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#555">Balanced</text>
+  
+  <circle cx="600" cy="150" r="20" fill="#9e9e9e" stroke="#555" stroke-width="1.5"/>
+  <text x="600" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">C</text>
+  <text x="600" y="185" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#555">Chaotic</text>
+  
+  <!-- Underfitting Section -->
+  <rect x="100" y="210" width="200" height="160" rx="10" ry="10" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="200" y="235" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#424242">Underfitting</text>
+  
+  <rect x="120" y="250" width="160" height="35" rx="5" ry="5" fill="#bdbdbd" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="200" y="273" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Static Processes</text>
+  
+  <rect x="120" y="295" width="160" height="35" rx="5" ry="5" fill="#bdbdbd" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="200" y="318" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Limited Adaptation</text>
+  
+  <rect x="120" y="340" width="160" height="35" rx="5" ry="5" fill="#a5d6a7" stroke="#81c784" stroke-width="1"/>
+  <text x="200" y="363" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">High Stability</text>
+  
+  <!-- Optimal Section -->
+  <rect x="310" y="210" width="180" height="160" rx="10" ry="10" fill="#e3f2fd" stroke="#bbdefb" stroke-width="2"/>
+  <text x="400" y="235" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565c0">Optimal</text>
+  
+  <rect x="320" y="250" width="160" height="35" rx="5" ry="5" fill="#90caf9" stroke="#64b5f6" stroke-width="1"/>
+  <text x="400" y="273" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Dynamic Balance</text>
+  
+  <rect x="320" y="295" width="160" height="35" rx="5" ry="5" fill="#90caf9" stroke="#64b5f6" stroke-width="1"/>
+  <text x="400" y="318" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Controlled Change</text>
+  
+  <rect x="320" y="340" width="160" height="35" rx="5" ry="5" fill="#90caf9" stroke="#64b5f6" stroke-width="1"/>
+  <text x="400" y="363" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Sustainable Growth</text>
+  
+  <!-- Overfitting Section -->
+  <rect x="500" y="210" width="200" height="160" rx="10" ry="10" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2"/>
+  <text x="600" y="235" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#424242">Overfitting</text>
+  
+  <rect x="520" y="250" width="160" height="35" rx="5" ry="5" fill="#bdbdbd" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="600" y="273" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Constant Change</text>
+  
+  <rect x="520" y="295" width="160" height="35" rx="5" ry="5" fill="#bdbdbd" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="600" y="318" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Unstable Systems</text>
+  
+  <rect x="520" y="340" width="160" height="35" rx="5" ry="5" fill="#bdbdbd" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="600" y="363" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Resource Drain</text>
+  
+  <!-- Connecting Lines -->
+  <line x1="200" y1="170" x2="200" y2="210" stroke="#666" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="400" y1="170" x2="400" y2="210" stroke="#666" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <line x1="600" y1="170" x2="600" y2="210" stroke="#666" stroke-width="1.5" stroke-dasharray="4,2"/>
+  
+  <!-- Explanatory Labels -->
+  <rect x="150" y="400" width="500" height="70" rx="8" ry="8" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="400" y="425" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Adaptation Balance:</text>
+  <text x="400" y="450" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Organizations must find an optimal balance between stability and change.</text>
+  <text x="400" y="470" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Too rigid (underfitting) or too chaotic (overfitting) both lead to suboptimal outcomes.</text>
+</svg>
