@@ -65,16 +65,4 @@
   <path d="M 395,295 L 375,295 L 375,270" fill="none" stroke="#666" stroke-width="1.5"/>
   <polygon points="370,275 375,265 380,275" fill="#666"/>
   
-  <!-- Legend -->
-  <rect x="150" y="470" width="14" height="14" rx="2" ry="2" fill="#5b9bd5"/>
-  <text x="170" y="483" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Input/Output Processes</text>
-  
-  <rect x="150" y="490" width="14" height="14" rx="2" ry="2" fill="#ed7d31"/>
-  <text x="170" y="503" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Internal Processes</text>
-  
-  <rect x="330" y="470" width="14" height="14" rx="2" ry="2" fill="#fbc280"/>
-  <text x="350" y="483" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Self-Organization Processes</text>
-  
-  <rect x="330" y="490" width="14" height="14" rx="2" ry="2" fill="#f0f7fa"/>
-  <text x="350" y="503" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">External Environment</text>
 </svg>
