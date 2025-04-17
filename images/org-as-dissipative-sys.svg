@@ -1,0 +1,80 @@
+<svg viewBox="0 0 600 550" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="550" fill="#ffffff" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Organization as a Dissipative System</text>
+  <text x="300" y="50" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">Energy and Information Flow Through Organizational Boundaries</text>
+  
+  <!-- Environment (circular border) -->
+  <ellipse cx="300" cy="275" rx="250" ry="180" fill="#f0f7fa" stroke="#cce3f0" stroke-width="2"/>
+  <text x="300" y="120" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Environment</text>
+  <text x="300" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Environment</text>
+  
+  <!-- Organization Container -->
+  <rect x="175" y="150" width="250" height="250" rx="10" ry="10" fill="#ffffff" stroke="#949494" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="300" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555">Organization</text>
+  
+  <!-- Main Process Flow -->
+  <!-- Input Processing -->
+  <rect x="225" y="180" width="150" height="40" rx="6" ry="6" fill="#5b9bd5" stroke="#2a5db0" stroke-width="1.5"/>
+  <text x="300" y="205" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Input Processing</text>
+  
+  <!-- Internal Processes -->
+  <rect x="225" y="250" width="150" height="40" rx="6" ry="6" fill="#ed7d31" stroke="#c65911" stroke-width="1.5"/>
+  <text x="300" y="275" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Internal Processes</text>
+  
+  <!-- Output Generation -->
+  <rect x="225" y="320" width="150" height="40" rx="6" ry="6" fill="#5b9bd5" stroke="#2a5db0" stroke-width="1.5"/>
+  <text x="300" y="345" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">Output Generation</text>
+  
+  <!-- Self-Organization Container and Components -->
+  <rect x="395" y="220" width="130" height="110" rx="8" ry="8" fill="#f2eafa" stroke="#d9c3f3" stroke-width="1.5"/>
+  <text x="460" y="240" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#6b3fa0">Self-Organization</text>
+  
+  <rect x="405" y="250" width="110" height="25" rx="5" ry="5" fill="#fbc280" stroke="#e89d45" stroke-width="1"/>
+  <text x="460" y="267" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">Adaptation</text>
+  
+  <rect x="405" y="280" width="110" height="25" rx="5" ry="5" fill="#fbc280" stroke="#e89d45" stroke-width="1"/>
+  <text x="460" y="297" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">Learning</text>
+  
+  <rect x="405" y="310" width="110" height="25" rx="5" ry="5" fill="#fbc280" stroke="#e89d45" stroke-width="1"/>
+  <text x="460" y="327" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333" text-anchor="middle">Evolution</text>
+  
+  <!-- Flow Arrows -->
+  <!-- Environment to Input -->
+  <path d="M 300,140 L 300,180" fill="none" stroke="#666" stroke-width="1.5"/>
+  <polygon points="295,170 300,180 305,170" fill="#666"/>
+  
+  <!-- Input to Internal -->
+  <path d="M 300,220 L 300,250" fill="none" stroke="#666" stroke-width="1.5"/>
+  <polygon points="295,240 300,250 305,240" fill="#666"/>
+  
+  <!-- Internal to Output -->
+  <path d="M 300,290 L 300,320" fill="none" stroke="#666" stroke-width="1.5"/>
+  <polygon points="295,310 300,320 305,310" fill="#666"/>
+  
+  <!-- Output to Environment -->
+  <path d="M 300,360 L 300,400" fill="none" stroke="#666" stroke-width="1.5"/>
+  <polygon points="295,390 300,400 305,390" fill="#666"/>
+  
+  <!-- Connection between Internal Processes and Self-Organization -->
+  <path d="M 375,270 L 395,270" fill="none" stroke="#666" stroke-width="1.5"/>
+  <polygon points="385,265 395,270 385,275" fill="#666"/>
+  
+  <path d="M 395,295 L 375,295 L 375,270" fill="none" stroke="#666" stroke-width="1.5"/>
+  <polygon points="370,275 375,265 380,275" fill="#666"/>
+  
+  <!-- Legend -->
+  <rect x="150" y="470" width="14" height="14" rx="2" ry="2" fill="#5b9bd5"/>
+  <text x="170" y="483" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Input/Output Processes</text>
+  
+  <rect x="150" y="490" width="14" height="14" rx="2" ry="2" fill="#ed7d31"/>
+  <text x="170" y="503" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Internal Processes</text>
+  
+  <rect x="330" y="470" width="14" height="14" rx="2" ry="2" fill="#fbc280"/>
+  <text x="350" y="483" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Self-Organization Processes</text>
+  
+  <rect x="330" y="490" width="14" height="14" rx="2" ry="2" fill="#f0f7fa"/>
+  <text x="350" y="503" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">External Environment</text>
+</svg>
