@@ -70,7 +70,7 @@ Successful organizations need to:
    - Self-organization
    - Adjustment
 
-![Organizational Adaptation Spectrum](org-adaption-spectrum.svg)
+![Organizational Adaptation Spectrum](../images/org-adaption-spectrum.svg)
 
 ### Avoiding Extremes
 Organizations must navigate between:
