@@ -1,1 +1,64 @@
-
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#ffffff" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="300" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">The Long Tail Distribution</text>
+  
+  <!-- Axes -->
+  <line x1="70" y1="320" x2="550" y2="320" stroke="#333" stroke-width="2" />
+  <line x1="70" y1="60" x2="70" y2="320" stroke="#333" stroke-width="2" />
+  
+  <!-- Axis Labels -->
+  <text x="310" y="355" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Items (Ranked by Popularity)</text>
+  <text x="30" y="190" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" transform="rotate(-90,30,190)">Frequency/Popularity</text>
+  
+  <!-- The Long Tail Curve -->
+  <path d="M 70,70 C 110,70 140,120 170,160 S 210,220 240,240 S 290,270 330,290 S 380,305 430,312 S 480,317 530,318" 
+        fill="none" stroke="#1E88E5" stroke-width="3"/>
+  
+  <!-- Area Under Curve -->
+  <path d="M 70,70 C 110,70 140,120 170,160 S 210,220 240,240 S 290,270 330,290 S 380,305 430,312 S 480,317 530,318 L 530,320 L 70,320 Z" 
+        fill="url(#gradient)" fill-opacity="0.7"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#42a5f5" />
+      <stop offset="20%" stop-color="#42a5f5" />
+      <stop offset="20.1%" stop-color="#ff9800" />
+      <stop offset="100%" stop-color="#ff9800" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Head and Tail Division Line -->
+  <line x1="170" y1="60" x2="170" y2="320" stroke="#666" stroke-width="1.5" stroke-dasharray="5,3" />
+  
+  <!-- Head and Tail Labels -->
+  <text x="120" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1565C0" text-anchor="middle">HEAD</text>
+  <text x="320" y="240" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#E65100" text-anchor="middle">LONG TAIL</text>
+  
+  <!-- Percentage Areas -->
+  <rect x="80" y="200" width="80" height="25" rx="4" ry="4" fill="#1565C0" fill-opacity="0.8"/>
+  <text x="120" y="217" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">20% of Items</text>
+  
+  <rect x="320" y="270" width="80" height="25" rx="4" ry="4" fill="#E65100" fill-opacity="0.8"/>
+  <text x="360" y="287" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">80% of Items</text>
+  
+  <!-- Key Data Points Circles -->
+  <circle cx="100" cy="70" r="4" fill="#1565C0" stroke="#fff" stroke-width="1" />
+  <circle cx="350" cy="290" r="4" fill="#E65100" stroke="#fff" stroke-width="1" />
+  <circle cx="500" cy="315" r="4" fill="#E65100" stroke="#fff" stroke-width="1" />
+  
+  <!-- Explanatory Labels -->
+  <text x="115" y="145" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">High-frequency</text>
+  <text x="115" y="160" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">few items</text>
+  
+  <text x="320" y="200" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">Low-frequency</text>
+  <text x="320" y="215" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">many items</text>
+  
+  <!-- Statistical Distribution Note -->
+  <rect x="120" y="330" width="360" height="50" rx="5" ry="5" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="300" y="350" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">A power law distribution where a small number of items</text>
+  <text x="300" y="370" font-family="Arial, sans-serif" font-size="12" fill="#333" text-anchor="middle">occur at high frequency, and many items occur at low frequency</text>
+</svg>
