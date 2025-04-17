@@ -34,41 +34,8 @@ Organizations mirror dissipative systems through:
 
 > See also: Erich Jantsch, [The Theory of Dissipative Structures (1975)](https://www.panarchy.org/jantsch/dissipativestructures.html). Jantsch’s essay applies [Ilya Prigogine](https://www.nobelprize.org/prizes/chemistry/1977/prigogine/facts/)’s “dissipative‑structure” physics to social and cultural evolution. In his view, human systems—cities, offices, nations—behave like far‑from‑equilibrium physical systems that spontaneously reorganize when hit by sufficiently strong fluctuations. This reframes “progress” as a cycle of instability → mutation → temporary order.
 
-```mermaid
-flowchart TB
-    subgraph "Organization as Dissipative System"
 
-        direction TB
-        
-        E[Environment]
-        
-        subgraph "Organization"
-            I[Input Processing] --> 
-            P[Internal Processes] --> 
-            O[Output Generation]
-            
-            subgraph "Self-Organization"
-                S1[Adaptation]
-                S2[Learning]
-                S3[Evolution]
-            end
-            
-            P <--> S1
-            P <--> S2
-            P <--> S3
-        end
-        
-        E --> I
-        O --> E
-    end
-    
-    style I fill:#90EE90
-    style P fill:#FFB366
-    style O fill:#90EE90
-    style S1 fill:#FFB366
-    style S2 fill:#FFB366
-    style S3 fill:#FFB366
-```
+![Organization as Dissipative System](../images/org-as-dissipative-sys.svg)
 
 ### Self-Organization and Complexity
 The theory suggests that:
