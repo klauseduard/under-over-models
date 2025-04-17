@@ -45,8 +45,6 @@ The theory suggests that:
 
 ### Implications for Organizational Models
 
-- ["A unified open systems model for explaining organisational change"](https://core.ac.uk/download/pdf/36992804.pdf)
-
 #### Underfitting Risks
 Organizations that become too rigid and standardized may:
 - Fail to adapt to dynamic changes
@@ -58,6 +56,8 @@ Organizations that are excessively complex and tightly coupled might:
 - Lack flexibility
 - Struggle with unexpected disruptions
 - Become too specialized for their environment
+
+> See also: ["A unified open systems model for explaining organisational change"](https://core.ac.uk/download/pdf/36992804.pdf). The paper proposes a model that fuses two classic perspectives on organisational change: the traditional open‑systems/homeostatic view that explains gradual, adaptive shifts, and the dissipative/non‑equilibrium view (borrowed from Prigogine) that explains rare, disruptive transformations. By stitching the two together the authors argue we can describe the full cycle of organisational evolution—from small process tweaks to culture‑level upheavals—within the same conceptual frame.
 
 ### Balance Through Dissipative Systems Principles
 Successful organizations need to:
