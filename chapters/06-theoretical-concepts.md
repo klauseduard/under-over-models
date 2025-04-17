@@ -70,46 +70,7 @@ Successful organizations need to:
    - Self-organization
    - Adjustment
 
-```mermaid
-graph LR
-    subgraph "Organizational Adaptation Spectrum"
-        direction LR
-        
-        R[Rigid] --> B[Balanced] --> C[Chaotic]
-        
-        subgraph "Underfitting"
-            U1[Static Processes]
-            U2[Limited Adaptation]
-            U3[High Stability]
-        end
-        
-        subgraph "Optimal"
-            O1[Dynamic Balance]
-            O2[Controlled Change]
-            O3[Sustainable Growth]
-        end
-        
-        subgraph "Overfitting"
-            V1[Constant Change]
-            V2[Unstable Systems]
-            V3[Resource Drain]
-        end
-        
-        R --- U1
-        B --- O1
-        C --- V1
-    end
-    
-    style U1 fill:#FF6B6B
-    style U2 fill:#FF6B6B
-    style U3 fill:#FFB366
-    style O1 fill:#90EE90
-    style O2 fill:#90EE90
-    style O3 fill:#90EE90
-    style V1 fill:#FF6B6B
-    style V2 fill:#FF6B6B
-    style V3 fill:#FF6B6B
-```
+![Organizational Adaptation Spectrum](org-adaption-spectrum.svg)
 
 ### Avoiding Extremes
 Organizations must navigate between:
@@ -120,19 +81,5 @@ While maintaining:
 - Operational efficiency
 - Adaptive capacity
 - Long-term sustainability
-
-## 6.3 Theoretical Integration
-
-The combination of long-tail risk theory and dissipative systems theory provides:
-- Comprehensive framework for understanding organizational complexity
-- Insights into balancing stability and adaptation
-- Guidelines for avoiding both underfitting and overfitting in organizational models
-
-### Practical Applications
-Organizations can use these theoretical frameworks to:
-1. Design more resilient structures
-2. Develop better risk management strategies
-3. Create adaptive yet stable processes
-4. Balance standardization with flexibility
 
 [Back to Table of Contents](../README.md)
