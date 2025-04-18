@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#333333">
+    Organizational Complexity: Manifestations and Outcomes
+  </text>
+  
+  <!-- Flow diagram container -->
+  <g transform="translate(50, 70)">
+    <!-- Section backgrounds -->
+    <rect x="0" y="0" width="720" height="130" rx="10" fill="#fff4e0" fill-opacity="0.6" stroke="#e0e0e0" stroke-width="1"/>
+    <rect x="0" y="140" width="720" height="130" rx="10" fill="#e8f5e9" fill-opacity="0.6" stroke="#e0e0e0" stroke-width="1"/>
+    <rect x="0" y="280" width="720" height="130" rx="10" fill="#ffebee" fill-opacity="0.6" stroke="#e0e0e0" stroke-width="1"/>
+    
+    <!-- Section titles -->
+    <text x="20" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#d68910">Underfitting (High Bias)</text>
+    <text x="20" y="170" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2e7d32">Optimal Complexity</text>
+    <text x="20" y="310" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#c62828">Overfitting (High Variance)</text>
+    
+    <!-- Characteristic boxes - Underfitting -->
+    <g transform="translate(50, 50)">
+      <rect x="0" y="0" width="150" height="60" rx="5" fill="#ffd54f" fill-opacity="0.3" stroke="#e0c03f" stroke-width="1"/>
+      <text x="75" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Overly Centralized</text>
+      <text x="75" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Decision-Making</text>
+      
+      <rect x="170" y="0" width="150" height="60" rx="5" fill="#ffd54f" fill-opacity="0.3" stroke="#e0c03f" stroke-width="1"/>
+      <text x="245" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Too Few</text>
+      <text x="245" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Communication Channels</text>
+      
+      <rect x="340" y="0" width="150" height="60" rx="5" fill="#ffd54f" fill-opacity="0.3" stroke="#e0c03f" stroke-width="1"/>
+      <text x="415" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">One-Size-Fits-All</text>
+      <text x="415" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Approaches</text>
+      
+      <rect x="510" y="0" width="150" height="60" rx="5" fill="#ffd54f" fill-opacity="0.3" stroke="#e0c03f" stroke-width="1"/>
+      <text x="585" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Missing Critical</text>
+      <text x="585" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Processes</text>
+    </g>
+    
+    <!-- Characteristic boxes - Optimal -->
+    <g transform="translate(50, 190)">
+      <rect x="0" y="0" width="150" height="60" rx="5" fill="#81c784" fill-opacity="0.3" stroke="#5ba75e" stroke-width="1"/>
+      <text x="75" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Balanced Decision</text>
+      <text x="75" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Authority</text>
+      
+      <rect x="170" y="0" width="150" height="60" rx="5" fill="#81c784" fill-opacity="0.3" stroke="#5ba75e" stroke-width="1"/>
+      <text x="245" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Effective</text>
+      <text x="245" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Communication</text>
+      
+      <rect x="340" y="0" width="150" height="60" rx="5" fill="#81c784" fill-opacity="0.3" stroke="#5ba75e" stroke-width="1"/>
+      <text x="415" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Context-Sensitive</text>
+      <text x="415" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Approaches</text>
+      
+      <rect x="510" y="0" width="150" height="60" rx="5" fill="#81c784" fill-opacity="0.3" stroke="#5ba75e" stroke-width="1"/>
+      <text x="585" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Adaptable</text>
+      <text x="585" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Processes</text>
+    </g>
+    
+    <!-- Characteristic boxes - Overfitting -->
+    <g transform="translate(50, 330)">
+      <rect x="0" y="0" width="150" height="60" rx="5" fill="#ef9a9a" fill-opacity="0.3" stroke="#d77979" stroke-width="1"/>
+      <text x="75" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Excessive</text>
+      <text x="75" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Bureaucracy</text>
+      
+      <rect x="170" y="0" width="150" height="60" rx="5" fill="#ef9a9a" fill-opacity="0.3" stroke="#d77979" stroke-width="1"/>
+      <text x="245" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Too Many</text>
+      <text x="245" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Approval Layers</text>
+      
+      <rect x="340" y="0" width="150" height="60" rx="5" fill="#ef9a9a" fill-opacity="0.3" stroke="#d77979" stroke-width="1"/>
+      <text x="415" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Over-</text>
+      <text x="415" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Specialization</text>
+      
+      <rect x="510" y="0" width="150" height="60" rx="5" fill="#ef9a9a" fill-opacity="0.3" stroke="#d77979" stroke-width="1"/>
+      <text x="585" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Rigid, Inflexible</text>
+      <text x="585" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Processes</text>
+    </g>
+    
+
+  </g>
+</svg> 

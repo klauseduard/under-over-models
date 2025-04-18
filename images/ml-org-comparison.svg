@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#333333">
+    Machine Learning Models vs. Organizational Models
+  </text>
+  
+  <!-- Comparison diagram container -->
+  <g transform="translate(100, 80)">
+    <!-- Section backgrounds -->
+    <rect x="0" y="0" width="250" height="340" rx="10" fill="#e3f2fd" fill-opacity="0.6" stroke="#90caf9" stroke-width="1"/>
+    <rect x="350" y="0" width="250" height="340" rx="10" fill="#f3e5f5" fill-opacity="0.6" stroke="#ce93d8" stroke-width="1"/>
+    
+    <!-- Section titles -->
+    <text x="125" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1976d2" text-anchor="middle">Machine Learning Models</text>
+    <text x="475" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7b1fa2" text-anchor="middle">Organizational Models</text>
+
+    <!-- Connecting line -->
+    <g>
+      <line x1="250" y1="170" x2="350" y2="170" stroke="#666666" stroke-width="2" stroke-dasharray="5,5"/>
+      <text x="300" y="140" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666666">Analogous</text>
+      <text x="300" y="160" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666666">Concepts</text>
+    </g>
+    
+    <!-- ML Model comparison items -->
+    <g>
+      <!-- Underfitting -->
+      <rect x="25" y="60" width="200" height="60" rx="5" fill="#FF6B6B" fill-opacity="0.2" stroke="#FF6B6B" stroke-width="1"/>
+      <text x="125" y="85" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333333">Underfitting</text>
+      <text x="125" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Too Simple</text>
+      
+      <!-- Good Fit -->
+      <rect x="25" y="140" width="200" height="60" rx="5" fill="#90EE90" fill-opacity="0.3" stroke="#90EE90" stroke-width="1"/>
+      <text x="125" y="165" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333333">Good Fit</text>
+      <text x="125" y="185" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Balanced</text>
+      
+      <!-- Overfitting -->
+      <rect x="25" y="220" width="200" height="60" rx="5" fill="#FF6B6B" fill-opacity="0.2" stroke="#FF6B6B" stroke-width="1"/>
+      <text x="125" y="245" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333333">Overfitting</text>
+      <text x="125" y="265" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Too Complex</text>
+      
+      <!-- Properties -->
+      <rect x="25" y="300" width="200" height="30" rx="5" fill="#e3f2fd" fill-opacity="0.8" stroke="#90caf9" stroke-width="1"/>
+      <text x="125" y="320" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-style="italic" fill="#333333">Predictive Accuracy</text>
+    </g>
+    
+    <!-- Organizational Model comparison items -->
+    <g>
+      <!-- Oversimplified -->
+      <rect x="375" y="60" width="200" height="60" rx="5" fill="#FF6B6B" fill-opacity="0.2" stroke="#FF6B6B" stroke-width="1"/>
+      <text x="475" y="85" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333333">Oversimplified</text>
+      <text x="475" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Missing Key Details</text>
+      
+      <!-- Well-Balanced -->
+      <rect x="375" y="140" width="200" height="60" rx="5" fill="#90EE90" fill-opacity="0.3" stroke="#90EE90" stroke-width="1"/>
+      <text x="475" y="165" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333333">Well-Balanced</text>
+      <text x="475" y="185" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Effective &amp; Adaptable</text>
+      
+      <!-- Over-engineered -->
+      <rect x="375" y="220" width="200" height="60" rx="5" fill="#FF6B6B" fill-opacity="0.2" stroke="#FF6B6B" stroke-width="1"/>
+      <text x="475" y="245" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333333">Over-engineered</text>
+      <text x="475" y="265" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Brittle &amp; Unwieldy</text>
+      
+      <!-- Properties -->
+      <rect x="375" y="300" width="200" height="30" rx="5" fill="#f3e5f5" fill-opacity="0.8" stroke="#ce93d8" stroke-width="1"/>
+      <text x="475" y="320" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-style="italic" fill="#333333">Operational Effectiveness</text>
+    </g>
+  </g>
+  
+  <!-- Bottom caption -->
+  <text x="400" y="450" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#555555">
+    Both domains require balancing simplicity and complexity for optimal performance
+  </text>
+</svg> 
