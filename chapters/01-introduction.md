@@ -1,4 +1,11 @@
 # 1. Introduction
+
+## Table of Contents
+- [1.1 Understanding Underfitting and Overfitting](#underfitting-and-overfitting)
+- [1.2 Purpose and Scope](#purpose-and-scope)
+- [1.3 Core Analogy](#core-analogy)
+- [1.4 Manifestations in Practice](#manifestations-in-practice)
+
 This work explores how the concepts of overfitting and underfitting, originally from machine learning and
 mathematical modeling, can offer valuable insights into challenges faced in organizational structures and
 software development processes. Drawing on my background in software engineering, I use these concepts as
@@ -10,6 +17,8 @@ tension: balancing simplicity and complexity. Insights from one field can often 
 in the other.
 
 ***
+
+## <a id="underfitting-and-overfitting"></a>1.1 Understanding Underfitting and Overfitting
 
 In the realm of machine learning and general modeling, the concepts of
 [underfitting and overfitting](https://www.ibm.com/think/topics/overfitting-vs-underfitting) represent two
@@ -36,7 +45,7 @@ specific intricacies of the training set, including its irrelevant information, 
 real-world applications. The key challenge is to strike a balance, creating a model complex enough to capture essential
 patterns without learning the noise.
 
-## Purpose and Scope
+## <a id="purpose-and-scope"></a>1.2 Purpose and Scope
 
 This series of chapters aims to apply these machine learning concepts as analogies to describe phenomena in software
 development models (specifically **time estimation**, which functions as a predictive model forecasting duration,
@@ -61,7 +70,7 @@ Underpinning some of these explorations will be ideas related to [system dynamic
 [feedback](https://en.wikipedia.org/wiki/Feedback), and adaptation, drawing inspiration from fields like [cybernetics](https://en.wikipedia.org/wiki/Cybernetics) to better
 understand how these systems regulate themselves and interact with their environment.
 
-## Core Analogy
+## <a id="core-analogy"></a>1.3 Core Analogy
 
 The fundamental idea behind the core analogy is that both machine learning models and models in software development and
 organizational design are attempts to represent complex realities. Organizational structures, often depicted as charts
@@ -84,6 +93,8 @@ models</figcaption> </figure>
 <br/><br/>
 
 ***
+
+## <a id="manifestations-in-practice"></a>1.4 Manifestations in Practice
 
 <figure> <img src="../images/organization-complexity-flow.svg" alt="Manifestations of underfitting and overfitting in
 organizational decision-making processes" width="700" /> <figcaption>Figure 1.3: Real-world manifestations of
