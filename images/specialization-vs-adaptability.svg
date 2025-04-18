@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">Specialization vs Adaptability Trade-off</text>
+  
+  <!-- Matrix container -->
+  <rect x="150" y="100" width="500" height="380" fill="white" stroke="#e6e6e6" stroke-width="1" rx="0" ry="0"/>
+  
+  <!-- Axes -->
+  <line x1="150" y1="480" x2="650" y2="480" stroke="#777" stroke-width="1.5"/>
+  <line x1="150" y1="480" x2="150" y2="100" stroke="#777" stroke-width="1.5"/>
+  
+  <!-- Axes labels -->
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#555">Specialization Level</text>
+  <text x="80" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#555">Adaptability</text>
+  
+  <!-- Axes indicators -->
+  <text x="150" y="500" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#777">Low</text>
+  <text x="650" y="500" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#777">High</text>
+  <text x="130" y="480" font-family="Arial, sans-serif" font-size="11" text-anchor="end" fill="#777">Low</text>
+  <text x="130" y="100" font-family="Arial, sans-serif" font-size="11" text-anchor="end" fill="#777">High</text>
+  
+  <!-- Trade-off curve -->
+  <path d="M 150 120 C 250 130, 350 200, 450 280 C 550 380, 600 450, 650 460" 
+        fill="none" stroke="#3f51b5" stroke-width="2.5"/>
+  
+  <!-- Organization types - just the markers and labels, no extra boxes -->
+  <circle cx="550" cy="300" r="8" fill="#e53935" fill-opacity="0.9"/>
+  <text x="550" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#e53935">Small,</text>
+  <text x="550" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#e53935">Specialized Firms</text>
+  
+  <circle cx="250" cy="370" r="8" fill="#43a047" fill-opacity="0.9"/>
+  <text x="250" y="350" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#43a047">Large</text>
+  <text x="250" y="335" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#43a047">Corporations</text>
+  
+  <circle cx="400" cy="240" r="8" fill="#ff9800" fill-opacity="0.9"/>
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ff9800">Optimal</text>
+  <text x="400" y="205" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ff9800">Balance</text>
+  
+  <!-- Key characteristics - simplified at the bottom -->
+  <rect x="150" y="530" width="500" height="60" rx="0" ry="0" fill="#f9f9f9" stroke="#e6e6e6" stroke-width="1"/>
+  
+  <circle cx="180" y="550" r="4" fill="#e53935"/>
+  <text x="190" y="554" font-family="Arial, sans-serif" font-size="12" fill="#333">Small, Specialized: High expertise in niche areas, limited scope, scaling challenges</text>
+  
+  <circle cx="180" y="570" r="4" fill="#43a047"/>
+  <text x="190" y="574" font-family="Arial, sans-serif" font-size="12" fill="#333">Large Corporations: Standardized processes, broad coverage, better adaptability to diverse projects</text>
+  
+  <!-- Annotations for curve -->
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#3f51b5">As specialization increases, adaptability typically decreases</text>
+  
+  <!-- Highlighting optimal zone - subtle -->
+  <path d="M 320 220 C 350 210, 380 200, 420 200 C 450 210, 470 220, 480 250" 
+        fill="none" stroke="#ff9800" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ff9800">Balanced approach: Core standardization with flexibility for specific needs</text>
+</svg>
