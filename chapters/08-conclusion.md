@@ -148,6 +148,6 @@ Success requires:
 - Managing complexity without sacrificing capability
 - Understanding domain-specific requirements
 
-The right level of complexity is often domain-dependent, and strategies like modular design can be crucial for navigating these trade-offs in highly specialized fields.
+The right level of complexity is often domain-dependent. Strategies like modular design or Domain-Driven Design patterns (such as **Bounded Contexts**) can be crucial for navigating these trade-offs in highly specialized fields. Success requires acknowledging the powerful influence of organizational communication structures on system design (**Conway's Law**) and potentially leveraging this by proactively shaping team structures to foster desired architectures (the **Inverse Conway Maneuver**).
 
 [Back to Table of Contents](../README.md)

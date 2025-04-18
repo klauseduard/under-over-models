@@ -32,7 +32,7 @@ The fundamental idea behind this analogy is that both machine learning models an
 attempts to represent complex realities. Organizational structures, often depicted as charts or processes, are simplified representations of complex social systems. Similarly, software time estimation functions as a predictive model forecasting outcomes based on available information.
 
 Just as a machine learning model needs to strike a balance between capturing the underlying signal and not fitting the noise in data, software development models and organizational structures must balance simplicity and complexity to effectively
-represent and operate within their respective domains.
+represent and operate within their respective domains. Approaches like **Domain-Driven Design (DDD)**, particularly relevant in the software context explored in this report, offer specific strategies and patterns focused on managing domain complexity to achieve this balance. Furthermore, the inherent relationship between an organization's communication structure and the design of the systems it creates, often referred to as **Conway's Law**, provides a critical lens for understanding how organizational models directly impact software architecture, a theme explored within this report.
 
 ```mermaid
 graph TB

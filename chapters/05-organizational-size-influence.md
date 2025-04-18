@@ -196,7 +196,19 @@ The "overfitting" to a narrow area of expertise can:
 
 ![Specialization vs adaptability](../images/specialization-vs-adaptability.svg)
 
-## 5.3 Finding the Right Balance
+## 5.3 DDD and Managing Complexity at Scale
+
+As organizations grow, communication overhead and the complexity of their business domains and software systems increase substantially. This scaling challenge often drives standardization (discussed in 5.1), but also reveals the limits of overly simple models.
+
+Domain-Driven Design (DDD) provides effective strategies for managing this increased complexity. **Bounded Contexts** are crucial for partitioning complex domains into manageable subdomains. Each Bounded Context defines a boundary within which a specific model and **Ubiquitous Language** apply. This partitioning supports focused teams, reduces cognitive load, and enables parallel development.
+
+**Context Mapping** explicitly defines and manages the relationships between these Bounded Contexts. Understanding these interactions (e.g., Partnerships, Shared Kernels, Anticorruption Layers) is vital for architectural integrity as systems scale, preventing tightly-coupled monoliths ("Big Ball of Mud").
+
+Smaller organizations often manage simpler domains implicitly, perhaps within a single Bounded Context. The need for explicit strategic DDD patterns typically emerges with organizational and system scaling.
+
+Thus, while standardization is a common response to growth, DDD's strategic design offers a more nuanced way to manage complexity by aligning teams and systems with the business domain, particularly in larger organizations.
+
+## 5.4 Finding the Right Balance
 
 
 ### Key Considerations
