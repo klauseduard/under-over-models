@@ -49,17 +49,17 @@ dimensions, including:
 - A context-specific case study in medical information systems, considering the idea of "strategic overfitting" and
   modular design
 
-Furthermore, the recent and rapid integration of [**Artificial Intelligence (AI) assistants and agents** into
-organizational workflows](https://www.wired.com/story/artificial-intelligence-work-organizational-strategy/) presents a
-significant new factor influencing these dynamics. While the core analogies explored in this publication remain
-relevant, AI introduces novel complexities and capabilities that challenge traditional models of work, communication,
+Furthermore, the recent and rapid integration of **Artificial Intelligence (AI) assistants and agents** into organizational
+workflows presents a significant new factor influencing these dynamics. While the core analogies explored in this publication
+remain relevant, AI introduces novel complexities and capabilities that challenge traditional models of work, communication,
 and structure. The impact of AI will be touched upon contextually within relevant chapters, with a dedicated and
 comprehensive exploration provided in Chapters 8 and 9.
 
-Underpinning some of these explorations will be ideas related to [system
-dynamics](https://en.wikipedia.org/wiki/System_dynamics), feedback, and adaptation, drawing inspiration from fields like
-[cybernetics](https://en.wikipedia.org/wiki/Cybernetics) to better understand how these systems regulate themselves and
-interact with their environment.
+> (See: [AI Will Evolve Into an Organizational Strategy for All](https://www.wired.com/story/artificial-intelligence-work-organizational-strategy/), *Ethan Mollick, Wired, December 15, 2024*)
+
+Underpinning some of these explorations will be ideas related to [system dynamics](https://en.wikipedia.org/wiki/System_dynamics),
+feedback, and adaptation, drawing inspiration from fields like [cybernetics](https://en.wikipedia.org/wiki/Cybernetics) to better
+understand how these systems regulate themselves and interact with their environment.
 
 ## Core Analogy
 
