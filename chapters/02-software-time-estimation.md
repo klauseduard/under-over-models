@@ -169,6 +169,17 @@ However, expert judgment is highly susceptible to various cognitive biases, whic
 
 Conversely, experts might rely too heavily on specific past experiences that are not entirely relevant to the current project, potentially leading to overfitting by incorporating unnecessary details or inflating estimates. Studies have shown a significant degree of inconsistency in expert judgment-based effort estimates, highlighting the unreliability of this method when used in isolation.
 
+### 2.2.5 Artificial Intelligence in Estimation: Potential and Pitfalls
+
+The integration of Artificial Intelligence (AI) presents both potential avenues and new complexities for software time estimation, linking directly to the challenges of model fitting discussed throughout this chapter. As explored conceptually in Chapter 8, AI tools, especially machine learning models, are often proposed as means to mitigate the *underfitting* seen in traditional methods. By analyzing large historical datasets (potentially including code metrics, team dynamics, and past performance), AI *aims* to identify complex patterns and dependencies that might be overlooked by simpler models or subjective human judgment.
+
+However, applying AI to estimation introduces significant risks and potential new forms of model error:
+*   **Overfitting to Biased Data:** If the historical data used to train AI models contains systemic biases (e.g., consistently optimistic past estimates, data skewed towards certain project types or team compositions), the AI model may simply learn and perpetuate these biases, effectively *overfitting* to a flawed representation of reality. This can lead to estimates that are consistently inaccurate in predictable ways.
+*   **Underfitting due to Opacity:** The "black box" nature of some sophisticated AI models can hinder understanding and trust. If estimators cannot discern *why* an AI produced a certain figure, they may struggle to integrate it effectively with other factors or identify when the AI's context is inappropriate, potentially leading to *underfitting* the true project risks or even under-reliance on potentially useful AI insights.
+*   **Uncertainty of Net Impact:** Critically, the actual net effect of current AI assistance on overall project duration remains highly uncertain. While AI might automate specific estimation tasks or provide novel insights, it also introduces new overheads related to data preparation, model training, prompt engineering, verification of AI outputs, and managing potential AI errors. Quantifying whether these tools consistently lead to faster or more reliable project completion in practice is an ongoing challenge.
+
+Therefore, while AI offers intriguing possibilities for data analysis in estimation, its application requires rigorous attention to data quality, model transparency, bias mitigation, and a realistic assessment of its current capabilities and limitations within the broader context of project uncertainty.
+
 ## 2.3 Evidence for Underfitting in Classical Models
 
 Classical software estimation models often exhibit a tendency towards underfitting by failing to fully capture the unique complexities and variability inherent in software projects. Many hidden complexities are frequently overlooked during the initial estimation phase, leading to an oversimplified view of the project lifecycle, including:
@@ -204,7 +215,7 @@ mindmap
       [Data Migration]
 ```
 
-The common practice of multiplying initial software estimates by a factor (e.g., by 3, as suggested in [[55]]) underscores the widespread recognition that initial estimates tend to be overly optimistic and often fall short of the actual time required.
+The common practice of multiplying initial software estimates by a factor (e.g., by 3, as suggested in [[??]]) underscores the widespread recognition that initial estimates tend to be overly optimistic and often fall short of the actual time required.
 
 ### Long Tail of Software Project Risks
 

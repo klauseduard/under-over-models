@@ -36,6 +36,8 @@ Simpler organizational structures, often characterized by fewer layers of manage
 - Might lack the depth of specialization needed for highly intricate tasks.
 - May struggle to handle large-scale operations requiring complex coordination mechanisms.
 
+The rise of AI assistants and agents adds another layer to this discussion. As explored in Chapter 8, AI tools have the potential to facilitate flatter hierarchies by automating coordination tasks and providing wider access to information, potentially reducing the need for extensive middle management. Furthermore, AI might enable more dynamic, potentially AI-mediated team formation based on skills and project needs, challenging traditional static team structures. However, this also introduces new complexities in managing human-AI collaboration and requires careful consideration of the organizational design implications.
+
 ### More Complex Structures (e.g., Mechanistic, Hierarchical, Matrix)
 
 In contrast, more complex organizational structures, often featuring multiple layers of hierarchy, narrower spans of control, high specialization, and a greater degree of formalization, can provide the necessary framework for managing intricate operations.
@@ -54,7 +56,6 @@ In contrast, more complex organizational structures, often featuring multiple la
 - Can lead to bureaucracy and slower decision-making.
 - Reduced ability to adapt quickly to changing market conditions.
 - May hinder innovation if too rigid; less hierarchical, network-based models might be more appropriate for innovation-focused organizations.
-
 
 ### The Spectrum of Choice
 
