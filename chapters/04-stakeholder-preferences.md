@@ -113,6 +113,8 @@ Navigating these conflicting preferences requires organizations to establish cle
 
 Tools like the [Value vs Complexity Matrix](https://fibery.io/blog/product-management/value-complexity-matrix/) can help in assessing the benefits of model detail against the effort required to implement it. 
 
+![Value vs Complexity Matrix](../images/value-vs-complexity.svg)
+
 Ultimately, a balance must be struck that considers both the strategic objectives of the organization and the technical requirements of the work being done, often involving compromises on both sides to achieve a model that is both effective and manageable
 
 [Back to Table of Contents](../README.md)
