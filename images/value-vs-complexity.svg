@@ -1,87 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background - Pure white -->
+  <!-- Background -->
   <rect width="800" height="600" fill="#ffffff"/>
   
-  <!-- Title - Simple and centered -->
-  <text x="400" y="50" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#333">Value vs Complexity Matrix</text>
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#333">Organizational Models: Value vs Complexity</text>
   
-  <!-- Matrix container with clean border -->
+  <!-- Matrix container -->
   <rect x="150" y="100" width="500" height="380" fill="white" stroke="#ccc" stroke-width="1" rx="4" ry="4"/>
   
-  <!-- Quadrant dividers - Light, unobtrusive lines -->
+  <!-- Quadrant dividers -->
   <line x1="150" y1="290" x2="650" y2="290" stroke="#ddd" stroke-width="1.5" stroke-dasharray="4 4"/>
   <line x1="400" y1="100" x2="400" y2="480" stroke="#ddd" stroke-width="1.5" stroke-dasharray="4 4"/>
   
-  <!-- Quadrant colors - Extremely subtle -->
+  <!-- Quadrant colors -->
   <rect x="151" y="101" width="248" height="188" fill="#7fb56b" fill-opacity="0.05" rx="3" ry="3"/>  <!-- Quick Wins -->
   <rect x="401" y="101" width="248" height="188" fill="#f5c26b" fill-opacity="0.05" rx="3" ry="3"/> <!-- Strategic Investments -->
   <rect x="151" y="291" width="248" height="188" fill="#e08283" fill-opacity="0.05" rx="3" ry="3"/> <!-- Time Wasters -->
   <rect x="401" y="291" width="248" height="188" fill="#e08283" fill-opacity="0.05" rx="3" ry="3"/> <!-- Complexity Traps -->
   
-  <!-- Axes labels - Minimal but clear -->
-  <text x="150" y="290" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="end" transform="rotate(-90,140,290)" fill="#555">Value</text>
-  <text x="400" y="510" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555">Complexity</text>
+  <!-- Axes labels -->
+  <text x="150" y="290" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="end" transform="rotate(-90,140,290)" fill="#555">Business Value</text>
+  <text x="400" y="510" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555">Model Complexity</text>
   
   <!-- Axes indicators -->
-  <text x="160" y="480" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#999">Low</text>
-  <text x="630" y="480" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#999">High</text>
+  <text x="160" y="480" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#999">Simple</text>
+  <text x="630" y="480" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#999">Complex</text>
   <text x="140" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#999">Low</text>
   <text x="140" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#999">High</text>
   
-  <!-- Quadrant titles and descriptions - Aligned and uncluttered -->
-  <text x="225" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#376431">QUICK WINS</text>
-  <text x="225" y="150" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">High value, low complexity</text>
+  <!-- Quadrant titles and descriptions -->
+  <text x="210" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#376431">BALANCED APPROACHES</text>
+  <text x="210" y="150" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">High value, manageable complexity</text>
   
-  <text x="475" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#9a6b29">STRATEGIC INVESTMENTS</text>
-  <text x="475" y="150" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">High value, high complexity</text>
+  <text x="460" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#9a6b29">TECHNICAL SPECIALISTS' FOCUS</text>
+  <text x="460" y="150" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">High value, higher complexity</text>
   
-  <text x="225" y="320" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#a94442">TIME WASTERS</text>
-  <text x="225" y="340" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">Low value, low complexity</text>
+  <text x="210" y="320" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#a94442">MANAGEMENT PREFERENCE</text>
+  <text x="210" y="340" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">Perceived efficiency, oversimplified</text>
   
-  <text x="475" y="320" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#a94442">COMPLEXITY TRAPS</text>
-  <text x="475" y="340" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">Low value, high complexity</text>
+  <text x="460" y="320" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#a94442">IMPLEMENTATION CHALLENGES</text>
+  <text x="460" y="340" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">High complexity, limited return</text>
   
-  <!-- Sample projects - Separated from descriptive text -->
+  <!-- Sample models and approaches -->
   
-  <!-- Simple Process -->
-  <circle cx="235" cy="200" r="6" fill="#7fb56b" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
-  <text x="247" y="204" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Simple Process</text>
+  <!-- Standardized Frameworks -->
+  <circle cx="260" cy="350" r="6" fill="#f5c26b" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
+  <text x="272" y="354" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Standardized Frameworks</text>
   
-  <!-- Automated Testing -->
-  <circle cx="470" cy="180" r="6" fill="#7fb56b" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
-  <text x="482" y="184" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Automated Testing</text>
+  <!-- Modular Architecture -->
+  <circle cx="240" cy="200" r="6" fill="#7fb56b" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
+  <text x="252" y="204" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Modular Architecture</text>
   
-  <!-- Microservices -->
-  <circle cx="520" cy="240" r="6" fill="#7fb56b" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
-  <text x="532" y="244" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Microservices</text>
+  <!-- Domain-Specific Models -->
+  <circle cx="480" cy="160" r="6" fill="#7fb56b" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
+  <text x="492" y="164" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Domain-Specific Models</text>
   
-  <!-- Basic Documentation -->
-  <circle cx="280" cy="230" r="6" fill="#7fb56b" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
-  <text x="292" y="234" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Basic Documentation</text>
+  <!-- Technical Debt Management -->
+  <circle cx="300" cy="220" r="6" fill="#7fb56b" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
+  <text x="312" y="224" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Technical Debt Management</text>
   
-  <!-- Complex Framework -->
-  <circle cx="550" cy="260" r="6" fill="#f5c26b" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
-  <text x="562" y="264" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Complex Framework</text>
+  <!-- Custom One-off Solutions -->
+  <circle cx="550" cy="380" r="6" fill="#e08283" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
+  <text x="562" y="384" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Custom One-off Solutions</text>
   
-  <!-- Legacy System -->
-  <circle cx="560" cy="380" r="6" fill="#e08283" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
-  <text x="572" y="384" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Legacy System</text>
+  <!-- Overly Detailed Specifications -->
+  <circle cx="530" cy="260" r="6" fill="#f5c26b" fill-opacity="0.9" stroke="#fff" stroke-width="1"/>
+  <text x="542" y="264" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Detailed Specifications</text>
   
-  <!-- Priority flow indicator - Very subtle -->
-  <path d="M 275 380 Q 400 410, 525 380" 
-        fill="none" stroke="#ccc" stroke-width="1" stroke-dasharray="2 2"/>
-  <text x="400" y="425" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#999">Prioritize →</text>
+  <!-- Stakeholder indicators -->
+  <rect x="550" y="160" width="65" height="20" fill="#fff" stroke="#7fb56b" stroke-width="1" rx="10" ry="10"/>
+  <text x="582" y="174" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#376431">Technical</text>
   
-  <!-- Color indicators - Minimum necessary information -->
-  <g id="color-indicators">
-    <circle cx="360" cy="550" r="5" fill="#7fb56b" fill-opacity="0.9"/>
-    <text x="370" y="554" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">High Value</text>
+  <rect x="260" y="350" width="80" height="20" fill="#fff" stroke="#f5c26b" stroke-width="1" rx="10" ry="10"/>
+  <text x="300" y="364" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#9a6b29">Management</text>
+  
+  <!-- Balancing arrow -->
+  <path d="M 280 370 Q 400 410, 520 300" 
+        fill="none" stroke="#999" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">Organizational Balance</text>
+  
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="250" y="520" width="300" height="60" rx="4" ry="4" fill="white" stroke="#eee" stroke-width="1"/>
+    <text x="400" y="540" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">Stakeholder Focus</text>
     
-    <circle cx="400" cy="550" r="5" fill="#f5c26b" fill-opacity="0.9"/>
-    <text x="410" y="554" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">Medium Value</text>
+    <circle cx="320" y="560" r="5" fill="#7fb56b" fill-opacity="0.9"/>
+    <text x="330" y="564" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">Technical Focus</text>
     
-    <circle cx="440" cy="550" r="5" fill="#e08283" fill-opacity="0.9"/>
-    <text x="450" y="554" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">Low Value</text>
+    <circle cx="460" y="560" r="5" fill="#f5c26b" fill-opacity="0.9"/>
+    <text x="470" y="564" font-family="Arial, sans-serif" font-size="11" text-anchor="start" fill="#666">Management Focus</text>
   </g>
 </svg>
