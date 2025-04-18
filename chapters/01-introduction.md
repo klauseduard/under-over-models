@@ -21,11 +21,12 @@ data, causing it to miss important patterns and resulting in poor performance on
 the model and unseen test data meant to evaluate its generalizability. Such models lack the complexity required to adapt
 to the nuances of the data, leading to high error rates and an inability to make accurate predictions.
 
-<figure> <img src="../images/complexity-error-relationship.svg" alt="U-shaped relationship between model complexity and
-error rates, showing underfitting (high bias) and overfitting (high variance) regions" width="700" /> <figcaption>Figure
-1.1: The U-shaped relationship between model complexity and error rates</figcaption> </figure>
-
-***
+<figure>
+  <img src="../images/complexity-error-relationship.svg" alt="U-shaped relationship between model complexity and
+error rates, showing underfitting (high bias) and overfitting (high variance) regions" width="700" />
+  <figcaption>Figure 1.1: The U-shaped relationship between model complexity and error rates</figcaption>
+</figure>
+<br/><br/>
 
 Conversely, **overfitting** arises when a model becomes excessively complex, learning not only the underlying patterns
 in the training data but also the noise, random fluctuations, and specific details that are unique to that particular
@@ -49,21 +50,20 @@ dimensions, including:
 - A context-specific case study in medical information systems, considering the idea of "strategic overfitting" and
   modular design
 
-Furthermore, the recent and rapid integration of **Artificial Intelligence (AI) assistants and agents** into organizational
-workflows presents a significant new factor influencing these dynamics. While the core analogies explored in this publication
+Furthermore, the recent and rapid integration of **Artificial Intelligence (AI) assistants and agents**
+[into organizational workflows](https://www.wired.com/story/artificial-intelligence-work-organizational-strategy/)
+presents a significant new factor influencing these dynamics. While the core analogies explored in this publication
 remain relevant, AI introduces novel complexities and capabilities that challenge traditional models of work, communication,
 and structure. The impact of AI will be touched upon contextually within relevant chapters, with a dedicated and
 comprehensive exploration provided in Chapters 8 and 9.
 
-> (See: [AI Will Evolve Into an Organizational Strategy for All](https://www.wired.com/story/artificial-intelligence-work-organizational-strategy/), *Ethan Mollick, Wired, December 15, 2024*)
-
 Underpinning some of these explorations will be ideas related to [system dynamics](https://en.wikipedia.org/wiki/System_dynamics),
-feedback, and adaptation, drawing inspiration from fields like [cybernetics](https://en.wikipedia.org/wiki/Cybernetics) to better
+[feedback](https://en.wikipedia.org/wiki/Feedback), and adaptation, drawing inspiration from fields like [cybernetics](https://en.wikipedia.org/wiki/Cybernetics) to better
 understand how these systems regulate themselves and interact with their environment.
 
 ## Core Analogy
 
-The fundamental idea behind this analogy is that both machine learning models and models in software development and
+The fundamental idea behind the core analogy is that both machine learning models and models in software development and
 organizational design are attempts to represent complex realities. Organizational structures, often depicted as charts
 or processes, are simplified representations of complex social systems. Similarly, software time estimation functions as
 a predictive model forecasting outcomes based on available information.
@@ -81,10 +81,15 @@ models directly impact software architecture, a theme explored within this repor
 <figure> <img src="../images/ml-org-comparison.svg" alt="Comparison between machine learning models and organizational
 models" width="700" /> <figcaption>Figure 1.2: Analogous concepts between machine learning and organizational
 models</figcaption> </figure>
+<br/><br/>
+
+***
 
 <figure> <img src="../images/organization-complexity-flow.svg" alt="Manifestations of underfitting and overfitting in
 organizational decision-making processes" width="700" /> <figcaption>Figure 1.3: Real-world manifestations of
 underfitting and overfitting in organizational contexts</figcaption> </figure>
+<br/><br/><br/>
+
 
 Overly simplistic models (underfitting) might fail to account for critical details and variations. For example, an
 underfitted organizational structure might lack necessary specialization or communication channels, leading to
