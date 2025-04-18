@@ -34,7 +34,7 @@ Organizations mirror dissipative systems through:
 - Input/output exchanges
 - Dynamic equilibrium maintenance
 
-> See also: Erich Jantsch, [The Theory of Dissipative Structures (1975)](https://www.panarchy.org/jantsch/dissipativestructures.html). Jantsch’s essay applies [Ilya Prigogine](https://www.nobelprize.org/prizes/chemistry/1977/prigogine/facts/)’s “dissipative‑structure” physics to social and cultural evolution. In his view, human systems—cities, offices, nations—behave like far‑from‑equilibrium physical systems that spontaneously reorganize when hit by sufficiently strong fluctuations. This reframes “progress” as a cycle of instability → mutation → temporary order.
+> See also: Erich Jantsch, [The Theory of Dissipative Structures (1975)](https://www.panarchy.org/jantsch/dissipativestructures.html). Jantsch's essay applies [Ilya Prigogine](https://www.nobelprize.org/prizes/chemistry/1977/prigogine/facts/)'s "dissipative‑structure" physics to social and cultural evolution. In his view, human systems—cities, offices, nations—behave like far‑from‑equilibrium physical systems that spontaneously reorganize when hit by sufficiently strong fluctuations. This reframes "progress" as a cycle of instability → mutation → temporary order.
 
 
 ![Organization as Dissipative System](../images/org-as-dissipative-sys.svg)
@@ -69,6 +69,8 @@ Successful organizations need to:
    - Environmental interaction
    - Self-organization
    - Adjustment
+
+This perspective aligns closely with principles from **cybernetics**, the study of control and communication in systems (both artificial and natural). Concepts like **feedback loops** (where system outputs influence future actions), **control mechanisms** (processes that steer the system), and **adaptation** (adjusting based on feedback) are fundamental to how dissipative systems, including organizations, maintain their dynamic state far from equilibrium. An effective organization uses feedback to learn and adapt. Underfitting, in this light, can represent weak or ignored feedback loops leading to poor adaptation, while overfitting might represent overly rigid control mechanisms that stifle necessary adjustments based on environmental feedback.
 
 ![Organizational Adaptation Spectrum](../images/org-adaption-spectrum.svg)
 

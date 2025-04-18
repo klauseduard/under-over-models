@@ -26,6 +26,8 @@ these analogies across various dimensions, including:
 - Connections to related theoretical concepts like long-tail distributions and dissipative systems theory
 - A context-specific case study in medical information systems, considering the idea of "strategic overfitting" and modular design
 
+Underpinning some of these explorations will be ideas related to system dynamics, feedback, and adaptation, drawing inspiration from fields like cybernetics to better understand how these systems regulate themselves and interact with their environment.
+
 ## Core Analogy
 
 The fundamental idea behind this analogy is that both machine learning models and models in software development and organizational design are
