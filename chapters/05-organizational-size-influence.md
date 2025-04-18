@@ -151,7 +151,6 @@ graph TD
 
 ## 5.2 Small, Specialized Firms
 
-
 Smaller, specialized firms, often operating in niche markets, might exhibit tendencies towards "overfitting" in their models and processes.
 
 ### Characteristics
@@ -195,7 +194,7 @@ The "overfitting" to a narrow area of expertise can:
 - Create dependencies on specific markets or technologies
 - Hinder long-term sustainability
 
-<!-- TODO: Add visualization of specialization vs adaptability trade-off -->
+![Specialization vs adaptability](../images/specialization-vs-adaptability.svg)
 
 ## 5.3 Finding the Right Balance
 
