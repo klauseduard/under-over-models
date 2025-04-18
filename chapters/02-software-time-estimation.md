@@ -19,6 +19,8 @@ These methods take into account various inputs, such as the size and complexity 
 
 Factors like evolving requirements, unforeseen technical challenges, and the inherent difficulty in accurately predicting human effort contribute to the imperfection of these predictive models. Therefore, software time estimation can be understood as a complex modeling problem that attempts to predict a future outcome under conditions of uncertainty. This perspective highlights why estimation techniques are susceptible to both underfitting (oversimplification, missing key risks) and overfitting (overly reliant on specific past data that doesn't generalize).
 
+From an [information theory](https://www.britannica.com/science/information-theory) perspective, software estimation can be viewed as attempting to model a high-entropy system. As project complexity increases, so does the [entropy](06-theoretical-concepts.md#63-entropy-and-software-complexity) (uncertainty) within the system, making accurate prediction inherently more difficult. Estimation models that underfit effectively assume lower entropy than actually exists in the project, while overfit models mistake random noise in historical data for meaningful patterns.
+
 <figure> <img src="../images/under-over-estimation-model.svg" alt="Under vs. Over Estimation Tendencies - showing factors that lead to each type of estimation error and their consequences" width="700" /> <figcaption>Figure 2.1: Factors influencing under and over estimation tendencies and their consequences</figcaption> </figure>
 
 ## 2.2 Analysis of Common Software Time Estimation Models
@@ -95,6 +97,8 @@ The rapid emergence of AI assistants in software development workflows (includin
 
 This increased variance challenges both expert judgment and historical data-based estimations, as the fundamental relationships between task complexity and time required have been disrupted.
 
+From an [entropy](06-theoretical-concepts.md#63-entropy-and-software-complexity) perspective, AI tools increase the overall system entropy by introducing new variables with uncertain impacts. The relationship between task complexity and completion time—previously somewhat predictable—becomes more probabilistic and less deterministic, making traditional estimation models less reliable.
+
 <figure> <img src="../images/ai-productivity-variance.svg" alt="AI Productivity Variance - comparing development time across different task types with and without AI assistance" width="700" /> <figcaption>Figure 2.5: Productivity variance across task types when using AI assistance (illustrative, not using real metrics)</figcaption> </figure>
 <br/><br/>
 
@@ -156,5 +160,9 @@ These might include:
 - Significant changes in requirements late in the project
 
 Estimation models that primarily focus on typical tasks and average scenarios often fail to incorporate contingencies for these "long-tail" risks, leading to underestimation of the overall project effort and potential for delays when these unforeseen events materialize.
+
+From an [information entropy](06-theoretical-concepts.md#63-entropy-and-software-complexity) standpoint, these rare but high-impact events represent high-entropy elements in the project risk distribution. Traditional estimation models focus on low-entropy (common, predictable) events while ignoring the significant contribution of high-entropy tail events to overall project uncertainty. This entropically incomplete view leads to systematic underestimation of total project complexity and effort requirements.
+
+The concept of [negentropy](06-theoretical-concepts.md#negentropy-in-software-development) (negative entropy) provides a counterbalance—practices like comprehensive documentation, testing, and knowledge sharing act to reduce uncertainty and create more predictable outcomes in software projects. However, the time required for these critical negentropy-building activities themselves is often overlooked in estimation models, further contributing to the underfitting problem.
 
 [Back to Table of Contents](../README.md) 
