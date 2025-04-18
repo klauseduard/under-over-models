@@ -15,18 +15,18 @@
   <text x="700" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#555">Slow</text>
   
   <!-- Small Organization adaptation path -->
-  <path d="M 100 250 C 120 170, 160 130, 200 130 L 250 130" fill="none" stroke="#43a047" stroke-width="3"/>
+  <path d="M 100 250 C 120 170, 160 130, 170 130 L 170 130" fill="none" stroke="#43a047" stroke-width="3"/>
   
   <!-- Medium Organization adaptation path -->
-  <path d="M 100 250 C 150 210, 200 180, 300 180 L 400 180" fill="none" stroke="#ff9800" stroke-width="3"/>
+  <path d="M 100 250 C 150 210, 200 180, 300 180 L 330 180" fill="none" stroke="#ff9800" stroke-width="3"/>
   
   <!-- Large Organization adaptation path -->
-  <path d="M 100 250 C 200 240, 300 240, 500 230 L 600 230" fill="none" stroke="#e53935" stroke-width="3"/>
+  <path d="M 100 250 C 200 240, 300 240, 500 230 L 530 230" fill="none" stroke="#e53935" stroke-width="3"/>
   
   <!-- Organization size labels -->
-  <text x="260" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#43a047">Small Organizations</text>
-  <text x="410" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#ff9800">Medium Organizations</text>
-  <text x="610" y="220" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#e53935">Large Organizations</text>
+  <text x="260" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#43a047"></text>
+  <text x="410" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#ff9800"></text>
+  <text x="610" y="220" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#e53935"></text>
   
   <!-- Small Organization characteristics -->
   <circle cx="180" cy="120" r="4" fill="#43a047"/>
@@ -64,17 +64,15 @@
   <text x="100" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Change</text>
   
   <!-- Adaptation outcomes -->
-  <circle cx="250" cy="130" r="8" fill="#43a047"/>
+  
   <text x="250" y="110" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Fully Adapted</text>
   
-  <circle cx="400" cy="180" r="8" fill="#ff9800"/>
   <text x="400" y="160" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Partially Adapted</text>
   
-  <circle cx="600" cy="230" r="8" fill="#e53935"/>
   <text x="600" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Minimally Adapted</text>
   
   <!-- Key points summary -->
-  <rect x="100" y="360" width="600" height="100" rx="5" ry="5" fill="#f9f9f9" stroke="#ddd"/>
+  <rect x="100" y="360" width="600" height="110" rx="5" ry="5" fill="#f9f9f9" stroke="#ddd"/>
   
   <text x="120" y="385" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Key Adaptation Factors:</text>
   
