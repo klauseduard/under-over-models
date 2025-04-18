@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">Small vs Large Organization Adaptation Capabilities</text>
+  
+  <!-- Timeline horizontal line -->
+  <line x1="100" y1="250" x2="700" y2="250" stroke="#999" stroke-width="2"/>
+  
+  <!-- Timeline labels -->
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555">Time to Adapt to Market Change</text>
+  <text x="100" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#555">Fast</text>
+  <text x="700" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#555">Slow</text>
+  
+  <!-- Small Organization adaptation path -->
+  <path d="M 100 250 C 120 170, 160 130, 200 130 L 250 130" fill="none" stroke="#43a047" stroke-width="3"/>
+  
+  <!-- Medium Organization adaptation path -->
+  <path d="M 100 250 C 150 210, 200 180, 300 180 L 400 180" fill="none" stroke="#ff9800" stroke-width="3"/>
+  
+  <!-- Large Organization adaptation path -->
+  <path d="M 100 250 C 200 240, 300 240, 500 230 L 600 230" fill="none" stroke="#e53935" stroke-width="3"/>
+  
+  <!-- Organization size labels -->
+  <text x="260" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#43a047">Small Organizations</text>
+  <text x="410" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#ff9800">Medium Organizations</text>
+  <text x="610" y="220" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start" fill="#e53935">Large Organizations</text>
+  
+  <!-- Small Organization characteristics -->
+  <circle cx="180" cy="120" r="4" fill="#43a047"/>
+  <text x="190" y="124" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Quick Decision Making</text>
+  
+  <circle cx="180" cy="140" r="4" fill="#43a047"/>
+  <text x="190" y="144" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Flat Hierarchy</text>
+  
+  <circle cx="180" cy="160" r="4" fill="#43a047"/>
+  <text x="190" y="164" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Direct Communication</text>
+  
+  <!-- Medium Organization characteristics -->
+  <circle cx="350" cy="170" r="4" fill="#ff9800"/>
+  <text x="360" y="174" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Balanced Structure</text>
+  
+  <circle cx="350" cy="190" r="4" fill="#ff9800"/>
+  <text x="360" y="194" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Mixed Approval Processes</text>
+  
+  <circle cx="350" cy="210" r="4" fill="#ff9800"/>
+  <text x="360" y="214" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Moderate Flexibility</text>
+  
+  <!-- Large Organization characteristics -->
+  <circle cx="550" cy="220" r="4" fill="#e53935"/>
+  <text x="560" y="224" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Complex Approval Chain</text>
+  
+  <circle cx="550" cy="240" r="4" fill="#e53935"/>
+  <text x="560" y="244" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Rigid Processes</text>
+  
+  <circle cx="550" cy="260" r="4" fill="#e53935"/>
+  <text x="560" y="264" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333">Multiple Stakeholders</text>
+  
+  <!-- Market change event -->
+  <rect x="90" y="230" width="20" height="40" rx="5" ry="5" fill="#f0f0f0" stroke="#999"/>
+  <text x="100" y="320" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Market</text>
+  <text x="100" y="335" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Change</text>
+  
+  <!-- Adaptation outcomes -->
+  <circle cx="250" cy="130" r="8" fill="#43a047"/>
+  <text x="250" y="110" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Fully Adapted</text>
+  
+  <circle cx="400" cy="180" r="8" fill="#ff9800"/>
+  <text x="400" y="160" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Partially Adapted</text>
+  
+  <circle cx="600" cy="230" r="8" fill="#e53935"/>
+  <text x="600" y="210" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">Minimally Adapted</text>
+  
+  <!-- Key points summary -->
+  <rect x="100" y="360" width="600" height="100" rx="5" ry="5" fill="#f9f9f9" stroke="#ddd"/>
+  
+  <text x="120" y="385" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Key Adaptation Factors:</text>
+  
+  <circle cx="130" cy="405" r="4" fill="#43a047"/>
+  <text x="140" y="410" font-family="Arial, sans-serif" font-size="12" fill="#333">Small Orgs: Rapid response (days to weeks) - client-focused, agile decision making</text>
+  
+  <circle cx="130" cy="430" r="4" fill="#ff9800"/>
+  <text x="140" y="435" font-family="Arial, sans-serif" font-size="12" fill="#333">Medium Orgs: Moderate response (weeks to months) - balancing agility with process</text>
+  
+  <circle cx="130" cy="455" r="4" fill="#e53935"/>
+  <text x="140" y="460" font-family="Arial, sans-serif" font-size="12" fill="#333">Large Orgs: Slow response (months to years) - process-focused, complex coordination</text>
+</svg>
