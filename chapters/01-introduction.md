@@ -1,8 +1,8 @@
 # 1. Introduction
 
-In the realm of machine learning, the concepts of underfitting and overfitting are fundamental to building effective predictive models.
-**Underfitting** occurs when a model is too simplistic, failing to capture the underlying patterns in the data, resulting in high bias and
-poor performance even on the training data. Such models lack the complexity required to adapt to the nuances of the data.
+In the realm of machine learning and general modeling, the concepts of underfitting and overfitting represent two fundamental challenges in creating effective representations of data and predicting future outcomes.
+
+**Underfitting** occurs when a model is too simplistic in its assumptions and structure, leading to a **high bias** and low variance. This means the model makes strong, often incorrect assumptions about the underlying relationships in the data, causing it to miss important patterns and resulting in poor performance on both the training data used to build the model and unseen test data meant to evaluate its generalizability. Such models lack the complexity required to adapt to the nuances of the data, leading to high error rates and an inability to make accurate predictions.
 
 ```mermaid
 graph LR
@@ -11,16 +11,14 @@ graph LR
     E[High Complexity] -->|"Overfitting"| F[High Variance]
 ```
 
-Conversely, **overfitting** happens when a model is excessively complex, memorizing the training data, including its noise and outliers,
-leading to low bias on the training data but poor generalization to new, unseen data, indicating high variance. These models become too
-tailored to the specific training set and lose their ability to make accurate predictions on new, real-world data.
+Conversely, **overfitting** arises when a model becomes excessively complex, learning not only the underlying patterns in the training data but also the noise, random fluctuations, and specific details that are unique to that particular dataset. This results in a model with **low bias** and high variance, performing exceptionally well on the training data it has \"memorized\" but failing to generalize effectively to new, unseen data. These models become too tailored to the specific intricacies of the training set, including its irrelevant information, making them brittle and unreliable for real-world applications. The key challenge is to strike a balance, creating a model complex enough to capture essential patterns without learning the noise.
 
 - [Overfitting vs. underfitting](https://www.ibm.com/think/topics/overfitting-vs-underfitting) [IBM Think]
 
 ## Purpose and Scope
 
 This report aims to investigate the validity and evidence base for applying these machine learning concepts as analogies to describe phenomena
-in software development models, specifically time estimation, and organizational structures. Furthermore, it will explore the implications of
+in software development models (specifically **time estimation**, which functions as a predictive model forecasting duration, effort, and cost) and **organizational structures** (which can be viewed as models representing communication patterns, hierarchies, and responsibilities). Furthermore, it will explore the implications of
 these analogies across various dimensions, including:
 
 - Stakeholder preferences
@@ -31,8 +29,9 @@ these analogies across various dimensions, including:
 ## Core Analogy
 
 The fundamental idea behind this analogy is that both machine learning models and models in software development and organizational design are
-attempts to represent complex realities. Just as a machine learning model needs to strike a balance between capturing the underlying signal and
-not fitting the noise in data, software development models and organizational structures must balance simplicity and complexity to effectively
+attempts to represent complex realities. Organizational structures, often depicted as charts or processes, are simplified representations of complex social systems. Similarly, software time estimation functions as a predictive model forecasting outcomes based on available information.
+
+Just as a machine learning model needs to strike a balance between capturing the underlying signal and not fitting the noise in data, software development models and organizational structures must balance simplicity and complexity to effectively
 represent and operate within their respective domains.
 
 ```mermaid
@@ -49,8 +48,9 @@ graph TB
     end
 ```
 
-Overly simplistic models might fail to account for critical details and variations, leading to inaccuracies and poor performance, while overly complex
-ones could become unwieldy, difficult to manage, and brittle when faced with new situations.
+Overly simplistic models (underfitting) might fail to account for critical details and variations. For example, an underfitted organizational structure might lack necessary specialization or communication channels, leading to inefficiencies. An underfitted time estimation model might overlook key factors like scope or risks, resulting in inaccurate predictions.
+
+Conversely, overly complex models (overfitting) could become unwieldy, difficult to manage, and brittle when faced with new situations. An overfitted organizational structure might manifest as excessive bureaucracy, hindering agility. An overfitted estimation model might rely too heavily on specific past project details, failing to generalize.
 
 ```mermaid
 graph LR

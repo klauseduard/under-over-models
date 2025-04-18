@@ -1,6 +1,14 @@
 # 2. Underfitting and Overfitting in Software Time Estimation
 
-## 2.1 Analysis of Common Software Time Estimation Models
+## 2.1 Time Estimation as a Modeling Problem
+
+Software time estimation operates as a predictive model that aims to forecast the duration and effort required to complete a software development project. Various estimation techniques, including the use of historical data from past projects, the application of expert judgment, and structured methods like Planning Poker and algorithmic models such as COCOMO, are employed to create this predictive model.
+
+These methods take into account various inputs, such as the size and complexity of the software, the experience and skills of the development team, and the technological environment, to produce an estimate of the effort in person-hours or person-months and the duration of the project. However, these estimation models are inherently subject to various biases, uncertainties, and the dynamic nature of software development itself.
+
+Factors like evolving requirements, unforeseen technical challenges, and the inherent difficulty in accurately predicting human effort contribute to the imperfection of these predictive models. Therefore, software time estimation can be understood as a complex modeling problem that attempts to predict a future outcome under conditions of uncertainty. This perspective highlights why estimation techniques are susceptible to both underfitting (oversimplification, missing key risks) and overfitting (overly reliant on specific past data that doesn't generalize).
+
+## 2.2 Analysis of Common Software Time Estimation Models
 
 ### COCOMO (Constructive Cost Model)
 
@@ -122,7 +130,7 @@ flowchart LR
     style EIFiles fill:#fce4ec,stroke:#e91e63,stroke-width:2px
 ```
 
-While aiming for an objective measure, the process of defining and weighting these function points involves a degree of subjectivity. This subjectivity, coupled with the risk of developing overly complex models based on limited data or chance occurrences, raises the potential for overfitting. Criticisms of Function Points include its "black box" view of the system, its potential lack of suitability for modern technologies, oversimplified complexity classifications, and the subjective nature of weight assignments [[38]]. These limitations suggest that estimations based on Function Points might become too specific to past projects or individual interpretations, potentially overfitting the data used to derive them and hindering generalization to new projects with different characteristics.
+While aiming for an objective measure, the process of defining and weighting these function points involves a degree of subjectivity. This subjectivity, coupled with the risk of developing overly complex models based on limited data or chance occurrences, raises the potential for overfitting. Criticisms of Function Points include its "black box" view of the system, its potential lack of suitability for modern technologies, oversimplified complexity classifications, and the subjective nature of weight assignments. These limitations suggest that estimations based on Function Points might become too specific to past projects or individual interpretations, potentially overfitting the data used to derive them and hindering generalization to new projects with different characteristics.
 
 ### Planning Poker
 
@@ -161,9 +169,7 @@ However, expert judgment is highly susceptible to various cognitive biases, whic
 
 Conversely, experts might rely too heavily on specific past experiences that are not entirely relevant to the current project, potentially leading to overfitting by incorporating unnecessary details or inflating estimates. Studies have shown a significant degree of inconsistency in expert judgment-based effort estimates, highlighting the unreliability of this method when used in isolation.
 
-
-
-## 2.2 Evidence for Underfitting in Classical Models
+## 2.3 Evidence for Underfitting in Classical Models
 
 Classical software estimation models often exhibit a tendency towards underfitting by failing to fully capture the unique complexities and variability inherent in software projects. Many hidden complexities are frequently overlooked during the initial estimation phase, leading to an oversimplified view of the project lifecycle, including:
 
@@ -202,7 +208,7 @@ The common practice of multiplying initial software estimates by a factor (e.g.,
 
 ### Long Tail of Software Project Risks
 
-Furthermore, simplified estimation models often fail to account for the "long tail" of software project risks. The "long tail" refers to the distribution of risks where a large number of less frequent but potentially high-impact events can occur alongside the more common risks.
+Furthermore, simplified estimation models often fail to account for the "[long tail](06-theoretical-concepts.md)" of software project risks. The "long tail" refers to the distribution of risks where a large number of less frequent but potentially high-impact events can occur alongside the more common risks.
 
 <!-- TODO: Add visualization of long-tail distribution in software project risks -->
 
@@ -233,7 +239,5 @@ graph LR
     style I fill:#FF6B6B
     end
 ```
-
-
 
 [Back to Table of Contents](../README.md) 
