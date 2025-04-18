@@ -164,7 +164,7 @@ Smaller, specialized firms, often operating in niche markets, might exhibit tend
 - Deep expertise in specific areas
 - Models rooted in individual expertise
 
-<!-- TODO: Add visualization comparing small vs large organization adaptation capabilities -->
+![Small vs Large Organization Adaption Capablities](../images/small-vs-large-adaption.svg)
 
 ### Advantages and Risks
 
