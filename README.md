@@ -12,7 +12,9 @@ This repository contains an attempt to analyse analogies between machine learnin
 5. [Influence of Organizational Size and Type](chapters/05-organizational-size-influence.md)
 6. [Related Theoretical Concepts](chapters/06-theoretical-concepts.md)
 7. [Context-Specific Case: Medical Information Systems](chapters/07-medical-systems-case.md)
-8. [Conclusion](chapters/08-conclusion.md)
+8. [AI Organizational Impact](chapters/08-ai-organizational-impact.md)
+9. [AI: Theory and Practice for People](chapters/09-ai-people-theory-practice.md)
+10. [Conclusion](chapters/10-conclusion.md)
 
 ### Supporting Materials
 - [References](references.md)
