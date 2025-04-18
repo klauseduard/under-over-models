@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 800 630" xmlns="http://www.w3.org/2000/svg">
   <!-- Background -->
-  <rect width="800" height="600" fill="#ffffff"/>
+  <rect width="800" height="630" fill="#ffffff"/>
   
   <!-- Title -->
   <text x="400" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">Specialization vs Adaptability Trade-off</text>
@@ -41,19 +41,28 @@
   <text x="400" y="205" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ff9800">Balance</text>
   
   <!-- Key characteristics - simplified at the bottom -->
-  <rect x="150" y="530" width="500" height="60" rx="0" ry="0" fill="#f9f9f9" stroke="#e6e6e6" stroke-width="1"/>
+  <rect x="150" y="530" width="500" height="70" rx="0" ry="0" fill="#f9f9f9" stroke="#e6e6e6" stroke-width="1"/>
   
   <circle cx="180" y="550" r="4" fill="#e53935"/>
   <text x="190" y="554" font-family="Arial, sans-serif" font-size="12" fill="#333">Small, Specialized: High expertise in niche areas, limited scope, scaling challenges</text>
   
   <circle cx="180" y="570" r="4" fill="#43a047"/>
-  <text x="190" y="574" font-family="Arial, sans-serif" font-size="12" fill="#333">Large Corporations: Standardized processes, broad coverage, better adaptability to diverse projects</text>
+  <text x="190" y="574" font-family="Arial, sans-serif" font-size="12" fill="#333">  
+      <tspan x="190" dy="0">Large Corporations: Standardized processes, broad coverage,</tspan>
+      <tspan x="190" dy="1.2em">better adaptability to diverse projects</tspan>
+  </text>
   
   <!-- Annotations for curve -->
-  <text x="400" y="400" font-family="Arial, sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#3f51b5">As specialization increases, adaptability typically decreases</text>
+  <text x="400" y="400" font-family="Arial, sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#3f51b5">
+      <tspan x="400" dy="0">As specialization increases,</tspan>
+      <tspan x="400" dy="1.2em">adaptability typically decreases</tspan>
+    </text>
   
   <!-- Highlighting optimal zone - subtle -->
   <path d="M 320 220 C 350 210, 380 200, 420 200 C 450 210, 470 220, 480 250" 
         fill="none" stroke="#ff9800" stroke-width="1" stroke-dasharray="3 2"/>
-  <text x="400" y="180" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ff9800">Balanced approach: Core standardization with flexibility for specific needs</text>
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#ff9800">
+      <tspan x="400" dy="0">Balanced approach: </tspan>
+      <tspan x="400" dy="1.2em">Core standardization with flexibility for specific needs</tspan>    
+  </text>
 </svg>
