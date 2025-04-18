@@ -1,14 +1,18 @@
 # 1. Introduction
+This work explores how the concepts of overfitting and underfitting, originally from machine learning and
+mathematical modeling, can offer valuable insights into challenges faced in organizational structures and
+software development processes. Drawing on my background in software engineering, I use these concepts as
+an analytical lens to examine parallels across these domains.
 
-This publication explores how concepts from machine learning can provide valuable frameworks for understanding
-challenges in organizational structures and software development processes. By examining the parallels between machine
-learning models and organizational/software models, we can gain insights into why certain approaches succeed or fail in
-different contexts. The core thesis is that both domains face similar fundamental challenges in balancing simplicity
-with complexity, and that principles from one field can illuminate problems in the other.
+By mapping the dynamics of machine learning models onto organizational and software systems, we can uncover
+shared patterns and constraints. The central thesis is that both domains grapple with the same fundamental
+tension: balancing simplicity and complexity. Insights from one field can often clarify or reframe challenges
+in the other.
 
 ***
 
-In the realm of machine learning and general modeling, the concepts of underfitting and overfitting represent two
+In the realm of machine learning and general modeling, the concepts of
+[underfitting and overfitting](https://www.ibm.com/think/topics/overfitting-vs-underfitting) represent two
 fundamental challenges in creating effective representations of data and predicting future outcomes.
 
 **Underfitting** occurs when a model is too simplistic in its assumptions and structure, leading to a **high bias** and
@@ -29,15 +33,13 @@ specific intricacies of the training set, including its irrelevant information, 
 real-world applications. The key challenge is to strike a balance, creating a model complex enough to capture essential
 patterns without learning the noise.
 
-- [Overfitting vs. underfitting (IBM Think)](https://www.ibm.com/think/topics/overfitting-vs-underfitting)
-
 ## Purpose and Scope
 
-This publication aims to investigate the validity and evidence base for applying these machine learning concepts as
-analogies to describe phenomena in software development models (specifically **time estimation**, which functions as a
-predictive model forecasting duration, effort, and cost) and **organizational structures** (which can be viewed as
-models representing communication patterns, hierarchies, and responsibilities). Furthermore, it will explore the
-implications of these analogies across various dimensions, including:
+This series of chapters aims to apply these machine learning concepts as analogies to describe phenomena in software
+development models (specifically **time estimation**, which functions as a predictive model forecasting duration,
+effort, and cost) and **organizational structures** (which can be viewed as models representing communication patterns,
+hierarchies, and responsibilities). Furthermore, it will explore the implications of these analogies across various
+dimensions, including:
 
 - Stakeholder preferences
 - The influence of organizational size and type on modeling approaches
