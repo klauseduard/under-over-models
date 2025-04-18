@@ -63,7 +63,7 @@ While aiming for an objective measure, the process of defining and weighting the
 
 ### Planning Poker
 
-Planning Poker is a widely used consensus-based agile estimation technique that employs story points as relative units of effort or complexity. In this method, the development team discusses user stories or tasks, and each member anonymously votes using cards with values from a modified Fibonacci sequence. The team then discusses any significant discrepancies in the estimates to reach a consensus.
+[Planning Poker](https://en.wikipedia.org/wiki/Planning_poker) is a widely used consensus-based agile estimation technique that employs story points as relative units of effort or complexity. In this method, the development team discusses user stories or tasks, and each member anonymously votes using cards with values from a modified Fibonacci sequence. The team then discusses any significant discrepancies in the estimates to reach a consensus.
 
 <figure> <img src="../images/planning-poker-process.svg" alt="Planning Poker Process Flow - showing the sequence of steps in this consensus-based estimation technique" width="700" /> <figcaption>Figure 2.7: Planning Poker process workflow showing interaction between participants</figcaption> </figure>
 
@@ -76,8 +76,8 @@ Expert judgment involves leveraging the knowledge and experience of specialists 
 
 However, expert judgment is highly susceptible to various [cognitive biases](https://en.wikipedia.org/wiki/Cognitive_bias), which can lead to both underfitting and overfitting:
 - [Optimism](https://en.wikipedia.org/wiki/Optimism_bias) bias might cause experts to underestimate the effort required
-- Anchoring bias could lead to estimates being unduly influenced by initial figures
-- Overconfidence can result in experts overlooking potential challenges or the need for more detailed analysis, leading to overfitting.
+- [Anchoring](https://en.wikipedia.org/wiki/Anchoring_effect) bias could lead to estimates being unduly influenced by initial figures
+- [Overconfidence](https://en.wikipedia.org/wiki/Overconfidence_effect) can result in experts overlooking potential challenges or the need for more detailed analysis, leading to overfitting.
 
 Conversely, experts might rely too heavily on specific past experiences that are not entirely relevant to the current project, potentially leading to overfitting by incorporating unnecessary details or inflating estimates. Studies have shown a significant degree of inconsistency in expert judgment-based effort estimates, highlighting the unreliability of this method when used in isolation.
 
@@ -115,7 +115,7 @@ This AI-specific optimism bias compounds traditional estimation biases and can l
 - Learning curves for effectively using AI tools
 
 **New Classes of Errors and Challenges:** AI-assisted development introduces novel error types and challenges that impact estimation:
-- "Hallucinated functionality" - AI confidently generating code that appears correct but contains subtle logical errors
+- "[Hallucinated](https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)) functionality" - AI confidently generating code that appears correct but contains subtle logical errors
 - Inconsistent code quality across similar tasks, creating unpredictable review and debugging loads
 - Integration friction between AI-generated components and existing codebases
 - New security vulnerabilities specific to AI-generated code patterns
