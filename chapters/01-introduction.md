@@ -25,6 +25,8 @@ to the nuances of the data, leading to high error rates and an inability to make
 error rates, showing underfitting (high bias) and overfitting (high variance) regions" width="700" /> <figcaption>Figure
 1.1: The U-shaped relationship between model complexity and error rates</figcaption> </figure>
 
+***
+
 Conversely, **overfitting** arises when a model becomes excessively complex, learning not only the underlying patterns
 in the training data but also the noise, random fluctuations, and specific details that are unique to that particular
 dataset. This results in a model with **low bias** and high variance, performing exceptionally well on the training data
@@ -52,7 +54,7 @@ organizational workflows](https://www.wired.com/story/artificial-intelligence-wo
 significant new factor influencing these dynamics. While the core analogies explored in this publication remain
 relevant, AI introduces novel complexities and capabilities that challenge traditional models of work, communication,
 and structure. The impact of AI will be touched upon contextually within relevant chapters, with a dedicated and
-comprehensive exploration provided in Chapter 8.
+comprehensive exploration provided in Chapters 8 and 9.
 
 Underpinning some of these explorations will be ideas related to [system
 dynamics](https://en.wikipedia.org/wiki/System_dynamics), feedback, and adaptation, drawing inspiration from fields like
