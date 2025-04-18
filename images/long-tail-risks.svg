@@ -1,0 +1,73 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background and border -->
+    <rect width="800" height="600" fill="#f8f9fa" stroke="#ccc" stroke-width="1" />
+    
+    <!-- Title -->
+    <text x="400" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">
+        Long Tail Distribution of Software Project Risks
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="400" y="70" font-family="Arial" font-size="16" text-anchor="middle" fill="#555">
+        Demonstrating how rare but high-impact events contribute to estimation challenges
+    </text>
+    
+    <!-- Axes -->
+    <line x1="100" y1="450" x2="700" y2="450" stroke="#333" stroke-width="2" /> <!-- X-axis -->
+    <line x1="100" y1="450" x2="100" y2="150" stroke="#333" stroke-width="2" /> <!-- Y-axis -->
+    
+    <!-- Axis labels -->
+    <text x="400" y="490" font-family="Arial" font-size="16" text-anchor="middle">Risk Frequency (Common → Rare)</text>
+    <text x="50" y="300" font-family="Arial" font-size="16" text-anchor="middle" transform="rotate(-90, 50, 300)">Impact Severity</text>
+    
+    <!-- Long tail curve - MODIFIED to be steeper on right side -->
+    <path d="M 100,450 Q 150,420 200,390 Q 300,350 400,280 Q 500,180 600,120 Q 650,100 700,85" 
+          fill="none" stroke="#333" stroke-width="3" />
+    
+    <!-- Color regions under the curve - ADJUSTED to match new curve -->
+    <path d="M 100,450 Q 150,420 200,390 L 200,450 Z" fill="#90EE90" opacity="0.7" /> <!-- Common risks -->
+    <path d="M 200,450 L 200,390 Q 300,350 400,280 Q 450,230 500,180 L 500,450 Z" fill="#FFB366" opacity="0.7" /> <!-- Medium risks -->
+    <path d="M 500,450 L 500,180 Q 600,120 650,100 Q 675,90 700,85 L 700,450 Z" fill="#FF6B6B" opacity="0.7" /> <!-- Rare risks -->
+    
+    <!-- Labels for risk regions -->
+    <text x="150" y="425" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Common Risks</text>
+    <text x="350" y="425" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Medium Risks</text>
+    <text x="600" y="425" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Rare but High-Impact</text>
+    
+    <!-- Example boxes -->
+    <!-- Common risks -->
+    <rect x="120" y="280" width="140" height="110" rx="5" fill="white" stroke="#333" stroke-width="1" />
+    <text x="190" y="300" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Common Risks</text>
+    <line x1="145" y1="310" x2="235" y2="310" stroke="#333" stroke-width="1" />
+    <text x="190" y="330" font-family="Arial" font-size="12" text-anchor="middle">• Minor bugs</text>
+    <text x="190" y="355" font-family="Arial" font-size="12" text-anchor="middle">• Small delays</text>
+    <text x="190" y="380" font-family="Arial" font-size="12" text-anchor="middle">• Simple refactoring</text>
+    <rect x="120" y="280" width="140" height="110" rx="5" fill="none" stroke="#90EE90" stroke-width="2" />
+    
+    <!-- Medium risks -->
+    <rect x="330" y="230" width="140" height="110" rx="5" fill="white" stroke="#333" stroke-width="1" />
+    <text x="400" y="250" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Medium Risks</text>
+    <line x1="355" y1="260" x2="445" y2="260" stroke="#333" stroke-width="1" />
+    <text x="400" y="280" font-family="Arial" font-size="12" text-anchor="middle">• Integration issues</text>
+    <text x="400" y="305" font-family="Arial" font-size="12" text-anchor="middle">• Resource changes</text>
+    <text x="400" y="330" font-family="Arial" font-size="12" text-anchor="middle">• Feature scope creep</text>
+    <rect x="330" y="230" width="140" height="110" rx="5" fill="none" stroke="#FFB366" stroke-width="2" />
+    
+    <!-- Rare risks -->
+    <rect x="570" y="130" width="160" height="110" rx="5" fill="white" stroke="#333" stroke-width="1" />
+    <text x="650" y="150" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Rare but High-Impact</text>
+    <line x1="585" y1="160" x2="715" y2="160" stroke="#333" stroke-width="1" />
+    <text x="650" y="180" font-family="Arial" font-size="12" text-anchor="middle">• Critical system failures</text>
+    <text x="650" y="205" font-family="Arial" font-size="12" text-anchor="middle">• Major requirement changes</text>
+    <text x="650" y="230" font-family="Arial" font-size="12" text-anchor="middle">• Security breaches</text>
+    <rect x="570" y="130" width="160" height="110" rx="5" fill="none" stroke="#FF6B6B" stroke-width="2" />
+    
+    <!-- Key insight box -->
+    <rect x="70" y="520" width="660" height="60" rx="5" fill="#f8f8f8" stroke="#333" stroke-width="1" />
+    <text x="400" y="545" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">
+        Traditional estimation models focus on common and predictable risks
+    </text>
+    <text x="400" y="570" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">
+        but often underfit by not accounting for the "long tail" of rare, high-impact events
+    </text>
+</svg> 

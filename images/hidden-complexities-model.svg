@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="900" height="700" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="700" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#333333">
+    Hidden Complexities in Software Estimation
+  </text>
+  
+  <!-- Visible vs Hidden container -->
+  <rect x="50" y="55" width="800" height="550" rx="10" fill="#f8f9fa" stroke="#cccccc" stroke-width="2"/>
+  
+  <!-- Visible Part -->
+  <rect x="100" y="130" width="700" height="120" rx="10" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="450" y="110" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#2e7d32">
+    Visible/Traditional Project Estimation Factors
+  </text>
+  
+  <!-- Visible Factors -->
+  <rect x="130" y="150" width="150" height="80" rx="5" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="205" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#2e7d32">Requirements</text>
+  <text x="205" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2e7d32">(Feature Count)</text>
+  
+  <rect x="320" y="150" width="150" height="80" rx="5" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="395" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#2e7d32">Code Size</text>
+  <text x="395" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2e7d32">(Lines, Function Points)</text>
+  
+  <rect x="510" y="150" width="150" height="80" rx="5" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="585" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#2e7d32">Team Size</text>
+  <text x="585" y="200" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2e7d32">(Developer Count)</text>
+  
+  <rect x="700" y="150" width="50" height="80" rx="5" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="725" y="195" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#2e7d32">...</text>
+  
+  <!-- Hidden Part -->
+  <rect x="100" y="300" width="700" height="300" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+  <text x="450" y="280" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#e65100">
+    Hidden Complexity Factors
+  </text>
+  
+  <!-- Hidden Factors - Technical -->
+  <g transform="translate(200, 330)">
+    <rect x="-90" y="0" width="180" height="30" rx="5" fill="#ffccbc" stroke="#ff5722" stroke-width="1"/>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#bf360c">Technical Factors</text>
+    
+    <rect x="-80" y="40" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="57" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Technical Debt</text>
+    
+    <rect x="-80" y="70" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="87" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Legacy Code Integration</text>
+    
+    <rect x="-80" y="100" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="117" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Architecture Complexity</text>
+    
+    <rect x="-80" y="130" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="147" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Testing Complexity</text>
+    
+    <rect x="-80" y="160" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="177" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Security Requirements</text>
+    
+    <rect x="-80" y="190" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="207" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Tool &amp; Environment Setup</text>
+    
+    <rect x="-80" y="220" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="237" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">API/3rd Party Dependencies</text>
+  </g>
+  
+  <!-- Hidden Factors - Human -->
+  <g transform="translate(450, 330)">
+    <rect x="-90" y="0" width="180" height="30" rx="5" fill="#ffccbc" stroke="#ff5722" stroke-width="1"/>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#bf360c">Human Factors</text>
+    
+    <rect x="-80" y="40" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="57" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Knowledge Transfer</text>
+    
+    <rect x="-80" y="70" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="87" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Team Learning Curve</text>
+    
+    <rect x="-80" y="100" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="117" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Unclear Requirements</text>
+    
+    <rect x="-80" y="130" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="147" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Communication Overhead</text>
+    
+    <rect x="-80" y="160" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="177" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Decision-Making Delays</text>
+    
+    <rect x="-80" y="190" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="207" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Context Switching</text>
+    
+    <rect x="-80" y="220" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="237" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Productivity Variance</text>
+  </g>
+  
+  <!-- Hidden Factors - Process -->
+  <g transform="translate(700, 330)">
+    <rect x="-90" y="0" width="180" height="30" rx="5" fill="#ffccbc" stroke="#ff5722" stroke-width="1"/>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#bf360c">Process Factors</text>
+    
+    <rect x="-80" y="40" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="57" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Bureaucratic Overhead</text>
+    
+    <rect x="-80" y="70" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="87" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Review Cycles</text>
+    
+    <rect x="-80" y="100" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="117" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Deployment Complexity</text>
+    
+    <rect x="-80" y="130" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="147" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Quality Assurance Process</text>
+    
+    <rect x="-80" y="160" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="177" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Documentation Needs</text>
+    
+    <rect x="-80" y="190" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="207" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Compliance Requirements</text>
+    
+    <rect x="-80" y="220" width="160" height="25" rx="5" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+    <text x="0" y="237" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#e65100">Change Management</text>
+  </g>
+  
+  <!-- Iceberg Metaphor -->
+  <path d="M50 650 L850 650 L700 680 L200 680 Z" fill="#e1f5fe" stroke="#0288d1" stroke-width="1"/>
+  <path d="M200 680 L700 680 L650 700 L250 700 Z" fill="#b3e5fc" stroke="#0288d1" stroke-width="1"/>
+  
+  <!-- Connection lines from visible to hidden -->
+  <line x1="450" y1="250" x2="450" y2="300" stroke="#ff9800" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Impact Indicators -->
+  <g transform="translate(450, 610)">
+    <rect x="-350" y="0" width="700" height="30" rx="5" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">
+      Hidden complexities can cause 30%-200% deviation from traditional estimates
+    </text>
+  </g>
+  
+  <!-- Legend -->
+  <rect x="670" y="70" width="20" height="20" rx="3" fill="#c8e6c9" stroke="#4caf50" stroke-width="1"/>
+  <text x="700" y="85" font-family="Arial, sans-serif" font-size="12" fill="#2e7d32">Visible Factor</text>
+  
+  <rect x="670" y="95" width="20" height="20" rx="3" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+  <text x="700" y="110" font-family="Arial, sans-serif" font-size="12" fill="#e65100">Hidden Factor</text>
+</svg> 

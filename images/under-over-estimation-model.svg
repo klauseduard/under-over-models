@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold" fill="#333333">
+    Under vs. Over Estimation Tendencies
+  </text>
+  
+  <!-- Main chart area -->
+  <rect x="100" y="90" width="600" height="340" fill="#f9f9f9" stroke="#cccccc" stroke-width="1"/>
+  
+  <!-- Axes -->
+  <line x1="100" y1="430" x2="700" y2="430" stroke="#333333" stroke-width="2"/> <!-- X-axis -->
+  <line x1="400" y1="90" x2="400" y2="430" stroke="#333333" stroke-width="2"/> <!-- Y-axis (center) -->
+  
+  <!-- Axes labels -->
+  <text x="400" y="460" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333333">Estimation Accuracy</text>
+  <text x="100" y="460" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#d32f2f">Underestimation</text>
+  <text x="700" y="460" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1976d2">Overestimation</text>
+  
+  <!-- Vertical label -->
+  <text transform="translate(50, 260) rotate(-90)" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333333">Project Types &amp; Factors</text>
+  
+  <!-- Underestimation zone (left side) -->
+  <rect x="100" y="90" width="300" height="340" fill="#ffebee" fill-opacity="0.3"/>
+  
+  <!-- Overestimation zone (right side) -->
+  <rect x="400" y="90" width="300" height="340" fill="#e3f2fd" fill-opacity="0.3"/>
+  
+  <!-- Projects and factors -->
+  <!-- Underestimation side -->
+  <g transform="translate(0, 0)">
+    <!-- Innovative/Novel Projects -->
+    <rect x="150" y="110" width="200" height="40" rx="5" fill="#ef9a9a" stroke="#c62828" stroke-width="1"/>
+    <text x="250" y="135" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Innovative/Novel Projects</text>
+    
+    <!-- Tight Deadlines -->
+    <rect x="180" y="160" width="170" height="30" rx="5" fill="#ef9a9a" stroke="#c62828" stroke-width="1"/>
+    <text x="265" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Tight Deadlines</text>
+    
+    <!-- Legacy System Integration -->
+    <rect x="130" y="200" width="220" height="30" rx="5" fill="#ef9a9a" stroke="#c62828" stroke-width="1"/>
+    <text x="240" y="220" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Legacy System Integration</text>
+    
+    <!-- Unclear Requirements -->
+    <rect x="170" y="240" width="180" height="30" rx="5" fill="#ef9a9a" stroke="#c62828" stroke-width="1"/>
+    <text x="260" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Unclear Requirements</text>
+    
+    <!-- Technical Debt Resolution -->
+    <rect x="160" y="280" width="190" height="30" rx="5" fill="#ef9a9a" stroke="#c62828" stroke-width="1"/>
+    <text x="255" y="300" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Technical Debt Resolution</text>
+    
+    <!-- Optimism Bias -->
+    <rect x="190" y="320" width="160" height="30" rx="5" fill="#ef9a9a" stroke="#c62828" stroke-width="1"/>
+    <text x="270" y="340" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Optimism Bias</text>
+    
+    <!-- Market Pressure -->
+    <rect x="200" y="360" width="150" height="30" rx="5" fill="#ef9a9a" stroke="#c62828" stroke-width="1"/>
+    <text x="275" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Market Pressure</text>
+  </g>
+  
+  <!-- Overestimation side -->
+  <g transform="translate(0, 0)">
+    <!-- Routine/Well-known Projects -->
+    <rect x="450" y="110" width="200" height="40" rx="5" fill="#90caf9" stroke="#1565c0" stroke-width="1"/>
+    <text x="550" y="135" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Routine/Well-known Projects</text>
+    
+    <!-- Risk Aversion -->
+    <rect x="480" y="160" width="170" height="30" rx="5" fill="#90caf9" stroke="#1565c0" stroke-width="1"/>
+    <text x="565" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Risk Aversion</text>
+    
+    <!-- Padding for Contingency -->
+    <rect x="460" y="200" width="190" height="30" rx="5" fill="#90caf9" stroke="#1565c0" stroke-width="1"/>
+    <text x="555" y="220" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Padding for Contingency</text>
+    
+    <!-- Previous Estimation Failures -->
+    <rect x="450" y="240" width="200" height="30" rx="5" fill="#90caf9" stroke="#1565c0" stroke-width="1"/>
+    <text x="550" y="260" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Previous Estimation Failures</text>
+    
+    <!-- Complex Testing Requirements -->
+    <rect x="450" y="280" width="200" height="30" rx="5" fill="#90caf9" stroke="#1565c0" stroke-width="1"/>
+    <text x="550" y="300" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Complex Testing Requirements</text>
+    
+    <!-- Multiple Stakeholders -->
+    <rect x="470" y="320" width="180" height="30" rx="5" fill="#90caf9" stroke="#1565c0" stroke-width="1"/>
+    <text x="560" y="340" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Multiple Stakeholders</text>
+    
+    <!-- Inexperienced Estimators -->
+    <rect x="470" y="360" width="180" height="30" rx="5" fill="#90caf9" stroke="#1565c0" stroke-width="1"/>
+    <text x="560" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Inexperienced Estimators</text>
+  </g>
+  
+  <!-- Optimal estimation zone -->
+  <rect x="380" y="90" width="40" height="340" fill="#c8e6c9" fill-opacity="0.5" stroke="#388e3c" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Consequences sections -->
+  <text x="250" y="490" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#d32f2f">Underestimation Consequences</text>
+  <text x="550" y="490" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold" fill="#1976d2">Overestimation Consequences</text>
+  
+  <!-- Underestimation consequences -->
+  <g transform="translate(0, 0)">
+    <circle cx="160" cy="510" r="4" fill="#d32f2f"/>
+    <text x="170" y="515" font-family="Arial, sans-serif" font-size="12" fill="#333333">Poor quality, technical debt</text>
+    
+    <circle cx="160" cy="530" r="4" fill="#d32f2f"/>
+    <text x="170" y="535" font-family="Arial, sans-serif" font-size="12" fill="#333333">Team burnout, low morale</text>
+    
+    <circle cx="160" cy="550" r="4" fill="#d32f2f"/>
+    <text x="170" y="555" font-family="Arial, sans-serif" font-size="12" fill="#333333">Missed deadlines, reduced scope</text>
+    
+    <circle cx="160" cy="570" r="4" fill="#d32f2f"/>
+    <text x="170" y="575" font-family="Arial, sans-serif" font-size="12" fill="#333333">Budget overruns</text>
+  </g>
+  
+  <!-- Overestimation consequences -->
+  <g transform="translate(0, 0)">
+    <circle cx="460" cy="510" r="4" fill="#1976d2"/>
+    <text x="470" y="515" font-family="Arial, sans-serif" font-size="12" fill="#333333">Resource underutilization</text>
+    
+    <circle cx="460" cy="530" r="4" fill="#1976d2"/>
+    <text x="470" y="535" font-family="Arial, sans-serif" font-size="12" fill="#333333">Lost business opportunities</text>
+    
+    <circle cx="460" cy="550" r="4" fill="#1976d2"/>
+    <text x="470" y="555" font-family="Arial, sans-serif" font-size="12" fill="#333333">Parkinson's Law (work expands)</text>
+    
+    <circle cx="460" cy="570" r="4" fill="#1976d2"/>
+    <text x="470" y="575" font-family="Arial, sans-serif" font-size="12" fill="#333333">Reduced competitiveness</text>
+  </g>
+</svg> 
