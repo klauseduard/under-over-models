@@ -11,9 +11,9 @@
   <!-- Flow diagram container -->
   <g transform="translate(50, 70)">
     <!-- Section backgrounds -->
-    <rect x="0" y="0" width="720" height="130" rx="10" fill="#fff4e0" fill-opacity="0.6" stroke="#e0e0e0" stroke-width="1"/>
-    <rect x="0" y="140" width="720" height="130" rx="10" fill="#e8f5e9" fill-opacity="0.6" stroke="#e0e0e0" stroke-width="1"/>
-    <rect x="0" y="280" width="720" height="130" rx="10" fill="#ffebee" fill-opacity="0.6" stroke="#e0e0e0" stroke-width="1"/>
+    <rect x="0" y="0" width="740" height="130" rx="10" fill="#fff4e0" fill-opacity="0.6" stroke="#e0e0e0" stroke-width="1"/>
+    <rect x="0" y="140" width="740" height="130" rx="10" fill="#e8f5e9" fill-opacity="0.6" stroke="#e0e0e0" stroke-width="1"/>
+    <rect x="0" y="280" width="740" height="130" rx="10" fill="#ffebee" fill-opacity="0.6" stroke="#e0e0e0" stroke-width="1"/>
     
     <!-- Section titles -->
     <text x="20" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#d68910">Underfitting (High Bias)</text>
@@ -28,7 +28,7 @@
       
       <rect x="170" y="0" width="150" height="60" rx="5" fill="#ffd54f" fill-opacity="0.3" stroke="#e0c03f" stroke-width="1"/>
       <text x="245" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Too Few</text>
-      <text x="245" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Communication Channels</text>
+      <text x="245" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Comm. Channels</text>
       
       <rect x="340" y="0" width="150" height="60" rx="5" fill="#ffd54f" fill-opacity="0.3" stroke="#e0c03f" stroke-width="1"/>
       <text x="415" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">One-Size-Fits-All</text>
