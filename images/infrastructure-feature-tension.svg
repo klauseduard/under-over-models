@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Infrastructure Investment vs. Feature Delivery Tension</text>
+  
+  <!-- Main Container -->
+  <rect x="50" y="70" width="800" height="480" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  
+  <!-- Time axis -->
+  <line x1="100" y1="450" x2="750" y2="450" stroke="#333333" stroke-width="2"/>
+  <text x="425" y="480" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Time Horizon</text>
+  
+  <!-- Time markers -->
+  <line x1="150" y1="445" x2="150" y2="455" stroke="#333333" stroke-width="2"/>
+  <text x="150" y="470" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Short-term</text>
+  
+  <line x1="425" y1="445" x2="425" y2="455" stroke="#333333" stroke-width="2"/>
+  <text x="425" y="470" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Medium-term</text>
+  
+  <line x1="700" y1="445" x2="700" y2="455" stroke="#333333" stroke-width="2"/>
+  <text x="700" y="470" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Long-term</text>
+  
+  <!-- Development Efficiency Curves -->
+  <!-- Feature-only approach -->
+  <path d="M 100,350 Q 200,365 300,400 T 500,440 T 700,445" stroke="#ff7347" stroke-width="3" fill="none"/>
+  <text x="720" y="445" font-family="Arial, sans-serif" font-size="14" fill="#ff7347" text-anchor="start">Feature-only</text>
+  
+  <!-- Balanced approach -->
+  <path d="M 100,380 Q 200,375 300,350 T 500,320 T 700,280" stroke="#4793ff" stroke-width="3" fill="none"/>
+  <text x="720" y="280" font-family="Arial, sans-serif" font-size="14" fill="#4793ff" text-anchor="start">Balanced</text>
+  
+  <!-- Infrastructure-heavy approach -->
+  <path d="M 100,420 Q 200,410 300,370 T 500,280 T 700,170" stroke="#78c2ad" stroke-width="3" fill="none"/>
+  <text x="720" y="170" font-family="Arial, sans-serif" font-size="14" fill="#78c2ad" text-anchor="start">Infrastructure-focused</text>
+  
+  <!-- Y-axis label and Development Efficiency Axis -->
+  <line x1="100" y1="450" x2="100" y2="130" stroke="#333333" stroke-width="2"/>
+  <text x="80" y="290" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" transform="rotate(-90, 80, 290)">Development Efficiency</text>
+  <text x="100" y="140" font-family="Arial, sans-serif" font-size="12" text-anchor="end">High</text>
+  <text x="100" y="300" font-family="Arial, sans-serif" font-size="12" text-anchor="end">Medium</text>
+  <text x="100" y="450" font-family="Arial, sans-serif" font-size="12" text-anchor="end">Low</text>
+  
+  <!-- Feature Delivery Markers -->
+  <!-- Feature-only approach -->
+  <circle cx="150" cy="320" r="8" fill="#ff7347"/>
+  <circle cx="250" cy="330" r="8" fill="#ff7347"/>
+  <circle cx="350" cy="340" r="8" fill="#ff7347"/>
+  
+  <!-- Balanced approach -->
+  <circle cx="180" cy="360" r="8" fill="#4793ff"/>
+  <circle cx="280" cy="340" r="8" fill="#4793ff"/>
+  <circle cx="380" cy="315" r="8" fill="#4793ff"/>
+  
+  <!-- Infrastructure-focused approach -->
+  <circle cx="220" cy="400" r="8" fill="#78c2ad"/>
+  <circle cx="320" cy="365" r="8" fill="#78c2ad"/>
+  <circle cx="420" cy="320" r="8" fill="#78c2ad"/>
+  
+  <!-- Visibility Line - What stakeholders see -->
+  <line x1="100" y1="350" x2="750" y2="350" stroke="#333333" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="120" y="365" font-family="Arial, sans-serif" font-size="12" fill="#555555" text-anchor="start">Visibility threshold for business stakeholders</text>
+  
+  <!-- Management Perspective Box -->
+  <rect x="120" y="100" width="200" height="110" fill="#ffe8e0" stroke="#ff7347" stroke-width="1" rx="5" ry="5"/>
+  <text x="220" y="120" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Management Perspective</text>
+  <text x="130" y="145" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Prioritizes visible feature delivery</text>
+  <text x="130" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Focuses on short-term wins</text>
+  <text x="130" y="185" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Concerned with immediate ROI</text>
+  <text x="130" y="205" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Views infrastructure as "cost"</text>
+  
+  <!-- Technical Perspective Box -->
+  <rect x="530" y="100" width="200" height="110" fill="#e0ffe8" stroke="#78c2ad" stroke-width="1" rx="5" ry="5"/>
+  <text x="630" y="120" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Technical Perspective</text>
+  <text x="540" y="145" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Values long-term foundations</text>
+  <text x="540" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Focuses on development velocity</text>
+  <text x="540" y="185" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Concerned with maintainability</text>
+  <text x="540" y="205" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Views infrastructure as "investment"</text>
+  
+  <!-- Technical Debt Accumulation -->
+  <rect x="200" y="240" width="500" height="70" fill="#fff4e6" stroke="#ff9f51" stroke-width="1" rx="5" ry="5"/>
+  <text x="450" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Technical Debt Accumulation</text>
+  <text x="450" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Deferring infrastructure investments creates compounding technical debt</text>
+  <text x="450" y="300" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">that increasingly slows development and raises costs over time</text>
+  
+  <!-- Hidden Value Callout -->
+  <rect x="150" y="400" width="220" height="40" fill="#e9ecef" stroke="#4793ff" stroke-width="1" rx="5" ry="5" opacity="0.9"/>
+  <text x="260" y="420" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Infrastructure value hidden</text>
+  <text x="260" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">from immediate business metrics</text>
+  
+  <!-- Visible Impact Callout -->
+  <rect x="300" y="310" width="150" height="30" fill="#e9ecef" stroke="#ff7347" stroke-width="1" rx="5" ry="5" opacity="0.9"/>
+  <text x="375" y="330" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Visible feature delivery</text>
+  
+  <!-- Legend -->
+  <rect x="100" y="500" width="700" height="40" fill="#f5f7f9" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  <text x="450" y="525" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Key Insight: Infrastructure investments create compounding development efficiency gains, but their value is less visible and delayed</text>
+</svg> 
