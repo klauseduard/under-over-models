@@ -174,10 +174,6 @@ To implement three-point estimation effectively:
 5. **Use uncertainty for planning**: Schedule buffers based on the calculated uncertainty, not arbitrary padding
 6. **Track accuracy**: Compare actual outcomes to the full distribution, not just the expected value
 
-<aside class="callout">
-<p><strong>Try it yourself:</strong> Experiment with these concepts using the <a href="https://www.shedloadofcode.com/tools/agile-task-estimation-calculator">Agile Task Estimation Calculator</a></p>
-</aside>
-
 > For a practical, interactive way to experiment with three-point estimation, have a look at the web-based "[Agile Task Estimation Calculator](https://www.shedloadofcode.com/tools/agile-task-estimation-calculator)". This calculator incorporates many of the principles discussed in this section, including PERT calculations, standard deviation, and confidence intervals. It also considers contextual factors such as task complexity, team experience, and cross-functional dependencies that influence estimation uncertainty. By adjusting different parameters, users can see how various factors affect estimation outcomes and uncertainty ranges.
 
 Three-point estimation serves as an accessible entry point to probabilistic thinking for teams transitioning from traditional point-based estimates toward more sophisticated uncertainty modeling.
@@ -438,5 +434,3 @@ From an [information entropy](06-theoretical-concepts.md#63-entropy-and-software
 The concept of [negentropy](06-theoretical-concepts.md#negentropy-in-software-development) (negative entropy) provides a counterbalance—practices like comprehensive documentation, testing, and knowledge sharing act to reduce uncertainty and create more predictable outcomes in software projects. However, the time required for these critical negentropy-building activities themselves is often overlooked in estimation models, further contributing to the underfitting problem.
 
 [Back to Table of Contents](../README.md) 
-
-In progress. This started as something composed over a long weekend to satisfy an intellectual urge, and continues to evolve (perhaps). 
