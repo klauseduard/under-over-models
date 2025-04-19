@@ -482,7 +482,7 @@ complexity balance by providing:
 - Recursive structures that handle complexity at appropriate levels
 - Clear separation of operational and strategic functions
 
-![Viable System Model](../images/viable-system-model.svg)
+![Viable System Model](../images/vsm.svg)
 
 #### Cybernetics and Organizational Learning
 
