@@ -24,6 +24,10 @@ Factors like evolving requirements, unforeseen technical challenges, and the inh
 
 From an [information theory](https://www.britannica.com/science/information-theory) perspective, software estimation can be viewed as attempting to model a high-entropy system. As project complexity increases, so does the [entropy](06-theoretical-concepts.md#63-entropy-and-software-complexity) (uncertainty) within the system, making accurate prediction inherently more difficult. Estimation models that underfit effectively assume lower entropy than actually exists in the project, while overfit models mistake random noise in historical data for meaningful patterns.
 
+#### Uncertainty in Novel Domains
+
+In software development, teams face maximum uncertainty when entering entirely new problem domains, implementing unfamiliar technologies, or building systems without precedent. The uncertainty isn't created by the complexity of what's been built—it's inherent in the unexplored nature of the work ahead. This perspective challenges the common assumption that estimation accuracy improves simply by breaking work into smaller components. In novel domains, even small components carry high uncertainty until the team gains experience and establishes patterns.
+
 ### Bayesian Approaches to Estimation
 
 [Bayesian statistics](06-theoretical-concepts.md#64-bayesian-statistics-and-uncertainty-management) offers a promising framework for addressing software estimation challenges by explicitly modeling and updating uncertainty. Rather than producing single-point estimates, Bayesian approaches generate probability distributions that quantify the range of possible outcomes and their likelihoods.
