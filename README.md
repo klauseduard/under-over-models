@@ -16,6 +16,8 @@ A further motivation is to explore how different kinds of organizations might ev
 
 This exploration has practical implications: how should existing organizations adapt to AI-driven changes? What guidance should consultancies provide to clients navigating this transition? Is it more feasible to build new AI-native organizations from scratch than to transform established ones? And perhaps most importantly, how significant are AI-driven organizational changes compared to other environmental factors that organizations regularly adapt to? These questions affect not just organizational leadership, but every technology and software engineering practitioner who should be interested in what the future holds for their profession, which skills will remain valuable, and where to focus their efforts and professional development in the coming years.
 
+Underlying this work is also an examination of the limits of compromise. The balance between underfitting and overfitting inherently involves navigating trade-offs between competing concerns—simplicity versus accuracy, generality versus specificity, rigidity versus flexibility. In organizational contexts, effective compromise requires all parties to share an understanding of some fundamental principles. 
+
 ## About This Publication
 
 ### Authorship Note
