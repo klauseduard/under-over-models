@@ -1,0 +1,285 @@
+<svg width="800" height="750" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" viewBox="0 0 800 750">
+  <!-- Definitions -->
+  <defs>
+    <!-- Arrow Markers -->
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#007bff" />
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#D95F00" />
+    </marker>
+    
+    <!-- Symbol Markers -->
+    <marker id="plusSymbol" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 3 5 H 7 M 5 3 V 7" stroke="#007bff" stroke-width="1.5" fill="none"/>
+    </marker>
+    <marker id="minusSymbol" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M 3 5 H 7" stroke="#D95F00" stroke-width="1.5" fill="none"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="750" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- Title and Subtitle -->
+  <text x="400" y="40" font-size="18px" font-weight="bold" text-anchor="middle" fill="#333">Organizational Feedback Loops and Regulatory Balance</text>
+  <text x="400" y="65" font-size="14px" text-anchor="middle" fill="#555">Cybernetic mechanisms that determine organizational adaptation capacity</text>
+  
+  <!-- Three Panels Layout -->
+  <g transform="translate(35, 90)">
+    <!-- Panel 1: Underfit -->
+    <g>
+      <rect x="0" y="0" width="230" height="450" fill="#f2f9f2" rx="5" ry="5" stroke="#aaa" stroke-width="1" />
+      
+      <text x="115" y="25" font-size="16px" font-weight="bold" text-anchor="middle" fill="#333">Underfit Organization</text>
+      <text x="115" y="45" font-size="14px" text-anchor="middle" fill="#555">Insufficient Feedback</text>
+      
+      <text x="115" y="70" font-size="10px" text-anchor="middle" fill="#666">Few sensing points</text>
+      
+      <!-- Placeholder for empty space above visualization -->
+      <rect x="15" y="80" width="200" height="80" fill="#f2f9f2" rx="0" ry="0" />
+      
+      <!-- Underfit Visualization Container -->
+      <rect x="15" y="160" width="200" height="150" fill="#e6f7e6" rx="5" ry="5" stroke="#a0d8a0" stroke-width="1"/>
+      <text x="115" y="175" font-size="10px" text-anchor="middle" fill="#666">Underfit Internals</text>
+      
+      <!-- Underfit Diagram -->
+      <circle cx="70" cy="220" r="8" fill="#ffffff" stroke="#888888"/>
+      <circle cx="115" cy="200" r="8" fill="#ffffff" stroke="#888888"/>
+      <circle cx="175" cy="240" r="8" fill="#ffffff" stroke="#888888"/>
+      
+      <line x1="70" y1="220" x2="115" y2="200" stroke="#aaaaaa" stroke-width="1" stroke-dasharray="4,2"/>
+      <line x1="115" y1="200" x2="175" y2="240" stroke="#aaaaaa" stroke-width="1" stroke-dasharray="4,2"/>
+      
+      <path d="M 75 245 C 95 270, 155 270, 170 255" stroke="#007bff" stroke-width="1.5" fill="none" marker-end="url(#arrowBlue)" marker-start="url(#plusSymbol)"/>
+      <text x="95" y="280" font-size="10px" text-anchor="middle" fill="#007bff">Dominant positive feedback</text>
+      
+      <!-- Empty space below visualization -->
+      <rect x="15" y="310" width="200" height="50" fill="#f2f9f2" rx="0" ry="0" />
+      
+      <!-- Characteristics Box -->
+      <rect x="15" y="360" width="200" height="75" fill="#fff" rx="5" ry="5" stroke="#ddd" stroke-width="1" />
+      <text x="25" y="375" font-size="12px" font-weight="bold" fill="#333">Characteristics:</text>
+      <text x="30" y="390" font-size="10px" fill="#555">• Weak error detection</text>
+      <text x="30" y="405" font-size="10px" fill="#555">• Insufficient regulatory capacity</text>
+      <text x="30" y="420" font-size="10px" fill="#555">• Inability to respond to complexity</text>
+      <text x="30" y="435" font-size="10px" fill="#555">• Prone to instability from positive feedback</text>
+    </g>
+    
+    <!-- Panel 2: Balanced -->
+    <g transform="translate(250, 0)">
+      <rect x="0" y="0" width="230" height="450" fill="#f0fbf0" rx="5" ry="5" stroke="#aaa" stroke-width="1" />
+      
+      <text x="115" y="25" font-size="16px" font-weight="bold" text-anchor="middle" fill="#333">Balanced Organization</text>
+      <text x="115" y="45" font-size="14px" text-anchor="middle" fill="#555">Requisite Feedback</text>
+      
+      <text x="115" y="70" font-size="10px" text-anchor="middle" fill="#666">Optimal sensing network</text>
+      
+      <!-- Placeholder for empty space above visualization -->
+      <rect x="15" y="80" width="200" height="80" fill="#f0fbf0" rx="0" ry="0" />
+      
+      <!-- Balanced Visualization Container -->
+      <rect x="15" y="160" width="200" height="150" fill="#90EE90" rx="5" ry="5" stroke="#50c850" stroke-width="1"/>
+      <text x="115" y="175" font-size="10px" text-anchor="middle" fill="#333">Balanced Internals</text>
+      
+      <!-- Balanced Diagram -->
+      <circle cx="55" cy="205" r="8" fill="#ffffff" stroke="#666666"/>
+      <circle cx="55" cy="255" r="8" fill="#ffffff" stroke="#666666"/>
+      <circle cx="115" cy="190" r="8" fill="#ffffff" stroke="#666666"/>
+      <circle cx="115" cy="230" r="8" fill="#ffffff" stroke="#666666"/>
+      <circle cx="115" cy="270" r="8" fill="#ffffff" stroke="#666666"/>
+      <circle cx="175" cy="205" r="8" fill="#ffffff" stroke="#666666"/>
+      <circle cx="175" cy="255" r="8" fill="#ffffff" stroke="#666666"/>
+      
+      <line x1="55" y1="205" x2="115" y2="190" stroke="#666666" stroke-width="1"/>
+      <line x1="55" y1="255" x2="115" y2="270" stroke="#666666" stroke-width="1"/>
+      <line x1="115" y1="190" x2="175" y2="205" stroke="#666666" stroke-width="1"/>
+      <line x1="115" y1="270" x2="175" y2="255" stroke="#666666" stroke-width="1"/>
+      <line x1="115" y1="190" x2="115" y2="230" stroke="#666666" stroke-width="1"/>
+      <line x1="115" y1="230" x2="115" y2="270" stroke="#666666" stroke-width="1"/>
+      <line x1="55" y1="205" x2="55" y2="255" stroke="#666666" stroke-width="1"/>
+      <line x1="175" y1="205" x2="175" y2="255" stroke="#666666" stroke-width="1"/>
+      
+      <path d="M 55 210 C 75 220, 95 225, 105 230" stroke="#007bff" stroke-width="1.5" fill="none" marker-end="url(#arrowBlue)" marker-start="url(#plusSymbol)"/>
+      <path d="M 175 210 C 155 220, 135 225, 125 230" stroke="#D95F00" stroke-width="1.5" fill="none" marker-end="url(#arrowOrange)" marker-start="url(#minusSymbol)"/>
+      <path d="M 65 250 C 80 245, 100 240, 110 245" stroke="#D95F00" stroke-width="1.5" fill="none" marker-end="url(#arrowOrange)" marker-start="url(#minusSymbol)"/>
+      
+      <path d="M 115 235 C 130 245, 130 255, 115 265 C 100 255, 100 245, 115 235" stroke="#333333" stroke-width="1" fill="none" stroke-dasharray="2,1"/>
+      
+      <text x="115" y="280" font-size="10px" text-anchor="middle" fill="#555">Balanced feedback types</text>
+      
+      <!-- Empty space below visualization -->
+      <rect x="15" y="310" width="200" height="50" fill="#f0fbf0" rx="0" ry="0" />
+      
+      <!-- Characteristics Box -->
+      <rect x="15" y="360" width="200" height="75" fill="#fff" rx="5" ry="5" stroke="#ddd" stroke-width="1" />
+      <text x="25" y="375" font-size="12px" font-weight="bold" fill="#333">Characteristics:</text>
+      <text x="30" y="390" font-size="10px" fill="#555">• Effective error detection &amp; correction</text>
+      <text x="30" y="405" font-size="10px" fill="#555">• Sufficient regulatory capacity</text>
+      <text x="30" y="420" font-size="10px" fill="#555">• Adaptive response to environmental signals</text>
+      <text x="30" y="435" font-size="10px" fill="#555">• Balance between stability &amp; innovation</text>
+    </g>
+    
+    <!-- Panel 3: Overfit -->
+    <g transform="translate(500, 0)">
+      <rect x="0" y="0" width="230" height="450" fill="#fff5eb" rx="5" ry="5" stroke="#aaa" stroke-width="1" />
+      
+      <text x="115" y="25" font-size="16px" font-weight="bold" text-anchor="middle" fill="#333">Overfit Organization</text>
+      <text x="115" y="45" font-size="14px" text-anchor="middle" fill="#555">Excessive Control</text>
+      
+      <text x="115" y="70" font-size="10px" text-anchor="middle" fill="#666">Excessive sensing points</text>
+      
+      <!-- Placeholder for empty space above visualization -->
+      <rect x="15" y="80" width="200" height="80" fill="#fff5eb" rx="0" ry="0" />
+      
+      <!-- Overfit Visualization Container -->
+      <rect x="15" y="160" width="200" height="150" fill="#FFB366" rx="5" ry="5" stroke="#FF9933" stroke-width="1"/>
+      <text x="115" y="175" font-size="10px" text-anchor="middle" fill="#333">Overfit Internals</text>
+      
+      <!-- Overfit Diagram - Simplified version -->
+      <circle cx="45" cy="195" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="45" cy="225" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="45" cy="255" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="45" cy="285" r="6" fill="#ffffff" stroke="#666666"/>
+      
+      <circle cx="85" cy="185" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="85" cy="215" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="85" cy="245" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="85" cy="275" r="6" fill="#ffffff" stroke="#666666"/>
+      
+      <circle cx="125" cy="195" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="125" cy="225" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="125" cy="255" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="125" cy="285" r="6" fill="#ffffff" stroke="#666666"/>
+      
+      <circle cx="165" cy="185" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="165" cy="215" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="165" cy="245" r="6" fill="#ffffff" stroke="#666666"/>
+      <circle cx="165" cy="275" r="6" fill="#ffffff" stroke="#666666"/>
+      
+      <!-- Horizontal connections -->
+      <line x1="45" y1="195" x2="85" y2="185" stroke="#666666" stroke-width="1.5"/>
+      <line x1="45" y1="225" x2="85" y2="215" stroke="#666666" stroke-width="1.5"/>
+      <line x1="45" y1="255" x2="85" y2="245" stroke="#666666" stroke-width="1.5"/>
+      <line x1="45" y1="285" x2="85" y2="275" stroke="#666666" stroke-width="1.5"/>
+      
+      <line x1="85" y1="185" x2="125" y2="195" stroke="#666666" stroke-width="1.5"/>
+      <line x1="85" y1="215" x2="125" y2="225" stroke="#666666" stroke-width="1.5"/>
+      <line x1="85" y1="245" x2="125" y2="255" stroke="#666666" stroke-width="1.5"/>
+      <line x1="85" y1="275" x2="125" y2="285" stroke="#666666" stroke-width="1.5"/>
+      
+      <line x1="125" y1="195" x2="165" y2="185" stroke="#666666" stroke-width="1.5"/>
+      <line x1="125" y1="225" x2="165" y2="215" stroke="#666666" stroke-width="1.5"/>
+      <line x1="125" y1="255" x2="165" y2="245" stroke="#666666" stroke-width="1.5"/>
+      <line x1="125" y1="285" x2="165" y2="275" stroke="#666666" stroke-width="1.5"/>
+      
+      <!-- Vertical connections -->
+      <line x1="45" y1="195" x2="45" y2="225" stroke="#666666" stroke-width="1.5"/>
+      <line x1="45" y1="225" x2="45" y2="255" stroke="#666666" stroke-width="1.5"/>
+      <line x1="45" y1="255" x2="45" y2="285" stroke="#666666" stroke-width="1.5"/>
+      
+      <line x1="85" y1="185" x2="85" y2="215" stroke="#666666" stroke-width="1.5"/>
+      <line x1="85" y1="215" x2="85" y2="245" stroke="#666666" stroke-width="1.5"/>
+      <line x1="85" y1="245" x2="85" y2="275" stroke="#666666" stroke-width="1.5"/>
+      
+      <line x1="125" y1="195" x2="125" y2="225" stroke="#666666" stroke-width="1.5"/>
+      <line x1="125" y1="225" x2="125" y2="255" stroke="#666666" stroke-width="1.5"/>
+      <line x1="125" y1="255" x2="125" y2="285" stroke="#666666" stroke-width="1.5"/>
+      
+      <line x1="165" y1="185" x2="165" y2="215" stroke="#666666" stroke-width="1.5"/>
+      <line x1="165" y1="215" x2="165" y2="245" stroke="#666666" stroke-width="1.5"/>
+      <line x1="165" y1="245" x2="165" y2="275" stroke="#666666" stroke-width="1.5"/>
+      
+      <!-- Feedback loops -->
+      <path d="M 60 195 C 65 185, 75 185, 80 195" stroke="#007bff" stroke-width="1.5" fill="none" marker-end="url(#arrowBlue)" marker-start="url(#plusSymbol)"/>
+      
+      <path d="M 145 195 C 150 185, 160 185, 165 195" stroke="#D95F00" stroke-width="1.5" fill="none" marker-end="url(#arrowOrange)" marker-start="url(#minusSymbol)"/>
+      <path d="M 55 235 C 60 225, 70 225, 75 235" stroke="#D95F00" stroke-width="1.5" fill="none" marker-end="url(#arrowOrange)" marker-start="url(#minusSymbol)"/>
+      <path d="M 135 235 C 140 225, 150 225, 155 235" stroke="#D95F00" stroke-width="1.5" fill="none" marker-end="url(#arrowOrange)" marker-start="url(#minusSymbol)"/>
+      <path d="M 55 265 C 60 255, 70 255, 75 265" stroke="#D95F00" stroke-width="1.5" fill="none" marker-end="url(#arrowOrange)" marker-start="url(#minusSymbol)"/>
+      
+      <!-- Control mechanisms -->
+      <path d="M 125 205 C 135 215, 135 235, 125 245 C 115 235, 115 215, 125 205" stroke="#333333" stroke-width="1" fill="none"/>
+      <path d="M 85 205 C 95 215, 95 235, 85 245 C 75 235, 75 215, 85 205" stroke="#333333" stroke-width="1" fill="none"/>
+      
+      <text x="115" y="280" font-size="10px" text-anchor="middle" fill="#D95F00">Dominant negative feedback</text>
+      
+      <!-- Empty space below visualization -->
+      <rect x="15" y="310" width="200" height="50" fill="#fff5eb" rx="0" ry="0" />
+      
+      <!-- Characteristics Box -->
+      <rect x="15" y="360" width="200" height="75" fill="#fff" rx="5" ry="5" stroke="#ddd" stroke-width="1" />
+      <text x="25" y="375" font-size="12px" font-weight="bold" fill="#333">Characteristics:</text>
+      <text x="30" y="390" font-size="10px" fill="#555">• Excessive error correction</text>
+      <text x="30" y="405" font-size="10px" fill="#555">• Over-regulation with redundant controls</text>
+      <text x="30" y="420" font-size="10px" fill="#555">• Suppression of innovation signals</text>
+      <text x="30" y="435" font-size="10px" fill="#555">• Rigid response patterns &amp; inability to adapt</text>
+    </g>
+  </g>
+  
+  <!-- Connector lines between panels -->
+  <line x1="165" y1="300" x2="285" y2="300" stroke="#666" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="485" y1="300" x2="535" y2="300" stroke="#666" stroke-width="1" stroke-dasharray="5,3"/>
+  
+  <!-- Bottom Spectrum Bar -->
+  <g transform="translate(85, 560)">
+    <!-- Gradient Bar -->
+    <defs>
+      <linearGradient id="spectrumGradient" x1="0%" y1="0%" x2="100%" y1="0%">
+        <stop offset="0%" stop-color="#e6f7e6" />
+        <stop offset="50%" stop-color="#50c850" />
+        <stop offset="100%" stop-color="#FF9933" />
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="630" height="20" fill="url(#spectrumGradient)" rx="5" ry="5" />
+    
+    <!-- Ticks and Labels -->
+    <line x1="0" y1="25" x2="0" y2="30" stroke="#666" stroke-width="1" />
+    <line x1="315" y1="25" x2="315" y2="30" stroke="#666" stroke-width="1" />
+    <line x1="630" y1="25" x2="630" y2="30" stroke="#666" stroke-width="1" />
+    
+    <text x="0" y="45" font-size="12px" text-anchor="middle" fill="#555">Insufficient Regulation</text>
+    <text x="315" y="45" font-size="12px" text-anchor="middle" fill="#555">Balanced Regulation</text>
+    <text x="630" y="45" font-size="12px" text-anchor="middle" fill="#555">Excessive Regulation</text>
+  </g>
+  
+  <!-- Key Principles Section -->
+  <g transform="translate(85, 620)">
+    <!-- Negative feedback -->
+    <g>
+      <text x="0" y="15" font-size="12px" font-weight="bold" fill="#333">Negative feedback:</text>
+      <line x1="130" y1="12" x2="150" y2="12" stroke="#D95F00" stroke-width="1.5" marker-end="url(#arrowOrange)" marker-start="url(#minusSymbol)" />
+      <text x="0" y="30" font-size="11px" fill="#555">Error-correcting mechanisms that maintain stability and homeostasis.</text>
+    </g>
+    
+    <!-- Positive feedback -->
+    <g transform="translate(0, 40)">
+      <text x="0" y="15" font-size="12px" font-weight="bold" fill="#333">Positive feedback:</text>
+      <line x1="130" y1="12" x2="150" y2="12" stroke="#007bff" stroke-width="1.5" marker-end="url(#arrowBlue)" marker-start="url(#plusSymbol)" />
+      <text x="0" y="30" font-size="11px" fill="#555">Amplifying mechanisms that enable growth, learning and innovation.</text>
+    </g>
+    
+    <!-- Requisite variety -->
+    <g transform="translate(340, 0)">
+      <text x="0" y="15" font-size="12px" font-weight="bold" fill="#333">Requisite variety:</text>
+      <text x="0" y="30" font-size="11px" fill="#555">Control systems must match the complexity of what they regulate.</text>
+    </g>
+    
+    <!-- Regulatory balance -->
+    <g transform="translate(340, 40)">
+      <text x="0" y="15" font-size="12px" font-weight="bold" fill="#333">Regulatory balance:</text>
+      <text x="0" y="30" font-size="11px" fill="#555">Optimal mix of controls that enables adaptation without rigidity.</text>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(640, 680)">
+    <rect x="0" y="0" width="140" height="60" fill="#fff" rx="5" ry="5" stroke="#ddd" stroke-width="1" />
+    <circle cx="10" cy="15" r="5" fill="#fff" stroke="#666"/>
+    <text x="20" y="18" font-size="10px" fill="#333">Sensing mechanism</text>
+    <line x1="5" y1="30" x2="15" y2="30" stroke="#666" stroke-width="1.5"/>
+    <text x="20" y="33" font-size="10px" fill="#333">Regulatory connection</text>
+    <path d="M 10 45 C 15 50, 15 55, 10 60 C 5 55, 5 50, 10 45" stroke="#333" stroke-width="1" fill="none"/>
+    <text x="20" y="53" font-size="10px" fill="#333">Homeostatic mechanism</text>
+  </g>
+</svg>

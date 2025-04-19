@@ -9,8 +9,8 @@
   - [3.2.2 More Complex Structures (e.g., Mechanistic, Hierarchical,
     Matrix)](#322-more-complex-structures-eg-mechanistic-hierarchical-matrix)
   - [3.2.3 The Spectrum of Choice: Navigating Organizational Complexity](#323-the-spectrum-of-choice-navigating-organizational-complexity)
-- [3.3 Evidence for Underfitting and Overfitting in Organizational
-  Models](#33-evidence-for-underfitting-and-overfitting-in-organizational-models)
+- [3.3 Understanding and Addressing Underfitting and Overfitting in Organizational
+  Models](#33-understanding-and-addressing-underfitting-and-overfitting-in-organizational-models)
   - [3.3.1 Underfitting in Organizational Models](#331-underfitting-in-organizational-models)
   - [3.3.2 Overfitting in Organizational Models](#332-overfitting-in-organizational-models)
   - [3.3.3 Seeking Balance](#333-seeking-balance)
@@ -165,7 +165,7 @@ Emerging technologies, particularly AI, may influence where organizations positi
 
 ![Complexity Spectrum](../images/complexity-spectrum.svg)
 
-## 3.3 Evidence for Underfitting and Overfitting in Organizational Models
+## 3.3 Understanding and Addressing Underfitting and Overfitting in Organizational Models
 
 ### 3.3.1 Underfitting in Organizational Models
 
@@ -363,7 +363,7 @@ must carefully navigate between simplicity and complexity. The theory provides a
 extreme on the spectrum—neither overly simplistic nor excessively complex organizational structures—can sustain
 effectiveness over time.
 
-A dissipative system, as described by Nobel laureate Ilya Prigogine, is characterized by:
+A dissipative system, as described by Nobel laureate [Ilya Prigogine](https://www.nobelprize.org/prizes/chemistry/1977/prigogine/biographical/), is characterized by:
 - Operation far from thermodynamic equilibrium
 - Continuous energy and matter exchange with the environment
 - Self-organizing behavior that creates and maintains order
@@ -385,7 +385,7 @@ energy flow. They become too specialized by:
    - Becoming brittle in the face of unexpected external changes
 
 From a dissipative systems perspective, effective organizations exist in a state of "dynamic stability" or what
-Prigogine called "far-from-equilibrium" conditions. In this state, the organization:
+Prigogine called ["far-from-equilibrium" conditions](https://journal.emergentpublications.com/Article/e63e5a9c-79a6-43e1-a127-5315791409d2/github). In this state, the organization:
 - Maintains enough structure to preserve its identity and purpose
 - Remains sufficiently adaptable to respond to environmental changes
 - Develops feedback mechanisms that allow for continuous learning and evolution
@@ -393,7 +393,7 @@ Prigogine called "far-from-equilibrium" conditions. In this state, the organizat
 This far-from-equilibrium state represents the optimal balance between underfitting and overfitting—creating just enough
 structure to function effectively while maintaining the flexibility to adapt and evolve. The theory explains why
 organizations need continuous energy input (in the form of resources, information, ideas) to maintain their complexity
-and avoid degradation toward either oversimplified or overly rigid states.
+and avoid degradation toward either oversimplified or overly rigid states ([Jantsch, 1975](https://www.panarchy.org/jantsch/dissipativestructures.html)).
 
 Importantly, dissipative systems theory suggests that periods of instability and reorganization are natural and
 necessary for organizational evolution. When environmental conditions change significantly, a temporary increase in
@@ -401,11 +401,15 @@ internal disorder (entropy) may be necessary before the system can reorganize in
 This provides a theoretical foundation for understanding organizational transformation processes and why disruption
 often precedes innovation.
 
-This dissipative systems perspective directly informs our discussions of Conway's Law (Section 3.4) and emerging AI
-integration challenges (Section 3.6). Conway's Law can be viewed as describing how organizational communication
-structures function as dissipative pathways that shape technical architectures. Similarly, the human-AI orchestration
-challenges described later reflect the need for organizations to develop new dissipative structures that can effectively
-exchange information and energy between human and AI components.
+#### Contemporary Example: AI Revolution in Software Development
+
+To illustrate these theoretical principles in a current context, consider the ongoing AI revolution in software development. Many software engineering organizations appear to have failed to detect and respond to early environmental signals indicating the emerging paradigm shift toward AI-assisted development—potentially exemplifying insufficient environmental interaction mechanisms. These organizations now face a period of increased internal entropy as they make adaptation efforts, attempting to integrate AI capabilities into existing structures.
+
+Observationally, many organizations seem to be approaching this adaptation incompletely—focusing primarily on cost reduction through tool adoption while neglecting necessary organizational structure changes. Through a dissipative systems lens, this could represent an incomplete energy and information exchange with the environment. Complete adaptation may require fundamental reconsideration of team structures, skill distributions, and workflow designs—not merely the adoption of new tools within existing frameworks.
+
+#### Theoretical Implications
+
+Returning to our broader theoretical discussion, the dissipative systems perspective directly informs our discussions of Conway's Law (Section 3.4) and emerging AI integration challenges (Section 3.6). Conway's Law can be viewed as describing how organizational communication structures function as dissipative pathways that shape technical architectures. Similarly, the human-AI orchestration challenges described later reflect the need for organizations to develop new dissipative structures that can effectively exchange information and energy between human and AI components.
 
 As we transition from these theoretical frameworks to more applied principles, Conway's Law offers a concrete
 manifestation of how organizational structures shape technical outcomes—demonstrating in practice many of the
