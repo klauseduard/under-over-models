@@ -8,9 +8,16 @@ Having examined AI's direct impact on organizational models, structures, communi
 
 ### 9.2.1 Shifting Skill Requirements
 
-The integration of AI into workflows has implications for required employee skills. As AI takes over more routine tasks, the demand for skills often considered uniquely human, such as emotional intelligence, creativity, critical thinking, and adaptability, may grow. Roles requiring analytical thinking, creative problem-solving, and interpretation of complex information could become more prominent. Furthermore, effective collaboration with AI tools may necessitate a certain level of AI literacy for many employees. Organizations might need to invest in training and development to help their workforce acquire these skills and adapt to AI-augmented workplaces.
+The integration of AI into organizational processes is catalyzing a substantial shift in the skills demanded of professionals at all levels. We are witnessing not merely an evolution but a fundamental reconfiguration of the skill landscape, with certain capabilities becoming exponentially more valuable while others face automation.
 
-![Skills Evolution in the AI Era](../images/skills-evolution-ai-era.svg)
+As AI takes over more routine tasks, the demand for skills often considered uniquely human, such as emotional intelligence, creativity, critical thinking, and adaptability, may grow. Roles requiring analytical thinking, creative problem-solving, and interpretation of complex information could become more prominent. 
+
+**Creative Thinking and Problem-Solving**  
+As AI increasingly handles routine analytical tasks, uniquely human creative thinking becomes more valuable. The ability to generate truly novel ideas, approach problems from unconventional angles, and connect disparate concepts in innovative ways represents a distinctly human advantage. AI may augment creative processes, but the initial spark of truly innovative thinking remains a human domain.
+
+Furthermore, effective collaboration with AI tools may necessitate a certain level of AI literacy for many employees. Organizations might need to invest in training and development to help their workforce acquire these skills and adapt to AI-augmented workplaces.
+
+![Human Skills Evolution in the AI Era](../images/human-ai-skills-evolution.svg)
 
 ### 9.2.2 Transformation of Traditional Roles
 
