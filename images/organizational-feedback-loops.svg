@@ -43,9 +43,9 @@
       <path d="M 75 245 C 95 270, 155 270, 170 255" stroke="#007bff" stroke-width="1.5" fill="none" marker-end="url(#arrowBlue)" marker-start="url(#plusSymbol)"/>
       <text x="114" y="302" font-size="10px" text-anchor="middle" fill="#007bff">Dominant positive feedback</text>
 <!--Empty space below visualization-->
-      <rect x="15" y="310" width="200" height="50" fill="#f2f9f2" rx="0" ry="0"/>
+      <rect x="15" y="320" width="200" height="50" fill="#f2f9f2" rx="0" ry="0"/>
 <!--Characteristics Box-->
-      <rect x="15" y="360" width="200" height="75" fill="#fff" rx="5" ry="5" stroke="#ddd" stroke-width="1"/>
+      <rect x="15" y="355" width="220" height="90" fill="#fff" rx="5" ry="5" stroke="#ddd" stroke-width="1"/>
       <text x="25" y="375" font-size="12px" font-weight="bold" fill="#333">Characteristics:</text>
       <text x="30" y="390" font-size="10px" fill="#555">• Weak error detection</text>
       <text x="30" y="405" font-size="10px" fill="#555">• Insufficient regulatory capacity</text>
@@ -87,7 +87,7 @@
 <!--Empty space below visualization-->
       <rect x="15" y="310" width="200" height="50" fill="#f0fbf0" rx="0" ry="0"/>
 <!--Characteristics Box-->
-      <rect x="15" y="360" width="200" height="75" fill="#fff" rx="5" ry="5" stroke="#ddd" stroke-width="1"/>
+      <rect x="15" y="355" width="220" height="90" fill="#fff" rx="5" ry="5" stroke="#ddd" stroke-width="1"/>
       <text x="25" y="375" font-size="12px" font-weight="bold" fill="#333">Characteristics:</text>
       <text x="30" y="390" font-size="10px" fill="#555">• Effective error detection &amp; correction</text>
       <text x="30" y="405" font-size="10px" fill="#555">• Sufficient regulatory capacity</text>
@@ -161,7 +161,7 @@
 <!--Empty space below visualization-->
       <rect x="15" y="310" width="200" height="50" fill="#fff5eb" rx="0" ry="0"/>
 <!--Characteristics Box-->
-      <rect x="15" y="360" width="200" height="75" fill="#fff" rx="5" ry="5" stroke="#ddd" stroke-width="1"/>
+      <rect x="15" y="355" width="220" height="90" fill="#fff" rx="5" ry="5" stroke="#ddd" stroke-width="1"/>
       <text x="25" y="375" font-size="12px" font-weight="bold" fill="#333">Characteristics:</text>
       <text x="30" y="390" font-size="10px" fill="#555">• Excessive error correction</text>
       <text x="30" y="405" font-size="10px" fill="#555">• Over-regulation with redundant controls</text>
