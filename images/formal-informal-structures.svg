@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1000 640" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="640" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Formal vs. Informal Organizational Structures</text>
+  
+  <!-- Left Panel - Formal Organization -->
+  <rect x="50" y="70" width="420" height="520" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  <text x="260" y="95" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Formal Organization</text>
+  <text x="260" y="120" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">(Official Org Chart)</text>
+  
+  <!-- Right Panel - Informal Organization -->
+  <rect x="530" y="70" width="420" height="520" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  <text x="740" y="95" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Informal Organization</text>
+  <text x="740" y="120" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">(Actual Communication Patterns)</text>
+  
+  <!-- Formal Org Chart -->
+  <!-- CEO -->
+  <rect x="210" y="150" width="100" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="260" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">CEO</text>
+  
+  <!-- Vertical Lines from CEO -->
+  <line x1="260" y1="200" x2="260" y2="220" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Horizontal Line Under CEO -->
+  <line x1="110" y1="220" x2="410" y2="220" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Vertical Lines to VPs -->
+  <line x1="110" y1="220" x2="110" y2="240" stroke="#555555" stroke-width="1.5"/>
+  <line x1="260" y1="220" x2="260" y2="240" stroke="#555555" stroke-width="1.5"/>
+  <line x1="410" y1="220" x2="410" y2="240" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- VPs -->
+  <rect x="60" y="240" width="100" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="110" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">VP</text>
+  <text x="110" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Engineering</text>
+  
+  <rect x="210" y="240" width="100" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="260" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">VP</text>
+  <text x="260" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Product</text>
+  
+  <rect x="360" y="240" width="100" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="410" y="265" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">VP</text>
+  <text x="410" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Sales</text>
+  
+  <!-- Vertical Lines from Engineering VP -->
+  <line x1="110" y1="290" x2="110" y2="310" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Horizontal Line Under Engineering VP -->
+  <line x1="60" y1="310" x2="160" y2="310" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Vertical Lines to Engineering Directors -->
+  <line x1="60" y1="310" x2="60" y2="330" stroke="#555555" stroke-width="1.5"/>
+  <line x1="110" y1="310" x2="110" y2="330" stroke="#555555" stroke-width="1.5"/>
+  <line x1="160" y1="310" x2="160" y2="330" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Engineering Directors -->
+  <rect x="30" y="330" width="60" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="60" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Dir.</text>
+  <text x="60" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Frontend</text>
+  
+  <rect x="80" y="330" width="60" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="110" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Dir.</text>
+  <text x="110" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Backend</text>
+  
+  <rect x="130" y="330" width="60" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="160" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Dir.</text>
+  <text x="160" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">QA</text>
+  
+  <!-- Vertical Lines from Product VP -->
+  <line x1="260" y1="290" x2="260" y2="310" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Horizontal Line Under Product VP -->
+  <line x1="210" y1="310" x2="310" y2="310" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Vertical Lines to Product Directors -->
+  <line x1="210" y1="310" x2="210" y2="330" stroke="#555555" stroke-width="1.5"/>
+  <line x1="260" y1="310" x2="260" y2="330" stroke="#555555" stroke-width="1.5"/>
+  <line x1="310" y1="310" x2="310" y2="330" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Product Directors -->
+  <rect x="180" y="330" width="60" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="210" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Dir.</text>
+  <text x="210" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">UX</text>
+  
+  <rect x="230" y="330" width="60" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="260" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Dir.</text>
+  <text x="260" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">PM</text>
+  
+  <rect x="280" y="330" width="60" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="310" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Dir.</text>
+  <text x="310" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Research</text>
+  
+  <!-- Vertical Lines from Sales VP -->
+  <line x1="410" y1="290" x2="410" y2="310" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Horizontal Line Under Sales VP -->
+  <line x1="360" y1="310" x2="460" y2="310" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Vertical Lines to Sales Directors -->
+  <line x1="360" y1="310" x2="360" y2="330" stroke="#555555" stroke-width="1.5"/>
+  <line x1="410" y1="310" x2="410" y2="330" stroke="#555555" stroke-width="1.5"/>
+  <line x1="460" y1="310" x2="460" y2="330" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Sales Directors -->
+  <rect x="330" y="330" width="60" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="360" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Dir.</text>
+  <text x="360" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">NA Sales</text>
+  
+  <rect x="380" y="330" width="60" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="410" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Dir.</text>
+  <text x="410" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">EU Sales</text>
+  
+  <rect x="430" y="330" width="60" height="50" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="460" y="350" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Dir.</text>
+  <text x="460" y="365" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">APAC</text>
+  
+  <!-- Vertical Lines from Engineering Directors to Managers (just showing for Frontend) -->
+  <line x1="60" y1="380" x2="60" y2="400" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Horizontal Line Under Frontend Director -->
+  <line x1="40" y1="400" x2="80" y2="400" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Vertical Lines to Frontend Managers -->
+  <line x1="40" y1="400" x2="40" y2="420" stroke="#555555" stroke-width="1.5"/>
+  <line x1="80" y1="400" x2="80" y2="420" stroke="#555555" stroke-width="1.5"/>
+  
+  <!-- Frontend Managers -->
+  <rect x="20" y="420" width="40" height="40" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="40" y="440" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Mgr</text>
+  <text x="40" y="450" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">Web</text>
+  
+  <rect x="60" y="420" width="40" height="40" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5"/>
+  <text x="80" y="440" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Mgr</text>
+  <text x="80" y="450" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">Mobile</text>
+  
+  <!-- Formal Org Chart Callouts -->
+  <rect x="60" y="480" width="400" height="95" fill="#f9f9f9" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  <text x="80" y="500" font-family="Arial, sans-serif" font-size="12">• Clear hierarchical structure</text>
+  <text x="80" y="520" font-family="Arial, sans-serif" font-size="12">• Formal reporting relationships</text>
+  <text x="80" y="540" font-family="Arial, sans-serif" font-size="12">• Departmental boundaries</text>
+  <text x="80" y="560" font-family="Arial, sans-serif" font-size="12">• Authority flows top-down</text>
+  
+  <!-- Informal Organization Network -->
+  <!-- Create nodes with the same roles as in formal org -->
+  
+  <!-- CEO Node -->
+  <circle cx="740" cy="170" r="25" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="740" y="175" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">CEO</text>
+  
+  <!-- VP Nodes -->
+  <circle cx="640" cy="250" r="20" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="640" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Eng VP</text>
+  
+  <circle cx="740" cy="290" r="20" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="740" y="295" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Prod VP</text>
+  
+  <circle cx="840" cy="230" r="20" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="840" y="235" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Sales VP</text>
+  
+  <!-- Director Nodes -->
+  <circle cx="580" cy="320" r="15" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="580" y="324" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">FE Dir</text>
+  
+  <circle cx="650" cy="370" r="15" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="650" y="374" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">BE Dir</text>
+  
+  <circle cx="700" cy="410" r="15" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="700" y="414" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">QA Dir</text>
+  
+  <circle cx="690" cy="350" r="15" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="690" y="354" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">UX Dir</text>
+  
+  <circle cx="790" cy="360" r="15" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="790" y="364" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">PM Dir</text>
+  
+  <circle cx="850" cy="320" r="15" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="850" y="324" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">Res Dir</text>
+  
+  <circle cx="800" cy="280" r="15" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="800" y="284" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">NA Dir</text>
+  
+  <circle cx="890" cy="280" r="15" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="890" y="284" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">EU Dir</text>
+  
+  <circle cx="870" cy="390" r="15" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="870" y="394" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">APAC</text>
+  
+  <!-- Manager Nodes -->
+  <circle cx="600" cy="380" r="12" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="600" y="383" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">Web</text>
+  
+  <circle cx="550" cy="370" r="12" fill="#f0f0f0" stroke="#555555" stroke-width="1.5"/>
+  <text x="550" y="373" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">Mobile</text>
+  
+  <!-- Informal Communication Links -->
+  <!-- Formal reporting relationships (thinner lines) -->
+  <line x1="740" y1="195" x2="640" y2="230" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="740" y1="195" x2="740" y2="270" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="740" y1="195" x2="840" y2="210" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  
+  <!-- Strong informal direct connections (thicker lines) -->
+  <line x1="740" y1="195" x2="790" y2="360" stroke="#ff7347" stroke-width="2"/>
+  <line x1="740" y1="195" x2="850" y2="320" stroke="#ff7347" stroke-width="2"/>
+  
+  <line x1="640" y1="250" x2="580" y2="320" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="640" y1="250" x2="650" y2="370" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="640" y1="250" x2="700" y2="410" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  
+  <line x1="650" y1="370" x2="800" y2="280" stroke="#ff7347" stroke-width="2"/>
+  <line x1="650" y1="370" x2="690" y2="350" stroke="#ff7347" stroke-width="2"/>
+  <line x1="580" y1="320" x2="690" y2="350" stroke="#ff7347" stroke-width="2"/>
+  <line x1="790" y1="360" x2="850" y2="320" stroke="#ff7347" stroke-width="2"/>
+  <line x1="700" y1="410" x2="790" y2="360" stroke="#ff7347" stroke-width="2"/>
+  
+  <line x1="740" y1="290" x2="690" y2="350" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="740" y1="290" x2="790" y2="360" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="740" y1="290" x2="850" y2="320" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  
+  <line x1="840" y1="230" x2="800" y2="280" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="840" y1="230" x2="890" y2="280" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="840" y1="230" x2="870" y2="390" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  
+  <line x1="580" y1="320" x2="600" y2="380" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  <line x1="580" y1="320" x2="550" y2="370" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  
+  <line x1="550" y1="370" x2="790" y2="360" stroke="#ff7347" stroke-width="2"/>
+  <line x1="600" y1="380" x2="790" y2="360" stroke="#ff7347" stroke-width="2"/>
+  <line x1="800" y1="280" x2="890" y2="280" stroke="#ff7347" stroke-width="2"/>
+  
+  <!-- Informal Org Chart Callouts -->
+  <rect x="540" y="480" width="400" height="95" fill="#f9f9f9" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  <text x="560" y="500" font-family="Arial, sans-serif" font-size="12">• Connections cross departmental boundaries</text>
+  <text x="560" y="520" font-family="Arial, sans-serif" font-size="12">• Communication follows need, not hierarchy</text>
+  <text x="560" y="540" font-family="Arial, sans-serif" font-size="12">• Emergent collaboration patterns</text>
+  <text x="560" y="560" font-family="Arial, sans-serif" font-size="12">• Influence may not match formal authority</text>
+  
+  <!-- Legend -->
+  <rect x="40" y="590" width="920" height="35" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  <line x1="120" y1="608" x2="170" y2="608" stroke="#999999" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="180" y="612" font-family="Arial, sans-serif" font-size="12">Formal reporting relationships</text>
+  
+  <line x1="400" y1="608" x2="450" y2="608" stroke="#ff7347" stroke-width="2"/>
+  <text x="460" y="612" font-family="Arial, sans-serif" font-size="12">Strong informal connections</text>
+  
+  <text x="670" y="612" font-family="Arial, sans-serif" font-size="12" font-style="italic">Node size represents organizational hierarchy level</text>
+</svg> 
