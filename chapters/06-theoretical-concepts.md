@@ -1,5 +1,41 @@
 # 6. Related Theoretical Concepts
 
+## Table of Contents
+
+- [6.1 Software Project Risks and Long Tail Distributions](#61-software-project-risks-and-long-tail-distributions)
+  - [Common vs. Long-tail Risks](#common-vs-long-tail-risks)
+  - [Impact on Estimation Models](#impact-on-estimation-models)
+  - [Analogy to Underfitting](#analogy-to-underfitting)
+- [6.2 Dissipative Systems Theory and Organizational Dynamics](#62-dissipative-systems-theory-and-organizational-dynamics)
+  - [Core Concepts](#core-concepts)
+  - [Organizational Parallels](#organizational-parallels)
+  - [Self-Organization and Complexity](#self-organization-and-complexity)
+  - [Bifurcation Points and Phase Transitions](#bifurcation-points-and-phase-transitions)
+  - [Implications for Organizational Models](#implications-for-organizational-models)
+  - [Balance Through Dissipative Systems Principles](#balance-through-dissipative-systems-principles)
+  - [Cybernetics and Organizational Control](#cybernetics-and-organizational-control)
+  - [Edge of Chaos and Criticality](#edge-of-chaos-and-criticality)
+  - [Avoiding Extremes](#avoiding-extremes)
+- [6.3 Entropy and Software Complexity](#63-entropy-and-software-complexity)
+  - [Information Entropy in Software Development](#information-entropy-in-software-development)
+  - [Entropy as a Framework for Estimation Challenges](#entropy-as-a-framework-for-estimation-challenges)
+  - [Entropy and Model Fitting](#entropy-and-model-fitting)
+  - [Entropy and the Long Tail](#entropy-and-the-long-tail)
+  - [Entropy in Organizational Systems](#entropy-in-organizational-systems)
+  - [Negentropy in Software Development](#negentropy-in-software-development)
+  - [Practical Implications](#practical-implications)
+- [6.4 Bayesian Statistics and Uncertainty Management](#64-bayesian-statistics-and-uncertainty-management)
+  - [Bayesian Probability as a Framework for Belief Updating](#bayesian-probability-as-a-framework-for-belief-updating)
+  - [Relationship Between Bayesian Methods and Entropy](#relationship-between-bayesian-methods-and-entropy)
+  - [Bayesian Decision Theory](#bayesian-decision-theory)
+  - [Applications to Organizational and Project Management](#applications-to-organizational-and-project-management)
+- [6.5 Sociotechnical Systems Theory](#65-sociotechnical-systems-theory)
+  - [6.5.1 Understanding the Sociotechnical System as an Integrated Whole](#651-understanding-the-sociotechnical-system-as-an-integrated-whole)
+  - [6.5.2 Historical Evolution of Sociotechnical Thinking](#652-historical-evolution-of-sociotechnical-thinking)
+  - [6.5.3 Implications for Organizational Models](#653-implications-for-organizational-models)
+  - [6.5.4 Application to AI-Integrated Organizations](#654-application-to-ai-integrated-organizations)
+- [6.6 Integration of Theoretical Perspectives](#66-integration-of-theoretical-perspectives)
+
 ## 6.1 Software Project Risks and Long Tail Distributions
 
 The challenges in software project estimation are often exacerbated by the presence of a "[long tail](https://en.wikipedia.org/wiki/Long_tail)" distribution of risks. This concept, borrowed from statistics, describes a scenario where a large number of low-probability events can collectively have a significant impact.
@@ -102,6 +138,8 @@ Key cybernetic principles applicable to organizational systems include:
    - Second-order cybernetics considers observing systems, including self-observation and recursion
 
 Management cybernetics, pioneered by Stafford Beer, applies these principles specifically to organizational design and management, offering frameworks for creating organizations that balance stability with adaptability.
+
+![Cybernetic Principles in Organizations](../images/cybernetic-principles.svg)
 
 An effective organization uses feedback to learn and adapt. The integration of AI, as discussed further in Chapter 8, can significantly enhance these cybernetic functions by providing more sophisticated monitoring, faster data analysis, and automated feedback mechanisms. However, it also introduces new challenges for control and adaptation, particularly concerning the transparency of AI-driven feedback and the management of complex human-AI interactions within these loops. Underfitting, in this context, can represent weak or ignored feedback loops (human or AI-driven) leading to poor adaptation, while overfitting might represent overly rigid control mechanisms (potentially exacerbated by poorly designed AI) that stifle necessary adjustments based on environmental feedback.
 
