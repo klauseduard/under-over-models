@@ -7,50 +7,82 @@
   <text x="450" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Organizational Complexity Spectrum</text>
   
   <!-- Complexity Spectrum Section -->
-  <rect x="100" y="80" width="700" height="100" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
-  <text x="450" y="100" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Complexity Spectrum</text>
+  <rect x="100" y="80" width="700" height="120" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  <text x="450" y="105" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Complexity Spectrum</text>
   
-  <!-- Spectrum Boxes -->
-  <rect x="150" y="120" width="200" height="40" rx="5" ry="5" fill="#90EE90" stroke="#555555" stroke-width="1.5"/>
-  <text x="250" y="145" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Simple / Organic / Agile</text>
+  <!-- Gradient definition for spectrum -->
+  <defs>
+    <linearGradient id="spectrumGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#90EE90" />
+      <stop offset="25%" stop-color="#b8e5b8" />
+      <stop offset="50%" stop-color="#e6dcc0" />
+      <stop offset="75%" stop-color="#ffce99" />
+      <stop offset="100%" stop-color="#FFB366" />
+    </linearGradient>
+  </defs>
   
-  <rect x="550" y="120" width="200" height="40" rx="5" ry="5" fill="#FFB366" stroke="#555555" stroke-width="1.5"/>
-  <text x="650" y="145" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Complex / Mechanistic / Bureaucratic</text>
+  <!-- Spectrum Gradient Bar -->
+  <rect x="150" y="125" width="600" height="40" rx="5" ry="5" fill="url(#spectrumGradient)" stroke="#555555" stroke-width="1.5"/>
   
-  <!-- Spectrum Arrow -->
-  <line x1="350" y1="140" x2="550" y2="140" stroke="#555555" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Spectrum Points -->
+  <circle cx="150" cy="165" r="6" fill="#555555"/>
+  <circle cx="300" cy="165" r="6" fill="#555555"/>
+  <circle cx="450" cy="165" r="6" fill="#555555"/>
+  <circle cx="600" cy="165" r="6" fill="#555555"/>
+  <circle cx="750" cy="165" r="6" fill="#555555"/>
+  
+  <!-- Spectrum Labels -->
+  <text x="150" y="185" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Simple/Organic</text>
+  <text x="300" y="185" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">Team-Based</text>
+  <text x="450" y="185" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">Matrix/Hybrid</text>
+  <text x="600" y="185" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">Hierarchical</text>
+  <text x="750" y="185" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Complex/Mechanistic</text>
   
   <!-- Key Characteristics Section -->
   <rect x="100" y="230" width="700" height="220" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
-  <text x="450" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Key Characteristics</text>
+  <text x="450" y="250" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Characteristics Across the Spectrum</text>
   
-  <!-- Simple Side Characteristics -->
-  <rect x="150" y="280" width="200" height="40" rx="5" ry="5" fill="#d9f0d9" stroke="#90EE90" stroke-width="1.5"/>
-  <text x="250" y="305" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Flexibility</text>
+  <!-- Characteristic Tracks -->
+  <!-- Track 1: Adaptability vs Stability -->
+  <text x="120" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start">Adaptability/Stability:</text>
+  <rect x="150" y="290" width="600" height="20" rx="3" ry="3" fill="#f0f0f0" stroke="#cccccc" stroke-width="1"/>
+  <rect x="150" y="290" width="500" height="20" rx="3" ry="3" fill="#90EE90" opacity="0.7"/>
+  <text x="150" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="start" dx="5">High Adaptability</text>
+  <text x="750" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dx="-5">High Stability</text>
   
-  <rect x="150" y="330" width="200" height="40" rx="5" ry="5" fill="#d9f0d9" stroke="#90EE90" stroke-width="1.5"/>
-  <text x="250" y="355" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Speed</text>
+  <!-- Track 2: Formalization -->
+  <text x="120" y="330" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start">Formalization:</text>
+  <rect x="150" y="340" width="600" height="20" rx="3" ry="3" fill="#f0f0f0" stroke="#cccccc" stroke-width="1"/>
+  <rect x="150" y="340" width="150" height="20" rx="3" ry="3" fill="#90EE90" opacity="0.7"/>
+  <rect x="300" y="340" width="450" height="20" rx="3" ry="3" fill="#FFB366" opacity="0.7"/>
+  <text x="150" y="355" font-family="Arial, sans-serif" font-size="12" text-anchor="start" dx="5">Low</text>
+  <text x="750" y="355" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dx="-5">High</text>
   
-  <rect x="150" y="380" width="200" height="40" rx="5" ry="5" fill="#d9f0d9" stroke="#90EE90" stroke-width="1.5"/>
-  <text x="250" y="405" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Reduced Bureaucracy</text>
+  <!-- Track 3: Specialization -->
+  <text x="120" y="380" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start">Specialization:</text>
+  <rect x="150" y="390" width="600" height="20" rx="3" ry="3" fill="#f0f0f0" stroke="#cccccc" stroke-width="1"/>
+  <rect x="150" y="390" width="200" height="20" rx="3" ry="3" fill="#90EE90" opacity="0.7"/>
+  <rect x="350" y="390" width="400" height="20" rx="3" ry="3" fill="#FFB366" opacity="0.7"/>
+  <text x="150" y="405" font-family="Arial, sans-serif" font-size="12" text-anchor="start" dx="5">Generalists</text>
+  <text x="750" y="405" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dx="-5">Specialists</text>
   
-  <!-- Complex Side Characteristics -->
-  <rect x="550" y="280" width="200" height="40" rx="5" ry="5" fill="#ffe0c0" stroke="#FFB366" stroke-width="1.5"/>
-  <text x="650" y="305" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Specialization</text>
-  
-  <rect x="550" y="330" width="200" height="40" rx="5" ry="5" fill="#ffe0c0" stroke="#FFB366" stroke-width="1.5"/>
-  <text x="650" y="355" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Control</text>
-  
-  <rect x="550" y="380" width="200" height="40" rx="5" ry="5" fill="#ffe0c0" stroke="#FFB366" stroke-width="1.5"/>
-  <text x="650" y="405" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Standardization</text>
-  
-  <!-- Connecting Lines -->
-  <line x1="250" y1="160" x2="250" y2="280" stroke="#90EE90" stroke-width="2" stroke-dasharray="5,3"/>
-  <line x1="650" y1="160" x2="650" y2="280" stroke="#FFB366" stroke-width="2" stroke-dasharray="5,3"/>
+  <!-- Track 4: Decision-Making -->
+  <text x="120" y="430" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="start">Decision-Making:</text>
+  <rect x="150" y="440" width="600" height="20" rx="3" ry="3" fill="#f0f0f0" stroke="#cccccc" stroke-width="1"/>
+  <rect x="150" y="440" width="300" height="20" rx="3" ry="3" fill="#90EE90" opacity="0.7"/>
+  <rect x="450" y="440" width="300" height="20" rx="3" ry="3" fill="#FFB366" opacity="0.7"/>
+  <text x="150" y="455" font-family="Arial, sans-serif" font-size="12" text-anchor="start" dx="5">Decentralized</text>
+  <text x="750" y="455" font-family="Arial, sans-serif" font-size="12" text-anchor="end" dx="-5">Centralized</text>
   
   <!-- Bottom Caption -->
-  <rect x="100" y="450" width="700" height="30" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
-  <text x="450" y="470" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" font-style="italic">Organizations must choose a position on this spectrum based on size, environment, goals, and work nature</text>
+  <rect x="100" y="460" width="700" height="30" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  <text x="450" y="480" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" font-style="italic">Organizations position themselves along this spectrum based on size, environment, goals, and work nature</text>
+  
+  <!-- Linking organizations to entropy concepts -->
+  <text x="170" y="70" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#555555" font-style="italic">Higher Entropy</text>
+  <text x="730" y="70" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#555555" font-style="italic">Higher Negentropy</text>
+  <line x1="170" y1="75" x2="170" y2="125" stroke="#555555" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="730" y1="75" x2="730" y2="125" stroke="#555555" stroke-width="1" stroke-dasharray="3,2"/>
   
   <!-- Arrow Definition -->
   <defs>
