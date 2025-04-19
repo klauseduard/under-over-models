@@ -1,6 +1,8 @@
 # Underfitting and Overfitting in Software Development and Organizational Models
 
-This repository contains an attempt to analyse analogies between machine learning concepts (underfitting and overfitting) and their applications in software development and organizational models.
+This repository started out as an attempt to analyse analogies between underfitting and overfitting
+as they are used in machine learning and mathematical modelling, and their applications in software
+development and organizational models.
 
 ## Table of Contents
 
