@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="900" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+    
+    <!-- Title -->
+    <text x="450" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Bayesian Decision-Making in Organizations</text>
+    
+    <!-- Main Container -->
+    <rect x="50" y="70" width="800" height="480" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+    
+    <!-- Bayesian Process Flow -->
+    <g transform="translate(75, 110)">
+        <!-- Prior Beliefs Section -->
+        <rect x="0" y="0" width="150" height="140" fill="#e6f7e6" stroke="#90EE90" stroke-width="2" rx="5" ry="5"/>
+        <text x="75" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Prior Beliefs</text>
+        <line x1="0" y1="40" x2="150" y2="40" stroke="#90EE90" stroke-width="1"/>
+        <text x="75" y="65" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Initial probability</text>
+        <text x="75" y="85" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">distributions based on</text>
+        <text x="75" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">historical data and</text>
+        <text x="75" y="125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">expert knowledge</text>
+        
+        <!-- Arrow 1 -->
+        <path d="M 150 70 L 200 70" stroke="#555555" stroke-width="2" fill="none"/>
+        <polygon points="200,70 190,65 190,75" fill="#555555"/>
+        
+        <!-- Evidence Gathering Section -->
+        <rect x="200" y="0" width="150" height="140" fill="#fff0d9" stroke="#FFB366" stroke-width="2" rx="5" ry="5"/>
+        <text x="275" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Evidence</text>
+        <line x1="200" y1="40" x2="350" y2="40" stroke="#FFB366" stroke-width="1"/>
+        <text x="275" y="65" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Collect new data</text>
+        <text x="275" y="85" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">from market research,</text>
+        <text x="275" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">experiments, pilot</text>
+        <text x="275" y="125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">projects, etc.</text>
+        
+        <!-- Arrow 2 -->
+        <path d="M 350 70 L 400 70" stroke="#555555" stroke-width="2" fill="none"/>
+        <polygon points="400,70 390,65 390,75" fill="#555555"/>
+        
+        <!-- Posterior Updating Section -->
+        <rect x="400" y="0" width="150" height="140" fill="#e6f7e6" stroke="#90EE90" stroke-width="2" rx="5" ry="5"/>
+        <text x="475" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Posterior Update</text>
+        <line x1="400" y1="40" x2="550" y2="40" stroke="#90EE90" stroke-width="1"/>
+        <text x="475" y="65" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Apply Bayes' theorem</text>
+        <text x="475" y="85" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">to update probability</text>
+        <text x="475" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">distributions based</text>
+        <text x="475" y="125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">on new evidence</text>
+        
+        <!-- Arrow 3 -->
+        <path d="M 550 70 L 600 70" stroke="#555555" stroke-width="2" fill="none"/>
+        <polygon points="600,70 590,65 590,75" fill="#555555"/>
+        
+        <!-- Decision-Making Section -->
+        <rect x="600" y="0" width="150" height="140" fill="#ffe6e6" stroke="#FF6B6B" stroke-width="2" rx="5" ry="5"/>
+        <text x="675" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Decision</text>
+        <line x1="600" y1="40" x2="750" y2="40" stroke="#FF6B6B" stroke-width="1"/>
+        <text x="675" y="65" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Select optimal action</text>
+        <text x="675" y="85" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">based on updated</text>
+        <text x="675" y="105" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">probabilities and</text>
+        <text x="675" y="125" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">expected utility</text>
+        
+        <!-- Feedback Loop Arrow -->
+        <path d="M 675 140 L 675 170 L 75 170 L 75 140" stroke="#555555" stroke-width="2" stroke-dasharray="5,3" fill="none"/>
+        <polygon points="75,140 70,150 80,150" fill="#555555"/>
+        <text x="375" y="190" font-family="Arial, sans-serif" font-size="14" font-style="italic" text-anchor="middle">Feedback loop: Decision outcomes inform future prior beliefs</text>
+    </g>
+    
+    <!-- Applications Section -->
+    <text x="450" y="330" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Organizational Applications</text>
+    
+    <!-- Application Examples -->
+    <g transform="translate(100, 350)">
+        <!-- Risk Assessment -->
+        <rect x="0" y="0" width="200" height="160" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+        <text x="100" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Risk Assessment</text>
+        <line x1="10" y1="40" x2="190" y2="40" stroke="#cccccc" stroke-width="1"/>
+        <text x="100" y="65" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Quantify uncertainty</text>
+        <text x="100" y="90" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Evaluate project risks</text>
+        <text x="100" y="115" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Identify critical factors</text>
+        <text x="100" y="140" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Adapt to new information</text>
+        
+        <!-- Resource Allocation -->
+        <rect x="250" y="0" width="200" height="160" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+        <text x="350" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Resource Allocation</text>
+        <line x1="260" y1="40" x2="440" y2="40" stroke="#cccccc" stroke-width="1"/>
+        <text x="350" y="65" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Prioritize investments</text>
+        <text x="350" y="90" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Optimize portfolios</text>
+        <text x="350" y="115" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Dynamic reallocation</text>
+        <text x="350" y="140" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Value of information</text>
+        
+        <!-- Strategic Planning -->
+        <rect x="500" y="0" width="200" height="160" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+        <text x="600" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Strategic Planning</text>
+        <line x1="510" y1="40" x2="690" y2="40" stroke="#cccccc" stroke-width="1"/>
+        <text x="600" y="65" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Scenario analysis</text>
+        <text x="600" y="90" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Adaptive strategies</text>
+        <text x="600" y="115" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Competitive positioning</text>
+        <text x="600" y="140" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">• Market entry decisions</text>
+    </g>
+    
+    <!-- Footer note -->
+    <text x="450" y="565" font-family="Arial, sans-serif" font-size="12" font-style="italic" text-anchor="middle" fill="#666666">
+        Bayesian methods provide a framework for systematically updating beliefs and making decisions under uncertainty
+    </text>
+</svg> 
