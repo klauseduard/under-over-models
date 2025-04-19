@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="900" height="500" fill="#f8f9fa" rx="10" ry="10"/>
+    
+    <!-- Title -->
+    <text x="450" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Organizational Response Patterns by Size</text>
+    
+    <!-- Container for the comparison -->
+    <rect x="50" y="80" width="800" height="380" fill="white" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+    
+    <!-- Column Headers -->
+    <text x="165" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Small Organizations</text>
+    <text x="450" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Medium Organizations</text>
+    <text x="735" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Large Organizations</text>
+    
+    <!-- Divider Lines -->
+    <line x1="280" y1="80" x2="280" y2="460" stroke="#cccccc" stroke-width="1" stroke-dasharray="5,3"/>
+    <line x1="620" y1="80" x2="620" y2="460" stroke="#cccccc" stroke-width="1" stroke-dasharray="5,3"/>
+    
+    <!-- Row Categories -->
+    <text x="165" y="145" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Typical Approach</text>
+    <text x="450" y="145" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Typical Approach</text>
+    <text x="735" y="145" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Typical Approach</text>
+    
+    <text x="165" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Model Characteristics</text>
+    <text x="450" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Model Characteristics</text>
+    <text x="735" y="235" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Model Characteristics</text>
+    
+    <text x="165" y="325" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Risk Profile</text>
+    <text x="450" y="325" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Risk Profile</text>
+    <text x="735" y="325" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Risk Profile</text>
+    
+    <text x="165" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Adaptation Mechanism</text>
+    <text x="450" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Adaptation Mechanism</text>
+    <text x="735" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#555555">Adaptation Mechanism</text>
+    
+    <!-- Row Dividers -->
+    <line x1="50" y1="170" x2="850" y2="170" stroke="#cccccc" stroke-width="1"/>
+    <line x1="50" y1="260" x2="850" y2="260" stroke="#cccccc" stroke-width="1"/>
+    <line x1="50" y1="350" x2="850" y2="350" stroke="#cccccc" stroke-width="1"/>
+    
+    <!-- Small Organizations Content -->
+    <rect x="80" y="155" width="170" height="50" fill="#e6f7e6" stroke="#90EE90" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="165" y="175" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Favor simplicity and flexibility</text>
+    <text x="165" y="195" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Agile decision-making</text>
+    
+    <rect x="80" y="245" width="170" height="70" fill="#e6f7e6" stroke="#90EE90" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="165" y="265" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Flat structures</text>
+    <text x="165" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Generalist roles</text>
+    <text x="165" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Informal coordination</text>
+    
+    <rect x="80" y="335" width="170" height="50" fill="#ffe0c0" stroke="#FFB366" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="165" y="355" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">More prone to underfitting</text>
+    <text x="165" y="375" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">(oversimplification)</text>
+    
+    <rect x="80" y="425" width="170" height="50" fill="#e6f7e6" stroke="#90EE90" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="165" y="445" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Direct communication</text>
+    <text x="165" y="465" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Tacit knowledge reliance</text>
+    
+    <!-- Medium Organizations Content -->
+    <rect x="365" y="155" width="170" height="50" fill="#ffe0c0" stroke="#FFB366" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="450" y="175" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Begin formalizing structures</text>
+    <text x="450" y="195" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">while maintaining adaptability</text>
+    
+    <rect x="365" y="245" width="170" height="70" fill="#ffe0c0" stroke="#FFB366" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="450" y="265" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Emerging departmentalization</text>
+    <text x="450" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Initial process standardization</text>
+    <text x="450" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Defined roles</text>
+    
+    <rect x="365" y="335" width="170" height="50" fill="#ffe0c0" stroke="#FFB366" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="450" y="355" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Experience tension between</text>
+    <text x="450" y="375" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">underfitting and overfitting</text>
+    
+    <rect x="365" y="425" width="170" height="50" fill="#ffe0c0" stroke="#FFB366" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="450" y="445" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Middle management layers</text>
+    <text x="450" y="465" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Formalized knowledge sharing</text>
+    
+    <!-- Large Organizations Content -->
+    <rect x="650" y="155" width="170" height="50" fill="#ffe6e6" stroke="#FF6B6B" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="735" y="175" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Implement comprehensive</text>
+    <text x="735" y="195" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">formal models and frameworks</text>
+    
+    <rect x="650" y="245" width="170" height="70" fill="#ffe6e6" stroke="#FF6B6B" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="735" y="265" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Hierarchical structures</text>
+    <text x="735" y="285" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Specialized departments</text>
+    <text x="735" y="305" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Formalized processes</text>
+    
+    <rect x="650" y="335" width="170" height="50" fill="#ffe6e6" stroke="#FF6B6B" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="735" y="355" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">More prone to overfitting</text>
+    <text x="735" y="375" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">(excessive complexity)</text>
+    
+    <rect x="650" y="425" width="170" height="50" fill="#ffe6e6" stroke="#FF6B6B" stroke-width="1.5" rx="5" ry="5"/>
+    <text x="735" y="445" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Specialized innovation units</text>
+    <text x="735" y="465" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Formal change management</text>
+</svg> 
