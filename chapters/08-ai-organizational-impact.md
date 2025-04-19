@@ -51,7 +51,11 @@ The emergence of human-AI hybrid systems introduces potential new failure modes 
 
 ### 8.3.1 Flatter Hierarchies and Decentralized Decision-Making
 
-AI's capacity to streamline communication and decision-making processes challenges traditional hierarchical organizational models. AI tools can facilitate real-time data sharing and collaboration across organizational levels, potentially reducing the necessity for rigid, top-down structures. This may foster shifts towards more decentralized and networked organizational forms, allowing for greater flexibility and responsiveness. AI can potentially empower employees at various levels with access to data and analytical insights, enabling them to make more informed decisions without requiring multiple layers of managerial approval. Furthermore, as AI takes on more routine monitoring and coordination tasks, managerial spans of control could potentially widen, as direct supervision becomes less critical for certain functions. The ability of AI to process and disseminate information efficiently can contribute to a more distributed power structure and a potentially more collaborative and agile work environment.
+AI's capacity to streamline communication and decision-making processes challenges traditional hierarchical organizational models. AI tools can facilitate real-time data sharing and collaboration across organizational levels, potentially reducing the necessity for rigid, top-down structures. This may foster shifts towards more decentralized and networked organizational forms, allowing for greater flexibility and responsiveness.
+
+![AI-Enabled Organizational Evolution](../images/ai-enabled-org-evolution.svg)
+
+AI can potentially empower employees at various levels with access to data and analytical insights, enabling them to make more informed decisions without requiring multiple layers of managerial approval. Furthermore, as AI takes on more routine monitoring and coordination tasks, managerial spans of control could potentially widen, as direct supervision becomes less critical for certain functions. The ability of AI to process and disseminate information efficiently can contribute to a more distributed power structure and a potentially more collaborative and agile work environment.
 
 ### 8.3.2 Dynamically Formed Teams and AI-Mediated Coordination
 
@@ -161,3 +165,116 @@ This chapter focused on the direct impact of AI integration on organizational mo
 The discussion examined emerging AI-influenced organizational structures, such as potentially flatter hierarchies and dynamic teams, alongside strategic choices like centralized versus decentralized AI models. We analyzed AI's complex role in communication dynamics, acting as an intermediary and potentially reinforcing or challenging Conway's Law and the Inverse Conway Maneuver.
 
 Finally, the chapter considered AI's application in estimation and planning, highlighting its potential to leverage data for accuracy while cautioning against the significant risks of bias amplification and the current uncertainty surrounding its net productivity impact. The subsequent chapter delves into the human, theoretical, and practical dimensions of adapting to these AI-driven transformations. 
+
+## 8.7 PRACTICAL CHALLENGES OF AI INTEGRATION
+
+*Note: This section presents emerging considerations rather than established practices. Organizations should adapt these insights to their specific context and risk tolerance.*
+
+As organizations integrate AI capabilities, several practical challenges emerge that merit strategic consideration. The following discussion points examine potential implementation challenges at different time horizons. These observations draw from early implementations and emerging trends, providing strategic considerations for forward-thinking practitioners rather than established theory.
+
+### 8.7.1 Dependency and Resilience
+
+**Context:** As AI capabilities become integrated into critical systems and workflows, organizations face important questions about dependency, resilience, and appropriate fallback mechanisms.
+
+**Time Horizon Considerations:**
+
+*Near-term:*
+- Organizations begin developing basic fallback procedures for AI system failures
+- Limited integration of AI into critical path systems to minimize dependency risks
+- Focus on human oversight and verification of AI outputs in sensitive domains
+
+*Emerging:*
+- Growing sophistication of resilience frameworks as AI integration deepens
+- Development of tiered degradation approaches for AI-dependent systems
+- Increasing attention to potential "learned helplessness" as workflows adapt to AI availability
+
+*Long-term:*
+- Potential need for fundamentally new resilience frameworks for deeply AI-integrated systems
+- Organizations may need to balance efficiency gains against resilience requirements
+- Evolution of new skills and capabilities specifically focused on managing AI dependency
+
+**Strategic Questions:** How can organizations balance the benefits of AI integration with appropriate resilience? What safeguards are necessary to prevent critical dependency on AI systems with potential points of failure?
+
+### 8.7.2 Economic Structures
+
+**Context:** The integration of AI capabilities often involves usage-based cost structures that differ fundamentally from traditional technology investments, creating new challenges for resource planning and allocation.
+
+**Time Horizon Considerations:**
+
+*Near-term:*
+- Organizations treat AI as a specialized, supplementary capability with limited budget allocation
+- Experimental deployment with careful ROI tracking
+- Limited integration into core workflows to manage cost unpredictability
+
+*Emerging:*
+- Growing sophistication in AI cost management and optimization
+- Development of internal markets or allocation mechanisms for AI resources
+- Increasing attention to potential access disparities based on budget constraints
+
+*Long-term:*
+- Potential evolution of new economic frameworks for sustainable AI integration
+- Organizations may develop sophisticated approaches to balancing cost and capability
+- Evolution of new budgeting models specifically designed for AI-intensive operations
+
+**Strategic Questions:** How should organizations manage the economic implications of usage-based AI systems? What resource allocation mechanisms effectively balance cost control with appropriate access to AI capabilities?
+
+### 8.7.3 Intellectual Property
+
+**Context:** The use of AI systems in creative and knowledge work raises complex questions about intellectual property, attribution, and ownership of AI-assisted outputs.
+
+**Time Horizon Considerations:**
+
+*Near-term:*
+- Organizations develop initial guidelines for managing IP in simple AI-assisted workflows
+- Limited integration of AI into creative or intellectual property-generating activities
+- Focus on clear delineation between human and AI contributions
+
+*Emerging:*
+- Growing sophistication in frameworks for managing IP in collaborative human-AI contexts
+- Development of attribution approaches for complex human-AI collaboration
+- Increasing attention to contractual frameworks for managing AI-related IP
+
+*Long-term:*
+- Potential evolution of fundamentally new IP frameworks specifically addressing human-AI collaboration
+- Organizations may develop sophisticated approaches to valuing different types of contributions
+- Evolution of new legal and organizational structures that recognize the complex nature of AI-assisted creation
+
+**Strategic Questions:** How should intellectual property be managed in contexts of human-AI collaboration? What frameworks best balance recognition of human creativity with the reality of AI assistance?
+
+### 8.7.4 Digital Sovereignty
+
+**Context:** Increasing reliance on AI capabilities, often provided by third parties, raises important questions about technological sovereignty, data control, and geopolitical considerations.
+
+**Time Horizon Considerations:**
+
+*Near-term:*
+- Organizations begin developing basic frameworks for managing third-party AI dependencies
+- Limited attention to geopolitical dimensions of AI supply chains
+- Focus on data sovereignty over algorithmic sovereignty
+
+*Emerging:*
+- Growing sophistication in managing the geopolitical dimensions of AI deployment
+- Development of multi-provider strategies to mitigate concentration risks
+- Increasing attention to developing internal capabilities in critical AI functions
+
+*Long-term:*
+- Potential evolution of sophisticated frameworks for managing technological sovereignty
+- Organizations may develop hybrid approaches balancing external capabilities with internal control
+- Evolution of new organizational structures specifically designed to manage sovereignty considerations
+
+**Strategic Questions:** How should organizations navigate the geopolitical dimensions of AI adoption? What strategies effectively balance access to cutting-edge capabilities with appropriate sovereignty considerations?
+
+### 8.7.5 Strategic Considerations for Practitioners
+
+Organizations anticipating the practical challenges of AI integration should consider:
+
+1. Developing comprehensive resilience frameworks that address potential AI system failures
+2. Creating sustainable economic models for managing AI resource allocation
+3. Establishing clear intellectual property frameworks for AI-assisted outputs
+4. Implementing thoughtful approaches to managing digital sovereignty and third-party dependencies
+
+While these considerations remain forward-looking, proactive organizations can begin preparing for these potential developments through strategic planning, targeted experiments, and ongoing evaluation of emerging implementation challenges.
+
+---
+
+[Back to Table of Contents](../README.md) 
