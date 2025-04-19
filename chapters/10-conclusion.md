@@ -56,7 +56,25 @@ Opportunities beyond specific AI implementations include:
 2. Designing adaptive organizational frameworks explicitly incorporating principles from cybernetics and dissipative systems.
 3. Developing better heuristics and tools for identifying appropriate Bounded Contexts in complex socio-technical systems.
 
-## 10.5 Final Thoughts
+## 10.5 Limitations of the Analogy
+
+While the underfitting/overfitting paradigm offers valuable insights, several important limitations warrant consideration:
+
+1. **Incomplete Feedback Loop**: Unlike machine learning models that receive clear feedback through quantifiable error metrics, organizational and development models often lack immediate, measurable feedback. The consequences of under or overfitting may take months or years to manifest, making calibration difficult.
+
+2. **Non-stationarity of Domains**: Software development contexts change continuously through market shifts, technological innovation, and evolving user needs. This fundamental non-stationarity challenges the analogy, as the "optimal fit" is a moving target rather than a static goal.
+
+3. **Human Agency and Adaptation**: Unlike machine learning models, organizations comprise humans who actively interpret, resist, adapt to, and transform models. This recursive adaptation can invalidate assumptions about model behavior that would hold true in traditional machine learning.
+
+4. **Qualitative Rather Than Quantitative**: Our analogy uses primarily qualitative assessments of fit, lacking the precise mathematical formulations and validation metrics of machine learning. This limits our ability to make definitive claims about optimal modeling approaches.
+
+5. **Multiple Objectives**: While machine learning models typically optimize for a single objective function, organizational and development models must balance competing concerns (efficiency, quality, employee satisfaction, innovation). This multi-objective nature complicates the direct application of our analogy.
+
+6. **Contextual Complexity**: The appropriateness of organizational structures and approaches depends on industry, regulatory environment, culture, and other factors with no clear equivalent in the supervised learning context of our analogy.
+
+Despite these limitations, the underfitting/overfitting lens remains valuable as a conceptual framework that highlights the fundamental tension between simplicity and complexity. The analogy serves not as a precise mathematical model but as a useful heuristic for organizational reflection and decision-making.
+
+## 10.6 Final Thoughts
 
 The underfitting/overfitting analogy provides a powerful lens for analyzing the fundamental challenge of modeling complex realities, whether in machine learning, software estimation, or organizational design. It highlights the perpetual tension between creating models simple enough to be manageable and generalizable, yet complex enough to capture essential details and adapt effectively.
 
