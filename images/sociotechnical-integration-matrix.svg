@@ -1,0 +1,108 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa" rx="10" ry="10" />
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Sociotechnical Integration Matrix</text>
+  
+  <!-- Main Container -->
+  <rect x="50" y="70" width="800" height="480" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5" />
+  
+  <!-- Matrix Headers -->
+  <text x="450" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Organizational Elements Integration</text>
+  
+  <!-- Social-Technical Axis Labels -->
+  <text x="180" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4793ff">Social Dimension</text>
+  <text x="720" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#FF6B6B">Technical Dimension</text>
+  
+  <!-- Gradient Line -->
+  <rect x="250" y="135" width="400" height="10" fill="url(#socialTechnicalGradient)" rx="5" ry="5" />
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="socialTechnicalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4793ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Matrix Grid -->
+  <!-- Row 1: People -->
+  <rect x="100" y="170" width="700" height="90" fill="#e6f7e6" stroke="#90EE90" stroke-width="1.5" rx="5" ry="5" />
+  <text x="150" y="200" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">People</text>
+  
+  <!-- Row 1 Content -->
+  <rect x="200" y="180" width="190" height="70" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5" />
+  <text x="295" y="210" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Individual Skills</text>
+  <text x="295" y="230" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Capabilities, Expertise</text>
+  
+  <rect x="410" y="180" width="190" height="70" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5" />
+  <text x="505" y="210" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Team Dynamics</text>
+  <text x="505" y="230" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Collaboration, Roles</text>
+  
+  <rect x="620" y="180" width="160" height="70" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5" />
+  <text x="700" y="210" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Digital Literacy</text>
+  <text x="700" y="230" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Technical Aptitude</text>
+  
+  <!-- Row 2: Process -->
+  <rect x="100" y="270" width="700" height="90" fill="#fff0d9" stroke="#FFB366" stroke-width="1.5" rx="5" ry="5" />
+  <text x="150" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Process</text>
+  
+  <!-- Row 2 Content -->
+  <rect x="200" y="280" width="190" height="70" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5" />
+  <text x="295" y="310" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Communication</text>
+  <text x="295" y="330" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Meetings, Reporting</text>
+  
+  <rect x="410" y="280" width="190" height="70" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5" />
+  <text x="505" y="310" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Workflows</text>
+  <text x="505" y="330" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Task Management</text>
+  
+  <rect x="620" y="280" width="160" height="70" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5" />
+  <text x="700" y="310" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Automation</text>
+  <text x="700" y="330" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Tools Integration</text>
+  
+  <!-- Row 3: Technology -->
+  <rect x="100" y="370" width="700" height="90" fill="#ffe6e6" stroke="#FF6B6B" stroke-width="1.5" rx="5" ry="5" />
+  <text x="150" y="400" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Technology</text>
+  
+  <!-- Row 3 Content -->
+  <rect x="200" y="380" width="190" height="70" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5" />
+  <text x="295" y="410" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">User Experience</text>
+  <text x="295" y="430" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Interface Design</text>
+  
+  <rect x="410" y="380" width="190" height="70" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5" />
+  <text x="505" y="410" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">System Architecture</text>
+  <text x="505" y="430" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Integration Points</text>
+  
+  <rect x="620" y="380" width="160" height="70" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5" />
+  <text x="700" y="410" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Infrastructure</text>
+  <text x="700" y="430" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Technical Capabilities</text>
+  
+  <!-- Row 4: Governance -->
+  <rect x="100" y="470" width="700" height="40" fill="#f0f0f0" stroke="#555555" stroke-width="1.5" rx="5" ry="5" />
+  <text x="450" y="495" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Governance &amp; Alignment</text>
+  
+  <!-- Integration Connectors -->
+  <g stroke="#555555" stroke-width="1" stroke-dasharray="3,2">
+    <!-- People to Process -->
+    <path d="M 250,240 L 250,280" />
+    <path d="M 505,240 L 505,280" />
+    <path d="M 700,240 L 700,280" />
+    
+    <!-- Process to Technology -->
+    <path d="M 250,350 L 250,380" />
+    <path d="M 505,350 L 505,380" />
+    <path d="M 700,350 L 700,380" />
+    
+    <!-- Technology to Governance -->
+    <path d="M 250,450 L 250,470" />
+    <path d="M 505,450 L 505,470" />
+    <path d="M 700,450 L 700,470" />
+  </g>
+  
+  <!-- Key Points at Bottom -->
+  <rect x="100" y="520" width="700" height="20" fill="none" stroke="none" />
+  <text x="450" y="535" font-family="Arial, sans-serif" font-size="14" font-style="italic" text-anchor="middle">
+    Effective organizational performance requires alignment across all sociotechnical dimensions
+  </text>
+</svg> 
