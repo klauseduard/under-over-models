@@ -70,7 +70,7 @@ Despite these challenges, the increasing availability of probabilistic programmi
 
 ### Three-Point Estimation: Practical Uncertainty Modeling
 
-While full Bayesian approaches offer powerful theoretical frameworks, simpler probabilistic techniques like three-point estimation provide a practical middle ground between single-point estimates and comprehensive statistical modeling. These techniques explicitly acknowledge uncertainty while remaining accessible to teams without statistical expertise.
+While full Bayesian approaches offer powerful theoretical frameworks, simpler probabilistic techniques like [three-point estimation](https://www.tutorialspoint.com/estimation_techniques/estimation_techniques_three_point.htm) provide a practical middle ground between single-point estimates and comprehensive statistical modeling. These techniques explicitly acknowledge uncertainty while remaining accessible to teams without statistical expertise.
 
 Three-point estimation stands as a bridge between simplistic point estimates and full probabilistic models. By capturing three distinct scenarios—optimistic, most likely, and pessimistic—these techniques provide a structured approach to quantifying uncertainty while remaining accessible to practitioners without extensive statistical backgrounds.
 
@@ -107,12 +107,12 @@ The triangular distribution offers a simpler alternative that assumes a linear p
 
 #### When to Use PERT vs. Triangular
 
-- Use PERT when:
+- PERT is recommended when:
   - You have higher confidence in the most likely estimate
   - The risk profile is based on expert judgment
   - You need to reduce the impact of extreme estimates
 
-- Use Triangular when:
+- Triangular is recommended when:
   - All three estimates have similar reliability
   - The distribution needs to be more responsive to extremes
   - The estimation process involves multiple independent factors
@@ -135,7 +135,7 @@ Understanding the cognitive biases that affect each point estimate helps teams p
 
 #### Generating Better Estimates
 
-To improve three-point estimation:
+To improve three-point estimation it is recommended to:
 
 1. **Separate concerns**: Generate optimistic, most likely, and pessimistic estimates independently
 2. **Define scenarios**: Clearly specify the conditions that would lead to each estimate
@@ -147,7 +147,7 @@ To improve three-point estimation:
 
 Three-point estimation can serve as:
 
-- Input to Monte Carlo simulations for project scheduling
+- Input to Monte Carlo simulations (see below) for project scheduling
 - A structured input mechanism for Bayesian updates
 - A communication tool for stakeholder alignment
 - The basis for risk-adjusted project planning
@@ -340,7 +340,7 @@ team members or the desire to avoid conflict can lead to estimates that do not f
 
 Expert judgment involves leveraging the knowledge and experience of specialists to estimate project details. This approach is particularly useful when empirical data is scarce or for tackling complex, ill-defined problems.
 
-However, expert judgment is highly susceptible to various [cognitive biases](https://en.wikipedia.org/wiki/Cognitive_bias), which can lead to both underfitting and overfitting:
+However, expert judgment is highly susceptible to various [cognitive biases](https://en.wikipedia.org/wiki/Cognitive_bias) (similar to those affecting three-point estimation, discussed in [Section 2.1](#estimation-biases)), which can lead to both underfitting and overfitting:
 - [Optimism](https://en.wikipedia.org/wiki/Optimism_bias) bias might cause experts to underestimate the effort required
 - [Anchoring](https://en.wikipedia.org/wiki/Anchoring_effect) bias could lead to estimates being unduly influenced by initial figures
 - [Overconfidence](https://en.wikipedia.org/wiki/Overconfidence_effect) can result in experts overlooking potential challenges or the need for more detailed analysis, leading to overfitting.
