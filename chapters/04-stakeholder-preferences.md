@@ -79,6 +79,30 @@ The implementation speed advantages of simpler models preferred by management ma
 ### Quality vs. Standardization
 Management's preference for standardization across the organization may conflict with technical specialists' focus on quality and specific optimizations for particular use cases, leading to debates about whether standardization or specialization should be prioritized.
 
+### The Infrastructure Investment Tension
+A particularly significant tension in software development contexts emerges around investments in technical infrastructure versus immediate feature delivery. Technical specialists often advocate for investments in abstraction layers, developer tooling, and architectural foundations that have minimal immediate customer-visible impact but significant long-term development efficiency benefits.
+
+This creates a fundamental tension where:
+
+- **Technical specialists** push for:
+  - Building abstraction layers that simplify future development
+  - Creating internal developer tools and frameworks
+  - Establishing technical foundations that enable long-term flexibility
+  - Refactoring existing systems to improve maintainability
+  - Designing for future extensibility rather than just current requirements
+
+- **Management** often prioritizes:
+  - Delivering tangible features with immediate business value
+  - Concrete customer-visible improvements
+  - Meeting short-term market or business needs
+  - Solutions that address current problems without "over-engineering"
+
+This tension is particularly challenging because infrastructure investments are largely invisible to business stakeholders yet have compounding returns over time. Technical debt accumulates when these investments are repeatedly deferred in favor of immediate feature delivery, creating a pattern where development becomes progressively slower and more expensive—a phenomenon that's difficult to attribute to specific past decisions.
+
+The visualization below illustrates this tension between immediate feature delivery and long-term development efficiency, showing how different perspectives lead to different investment priorities:
+
+![Infrastructure Investment vs. Feature Delivery Tension](../images/infrastructure-feature-tension.svg)
+
 ### Long-term vs. Short-term Focus
 Technical specialists might prioritize long-term system quality and maintainability, potentially at the cost of higher initial development time and resource investment, while management may focus more on short-term deliverables and quick wins, creating tensions in project planning and evaluation.
 
