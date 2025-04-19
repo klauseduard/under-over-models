@@ -129,6 +129,8 @@ In healthcare IT, "strategic overfitting" represents:
 - Regulatory compliance requirements
 - Domain-specific optimizations
   
+![Strategic vs. Problematic Overfitting in Healthcare IT](../images/strategic-overfitting-healthcare.svg)
+
 ### Contrast with Traditional Overfitting
 Unlike traditional overfitting concerns:
 - Healthcare customization is often necessary

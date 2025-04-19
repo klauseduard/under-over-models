@@ -224,6 +224,8 @@ Bayesian methods extend beyond probability updating to provide a framework for o
 
 3. **Explicit Treatment of Risk**: By working with full probability distributions rather than point estimates, Bayesian approaches naturally incorporate risk assessment into decision processes.
 
+![Bayesian Decision-Making in Organizations](../images/bayesian-decision-making.svg)
+
 ### Applications to Organizational and Project Management
 
 In organizational contexts, Bayesian thinking provides powerful tools for managing uncertainty:
