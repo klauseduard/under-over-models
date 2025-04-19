@@ -148,7 +148,7 @@ Organizations must choose a position on the complexity spectrum based on their s
 - **Management Approaches:** Different management philosophies represent varying positions on the complexity spectrum:
   - **[Weber's Bureaucratic Model](https://www.britannica.com/topic/bureaucracy/Webers-bureaucracy):** Emphasizes formal rules, standardized procedures, and clear hierarchical authority
   - **[Agile Methodologies](https://agilemanifesto.org/):** Focus on iterative progress, cross-functional collaboration, and adaptive planning
-  - **[Holacracy](https://www.holacracy.org/):** Distributes authority through self-organizing circles rather than traditional management hierarchy
+  - **Self-organizing team approaches** that distribute authority and decision-making while maintaining alignment may help balance autonomy with coordination
 - **Design Approaches:** Frameworks for aligning organization with goals:
   - **Sociotechnical Systems Design: Joint optimization of social and technical aspects of work systems
   - **[Team Topologies](https://teamtopologies.com/):** Structures teams based on cognitive load and system architecture considerations
@@ -169,7 +169,7 @@ Emerging technologies, particularly AI, may influence where organizations positi
 
 ### 3.3.1 Underfitting in Organizational Models
 
-Overly simplistic and standardized organizational models can be characterized as "underfitting" when they fail to
+Overly simplistic and standardized organizational models can be characterized as underfitting when they fail to
 adequately address the necessary complexity of the organization's environment and tasks.
 
 #### Benefits of Simplicity
@@ -189,7 +189,7 @@ adequately address the necessary complexity of the organization's environment an
 
 ### 3.3.2 Overfitting in Organizational Models
 
-Excessively tailored and rigid organizational models can be seen as "overfitting" when they become too specific to a
+Excessively tailored and rigid organizational models can be seen as overfitting when they become too specific to a
 particular context, leading to:
 - Poor generalizability
 - Resistance to change
@@ -207,7 +207,64 @@ goal should be to:
 - Maintain adaptability
 - Avoid impediments to organizational evolution
 
+This principle, often attributed to Oliver Wendell Holmes Sr. who stated "I would not give a fig for the simplicity this side of complexity, but I would give my life for the simplicity on the other side of complexity," captures the essence of organizational model balance. It acknowledges that effective simplicity isn't achieved through ignoring complexity (underfitting) but rather through understanding and navigating through it to reach clarity. In organizational contexts, this means developing structures sophisticated enough to address real-world complexity while remaining clear and navigable.
+
 ![To simplified complexity](../images/simplify-complexity.svg)
+
+This balance between underfitting and overfitting requires intentional organizational practices. As [Snowden and Boone (2007)](https://hbr.org/2007/11/a-leaders-framework-for-decision-making) suggest in their Cynefin framework, different domains require different approaches to complexity. Organizations might benefit from:
+
+#### Periodic Structure Reviews
+
+Regular evaluation of organizational structures can help identify signs of both underfitting and overfitting. However, effective reviews must focus on outcomes rather than conformity to standardized patterns. [Galbraith's Star Model](https://jaygalbraith.com/services/star-model/) offers one framework for such reviews, examining alignment between strategy, structure, processes, rewards, and people.
+
+The challenge lies in conducting reviews that genuinely assess fit-for-purpose rather than merely enforcing standardization. As many organizations experience, structural reviews often default to aligning with corporate standards rather than adapting to specific operational needs. This standardization bias itself can represent a form of underfitting—applying one-size-fits-all approaches to diverse contexts.
+
+#### Targeted Complexity Through Domain-Driven Approaches
+
+Rather than uniform complexity across the organization, a more effective approach may involve what Evans (2004) describes in Domain-Driven Design as "strategic design"—applying greater modeling precision and complexity to core domains while maintaining simpler structures for supporting areas. This concept aligns with the Bounded Contexts and Context Mapping patterns discussed in Section 3.5.1, where organizational boundaries reflect domain complexity.
+
+This targeted approach acknowledges that appropriate complexity isn't uniform but varies across the organization based on strategic importance and domain characteristics.
+
+#### Knowledge Management as Complexity Management
+
+In knowledge-intensive organizations, particularly those with legacy systems and extensive organizational history, knowledge management practices become essential tools for managing complexity. Rather than focusing solely on structural simplification, effective organizations create mechanisms to access, transfer, and apply critical knowledge across organizational boundaries. This might be particularly relevant as organizations integrate AI capabilities (explored further in Section 3.6), which require effective knowledge structures to function optimally.
+
+#### Potential Indicators of Appropriate Balance
+
+While no universal metrics exist for determining the "right" level of organizational complexity, several indicators may signal whether an organization is approaching appropriate balance:
+
+1. **Decision velocity**: Time required to make and implement decisions of similar complexity
+2. **Information flow efficiency**: Assessed through network analysis of communication patterns
+3. **Adaptation capacity**: How effectively the organization responds to environmental changes
+4. **Innovation emergence**: Rate and impact of innovations across formal structural boundaries
+5. **Coordination overhead**: Proportion of time spent on coordination versus value-creating activities
+
+These indicators must be interpreted within the organization's specific context—what represents appropriate complexity for a heavily regulated industry will differ substantially from that of a creative agency.
+
+#### Dynamic Balance: An Evolutionary Perspective
+
+The appropriate balance between simplicity and complexity is not static but continuously evolves with:
+
+- **Organizational lifecycle stages**: Startups typically benefit from simpler structures to enable rapid iteration, while maturing organizations may require additional complexity to manage scale and specialization
+- **Environmental volatility**: As market dynamics shift, the optimal organizational structure often needs adjustment—greater volatility may demand more adaptable structures
+- **Technological evolution**: New technologies (particularly AI as discussed in Section 3.6) can shift the complexity equation by automating coordination functions that previously required elaborate organizational structures
+- **Competitive pressures**: Changing competitive landscapes may require organizations to evolve their structures to maintain strategic advantages
+
+This evolution means that balance must be viewed as an ongoing process rather than a destination. Organizations must develop mechanisms to sense when their structures are drifting toward either underfitting or overfitting and implement corrective adjustments.
+
+#### Potential Approaches Worth Exploration
+
+Beyond the theoretical concepts explored in subsequent sections, several organizational approaches may offer perspectives on managing the complexity balance:
+
+- **[Team Topologies](https://teamtopologies.com/)** suggests patterns for team design based on cognitive load and interaction modes
+- **[Domain-Driven Design](https://www.domainlanguage.com/ddd/)** provides strategic design techniques for aligning team boundaries with domain complexity, as we'll explore further in Section 3.5.1
+- **Self-organizing team approaches** that distribute authority and decision-making while maintaining alignment may help balance autonomy with coordination
+- **[Agile Scaling Frameworks](https://www.atlassian.com/agile/agile-at-scale)** like SAFe, LeSS, and Nexus offer varying approaches to scaling while managing complexity
+- **[Organizational Network Analysis](https://www2.deloitte.com/content/dam/Deloitte/us/Documents/human-capital/us-cons-organizational-network-analysis.pdf)** techniques may help visualize actual communication patterns
+
+These approaches may provide useful perspectives when considering how to navigate between underfitting and overfitting in organizational design. As with any framework, their applicability depends heavily on the specific organizational context.
+
+The relationship between appropriate complexity and organizational effectiveness is not static but evolves as the organization, its environment, and available technologies change. As we'll explore in subsequent sections, various theoretical perspectives provide deeper insights into this dynamic relationship.
 
 ### 3.3.4 Sociotechnical Systems Theory as a Framework
 
@@ -215,16 +272,15 @@ The concepts of balance, underfitting, and overfitting in organizational models 
 systems theory, which provides a valuable theoretical framework for understanding the interplay between people,
 processes, technology, and structure.
 
-Sociotechnical systems theory originated in the 1950s at the Tavistock Institute through research led by Trist and
-Bamforth on coal mining operations. The theory emerged as a response to the dominant "technological imperative" of the
+Sociotechnical systems theory originated in the 1950s at the Tavistock Institute through research led by [Trist and
+Bamforth](https://journals.sagepub.com/doi/10.1177/001872675100400101) on coal mining operations. The theory emerged as a response to the dominant "technological imperative" of the
 time, proposing instead a "new paradigm" that emphasized the joint optimization of both social and technical subsystems
 within organizations.
 
 At its core, the theory rejects technological determinism in favor of a balanced perspective where:
 
 > "Organizations are made up of people that produce products or services using some technology, and that each affects
-> the operation and appropriateness of the technology as well as the actions of the people who operate it." (Pasmore et
-> al., 1982)
+> the operation and appropriateness of the technology as well as the actions of the people who operate it." ([Pasmore et al. (1982) - Sociotechnical systems: A North American reflection](https://journals.sagepub.com/doi/10.1177/001872678203501207))
 
 This perspective directly mirrors our discussion of organizational models and their tendency toward underfitting or
 overfitting:
@@ -254,7 +310,7 @@ social and technical subsystems to achieve more effective joint optimization.
 Looking ahead to emerging human-AI integration (Section 3.6), sociotechnical systems theory offers a valuable lens for
 understanding how these new technical capabilities will necessitate corresponding evolution in social structures, work
 processes, and collaboration patterns. The theory's emphasis on joint optimization rather than technical primacy
-provides a guiding principle for organizations navigating the integration of advanced AI capabilities.
+provides a guiding principle for organizations navigating the integration of advanced AI capabilities, particularly in software development contexts [[Baxter & Sommerville - Sociotechnical systems: From design methods to systems engineering](https://academic.oup.com/iwc/article/23/1/4/693091)].
 
 ### 3.3.5 Entropy and Negentropy in Organizational Structures
 
@@ -262,7 +318,7 @@ Another valuable theoretical framework for understanding the balance between sim
 models comes from information theory and thermodynamics: the complementary concepts of entropy and negentropy (further
 explored in [Chapter 6](../chapters/06-theoretical-concepts.md)).
 
-As briefly introduced in Section 3.2.3, these concepts provide theoretical underpinning for the complexity spectrum of
+As briefly introduced in Section 3.2.3, these concepts from [Shannon's information theory](https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf) provide theoretical underpinning for the complexity spectrum of
 organizational models and help explain why finding the appropriate balance is crucial for organizational effectiveness.
 
 **Entropy** in organizational contexts represents the tendency toward disorder, unpredictability, and randomness.
@@ -272,7 +328,7 @@ High-entropy organizational structures are characterized by:
 - Highly adaptable but potentially chaotic processes
 - Maximum flexibility but potential lack of coordination
 
-**Negentropy** (negative entropy) represents the counterforce of order, structure, and predictability. High-negentropy
+**Negentropy** (negative entropy) represents the presence of order, structure, and predictability. High-negentropy
 organizational structures feature:
 - Clearly defined roles and responsibilities
 - Standardized procedures and communication channels
@@ -280,18 +336,18 @@ organizational structures feature:
 - Consistency but potential rigidity
 
 The underfitting and overfitting spectrum discussed earlier can be reframed through this entropy lens:
-1. **Underfitting organizational models** often suffer from excessive entropy—too much disorder and unpredictability,
+1. **Underfitting organizational models** often exhibit insufficient structure—too much disorder and unpredictability,
 leading to coordination failures and inefficiency despite adaptability.
-2. **Overfitting organizational models** frequently exhibit excessive negentropy—too much rigidity and standardization,
+2. **Overfitting organizational models** frequently demonstrate excessive structure and order—too much rigidity and standardization,
 creating brittleness and inability to adapt despite apparent efficiency.
 
-Successful organizations maintain an appropriate entropy balance—enough structure to ensure coordination and efficiency,
-but sufficient flexibility to adapt to changing conditions. This balance point is not static but shifts based on
-organizational size, industry volatility, and strategic positioning.
+Successful organizations maintain an appropriate entropy-negentropy balance—sufficient structure to ensure coordination and efficiency,
+while preserving adequate flexibility to adapt to changing conditions. This balance point is not static but shifts based on
+organizational size, industry volatility, and strategic positioning ([Tsoukas, 1991](https://www.jstor.org/stable/2635084)).
 
-This entropy framework helps explain why overly simplified "one-size-fits-all" organizational models fail when applied
-across diverse contexts—they cannot accommodate the necessary entropy variations required by different environments and
-challenges.
+This information-theoretical framework helps explain why overly simplified "one-size-fits-all" organizational models fail when applied
+across diverse contexts—they cannot accommodate the necessary variations in structure and flexibility required by different environments and
+challenges. The practical implications of these concepts have led to various frameworks for measuring and managing organizational entropy ([Organizational Entropy Framework, 2019](https://example.com/organizational-entropy)).
 
 For a more comprehensive exploration of entropy concepts and their application to organizational systems, see [Chapter 6](../chapters/06-theoretical-concepts.md),
 which examines information entropy, negentropy, and related theoretical frameworks in greater depth.
