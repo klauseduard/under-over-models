@@ -1,5 +1,23 @@
 # 3. Underfitting and Overfitting in Organizational Models
 
+## Table of Contents
+- [3.1 Organizational Structure as a Model](#31-organizational-structure-as-a-model)
+- [3.2 Simplicity vs. Complexity in Organizational Structures and Management Models](#32-simplicity-vs-complexity-in-organizational-structures-and-management-models)
+  - [3.2.1 Simpler Structures (e.g., Organic, Flatter Hierarchies)](#321-simpler-structures-eg-organic-flatter-hierarchies)
+  - [3.2.2 More Complex Structures (e.g., Mechanistic, Hierarchical, Matrix)](#322-more-complex-structures-eg-mechanistic-hierarchical-matrix)
+  - [3.2.3 The Spectrum of Choice](#323-the-spectrum-of-choice)
+- [3.3 Evidence for Underfitting and Overfitting in Organizational Models](#33-evidence-for-underfitting-and-overfitting-in-organizational-models)
+  - [3.3.1 Underfitting in Organizational Models](#331-underfitting-in-organizational-models)
+  - [3.3.2 Overfitting in Organizational Models](#332-overfitting-in-organizational-models)
+  - [3.3.3 Seeking Balance](#333-seeking-balance)
+- [3.4 Conway's Law and System Design](#34-conways-law-and-system-design)
+- [3.5 The Inverse Conway Maneuver](#35-the-inverse-conway-maneuver)
+  - [3.5.1 DDD Context Mapping for Organizational Design](#351-ddd-context-mapping-for-organizational-design)
+- [3.6 Forward-Looking Considerations](#36-forward-looking-considerations)
+  - [3.6.1 Human Orchestration of AI Teams](#361-human-orchestration-of-ai-teams)
+  - [3.6.2 Evolutionary Trajectory of AI Integration](#362-evolutionary-trajectory-of-ai-integration)
+  - [3.6.3 Adaptation Strategies for Human-AI Organizations](#363-adaptation-strategies-for-human-ai-organizations)
+
 While the concepts of organizational modeling, underfitting, and overfitting apply broadly, this chapter will particularly explore them through the lens of organizations focused on designing, developing, and maintaining software systems.
 
 ## 3.1 Organizational Structure as a Model
@@ -22,7 +40,7 @@ It's important to note that DDD is primarily valuable for complex domains with i
 
 Organizational structures and management models represent frameworks that define how organizations operate, make decisions, and coordinate their activities. These frameworks can range from relatively simple (often associated with Organic or Agile models) to highly complex (often associated with Mechanistic or Bureaucratic models), frequently reflecting the degree of standardization, specialization, and hierarchy within the organization. A Bounded Context in DDD acts as an explicit boundary within which a particular subdomain model is consistent and well-understood, providing a mechanism to create necessary, deliberate partitions within the larger organizational or system landscape. This helps avoid both monolithic structures (underfitting the domain's complexity) and overly granular, chaotic fragmentation (overfitting with poorly defined boundaries).
 
-### Simpler Structures (e.g., Organic, Flatter Hierarchies)
+### 3.2.1 Simpler Structures (e.g., Organic, Flatter Hierarchies)
 
 Simpler organizational structures, often characterized by fewer layers of management, broader spans of control, and less formalization, tend to be easier to understand and can foster greater agility and speed in decision-making.
 
@@ -42,7 +60,7 @@ Simpler organizational structures, often characterized by fewer layers of manage
 
 The rise of AI assistants and agents adds another layer to this discussion. As explored in Chapter 8, AI tools have the potential to facilitate flatter hierarchies by automating coordination tasks and providing wider access to information, potentially reducing the need for extensive middle management. Furthermore, AI might enable more dynamic, potentially AI-mediated team formation based on skills and project needs, challenging traditional static team structures. However, this also introduces new complexities in managing human-AI collaboration and requires careful consideration of the organizational design implications.
 
-### More Complex Structures (e.g., Mechanistic, Hierarchical, Matrix)
+### 3.2.2 More Complex Structures (e.g., Mechanistic, Hierarchical, Matrix)
 
 In contrast, more complex organizational structures, often featuring multiple layers of hierarchy, narrower spans of control, high specialization, and a greater degree of formalization, can provide the necessary framework for managing intricate operations.
 
@@ -61,7 +79,7 @@ In contrast, more complex organizational structures, often featuring multiple la
 - Reduced ability to adapt quickly to changing market conditions.
 - May hinder innovation if too rigid; less hierarchical, network-based models might be more appropriate for innovation-focused organizations.
 
-### The Spectrum of Choice
+### 3.2.3 The Spectrum of Choice
 
 Organizations must choose a position on this spectrum based on their size, environment, goals, and the nature of their work. This includes decisions about:
 
@@ -73,7 +91,7 @@ Organizations must choose a position on this spectrum based on their size, envir
 
 ## 3.3 Evidence for Underfitting and Overfitting in Organizational Models
 
-### Underfitting in Organizational Models
+### 3.3.1 Underfitting in Organizational Models
 
 Overly simplistic and standardized organizational models can be characterized as "underfitting" when they fail to adequately address the necessary complexity of the organization's environment and tasks.
 
@@ -92,7 +110,7 @@ Overly simplistic and standardized organizational models can be characterized as
 
 ![Organizational complexity tradeoffs](../images/org-complexity-tradeoffs.svg)
 
-### Overfitting in Organizational Models
+### 3.3.2 Overfitting in Organizational Models
 
 Excessively tailored and rigid organizational models can be seen as "overfitting" when they become too specific to a particular context, leading to:
 - Poor generalizability
@@ -102,7 +120,7 @@ Just as excessive complexity in software can hinder understanding, maintenance, 
 - Costly to maintain
 - Slow to adapt to new circumstances
 
-### Seeking Balance
+### 3.3.3 Seeking Balance
 
 The principle of seeking "simplicity on the far side of complexity" suggests that while some complexity is inherent, the goal should be to:
 - Distill complexity into a manageable form
@@ -139,13 +157,13 @@ Instead of allowing the existing organizational structure to dictate the archite
 
 By strategically designing team structures around Bounded Contexts, organizations can proactively align their organizational models with intended system architectures. This often involves creating autonomous teams responsible for specific system components or modules reflecting a particular subdomain. Clear ownership encourages modular and decoupled architectures, as teams operate independently, develop a deep understanding and specialized **[Ubiquitous Language](https://www.agilealliance.org/glossary/ubiquitous-language/)** for their context, and focus on well-defined interfaces for interaction with other contexts. **[Context Mapping](https://www.oreilly.com/library/view/what-is-domain-driven/9781492057802/ch04.html)**, another DDD tool, becomes essential for visualizing and managing the relationships *between* these team/system boundaries.
 
-Furthermore, the Inverse Conway Maneuver emphasizes defining explicit communication pathways and interaction modes between teams aligned with Bounded Contexts. Intentionally structuring how teams collaborate helps foster the desired level of coupling between system components. For instance, tight integration needs can be supported by promoting close collaboration (e.g., a Partnership context map pattern), while decoupled architectures might use more formal, API-driven communication protocols between teams (e.g., an Anticorruption Layer or Open Host Service pattern).
+Furthermore, the Inverse Conway Maneuver emphasizes defining explicit communication pathways and interaction modes between teams aligned with Bounded Contexts. Intentionally structuring how teams collaborate helps foster the desired level of coupling between system components. For instance, tight integration needs can be supported by promoting close collaboration (e.g., a Partnership context map pattern), while decoupled architectures might use more formal, API-driven communication protocols between teams (e.g., an [Anticorruption Layer](https://martinfowler.com/bliki/AnticorruptionLayer.html) or [Open Host Service](https://ddd-practitioners.com/home/glossary/bounded-context/bounded-context-relationship/open-host-service/) pattern).
 
 In some cases, implementing the Inverse Conway Maneuver might necessitate reorganizing existing teams to break down silos, improve work/information flow, and remove organizational constraints that could lead to undesirable architectural patterns.
 
 ![Inverse Conway Maneuver with Bounded Contexts](../images/inverse-conway-ddd.svg)
 
-### DDD Context Mapping for Organizational Design
+### 3.5.1 DDD Context Mapping for Organizational Design
 
 Domain-Driven Design provides valuable patterns for defining relationships between different Bounded Contexts, which directly translates to defining the relationships between teams in an organization. These relationship patterns help define how teams should interact, what protective measures might be needed, and how to align team structures with system architecture components.
 
@@ -169,7 +187,7 @@ The context map visualization above illustrates several key DDD concepts relevan
 
 By intentionally designing these relationships and boundaries, organizations can create more effective team structures that naturally produce well-architected systems while avoiding the communication bottlenecks and integration challenges of misaligned organizational and technical boundaries.
 
-## 3.6 FORWARD-LOOKING CONSIDERATIONS
+## 3.6 Forward-Looking Considerations
 
 *Note: This section presents emerging considerations rather than established practices.*
 
