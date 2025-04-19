@@ -12,6 +12,8 @@ However, the informal networks and actual communication flows that emerge within
 
 Ultimately, the organizational structure, whether formal or informal, acts as a set of rules and constraints that influence individual and collective behavior, shaping how decisions are made, information is shared, and work is coordinated within the organization. This framework, therefore, functions as a model for understanding and guiding organizational processes and dynamics, making it susceptible to underfitting (being too simple to capture reality) or overfitting (being too complex and rigid).
 
+![Formal vs. Informal Organizational Structures](../images/formal-informal-structures.svg)
+
 ## 3.2 Simplicity vs. Complexity in Organizational Structures and Management Models
 
 Designing effective organizational models involves navigating an inherent trade-off between simplicity and complexity, each offering distinct advantages and disadvantages. This trade-off is central to avoiding both underfitting (oversimplification) and overfitting (excessive complexity) the organizational model to its environment and tasks. Domain-Driven Design (DDD) offers valuable strategic tools to navigate this challenge, particularly through identifying the core, supporting, and generic subdomains of the business and establishing clear boundaries using Bounded Contexts. These concepts help focus effort on what's most critical and deliberately manage complexity rather than letting it emerge accidentally.
@@ -65,20 +67,7 @@ Organizations must choose a position on this spectrum based on their size, envir
 - **Management Model:** (Bureaucratic, Agile, Hybrid)
 - **Degree of Specialization:** The balance between generalists (common in simpler/smaller orgs) and specialists (common in complex/larger orgs) [[article]](https://www.adaptconsultingcompany.com/2025/02/22/smaller-organizations-with-generalists-vs-larger-organizations-with-specialists/).
 
-```mermaid
-flowchart LR
-    subgraph "Complexity Spectrum"
-        Simplicity[Simple / Organic / Agile] <--> Complexity[Complex / Mechanistic / Bureaucratic]
-    end
-    subgraph "Key Characteristics"
-        direction TB
-        S1[Flexibility] --> S2[Speed]
-        C1[Specialization] --> C2[Control]
-    end
-    Simplicity -- Advantages --> S1 & S2
-    Complexity -- Advantages --> C1 & C2
-```
-
+![Complexity Spectrum](../images/complexity-spectrum.svg)
 
 ## 3.3 Evidence for Underfitting and Overfitting in Organizational Models
 
@@ -138,6 +127,8 @@ This law underscores how crucial effective communication and collaboration are f
 
 Conway's Law directly reinforces the idea that organizational structure is a form of a model that significantly influences system architecture. The organizational structure, with its defined communication pathways, team boundaries, and hierarchical relationships, essentially acts as a template or a model that prefigures the likely structure of the technological output. When the organizational model (structure and communication flow) does not align with the desired architecture of the system being developed, or when domain boundaries are unclear (lacking well-defined Bounded Contexts), it can lead to various tensions, inefficiencies, and ultimately a tightly coupled, difficult-to-maintain system often referred to as a "Big Ball of Mud."
 
+![Conway's Law Illustration](../images/conways-law.svg)
+
 ## 3.5 The Inverse Conway Maneuver
 
 Building upon the principles of Conway's Law, the concept of the Inverse Conway Maneuver offers a proactive strategy for organizations to achieve desired system architectures by intentionally designing their team structures to mirror the intended design. A primary practical application of this maneuver is organizing teams around specific **Bounded Contexts** identified through strategic DDD.
@@ -149,5 +140,97 @@ By strategically designing team structures around Bounded Contexts, organization
 Furthermore, the Inverse Conway Maneuver emphasizes defining explicit communication pathways and interaction modes between teams aligned with Bounded Contexts. Intentionally structuring how teams collaborate helps foster the desired level of coupling between system components. For instance, tight integration needs can be supported by promoting close collaboration (e.g., a Partnership context map pattern), while decoupled architectures might use more formal, API-driven communication protocols between teams (e.g., an Anticorruption Layer or Open Host Service pattern).
 
 In some cases, implementing the Inverse Conway Maneuver might necessitate reorganizing existing teams to break down silos, improve work/information flow, and remove organizational constraints that could lead to undesirable architectural patterns.
+
+![Inverse Conway Maneuver with Bounded Contexts](../images/inverse-conway-ddd.svg)
+
+### DDD Context Mapping for Organizational Design
+
+Domain-Driven Design provides valuable patterns for defining relationships between different Bounded Contexts, which directly translates to defining the relationships between teams in an organization. These relationship patterns help define how teams should interact, what protective measures might be needed, and how to align team structures with system architecture components.
+
+![Domain-Driven Design Context Mapping](../images/ddd-context-mapping.svg)
+
+The context map visualization above illustrates several key DDD concepts relevant to organizational design:
+
+1. **Bounded Contexts**: Defined areas of responsibility with their own consistent model and ubiquitous language
+   - Core Domain (highest business value, competitive advantage)
+   - Supporting Subdomains (organization-specific but not core differentiator)
+   - Generic Subdomains (commoditized functionality)
+
+2. **Context Relationships**: Define how teams interact across boundaries
+   - Partnership: Collaborative relationship with shared success criteria
+   - Customer/Supplier: Directional relationship with upstream/downstream dependencies
+   - Anticorruption Layer (ACL): Protection mechanism to isolate from external model changes
+
+3. **Team Alignment**: Each Bounded Context is assigned to a specific team, creating clear ownership
+   
+4. **System Architecture Reflection**: Technical components mirror the domain organization
+
+By intentionally designing these relationships and boundaries, organizations can create more effective team structures that naturally produce well-architected systems while avoiding the communication bottlenecks and integration challenges of misaligned organizational and technical boundaries.
+
+## 3.6 FORWARD-LOOKING CONSIDERATIONS
+
+*Note: This section presents emerging considerations rather than established practices.*
+
+As organizations adapt to changing environments, emerging AI capabilities are creating new organizational patterns that challenge traditional thinking about simplicity versus complexity in organizational structures. These developments may fundamentally shift how we balance organizational model complexity, both in the immediate term and over longer evolutionary horizons.
+
+### 3.6.1 Human Orchestration of AI Teams
+
+A particularly significant emerging pattern is the ability of individual knowledge workers to orchestrate multiple specialized AI assistants in parallel. This represents a fundamentally different coordination model than traditional human-to-human collaboration.
+
+![Human Orchestration of Parallel AI Assistants](../images/human-ai-orchestration.svg)
+
+This emerging pattern creates several important organizational implications:
+
+**Novel Asymmetries in Productivity and Coordination**
+- Individual knowledge workers can achieve what previously required entire teams
+- AI agents don't experience context-switching costs that limit human multitasking
+- Human attention becomes the primary constraint rather than team size
+- Individuals can specialize in orchestration rather than domain expertise
+
+**New Underfitting/Overfitting Risks**
+- **Underfitting:** Organizational structures that fail to accommodate the increased throughput and complexity of human-AI teams risk creating bottlenecks and coordination failures
+- **Overfitting:** Imposing traditional team-oriented processes and coordination mechanisms on human-AI teams may negate their productivity advantages
+- Organizations must develop appropriately complex interfaces between human-AI teams and the broader organization
+
+**Multi-level Alignment Challenges**
+1. **Internal alignment:** Ensuring multiple AI agents working on different components maintain coherent design patterns and compatible approaches
+2. **Cross-team alignment:** Coordinating multiple human-AI teams working in parallel
+3. **Strategic alignment:** Ensuring local optimizations by empowered human-AI teams serve broader organizational goals
+
+### 3.6.2 Evolutionary Trajectory of AI Integration
+
+Looking beyond current capabilities, we can map the potential evolution of AI integration across multiple dimensions. Each stage brings distinct implications for organizational complexity and design.
+
+![AI Integration Timeline](../images/ai-integration-timeline.svg)
+
+This timeline illustrates four key dimensions of AI integration that will progressively influence organizational complexity:
+
+**From Tools to Agents:** As AI evolves from productivity tools to semi-autonomous agents, organizations face a complexity paradox. Initially, AI may allow for simpler organizational structures by automating coordination tasks. However, as AI capabilities advance, new governance structures may be required to manage human-AI collaboration, potentially adding organizational complexity.
+
+**Contextual Understanding:** AI's growing ability to access and interpret organizational knowledge may enable knowledge democratization, potentially flattening hierarchies (simplification). Yet organizations will need to establish new knowledge management frameworks to leverage these capabilities effectively. Those that maintain overly simplistic knowledge management models risk underutilizing AI capabilities.
+
+**Tool Orchestration:** As AI systems progress from sequential automation to dynamic workflow reconfiguration, traditional process-oriented organizational structures may require rethinking. Simple, rigid process definitions might underfit the flexibility that AI orchestration enables, while overly complex adaptive systems might create unpredictability and governance challenges.
+
+This dimension is further evolving as AI systems begin to take on project coordination roles, managing complex workflows with interdependencies across multiple specialized tools and AI assistants. Much like how project managers coordinate human teams, these systems can plan and visualize parallel workstreams, schedule tasks with appropriate dependencies, and allocate work to specialized AI tools based on their capabilities. This represents a significant advancement in managing organizational complexity - the coordination overhead that would typically require dedicated human management effort can increasingly be handled by AI systems that understand task relationships and optimal resource allocation across time. As these capabilities develop, organizations may need to reconsider traditional project management structures and processes.
+
+**Temporal Flexibility:** The "always-on" nature of AI systems challenges conventional organizational time structures. Organizations with overly simplistic temporal models may miss opportunities for asynchronous operation, while overly complex scheduling and handoff mechanisms may introduce unnecessary coordination overhead. The "night-shift" capability of AI systems, reminiscent of lights-out manufacturing, enables continuous operation beyond human working hours.
+
+### 3.6.3 Adaptation Strategies for Human-AI Organizations
+
+Organizations seeking to effectively integrate AI capabilities while maintaining appropriate complexity should consider these adaptation strategies:
+
+1. **Integration Interfaces:** Design specific organizational interfaces that enable human-AI teams to integrate with traditional teams without imposing unnecessary process overhead
+
+2. **Selective Complexity:** Rather than uniformly simple or complex organizational models, develop "complexity pockets" where more elaborate structures are justified by the domain complexity or strategic importance
+
+3. **Dynamic Granularity:** Create organizational structures that can temporarily increase or decrease in complexity as needed, using AI to manage and modulate the appropriate level of structural detail based on environmental conditions
+
+4. **Complexity Pattern Recognition:** Leverage AI's ability to recognize patterns in organizational behavior to identify where existing structures are overfitting or underfitting
+
+5. **Temporal Continuity Management:** Design organizational processes that can leverage 24/7 AI operation while ensuring effective handoffs and information flow between human and AI working periods
+
+These considerations suggest that effective organizational models in AI-augmented environments will likely neither be uniformly simple nor complex, but rather embody "requisite complexity" - matching their structural sophistication to the specific domains, tasks, and contexts they encompass, while avoiding both the rigidity of excessive simplicity and the coordination costs of unnecessary complexity.
+
+---
 
 [Back to Table of Contents](../README.md) 

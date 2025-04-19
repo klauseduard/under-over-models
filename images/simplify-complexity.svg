@@ -1,50 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="450" fill="#f8f9fa" rx="10" ry="10"/>
+  
   <!-- Title -->
-  <text x="450" y="40" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">Journey to Simplified Complexity</text>
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#333333">Journey to Simplified Complexity</text>
   
   <!-- Main Flow Boxes -->
-  <rect x="100" y="100" width="150" height="60" rx="10" fill="#FFB366" stroke="#333" stroke-width="2"/>
-  <rect x="300" y="100" width="150" height="60" rx="10" fill="#FF6B6B" stroke="#333" stroke-width="2"/>
-  <rect x="500" y="100" width="150" height="60" rx="10" fill="#FFB366" stroke="#333" stroke-width="2"/>
-  <rect x="700" y="100" width="150" height="60" rx="10" fill="#90EE90" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="100" width="160" height="70" rx="5" ry="5" fill="#e6f7e6" stroke="#555555" stroke-width="2"/>
+  <rect x="300" y="100" width="160" height="70" rx="5" ry="5" fill="#ffe6e6" stroke="#555555" stroke-width="2"/>
+  <rect x="500" y="100" width="160" height="70" rx="5" ry="5" fill="#fff0d9" stroke="#555555" stroke-width="2"/>
+  <rect x="700" y="100" width="160" height="70" rx="5" ry="5" fill="#90EE90" stroke="#555555" stroke-width="2"/>
   
   <!-- Characteristics Boxes -->
-  <rect x="100" y="230" width="150" height="60" rx="10" fill="#FFB366" stroke="#333" stroke-width="2"/>
-  <rect x="300" y="230" width="150" height="60" rx="10" fill="#FF6B6B" stroke="#333" stroke-width="2"/>
-  <rect x="500" y="230" width="150" height="60" rx="10" fill="#FFB366" stroke="#333" stroke-width="2"/>
-  <rect x="700" y="230" width="150" height="60" rx="10" fill="#90EE90" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="250" width="160" height="70" rx="5" ry="5" fill="#e6f7e6" stroke="#555555" stroke-width="2"/>
+  <rect x="300" y="250" width="160" height="70" rx="5" ry="5" fill="#ffe6e6" stroke="#555555" stroke-width="2"/>
+  <rect x="500" y="250" width="160" height="70" rx="5" ry="5" fill="#fff0d9" stroke="#555555" stroke-width="2"/>
+  <rect x="700" y="250" width="160" height="70" rx="5" ry="5" fill="#90EE90" stroke="#555555" stroke-width="2"/>
   
   <!-- Main Flow Labels -->
-  <text x="175" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Initial Simplicity</text>
-  <text x="375" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Natural Complexity</text>
-  <text x="575" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Managed Complexity</text>
-  <text x="775" y="130" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Elegant Simplicity</text>
+  <text x="180" y="125" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Initial</text>
+  <text x="180" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Simplicity</text>
+  
+  <text x="380" y="125" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Natural</text>
+  <text x="380" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Complexity</text>
+  
+  <text x="580" y="125" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Managed</text>
+  <text x="580" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Complexity</text>
+  
+  <text x="780" y="125" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Elegant</text>
+  <text x="780" y="145" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Simplicity</text>
   
   <!-- Characteristics Labels -->
-  <text x="175" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Basic Understanding</text>
-  <text x="375" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Complex Reality</text>
-  <text x="575" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Structured Approach</text>
-  <text x="775" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Refined Solutions</text>
+  <text x="180" y="275" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Basic</text>
+  <text x="180" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Understanding</text>
+  
+  <text x="380" y="275" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Complex</text>
+  <text x="380" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Reality</text>
+  
+  <text x="580" y="275" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Structured</text>
+  <text x="580" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Approach</text>
+  
+  <text x="780" y="275" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Refined</text>
+  <text x="780" y="295" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333333">Solutions</text>
   
   <!-- Flow Arrows -->
-  <path d="M 250 130 L 300 130" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-  <path d="M 450 130 L 500 130" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-  <path d="M 650 130 L 700 130" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 260 135 L 300 135" stroke="#555555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 460 135 L 500 135" stroke="#555555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 660 135 L 700 135" stroke="#555555" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
   
   <!-- Connecting Lines -->
-  <path d="M 175 160 L 175 230" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
-  <path d="M 375 160 L 375 230" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
-  <path d="M 575 160 L 575 230" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
-  <path d="M 775 160 L 775 230" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <path d="M 180 170 L 180 250" stroke="#555555" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <path d="M 380 170 L 380 250" stroke="#555555" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <path d="M 580 170 L 580 250" stroke="#555555" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <path d="M 780 170 L 780 250" stroke="#555555" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
   
-  <!-- Characteristics Label -->
-  <text x="450" y="215" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Characteristics</text>
+  <!-- Section Label -->
+  <rect x="350" y="205" width="200" height="30" rx="5" ry="5" fill="#f0f0f0" stroke="#555555" stroke-width="1"/>
+  <text x="450" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Characteristics</text>
+  
+  <!-- Bottom Annotations -->
+  <text x="180" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666666">Naive oversimplification</text>
+  <text x="380" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666666">Overwhelming complexity</text>
+  <text x="580" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666666">Deliberate organization</text>
+  <text x="780" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666666">Clarity with nuance</text>
+  
+  <text x="180" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666666">High underfitting risk</text>
+  <text x="380" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666666">High overfitting risk</text>
+  <text x="580" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666666">Reduced overfitting</text>
+  <text x="780" y="380" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666666">Balanced model</text>
   
   <!-- Arrow Definition -->
   <defs>
     <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
     </marker>
   </defs>
 </svg>
