@@ -18,15 +18,6 @@ development and organizational models.
 9. [AI: Theory and Practice for People](chapters/09-ai-people-theory-practice.md)
 10. [Conclusion](chapters/10-conclusion.md)
 
-### Supporting Materials
-- [References](references.md)
-
-### Tables
-- [Comparison of Software Estimation Models](tables/estimation-models-comparison.md)
-- [Organizational Structures and Management Models](tables/organizational-structures.md)
-- [Stakeholder Preferences](tables/stakeholder-preferences.md)
-- [Medical Systems Trade-offs](tables/medical-systems-tradeoffs.md)
-
 ## Status
 
-In progress
+In progress, AI said it is a "monograph" now...
