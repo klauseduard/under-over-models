@@ -18,6 +18,20 @@ development and organizational models.
 9. [AI: Theory and Practice for People](chapters/09-ai-people-theory-practice.md)
 10. [Conclusion](chapters/10-conclusion.md)
 
+## Motivation and Perspective
+
+At its core, this work explores an insight that software engineering practices like time estimation and organizational design are modeling problems, just as software architecture, domain modeling, and machine learning are modeling problems. Each involves creating abstractions that balance simplicity against accuracy, generality against specificity.
+
+Many aspects of software engineering draw from disciplines that practitioners may not encounter in their formal education - fields like operations research, information theory, organizational psychology, and systems theory. The author must admit that
+he too has lot to discover about a number of them. By examining such interdisciplinary connections, we gain access to conceptual tools and
+frameworks that can help us reason about our work at higher levels of abstraction.
+
+This "monograph" as my AI assistant called it, uses the machine learning concepts of underfitting and overfitting as a lens through which to examine these modeling problems. By recognizing when our estimation techniques or organizational structures are too simplistic (underfit) or too rigid and specialized (overfit), we can make more conscious, informed choices about the models we adopt in our professional practice.
+
+## Authorship Note
+
+Full disclosure: AI tools (Claude and Gemini) helped generate much of this content. But don't worry - a real human directed the whole show, contributed knowledge, rejected bad references, fixed missteps, and even had to wrestle with SVG layout details as you can guess from the visualizations not yet polished.
+
 ## Status
 
-In progress, AI said it is a "monograph" now...
+In progress. This started as something composed over a long weekend to satisfy an intellectual urge, and continues to evolve (perhaps and hopefully).
