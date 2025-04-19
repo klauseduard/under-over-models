@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Stakeholder Perception of Model Complexity</text>
+  
+  <!-- Main Container -->
+  <rect x="50" y="70" width="800" height="480" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  
+  <!-- Grid lines for the matrix -->
+  <line x1="450" y1="120" x2="450" y2="450" stroke="#cccccc" stroke-width="1"/>
+  <line x1="150" y1="285" x2="750" y2="285" stroke="#cccccc" stroke-width="1"/>
+  
+  <!-- Axis labels -->
+  <text x="450" y="480" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">Perceived Value of Complex Models</text>
+  <text x="450" y="500" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">How much value stakeholders see in complex organizational models</text>
+  
+  <text x="100" y="285" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" transform="rotate(-90, 80, 285)">Perceived Cost of Complex Models</text>
+  <text x="130" y="285" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" transform="rotate(-90, 110, 285)">How much stakeholders worry about complexity costs</text>
+  
+  <!-- Quadrant labels -->
+  <text x="300" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Low Value, High Cost</text>
+  <text x="300" y="170" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Simplicity Advocates</text>
+  
+  <text x="600" y="150" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">High Value, High Cost</text>
+  <text x="600" y="170" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Cautious Complexity</text>
+  
+  <text x="300" y="420" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">Low Value, Low Cost</text>
+  <text x="300" y="440" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Indifferent Stakeholders</text>
+  
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333333">High Value, Low Cost</text>
+  <text x="600" y="440" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Complexity Champions</text>
+  
+  <!-- Quadrant light colors -->
+  <rect x="150" y="120" width="300" height="165" fill="#f2f7f2" opacity="0.5"/>
+  <rect x="450" y="120" width="300" height="165" fill="#fff4e6" opacity="0.5"/>
+  <rect x="150" y="285" width="300" height="165" fill="#f2f2f7" opacity="0.5"/>
+  <rect x="450" y="285" width="300" height="165" fill="#e6fff4" opacity="0.5"/>
+  
+  <!-- Stakeholder positions -->
+  <!-- 1. Executive Management -->
+  <circle cx="250" cy="200" r="30" fill="#4793ff" stroke="#333333" stroke-width="2"/>
+  <text x="250" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">EM</text>
+  <text x="250" y="240" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Executive Management</text>
+  
+  <!-- 2. Technical Specialists -->
+  <circle cx="650" cy="350" r="30" fill="#6b4e71" stroke="#333333" stroke-width="2"/>
+  <text x="650" y="355" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">TS</text>
+  <text x="650" y="390" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Technical Specialists</text>
+  
+  <!-- 3. Middle Management -->
+  <circle cx="500" cy="180" r="30" fill="#c97b84" stroke="#333333" stroke-width="2"/>
+  <text x="500" y="185" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">MM</text>
+  <text x="500" y="220" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Middle Management</text>
+  
+  <!-- 4. Customer Support -->
+  <circle cx="350" cy="340" r="30" fill="#78c2ad" stroke="#333333" stroke-width="2"/>
+  <text x="350" y="345" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">CS</text>
+  <text x="350" y="380" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Customer Support</text>
+  
+  <!-- 5. Innovation Team -->
+  <circle cx="590" cy="300" r="30" fill="#ff8c00" stroke="#333333" stroke-width="2"/>
+  <text x="590" y="305" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">IN</text>
+  <text x="590" y="340" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Innovation Team</text>
+  
+  <!-- Arrow connectors to show tension/relationships -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666666"/>
+    </marker>
+  </defs>
+  
+  <!-- Tension lines between stakeholders -->
+  <line x1="275" y1="210" x2="475" y2="180" stroke="#666666" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="205" x2="570" y2="280" stroke="#666666" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <line x1="610" y1="325" x2="630" y2="340" stroke="#666666" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <line x1="375" y1="330" x2="560" y2="300" stroke="#666666" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Legend -->
+  <rect x="100" y="460" width="700" height="60" fill="#f5f7f9" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  <text x="450" y="480" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Organizational Challenge: Different Stakeholder Perceptions Drive Complexity Decisions</text>
+  <text x="450" y="500" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Effective model selection requires understanding these differing perceptions and aligning stakeholders</text>
+</svg> 

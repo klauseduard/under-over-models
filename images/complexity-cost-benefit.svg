@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Cost-Benefit Perceptions of Model Complexity</text>
+  
+  <!-- Main Container -->
+  <rect x="50" y="70" width="800" height="480" fill="#ffffff" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  
+  <!-- Grid Lines -->
+  <line x1="150" y1="450" x2="750" y2="450" stroke="#dddddd" stroke-width="1"/>
+  <line x1="150" y1="350" x2="750" y2="350" stroke="#dddddd" stroke-width="1"/>
+  <line x1="150" y1="250" x2="750" y2="250" stroke="#dddddd" stroke-width="1"/>
+  <line x1="150" y1="150" x2="750" y2="150" stroke="#dddddd" stroke-width="1"/>
+  
+  <line x1="150" y1="450" x2="150" y2="150" stroke="#dddddd" stroke-width="1"/>
+  <line x1="350" y1="450" x2="350" y2="150" stroke="#dddddd" stroke-width="1"/>
+  <line x1="550" y1="450" x2="550" y2="150" stroke="#dddddd" stroke-width="1"/>
+  <line x1="750" y1="450" x2="750" y2="150" stroke="#dddddd" stroke-width="1"/>
+  
+  <!-- Axes -->
+  <line x1="150" y1="450" x2="750" y2="450" stroke="#555555" stroke-width="2"/>
+  <line x1="150" y1="450" x2="150" y2="150" stroke="#555555" stroke-width="2"/>
+  
+  <!-- Axis Labels -->
+  <text x="450" y="490" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Model Complexity</text>
+  <text x="90" y="300" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" transform="rotate(-90, 90, 300)">Perceived Value</text>
+  
+  <!-- X-Axis Labels -->
+  <text x="150" y="475" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Low</text>
+  <text x="450" y="475" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Medium</text>
+  <text x="750" y="475" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">High</text>
+  
+  <!-- Y-Axis Labels -->
+  <text x="135" y="450" font-family="Arial, sans-serif" font-size="12" text-anchor="end">Low</text>
+  <text x="135" y="350" font-family="Arial, sans-serif" font-size="12" text-anchor="end">Medium</text>
+  <text x="135" y="250" font-family="Arial, sans-serif" font-size="12" text-anchor="end">High</text>
+  <text x="135" y="150" font-family="Arial, sans-serif" font-size="12" text-anchor="end">Very High</text>
+  
+  <!-- Management Perception Curves -->
+  <!-- Management Cost Curve -->
+  <path d="M 150,400 Q 450,300 750,170" stroke="#ff7347" stroke-width="3" fill="none"/>
+  <text x="460" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#ff7347">Management: Perceived Cost</text>
+  <circle cx="460" cy="245" r="6" fill="#ff7347"/>
+  
+  <!-- Management Benefit Curve -->
+  <path d="M 150,400 Q 350,250 750,350" stroke="#90EE90" stroke-width="3" fill="none"/>
+  <text x="400" y="205" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#90EE90">Management: Perceived Benefit</text>
+  <circle cx="380" cy="195" r="6" fill="#90EE90"/>
+  
+  <!-- Technical Specialist Perception Curves -->
+  <!-- Technical Specialist Cost Curve -->
+  <path d="M 150,350 Q 350,420 750,170" stroke="#ff7347" stroke-width="3" stroke-dasharray="5,3" fill="none"/>
+  <text x="600" y="300" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#ff7347">Technical: Perceived Cost</text>
+  <circle cx="600" cy="290" r="6" fill="#ff7347"/>
+  
+  <!-- Technical Specialist Benefit Curve -->
+  <path d="M 150,420 Q 350,300 750,180" stroke="#90EE90" stroke-width="3" stroke-dasharray="5,3" fill="none"/>
+  <text x="650" y="220" font-family="Arial, sans-serif" font-size="12" text-anchor="end" fill="#90EE90">Technical: Perceived Benefit</text>
+  <circle cx="630" cy="210" r="6" fill="#90EE90"/>
+  
+  <!-- Management Optimum -->
+  <line x1="370" y1="150" x2="370" y2="450" stroke="#555555" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="370" y="140" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Management Optimum</text>
+  
+  <!-- Technical Optimum -->
+  <line x1="580" y1="150" x2="580" y2="450" stroke="#555555" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="580" y="140" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Technical Optimum</text>
+  
+  <!-- Balanced Zone -->
+  <rect x="440" y="150" width="80" height="300" fill="#4793ff33" stroke="#4793ff" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="480" y="135" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#4793ff">Balanced Zone</text>
+  
+  <!-- Key Insights Box -->
+  <rect x="100" y="510" width="700" height="70" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" rx="5" ry="5"/>
+  <text x="120" y="530" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Key Insights:</text>
+  <text x="120" y="550" font-family="Arial, sans-serif" font-size="12">• Management perceives rapidly diminishing returns with increasing complexity</text>
+  <text x="450" y="550" font-family="Arial, sans-serif" font-size="12">• Technical specialists perceive higher long-term costs of underfitting</text>
+  <text x="120" y="570" font-family="Arial, sans-serif" font-size="12">• Management's cost concerns focus on implementation and operation</text>
+  <text x="450" y="570" font-family="Arial, sans-serif" font-size="12">• Technical specialists focus on long-term maintainability and adaptability</text>
+</svg> 
