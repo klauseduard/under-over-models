@@ -295,7 +295,7 @@ A potential limitation of COCOMO is that the values of its parameter coefficient
 This assumption of uniformity might lead to underfitting, as the model may fail to capture the significant variations that can
 exist between different organizations or even between different projects within the same organization.
 
-<!-- TODO: Add visualization of COCOMO estimation vs actual effort scatter plot -->
+<figure> <img src="../images/cocomo-estimation-actual-scatter.svg" alt="COCOMO Estimation vs Actual Effort - showing how algorithmic models often underfit real project complexity" width="700" /> <figcaption>Figure 2.2a: Scatter plot showing systematic underestimation in COCOMO models, particularly for larger projects</figcaption> </figure>
 
 The difficulty in establishing a single, universally applicable parametric model suggests an inherent risk of oversimplification.
 Research indicates that
@@ -389,6 +389,8 @@ These novel challenges typically remain unaccounted for in traditional estimatio
 
 Most existing estimation frameworks lack mechanisms to incorporate these AI-specific uncertainties. Organizations attempting to maintain traditional estimation approaches in AI-augmented environments may therefore experience a decline in estimation accuracy until new models that explicitly account for AI impact factors can be developed and calibrated. This represents a classic model adaptation challenge, where the data distribution has fundamentally shifted, requiring a corresponding shift in modeling approach.
 
+> **Note on Rapid Evolution:** Given the accelerating pace of AI tool development and adoption, the estimation challenges described in this section should be considered a snapshot of current understanding rather than definitive guidance. We should anticipate the need for periodic reassessment of the estimation approaches as AI capabilities, organizational adoption patterns, and data on AI-assisted productivity continue to evolve.
+
 ## 2.3 Evidence for Underfitting in Classical Models
 
 Classical software estimation models often exhibit a tendency towards underfitting by failing to fully capture the unique complexities and variability inherent in software projects. Many hidden complexities are frequently overlooked during the initial estimation phase, leading to an oversimplified view of the project lifecycle, including:
@@ -404,7 +406,7 @@ Classical software estimation models often exhibit a tendency towards underfitti
 <figure> <img src="../images/hidden-complexities-model.svg" alt="Hidden Complexities in Software Estimation - factors often overlooked in traditional estimation approaches" width="700" /> <figcaption>Figure 2.6: Hidden complexity factors that contribute to estimation errors</figcaption> </figure>
 <br/><br/>
 
-The common practice of multiplying initial software estimates by a factor (e.g., by 3, as suggested in [[??]]) underscores the widespread recognition that initial estimates tend to be overly optimistic and often fall short of the actual time required.
+The common practice of multiplying initial software estimates [by a factor](https://vadimkravcenko.com/shorts/project-estimates/) underscores the widespread recognition that initial estimates tend to be overly optimistic and often fall short of the actual time required.
 
 ### Long Tail of Software Project Risks
 
