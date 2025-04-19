@@ -32,6 +32,8 @@ In software development, teams face maximum uncertainty when entering entirely n
 
 [Bayesian statistics](06-theoretical-concepts.md#64-bayesian-statistics-and-uncertainty-management) offers a promising framework for addressing software estimation challenges by explicitly modeling and updating uncertainty. Rather than producing single-point estimates, Bayesian approaches generate probability distributions that quantify the range of possible outcomes and their likelihoods.
 
+> **Note for readers**: For a more comprehensive explanation of Bayesian statistics and the concepts mentioned in this section (such as informative priors, marginal likelihood, and hierarchical modeling), see [Chapter 6.4](06-theoretical-concepts.md#64-bayesian-statistics-and-uncertainty-management).
+
 In practice, a Bayesian approach to software estimation involves:
 
 1. **Formulating Prior Distributions**: Initial estimates are expressed as probability distributions rather than single values. These priors can be derived from historical data, expert knowledge, or both.
@@ -48,14 +50,14 @@ Bayesian estimation addresses both underfitting and overfitting in complementary
 
 **Countering Underfitting**:
 - Incorporates uncertainty directly into the estimation process
-- Allows specification of complex dependencies between variables
-- Can integrate qualitative factors through informative priors
+- Allows specification of complex dependencies between variables (relationships between factors like team experience, technology complexity, etc.) - see [Complex Dependencies in Ch. 6.4](06-theoretical-concepts.md#key-bayesian-concepts-explained)
+- Can integrate qualitative factors through informative priors (incorporating expert knowledge and subjective judgments as starting points) - see [Informative Priors in Ch. 6.4](06-theoretical-concepts.md#key-bayesian-concepts-explained)
 - Acknowledges the full range of possible outcomes
 
 **Countering Overfitting**:
-- Naturally penalizes overly complex models through the [marginal likelihood](https://en.wikipedia.org/wiki/Marginal_likelihood)
+- Naturally penalizes overly complex models through the [marginal likelihood](https://en.wikipedia.org/wiki/Marginal_likelihood) (statistical evidence) - see [Marginal Likelihood in Ch. 6.4](06-theoretical-concepts.md#key-bayesian-concepts-explained)
 - Weights new evidence appropriately relative to prior knowledge
-- Allows hierarchical modeling that shares information across similar projects
+- Allows hierarchical modeling that shares information across similar projects (using patterns from past projects to inform current estimates) - see [Hierarchical Modeling in Ch. 6.4](06-theoretical-concepts.md#key-bayesian-concepts-explained)
 - Distinguishes between genuine patterns and random noise
 
 While Bayesian methods offer significant theoretical advantages, their practical implementation in software estimation remains challenging due to:
