@@ -59,12 +59,22 @@ dimensions, including:
 - A context-specific case study in medical information systems, considering the idea of "strategic overfitting" and
   modular design
 
-Furthermore, the recent and rapid integration of **Artificial Intelligence (AI) assistants and agents**
-[into organizational workflows](https://www.wired.com/story/artificial-intelligence-work-organizational-strategy/)
-presents a significant new factor influencing these dynamics. While the core analogies explored in this publication
-remain relevant, AI introduces novel complexities and capabilities that challenge traditional models of work, communication,
-and structure. The impact of AI will be touched upon contextually within relevant chapters, with a dedicated and
-comprehensive exploration provided in Chapters 8 and 9.
+A significant focus of this work is the exploration of how **Artificial Intelligence (AI) assistants and agents** are
+[transforming organizational workflows](https://www.wired.com/story/artificial-intelligence-work-organizational-strategy/)
+and fundamentally reshaping the under/overfitting dynamics across all domains discussed. AI is not merely a contextual factor
+but a central force redefining how we conceptualize, structure, and manage complexity in both software development and
+organizational design. While the core analogies explored in this publication remain valuable analytical tools, AI introduces 
+novel dimensions that require substantial reconsideration of traditional models. Chapters 8 and 9 provide an extensive examination
+of AI's transformative effects, exploring emerging organizational structures, evolving skill requirements, theoretical frameworks
+for understanding these shifts, and real-world implementation insights.
+
+### The Chapter Progression
+
+This publication presents a logical progression that builds the analogy from fundamentals to complex applications. Chapter 2 introduces time estimation as a predictive modeling problem, examining how underfitting and overfitting manifest in software development forecasting. Chapter 3 extends these concepts to organizational structures, exploring how they balance simplicity and complexity. Chapter 4 adds another dimension by analyzing how stakeholder preferences influence model complexity choices. Chapter 5 investigates how organizational size and type affect the underfitting/overfitting balance. Chapter 6 connects these ideas to broader theoretical concepts like entropy and dissipative systems. Chapter 7 provides a case study in medical systems to demonstrate these principles in action. Chapters 8 and 9 then explore how AI integration fundamentally transforms these dynamics — first examining organizational impacts, then focusing on human adaptation and theoretical frameworks. Finally, Chapter 10 synthesizes the insights from this journey, presenting a unified view of complexity management across domains.
+
+### Practical Applications and Real-World Examples
+
+While the analogies provide a theoretical framework, this publication attempts to be grounded in practical applications. It tries to provide concrete examples of how these concepts manifest in daily work environments, from planning poker sessions and Monte Carlo simulations for time estimation (Chapter 2) to specific organizational communication patterns that either enhance or impede effectiveness (Chapter 3). The medical systems case study (Chapter 7) examines how healthcare organizations deliberately "overfit" to regulatory requirements while maintaining adaptability in other areas. Industry-specific AI integration examples in manufacturing, logistics, financial services, and customer service (Chapter 9) try to illustrate both successful implementations and common pitfalls.
 
 Underpinning some of these explorations will be ideas related to [system dynamics](https://en.wikipedia.org/wiki/System_dynamics),
 [feedback](https://en.wikipedia.org/wiki/Feedback), and adaptation, drawing inspiration from fields like [cybernetics](https://en.wikipedia.org/wiki/Cybernetics) to better
