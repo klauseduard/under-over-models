@@ -192,7 +192,7 @@ This entropy framework provides a theoretical basis for many practical observati
 
 [Bayesian statistics](https://en.wikipedia.org/wiki/Bayesian_statistics) provides a mathematical framework for updating beliefs in light of new evidence. Unlike frequentist statistics, which treats probability as the long-run frequency of events, Bayesian probability represents degrees of belief that can be revised as new information becomes available.
 
-The foundation of Bayesian reasoning is [Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem):
+The foundation of Bayesian reasoning is [Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem) (explained simply in [this Khan Academy video](https://www.khanacademy.org/math/statistics-probability/probability-library/conditional-probability-bayes/v/bayes-theorem-visualized)):
 
 $$P(H|E) = \frac{P(E|H) \cdot P(H)}{P(E)}$$
 
@@ -203,6 +203,16 @@ Where:
 - $P(E)$ is the marginal likelihood (total probability of observing the evidence)
 
 <figure> <img src="../images/bayesian-updating.svg" alt="Bayesian Updating Process - showing how priors are updated with evidence to form posteriors" width="700" /> <figcaption>Figure 6.5: Bayesian belief updating process with multiple iterations of evidence</figcaption> </figure>
+
+#### Key Bayesian Concepts Explained
+
+- **Priors and Informative Priors**: A "prior" is your initial belief before seeing new evidence. An "[informative prior](https://en.wikipedia.org/wiki/Prior_probability#Informative_priors)" incorporates existing knowledge rather than starting with a blank slate. For example, when estimating a software project's duration, an informative prior might incorporate knowledge about team performance, similar past projects, or even qualitative factors like team morale and technology familiarity. This is how Bayesian methods can integrate "soft" factors into quantitative models.
+
+- **Complex Dependencies Between Variables**: Traditional statistical methods often assume variables are independent. Bayesian networks (also called [probabilistic graphical models](https://en.wikipedia.org/wiki/Graphical_model)) can represent situations where multiple factors influence each other - for instance, how changes in requirements might affect both testing time and integration complexity in interconnected ways.
+
+- **Marginal Likelihood and Complexity Penalization**: The [marginal likelihood](https://en.wikipedia.org/wiki/Marginal_likelihood) (sometimes called "evidence") naturally balances model fit against complexity. More complex models (with more parameters) can fit existing data better but might not generalize well. The marginal likelihood automatically penalizes unnecessary complexity, helping prevent overfitting without requiring manual parameter tuning.
+
+- **Hierarchical Modeling**: [Hierarchical (or multilevel) models](https://en.wikipedia.org/wiki/Multilevel_model) allow information to be shared across similar but not identical situations. For example, different software projects might have their own unique characteristics but still share common patterns. Hierarchical modeling allows learning from the entire portfolio of projects while still capturing the uniqueness of each one.
 
 ### Relationship Between Bayesian Methods and Entropy
 
