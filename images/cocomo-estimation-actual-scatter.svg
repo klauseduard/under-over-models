@@ -121,7 +121,7 @@
     <!-- Regression curve showing the actual trend (underfitting) -->
     <path d="M 0,0 C 100,-100 200,-240 400,-400 Q 500,-460 650,-500" 
           fill="none" stroke="#4caf50" stroke-width="3" opacity="0.7"/>
-    <text x="500" y="-360" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2e7d32">
+    <text x="250" y="-330" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#2e7d32">
       Actual Trend Line
     </text>
     
