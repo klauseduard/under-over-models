@@ -20,12 +20,12 @@
   - [3.3.6 Dissipative Systems Theory and Organizational
     Adaptation](#336-dissipative-systems-theory-and-organizational-adaptation)
   - [3.3.7 Cybernetic Principles in Organizational Design](#337-cybernetic-principles-in-organizational-design)
-- [3.4 Conway's Law and System Design](#34-conways-law-and-system-design)
-- [3.5 The Inverse Conway Maneuver](#35-the-inverse-conway-maneuver)
+- [3.4 Conway's Law: How Organizational Structure Shapes System Architecture](#34-conways-law-how-organizational-structure-shapes-system-architecture)
+- [3.5 The Inverse Conway Maneuver: Restructuring Teams to Shape System Architecture](#35-the-inverse-conway-maneuver-restructuring-teams-to-shape-system-architecture)
   - [3.5.1 DDD Context Mapping for Organizational Design](#351-ddd-context-mapping-for-organizational-design)
   - [3.5.2 Team Topologies for Organizational Structure](#352-team-topologies-for-organizational-structure)
   - [3.5.3 Theoretical Integration and Practical Application](#353-theoretical-integration-and-practical-application)
-- [3.6 Forward-Looking Considerations](#36-forward-looking-considerations)
+- [3.6 AI-Driven Paradigm Shift: Transforming Organizational Structures](#36-ai-driven-paradigm-shift-transforming-organizational-structures)
   - [3.6.1 Human Orchestration of AI Teams](#361-human-orchestration-of-ai-teams)
   - [3.6.2 Evolutionary Trajectory of AI Integration](#362-evolutionary-trajectory-of-ai-integration)
   - [3.6.3 Adaptation Strategies for Human-AI Organizations](#363-adaptation-strategies-for-human-ai-organizations)
@@ -513,7 +513,7 @@ feedback loops and control mechanisms:
 In Section 3.6, we explore how these cybernetic principles manifest in emerging models of human-AI collaboration, where
 the balance between human judgment and AI-driven processes creates new regulatory challenges.
 
-## 3.4 Conway's Law and System Design
+## 3.4 Conway's Law: How Organizational Structure Shapes System Architecture
 
 Conway's Law can be understood as a specific manifestation of sociotechnical systems principles (see Section 3.3.4),
 where the social subsystem (organizational communication structure) directly shapes the technical subsystem (system
@@ -563,7 +563,7 @@ system often referred to as a ["Big Ball of Mud"](http://www.laputan.org/mud/).
 
 ![Conway's Law Illustration](../images/conways-law.svg)
 
-## 3.5 The Inverse Conway Maneuver
+## 3.5 The Inverse Conway Maneuver: Restructuring Teams to Shape System Architecture
 
 Building upon the principles of Conway's Law, the concept of the Inverse Conway Maneuver offers a proactive strategy for
 organizations to achieve desired system architectures by intentionally designing their team structures to mirror the
@@ -776,9 +776,11 @@ This integrated approach prevents both:
 
 By intentionally designing organizational structure using these complementary approaches, the organization creates a sociotechnical system that appropriately balances simplicity and complexity—achieving what Section 3.3.3 described as "simplicity on the far side of complexity."
 
-## 3.6 Forward-Looking Considerations
+## 3.6 AI-Driven Paradigm Shift: Transforming Organizational Structures
 
 *Note: This section presents emerging considerations rather than established practices.*
+
+Having explored how traditional organizational structures influence system architectures through Conway's Law and how organizations can intentionally restructure teams to achieve desired architectural outcomes, we now turn to an emerging force reshaping both organizational models and technical architectures: artificial intelligence. As AI capabilities advance, they challenge fundamental assumptions about team structures, coordination mechanisms, and the balance between simplicity and complexity in organizational design. The frameworks discussed in previous sections—from DDD and Team Topologies to the theoretical underpinnings of sociotechnical systems—provide valuable lenses for understanding this transformation, but require extension to fully address the unique challenges and opportunities of AI-augmented organizations.
 
 The emerging AI integration challenges discussed in this section particularly benefit from sociotechnical systems theory
 (Section 3.3.4). The theory's emphasis on joint optimization of social and technical elements provides a framework for
@@ -787,6 +789,8 @@ organizations will need to adapt both their technical systems and social structu
 solely on technical implementation. The challenges of human-AI coordination, contextual understanding, and temporal
 flexibility all represent aspects where optimizing either technical capabilities or human processes in isolation will
 lead to suboptimal outcomes.
+
+From an entropy perspective (Section 3.3.5), AI integration creates a paradox: these technologies can simultaneously increase an organization's capacity to manage complexity (reducing entropy through enhanced information processing) while introducing new forms of unpredictability and emergent behavior (increasing entropy through novel interaction patterns). This dynamic directly shapes how organizations must balance underfitting versus overfitting in their structures.
 
 As organizations adapt to changing environments, emerging AI capabilities are creating new organizational patterns that
 challenge traditional thinking about simplicity versus complexity in organizational structures. These developments may
@@ -884,6 +888,8 @@ Organizations with overly simplistic temporal models may miss opportunities for 
 complex scheduling and handoff mechanisms may introduce unnecessary coordination overhead. The "night-shift" capability
 of AI systems, reminiscent of lights-out manufacturing, enables continuous operation beyond human working hours.
 
+Through the lens of dissipative systems theory (Section 3.3.6), this integration trajectory illustrates how organizations must maintain dynamic stability in constantly changing environments. As AI capabilities enable organizations to process more information and respond to more complex demands, traditional organizational structures may struggle to accommodate this increased complexity. Organizations will need to develop adaptive structures that can handle this heightened information flow without either becoming chaotic (excessive entropy) or overly rigid (excessive negentropy). The timeline above represents not merely technological evolution but the organization's progressive development of more effective adaptive structures that can maintain coherence while processing increasingly complex information patterns.
+
 ### 3.6.3 Adaptation Strategies for Human-AI Organizations
 
 Organizations seeking to effectively integrate AI capabilities while maintaining appropriate complexity should consider
@@ -926,6 +932,75 @@ control systems, organizations can develop the minimally sufficient complexity n
 maintaining coherence, adaptability, and human agency. This cybernetic approach to organizational design represents not
 just an engineering challenge but a fundamental reimagining of how human and artificial intelligence can combine to
 create systems with emergent capabilities greater than either could achieve alone.
+
+### 3.6.4 Practical Frameworks for AI-Augmented Organizations
+
+While the field of AI-augmented organizational design is still emerging, several practical frameworks are beginning to take shape that apply the theoretical concepts discussed throughout this chapter. These frameworks provide concrete approaches for implementing balanced organizational models that neither underfit nor overfit the opportunities and challenges presented by AI integration.
+
+#### Cognitive Load Distribution Framework
+
+Building directly on Team Topologies principles, this emerging framework helps organizations intentionally distribute cognitive workload between humans and AI systems:
+
+1. **Cognitive Task Analysis**: Systematically categorize work based on:
+   - Tasks requiring human judgment, creativity, and emotional intelligence
+   - Tasks benefiting from AI pattern recognition and large-scale data processing
+   - Tasks involving repetitive processes that can be fully automated
+
+2. **Interaction Design Patterns**: Establish standardized patterns for human-AI collaboration:
+   - **Augmentation Mode**: AI enhances human capabilities while humans maintain decision authority
+   - **Delegation Mode**: Humans define parameters and review outputs while AI executes tasks
+   - **Supervision Mode**: AI operates autonomously with human oversight at specific checkpoints
+
+3. **Cognitive Interface Design**: Create explicit interfaces between human and AI components:
+   - Well-defined input/output contracts
+   - Explainability requirements proportional to task criticality
+   - Granular control options calibrated to expertise levels
+
+This framework helps organizations avoid both underfitting (failing to leverage AI capabilities appropriately) and overfitting (creating overly rigid human-AI workflows) by focusing on deliberate cognitive load distribution.
+
+#### Sociotechnical AI Integration Model
+
+This model applies sociotechnical systems theory (Section 3.3.4) specifically to AI integration challenges:
+
+1. **Joint Optimization Assessment**: Evaluate current organizational processes across both social and technical dimensions:
+   - Social subsystem analysis: communication patterns, decision rights, knowledge flows
+   - Technical subsystem analysis: AI capabilities, data flows, system architectures
+   - Interface analysis: current human-technology boundaries and interaction patterns
+
+2. **Boundary Reconfiguration**: Intentionally redesign boundaries between human and AI components:
+   - Identify areas where boundaries create friction or underutilize capabilities
+   - Experiment with alternative boundary configurations through small-scale pilots
+   - Establish feedback mechanisms to evaluate boundary effectiveness
+
+3. **Adaptive Governance**: Create governance mechanisms that evolve with capabilities:
+   - Progressive autonomy frameworks that adjust human oversight based on demonstrated AI reliability
+   - Distributed monitoring systems that detect emergent behaviors or unintended consequences
+   - Learning loops that continuously refine the sociotechnical balance
+
+This model helps organizations avoid the common pitfall of focusing exclusively on technical AI implementation without corresponding social system adaptation—a form of organizational underfitting that limits effectiveness.
+
+#### Conway's Law Extension for AI Systems
+
+This framework applies the principles of Conway's Law and the Inverse Conway Maneuver to AI-augmented organizations:
+
+1. **AI Communication Pattern Mapping**: Analyze how information flows between:
+   - Human teams
+   - AI systems
+   - Human-AI collaborative units
+   
+2. **System Architecture Alignment**: Redesign organizational structures to:
+   - Create team boundaries that reflect desired technical architecture boundaries
+   - Establish explicit collaboration interfaces between human teams and AI systems
+   - Align AI capabilities with appropriate organizational responsibilities
+
+3. **Feedback Loop Implementation**: Deploy mechanisms to:
+   - Monitor how organizational structures influence AI system development
+   - Detect misalignments between organizational models and AI architectures
+   - Implement corrective adjustments to maintain alignment
+
+This framework recognizes that Conway's Law applies as much to AI-augmented organizations as traditional ones—the communication structures will inevitably shape the resulting system architectures. By intentionally designing these structures, organizations can achieve more effective technical outcomes.
+
+While these frameworks are still evolving, they demonstrate how the theoretical principles discussed throughout this chapter can be applied practically to the emerging challenges of AI-augmented organizational design. Organizations that successfully implement these approaches will be better positioned to achieve the appropriate balance between simplicity and complexity in their organizational models as AI integration progresses.
 
 ---
 
