@@ -875,7 +875,9 @@ While these theoretical principles provide valuable foundations for understandin
 ### 3.6.2 Evolutionary Trajectory of AI Integration
 
 Looking beyond current capabilities, we can map the potential evolution of AI integration across multiple dimensions.
-Each stage brings distinct implications for organizational complexity and design. McKinsey's research on [AI's organizational impact](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2023-generative-ais-breakout-year) provides empirical context for these evolutionary patterns.
+Each stage brings distinct implications for organizational complexity and design.
+
+> Unverified reference: McKinsey's research on [AI's organizational impact](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2023-generative-ais-breakout-year) provides empirical context for these evolutionary patterns.
 
 ![AI Integration Timeline](../images/ai-integration-timeline.svg)
 
@@ -916,10 +918,10 @@ Through the lens of dissipative systems theory (Section 3.3.6), this integration
 ### 3.6.3 Adaptation Strategies for Human-AI Organizations
 
 Organizations seeking to effectively integrate AI capabilities while maintaining appropriate complexity should consider
-these theoretically-grounded adaptation strategies:
+these theoretically-grounded adaptation strategies, several of which are supported by emerging empirical evidence:
 
 1. **Integration Interfaces:** Design specific organizational interfaces that enable human-AI teams to integrate with
-traditional teams without imposing unnecessary process overhead
+traditional teams without imposing unnecessary process overhead. This approach aligns with emerging frameworks for human-AI collaboration that emphasize structured interaction patterns ([Dawson, 2025](https://rossdawson.com/framework-agentic-ai-core-patterns-for-organization-design/)).
 
 2. **Differentiated Complexity Zones:** Rather than uniformly simple or complex organizational models, develop differentiated complexity zones that align with [Beer's Viable System Model](https://metaphorum.org/viable-system-model) principle of recursion, where greater structural elaboration is justified by domain complexity or strategic importance
 
