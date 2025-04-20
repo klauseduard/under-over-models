@@ -146,7 +146,7 @@
   <path d="M 570 395 C 400 410, 385 440, 320 480" stroke="#FF9933" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowHead)" fill="none"/>
   
   <!-- Environmental Scanning -->
-  <path d="M 600 280 C 680 280, 750 250, 800 210" stroke="#80b5ff" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowHead)" fill="none"/>
+  <path d="M 600 280 C 680 280, 750 250, 680 120" stroke="#80b5ff" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowHead)" fill="none"/>
   <text x="700" y="250" font-size="12px" text-anchor="middle" fill="#555">Environmental Scanning</text>
   
   <!-- Algedonic Signal -->
@@ -166,7 +166,7 @@
   </defs>
   
   <!-- Legend and Key Principles -->
-  <rect x="800" y="95" width="210" height="320" fill="#fff" rx="5" ry="5" stroke="#ccc" stroke-width="1"/>
+  <rect x="800" y="95" width="210" height="305" fill="#fff" rx="5" ry="5" stroke="#ccc" stroke-width="1"/>
   <text x="875" y="125" font-size="14px" font-weight="bold" text-anchor="middle" fill="#333">LEGEND</text>
   
   <rect x="815" y="140" width="15" height="15" fill="#fff" stroke="#4793ff" stroke-width="2" rx="2" ry="2"/>
@@ -196,8 +196,8 @@
   <line x1="815" y1="330" x2="830" y2="330" stroke="#c62828" stroke-width="1.5" stroke-dasharray="5,3"/>
   <text x="875" y="333" font-size="12px" fill="#333">Algedonic Signal</text>
   
-  <rect x="815" y="350" width="40" height="50" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="8,4" rx="3" ry="3"/>
-  <text x="875" y="375" font-size="12px" fill="#333">Metasystem Boundary</text>
+  <rect x="815" y="350" width="40" height="34" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="8,4" rx="3" ry="3"/>
+  <text x="875" y="373" font-size="12px" fill="#333">Metasystem Boundary</text>
   
   <rect x="805" y="420" width="210" height="305" fill="#fff" rx="5" ry="5" stroke="#ccc" stroke-width="1"/>
   <text x="875" y="445" font-size="14px" font-weight="bold" text-anchor="middle" fill="#333">KEY PRINCIPLES</text>
