@@ -801,7 +801,9 @@ understanding why traditional organizational structures may struggle with AI int
 organizations will need to adapt both their technical systems and social structures simultaneously, rather than focusing
 solely on technical implementation. The challenges of human-AI coordination, contextual understanding, and temporal
 flexibility all represent aspects where optimizing either technical capabilities or human processes in isolation will
-lead to suboptimal outcomes, as highlighted in recent work by [Lyytinen, Nickerson, and King on "metahuman systems"](https://journals.sagepub.com/doi/full/10.1177/0268396220915917).
+lead to suboptimal outcomes.
+
+> Unverified reference: [Lyytinen, Nickerson, and King on "metahuman systems"](https://journals.sagepub.com/doi/full/10.1177/0268396220915917).
 
 From an entropy perspective (Section 3.3.5), AI integration creates a paradox: these technologies can simultaneously increase an organization's capacity to manage complexity (reducing entropy through enhanced information processing) while introducing new forms of unpredictability and emergent behavior (increasing entropy through novel interaction patterns). This dynamic directly shapes how organizations must balance underfitting versus overfitting in their structures.
 
@@ -825,7 +827,7 @@ This emerging pattern creates several important organizational implications:
 **Novel Asymmetries in Productivity and Coordination**
 - Individual knowledge workers can achieve what previously required entire teams
 - AI agents don't experience context-switching costs that limit human multitasking
-- Human attention becomes the primary constraint rather than team size
+- Human attention becomes the primary constraint rather than team size **(!!)**
 - Individuals can specialize in orchestration rather than domain expertise
 
 **Team Topologies in Human-AI Collaboration**
@@ -866,9 +868,9 @@ By establishing clear feedback loops, defining appropriate homeostatic boundarie
 control systems, organizations can develop the minimally sufficient complexity needed to leverage AI capabilities while
 maintaining coherence, adaptability, and human agency. This cybernetic approach to organizational design represents not
 just an engineering challenge but a theoretical reimagining of how human and artificial intelligence can combine to
-create systems with emergent capabilities greater than either could achieve alone (as explored in [research on AI-human collaboration from Nature](https://www.nature.com/articles/s41586-023-06221-2)).
+create systems with emergent capabilities greater than either could achieve alone (as explored in [research on AI-human collaboration in science](https://www.nature.com/articles/s41586-023-06221-2)).
 
-While these theoretical principles provide valuable foundations for understanding AI-augmented organizational design, organizations also need concrete frameworks to guide implementation. The following section explores emerging theoretical approaches that translate these concepts into potential organizational models that balance appropriate complexity with adaptability.
+While these theoretical principles provide valuable foundations for understanding AI-augmented organizational design, organizations also need concrete frameworks to guide implementation. The following section explores theoretical approaches that translate these concepts into potential organizational models that balance appropriate complexity with adaptability.
 
 ### 3.6.2 Evolutionary Trajectory of AI Integration
 
