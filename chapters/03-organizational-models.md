@@ -791,7 +791,7 @@ Figure 3.2: This diagram shows how specific Domain-Driven Design relationship pa
 
 ## 3.6 Emerging AI-Organizational Paradigms: Theoretical Implications and Research Directions
 
-*Note: This section presents emerging theoretical considerations that require further empirical validation.*
+> *Note: This section presents emerging theoretical considerations that require further empirical validation.*
 
 Having explored how traditional organizational structures influence system architectures through Conway's Law and how organizations can intentionally restructure teams to achieve desired architectural outcomes, we now turn to an emerging force reshaping both organizational models and technical architectures: artificial intelligence. As AI capabilities advance, they challenge fundamental assumptions about team structures, coordination mechanisms, and the balance between simplicity and complexity in organizational design. The frameworks discussed in previous sections—from DDD and Team Topologies to the theoretical underpinnings of sociotechnical systems—provide valuable lenses for understanding this transformation, but require extension to fully address the unique challenges and opportunities of AI-augmented organizations.
 
