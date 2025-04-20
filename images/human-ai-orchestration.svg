@@ -1,124 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="900" height="600" fill="#f8f9fa" rx="10" ry="10"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .background { fill: #f8f9fa; }
+    .section-title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; text-anchor: middle; }
+    .node-title { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; text-anchor: middle; }
+    .node-description { font-family: Arial, sans-serif; font-size: 12px; text-anchor: middle; }
+    .human-node { fill: #E1F5FE; stroke: #0288D1; stroke-width: 2; }
+    .ai-node { fill: #F3E5F5; stroke: #7B1FA2; stroke-width: 2; }
+    .hybrid-node { fill: #E8F5E9; stroke: #388E3C; stroke-width: 2; }
+    .information-flow { stroke: #555; stroke-width: 1.5; marker-end: url(#arrowhead); fill: none; }
+    .feedback-flow { stroke: #FF7043; stroke-width: 1.5; marker-end: url(#arrowhead); stroke-dasharray: 5,3; fill: none; }
+    .boundary { stroke: #78909C; stroke-width: 1.5; fill: none; stroke-dasharray: 10,4; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555" />
+    </marker>
+    <linearGradient id="human-ai-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E1F5FE" />
+      <stop offset="100%" stop-color="#F3E5F5" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="600" class="background" />
   
   <!-- Title -->
-  <text x="450" y="40" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333333">Human Orchestration of Parallel AI Coding Assistants</text>
+  <text x="400" y="40" class="section-title" font-size="24">Human-AI Orchestration in Organizations</text>
   
-  <!-- Human Orchestrator Node -->
-  <ellipse cx="450" cy="150" rx="90" ry="45" fill="#ffffff" stroke="#555555" stroke-width="2"/>
-  <text x="450" y="155" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">Human Orchestrator</text>
+  <!-- Organization Context -->
+  <rect x="50" y="70" width="700" height="500" rx="15" class="boundary" />
+  <text x="400" y="90" class="section-title">Organizational Context</text>
+
+  <!-- Human Domain -->
+  <rect x="80" y="120" width="230" height="420" rx="10" class="boundary" />
+  <text x="195" y="145" class="section-title">Human Domain</text>
   
-  <!-- Human Benefits Note -->
-  <rect x="180" y="120" width="190" height="60" rx="5" ry="5" fill="#fff0d9" stroke="#FFB366" stroke-width="1.5"/>
-  <text x="275" y="140" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333333">Human Orchestrator Benefits:</text>
-  <text x="275" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">✓ No context switching costs</text>
-  <text x="275" y="180" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">✓ Parallel task management</text>
+  <!-- AI Domain -->
+  <rect x="490" y="120" width="230" height="420" rx="10" class="boundary" />
+  <text x="605" y="145" class="section-title">AI Domain</text>
   
-  <!-- AI Agent Nodes -->
-  <!-- Agent 1 -->
-  <rect x="150" y="280" width="140" height="80" rx="5" ry="5" fill="#e6f7e6" stroke="#90EE90" stroke-width="2"/>
-  <text x="220" y="310" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">AI Agent 1</text>
-  <text x="220" y="330" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#555555">Backend API</text>
-  <circle cx="175" cy="260" r="12" fill="#90EE90" stroke="#555555" stroke-width="1"/>
-  <text x="175" y="265" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333333">A</text>
+  <!-- Orchestration Zone -->
+  <rect x="310" y="160" width="180" height="340" rx="10" fill="url(#human-ai-gradient)" stroke="#555" stroke-width="1.5" />
+  <text x="400" y="185" class="section-title">Orchestration</text>
+
+  <!-- Human Nodes -->
+  <g>
+    <!-- Strategic Leadership -->
+    <circle cx="150" cy="200" r="40" class="human-node" />
+    <text x="150" y="195" class="node-title">Strategic</text>
+    <text x="150" y="215" class="node-description">Leadership</text>
+
+    <!-- Domain Expertise -->
+    <circle cx="150" cy="300" r="40" class="human-node" />
+    <text x="150" y="295" class="node-title">Domain</text>
+    <text x="150" y="315" class="node-description">Expertise</text>
+    
+    <!-- Ethical Judgment -->
+    <circle cx="150" cy="400" r="40" class="human-node" />
+    <text x="150" y="395" class="node-title">Ethical</text>
+    <text x="150" y="415" class="node-description">Judgment</text>
+    
+    <!-- Creativity -->
+    <circle cx="150" cy="500" r="40" class="human-node" />
+    <text x="150" y="495" class="node-title">Creativity</text>
+    <text x="150" y="515" class="node-description">Innovation</text>
+  </g>
+
+  <!-- AI Nodes -->
+  <g>
+    <!-- Data Analysis -->
+    <circle cx="650" cy="200" r="40" class="ai-node" />
+    <text x="650" y="195" class="node-title">Data</text>
+    <text x="650" y="215" class="node-description">Analysis</text>
+
+    <!-- Prediction Models -->
+    <circle cx="650" cy="300" r="40" class="ai-node" />
+    <text x="650" y="295" class="node-title">Prediction</text>
+    <text x="650" y="315" class="node-description">Models</text>
+    
+    <!-- Process Automation -->
+    <circle cx="650" cy="400" r="40" class="ai-node" />
+    <text x="650" y="395" class="node-title">Process</text>
+    <text x="650" y="415" class="node-description">Automation</text>
+    
+    <!-- Knowledge Management -->
+    <circle cx="650" cy="500" r="40" class="ai-node" />
+    <text x="650" y="495" class="node-title">Knowledge</text>
+    <text x="650" y="515" class="node-description">Management</text>
+  </g>
+
+  <!-- Orchestration Nodes -->
+  <g>
+    <!-- Decision Support Systems -->
+    <rect x="350" y="220" width="100" height="60" rx="10" class="hybrid-node" />
+    <text x="400" y="245" class="node-title">Decision</text>
+    <text x="400" y="265" class="node-description">Support</text>
+    
+    <!-- Collaborative Intelligence -->
+    <rect x="350" y="320" width="100" height="60" rx="10" class="hybrid-node" />
+    <text x="400" y="345" class="node-title">Collaborative</text>
+    <text x="400" y="365" class="node-description">Intelligence</text>
+    
+    <!-- Human-in-the-Loop Systems -->
+    <rect x="350" y="420" width="100" height="60" rx="10" class="hybrid-node" />
+    <text x="400" y="445" class="node-title">Human-in-</text>
+    <text x="400" y="465" class="node-description">the-Loop</text>
+  </g>
+
+  <!-- Connections - Human to Orchestration -->
+  <path d="M 190,200 L 350,250" class="information-flow" />
+  <path d="M 190,300 L 350,350" class="information-flow" />
+  <path d="M 190,400 L 350,450" class="information-flow" />
+  <path d="M 190,500 C 230,490 270,470 350,450" class="information-flow" />
   
-  <!-- Agent 2 -->
-  <rect x="320" y="280" width="140" height="80" rx="5" ry="5" fill="#d9f0ff" stroke="#4793ff" stroke-width="2"/>
-  <text x="390" y="310" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">AI Agent 2</text>
-  <text x="390" y="330" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#555555">Database Schema</text>
-  <circle cx="345" cy="260" r="12" fill="#4793ff" stroke="#555555" stroke-width="1"/>
-  <text x="345" y="265" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333333">B</text>
+  <!-- Connections - AI to Orchestration -->
+  <path d="M 610,200 L 450,250" class="information-flow" />
+  <path d="M 610,300 L 450,350" class="information-flow" />
+  <path d="M 610,400 L 450,450" class="information-flow" />
+  <path d="M 610,500 C 570,490 530,470 450,450" class="information-flow" />
   
-  <!-- Agent 3 -->
-  <rect x="490" y="280" width="140" height="80" rx="5" ry="5" fill="#fff0d9" stroke="#FFB366" stroke-width="2"/>
-  <text x="560" y="310" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">AI Agent 3</text>
-  <text x="560" y="330" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#555555">Frontend UI</text>
-  <circle cx="515" cy="260" r="12" fill="#FFB366" stroke="#555555" stroke-width="1"/>
-  <text x="515" y="265" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333333">B</text>
+  <!-- Feedback Loops -->
+  <path d="M 450,280 C 500,280 500,220 450,220" class="feedback-flow" />
+  <path d="M 450,380 C 500,380 500,320 450,320" class="feedback-flow" />
+  <path d="M 450,480 C 500,480 500,420 450,420" class="feedback-flow" />
   
-  <!-- Agent 4 -->
-  <rect x="660" y="280" width="140" height="80" rx="5" ry="5" fill="#ffe6e6" stroke="#FF6B6B" stroke-width="2"/>
-  <text x="730" y="310" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">AI Agent 4</text>
-  <text x="730" y="330" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#555555">Test Suite</text>
-  <circle cx="685" cy="260" r="12" fill="#FF6B6B" stroke="#555555" stroke-width="1"/>
-  <text x="685" y="265" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#333333">C</text>
-  
-  <!-- Connection Lines -->
-  <path d="M420,175 L220,280" stroke="#90EE90" stroke-width="2.5" fill="none"/>
-  <path d="M440,175 L390,280" stroke="#4793ff" stroke-width="2" fill="none"/>
-  <path d="M460,175 L560,280" stroke="#FFB366" stroke-width="2" fill="none"/>
-  <path d="M480,175 L730,280" stroke="#FF6B6B" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
-  
-  <!-- Task Allocation Table -->
-  <rect x="100" y="380" width="700" height="180" fill="#ffffff" stroke="#cccccc" stroke-width="1.5" rx="5" ry="5"/>
-  <text x="450" y="405" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">Task Allocation &amp; Attention Management</text>
-  
-  <!-- Table Headers -->
-  <line x1="100" y1="420" x2="800" y2="420" stroke="#cccccc" stroke-width="1.5"/>
-  <rect x="100" y="420" width="120" height="30" fill="#f0f0f0" stroke="#cccccc" stroke-width="1"/>
-  <rect x="220" y="420" width="230" height="30" fill="#f0f0f0" stroke="#cccccc" stroke-width="1"/>
-  <rect x="450" y="420" width="175" height="30" fill="#f0f0f0" stroke="#cccccc" stroke-width="1"/>
-  <rect x="625" y="420" width="175" height="30" fill="#f0f0f0" stroke="#cccccc" stroke-width="1"/>
-  
-  <text x="160" y="440" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Agent</text>
-  <text x="335" y="440" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Task Description</text>
-  <text x="537" y="440" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Attention Required</text>
-  <text x="712" y="440" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Context Switching Cost</text>
-  
-  <!-- Table Rows -->
-  <rect x="100" y="450" width="120" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="220" y="450" width="230" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="450" y="450" width="175" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="625" y="450" width="175" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  
-  <rect x="100" y="480" width="120" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="220" y="480" width="230" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="450" y="480" width="175" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="625" y="480" width="175" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  
-  <rect x="100" y="510" width="120" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="220" y="510" width="230" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="450" y="510" width="175" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="625" y="510" width="175" height="30" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  
-  <rect x="100" y="540" width="120" height="20" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="220" y="540" width="230" height="20" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="450" y="540" width="175" height="20" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  <rect x="625" y="540" width="175" height="20" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
-  
-  <!-- Table Content -->
-  <text x="160" y="470" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Agent 1</text>
-  <text x="335" y="470" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Complex API with authentication logic</text>
-  <text x="537" y="470" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">High (Active Focus)</text>
-  <text x="712" y="470" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">None for AI</text>
-  
-  <text x="160" y="500" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Agent 2</text>
-  <text x="335" y="500" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Database schema optimization</text>
-  <text x="537" y="500" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Medium (Periodic Check-in)</text>
-  <text x="712" y="500" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">None for AI</text>
-  
-  <text x="160" y="530" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Agent 3</text>
-  <text x="335" y="530" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">React component library</text>
-  <text x="537" y="530" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Medium (Periodic Check-in)</text>
-  <text x="712" y="530" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">None for AI</text>
-  
-  <text x="160" y="555" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Agent 4</text>
-  <text x="335" y="555" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Unit test creation</text>
-  <text x="537" y="555" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Low (Set and Forget)</text>
-  <text x="712" y="555" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">None for AI</text>
+  <!-- Cross-domain Learning -->
+  <path d="M 150,240 C 200,270 250,330 150,360" class="feedback-flow" />
+  <path d="M 650,240 C 600,270 550,330 650,360" class="feedback-flow" />
   
   <!-- Legend -->
-  <rect x="200" y="570" width="500" height="25" rx="5" ry="5" fill="#f0f0f0" stroke="#cccccc" stroke-width="1"/>
-  <circle cx="220" cy="582" r="8" fill="#90EE90" stroke="#555555" stroke-width="1"/>
-  <text x="235" y="586" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333333">A: Active</text>
-  
-  <circle cx="310" cy="582" r="8" fill="#4793ff" stroke="#555555" stroke-width="1"/>
-  <text x="325" y="586" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333333">B: Independent</text>
-  
-  <circle cx="420" cy="582" r="8" fill="#FF6B6B" stroke="#555555" stroke-width="1"/>
-  <text x="435" y="586" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="#333333">C: Set-and-Forget</text>
-  
-  <text x="580" y="586" font-family="Arial, sans-serif" font-size="10" text-anchor="start" font-style="italic" fill="#666666">Human attention patterns</text>
+  <g transform="translate(60, 550)">
+    <rect x="0" y="0" width="680" height="30" fill="white" stroke="#333" stroke-width="1" />
+    
+    <circle cx="30" cy="15" r="10" class="human-node" />
+    <text x="50" y="20" class="node-description">Human</text>
+    
+    <circle cx="130" cy="15" r="10" class="ai-node" />
+    <text x="150" y="20" class="node-description">AI System</text>
+    
+    <rect x="210" y="5" width="20" height="20" rx="3" class="hybrid-node" />
+    <text x="240" y="20" class="node-description">Hybrid System</text>
+    
+    <line x1="300" y1="15" x2="330" y2="15" class="information-flow" />
+    <text x="350" y="20" class="node-description">Information Flow</text>
+    
+    <line x1="430" y1="15" x2="460" y2="15" class="feedback-flow" />
+    <text x="480" y="20" class="node-description">Feedback/Learning</text>
+    
+    <line x1="570" y1="15" x2="600" y2="15" class="boundary" />
+    <text x="630" y="20" class="node-description">Domain Boundary</text>
+  </g>
 </svg> 
