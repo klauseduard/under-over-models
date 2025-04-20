@@ -64,17 +64,25 @@ AI integration impacts preferences and potential tensions among stakeholders. Ma
 
 ## 9.3 Theoretical Frameworks for Understanding AI's Role
 
+Building upon the theoretical frameworks for AI-augmented organizations introduced in Section 3.6.4, this section expands our conceptual toolkit with additional perspectives particularly relevant to the human and practical dimensions of AI integration.
+
 ### 9.3.1 New Institutional Theory
 
 New institutional theory offers a framework for understanding AI's role, viewing AI not just as technology but also as a product of and force within institutional environments. This perspective allows analysis of how societal norms, cultural values, and assumptions influence AI adoption and implementation. Concepts like algorithmic isomorphism (increasing similarity across fields due to AI algorithm adoption) and algorithmic legitimacy (social acceptance of AI in organizational practices) become relevant. Applying this theory helps explore how organizations respond to institutional pressures to adopt AI, how AI shapes structures and practices towards emerging norms, and how AI gains legitimacy as an organizational tool.
+
+This institutional perspective complements the Sociotechnical AI Integration Model introduced in Section 3.6.4 by examining the broader social forces that shape how organizations implement the technical-social boundaries discussed in that framework.
 
 ### 9.3.2 Cybernetics and Systems Thinking
 
 Cybernetics and systems thinking provide lenses for analyzing AI integration. Cybernetics, focusing on communication and control, emphasizes feedback loops, adaptation, and regulation. AI integration can enhance organizational cybernetic aspects by providing potentially more sophisticated feedback mechanisms. AI systems can monitor processes, analyze data, and provide insights, potentially enabling faster adaptation. Systems thinking, focusing on interconnectedness, is useful for comprehending interactions in human-AI hybrid organizations. Viewing organizations as complex adaptive systems helps understand how AI acts as a component influencing feedback loops, communication pathways, and overall organizational behavior and evolution.
 
+While Section 3.6.4's Conway's Law Extension explored how communication patterns between humans and AI systems influence technical architectures, this cybernetic perspective broadens the analysis to examine how these communication patterns function as feedback loops that regulate organizational behavior and adaptation more generally.
+
 ### 9.3.3 AI Management Science
 
 The prevalence of AI is contributing to an emerging field sometimes termed AI Management Science. This interdisciplinary area seeks theoretical frameworks for managing human-AI interactions. Drawing from Management Information Systems (MIS), AI Ethics, and Organizational Behavior, it addresses challenges and opportunities of integrating intelligent agents. This field suggests traditional management theories focused on human interactions might be insufficient for complexities introduced by AI's potential autonomy and decision-making capabilities. AI Management Science aims to provide theoretical grounding and practical guidance for optimizing AI use, addressing ethics, and fostering human-AI collaboration.
+
+This emerging discipline provides practical applications for the Cognitive Load Distribution Framework outlined in Section 3.6.4, offering concrete approaches for allocating responsibilities between humans and AI based on their respective cognitive strengths while considering ethical and organizational implications.
 
 ## 9.4 Case Studies: Real-World AI Integration Examples
 
