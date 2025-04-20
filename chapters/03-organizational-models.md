@@ -820,6 +820,8 @@ A particularly significant emerging pattern is the ability of individual knowled
 specialized AI assistants in parallel. This represents a fundamentally different coordination model than traditional
 human-to-human collaboration.
 
+From a socio-technical perspective, this shift involves viewing AI not merely as technological tools but as potential team members with complementary capabilities, requiring us to rethink traditional team structures and interaction patterns. As Berretta et al. (2023) note in their comprehensive review, effective human-AI teaming "leverages the respective strengths of each party" with "diverse but complementary capabilities" that "foster effective collaboration and enable the achievement of complex goals while ensuring human wellbeing, motivation, and productivity." This human-centered approach to AI implementation at work emphasizes the synergistic combination of human and AI capabilities to accomplish shared goals.
+
 ![Human Orchestration of Parallel AI Assistants](../images/human-ai-orchestration.svg)
 
 This emerging pattern creates several important organizational implications:
@@ -835,6 +837,8 @@ This emerging pattern creates several important organizational implications:
 - Human orchestrators might operate as "Stream-aligned Teams" focused on value delivery while leveraging AI platforms
 - Specialized AI systems handling complex domains could act as "Complicated Subsystem Teams"
 - The interaction patterns between humans and AI systems may evolve toward well-defined modes similar to Team Topologies' collaboration, X-as-a-Service, and facilitating patterns
+
+Research on human-AI teaming has identified several critical factors that influence team effectiveness, including human variables (such as trust and cognitive load), task-dependent variables, and AI explainability (Berretta et al., 2023). These factors become increasingly important as organizations transition from viewing AI as isolated tools to seeing them as integral components of collaborative work systems.
 
 **New Underfitting/Overfitting Risks**
 - **Underfitting:** Organizational structures that fail to accommodate the increased throughput and complexity of
@@ -929,7 +933,14 @@ emphasize structured interaction patterns, as confirmed by *Frontiers'* comprehe
 
 3. **Adaptive Structural Reconfiguration:** Create organizational structures that can temporarily increase or decrease in complexity as needed, implementing [Ashby's Law of Requisite Variety](https://en.wikipedia.org/wiki/Variety_(cybernetics)) by modulating the appropriate level of structural detail based on environmental conditions. This approach is supported by Alves et al.'s research on configuring viable systems during crises [[4]](https://www.sciencedirect.com/science/article/pii/S0377221724002340).
 
-4. **Complexity Pattern Recognition:** Leverage AI's analytical capabilities to recognize patterns in organizational behavior and identify where existing structures are overfitting or underfitting, a capability described in Cognitive Talent Solutions' white paper on organizational network analysis and AI integration [[5]](https://www.cognitivetalentsolutions.com/organizational-network-analysis-ona-concept-use-cases-and-integration-of-ai-capabilities/).
+4. **Complexity Pattern Recognition:** Leverage AI's analytical capabilities to recognize patterns in organizational behavior and identify where existing structures are overfitting or underfitting, a capability described in Cognitive Talent Solutions' white paper on organizational network analysis and AI integration [[5]](https://www.cognitivetalentsolutions.com/organizational-network-analysis-ona-concept-use-cases-and-integration-of-ai-capabilities/). AI-enhanced organizational network analysis can:
+   - Visualize both formal and informal relationships that exist within organizations
+   - Map actual communication flows versus theoretical structures
+   - Identify informal leaders who can be positioned as early adopters of AI integration
+   - Detect organizational silos and bottlenecks that may impede information flow
+   - Pinpoint where employees act as bridges between otherwise disconnected groups
+
+   This approach provides empirical evidence of how organizational structures actually function versus how they were designed, offering a data-driven foundation for determining whether structures are appropriately complex or unnecessarily rigid.
 
 5. **Temporal Continuity Management:** Design organizational processes that can leverage extended operational timeframes of AI systems while ensuring effective handoffs and information flow between human and AI working periods. This is illustrated in early field deployments of always-on AI agents [[6]](https://gloriumtech.com/custom-ai-agent-development/). *Rigorous human-factor studies are still pending; pilot carefully before large-scale rollout.*
 
@@ -938,10 +949,10 @@ emphasize structured interaction patterns, as confirmed by *Frontiers'* comprehe
    - Manage cognitive load by appropriately distributing work between humans and AI
    - Create platform teams focused on enabling effective human-AI interfaces
    - Recognize when AI systems are handling complicated subsystems and define appropriate boundaries
+   - Implement a structured assessment approach to determine optimal team types for AI integration
    
-   These approaches are supported by Team Topologies' research on Gen-AI integration [[7]](https://teamtopologies.com/news-blogs-newsletters/2025/1/28/how-team-topologies-can-transform-generative-ai-integration) and AIS studies on generative-AI cognitive load dynamics [[9]](https://aisel.aisnet.org/context/icis2024/article/1190/viewcontent/2697_doc.pdf).
+   Recent research from Team Topologies suggests Stream-aligned Teams often provide the best framework for generative AI integration due to their direct user interaction, adaptability, and alignment with business goals. However, Enabling Teams may be more appropriate when organizations need to overcome initial adoption barriers or build foundational knowledge [[7]](https://teamtopologies.com/news-blogs-newsletters/2025/1/28/how-team-topologies-can-transform-generative-ai-integration). This team selection should be guided by a systematic assessment of factors including technical complexity, required speed of delivery, and integration with existing workflows. These approaches are further supported by AIS studies on generative-AI cognitive load dynamics [[9]](https://aisel.aisnet.org/context/icis2024/article/1190/viewcontent/2697_doc.pdf).
 
-Recent examples of organizational adaptation include GitLab's AI-augmented all-remote structure, documented in Harvard Business School's case study on "GitLab and the Future of All-Remote Work" [[8]](https://www.hbs.edu/faculty/Pages/item.aspx?num=57917), which demonstrates how distributed teams can leverage AI to maintain coordination while reducing structural overhead.
 
 These considerations suggest that effective organizational models in AI-augmented environments will likely neither be
 uniformly simple nor complex, but rather embody "requisite complexity" - matching their structural sophistication to the
@@ -1010,7 +1021,11 @@ Building on Trist and Bamforth's (1951) sociotechnical systems theory and more r
    - Establish feedback mechanisms to evaluate boundary effectiveness
 
 3. **Adaptive Governance**: Create governance mechanisms that evolve with capabilities:
-   - Progressive autonomy frameworks that adjust human oversight based on demonstrated AI reliability, as outlined in Gartner's Autonomous Systems Framework [[12]](https://www.linkedin.com/pulse/gartners-autonomous-systems-framework-guide-ai-adoption-anil-krishna-kzlcc)
+   - Progressive autonomy frameworks that adjust human oversight based on demonstrated AI reliability, as outlined in Gartner's Autonomous Systems Framework [[12]](https://www.linkedin.com/pulse/gartners-autonomous-systems-framework-guide-ai-adoption-anil-krishna-kzlcc). This framework defines four maturity levels:
+     - Assisted Intelligence: AI supports human decision-making without autonomous action
+     - Augmented Intelligence: AI enhances human capabilities with semi-autonomous functions
+     - Autonomous Decision-Making: AI handles complex decisions with minimal oversight
+     - Fully Autonomous Systems: AI operates independently with continuous self-learning
    - Distributed monitoring systems that detect emergent behaviors or unintended consequences
    - Learning loops that continuously refine the sociotechnical balance
 
@@ -1050,6 +1065,17 @@ Extending Conway's Law (Section 3.4) to include AI systems as organizational act
 - Metrics for measuring alignment between organizational structures and AI system architectures
 
 This framework posits that Conway's Law applies as much to AI-augmented organizations as traditional ones—the communication structures will inevitably shape the resulting system architectures. By intentionally designing these structures, organizations may achieve more effective technical outcomes.
+
+#### Metahuman Systems Framework
+
+Lyytinen, Nickerson, and King's concept of "metahuman systems"—where machines and humans learn together with different speeds, scopes, and scales—offers a functional governance perspective for AI-augmented organizations. This framework identifies four critical organizational functions:
+
+1. **Delegating**: Managing how tasks and authority are allocated between humans, machines, and hybrid agents, particularly when machine-based decisions operate beyond human reaction capabilities
+2. **Monitoring**: Developing appropriate oversight mechanisms for AI components that may operate at speeds exceeding human perception
+3. **Cultivating**: Creating optimal conditions for ongoing learning and capability development across both human and AI components
+4. **Reflecting**: Enabling metacognitive evaluation of system progress and continuous improvement through double-loop learning
+
+This functional approach complements structural frameworks by addressing the management processes needed as machine learning capabilities evolve at different rates than human learning, creating novel dynamics in organizational governance.
 
 **Methodological Considerations and Future Research Directions**
 

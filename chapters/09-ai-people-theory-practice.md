@@ -23,7 +23,9 @@ Furthermore, effective collaboration with AI tools may necessitate a certain lev
 
 AI integration can enable a redefinition of traditional roles, potentially making them more dynamic. By automating routine tasks, AI may allow employees to shift focus towards more strategic or creative work aspects. For instance, customer service representatives might transition from handling basic inquiries (potentially handled by chatbots) to resolving more complex issues requiring empathy and problem-solving. Similarly, in fields like finance or marketing, AI might take over some data analysis and reporting, allowing professionals to concentrate more on strategic decision-making or campaign development. Alongside the evolution of existing roles, AI integration is leading to the creation of new roles (e.g., data scientists, machine learning engineers, AI ethicists, AI trainers) reflecting specialized skills needed to develop, implement, and govern AI technologies.
 
-The following diagrams illustrate three common models of human-AI collaboration emerging in organizations:
+Recent research on human-AI teaming has highlighted the need to view AI not merely as tools but as potential team members that collaborate with humans to accomplish shared goals (Berretta et al., 2023). This human-centered perspective recognizes that effective integration requires understanding both human factors (trust, cognitive load, attitudes) and technological capabilities in designing collaborative work systems. Rather than simply substituting human labor, the most effective AI implementations complement human capabilities and create synergies that transform the nature of roles.
+
+The following diagrams illustrate three common models of human-AI collaboration emerging in organizations, which align with patterns identified in recent research on human-AI teaming (Berretta et al., 2023):
 
 ```mermaid
 graph LR
@@ -54,7 +56,7 @@ graph LR
     end
 ```
 
-These models represent a spectrum of integration approaches, from AI serving as a tool directed by humans to more collaborative partnerships where humans and AI systems iteratively work together to solve complex problems.
+These models represent a spectrum of integration approaches, from AI serving as a tool directed by humans to more collaborative partnerships where humans and AI systems iteratively work together to solve complex problems. The "AI as Partner" model in particular illustrates the concept of human-AI teaming where complementary capabilities are leveraged to achieve outcomes neither could accomplish alone. Research suggests that these different models may be appropriate for different contexts depending on task characteristics, human factors, and required levels of AI explainability (Berretta et al., 2023).
 
 ### 9.2.3 Evolving Stakeholder Dynamics
 
@@ -76,7 +78,20 @@ This institutional perspective complements the Sociotechnical AI Integration Mod
 
 Cybernetics and systems thinking provide lenses for analyzing AI integration. Cybernetics, focusing on communication and control, emphasizes feedback loops, adaptation, and regulation. AI integration can enhance organizational cybernetic aspects by providing potentially more sophisticated feedback mechanisms. AI systems can monitor processes, analyze data, and provide insights, potentially enabling faster adaptation. Systems thinking, focusing on interconnectedness, is useful for comprehending interactions in human-AI hybrid organizations. Viewing organizations as complex adaptive systems helps understand how AI acts as a component influencing feedback loops, communication pathways, and overall organizational behavior and evolution.
 
-While Section 3.6.4's Conway's Law Extension explored how communication patterns between humans and AI systems influence technical architectures, this cybernetic perspective broadens the analysis to examine how these communication patterns function as feedback loops that regulate organizational behavior and adaptation more generally.
+The socio-technical perspective identified in research on human-AI teaming (Berretta et al., 2023) strongly aligns with these cybernetic principles. This approach views AI not in isolation but as part of an integrated socio-technical system where human and technological elements must be jointly optimized. Research has identified five distinct clusters of factors influencing human-AI teaming effectiveness, including human variables, task characteristics, AI explainability, AI embodiment, and how AI performance affects human perception (Berretta et al., 2023). These clusters demonstrate the multidimensional nature of human-AI systems and the need to consider both technical and social dimensions in system design.
+
+This sociotechnical systems approach has been further developed into practical frameworks for AI implementation. Salwei and Carayon (2023) propose a comprehensive sociotechnical systems framework for AI integration in healthcare that addresses common implementation challenges. Their research demonstrates how workflow integration failures often result from narrow technical focus rather than holistic system design. Through a case study of clinical decision support implementation, they show how considering the entire work system—including organizational elements (policies, culture), social factors (team dynamics, roles), environmental context, task requirements, and technology design—significantly improves AI adoption and effectiveness. Their framework highlights the critical importance of systematically analyzing all sociotechnical interactions throughout the AI design and implementation process, from needs assessment through continuous improvement. This research underscores that successful AI integration requires not just technical excellence but deliberate attention to how the technology will function within complex human and organizational systems.
+
+While Section 3.6.4's Conway's Law Extension explored how communication patterns between humans and AI systems influence technical architectures, this cybernetic perspective broadens the analysis to examine how these communication patterns function as feedback loops that regulate organizational behavior and adaptation more generally. By understanding these feedback mechanisms, organizations can design AI systems that enhance regulatory capacity while maintaining human agency and system adaptability.
+
+Effective human-AI teaming requires careful attention to the design of:
+
+1. **Information flows** between human and AI components 
+2. **Feedback mechanisms** that enable mutual adjustment
+3. **Control structures** that maintain system stability while enabling adaptation
+4. **Boundary interfaces** that define appropriate domains for human and AI decision-making
+
+These cybernetic principles provide a theoretical foundation for understanding how AI integration affects organizational dynamics and offer practical guidance for designing human-AI systems that leverage the complementary strengths of both human and artificial intelligence.
 
 ### 9.3.3 AI Management Science
 
