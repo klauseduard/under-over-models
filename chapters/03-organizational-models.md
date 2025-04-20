@@ -921,23 +921,27 @@ Organizations seeking to effectively integrate AI capabilities while maintaining
 these theoretically-grounded adaptation strategies, several of which are supported by emerging empirical evidence:
 
 1. **Integration Interfaces:** Design specific organizational interfaces that enable human-AI teams to integrate with
-traditional teams without imposing unnecessary process overhead. This approach aligns with emerging frameworks for human-AI collaboration that emphasize structured interaction patterns ([Dawson, 2025](https://rossdawson.com/framework-agentic-ai-core-patterns-for-organization-design/)).
+traditional teams without imposing unnecessary process overhead.
+This approach aligns with emerging frameworks for human-AI collaboration that
+emphasize structured interaction patterns, as confirmed by *Frontiers'* comprehensive review of human-AI teaming [[1]](https://www.frontiersin.org/articles/10.3389/frai.2023.1250725/full).
 
-2. **Differentiated Complexity Zones:** Rather than uniformly simple or complex organizational models, develop differentiated complexity zones that align with [Beer's Viable System Model](https://metaphorum.org/viable-system-model) principle of recursion, where greater structural elaboration is justified by domain complexity or strategic importance
+2. **Differentiated Complexity Zones:** Rather than uniformly simple or complex organizational models, develop differentiated complexity zones that align with Beer's Viable System Model principle of recursion, where greater structural elaboration is justified by domain complexity or strategic importance. This approach is well-documented in Espinosa's i2 Insights explainer on VSM [[3]](https://i2insights.org/2023/01/24/viable-system-model/).
 
-3. **Adaptive Structural Reconfiguration:** Create organizational structures that can temporarily increase or decrease in complexity as needed, implementing [Ashby's Law of Requisite Variety](https://en.wikipedia.org/wiki/Variety_(cybernetics)) by modulating the appropriate level of structural detail based on environmental conditions
+3. **Adaptive Structural Reconfiguration:** Create organizational structures that can temporarily increase or decrease in complexity as needed, implementing [Ashby's Law of Requisite Variety](https://en.wikipedia.org/wiki/Variety_(cybernetics)) by modulating the appropriate level of structural detail based on environmental conditions. This approach is supported by Alves et al.'s research on configuring viable systems during crises [[4]](https://www.sciencedirect.com/science/article/pii/S0377221724002340).
 
-4. **Complexity Pattern Recognition:** Leverage AI's analytical capabilities to recognize patterns in organizational behavior and identify where existing structures are overfitting or underfitting
+4. **Complexity Pattern Recognition:** Leverage AI's analytical capabilities to recognize patterns in organizational behavior and identify where existing structures are overfitting or underfitting, a capability described in Cognitive Talent Solutions' white paper on organizational network analysis and AI integration [[5]](https://www.cognitivetalentsolutions.com/organizational-network-analysis-ona-concept-use-cases-and-integration-of-ai-capabilities/).
 
-5. **Temporal Continuity Management:** Design organizational processes that can leverage extended operational timeframes of AI systems while ensuring effective handoffs and information flow between human and AI working periods
+5. **Temporal Continuity Management:** Design organizational processes that can leverage extended operational timeframes of AI systems while ensuring effective handoffs and information flow between human and AI working periods. This is illustrated in early field deployments of always-on AI agents [[6]](https://gloriumtech.com/custom-ai-agent-development/). *Rigorous human-factor studies are still pending; pilot carefully before large-scale rollout.*
 
 6. **Team Topology Evolution:** As organizations integrate AI capabilities, their team topologies will need to evolve:
    - Establish clear interaction modes between human teams and AI systems (collaboration, service, facilitation)
    - Manage cognitive load by appropriately distributing work between humans and AI
    - Create platform teams focused on enabling effective human-AI interfaces
    - Recognize when AI systems are handling complicated subsystems and define appropriate boundaries
+   
+   These approaches are supported by Team Topologies' research on Gen-AI integration [[7]](https://teamtopologies.com/news-blogs-newsletters/2025/1/28/how-team-topologies-can-transform-generative-ai-integration) and AIS studies on generative-AI cognitive load dynamics [[9]](https://aisel.aisnet.org/context/icis2024/article/1190/viewcontent/2697_doc.pdf).
 
-Recent examples of organizational adaptation include [GitLab's AI-augmented all-remote structure](https://about.gitlab.com/company/culture/all-remote/), which demonstrates how distributed teams can leverage AI to maintain coordination while reducing structural overhead.
+Recent examples of organizational adaptation include GitLab's AI-augmented all-remote structure, documented in Harvard Business School's case study on "GitLab and the Future of All-Remote Work" [[8]](https://www.hbs.edu/faculty/Pages/item.aspx?num=57917), which demonstrates how distributed teams can leverage AI to maintain coordination while reducing structural overhead.
 
 These considerations suggest that effective organizational models in AI-augmented environments will likely neither be
 uniformly simple nor complex, but rather embody "requisite complexity" - matching their structural sophistication to the
@@ -992,7 +996,7 @@ This framework could help organizations avoid both underfitting (failing to leve
 This theoretical model applies sociotechnical systems theory (Section 3.3.4) specifically to AI integration challenges:
 
 **Theoretical Foundation:**
-Building on Trist and Bamforth's (1951) sociotechnical systems theory and more recent work on technological integration, this model examines how social and technical subsystems must co-evolve during AI implementation.
+Building on Trist and Bamforth's (1951) sociotechnical systems theory and more recent work on technological integration, this model examines how social and technical subsystems must co-evolve during AI implementation. This approach is well-supported by Carayon et al.'s framework for AI in clinical care [[10]](https://pmc.ncbi.nlm.nih.gov/articles/PMC9873227/).
 
 **Key Principles:**
 1. **Joint Optimization Assessment**: Evaluate current organizational processes across both social and technical dimensions:
@@ -1022,7 +1026,7 @@ This model could help organizations avoid the common pitfall of focusing exclusi
 This theoretical framework applies the principles of Conway's Law and the Inverse Conway Maneuver to AI-augmented organizations:
 
 **Theoretical Foundation:**
-Extending Conway's Law (Section 3.4) to include AI systems as organizational actors, this framework explores how communication patterns between humans and AI systems influence resulting system architectures.
+Extending Conway's Law (Section 3.4) to include AI systems as organizational actors, this framework explores how communication patterns between humans and AI systems influence resulting system architectures. Initial industry experience suggests that AI components mirror existing human-and-algorithm communication paths, consistent with Conway's Law [[11]](https://www.linkedin.com/pulse/surprising-way-your-organizational-structure-shapes-ul-hassan-fehqf). However, systematic empirical validation is still needed.
 
 **Key Principles:**
 1. **AI Communication Pattern Mapping**: Analyze how information flows between:
@@ -1063,7 +1067,7 @@ Key research questions for the field include:
 3. What governance frameworks balance innovation with responsible AI use?
 4. How does organizational learning change when AI systems participate in knowledge creation?
 
-Organizations like [Stanford's Human-Centered AI Institute](https://hai.stanford.edu/) and [MIT's Center for Collective Intelligence](https://cci.mit.edu/) are actively pursuing these research questions, providing valuable resources for organizations navigating these challenges.
+Organizations like Stanford's Institute for Human-Centered AI [[14]](https://hai.stanford.edu/) and MIT's Center for Collective Intelligence's "Designing Human-AI Teams" program [[13]](https://cci.mit.edu/designing-human-ai-teams/) are actively pursuing these research questions, providing valuable resources for organizations navigating these challenges.
 
 While these frameworks remain theoretical and require further empirical validation, they demonstrate how the principles discussed throughout this chapter may be applied to the emerging challenges of AI-augmented organizational design. Organizations and researchers that pursue these approaches will be better positioned to develop evidence-based practices for achieving the appropriate balance between simplicity and complexity in organizational models as AI integration progresses.
 
