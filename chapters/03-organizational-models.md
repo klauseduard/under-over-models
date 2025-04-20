@@ -27,8 +27,6 @@
   - [3.5.3 Theoretical Integration and Practical Application](#353-theoretical-integration-and-practical-application)
 - [3.6 AI-Driven Paradigm Shift: Transforming Organizational Structures](#36-ai-driven-paradigm-shift-transforming-organizational-structures)
   - [3.6.1 Human Orchestration of AI Teams](#361-human-orchestration-of-ai-teams)
-  - [3.6.2 Evolutionary Trajectory of AI Integration](#362-evolutionary-trajectory-of-ai-integration)
-  - [3.6.3 Adaptation Strategies for Human-AI Organizations](#363-adaptation-strategies-for-human-ai-organizations)
   - [3.6.4 Practical Frameworks for AI-Augmented Organizations](#364-practical-frameworks-for-ai-augmented-organizations)
 
 While the concepts of organizational modeling, underfitting, and overfitting apply broadly, this chapter will
@@ -777,6 +775,18 @@ This integrated approach prevents both:
 
 By intentionally designing organizational structure using these complementary approaches, the organization creates a sociotechnical system that appropriately balances simplicity and complexity—achieving what Section 3.3.3 described as "simplicity on the far side of complexity."
 
+
+![Domain-Driven Design and Team Topologies Integration](../images/ddd_and_team_topo_integration.svg)
+
+Figure 3.1: This diagram illustrates the integration between Domain-Driven Design's domain classification (left) and Team Topologies' organizational structures (right). The integration zone demonstrates how domain types directly influence team types, with core domains mapping to stream-aligned teams, supporting domains to platform teams, and generic domains to complicated subsystem teams.
+
+The integration between these frameworks extends beyond just mapping domain types to team types. The strategic relationship patterns defined in DDD translate directly to interaction modes in Team Topologies, creating consistent patterns of collaboration across both domain boundaries and team boundaries.
+
+![Domain Relationship Patterns and Team Interaction Modes](../images/ddd_and_team_topo_relationship.svg)
+
+Figure 3.2: This diagram shows how specific Domain-Driven Design relationship patterns align with Team Topologies interaction modes. Customer/Supplier domain relationships often manifest as Collaboration interaction modes, Partnerships align with X-as-a-Service interactions, and Anticorruption Layers are frequently implemented with the assistance of Enabling teams in a Facilitating interaction mode.
+
+
 ## 3.6 AI-Driven Paradigm Shift: Transforming Organizational Structures
 
 *Note: This section presents emerging considerations rather than established practices.*
@@ -859,6 +869,12 @@ just an engineering challenge but a fundamental reimagining of how human and art
 create systems with emergent capabilities greater than either could achieve alone.
 
 While these theoretical principles provide valuable foundations for understanding AI-augmented organizational design, organizations also need concrete frameworks to guide implementation. The following section explores emerging practical approaches that translate these concepts into actionable organizational models that balance appropriate complexity with adaptability.
+
+This cybernetic enhancement transforms both what organizations can accomplish and how they must be structured.
+Traditional organizational models developed for purely human teams often underfit this new reality, lacking the
+flexibility to accommodate the enhanced regulatory capacity of human-AI teams. Conversely, attempts to create highly
+formalized processes specifically for AI integration risk overfitting to current technologies rather than establishing
+adaptable regulatory principles.
 
 ### 3.6.2 Evolutionary Trajectory of AI Integration
 

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Domain-Driven Design and Team Topologies Integration</text>
+  
+  <!-- Main concept: Two circles that overlap in the middle -->
+  <circle cx="400" cy="450" r="300" fill="#e6f2ff" stroke="#3366cc" stroke-width="2" opacity="0.7" />
+  <circle cx="800" cy="450" r="300" fill="#ffe6e6" stroke="#cc3366" stroke-width="2" opacity="0.7" />
+  
+  <!-- Titles for the two main areas -->
+  <text x="400" y="200" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold">Domain Analysis</text>
+  <text x="400" y="230" text-anchor="middle" font-family="Arial" font-size="20">(Domain-Driven Design)</text>
+  
+  <text x="800" y="200" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold">Organizational Design</text>
+  <text x="800" y="230" text-anchor="middle" font-family="Arial" font-size="20">(Team Topologies)</text>
+  
+  <!-- Overlap area title -->
+  <text x="600" y="290" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#663399">Integration Zone</text>
+  
+  <!-- DOMAIN SECTION -->
+  <!-- Core Domains Section -->
+  <g transform="translate(160, 290)">
+    <rect x="0" y="0" width="200" height="40" fill="#4285f4" rx="6" ry="6" />
+    <text x="100" y="25" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">Core Domains</text>
+    
+    <rect x="30" y="50" width="160" height="35" fill="#4285f4" rx="4" ry="4" opacity="0.8" />
+    <text x="110" y="73" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Product Catalog</text>
+    
+    <rect x="30" y="95" width="160" height="35" fill="#4285f4" rx="4" ry="4" opacity="0.8" />
+    <text x="110" y="118" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Order Processing</text>
+  </g>
+  
+  <!-- Supporting Domains Section -->
+  <g transform="translate(150, 440)">
+    <rect x="0" y="0" width="200" height="40" fill="#00a0b0" rx="6" ry="6" />
+    <text x="100" y="25" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">Supporting Domains</text>
+    
+    <rect x="30" y="50" width="160" height="35" fill="#00a0b0" rx="4" ry="4" opacity="0.8" />
+    <text x="110" y="73" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Customer Accounts</text>
+    
+    <rect x="30" y="95" width="160" height="35" fill="#00a0b0" rx="4" ry="4" opacity="0.8" />
+    <text x="110" y="118" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Inventory Management</text>
+  </g>
+  
+  <!-- Generic Domain Section -->
+  <g transform="translate(180, 590)">
+    <rect x="0" y="0" width="200" height="40" fill="#808080" rx="6" ry="6" />
+    <text x="100" y="25" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">Generic Domain</text>
+    
+    <rect x="30" y="50" width="160" height="35" fill="#808080" rx="4" ry="4" opacity="0.8" />
+    <text x="110" y="73" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Payment Processing</text>
+  </g>
+  
+  <!-- TEAM SECTION -->
+  <!-- Stream-aligned Teams Section -->
+  <g transform="translate(850, 300)">
+    <rect x="0" y="0" width="200" height="40" fill="#4285f4" rx="6" ry="6" stroke="#000" stroke-width="2" />
+    <text x="100" y="25" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">Stream-aligned Teams</text>
+    
+    <rect x="30" y="50" width="160" height="35" fill="#4285f4" rx="4" ry="4" opacity="0.8" stroke="#000" stroke-width="1.5" />
+    <text x="110" y="73" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Product Team</text>
+    
+    <rect x="30" y="95" width="160" height="35" fill="#4285f4" rx="4" ry="4" opacity="0.8" stroke="#000" stroke-width="1.5" />
+    <text x="110" y="118" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Order Team</text>
+  </g>
+  
+  <!-- Platform Team Section -->
+  <g transform="translate(850, 440)">
+    <rect x="0" y="0" width="200" height="40" fill="#7d3c98" rx="6" ry="6" />
+    <text x="100" y="25" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">Platform Team</text>
+    
+    <rect x="30" y="50" width="160" height="35" fill="#7d3c98" rx="4" ry="4" opacity="0.8" />
+    <text x="110" y="73" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Reusable Components</text>
+  </g>
+  
+  <!-- Other Teams Section -->
+  <g transform="translate(850, 535)">
+    <rect x="0" y="0" width="200" height="40" fill="#808080" rx="6" ry="6" stroke="#000" stroke-width="2" />
+    <text x="100" y="25" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">Complicated Subsystem</text>
+    
+    <rect x="30" y="50" width="160" height="35" fill="#808080" rx="4" ry="4" opacity="0.8" stroke="#000" stroke-width="1.5" />
+    <text x="110" y="73" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Payment Team</text>
+  </g>
+  
+  <g transform="translate(850, 630)">
+    <rect x="0" y="0" width="200" height="40" fill="#f39c12" rx="6" ry="6" />
+    <text x="100" y="25" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">Enabling Team</text>
+    
+    <rect x="30" y="50" width="160" height="35" fill="#f39c12" rx="4" ry="4" opacity="0.8" />
+    <text x="110" y="73" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Integration Team</text>
+  </g>
+  
+  <!-- Arrow Markers -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,10 L10,5 z" fill="#663399" />
+    </marker>
+  </defs>
+
+  <!-- INTEGRATION ZONE -->
+  <g transform="translate(500, 320)">
+    <!-- Relationship lines -->
+    <path d="M-120,55 L320,55" stroke="#663399" stroke-width="2" marker-end="url(#arrow)" />
+    <text x="100" y="45" text-anchor="middle" font-family="Arial" font-size="14" fill="#663399">Core → Stream-aligned</text>
+    
+    <path d="M-120,175 L320,160" stroke="#663399" stroke-width="2" marker-end="url(#arrow)" />
+    <text x="0" y="150" text-anchor="middle" font-family="Arial" font-size="14" fill="#663399">Supporting → Platform</text>
+    
+    <path d="M-100,310 L320,270" stroke="#663399" stroke-width="2" marker-end="url(#arrow)" />
+    <text x="0" y="290" text-anchor="middle" font-family="Arial" font-size="14" fill="#663399">Generic → Complicated Subsystem</text>    
+  </g>
+
+  
+  <!-- Integration patterns -->
+  <g transform="translate(600, 320)">
+    <rect x="-80" y="80" width="160" height="140" fill="white" stroke="#663399" stroke-width="2" rx="10" ry="10" />
+    <text x="0" y="100" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#663399">Relationship Patterns</text>
+    <line x1="-60" y1="110" x2="60" y2="110" stroke="#663399" stroke-width="1" />
+    
+    <text x="0" y="130" text-anchor="middle" font-family="Arial" font-size="12">• Customer/Supplier</text>
+    <text x="0" y="155" text-anchor="middle" font-family="Arial" font-size="12">• Partnership</text>
+    <text x="0" y="180" text-anchor="middle" font-family="Arial" font-size="12">• Anticorruption Layer</text>
+    <text x="0" y="205" text-anchor="middle" font-family="Arial" font-size="12">• Bounded Contexts</text>
+  </g>
+  
+  <g transform="translate(600, 500)">
+    <rect x="-80" y="80" width="160" height="140" fill="white" stroke="#663399" stroke-width="2" rx="10" ry="10" />
+    <text x="0" y="100" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#663399">Interaction Modes</text>
+    <line x1="-60" y1="110" x2="60" y2="110" stroke="#663399" stroke-width="1" />
+    
+    <text x="0" y="130" text-anchor="middle" font-family="Arial" font-size="12">• Collaboration</text>
+    <text x="0" y="155" text-anchor="middle" font-family="Arial" font-size="12">• X-as-a-Service</text>
+    <text x="0" y="180" text-anchor="middle" font-family="Arial" font-size="12">• Facilitating</text>
+    <text x="0" y="205" text-anchor="middle" font-family="Arial" font-size="12">• Team API</text>
+  </g>
+  
+  <!-- Before and After Architecture -->
+  <g transform="translate(235, 730)">
+    <rect x="-125" y="0" width="250" height="120" fill="white" stroke="#333" stroke-width="1.5" rx="10" ry="10" />
+    <text x="0" y="25" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Before: Monolithic</text>
+    
+    <rect x="-95" y="45" width="190" height="60" fill="#ddd" rx="5" ry="5" />
+    <text x="0" y="80" text-anchor="middle" font-family="Arial" font-size="14">Tightly Coupled</text>
+    <text x="0" y="100" text-anchor="middle" font-family="Arial" font-size="12">All domains in one application</text>
+  </g>
+  
+  <g transform="translate(965, 730)">
+    <rect x="-125" y="0" width="250" height="120" fill="white" stroke="#333" stroke-width="1.5" rx="10" ry="10" />
+    <text x="0" y="25" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">After: Domain-aligned</text>
+    
+    <rect x="-95" y="50" width="50" height="40" fill="#4285f4" rx="5" ry="5" opacity="0.7" />
+    <rect x="-25" y="50" width="50" height="40" fill="#4285f4" rx="5" ry="5" opacity="0.7" />
+    <rect x="45" y="50" width="50" height="40" fill="#808080" rx="5" ry="5" opacity="0.7" />
+    
+    <text x="-70" y="75" text-anchor="middle" font-family="Arial" font-size="10">Product</text>
+    <text x="0" y="75" text-anchor="middle" font-family="Arial" font-size="10">Order</text>
+    <text x="70" y="75" text-anchor="middle" font-family="Arial" font-size="10">Payment</text>
+    
+    <line x1="-45" y1="70" x2="-25" y2="70" stroke="#000" stroke-width="1.5" />
+    <line x1="25" y1="70" x2="45" y2="70" stroke="#000" stroke-width="1.5" stroke-dasharray="4,2" />
+  </g>
+  
+  <!-- Key Insight -->
+  <rect x="350" y="800" width="500" height="80" fill="white" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <text x="600" y="825" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Key Insight:</text>
+  <text x="600" y="850" text-anchor="middle" font-family="Arial" font-size="14">Prevents underfitting (through domain-aligned boundaries) and</text>
+  <text x="600" y="870" text-anchor="middle" font-family="Arial" font-size="14">overfitting (through purpose-driven team interaction patterns)</text>
+  
+  
+</svg>

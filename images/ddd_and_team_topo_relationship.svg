@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold">Domain Relationship Patterns and Team Interaction Modes</text>
+  <text x="600" y="85" text-anchor="middle" font-family="Arial" font-size="18" font-style="italic">Detailed View of DDD and Team Topologies Integration</text>
+  
+  <!-- Section dividers and headers -->
+  <line x1="600" y1="110" x2="600" y2="700" stroke="#ccc" stroke-width="3" stroke-dasharray="10,10" />
+  <text x="300" y="140" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold">Domain-Driven Design</text>
+  <text x="900" y="140" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold">Team Topologies</text>
+  
+  <!-- Pattern 1: Customer/Supplier → Collaboration -->
+  <g transform="translate(0, 180)">
+    <rect x="50" y="0" width="500" height="150" fill="#f0f8ff" stroke="#3366cc" stroke-width="1" rx="10" ry="10" opacity="0.6" />
+    <rect x="650" y="0" width="500" height="150" fill="#fff0f0" stroke="#cc3366" stroke-width="1" rx="10" ry="10" opacity="0.6" />
+    
+    <!-- DDD Side -->
+    <rect x="100" y="30" width="160" height="40" fill="#4285f4" rx="5" ry="5" opacity="0.8" />
+    <text x="180" y="55" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Product Catalog</text>
+    
+    <rect x="100" y="90" width="160" height="40" fill="#4285f4" rx="5" ry="5" opacity="0.8" />
+    <text x="180" y="115" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Order Processing</text>
+    
+    <path d="M180,70 L180,90" stroke="#000" stroke-width="2" marker-end="url(#arrow)" />
+    
+    <rect x="300" y="50" width="200" height="50" fill="white" stroke="#3366cc" stroke-width="1" rx="5" ry="5" />
+    <text x="400" y="75" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#3366cc">Customer/Supplier</text>
+    <text x="400" y="95" text-anchor="middle" font-family="Arial" font-size="12" fill="#3366cc">Downstream depends on upstream</text>
+    
+    <!-- Team Topologies Side -->
+    <rect x="700" y="30" width="160" height="40" fill="#4285f4" rx="5" ry="5" opacity="0.8" stroke="#000" stroke-width="1.5" />
+    <text x="780" y="55" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Product Team</text>
+    
+    <rect x="700" y="90" width="160" height="40" fill="#4285f4" rx="5" ry="5" opacity="0.8" stroke="#000" stroke-width="1.5" />
+    <text x="780" y="115" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Order Team</text>
+    
+    <path d="M780,70 L780,90" stroke="#000" stroke-width="2" marker-end="url(#arrow)" />
+    
+    <rect x="900" y="50" width="200" height="50" fill="white" stroke="#cc3366" stroke-width="1" rx="5" ry="5" />
+    <text x="1000" y="75" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#cc3366">Collaboration</text>
+    <text x="1000" y="95" text-anchor="middle" font-family="Arial" font-size="12" fill="#cc3366">Close alignment on shared goals</text>
+  </g>
+  
+  <!-- Pattern 2: Partnership → X-as-a-Service -->
+  <g transform="translate(0, 350)">
+    <rect x="50" y="0" width="500" height="150" fill="#f0f8ff" stroke="#3366cc" stroke-width="1" rx="10" ry="10" opacity="0.6" />
+    <rect x="650" y="0" width="500" height="150" fill="#fff0f0" stroke="#cc3366" stroke-width="1" rx="10" ry="10" opacity="0.6" />
+    
+    <!-- DDD Side -->
+    <rect x="100" y="30" width="160" height="40" fill="#4285f4" rx="5" ry="5" opacity="0.8" />
+    <text x="180" y="55" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Product Catalog</text>
+    
+    <rect x="100" y="90" width="160" height="40" fill="#00a0b0" rx="5" ry="5" opacity="0.8" />
+    <text x="180" y="115" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Inventory Management</text>
+    
+    <path d="M180,70 L180,90" stroke="#000" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="5,5" />
+    
+    <rect x="300" y="50" width="200" height="50" fill="white" stroke="#3366cc" stroke-width="1" rx="5" ry="5" />
+    <text x="400" y="75" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#3366cc">Partnership</text>
+    <text x="400" y="95" text-anchor="middle" font-family="Arial" font-size="12" fill="#3366cc">Two-way cooperative relationship</text>
+    
+    <!-- Team Topologies Side -->
+    <rect x="700" y="30" width="160" height="40" fill="#4285f4" rx="5" ry="5" opacity="0.8" stroke="#000" stroke-width="1.5" />
+    <text x="780" y="55" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Product Team</text>
+    
+    <rect x="700" y="90" width="160" height="40" fill="#7d3c98" rx="5" ry="5" opacity="0.8" />
+    <text x="780" y="115" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Platform Team</text>
+    
+    <path d="M780,70 L780,90" stroke="#000" stroke-width="2" marker-end="url(#arrow)" />
+    
+    <rect x="900" y="50" width="200" height="50" fill="white" stroke="#cc3366" stroke-width="1" rx="5" ry="5" />
+    <text x="1000" y="75" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#cc3366">X-as-a-Service</text>
+    <text x="1000" y="95" text-anchor="middle" font-family="Arial" font-size="12" fill="#cc3366">API-based service consumption</text>
+  </g>
+  
+  <!-- Pattern 3: Anticorruption Layer → Facilitating -->
+  <g transform="translate(0, 520)">
+    <rect x="50" y="0" width="500" height="150" fill="#f0f8ff" stroke="#3366cc" stroke-width="1" rx="10" ry="10" opacity="0.6" />
+    <rect x="650" y="0" width="500" height="150" fill="#fff0f0" stroke="#cc3366" stroke-width="1" rx="10" ry="10" opacity="0.6" />
+    
+    <!-- DDD Side -->
+    <rect x="100" y="30" width="160" height="40" fill="#4285f4" rx="5" ry="5" opacity="0.8" />
+    <text x="180" y="55" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Order Processing</text>
+    
+    <rect x="100" y="90" width="160" height="40" fill="#808080" rx="5" ry="5" opacity="0.8" />
+    <text x="180" y="115" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Payment Processing</text>
+    
+    <path d="M180,70 L180,90" stroke="#000" stroke-width="2" marker-end="url(#arrow)" />
+    <text x="220" y="80" text-anchor="start" font-family="Arial" font-size="12" fill="#000" font-style="italic">Anticorruption Layer</text>
+    
+    <rect x="300" y="50" width="200" height="50" fill="white" stroke="#3366cc" stroke-width="1" rx="5" ry="5" />
+    <text x="400" y="75" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#3366cc">Anticorruption Layer</text>
+    <text x="400" y="95" text-anchor="middle" font-family="Arial" font-size="12" fill="#3366cc">Protective boundary against legacy/external</text>
+    
+    <!-- Team Topologies Side -->
+    <rect x="700" y="30" width="160" height="40" fill="#4285f4" rx="5" ry="5" opacity="0.8" stroke="#000" stroke-width="1.5" />
+    <text x="780" y="55" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Order Team</text>
+    
+    <rect x="700" y="90" width="160" height="40" fill="#808080" rx="5" ry="5" opacity="0.8" stroke="#000" stroke-width="1.5" />
+    <text x="780" y="115" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Payment Team</text>
+    
+    <rect x="900" y="30" width="160" height="40" fill="#f39c12" rx="5" ry="5" opacity="0.8" />
+    <text x="980" y="55" text-anchor="middle" font-family="Arial" font-size="14" fill="white" font-weight="bold">Integration Team</text>
+    
+    <path d="M780,70 L780,90" stroke="#000" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M980,70 L880,80" stroke="#f39c12" stroke-width="2" marker-end="url(#arrowOrange)" stroke-dasharray="5,5" />
+    
+    <rect x="900" y="90" width="200" height="50" fill="white" stroke="#cc3366" stroke-width="1" rx="5" ry="5" />
+    <text x="1000" y="115" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#cc3366">Facilitating</text>
+    <text x="1000" y="135" text-anchor="middle" font-family="Arial" font-size="12" fill="#cc3366">Helps implement integration pattern</text>
+  </g>
+  
+  <!-- Key Concepts -->
+  <g transform="translate(600, 715)">
+    <rect x="-350" y="0" width="700" height="80" fill="white" stroke="#333" stroke-width="1.5" rx="10" ry="10" opacity="0.9" />
+    <text x="0" y="25" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Key Concept:</text>
+    <text x="0" y="50" text-anchor="middle" font-family="Arial" font-size="14">Domain relationship patterns determine team interaction modes,</text>
+    <text x="0" y="70" text-anchor="middle" font-family="Arial" font-size="14">aligning organizational design with domain architecture</text>
+  </g>
+  
+  <!-- Legend  -->
+  <g transform="translate(1000, 720)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#000" stroke-width="2" />
+    <text x="40" y="5" font-family="Arial" font-size="12">Direct relationship</text>
+    
+    <line x1="0" y1="20" x2="30" y2="20" stroke="#000" stroke-width="2" stroke-dasharray="5,5" />
+    <text x="40" y="25" font-family="Arial" font-size="12">Collaborative relationship</text>
+    
+    <line x1="0" y1="40" x2="30" y2="40" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,5" />
+    <text x="40" y="45" font-family="Arial" font-size="12">Facilitating assistance</text>
+  </g>
+  
+  <!-- Arrow Markers -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,10 L10,5 z" fill="#000" />
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,10 L10,5 z" fill="#f39c12" />
+    </marker>
+  </defs>
+</svg>
