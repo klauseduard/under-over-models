@@ -447,8 +447,8 @@ underfitting/overfitting spectrum:
 
 #### Ashby's Law of Requisite Variety
 
-Perhaps the most powerful cybernetic principle for understanding organizational complexity is Ashby's Law of Requisite
-Variety, which states that "only variety can absorb variety." In organizational terms, this means that a system's
+Perhaps the most powerful cybernetic principle for understanding organizational complexity is Ashby's [Law of Requisite
+Variety](http://pcp.vub.ac.be/books/AshbyReqVar.pdf), which states that "only variety can absorb variety." In organizational terms, this means that a system's
 internal complexity must match the complexity of the environment it operates within.
 
 This principle provides direct theoretical grounding for determining appropriate organizational complexity:
