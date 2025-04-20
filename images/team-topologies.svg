@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700">
+  <!-- Background -->
+  <rect x="0" y="0" width="1000" height="700" rx="10" ry="10" fill="#f8f9fa" />
+  
+  <!-- Title and Subtitle -->
+  <text x="500" y="50" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">Team Topologies</text>
+  <text x="500" y="80" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">Framework for Organizational Design</text>
+  
+  <!-- Main Visualization -->
+  <g transform="translate(500, 350)">
+    <!-- Central elements -->
+    <g>
+      <!-- Background circular area -->
+      <circle cx="0" cy="0" r="200" fill="#fbfbfb" stroke="#eeeeee" stroke-width="2" />
+      
+      <!-- Center area for Stream-aligned teams -->
+      <circle cx="0" cy="0" r="110" fill="#f2f8f2" stroke="#e0e0e0" stroke-width="1" />
+      
+      <!-- Stream-aligned Teams -->
+      <g>
+        <rect x="-90" y="-50" width="180" height="100" rx="5" ry="5" fill="white" stroke="#90EE90" stroke-width="1.5" />
+        <text x="0" y="-20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Stream-aligned Teams</text>
+        <text x="0" y="5" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Primary value delivery</text>
+        <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Aligned to business domains</text>
+      </g>
+    </g>
+    
+    <!-- Supporting Team types positioned at equal distances -->
+    <!-- Platform Team (Bottom) -->
+    <g transform="translate(0, 160)">
+      <rect x="-90" y="-40" width="180" height="80" rx="5" ry="5" fill="white" stroke="#4793ff" stroke-width="1.5" />
+      <text x="0" y="-15" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Platform Team</text>
+      <text x="0" y="10" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Internal services</text>
+    </g>
+    
+    <!-- Enabling Team (Left) -->
+    <g transform="translate(-160, -80)">
+      <rect x="-90" y="-40" width="180" height="80" rx="5" ry="5" fill="white" stroke="#FFB366" stroke-width="1.5" />
+      <text x="0" y="-15" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Enabling Team</text>
+      <text x="0" y="10" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Knowledge &amp; skills</text>
+    </g>
+    
+    <!-- Complicated Subsystem Team (Right) -->
+    <g transform="translate(160, -80)">
+      <rect x="-90" y="-40" width="180" height="80" rx="5" ry="5" fill="white" stroke="#FF6B6B" stroke-width="1.5" />
+      <text x="0" y="-15" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Complicated</text>
+      <text x="0" y="10" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Subsystem Team</text>
+    </g>
+    
+    <!-- Interaction Lines with Labels -->
+    <!-- Platform to Stream (X-as-a-Service) -->
+    <line x1="0" y1="120" x2="0" y2="50" stroke="#4793ff" stroke-width="1.5" stroke-dasharray="5,3" />
+    <polygon points="0,50 -5,60 5,60" fill="#4793ff" />
+    <g transform="translate(20, 85)">
+      <rect x="-20" y="-12" width="80" height="24" rx="12" ry="12" fill="white" stroke="#4793ff" stroke-width="1" />
+      <text x="20" y="5" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">X-as-a-Service</text>
+    </g>
+        
+    <g transform="translate(-105, -25)">
+      <rect x="-55" y="-12" width="70" height="24" rx="12" ry="12" fill="white" stroke="#FFB366" stroke-width="1" />
+      <text x="-20" y="5" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Facilitating</text>
+    </g>
+    
+    
+    <g transform="translate(105, -25)">
+      <rect x="-15" y="-12" width="85" height="24" rx="12" ry="12" fill="white" stroke="#FF6B6B" stroke-width="1" />
+      <text x="28" y="5" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Collaboration</text>
+    </g>
+  </g>
+  
+  <!-- Key Concepts Section -->
+  <g transform="translate(500, 600)">
+    <!-- Background container -->
+    <rect x="-450" y="-30" width="900" height="80" rx="5" ry="5" fill="white" stroke="#e0e0e0" stroke-width="1" />
+    
+    <!-- Conway's Law -->
+    <g transform="translate(-340, 0)">
+      <text x="0" y="-10" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Conway's Law</text>
+      <text x="0" y="10" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">System architecture mirrors organization</text>
+    </g>
+    
+    <!-- Cognitive Load -->
+    <g transform="translate(-120, 0)">
+      <text x="0" y="-10" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Cognitive Load</text>
+      <text x="0" y="10" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Managing team complexity</text>
+    </g>
+    
+    <!-- Central divider -->
+    <line x1="0" y1="-20" x2="0" y2="20" stroke="#e0e0e0" stroke-width="1" />
+    
+    <!-- Organization Balance -->
+    <g transform="translate(120, 0)">
+      <text x="0" y="-10" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Team Size</text>
+      <text x="0" y="10" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">7±2 people per team</text>
+    </g>
+    
+    <!-- Organizational Design -->
+    <g transform="translate(340, 0)">
+      <text x="0" y="-10" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Fitness Function</text>
+      <text x="0" y="10" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Balance between under/overfitting</text>
+    </g>
+  </g>
+  
+  <!-- Top Sidebar - Organizational Design Spectrum -->
+  <g transform="translate(200, 130)">
+    <rect x="0" y="0" width="600" height="70" rx="5" ry="5" fill="white" stroke="#e0e0e0" stroke-width="1" />
+    <text x="300" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Organizational Design Spectrum</text>
+    
+    <!-- Spectrum visualization -->
+    <line x1="100" y1="45" x2="500" y2="45" stroke="#cccccc" stroke-width="2" />
+    
+    <!-- Underfitting point -->
+    <circle cx="150" cy="45" r="5" fill="#ff9999" />
+    <text x="150" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Underfitting</text>
+    
+    <!-- Optimal point -->
+    <circle cx="300" cy="45" r="5" fill="#90EE90" />
+    <text x="300" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Optimal</text>
+    
+    <!-- Overfitting point -->
+    <circle cx="450" cy="45" r="5" fill="#ff9999" />
+    <text x="450" y="65" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Overfitting</text>
+  </g>
+  
+  <!-- Footer attribution -->
+  <text x="500" y="685" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666666">Based on Team Topologies by Matthew Skelton and Manuel Pais</text>
+</svg>
