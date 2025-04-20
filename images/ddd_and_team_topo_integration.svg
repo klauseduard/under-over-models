@@ -86,11 +86,11 @@
   </g>
   
   <g transform="translate(850, 630)">
-    <rect x="0" y="0" width="200" height="40" fill="#f39c12" rx="6" ry="6" />
-    <text x="100" y="25" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">Enabling Team</text>
+    <rect x="-50" y="0" width="200" height="40" fill="#f39c12" rx="6" ry="6" />
+    <text x="50" y="25" text-anchor="middle" font-family="Arial" font-size="16" fill="white" font-weight="bold">Enabling Team</text>
     
-    <rect x="30" y="50" width="160" height="35" fill="#f39c12" rx="4" ry="4" opacity="0.8" />
-    <text x="110" y="73" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Integration Team</text>
+    <rect x="-80" y="50" width="160" height="35" fill="#f39c12" rx="4" ry="4" opacity="0.8" />
+    <text x="0" y="73" text-anchor="middle" font-family="Arial" font-size="14" fill="white">Integration Team</text>
   </g>
   
   <!-- Arrow Markers -->
@@ -104,18 +104,18 @@
   <g transform="translate(500, 320)">
     <!-- Relationship lines -->
     <path d="M-120,55 L320,55" stroke="#663399" stroke-width="2" marker-end="url(#arrow)" />
-    <text x="100" y="45" text-anchor="middle" font-family="Arial" font-size="14" fill="#663399">Core → Stream-aligned</text>
+    <text x="200" y="45" text-anchor="middle" font-family="Arial" font-size="14" fill="#663399">Core → Stream-aligned</text>
     
     <path d="M-120,175 L320,160" stroke="#663399" stroke-width="2" marker-end="url(#arrow)" />
-    <text x="0" y="150" text-anchor="middle" font-family="Arial" font-size="14" fill="#663399">Supporting → Platform</text>
+    <text x="200" y="150" text-anchor="middle" font-family="Arial" font-size="14" fill="#663399">Supporting → Platform</text>
     
     <path d="M-100,310 L320,270" stroke="#663399" stroke-width="2" marker-end="url(#arrow)" />
-    <text x="0" y="290" text-anchor="middle" font-family="Arial" font-size="14" fill="#663399">Generic → Complicated Subsystem</text>    
+    <text x="130" y="275" text-anchor="middle" font-family="Arial" font-size="14" fill="#663399">Generic → Complicated Subsystem</text>    
   </g>
 
   
   <!-- Integration patterns -->
-  <g transform="translate(600, 320)">
+  <g transform="translate(500, 340)">
     <rect x="-80" y="80" width="160" height="140" fill="white" stroke="#663399" stroke-width="2" rx="10" ry="10" />
     <text x="0" y="100" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#663399">Relationship Patterns</text>
     <line x1="-60" y1="110" x2="60" y2="110" stroke="#663399" stroke-width="1" />
@@ -126,7 +126,7 @@
     <text x="0" y="205" text-anchor="middle" font-family="Arial" font-size="12">• Bounded Contexts</text>
   </g>
   
-  <g transform="translate(600, 500)">
+  <g transform="translate(500, 560)">
     <rect x="-80" y="80" width="160" height="140" fill="white" stroke="#663399" stroke-width="2" rx="10" ry="10" />
     <text x="0" y="100" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#663399">Interaction Modes</text>
     <line x1="-60" y1="110" x2="60" y2="110" stroke="#663399" stroke-width="1" />
@@ -164,7 +164,7 @@
   </g>
   
   <!-- Key Insight -->
-  <rect x="350" y="800" width="500" height="80" fill="white" stroke="#333" stroke-width="2" rx="10" ry="10" />
+  <rect x="380" y="800" width="440" height="80" fill="white" stroke="#333" stroke-width="2" rx="10" ry="10" />
   <text x="600" y="825" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Key Insight:</text>
   <text x="600" y="850" text-anchor="middle" font-family="Arial" font-size="14">Prevents underfitting (through domain-aligned boundaries) and</text>
   <text x="600" y="870" text-anchor="middle" font-family="Arial" font-size="14">overfitting (through purpose-driven team interaction patterns)</text>
