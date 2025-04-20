@@ -29,6 +29,7 @@
   - [3.6.1 Human Orchestration of AI Teams](#361-human-orchestration-of-ai-teams)
   - [3.6.2 Evolutionary Trajectory of AI Integration](#362-evolutionary-trajectory-of-ai-integration)
   - [3.6.3 Adaptation Strategies for Human-AI Organizations](#363-adaptation-strategies-for-human-ai-organizations)
+  - [3.6.4 Practical Frameworks for AI-Augmented Organizations](#364-practical-frameworks-for-ai-augmented-organizations)
 
 While the concepts of organizational modeling, underfitting, and overfitting apply broadly, this chapter will
 particularly explore them through the lens of organizations focused on designing, developing, and maintaining software
@@ -163,7 +164,7 @@ One way to understand these different organizational forms is through informatio
 
 This entropy perspective matters because it helps explain organizational behaviors beyond mere structural descriptions. When organizations face increased environmental complexity, those with simpler structures may struggle to coordinate responses (insufficient negentropy), while overly complex organizations may fail to adapt quickly enough (excessive negentropy restricting information flow). This isn't an absolute relationship – a startup might intentionally maintain higher entropy to promote innovation, while a nuclear power plant requires high negentropy for safety regardless of size or environment.
 
-Emerging technologies, particularly AI, may influence where organizations position themselves on this spectrum. As explored in [Chapter 8](../chapters/08-ai-integration.md), AI tools can potentially enable flatter hierarchies by automating coordination activities and enhancing information flow, while simultaneously introducing new considerations for organizational design as human-AI collaboration evolves.
+Emerging technologies, particularly AI, may influence where organizations position themselves on this spectrum. As explored in [Chapter 8](../chapters/08-ai-organizational-impact.md), AI tools can potentially enable flatter hierarchies by automating coordination activities and enhancing information flow, while simultaneously introducing new considerations for organizational design as human-AI collaboration evolves. Chapter 8 provides a comprehensive examination of these AI impacts, while this chapter focuses on the fundamental organizational models that will be affected by these technological changes.
 
 ![Complexity Spectrum](../images/complexity-spectrum.svg)
 
@@ -797,6 +798,8 @@ challenge traditional thinking about simplicity versus complexity in organizatio
 fundamentally shift how we balance organizational model complexity, both in the immediate term and over longer
 evolutionary horizons.
 
+While Chapter 8 will explore the broader impacts of AI on organizations, including practical implementation approaches, decision-making processes, and team dynamics, this section focuses specifically on how AI integration affects the underfitting/overfitting balance in organizational models and structures. The concepts introduced here will be further developed in Chapter 8, which examines the full spectrum of AI's organizational impact beyond just the structural aspects covered in this chapter.
+
 ### 3.6.1 Human Orchestration of AI Teams
 
 A particularly significant emerging pattern is the ability of individual knowledge workers to orchestrate multiple
@@ -848,6 +851,14 @@ Traditional organizational models developed for purely human teams often underfi
 flexibility to accommodate the enhanced regulatory capacity of human-AI teams. Conversely, attempts to create highly
 formalized processes specifically for AI integration risk overfitting to current technologies rather than establishing
 adaptable regulatory principles.
+
+By establishing clear feedback loops, defining appropriate homeostatic boundaries, and consciously designing multi-level
+control systems, organizations can develop the minimally sufficient complexity needed to leverage AI capabilities while
+maintaining coherence, adaptability, and human agency. This cybernetic approach to organizational design represents not
+just an engineering challenge but a fundamental reimagining of how human and artificial intelligence can combine to
+create systems with emergent capabilities greater than either could achieve alone.
+
+While these theoretical principles provide valuable foundations for understanding AI-augmented organizational design, organizations also need concrete frameworks to guide implementation. The following section explores emerging practical approaches that translate these concepts into actionable organizational models that balance appropriate complexity with adaptability.
 
 ### 3.6.2 Evolutionary Trajectory of AI Integration
 
@@ -932,6 +943,8 @@ control systems, organizations can develop the minimally sufficient complexity n
 maintaining coherence, adaptability, and human agency. This cybernetic approach to organizational design represents not
 just an engineering challenge but a fundamental reimagining of how human and artificial intelligence can combine to
 create systems with emergent capabilities greater than either could achieve alone.
+
+While these theoretical principles provide valuable foundations for understanding AI-augmented organizational design, organizations also need concrete frameworks to guide implementation. The following section explores emerging practical approaches that translate these concepts into actionable organizational models that balance appropriate complexity with adaptability.
 
 ### 3.6.4 Practical Frameworks for AI-Augmented Organizations
 
