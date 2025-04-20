@@ -923,7 +923,7 @@ these theoretically-grounded adaptation strategies, several of which are support
 1. **Integration Interfaces:** Design specific organizational interfaces that enable human-AI teams to integrate with
 traditional teams without imposing unnecessary process overhead.
 This approach aligns with emerging frameworks for human-AI collaboration that
-emphasize structured interaction patterns, as confirmed by *Frontiers'* comprehensive review of human-AI teaming [[1]](https://www.frontiersin.org/articles/10.3389/frai.2023.1250725/full).
+emphasize structured interaction patterns, as confirmed by *Frontiers'* comprehensive review of human-AI teaming [[1]](https://www.frontiersin.org/articles/10.3389/frai.2023.1250725/full) and research on pattern-based human-AI teamwork interface design [[2]](https://www.researchgate.net/publication/383426629_Human-AI_Teamwork_Interface_Design_Using_Patterns_of_Interactions).
 
 2. **Differentiated Complexity Zones:** Rather than uniformly simple or complex organizational models, develop differentiated complexity zones that align with Beer's Viable System Model principle of recursion, where greater structural elaboration is justified by domain complexity or strategic importance. This approach is well-documented in Espinosa's i2 Insights explainer on VSM [[3]](https://i2insights.org/2023/01/24/viable-system-model/).
 
@@ -1010,7 +1010,7 @@ Building on Trist and Bamforth's (1951) sociotechnical systems theory and more r
    - Establish feedback mechanisms to evaluate boundary effectiveness
 
 3. **Adaptive Governance**: Create governance mechanisms that evolve with capabilities:
-   - Progressive autonomy frameworks that adjust human oversight based on demonstrated AI reliability
+   - Progressive autonomy frameworks that adjust human oversight based on demonstrated AI reliability, as outlined in Gartner's Autonomous Systems Framework [[12]](https://www.linkedin.com/pulse/gartners-autonomous-systems-framework-guide-ai-adoption-anil-krishna-kzlcc)
    - Distributed monitoring systems that detect emergent behaviors or unintended consequences
    - Learning loops that continuously refine the sociotechnical balance
 
