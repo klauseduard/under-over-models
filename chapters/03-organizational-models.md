@@ -50,6 +50,8 @@ implicit model of how work truly gets done. These informal pathways, often cutti
 boundaries, represent the collaborative relationships and information exchanges that are essential for achieving
 organizational goals and might deviate significantly from the structure outlined in an official chart.
 
+> **Note on Network Analysis:** For readers interested in methodologies for studying informal networks, Organizational Network Analysis (ONA), introduced by Moreno (1934) and developed through works like Granovetter's (1973) research on social ties, offers tools for mapping communication patterns and relationships in organizations. While traditionally based on surveys and manual analysis, modern ONA incorporates various computational approaches to assist with data collection and visualization.
+
 Ultimately, the organizational structure, whether formal or informal, acts as a set of rules and constraints that
 influence individual and collective behavior, shaping how decisions are made, information is shared, and work is
 coordinated within the organization. This framework, therefore, functions as a model for understanding and guiding
