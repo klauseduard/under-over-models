@@ -14,8 +14,8 @@ This page collects all the interactive visualizations, calculators, and tools av
 
 ### Systems Theory and Entropy Tools
 
+- **[Formal vs. Informal Organizational Network](html/formal_vs_informal.html)** - Visualize formal reporting lines and informal communication links, toggle visibility, and explore network connections.
 - **[Dissipative Systems & Organizational Dynamics](html/dissipative_sys_and_org_dynamics.html)** - Adjust variables like turbulence, resource flow, and connectivity to see how organizational systems respond.
-
 - **[Entropy and Negentropy in Software](html/entropy_in_software.html)** - Toggle between practices like documentation and testing to see how they counteract entropy in software.
 
 - **[Generative Entropy & Innovation Simulator](html/generative_entropy_simulator.html)** - Find the sweet spot between order and chaos that maximizes innovation potential.

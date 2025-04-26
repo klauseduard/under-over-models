@@ -61,6 +61,8 @@ overfitting (being too complex and rigid).
 
 ![Formal vs. Informal Organizational Structures](../images/formal-informal-structures.svg)
 
+> **Interactive Tool**: Explore an [interactive visualization of formal vs. informal organizational networks](../html/formal_vs_informal.html). This tool allows you to toggle formal and informal links, explore connections at different depths, and visualize how these distinct structures coexist within an organization.
+
 ## 3.2 Simplicity vs. Complexity in Organizational Structures and Management Models
 
 Designing effective organizational models involves navigating an inherent trade-off between simplicity and complexity,
@@ -72,7 +74,7 @@ focused on software development, [Domain-Driven Design](https://www.domainlangua
 tools for managing complexity by aligning team boundaries with domain boundaries. Similarly, [Team Topologies](https://teamtopologies.com/) 
 by Skelton and Pais ([2019](https://teamtopologies.com/book)) directly addresses the relationship between team structure and system architecture (discussed further as "Conway's Law" in Section 3.4) by intentionally designing team structures to produce 
 desired system architectures through well-defined team types and interaction patterns. Team Topologies provides specific organizational patterns focused on optimizing team cognitive load and interaction modes, which we explore in detail in Section 3.5.2. Other approaches like 
-the Spotify Model and scaled agile frameworks (SAFe, LeSS) address organizational structure but with less emphasis on 
+the [Spotify Model](https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf) and scaled agile frameworks (SAFe, LeSS) address organizational structure but with less emphasis on 
 software architecture alignment. The Viable System Model (covered in Section 3.3.7) also provides 
 cybernetic principles for organizational design.
 
@@ -186,13 +188,13 @@ adequately address the necessary complexity of the organization's environment an
 
 Excessively tailored and rigid organizational models can be seen as overfitting when they become too specific to a
 particular context, leading to:
-- Poor generalizability
-- Resistance to change
+- Poor generalizability (model is too specific to past conditions, fails in new contexts)
+- Resistance to change (due to ingrained complex rules, bureaucracy, or specialization)
 
 Just as excessive complexity in software can hinder understanding, maintenance, and scalability, an organizational model
 with too many layers, highly specialized roles, and inflexible processes might become:
-- Costly to maintain
-- Slow to adapt to new circumstances
+- Costly to maintain (due to overhead of managing complex processes and numerous roles)
+- Slow to adapt to new circumstances (because changes require navigating excessive complexity or rigid structures)
 
 ### 3.3.3 Seeking Balance
 
@@ -202,7 +204,7 @@ goal should be to:
 - Maintain adaptability
 - Avoid impediments to organizational evolution
 
-This principle, often attributed to Oliver Wendell Holmes Sr. who stated "I would not give a fig for the simplicity this side of complexity, but I would give my life for the simplicity on the other side of complexity," captures the essence of organizational model balance. It acknowledges that effective simplicity isn't achieved through ignoring complexity (underfitting) but rather through understanding and navigating through it to reach clarity. In organizational contexts, this means developing structures sophisticated enough to address real-world complexity while remaining clear and navigable.
+This principle is captured by a statement attributed to [Oliver Wendell Holmes Sr.](https://www.britannica.com/biography/Oliver-Wendell-Holmes): "I would not give a fig for the simplicity this side of complexity, but I would give my life for the simplicity on the other side of complexity." This quote encapsulates the essence of organizational model balance. It acknowledges that effective simplicity isn't achieved through ignoring complexity (underfitting) but rather through understanding and navigating through it to reach clarity. In organizational contexts, this means developing structures sophisticated enough to address real-world complexity while remaining clear and navigable.
 
 ![To simplified complexity](../images/simplify-complexity.svg)
 
@@ -213,6 +215,10 @@ This balance between underfitting and overfitting requires intentional organizat
 Regular evaluation of organizational structures can help identify signs of both underfitting and overfitting. However, effective reviews must focus on outcomes rather than conformity to standardized patterns. [Galbraith's Star Model](https://jaygalbraith.com/services/star-model/) offers one framework for such reviews, examining alignment between strategy, structure, processes, rewards, and people.
 
 The challenge lies in conducting reviews that genuinely assess fit-for-purpose rather than merely enforcing standardization. As many organizations experience, structural reviews often default to aligning with corporate standards rather than adapting to specific operational needs. This standardization bias itself can represent a form of underfitting—applying one-size-fits-all approaches to diverse contexts.
+
+![Galbraith's Star Model](../images/galbraith-star.svg)
+
+> Explore the [interactive Galbraith's Star Model tool](/html/galbraith_star.html).
 
 #### Targeted Complexity Through Domain-Driven Approaches
 
@@ -970,6 +976,14 @@ This framework posits that Conway's Law applies as much to AI-augmented organiza
 #### Metahuman Systems Framework
 
 Lyytinen, Nickerson, and King's concept of "metahuman systems"—where machines and humans learn together with different speeds, scopes, and scales—offers a functional governance perspective for AI-augmented organizations. This framework identifies four critical organizational functions:
+
+### Organizational Review
+
+Organizations are complex adaptive systems. Reviewing organizational design isn't just about structure; it's about the interplay between all components. Periodic reviews are essential to ensure alignment and effectiveness, especially when external conditions or internal strategies shift. Under-overfitting concepts can be applied: overly rigid structures (overfitting) struggle to adapt, while excessively loose structures (underfitting) lack coherence. Effective design finds a balance.
+
+Models can guide these reviews, moving beyond intuition or conformity to standardized patterns. [Galbraith's Star Model](https://jaygalbraith.com/services/star-model/) offers one framework for such reviews, examining alignment between strategy, structure, processes, rewards, and people.
+
+![Galbraith's Star Model](../images/galbraith-star.svg)
 
 ## References
 
