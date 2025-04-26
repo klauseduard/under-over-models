@@ -27,7 +27,6 @@
   - [Entropy as a Framework for Estimation Challenges](#entropy-as-a-framework-for-estimation-challenges)
   - [Entropy and Model Fitting](#entropy-and-model-fitting)
   - [Entropy and the Long Tail](#entropy-and-the-long-tail)
-  - [Entropy in Organizational Systems](#entropy-in-organizational-systems)
   - [Negentropy in Software Development](#negentropy-in-software-development)
   - [Practical Implications](#practical-implications)
 - [6.5 Bayesian Statistics and Uncertainty Management](#65-bayesian-statistics-and-uncertainty-management)
@@ -36,11 +35,11 @@
   - [Bayesian Decision Theory](#bayesian-decision-theory)
   - [Applications to Organizational and Project Management](#applications-to-organizational-and-project-management)
 - [6.6 Sociotechnical Systems Theory](#66-sociotechnical-systems-theory)
-  - [6.6.1 Understanding the Sociotechnical System as an Integrated
-    Whole](#661-understanding-the-sociotechnical-system-as-an-integrated-whole)
-  - [6.6.2 Historical Evolution of Sociotechnical Thinking](#662-historical-evolution-of-sociotechnical-thinking)
-  - [6.6.3 Implications for Organizational Models](#663-implications-for-organizational-models)
-  - [6.6.4 Application to AI-Integrated Organizations](#664-application-to-ai-integrated-organizations)
+  - [Understanding the Sociotechnical System as an Integrated Whole](#understanding-the-sociotechnical-system-as-an-integrated-whole)
+  - [Historical Evolution of Sociotechnical Thinking](#historical-evolution-of-sociotechnical-thinking)
+  - [Implications for Organizational Models](#implications-for-organizational-models)
+  - [Application to AI-Integrated Organizations](#application-to-ai-integrated-organizations)
+  - [Conway's Law and Communication Structures](#conways-law-and-communication-structures)
 - [6.7 Integration of Theoretical Perspectives](#67-integration-of-theoretical-perspectives)
 
 ## 6.1 Software Project Risks and Long Tail Distributions
@@ -51,14 +50,45 @@ a scenario where a large number of low-probability events can collectively have 
 
 ![Long tail](../images/long-tail.svg)
 
-### Common vs. Long-tail Risks ![Risk_distribution_in_software_projects](../images/risk_distribution_in_sw_projects.svg)
+### Common vs. Long-tail Risks
 
-### Impact on Estimation Models Simplified estimation models often fail by:
-- Focusing on average scenarios
-- Overlooking rare but high-impact events
-- Underestimating contingency needs
+In software development, risks typically follow a distinctive pattern:
 
-### Analogy to Underfitting Just as an underfit machine learning model fails to capture the full variability of the
+- **Common risks** are well-understood, frequently encountered challenges that most projects face, such as:
+  - Scope creep
+  - Staff turnover 
+  - Technical debt
+  - Communication issues
+  - Resource constraints
+
+- **Long-tail risks** are less frequent but potentially high-impact events that occur with lower probability but can severely disrupt projects, such as:
+  - Critical security vulnerabilities discovered late in development
+  - Unexpected regulatory changes
+  - Sudden market shifts requiring significant pivots
+  - Third-party dependencies becoming unavailable
+  - Novel technical challenges with no established solutions
+
+The distribution of these risks is not uniform—the common risks are predictable and often accounted for in planning, while long-tail risks form an extended "tail" of possibilities that are individually unlikely but collectively significant.
+
+![Risk distribution in software projects](../images/risk_distribution_in_sw_projects.svg)
+
+### Impact on Estimation Models 
+
+Simplified estimation models often fail to account for long-tail risks in several ways:
+
+- **Focus on average scenarios**: Traditional models typically consider "nominal" cases and common risks, ignoring the potential impact of rare events.
+
+- **Overlooking rare but high-impact events**: When estimation methods use historical data, they naturally emphasize frequently observed patterns while underrepresenting exceptional circumstances.
+
+- **Underestimating contingency needs**: Without accounting for the collective probability of long-tail events, contingency buffers are often inadequate to handle the actual variability encountered in projects.
+
+- **Insufficient risk categorization**: Many estimation approaches lump risks together rather than distinguishing between common risks (which can be managed with standard practices) and long-tail risks (which require different mitigation strategies).
+
+These limitations make most traditional estimation models prone to systematic underestimation of both project duration and complexity.
+
+### Analogy to Underfitting 
+
+Just as an underfit machine learning model fails to capture the full variability of the
 data, an estimation model that doesn't consider the wide range of potential, albeit less likely, risks will likely
 underestimate the total effort and duration required to complete the project successfully. When these "long-tail" events
 occur, the project is often significantly delayed and over budget, highlighting the inadequacy of the initial, underfit
@@ -247,7 +277,10 @@ Stafford Beer's Viable System Model (VSM) warrants deeper examination as it repr
 applications of cybernetic principles to organizational design. The VSM defines five essential systems required for
 organizational viability:
 
-<figure> <figcaption>Figure 6.X: The five systems of Beer's Viable System Model</figcaption> </figure>
+<figure> 
+  <img src="../images/vsm-model.svg" alt="The five systems of Beer's Viable System Model showing operations, coordination, control, intelligence, and policy components" width="700" />
+  <figcaption>Figure 6.3: The five systems of Beer's Viable System Model</figcaption> 
+</figure>
 
 1. **System 1: Operations** - The primary activities that deliver value. In a business, these might be production units,
 service delivery teams, or product divisions. Each System 1 unit is itself a viable system containing all five systems
@@ -371,31 +404,15 @@ project types and stages, potentially allowing for more precise risk assessment.
 
 The concepts of underfitting and overfitting can be reframed through entropy:
 
-#### Underfitting Through Entropy Lens Underfit models fail to capture the true entropy of the system:
-- They assume lower entropy (more predictability) than actually exists
-- They oversimplify by ignoring significant sources of uncertainty
-- They create a false sense of predictability by reducing apparent complexity
+- **Underfitting Through Entropy Lens**: Underfit models fail to capture the true entropy of the system by assuming lower entropy (more predictability) than actually exists, oversimplifying by ignoring significant sources of uncertainty, and creating a false sense of predictability by reducing apparent complexity.
 
-#### Overfitting Through Entropy Lens Overfit models misinterpret the sources of entropy:
-- They mistake random noise for signal
-- They create artificial patterns from limited historical data
-- They fail to generalize because they're tuned to specific entropy patterns from past projects
+- **Overfitting Through Entropy Lens**: Overfit models misinterpret the sources of entropy by mistaking random noise for signal, creating artificial patterns from limited historical data, and failing to generalize because they're tuned to specific entropy patterns from past projects.
 
 ![Entropy in Model Fitting](../images/entropy-model-fitting.svg)
 
 ### Entropy and the Long Tail
 
-The long tail distribution of software risks directly connects to entropy theory:
-- The unpredictable, rare events in the tail represent high-entropy elements
-- Traditional estimation focuses on low-entropy (common, predictable) events
-- Comprehensive models must account for the full entropy spectrum
-
-### Entropy in Organizational Systems
-
-Organizations as dissipative systems must manage entropy:
-- They require energy input to maintain order (counter increasing entropy)
-- They must balance between rigid structure (low entropy but brittle) and chaos (high entropy but adaptable)
-- AI-assisted development introduces new entropy variables into organizational systems
+The long tail distribution of software risks directly connects to entropy theory. The unpredictable, rare events in the tail represent high-entropy elements, while traditional estimation focuses on low-entropy (common, predictable) events. Comprehensive models must account for the full entropy spectrum.
 
 ### Negentropy in Software Development
 
@@ -425,39 +442,20 @@ entropy.
 
 5. **Process Refinement**: Iterative improvement of development processes reduces variability in outcomes.
 
-#### The Negentropy-Creativity Balance
+#### The Negentropy-Entropy Balance and Model Fitting
 
-While negentropy brings order and predictability, excessive focus on structure can stifle creativity and innovation. The
-most effective software organizations maintain what might be called "entropic flexibility"—enough structure to maintain
-coherence, but enough freedom to allow novel solutions.
-
-This dynamic balance parallels the underfitting-overfitting spectrum:
+The balance between negentropy (order) and entropy (uncertainty) directly parallels the underfitting-overfitting spectrum:
 - Too little negentropy (high disorder) → Chaos, unpredictability → Parallel to underfitting
 - Optimal negentropy balance → Productive creativity within structure → Well-calibrated models
 - Too much negentropy (rigid order) → Bureaucracy, inflexibility → Parallel to overfitting
 
-#### Negentropy and Estimation
-
-In the context of software estimation, negentropy-building activities can significantly improve model accuracy by:
-- Reducing variability in development processes
-- Creating more consistent, predictable workflows
-- Establishing clear boundaries for uncertainty
-- Building institutional knowledge that informs future estimates
-
-However, there is an important caveat: the *process* of creating negentropy (documentation, testing, etc.) must itself
-be accounted for in time estimates. Organizations sometimes underestimate projects because they ignore the time required
-for these critical uncertainty-reducing activities.
+In the context of software estimation, negentropy-building activities (documentation, testing, standardization) can significantly improve model accuracy by reducing variability in development processes and creating more consistent, predictable workflows. However, the *process* of creating this order must itself be accounted for in time estimates. Organizations sometimes underestimate projects because they ignore the time required for these critical uncertainty-reducing activities.
 
 ### Practical Implications
 
-Understanding entropy in software development enables:
-1. More realistic assessment of estimation limitations
-2. Better quantification of uncertainty in different project types
-3. Improved risk models that account for inherent unpredictability
-4. Development of estimation techniques that explicitly incorporate uncertainty measures
+Understanding entropy in software development enables more realistic assessment of estimation limitations, better quantification of uncertainty in different project types, improved risk models that account for inherent unpredictability, and development of estimation techniques that explicitly incorporate uncertainty measures.
 
-This entropy framework provides a theoretical basis for many practical observations throughout this book, from the
-challenges of time estimation (Chapter 2) to the optimization of organizational models (Chapters 7 and 8).
+This entropy framework provides a theoretical basis for many practical observations throughout this book, from the challenges of time estimation (Chapter 2) to the optimization of organizational models (Chapters 7 and 8).
 
 ## 6.5 Bayesian Statistics and Uncertainty Management
 
@@ -563,7 +561,7 @@ address both underfitting and overfitting in estimation models.
 
 ## 6.6 Sociotechnical Systems Theory
 
-### 6.6.1 Understanding the Sociotechnical System as an Integrated Whole
+### Understanding the Sociotechnical System as an Integrated Whole
 
 Organizations exist as complex sociotechnical systems where human, process, and technological elements interact
 continuously. To achieve optimal performance, these layers must be viewed as an integrated whole rather than isolated
@@ -574,7 +572,7 @@ components.
 The sociotechnical integration matrix above illustrates how different organizational elements interact across the social
 and technical dimensions, highlighting the interconnected nature of modern enterprises.
 
-### 6.6.2 Historical Evolution of Sociotechnical Thinking
+### Historical Evolution of Sociotechnical Thinking
 
 Sociotechnical systems theory emerged in the 1950s from research at the Tavistock Institute, which found that
 technological innovations alone were insufficient for performance improvement without considering the social systems in
@@ -586,7 +584,7 @@ organizational types, especially as digital technologies become increasingly emb
 theory provides a foundation for understanding how the relationship between people, processes, and technology creates
 emergent properties that cannot be understood by studying components in isolation.
 
-### 6.6.3 Implications for Organizational Models
+### Implications for Organizational Models
 
 The sociotechnical perspective offers several insights relevant to organizational modeling:
 
@@ -604,7 +602,7 @@ conditions change. This adaptability parallels the concepts from dissipative sys
 cannot be predicted by examining the components in isolation. This emergence is particularly relevant to understanding
 complexity in organizational models.
 
-### 6.6.4 Application to AI-Integrated Organizations
+### Application to AI-Integrated Organizations
 
 As AI capabilities become more central to organizational functions, sociotechnical systems theory becomes increasingly
 relevant. AI technologies interact with social systems in complex ways, potentially creating both reinforcing and
@@ -620,6 +618,56 @@ Key considerations include:
 The sociotechnical perspective provides a theoretical basis for many of the observations in Chapters 8 and 9 regarding
 AI's impact on organizational structures and human skill requirements. It emphasizes that effective integration requires
 attention to both the technical capabilities of AI systems and the social contexts in which they operate.
+
+### Conway's Law and Communication Structures
+
+Conway's Law represents a powerful application of sociotechnical systems theory to software development organizations. The law, articulated by Melvin Conway in 1967, observes that "organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations" (Skelton & Pais, 2020). While initially introduced in Chapter 3, Conway's Law warrants additional examination through the lens of decision-making structures and communication boundaries.
+
+A particularly counterintuitive insight from research on communication structures is that "fast flow requires restricting communication between teams" (Skelton & Pais, 2020). This principle challenges the common assumption that more communication invariably leads to better outcomes, suggesting instead that strategic boundaries between teams can enhance rather than impede organizational effectiveness.
+
+The decision of where to establish communication channels and where to maintain boundaries represents a critical strategic choice. Skelton and Pais (2020) distinguish between areas requiring discovery and expertise—where team collaboration is essential—and areas focused on execution, where excessive communication may become unnecessary overhead. This distinction provides a framework for designing more effective decision-making processes:
+
+1. **Discovery-focused domains**: These areas benefit from rich, multidirectional communication that facilitates exploration and knowledge-sharing. Decision processes in these domains should prioritize inclusive discussion, diverse perspectives, and collaborative problem-solving.
+
+2. **Execution-focused domains**: These areas benefit from clear boundaries and streamlined communication. Decision processes should emphasize clarity, efficiency, and autonomy within predefined parameters.
+
+Understanding this distinction allows organizations to design decision-making structures that align with the nature of the work being performed, avoiding both the waste of excessive coordination in execution-focused domains and the limitations of insufficient collaboration in discovery-focused domains.
+
+#### Conway's Law and Decision-Making Authority
+
+Conway's Law also informs how decision-making authority should be distributed throughout an organization. Since "organization design and software design are, in practice, two sides of the same coin" (Skelton & Pais, 2020), decisions about one inevitably affect the other. This interdependence has important implications for who should be involved in various types of decisions.
+
+Skelton and Pais (2020) argue that it is "very ineffective (perhaps irresponsible) for organizations that build software systems to decide on the shape, responsibilities, and boundaries of teams without input from technical leaders." This principle extends beyond software development to any complex system where technical and organizational elements are intertwined.
+
+The rationale for this approach is that technical leaders understand fundamental design concepts—such as interfaces, abstraction, encapsulation, and modularity—that are as relevant to organizational design as they are to technical systems. Excluding these perspectives from organizational decisions creates a risk of structural misalignment that undermines both organizational and technical effectiveness.
+
+This insight suggests that decision-making authority for organizational structure should be shared between technical and business leadership, rather than siloed within traditional hierarchies. Such collaborative decision-making models may require new governance structures and processes that facilitate effective integration of diverse perspectives.
+
+#### Strategic Implications of Conway's Law
+
+At a strategic level, Conway's Law transforms organization design from an operational function into a competitive advantage. By intentionally designing organizational structures to promote desired architectural patterns, leaders can make strategic decisions about the kinds of solutions their organizations are most likely to discover and implement.
+
+This approach reverses the traditional sequence, where business strategy drives system architecture, which in turn informs organizational structure. Instead, it recognizes that organizational structure shapes the solution space an organization can effectively explore, suggesting that structural decisions should be considered as part of strategy formulation rather than merely as implementation details.
+
+For decision-makers, this means that choices about organizational boundaries, team composition, and communication patterns are not merely administrative matters but strategic decisions with far-reaching implications for an organization's capabilities and competitive positioning. As Skelton and Pais (2020) note, "By considering the impact of Conway's law when designing software architectures and/or reorganizing team structures, you will be able to take advantage of the isomorphic force at play, which converges the software architecture and the team design."
+
+This strategic perspective on Conway's Law aligns with the underfitting/overfitting framework by recognizing that organizational structure is a key determinant of an organization's ability to manage complexity effectively. Decision-makers should therefore consider structural implications when evaluating whether a particular approach risks underfitting (through excessive simplification) or overfitting (through unnecessary complexity).
+
+#### Remote Work and the Evolution of Conway's Law
+
+The shift to remote and hybrid work environments has prompted a theoretical reconsideration of Conway's Law. Traditional interpretations focused primarily on formal organizational structures and physical proximity as the primary determinants of communication patterns. However, empirical research on distributed teams suggests that digital communication structures now play an equally significant—if not more dominant—role in shaping these patterns.
+
+Recent studies of remote work impacts reveal several key theoretical insights:
+
+1. **Digital Gravity Supersedes Physical Proximity**: In remote environments, the "pull" of digital spaces (like Slack channels, email distribution lists, and collaborative documents) exerts more influence on communication patterns than traditional organizational boundaries. This creates what can be termed "digital gravity wells" that reshape communication along lines that may not align with formal structures (Fowler, 2022).
+
+2. **Network Effects in Distributed Communication**: As documented in a Microsoft study of 60,000 employees during the shift to remote work, communication networks tend to become more static and clustered in remote settings (Yang et al., 2022). This network effect has theoretical implications for how information flows through organizations and how technical architectures subsequently form.
+
+3. **Asynchronous Bias and Decision Records**: The shift from synchronous to asynchronous communication creates a theoretical bias toward more documented, contract-based interactions between teams. This aligns with findings from the DORA State of DevOps Report (DevOps Research and Assessment, 2022), which notes that highly effective remote teams rely more heavily on documentation, particularly in loosely-coupled systems.
+
+4. **Trust Dynamics in Distributed Decision-Making**: The phenomenological study by Aguillon and Cronin-Gilmore (2024) revealed that remote work can strain trust between team members, with implications for how effectively they collaborate on technical decisions. This introduces a new variable into Conway's Law—the degree to which trust enables or constrains cross-boundary architectural decisions.
+
+These evolving theoretical perspectives suggest that Conway's Law remains valid in remote and hybrid environments, but its application requires a more nuanced understanding of how digital communication structures form and evolve. Organizations must now consider not only who reports to whom in the formal hierarchy but also who communicates with whom across digital channels—and how those patterns ultimately shape their technical architectures.
 
 ## 6.7 Integration of Theoretical Perspectives
 
@@ -637,5 +685,17 @@ These theories collectively suggest that effective organizational models must:
 
 In the subsequent chapters, we will examine how these theoretical perspectives manifest in specific organizational
 contexts, from medium-sized enterprises to healthcare systems to AI-augmented organizations.
+
+## References
+
+Aguillon, S., & Cronin-Gilmore, J. (2024). How Remote Work Changes Communication in Organizations. Journal of Behavioral and Applied Management, 24(3), 173-185.
+
+DevOps Research and Assessment. (2022). 2022 Accelerate State of DevOps Report. DORA. https://dora.dev/research/2022/dora-report/2022-dora-accelerate-state-of-devops-report.pdf
+
+Fowler, M. (2022, October 20). Conway's Law. martinfowler.com. https://martinfowler.com/bliki/ConwaysLaw.html
+
+Skelton, M., & Pais, M. (2020). Team Topologies: Organizing Business and Technology Teams for Fast Flow. IT Revolution Press.
+
+Yang, L., Holtz, D., Jaffe, S., Suri, S., Sinha, S., Weston, J., ... & Teevan, J. (2022). The effects of remote work on collaboration among information workers. Nature Human Behaviour, 6(1), 43-54.
 
 [Back to Table of Contents](../README.md)
