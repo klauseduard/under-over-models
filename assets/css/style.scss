@@ -58,6 +58,46 @@ header {
   font-size: 14px;
 }
 
+/* Auto-generated table of contents styling */
+.chapter-toc {
+  background-color: #f7f2e8;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.chapter-toc h2 {
+  margin-top: 0;
+  font-size: 1.3em;
+  color: #5c4b24;
+  border-bottom: 1px solid #e3dac9;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.auto-toc-list {
+  padding-left: 20px;
+}
+
+.auto-toc-list li {
+  margin-bottom: 5px;
+}
+
+.auto-toc-list ul {
+  padding-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.auto-toc-list a {
+  text-decoration: none;
+}
+
+.auto-toc-list a:hover {
+  text-decoration: underline;
+}
+
 /* Formula styling - ensure formulas start on their own line */
 .MathJax_Display {
   margin: 1.5em 0 !important;

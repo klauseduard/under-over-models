@@ -74,6 +74,14 @@
       </header>
       <section>
 
+      <!-- Auto-generate table of contents for chapters -->
+      {% if page.path contains 'chapters/' %}
+        <div class="chapter-toc">
+          <h2>Contents</h2>
+          <div id="auto-toc"></div>
+        </div>
+      {% endif %}
+
       {{ content }}
 
       </section>
@@ -85,5 +93,63 @@
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    
+    <!-- Script to auto-generate table of contents -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Only run on chapter pages
+        if (window.location.pathname.includes('/chapters/')) {
+          const tocDiv = document.getElementById('auto-toc');
+          const headings = document.querySelectorAll('h2, h3, h4');
+          
+          if (tocDiv && headings.length > 0) {
+            const toc = document.createElement('ul');
+            toc.className = 'auto-toc-list';
+            
+            let currentList = toc;
+            let previousLevel = 2;
+            
+            headings.forEach(heading => {
+              // Get the heading level (2 for h2, 3 for h3, etc.)
+              const level = parseInt(heading.tagName.substr(1));
+              
+              // Create id for the heading if it doesn't have one
+              if (!heading.id) {
+                heading.id = heading.textContent
+                  .toLowerCase()
+                  .replace(/[^\w\s-]/g, '')
+                  .replace(/\s+/g, '-');
+              }
+              
+              // Create the li element
+              const li = document.createElement('li');
+              const a = document.createElement('a');
+              a.href = '#' + heading.id;
+              a.textContent = heading.textContent;
+              li.appendChild(a);
+              
+              // Handle nesting of headings
+              if (level > previousLevel) {
+                // Create a nested list
+                const newList = document.createElement('ul');
+                currentList.lastChild.appendChild(newList);
+                currentList = newList;
+              } else if (level < previousLevel) {
+                // Go back up to the parent list
+                for (let i = 0; i < previousLevel - level; i++) {
+                  currentList = currentList.parentNode.parentNode;
+                }
+              }
+              
+              // Add the li to the current list
+              currentList.appendChild(li);
+              previousLevel = level;
+            });
+            
+            tocDiv.appendChild(toc);
+          }
+        }
+      });
+    </script>
   </body>
 </html> 
