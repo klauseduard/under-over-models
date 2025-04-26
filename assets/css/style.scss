@@ -21,6 +21,31 @@ section {
   width: 620px;
 }
 
+/* Publication date and version information */
+.publication-date {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.version-note {
+  margin-top: 5px;
+  font-style: italic;
+  color: #856404;
+}
+
+/* Chapter metadata */
+.chapter-metadata {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #e3dac9;
+}
+
+.chapter-date {
+  font-size: 14px;
+  color: #6e6e6e;
+}
+
 /* Draft and completed indicators for navigation */
 .draft-indicator {
   font-size: 11px;

@@ -43,7 +43,7 @@
           
           <h3>Chapters</h3>
           <ol class="chapters-nav">
-            <li><a href="{{ '/chapters/01-introduction.html' | absolute_url }}">Introduction</a> <span class="draft-indicator">Draft</span></li>
+            <li><a href="{{ '/chapters/01-introduction.html' | absolute_url }}">Introduction</a> <span class="completed-indicator">✓</span></li>
             <li><a href="{{ '/chapters/02-software-time-estimation.html' | absolute_url }}">Software Time Estimation</a> <span class="completed-indicator">✓</span></li>
             <li><a href="{{ '/chapters/03-organizational-models.html' | absolute_url }}">Organizational Models</a> <span class="draft-indicator">Draft</span></li>
             <li><a href="{{ '/chapters/04-stakeholder-preferences.html' | absolute_url }}">Stakeholder Preferences</a> <span class="draft-indicator">Draft</span></li>
@@ -75,7 +75,7 @@
       <section>
 
       <!-- Show draft banner for incomplete chapters -->
-      {% if page.path contains 'chapters/' and page.path != 'chapters/02-software-time-estimation.md' %}
+      {% if page.path contains 'chapters/' and page.path != 'chapters/02-software-time-estimation.md' and page.path != 'chapters/01-introduction.md' %}
         <div class="draft-banner">
           <strong>⚠️ DRAFT</strong> - This chapter is a work in progress and may contain incomplete or unedited content.
           <a href="{{ '/' | absolute_url }}">Return to the home page</a> for completed chapters.
@@ -85,6 +85,9 @@
       <!-- Show chapter metadata if available -->
       {% if page.path contains 'chapters/' %}
         <div class="chapter-metadata">
+          {% if page.path == 'chapters/01-introduction.md' %}
+            <div class="chapter-date">Last updated: <strong>April 2025</strong></div>
+          {% endif %}
           {% if page.path == 'chapters/02-software-time-estimation.md' %}
             <div class="chapter-date">Last updated: <strong>April 2025</strong></div>
           {% endif %}
