@@ -1,68 +1,52 @@
 # Interactive Visualizations and Tools
 
-This page provides easy access to all the interactive visualizations, calculators, and tools available in this publication. These tools are designed to help you explore concepts more deeply and apply them to your own scenarios.
+This page collects all the interactive visualizations, calculators, and tools available in this publication. Use these to explore concepts hands-on and experiment with different scenarios.
 
-## Estimation Tools
+## Interactive Simulators and Tools
 
-### [Three-Point Estimation Calculator](html/three_point_estimation_calculator.html)
+### Estimation and Planning Tools
 
-This interactive calculator allows you to:
-- Input optimistic, most likely, and pessimistic estimates
-- See immediate calculations of expected duration and standard deviation
-- Compare PERT vs. Triangular distribution methods
-- Visualize confidence intervals for your estimates
+- **[Three-Point Estimation Calculator](html/three_point_estimation_calculator.html)** - Calculate expected duration and standard deviation from optimistic, most likely, and pessimistic estimates.
 
-<div class="tool-preview">
-    <img src="images/three-point-estimation.svg" alt="Three-Point Estimation" width="400">
-</div>
+- **[Monte Carlo Project Simulation](html/monte_carlo_demo.html)** - See how Monte Carlo simulation generates probability-based forecasts for project timelines.
 
-### [Monte Carlo Project Simulation](html/monte_carlo_demo.html)
+- **[Bayesian Project Estimation](html/bayesian_estimation.html)** - Observe how estimates evolve as new information becomes available during a project.
 
-Explore how Monte Carlo simulation works in project estimation:
-- See how task distributions combine to create project forecasts
-- Understand how correlations between tasks affect outcomes
-- Generate probability-based completion dates
-- Visualize sensitivity analysis of project parameters
+### Systems Theory and Entropy Tools
 
-<div class="tool-preview">
-    <img src="images/monte-carlo-simulation.svg" alt="Monte Carlo Simulation Process" width="400">
-</div>
+- **[Dissipative Systems & Organizational Dynamics](html/dissipative_sys_and_org_dynamics.html)** - Adjust variables like turbulence, resource flow, and connectivity to see how organizational systems respond.
 
-### [Bayesian Project Estimation](html/bayesian_estimation.html)
+- **[Entropy and Negentropy in Software](html/entropy_in_software.html)** - Toggle between practices like documentation and testing to see how they counteract entropy in software.
 
-Watch how Bayesian estimation evolves through a project lifecycle:
-- See probability distributions narrow as confidence increases
-- Observe how new information updates prior estimates
-- Compare initial distributions with posterior distributions
-- Understand the mathematical basis for Bayesian updating
+- **[Generative Entropy & Innovation Simulator](html/generative_entropy_simulator.html)** - Find the sweet spot between order and chaos that maximizes innovation potential.
 
-<div class="tool-preview">
-    <img src="images/bayesian-estimation-update.svg" alt="Bayesian Estimation Process" width="400">
-</div>
+- **[Long Tail Risk Visualization](html/long_and_fat_tail_risks.html)** - Manipulate risk distributions to understand their impact on project outcomes.
 
 ## Key Concept Visualizations
 
-Throughout the publication, you'll find various visualizations that illustrate important concepts:
+These static visualizations help illustrate important concepts:
 
-1. **[Estimation Biases](chapters/02-software-time-estimation.md#estimation-biases)** - Understanding factors that influence optimistic, most likely, and pessimistic estimates
-2. **[Under vs. Over Estimation Tendencies](chapters/02-software-time-estimation.md#three-point-estimation-practical-uncertainty-modeling)** - Factors leading to different types of estimation errors
-3. **[Estimation Spectrum](chapters/02-software-time-estimation.md#bridging-simple-and-complex-approaches)** - Progression from simplistic to sophisticated approaches
-4. **[Long Tail of Project Risks](chapters/02-software-time-estimation.md#long-tail-of-software-project-risks)** - Distribution of risk frequency and impact
-   - **[Interactive Long Tail Risk Visualization](html/long_and_fat_tail_risks.html)** - Explore how common vs. rare risks affect project estimation and outcomes
-5. **[AI Productivity Variance](chapters/02-software-time-estimation.md#225-estimating-ai-assisted-development-new-uncertainties)** - Comparing development time across task types with AI assistance
-6. **[Dissipative Systems & Organizational Dynamics](html/dissipative_sys_and_org_dynamics.html)** - Interactive simulation showing how organizations function as dissipative systems under varying conditions of environmental turbulence, resource flow, and connectivity
-7. **[Entropy and Negentropy in Software](html/entropy_in_software.html)** - Interactive demonstration of how entropy increases in software systems over time and how negentropy-building practices can counteract it
-8. **[Generative Entropy & Innovation Simulator](html/generative_entropy_simulator.html)** - Explore how the balance between order and chaos affects innovation potential and execution capability, and how the innovation cycle moves through different entropy states
+### Estimation Concepts
 
-## How to Use These Tools
+- **[Estimation Biases](chapters/02-software-time-estimation.md#estimation-biases)** - Factors that influence optimistic, most likely, and pessimistic estimates
 
-Each tool opens in a new page and is fully interactive. They are designed to:
-- Provide hands-on exploration of concepts discussed in the text
-- Allow you to input your own parameters and see results
-- Help visualize complex statistical concepts
-- Serve as practical aids for your own estimation and planning
+- **[Under vs. Over Estimation Tendencies](chapters/02-software-time-estimation.md#three-point-estimation-practical-uncertainty-modeling)** - Common causes of different estimation errors
 
-We recommend experimenting with different inputs to build intuition about how these models behave under various scenarios.
+- **[Estimation Spectrum](chapters/02-software-time-estimation.md#bridging-simple-and-complex-approaches)** - The progression from simple to sophisticated estimation approaches
+
+- **[Long Tail of Project Risks](chapters/02-software-time-estimation.md#long-tail-of-software-project-risks)** - How risk frequency and impact are distributed
+
+- **[AI Productivity Variance](chapters/02-software-time-estimation.md#225-estimating-ai-assisted-development-new-uncertainties)** - How AI assistance affects development time across different task types
+
+## Using These Tools
+
+Each interactive tool opens in a new page. You can:
+- Input your own parameters to test different scenarios
+- Build intuition for complex concepts through hands-on exploration
+- Apply these models to your own estimation and planning challenges
+- See how changes to one variable affect overall system behavior
+
+Experiment with different inputs to develop a better feel for how these systems behave in various situations.
 
 <style>
 .tool-preview {
