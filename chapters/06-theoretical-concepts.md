@@ -69,6 +69,8 @@ In software development, risks typically follow a distinctive pattern:
 
 The distribution of these risks is not uniform—the common risks are predictable and often accounted for in planning, while long-tail risks form an extended "tail" of possibilities that are individually unlikely but collectively significant.
 
+Within this distribution, we can further distinguish between standard long-tail risks and **fat-tail risks**. Fat-tail distributions (also known as heavy-tailed distributions) feature events with dramatically outsized impacts that occur with higher probability than would be predicted by normal or even standard power-law distributions. These "black swan" events can single-handedly dominate the entire risk landscape. While long-tail risks represent uncommon but notable events, fat-tail risks represent truly extreme outliers with catastrophic potential—such as critical security breaches that expose customer data, total system failures in high-availability environments, or fundamental architectural flaws discovered late in development.
+
 ![Risk distribution in software projects](../images/risk_distribution_in_sw_projects.svg)
 
 ### Impact on Estimation Models 

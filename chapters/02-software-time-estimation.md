@@ -272,9 +272,9 @@ Monte Carlo simulation directly counters underfitting in several ways:
 
 1. **Capturing complexity**: Models intricate task dependencies that simple formulas cannot express
 2. **Revealing hidden risks**: Exposes "fat tails" in completion probabilities that deterministic methods ignore
+   - **Fat tails** are probability distributions where extreme events (those in the "tail" of the distribution) occur with significantly higher probability than would be predicted by normal distributions. Unlike standard long-tail distributions, fat-tail distributions feature truly catastrophic outliers that can single-handedly dominate outcomes. In software projects, fat-tail events might include critical security vulnerabilities requiring complete redesign, fundamental algorithmic flaws discovered late in testing, or unexpected regulatory changes that invalidate core assumptions.
 3. **Quantifying uncertainty precisely**: Provides percentile-based estimates (e.g., P50, P90) rather than single values
-4. **Integrating multiple risk factors**: Combines schedule, resource, and complexity uncertainties into unified
-distributions
+4. **Integrating multiple risk factors**: Combines schedule, resource, and complexity uncertainties into unified distributions
 
 Traditional approaches underfit reality by ignoring the compounding effect of multiple uncertainties interacting in
 complex ways. In contrast, Monte Carlo methods can model these systemic interactions without requiring simplistic
@@ -646,9 +646,11 @@ These might include:
 - Unexpected dependencies on other teams or systems
 - Significant changes in requirements late in the project
 
+In certain high-risk or complex projects, we may also encounter **fat-tail distributions** of risk, where extreme events occur with much higher probability than would be predicted by standard statistical models. These fat-tail risks (explored in detail in [Chapter 6](06-theoretical-concepts.md#61-software-project-risks-and-long-tail-distributions)) represent truly catastrophic outliers—not merely uncommon events, but "black swan" events with the potential to derail entire projects. Fat-tail risks in software projects might include mission-critical security breaches, fundamental flaws in core architectural assumptions, or severe compatibility issues discovered only in production environments.
+
 Estimation models that primarily focus on typical tasks and average scenarios often fail to incorporate contingencies
 for these "long-tail" risks, leading to underestimation of the overall project effort and potential for delays when
-these unforeseen events materialize.
+these unforeseen events materialize. The problem becomes even more severe when fat-tail risks are present but unaccounted for in planning.
 
 From an [information entropy](06-theoretical-concepts.md#63-entropy-and-software-complexity) standpoint, these rare but
 high-impact events represent high-entropy elements in the project risk distribution. Traditional estimation models focus
