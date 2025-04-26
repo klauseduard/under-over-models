@@ -6,8 +6,7 @@
   - [Common vs. Long-tail Risks](#common-vs-long-tail-risks)
   - [Impact on Estimation Models](#impact-on-estimation-models)
   - [Analogy to Underfitting](#analogy-to-underfitting)
-- [6.2 Dissipative Systems Theory and Organizational
-  Dynamics](#62-dissipative-systems-theory-and-organizational-dynamics)
+- [6.2 Dissipative Systems Theory and Organizational Dynamics](#62-dissipative-systems-theory-and-organizational-dynamics)
   - [Core Concepts](#core-concepts)
   - [Organizational Parallels](#organizational-parallels)
   - [Self-Organization and Complexity](#self-organization-and-complexity)
@@ -99,12 +98,16 @@ estimation.
 [Dissipative systems theory](https://en.wikipedia.org/wiki/Dissipative_system) offers a valuable framework for
 understanding organizational dynamics, stability, adaptation, and complexity management.
 
-### Core Concepts A dissipative system is characterized by:
+### Core Concepts
+
+A dissipative system is characterized by:
 - [Open system](https://en.wikipedia.org/wiki/Open_system_(systems_theory)) properties
 - Energy and matter exchange with environment
 - Operation far from  [thermodynamic equilibrium](https://www.britannica.com/science/thermodynamic-equilibrium)
 
-### Organizational Parallels Organizations mirror dissipative systems through:
+### Organizational Parallels
+
+Organizations mirror dissipative systems through:
 - Constant environmental interaction
 - Input/output exchanges
 - Dynamic equilibrium maintenance
@@ -119,7 +122,9 @@ understanding organizational dynamics, stability, adaptation, and complexity man
 
 ![Organization as Dissipative System](../images/org-as-dissipative-sys.svg)
 
-### Self-Organization and Complexity The theory suggests that:
+### Self-Organization and Complexity
+
+The theory suggests that:
 - Order and complexity emerge through self-organization
 - Systems must maintain state far from equilibrium
 - Balance between stability and adaptation is crucial
@@ -158,7 +163,9 @@ maintain appropriate complexity across changing conditions.
 > stitching the two together the authors argue we can describe the full cycle of organisational evolution—from small
 > process tweaks to culture‑level upheavals—within the same conceptual frame.
 
-### Balance Through Dissipative Systems Principles Successful organizations need to:
+### Balance Through Dissipative Systems Principles
+
+Successful organizations need to:
 1. Maintain appropriate complexity levels
 2. Function efficiently while remaining adaptable
 3. Engage in continuous:
@@ -188,7 +195,9 @@ while remaining flexible enough to adapt to changes—a hallmark of appropriatel
 Modern research suggests that many biological and social systems naturally evolve toward this critical state, suggesting
 there may be fundamental principles driving systems toward appropriate complexity levels over time.
 
-### Avoiding Extremes Organizations must navigate between:
+### Avoiding Extremes
+
+Organizations must navigate between:
 - Oversimplification (underfitting)
 - Excessive specialization (overfitting)
 
