@@ -74,7 +74,7 @@ focused on software development, [Domain-Driven Design](https://www.domainlangua
 tools for managing complexity by aligning team boundaries with domain boundaries. Similarly, [Team Topologies](https://teamtopologies.com/) 
 by Skelton and Pais ([2019](https://teamtopologies.com/book)) directly addresses the relationship between team structure and system architecture (discussed further as "Conway's Law" in Section 3.4) by intentionally designing team structures to produce 
 desired system architectures through well-defined team types and interaction patterns. Team Topologies provides specific organizational patterns focused on optimizing team cognitive load and interaction modes, which we explore in detail in Section 3.5.2. Other approaches like 
-the [Spotify Model](https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf) and scaled agile frameworks (SAFe, LeSS) address organizational structure but with less emphasis on 
+the [Spotify Model](https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf) and scaled agile frameworks ([SAFe](https://www.scaledagileframework.com/), [LeSS](https://less.works/)) address organizational structure but with less emphasis on 
 software architecture alignment. The Viable System Model (covered in Section 3.3.7) also provides 
 cybernetic principles for organizational design.
 
@@ -183,6 +183,8 @@ adequately address the necessary complexity of the organization's environment an
   - Unexpected challenges (lacking the mechanisms to analyze and respond effectively)
 
 ![Organizational complexity tradeoffs](../images/org-complexity-tradeoffs.svg)
+
+> **Interactive Tool**: Explore the [Organizational Complexity Tradeoffs visualization](../html/org_under_over_tradeoffs.html). Adjust the complexity slider to see how characteristics like responsiveness, adaptability, coordination overhead, and risk change across the underfitting-overfitting spectrum.
 
 ### 3.3.2 Overfitting in Organizational Models
 
@@ -352,6 +354,8 @@ challenges. The practical implications of these concepts have led to various fra
 
 For a more comprehensive exploration of entropy concepts and their application to organizational systems, see [Chapter 6](../chapters/06-theoretical-concepts.md),
 which examines information entropy, negentropy, and related theoretical frameworks in greater depth.
+
+> **Interactive Tool**: Explore an [interactive visualization of organizational entropy and negentropy](../html/organizational_entropy.html). This tool allows you to adjust the balance between order and flexibility and observe the simulated impact on organizational particles.
 
 ### 3.3.6 Dissipative Systems Theory and Organizational Adaptation
 
