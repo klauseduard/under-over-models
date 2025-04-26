@@ -128,7 +128,9 @@ These structures stand in direct contrast to the Organic structures described in
 - Facilitate deep specialization within different functional areas.
 - Provide clear control and coordination for large, diverse operations.
 - Often necessary for large, established corporations with diverse product lines or global reach, allowing focused
-  management (e.g., divisional structures). Large corporations often adopt complex structures, and firm size often correlates with Management Information Systems (MIS) centralization, suggesting a tendency towards complexity in certain aspects for larger organizations.
+  management (e.g., divisional structures).
+  
+  Large corporations often adopt complex structures, and firm size often correlates with Management Information Systems (MIS) centralization, suggesting a tendency towards complexity in certain aspects for larger organizations.
 
 - [Matrix Organizations](https://asana.com/resources/matrix-organization), while sometimes used in startups, represent a complex model with dual reporting and cross-functional teams. **Matrix Organizations** feature overlapping lines of authority where employees report to both functional managers (specialized by function like marketing or engineering) and project/product managers (focused on specific projects or products). This dual reporting structure creates a grid or "matrix" that increases complexity but can enhance cross-functional collaboration.
 
@@ -156,33 +158,27 @@ Organizations must choose a position on the complexity spectrum based on their s
 
 The figure below illustrates organizational structures at different points on this complexity continuum, though it primarily contrasts two ends of the spectrum rather than showing the full range of intermediate possibilities. 
 
+![Complexity Spectrum](../images/complexity-spectrum.svg)
+
 One way to understand these different organizational forms is through information theory concepts (explored further in Section 3.3.5 and [Chapter 6](../chapters/06-theoretical-concepts.md)). In this framework, simpler organizational structures typically exhibit higher entropy – they have fewer formal constraints and rules, allowing for more emergent, unpredictable interactions and greater adaptability. Conversely, more complex structures demonstrate higher negentropy through formal procedures, defined roles, and explicit coordination mechanisms that create order and predictability.
 
 This entropy perspective matters because it helps explain organizational behaviors beyond mere structural descriptions. When organizations face increased environmental complexity, those with simpler structures may struggle to coordinate responses (insufficient negentropy), while overly complex organizations may fail to adapt quickly enough (excessive negentropy restricting information flow). This isn't an absolute relationship – a startup might intentionally maintain higher entropy to promote innovation, while a nuclear power plant requires high negentropy for safety regardless of size or environment.
 
 Emerging technologies, particularly AI, may influence where organizations position themselves on this spectrum. As explored in [Chapter 8](../chapters/08-ai-organizational-impact.md), AI tools can potentially enable flatter hierarchies by automating coordination activities and enhancing information flow, while simultaneously introducing new considerations for organizational design as human-AI collaboration evolves. Chapter 8 provides a comprehensive examination of these AI impacts, while this chapter focuses on the fundamental organizational models that will be affected by these technological changes.
 
-![Complexity Spectrum](../images/complexity-spectrum.svg)
-
 ## 3.3 Understanding and Addressing Underfitting and Overfitting in Organizational Models
 
 ### 3.3.1 Underfitting in Organizational Models
 
 Overly simplistic and standardized organizational models can be characterized as underfitting when they fail to
-adequately address the necessary complexity of the organization's environment and tasks.
-
-#### Benefits of Simplicity
-- Enhanced responsiveness
-- Improved efficiency
-- Reduced bureaucracy
+adequately address the necessary complexity of the organization's environment and tasks. While the simplicity described in Section 3.2.1 offers advantages, taking it too far leads to significant risks:
 
 #### Risks of Oversimplification
-- Lack of flexibility
-- Reduced adaptability
+- Reduced adaptability (due to lack of internal variety, sensing mechanisms, or capacity to execute change)
 - Difficulty handling:
-  - Diverse situations
-  - Unique customer requirements
-  - Unexpected challenges
+  - Diverse situations (due to standardized processes and lack of differentiated responses)
+  - Unique customer requirements (often requiring specialization or processes not present in simple models)
+  - Unexpected challenges (lacking the mechanisms to analyze and respond effectively)
 
 ![Organizational complexity tradeoffs](../images/org-complexity-tradeoffs.svg)
 
