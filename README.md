@@ -1,6 +1,12 @@
 # Underfitting and Overfitting in Software Development and Organizational Models
 
-This repository started out as an attempt to analyse analogies between underfitting and overfitting as they are used in machine learning and mathematical modelling, and their applications in software development and organizational models.
+This repository contains a publication exploring analogies between underfitting and overfitting as they are used in machine learning and mathematical modeling, and their applications in software development and organizational models.
+
+## Publication Status: Work In Progress
+
+> **Note**: This publication is currently under active development. Only Chapter 2 (Software Time Estimation) is fully edited and ready for reading. Other chapters are in various stages of development and may contain incomplete content.
+>
+> **📚 [View the publication website](https://klauseduard.github.io/under-over-models/)** for the properly formatted content.
 
 ## Motivation and Perspective
 
@@ -14,9 +20,26 @@ This "monograph" as my AI assistant called it, uses the machine learning concept
 
 A further motivation is to explore how different kinds of organizations might evolve in response to AI advances, with particular focus on those producing software. Despite the increasing capabilities of AI systems in code generation and software development tasks, they do not eliminate the need for software-producing organizations. Rather, they transform how these organizations operate, shifting the nature of human contributions and potentially reshaping organizational structures, team dynamics, and development methodologies.
 
-This exploration has practical implications: how should existing organizations adapt to AI-driven changes? What guidance should consultancies provide to clients navigating this transition? Is it more feasible to build new AI-native organizations from scratch than to transform established ones? And perhaps most importantly, how significant are AI-driven organizational changes compared to other environmental factors that organizations regularly adapt to? These questions affect not just organizational leadership, but every technology and software engineering practitioner who should be interested in what the future holds for their profession, which skills will remain valuable, and where to focus their efforts and professional development in the coming years.
+## Available Chapters
 
-Underlying this work is also an examination of the limits of compromise. The balance between underfitting and overfitting inherently involves navigating trade-offs between competing concerns—simplicity versus accuracy, generality versus specificity, rigidity versus flexibility. In organizational contexts, effective compromise requires all parties to share an understanding of some fundamental principles. 
+Only the following chapter is currently ready for reading:
+
+- ✅ **[Chapter 2: Underfitting and Overfitting in Software Time Estimation](chapters/02-software-time-estimation.md)**
+- ✅ **[Interactive Visualizations & Tools](visualizations.md)**
+
+## In-Progress Chapters (Drafts)
+
+The following chapters are still being developed and may contain incomplete content:
+
+- 🚧 [Chapter 1: Introduction](chapters/01-introduction.md) (Draft)
+- 🚧 [Chapter 3: Organizational Models](chapters/03-organizational-models.md) (Draft)
+- 🚧 [Chapter 4: Stakeholder Preferences](chapters/04-stakeholder-preferences.md) (Draft)
+- 🚧 [Chapter 5: Influence of Organizational Size](chapters/05-organizational-size-influence.md) (Draft)
+- 🚧 [Chapter 6: Related Theoretical Concepts](chapters/06-theoretical-concepts.md) (Draft)
+- 🚧 [Chapter 7: Medical Information Systems Case](chapters/07-medical-systems-case.md) (Draft)
+- 🚧 [Chapter 8: AI Organizational Impact](chapters/08-ai-organizational-impact.md) (Draft)
+- 🚧 [Chapter 9: AI: Theory and Practice](chapters/09-ai-people-theory-practice.md) (Draft)
+- 🚧 [Chapter 10: Conclusion](chapters/10-conclusion.md) (Draft)
 
 ## About This Publication
 
@@ -24,20 +47,6 @@ Underlying this work is also an examination of the limits of compromise. The bal
 
 Full disclosure: AI tools (Claude and Gemini) helped generate much of this content. But don't worry - a real human directed the whole show, contributed knowledge, rejected bad references, fixed missteps, and even had to wrestle with SVG layout details as you can guess from the visualizations not yet polished.
 
-### Status
+### Development Status
 
-In progress. This started as something composed over a long weekend to satisfy an intellectual urge, and continues to evolve (perhaps and hopefully).
-
-## Contents
-
-### Chapters
-1. [Introduction](chapters/01-introduction.md)
-2. [Underfitting and Overfitting in Software Time Estimation](chapters/02-software-time-estimation.md)
-3. [Underfitting and Overfitting in Organizational Models](chapters/03-organizational-models.md)
-4. [Stakeholder Preferences and Model Complexity](chapters/04-stakeholder-preferences.md)
-5. [Influence of Organizational Size and Type](chapters/05-organizational-size-influence.md)
-6. [Related Theoretical Concepts](chapters/06-theoretical-concepts.md)
-7. [Context-Specific Case: Medical Information Systems](chapters/07-medical-systems-case.md)
-8. [AI Organizational Impact](chapters/08-ai-organizational-impact.md)
-9. [AI: Theory and Practice for People](chapters/09-ai-people-theory-practice.md)
-10. [Conclusion](chapters/10-conclusion.md)
+This project began as intellectual exploration over a long weekend and continues to evolve. Contributions, suggestions, and discussions are welcome!

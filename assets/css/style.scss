@@ -21,6 +21,29 @@ section {
   width: 620px;
 }
 
+/* Draft banner for incomplete chapters */
+.draft-banner {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.draft-banner a {
+  color: #775c11;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.draft-banner a:hover {
+  color: #5c470d;
+}
+
 /* Typography improvements for readability */
 p {
   margin-bottom: 1.5em;
@@ -261,5 +284,9 @@ blockquote {
   
   section {
     width: 100% !important;
+  }
+  
+  .draft-banner {
+    display: none !important;
   }
 } 

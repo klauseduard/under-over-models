@@ -76,6 +76,14 @@
       </header>
       <section>
 
+      <!-- Show draft banner for incomplete chapters -->
+      {% if page.path contains 'chapters/' and page.path != 'chapters/02-software-time-estimation.md' %}
+        <div class="draft-banner">
+          <strong>⚠️ DRAFT</strong> - This chapter is a work in progress and may contain incomplete or unedited content.
+          <a href="{{ '/' | absolute_url }}">Return to the home page</a> for completed chapters.
+        </div>
+      {% endif %}
+
       <!-- Auto-generate table of contents for chapters -->
       {% if page.path contains 'chapters/' %}
         <div class="chapter-toc">
