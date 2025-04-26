@@ -1,6 +1,8 @@
 # Underfitting and Overfitting in Software Development
 
-This publication explores the concepts of underfitting and overfitting as they apply to software development and organizational models. These analytical frameworks from machine learning provide powerful lenses through which to examine estimation techniques, organizational structures, and decision-making processes.
+This repository contains a publication exploring how concepts like underfitting
+and overfitting as they are used in machine learning and mathematical modeling,
+help us understand various problems of in software development field.
 
 <div class="publication-info">
   <p>Initial Release: April 2025 | Last Updated: April 2025</p>
@@ -30,6 +32,14 @@ Currently, the following chapters are fully edited and ready for reading:
   </div>
 </div>
 
+<div class="completed-chapter">
+  <h3><a href="chapters/06-theoretical-concepts.html">Chapter 6: Related Theoretical Concepts</a></h3>
+  <p>An exploration of theoretical concepts that support the underfitting/overfitting framework, including long tail distributions, dissipative systems theory, cybernetics, entropy, Bayesian statistics, and sociotechnical systems theory.</p>
+  <div class="chapter-metadata">
+    <span class="chapter-date">Last updated: April 2025</span>
+  </div>
+</div>
+
 ## Work in Progress
 
 <div class="wip-notice">
@@ -43,7 +53,6 @@ Currently, the following chapters are fully edited and ready for reading:
       <li><a href="chapters/03-organizational-models.html">Chapter 3: Organizational Models</a> (Draft)</li>
       <li><a href="chapters/04-stakeholder-preferences.html">Chapter 4: Stakeholder Preferences</a> (Draft)</li>
       <li><a href="chapters/05-organizational-size-influence.html">Chapter 5: Organizational Size Influence</a> (Draft)</li>
-      <li><a href="chapters/06-theoretical-concepts.html">Chapter 6: Theoretical Concepts</a> (Draft)</li>
       <li><a href="chapters/07-medical-systems-case.html">Chapter 7: Medical Systems Case</a> (Draft)</li>
       <li><a href="chapters/08-ai-organizational-impact.html">Chapter 8: AI Organizational Impact</a> (Draft)</li>
       <li><a href="chapters/09-ai-people-theory-practice.html">Chapter 9: AI: Theory and Practice</a> (Draft)</li>
