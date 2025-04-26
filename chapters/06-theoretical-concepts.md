@@ -217,19 +217,19 @@ While maintaining:
 
 ## 6.3 Cybernetics and Control Systems
 
-Cybernetics—the study of regulatory and control mechanisms in biological and mechanical systems, pioneered by Norbert Wiener in the 1940s — provides a powerful framework for understanding organizational complexity and management. While initially developed for mechanical and biological systems, cybernetic principles offer valuable insights into organizational dynamics.
+[Cybernetics](https://en.wikipedia.org/wiki/Cybernetics)—the study of regulatory and control mechanisms in biological and mechanical systems, pioneered by [Norbert Wiener](https://en.wikipedia.org/wiki/Norbert_Wiener) in the 1940s — provides a powerful framework for understanding organizational complexity and management. While initially developed for mechanical and biological systems, cybernetic principles offer valuable insights into organizational dynamics.
 
 
 ### Feedback Loops and System Regulation
 
-At the core of cybernetics are feedback loops in two fundamental forms:
+At the core of cybernetics are [feedback loops](https://en.wikipedia.org/wiki/Feedback) in two fundamental forms:
 
-1. **Negative (balancing) feedback loops** reduce deviation from a target state, creating stability:
+1. **[Negative (balancing) feedback loops](https://en.wikipedia.org/wiki/Negative_feedback)** reduce deviation from a target state, creating stability:
    - A thermostat maintaining room temperature
    - Bug triage processes keeping defect counts within acceptable ranges
    - Resource allocation mechanisms balancing workloads
 
-2. **Positive (reinforcing) feedback loops** amplify deviations, creating either growth or decline:
+2. **[Positive (reinforcing) feedback loops](https://en.wikipedia.org/wiki/Positive_feedback)** amplify deviations, creating either growth or decline:
    - Viral adoption of new technologies
    - Technical debt accumulation
    - Burnout cycles in teams
@@ -238,7 +238,7 @@ Complex adaptive systems typically contain multiple interconnected feedback loop
 
 ### The Law of Requisite Variety
 
-The Law of Requisite Variety, formulated by Ross Ashby, states that a control system must have at least as much variety (potential states) as the system it aims to control. In practical terms, this means:
+The [Law of Requisite Variety](https://en.wikipedia.org/wiki/Variety_(cybernetics)), formulated by [Ross Ashby](https://en.wikipedia.org/wiki/W._Ross_Ashby), states that a control system must have at least as much variety (potential states) as the system it aims to control. In practical terms, this means:
 
 1. **Complexity matching**: Management systems must match the complexity of what they're managing
 2. **Variety amplification**: Strategies to increase managerial capacity (frameworks, tools, automation)
@@ -246,17 +246,10 @@ The Law of Requisite Variety, formulated by Ross Ashby, states that a control sy
 
 Organizations face a fundamental tension: simplifying control mechanisms improves efficiency but reduces adaptability—creating a critical balance between order and flexibility.
 
-An effective organization uses feedback to learn and adapt. The integration of AI, as discussed further in Chapter 8,
-can significantly enhance these cybernetic functions by providing more sophisticated monitoring, faster data analysis,
-and automated feedback mechanisms. However, it also introduces new challenges for control and adaptation, particularly
-concerning the transparency of AI-driven feedback and the management of complex human-AI interactions within these
-loops. Underfitting, in this context, can represent weak or ignored feedback loops (human or AI-driven) leading to poor
-adaptation, while overfitting might represent overly rigid control mechanisms (potentially exacerbated by poorly
-designed AI) that stifle necessary adjustments based on environmental feedback.
 
 ### Cybernetic Hierarchy and Viable System Model
 
-The Viable System Model (VSM), developed by Stafford Beer, provides a cybernetic approach to organizational design based on how biological organisms maintain viability. The VSM describes five essential system functions:
+The [Viable System Model (VSM)](https://en.wikipedia.org/wiki/Viable_system_model), developed by [Stafford Beer](https://en.wikipedia.org/wiki/Stafford_Beer), provides a cybernetic approach to organizational design based on how biological organisms maintain viability. The VSM describes five essential system functions:
 
 1. **System 1 (Operations)**: Primary activities that deliver value
 2. **System 2 (Coordination)**: Mechanisms preventing oscillation between operational units
@@ -266,21 +259,21 @@ The Viable System Model (VSM), developed by Stafford Beer, provides a cybernetic
 
 These systems must operate with appropriate autonomy while maintaining coherence through feedback mechanisms, balancing local autonomy with global coherence.
 
-![Viabe System Model](../images/vsm.svg)
+![Viable System Model](../images/vsm.svg)
 
 
 ### Organizational Implications
 
 Cybernetic principles offer several practical insights for organizational design:
 
-1. **Metasystemic management**: Higher-level systems focusing on context and constraints rather than direct control
+1. **[Metasystemic management]**: Higher-level systems focusing on context and constraints rather than direct control
 2. **Information flow design**: Creating appropriate feedback channels that provide the right information at the right time
 3. **Distributed control**: Pushing decision authority to where the requisite information exists
 4. **Recursive design**: Applying the same structural principles at multiple organizational levels
 
 Modern development practices embody many cybernetic principles through:
-- Agile methodologies with their emphasis on feedback and adaptation
-- DevOps practices creating tight feedback loops between development and operations
+- [Agile methodologies](https://agilemanifesto.org/) with their emphasis on feedback and adaptation
+- [DevOps practices](https://aws.amazon.com/devops/what-is-devops/) creating tight feedback loops between development and operations
 - Platform teams providing "variety-reducing" abstractions while enabling autonomous feature teams
 
 The underfitting/overfitting framework applies to cybernetic control:
@@ -290,10 +283,16 @@ The underfitting/overfitting framework applies to cybernetic control:
 
 Effective governance requires just enough control—neither too rigid nor too chaotic—to enable adaptive responses while maintaining coherence.
 
+### References
 
+Beer, S. (1979). [The Heart of Enterprise](https://www.wiley.com/en-us/The+Heart+of+Enterprise-p-9780471948377). John Wiley & Sons.
 
-![Organizational Adaptation Spectrum](../images/
-org-adaption-spectrum.svg)
+Ashby, W.R. (1956). [An Introduction to Cybernetics](https://en.wikipedia.org/wiki/W._Ross_Ashby#Publications). Chapman & Hall.
+
+Wiener, N. (1948). [Cybernetics: Or Control and Communication in the Animal and the Machine](https://en.wikipedia.org/wiki/Cybernetics:_Or_Control_and_Communication_in_the_Animal_and_the_Machine). MIT Press.
+
+Heylighen, F., & Joslyn, C. (2001). [Cybernetics and Second-Order Cybernetics](http://pespmc1.vub.ac.be/Papers/Cybernetics-EPST.pdf). In R.A. Meyers (Ed.), Encyclopedia of Physical Science & Technology (3rd ed.). Academic Press.
+
 ## 6.4 Entropy and Software Complexity
 
 ### Information Entropy in Software Development
