@@ -2,6 +2,11 @@
 
 This publication explores the concepts of underfitting and overfitting as they apply to software development and organizational models. These analytical frameworks from machine learning provide powerful lenses through which to examine estimation techniques, organizational structures, and decision-making processes.
 
+<div class="publication-info">
+  <p>Initial Release: April 2025 | Last Updated: April 2025</p>
+  <p><em>Note: AI capabilities evolve rapidly. Content reflects understanding as of publication date.</em></p>
+</div>
+
 ## Available Chapters
 
 Currently, the following chapters are fully edited and ready for reading:
@@ -11,6 +16,9 @@ Currently, the following chapters are fully edited and ready for reading:
   <p>An in-depth analysis of how software estimation techniques can either oversimplify (underfit) or overspecialize (overfit), with detailed discussions of COCOMO, Function Points, Planning Poker, Expert Judgment, and the impact of AI assistance on estimation practices.</p>
   <div class="chapter-tools">
     <a href="visualizations.html" class="tool-link">Interactive Tools & Visualizations</a>
+  </div>
+  <div class="chapter-metadata">
+    <span class="chapter-date">Last updated: April 2025</span>
   </div>
 </div>
 
@@ -46,6 +54,15 @@ This work explores how different kinds of organizations might evolve in response
 Full disclosure: AI tools (Claude and Gemini) helped generate much of this content. But don't worry - a real human directed the whole show, contributed knowledge, rejected bad references, fixed missteps, and even had to wrestle with SVG layout details as you can guess from the visualizations not yet polished.
 
 <style>
+.publication-info {
+  background-color: #f5f5f5;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 0.9em;
+  border-left: 3px solid #ccc;
+}
+
 .completed-chapter {
   background-color: #f9f5e5;
   border-left: 5px solid #b38728;
@@ -65,6 +82,14 @@ Full disclosure: AI tools (Claude and Gemini) helped generate much of this conte
   border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
+}
+
+.chapter-metadata {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px dotted #e3dac9;
+  padding-top: 8px;
 }
 
 .wip-notice {

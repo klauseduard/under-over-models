@@ -7,6 +7,10 @@ This repository contains a publication exploring analogies between underfitting 
 > **Note**: This publication is currently under active development. Only Chapter 2 (Software Time Estimation) is fully edited and ready for reading. Other chapters are in various stages of development and may contain incomplete content.
 >
 > **📚 [View the publication website](https://klauseduard.github.io/under-over-models/)** for the properly formatted content.
+>
+> **📅 Initial Release: April 2025 | Last Updated: April 2025**
+>
+> *AI capabilities evolve rapidly. Content reflects understanding as of publication date.*
 
 ## Motivation and Perspective
 
@@ -24,7 +28,7 @@ A further motivation is to explore how different kinds of organizations might ev
 
 Only the following chapter is currently ready for reading:
 
-- ✅ **[Chapter 2: Underfitting and Overfitting in Software Time Estimation](chapters/02-software-time-estimation.md)**
+- ✅ **[Chapter 2: Underfitting and Overfitting in Software Time Estimation](chapters/02-software-time-estimation.md)** (Updated: April 2025)
 - ✅ **[Interactive Visualizations & Tools](visualizations.md)**
 
 ## In-Progress Chapters (Drafts)

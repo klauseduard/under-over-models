@@ -82,6 +82,15 @@
         </div>
       {% endif %}
 
+      <!-- Show chapter metadata if available -->
+      {% if page.path contains 'chapters/' %}
+        <div class="chapter-metadata">
+          {% if page.path == 'chapters/02-software-time-estimation.md' %}
+            <div class="chapter-date">Last updated: <strong>April 2025</strong></div>
+          {% endif %}
+        </div>
+      {% endif %}
+
       <!-- Auto-generate table of contents for chapters -->
       {% if page.path contains 'chapters/' %}
         <div class="chapter-toc">
@@ -98,6 +107,8 @@
         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p class="publication-date"><small>Publication initial release: April 2025 | Last updated: {{ site.time | date: '%B %Y' }}</small></p>
+        <p class="version-note"><small>AI capabilities evolve rapidly - please consider the publication date when reading</small></p>
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
