@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bayesian Project Estimation Model</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+    .controls {
+      margin-bottom: 24px;
+    }
+    .control-group {
+      margin-bottom: 16px;
+    }
+    label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .button-group {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+    button {
+      padding: 4px 8px;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      background-color: #e2e2e2;
+      color: #333;
+    }
+    button.active {
+      background-color: #3366cc;
+      color: white;
+    }
+    .stage-description {
+      font-size: 0.875rem;
+      margin-top: 8px;
+      color: #666;
+    }
+    .chart-container {
+      height: 350px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .results {
+      background-color: white;
+      padding: 16px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .results h3 {
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    .results p {
+      font-size: 0.875rem;
+      margin-bottom: 8px;
+    }
+    .results ul {
+      padding-left: 20px;
+      font-size: 0.875rem;
+    }
+    .results li {
+      margin-bottom: 4px;
+    }
+    .info-box {
+      margin-top: 16px;
+      background-color: #f0f0f0;
+      padding: 12px;
+      border-radius: 4px;
+      font-size: 0.875rem;
+    }
+    .info-box p {
+      font-weight: 600;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    .references {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .reference-line {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      border-left: 2px dashed red;
+    }
+    .reference-label {
+      position: absolute;
+      top: 10px;
+      transform: translateX(-50%);
+      background-color: rgba(255,255,255,0.8);
+      padding: 2px 4px;
+      border-radius: 2px;
+      font-size: 10px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Bayesian Project Estimation Model</h2>
+    
+    <div class="controls">
+      <div class="control-group">
+        <label>Project Stage:</label>
+        <div class="button-group" id="stageButtons">
+          <!-- Stage buttons will be dynamically generated -->
+        </div>
+        <div class="stage-description" id="stageDescription"></div>
+      </div>
+      
+      <div class="control-group">
+        <label id="confidenceLabel">Confidence Level: 80%</label>
+        <input 
+          type="range" 
+          id="confidenceSlider" 
+          min="50" 
+          max="99" 
+          value="80" 
+        />
+      </div>
+    </div>
+    
+    <div class="chart-container">
+      <canvas id="distributionChart"></canvas>
+      <div class="references" id="references"></div>
+    </div>
+    
+    <div class="results">
+      <h3>Bayesian Estimation Results:</h3>
+      <p id="currentStageText">At the current project stage (<strong>Initial Estimation</strong>), we have:</p>
+      <ul>
+        <li id="confidenceIntervalText">
+          <strong>80% confidence interval:</strong> Project will take between <strong>3.5</strong> and <strong>8.5</strong> months
+        </li>
+        <li id="completionTimeText">
+          <strong>Most likely completion time:</strong> 6 months
+        </li>
+        <li id="distributionSpreadText">
+          <strong>Distribution spread:</strong> Very wide (high uncertainty)
+        </li>
+      </ul>
+      
+      <div class="info-box">
+        <p>Key Bayesian Concepts Illustrated:</p>
+        <ul>
+          <li><strong>Prior Distribution:</strong> Initial belief about project duration</li>
+          <li><strong>Posterior Distribution:</strong> Updated belief after observing evidence</li>
+          <li><strong>Sequential Updating:</strong> Distribution narrows as evidence accumulates</li>
+          <li><strong>Explicit Uncertainty:</strong> Showing probability ranges rather than point estimates</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Define the stages of project knowledge
+    const stages = [
+      { id: 0, name: "Initial Estimation", description: "Based only on prior knowledge before project start" },
+      { id: 1, name: "Requirements Analysis", description: "After completing requirements gathering" },
+      { id: 2, name: "First Sprint Completed", description: "After team velocity is established" },
+      { id: 3, name: "Mid-Project Review", description: "After discovering some technical challenges" },
+      { id: 4, name: "Final Predictions", description: "With most implementation complete" }
+    ];
+    
+    // Set initial values
+    let currentStage = 0;
+    let confidence = 80;
+    
+    // Generate colors for each stage
+    const stageColors = [
+      "rgba(136, 132, 216, 1)", // purple
+      "rgba(130, 202, 157, 1)", // green
+      "rgba(255, 198, 88, 1)",  // yellow
+      "rgba(255, 128, 66, 1)",  // orange
+      "rgba(255, 0, 0, 1)"      // red
+    ];
+    
+    // Points for the timeline (months)
+    const xValues = Array.from({length: 12}, (_, i) => i + 1);
+    
+    // Function to generate normalized bell curve
+    function generateBellCurve(mean, stdDev, skew = 0) {
+      return xValues.map(x => {
+        // Skewed normal distribution approximation
+        let z = (x - mean) / stdDev;
+        let density = Math.exp(-0.5 * z * z) / (stdDev * Math.sqrt(2 * Math.PI));
+        
+        // Apply skew
+        if (skew !== 0) {
+          density = density * (1 + skew * (x - mean) / stdDev);
+        }
+        
+        return {
+          month: x,
+          density: density
+        };
+      });
+    }
+    
+    // Define distributions for each stage
+    function generateDistributions() {
+      const distributions = [
+        // Stage 0: Initial wide distribution (high uncertainty)
+        generateBellCurve(6, 2, 0.5),
+        
+        // Stage 1: After requirements, slight shift right, still quite wide
+        generateBellCurve(6.5, 1.8, 0.4),
+        
+        // Stage 2: After first sprint, more confident, narrower
+        generateBellCurve(7, 1.5, 0.3),
+        
+        // Stage 3: Mid-project, further refined
+        generateBellCurve(7.5, 1.2, 0.2),
+        
+        // Stage 4: Final, quite narrow and confident
+        generateBellCurve(8, 0.8, 0.1)
+      ];
+      
+      // Process for Chart.js format
+      const datasets = distributions.map((distribution, index) => {
+        return {
+          label: stages[index].name,
+          data: distribution.map(d => ({x: d.month, y: d.density * 100})),
+          borderColor: stageColors[index],
+          backgroundColor: stageColors[index].replace('1)', '0.1)'),
+          borderWidth: index === currentStage ? 3 : 1,
+          pointRadius: index === currentStage ? 3 : 0,
+          tension: 0.4,
+          fill: false
+        };
+      });
+      
+      return datasets;
+    }
+    
+    // Calculate confidence intervals
+    function calculateConfidenceInterval() {
+      const meanValues = [6, 6.5, 7, 7.5, 8];
+      const stdDevValues = [2, 1.8, 1.5, 1.2, 0.8];
+      
+      const mean = meanValues[currentStage];
+      const stdDev = stdDevValues[currentStage];
+      
+      // For normal distribution, convert confidence percentage to z-score
+      // Approximation of z-score for the confidence level
+      const zScore = confidence >= 95 ? 1.96 : 
+                    confidence >= 90 ? 1.645 : 
+                    confidence >= 80 ? 1.28 : 
+                    confidence >= 70 ? 1.04 : 
+                    confidence >= 60 ? 0.84 : 0.67;
+      
+      const lower = Math.max(1, mean - zScore * stdDev);
+      const upper = mean + zScore * stdDev;
+      
+      return { 
+        lower: Math.round(lower * 10) / 10, 
+        upper: Math.round(upper * 10) / 10 
+      };
+    }
+
+    // Get the most likely completion time for a stage
+    function getMostLikelyCompletionTime(stage) {
+      const times = [6, 6.5, 7, 7.5, 8];
+      return times[stage];
+    }
+
+    // Get distribution spread description for a stage
+    function getDistributionSpread(stage) {
+      const descriptions = [
+        "Very wide (high uncertainty)",
+        "Wide (substantial uncertainty)",
+        "Moderate uncertainty",
+        "Narrowing (increasing confidence)",
+        "Narrow (high confidence)"
+      ];
+      return descriptions[stage];
+    }
+    
+    // Initialize the chart
+    let chart;
+    
+    function initChart() {
+      const ctx = document.getElementById('distributionChart').getContext('2d');
+      
+      chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          datasets: generateDistributions()
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              type: 'linear',
+              min: 1,
+              max: 12,
+              title: {
+                display: true,
+                text: 'Project Duration (months)'
+              },
+              ticks: {
+                stepSize: 1
+              }
+            },
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Probability Density'
+              }
+            }
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return `${context.dataset.label}: ${Math.round(context.parsed.y * 100) / 100}`;
+                }
+              }
+            }
+          },
+          animation: {
+            duration: 500
+          }
+        }
+      });
+    }
+    
+    // Initialize the UI elements
+    function initUI() {
+      // Create stage buttons
+      const stageButtonsContainer = document.getElementById('stageButtons');
+      
+      stages.forEach((stage, index) => {
+        const button = document.createElement('button');
+        button.textContent = stage.name;
+        button.dataset.stageId = index;
+        if (index === currentStage) {
+          button.classList.add('active');
+        }
+        
+        button.addEventListener('click', () => {
+          setCurrentStage(index);
+        });
+        
+        stageButtonsContainer.appendChild(button);
+      });
+      
+      // Set initial stage description
+      document.getElementById('stageDescription').textContent = stages[currentStage].description;
+      
+      // Setup confidence slider
+      const confidenceSlider = document.getElementById('confidenceSlider');
+      confidenceSlider.addEventListener('input', (e) => {
+        setConfidence(parseInt(e.target.value));
+      });
+      
+      // Initial update of results
+      updateResults();
+    }
+    
+    // Update the chart based on current stage and confidence
+    function updateChart() {
+      // Update datasets visibility and styling
+      const datasets = generateDistributions();
+      
+      chart.data.datasets.forEach((dataset, index) => {
+        const newData = datasets[index];
+        dataset.borderWidth = newData.borderWidth;
+        dataset.pointRadius = newData.pointRadius;
+        dataset.data = newData.data;
+      });
+      
+      chart.update();
+      
+      // Update reference lines
+      updateReferenceLines();
+    }
+    
+    // Update reference lines for confidence interval
+    function updateReferenceLines() {
+      const interval = calculateConfidenceInterval();
+      const referencesContainer = document.getElementById('references');
+      referencesContainer.innerHTML = '';
+      
+      // Calculate positions based on chart dimensions and x-scale
+      const chartWidth = document.getElementById('distributionChart').width;
+      const xScale = chartWidth / 11; // 12 months (1-12) displayed on width
+      
+      // Create lower reference line
+      const lowerLine = document.createElement('div');
+      lowerLine.className = 'reference-line';
+      lowerLine.style.left = `${(interval.lower - 1) * xScale}px`;
+      
+      const lowerLabel = document.createElement('div');
+      lowerLabel.className = 'reference-label';
+      lowerLabel.textContent = `${interval.lower} months`;
+      lowerLabel.style.left = `${(interval.lower - 1) * xScale}px`;
+      
+      // Create upper reference line
+      const upperLine = document.createElement('div');
+      upperLine.className = 'reference-line';
+      upperLine.style.left = `${(interval.upper - 1) * xScale}px`;
+      
+      const upperLabel = document.createElement('div');
+      upperLabel.className = 'reference-label';
+      upperLabel.textContent = `${interval.upper} months`;
+      upperLabel.style.left = `${(interval.upper - 1) * xScale}px`;
+      
+      referencesContainer.appendChild(lowerLine);
+      referencesContainer.appendChild(lowerLabel);
+      referencesContainer.appendChild(upperLine);
+      referencesContainer.appendChild(upperLabel);
+    }
+    
+    // Update the results text
+    function updateResults() {
+      const interval = calculateConfidenceInterval();
+      
+      // Update stage name
+      document.getElementById('currentStageText').innerHTML = 
+        `At the current project stage (<strong>${stages[currentStage].name}</strong>), we have:`;
+      
+      // Update confidence interval
+      document.getElementById('confidenceIntervalText').innerHTML = 
+        `<strong>${confidence}% confidence interval:</strong> Project will take between <strong>${interval.lower}</strong> and <strong>${interval.upper}</strong> months`;
+      
+      // Update most likely completion time
+      const completionTime = getMostLikelyCompletionTime(currentStage);
+      document.getElementById('completionTimeText').innerHTML = 
+        `<strong>Most likely completion time:</strong> ${completionTime} months`;
+      
+      // Update distribution spread
+      const spread = getDistributionSpread(currentStage);
+      document.getElementById('distributionSpreadText').innerHTML = 
+        `<strong>Distribution spread:</strong> ${spread}`;
+    }
+    
+    // Update the active stage
+    function setCurrentStage(stageId) {
+      currentStage = stageId;
+      
+      // Update buttons
+      const buttons = document.getElementById('stageButtons').children;
+      for (let i = 0; i < buttons.length; i++) {
+        if (i === stageId) {
+          buttons[i].classList.add('active');
+        } else {
+          buttons[i].classList.remove('active');
+        }
+      }
+      
+      // Update stage description
+      document.getElementById('stageDescription').textContent = stages[stageId].description;
+      
+      // Update chart and results
+      updateChart();
+      updateResults();
+    }
+    
+    // Update the confidence level
+    function setConfidence(value) {
+      confidence = value;
+      
+      // Update label
+      document.getElementById('confidenceLabel').textContent = `Confidence Level: ${value}%`;
+      
+      // Update chart and results
+      updateChart();
+      updateResults();
+    }
+    
+    // Initialize everything when the page loads
+    window.addEventListener('load', () => {
+      initChart();
+      initUI();
+      // Add a slight delay for reference lines to ensure chart is fully rendered
+      setTimeout(updateReferenceLines, 500);
+    });
+    
+    // Handle window resize for reference lines
+    window.addEventListener('resize', () => {
+      setTimeout(updateReferenceLines, 200);
+    });
+  </script>
+</body>
+</html>
