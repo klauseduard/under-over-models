@@ -64,10 +64,42 @@ header {
     border-bottom: 1px solid #e8dfca;
     padding-bottom: 20px;
     margin-bottom: 20px;
+    text-align: center;
   }
   section {
     float: none;
     width: auto;
+    padding: 0 10px;
+  }
+  
+  /* Fix project attribution in mobile view */
+  p.view {
+    display: block;
+    position: static;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  /* Make navigation cleaner */
+  .main-nav {
+    display: block;
+    margin: 15px auto;
+    max-width: 400px;
+  }
+  
+  .chapters-nav {
+    padding-left: 20px;
+    text-align: left;
+  }
+  
+  /* Fix page footer positioning */
+  footer {
+    position: static;
+    width: auto;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e8dfca;
   }
 }
 
