@@ -36,6 +36,26 @@
 
         <p>{{ site.description | default: site.github.project_tagline }}</p>
 
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+          <a href="{{ '/' | absolute_url }}" class="nav-link">Home</a>
+          <a href="{{ '/visualizations.html' | absolute_url }}" class="nav-link">Interactive Visualizations</a>
+          
+          <h3>Chapters</h3>
+          <ol class="chapters-nav">
+            <li><a href="{{ '/chapters/01-introduction.html' | absolute_url }}">Introduction</a></li>
+            <li><a href="{{ '/chapters/02-software-time-estimation.html' | absolute_url }}">Software Time Estimation</a></li>
+            <li><a href="{{ '/chapters/03-organizational-models.html' | absolute_url }}">Organizational Models</a></li>
+            <li><a href="{{ '/chapters/04-stakeholder-preferences.html' | absolute_url }}">Stakeholder Preferences</a></li>
+            <li><a href="{{ '/chapters/05-organizational-size-influence.html' | absolute_url }}">Organizational Size</a></li>
+            <li><a href="{{ '/chapters/06-theoretical-concepts.html' | absolute_url }}">Theoretical Concepts</a></li>
+            <li><a href="{{ '/chapters/07-medical-systems-case.html' | absolute_url }}">Medical Systems Case</a></li>
+            <li><a href="{{ '/chapters/08-ai-organizational-impact.html' | absolute_url }}">AI Organizational Impact</a></li>
+            <li><a href="{{ '/chapters/09-ai-people-theory-practice.html' | absolute_url }}">AI: Theory and Practice</a></li>
+            <li><a href="{{ '/chapters/10-conclusion.html' | absolute_url }}">Conclusion</a></li>
+          </ol>
+        </nav>
+
         {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
         {% endif %}

@@ -3,13 +3,114 @@
   MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      tags: 'ams'
     },
     svg: {
       fontCache: 'global'
+    },
+    options: {
+      renderActions: {
+        /* Add custom styling to block math environments */
+        addBlockCSS: [100, (doc) => {
+          if (!doc.blockElements) {
+            doc.blockElements = new Set();
+          }
+        }, (math, doc) => {
+          if (math.display) {
+            doc.blockElements.add(math.typesetRoot);
+          }
+        }, (math, doc) => {
+          if (doc.blockElements && doc.blockElements.has(math.typesetRoot)) {
+            math.typesetRoot.classList.add('math-block');
+          }
+        }]
+      }
     }
   };
 </script>
 <!-- Load MathJax -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> 
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- Interactive Tools Enhancement -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find all links to interactive tools and enhance them
+  const interactiveLinks = document.querySelectorAll('a[href*="html/"]');
+  
+  interactiveLinks.forEach(link => {
+    // Check if it's an interactive tool link
+    if (link.href.includes('calculator.html') || 
+        link.href.includes('demo.html') || 
+        link.href.includes('simulation.html') ||
+        link.href.includes('visualization.html') ||
+        link.href.includes('bayesian_estimation.html') || 
+        link.href.includes('monte_carlo_demo.html') || 
+        link.href.includes('three_point_estimation_calculator.html')) {
+      
+      // Get the parent paragraph
+      let container = link.parentNode;
+      
+      // If it's inside a blockquote, use that as the container
+      if (container.closest('blockquote')) {
+        container = container.closest('blockquote');
+      } else if (container.tagName !== 'P' && container.tagName !== 'BLOCKQUOTE') {
+        // If it's not in a paragraph, wrap it in one
+        const wrapper = document.createElement('div');
+        link.parentNode.insertBefore(wrapper, link);
+        wrapper.appendChild(link);
+        container = wrapper;
+      }
+      
+      // Add the interactive-tool class
+      container.classList.add('interactive-tool');
+    }
+  });
+  
+  // Enhance figures with visualization class
+  const figures = document.querySelectorAll('figure');
+  figures.forEach(figure => {
+    // Add a hover effect
+    figure.addEventListener('mouseenter', function() {
+      this.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+      this.style.transform = 'translateY(-2px)';
+      this.style.transition = 'all 0.3s ease';
+    });
+    
+    figure.addEventListener('mouseleave', function() {
+      this.style.boxShadow = '0 2px 5px rgba(0,0,0,0.05)';
+      this.style.transform = 'translateY(0)';
+    });
+  });
+});
+</script>
+
+<!-- Additional styles for print media -->
+<style>
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .wrapper {
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+  
+  header, footer {
+    display: none !important;
+  }
+  
+  .interactive-tool, figure {
+    page-break-inside: avoid;
+    border: 1px solid #ddd !important;
+  }
+}
+</style> 
