@@ -21,6 +21,56 @@ section {
   width: 620px;
 }
 
+header {
+  border-right: 1px solid #e8dfca;
+  width: 250px;
+  overflow-x: hidden; /* Prevent content from spilling out */
+}
+
+/* Responsive adjustments for sidebar when zoomed or on smaller screens */
+@media screen and (max-width: 960px) {
+  header {
+    width: 220px;
+  }
+  section {
+    width: 580px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  header {
+    width: 180px;
+    padding-right: 5px;
+  }
+  section {
+    width: 500px;
+  }
+  .chapters-nav {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .wrapper {
+    width: auto;
+    margin: 0;
+  }
+  header {
+    float: none;
+    position: static;
+    width: auto;
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 1px solid #e8dfca;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  section {
+    float: none;
+    width: auto;
+  }
+}
+
 /* Publication date and version information */
 .publication-date {
   margin-top: 15px;
@@ -108,11 +158,6 @@ a:hover {
   color: #c28100;
 }
 
-header {
-  border-right: 1px solid #e8dfca;
-  width: 250px;
-}
-
 /* Navigation styling */
 .main-nav {
   margin: 20px 0;
@@ -143,6 +188,7 @@ header {
   position: relative;
   line-height: 1.3;
   padding-right: 10px;
+  word-wrap: break-word; /* Allow long chapter names to wrap */
 }
 
 .chapters-nav a {
