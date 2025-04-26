@@ -559,8 +559,8 @@ across different task types with and without AI assistance" width="700" /> <figc
 across task types when using AI assistance (illustrative, not using real metrics)</figcaption> </figure> <br/><br/>
 
 **Incomplete Experience Base:** Organizations lack sufficient historical data about AI-assisted workflows to create
-reliable estimation models. Traditional models trained on pre-AI data will inherently *underfit* the new reality by
-missing crucial interaction patterns between developers and AI tools. Conversely, early attempts to build new models
+reliable estimation methods. Traditional estimation approaches based on pre-AI development experiences will inherently *underfit* the new reality by
+missing crucial interaction patterns between developers and AI tools. Conversely, early attempts to develop new estimation techniques
 based on limited AI-assisted experiences risk *overfitting* to specific tool capabilities or early adoption patterns
 that may not generalize.
 
