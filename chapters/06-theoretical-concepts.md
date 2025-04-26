@@ -85,6 +85,8 @@ Simplified estimation models often fail to account for long-tail risks in severa
 
 These limitations make most traditional estimation models prone to systematic underestimation of both project duration and complexity.
 
+> **Interactive Tool**: Explore an [interactive visualization of long tail distributions in software project risks](../html/long_and_fat_tail_risks.html). This tool allows you to visualize how uncommon risks contribute significantly to overall project uncertainty and experiment with different project complexity levels and risk distributions.
+
 ### Analogy to Underfitting 
 
 Just as an underfit machine learning model fails to capture the full variability of the

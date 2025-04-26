@@ -48,6 +48,7 @@ Throughout the publication, you'll find various visualizations that illustrate i
 2. **[Under vs. Over Estimation Tendencies](chapters/02-software-time-estimation.md#three-point-estimation-practical-uncertainty-modeling)** - Factors leading to different types of estimation errors
 3. **[Estimation Spectrum](chapters/02-software-time-estimation.md#bridging-simple-and-complex-approaches)** - Progression from simplistic to sophisticated approaches
 4. **[Long Tail of Project Risks](chapters/02-software-time-estimation.md#long-tail-of-software-project-risks)** - Distribution of risk frequency and impact
+   - **[Interactive Long Tail Risk Visualization](html/long_and_fat_tail_risks.html)** - Explore how common vs. rare risks affect project estimation and outcomes
 5. **[AI Productivity Variance](chapters/02-software-time-estimation.md#225-estimating-ai-assisted-development-new-uncertainties)** - Comparing development time across task types with AI assistance
 6. **[Dissipative Systems & Organizational Dynamics](html/dissipative_sys_and_org_dynamics.html)** - Interactive simulation showing how organizations function as dissipative systems under varying conditions of environmental turbulence, resource flow, and connectivity
 
