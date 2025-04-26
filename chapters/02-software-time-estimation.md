@@ -75,6 +75,8 @@ might express "there's a 50% probability of completion within 3 months, 80% with
 estimates are updated as project evidence accumulates" width="700" /> <figcaption>Figure 2.1a: Bayesian updating of a
 project estimate as new information becomes available</figcaption> </figure>
 
+> **Interactive Visualization**: To better understand how Bayesian estimation evolves through a project lifecycle, explore our [interactive Bayesian Project Estimation visualization](../html/bayesian_estimation.html) that demonstrates how probability distributions narrow as confidence increases through different project stages.
+
 Bayesian estimation addresses both underfitting and overfitting in complementary ways:
 
 **Countering Underfitting**:
@@ -104,8 +106,8 @@ remains challenging due to:
 - Cultural resistance to probabilistic rather than deterministic estimates
 
 Despite these challenges, the increasing availability of probabilistic programming tools and the growing recognition of
-uncertainty in software development make Bayesian approaches increasingly practical for addressing the fundamental
-limitations of traditional estimation techniques.
+uncertainty in software development suggest that Bayesian approaches may become increasingly practical for addressing the fundamental
+limitations of traditional estimation techniques, though more empirical validation is needed in industrial settings.
 
 ### Three-Point Estimation: Practical Uncertainty Modeling
 
@@ -231,12 +233,9 @@ deviation
 5. **Use uncertainty for planning**: Schedule buffers based on the calculated uncertainty, not arbitrary padding
 6. **Track accuracy**: Compare actual outcomes to the full distribution, not just the expected value
 
-> For a practical, interactive way to experiment with three-point estimation, have a look at the web-based "[Agile Task
-> Estimation Calculator](https://www.shedloadofcode.com/tools/agile-task-estimation-calculator)". This calculator
-> incorporates many of the principles discussed in this section, including PERT calculations, standard deviation, and
-> confidence intervals. It also considers contextual factors such as task complexity, team experience, and
-> cross-functional dependencies that influence estimation uncertainty. By adjusting different parameters, users can see
-> how various factors affect estimation outcomes and uncertainty ranges.
+> For a practical, interactive way to experiment with three-point estimation, try [interactive Three-Point Estimation Calculator](../html/three_point_estimation_calculator.html). This calculator allows you to adjust optimistic, most likely, and pessimistic estimates and instantly see how they affect the expected duration, standard deviation, and confidence intervals. You can also explore how different distribution methods (PERT vs. Triangular) impact the results, and see how factors like task complexity and team experience influence the final estimates. Or you can have a look at external calculator with some additional parameters: [Agile Task
+> Estimation Calculator](https://www.shedloadofcode.com/tools/
+agile-task-estimation-calculator)
 
 Three-point estimation serves as an accessible entry point to probabilistic thinking for teams transitioning from
 traditional point-based estimates toward more sophisticated uncertainty modeling.

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="900" height="520" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg">
     <!-- Background -->
-    <rect width="900" height="520" fill="#f8f9fa" rx="10" ry="10" />
+    <rect width="900" height="560" fill="#f8f9fa" rx="12" ry="12" />
     
     <!-- Title -->
-    <text x="450" y="40" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" font-weight="bold">Factors Affecting Estimation Tendencies</text>
-    <text x="450" y="65" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-style="italic">Common biases when generating three-point estimates</text>
+    <text x="450" y="40" font-family="Arial, sans-serif" font-size="22" text-anchor="middle" font-weight="bold" fill="#333333">Factors Affecting Estimation Tendencies</text>
+    <text x="450" y="70" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-style="italic" fill="#555555">Common biases when generating three-point estimates</text>
     
     <!-- Central timeline -->
-    <rect x="150" y="240" width="600" height="30" fill="#f0f0f0" rx="15" ry="15" />
-    <line x1="170" y1="255" x2="730" y2="255" stroke="#555555" stroke-width="2.5" />
+    <rect x="120" y="240" width="660" height="30" fill="#f0f0f0" rx="15" ry="15" stroke="#dddddd" stroke-width="1" />
+    <line x1="140" y1="255" x2="760" y2="255" stroke="#555555" stroke-width="2.5" />
     
     <!-- Optimistic marker -->
     <circle cx="270" cy="255" r="10" fill="#4793ff" />
-    <text x="270" y="285" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Optimistic</text>
+    <text x="270" y="285" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold" fill="#444444">Optimistic</text>
     
     <!-- Most Likely marker -->
     <circle cx="450" cy="255" r="10" fill="#90EE90" />
-    <text x="450" y="285" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Most Likely</text>
+    <text x="450" y="285" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold" fill="#444444">Most Likely</text>
     
     <!-- Pessimistic marker -->
     <circle cx="630" cy="255" r="10" fill="#FF6B6B" />
-    <text x="630" y="285" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Pessimistic</text>
+    <text x="630" y="285" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold" fill="#444444">Pessimistic</text>
     
     <!-- Connector lines -->
     <line x1="270" y1="245" x2="270" y2="185" stroke="#4793ff" stroke-width="2" stroke-dasharray="5,3" />
@@ -29,52 +29,53 @@
     <line x1="630" y1="245" x2="630" y2="185" stroke="#FF6B6B" stroke-width="2" stroke-dasharray="5,3" />
     
     <!-- Bias boxes - top row -->
-    <rect x="195" y="120" width="150" height="65" fill="white" stroke="#4793ff" stroke-width="2" rx="5" ry="5" />
+    <rect x="195" y="120" width="150" height="65" fill="white" stroke="#4793ff" stroke-width="2" rx="8" ry="8" filter="drop-shadow(0px 2px 3px rgba(0,0,0,0.1))" />
     <text x="270" y="145" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Optimistic Biases</text>
     <text x="270" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">• Planning Fallacy</text>
     
-    <rect x="375" y="120" width="150" height="65" fill="white" stroke="#90EE90" stroke-width="2" rx="5" ry="5" />
+    <rect x="375" y="120" width="150" height="65" fill="white" stroke="#90EE90" stroke-width="2" rx="8" ry="8" filter="drop-shadow(0px 2px 3px rgba(0,0,0,0.1))" />
     <text x="450" y="145" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Anchoring Factors</text>
     <text x="450" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">• Past Experience</text>
     
-    <rect x="555" y="120" width="150" height="65" fill="white" stroke="#FF6B6B" stroke-width="2" rx="5" ry="5" />
+    <rect x="555" y="120" width="150" height="65" fill="white" stroke="#FF6B6B" stroke-width="2" rx="8" ry="8" filter="drop-shadow(0px 2px 3px rgba(0,0,0,0.1))" />
     <text x="630" y="145" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Pessimistic Factors</text>
     <text x="630" y="165" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">• Risk Aversion</text>
     
-    <!-- Detailed explanation boxes -->
+    <!-- Detailed explanation boxes - WIDENED and repositioned for better spacing -->
     <!-- Optimistic Factors -->
-    <rect x="130" y="310" width="220" height="190" fill="white" stroke="#4793ff" stroke-width="2" rx="5" ry="5" />
-    <rect x="130" y="310" width="220" height="30" fill="#e6f6ff" stroke="#4793ff" stroke-width="2" rx="5" ry="5" />
-    <text x="240" y="330" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Why Optimistic Estimates Happen</text>
+    <rect x="80" y="310" width="240" height="190" fill="white" stroke="#4793ff" stroke-width="2" rx="8" ry="8" filter="drop-shadow(0px 3px 4px rgba(0,0,0,0.1))" />
+    <rect x="80" y="310" width="240" height="30" fill="#e6f6ff" stroke="#4793ff" stroke-width="2" rx="8" ry="8" />
+    <text x="200" y="330" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Why Optimistic Estimates Happen</text>
     
-    <text x="145" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Planning Fallacy (underestimating)</text>
-    <text x="145" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Overconfidence in capabilities</text>
-    <text x="145" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Ignoring unknowns and complexities</text>
-    <text x="145" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Political/management pressure</text>
-    <text x="145" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Best-case scenario thinking</text>
-    <text x="145" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Anchoring on desired outcomes</text>
+    <text x="95" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Planning Fallacy (underestimating)</text>
+    <text x="95" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Overconfidence in capabilities</text>
+    <text x="95" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Ignoring unknowns and complexities</text>
+    <text x="95" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Political/management pressure</text>
+    <text x="95" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Best-case scenario thinking</text>
+    <text x="95" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Anchoring on desired outcomes</text>
     
     <!-- Most Likely Factors -->
-    <rect x="370" y="310" width="220" height="190" fill="white" stroke="#90EE90" stroke-width="2" rx="5" ry="5" />
-    <rect x="370" y="310" width="220" height="30" fill="#e6f7e6" stroke="#90EE90" stroke-width="2" rx="5" ry="5" />
-    <text x="480" y="330" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">How to Improve Most Likely</text>
+    <rect x="330" y="310" width="240" height="190" fill="white" stroke="#90EE90" stroke-width="2" rx="8" ry="8" filter="drop-shadow(0px 3px 4px rgba(0,0,0,0.1))" />
+    <rect x="330" y="310" width="240" height="30" fill="#e6f7e6" stroke="#90EE90" stroke-width="2" rx="8" ry="8" />
+    <text x="450" y="330" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">How to Improve Most Likely</text>
     
-    <text x="385" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Use historical data when available</text>
-    <text x="385" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Break tasks into smaller pieces</text>
-    <text x="385" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Consider multiple viewpoints</text>
-    <text x="385" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Use structured estimation processes</text>
-    <text x="385" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Analyze similar past projects</text>
-    <text x="385" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Separate estimation from targets</text>
+    <text x="345" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Use historical data when available</text>
+    <text x="345" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Break tasks into smaller pieces</text>
+    <text x="345" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Consider multiple viewpoints</text>
+    <text x="345" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Use structured estimation processes</text>
+    <text x="345" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Analyze similar past projects</text>
+    <text x="345" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Separate estimation from targets</text>
     
     <!-- Pessimistic Factors -->
-    <rect x="610" y="310" width="220" height="190" fill="white" stroke="#FF6B6B" stroke-width="2" rx="5" ry="5" />
-    <rect x="610" y="310" width="220" height="30" fill="#ffe6e6" stroke="#FF6B6B" stroke-width="2" rx="5" ry="5" />
-    <text x="720" y="330" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Factors for Pessimistic Estimates</text>
+    <rect x="580" y="310" width="240" height="190" fill="white" stroke="#FF6B6B" stroke-width="2" rx="8" ry="8" filter="drop-shadow(0px 3px 4px rgba(0,0,0,0.1))" />
+    <rect x="580" y="310" width="240" height="30" fill="#ffe6e6" stroke="#FF6B6B" stroke-width="2" rx="8" ry="8" />
+    <text x="700" y="330" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Factors for Pessimistic Estimates</text>
     
-    <text x="625" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Past negative experiences</text>
-    <text x="625" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Risk aversion and fear of failure</text>
-    <text x="625" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Accounting for all potential risks</text>
-    <text x="625" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Padding for interruptions</text>
-    <text x="625" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Uncertainty in requirements</text>
-    <text x="625" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Buffer for unexpected complications</text>
-</svg> 
+    <text x="595" y="360" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Past negative experiences</text>
+    <text x="595" y="385" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Risk aversion and fear of failure</text>
+    <text x="595" y="410" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Accounting for all potential risks</text>
+    <text x="595" y="435" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Padding for interruptions</text>
+    <text x="595" y="460" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Uncertainty in requirements</text>
+    <text x="595" y="485" font-family="Arial, sans-serif" font-size="12" text-anchor="start">• Buffer for unexpected complications</text>
+    
+</svg>

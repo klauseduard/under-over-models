@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bayesian Project Estimation Model</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.0.0/dist/chartjs-plugin-annotation.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
   <style>
     body {
@@ -101,30 +102,6 @@
     input[type="range"] {
       width: 100%;
     }
-    .references {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-    .reference-line {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      border-left: 2px dashed red;
-    }
-    .reference-label {
-      position: absolute;
-      top: 10px;
-      transform: translateX(-50%);
-      background-color: rgba(255,255,255,0.8);
-      padding: 2px 4px;
-      border-radius: 2px;
-      font-size: 10px;
-      color: red;
-    }
   </style>
 </head>
 <body>
@@ -154,7 +131,6 @@
     
     <div class="chart-container">
       <canvas id="distributionChart"></canvas>
-      <div class="references" id="references"></div>
     </div>
     
     <div class="results">
@@ -350,6 +326,9 @@
                   return `${context.dataset.label}: ${Math.round(context.parsed.y * 100) / 100}`;
                 }
               }
+            },
+            annotation: {
+              annotations: {}
             }
           },
           animation: {
@@ -357,6 +336,9 @@
           }
         }
       });
+      
+      // Initialize annotations
+      updateConfidenceLines();
     }
     
     // Initialize the UI elements
@@ -404,46 +386,64 @@
         dataset.data = newData.data;
       });
       
-      chart.update();
+      // Update the confidence interval lines
+      updateConfidenceLines();
       
-      // Update reference lines
-      updateReferenceLines();
+      chart.update();
     }
     
-    // Update reference lines for confidence interval
-    function updateReferenceLines() {
+    // Update confidence interval lines using Chart.js annotations
+    function updateConfidenceLines() {
       const interval = calculateConfidenceInterval();
-      const referencesContainer = document.getElementById('references');
-      referencesContainer.innerHTML = '';
       
-      // Calculate positions based on chart dimensions and x-scale
-      const chartWidth = document.getElementById('distributionChart').width;
-      const xScale = chartWidth / 11; // 12 months (1-12) displayed on width
+      // Define annotations for confidence lines
+      const annotations = {
+        lowerLine: {
+          type: 'line',
+          xMin: interval.lower,
+          xMax: interval.lower,
+          yMin: 0,
+          yMax: 100,
+          borderColor: 'red',
+          borderWidth: 2,
+          borderDash: [5, 5],
+          label: {
+            content: `${interval.lower} months`,
+            display: true,
+            position: 'start',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            color: 'red',
+            font: {
+              size: 10
+            },
+            padding: 4
+          }
+        },
+        upperLine: {
+          type: 'line',
+          xMin: interval.upper,
+          xMax: interval.upper,
+          yMin: 0,
+          yMax: 100,
+          borderColor: 'red',
+          borderWidth: 2,
+          borderDash: [5, 5],
+          label: {
+            content: `${interval.upper} months`,
+            display: true,
+            position: 'start',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            color: 'red',
+            font: {
+              size: 10
+            },
+            padding: 4
+          }
+        }
+      };
       
-      // Create lower reference line
-      const lowerLine = document.createElement('div');
-      lowerLine.className = 'reference-line';
-      lowerLine.style.left = `${(interval.lower - 1) * xScale}px`;
-      
-      const lowerLabel = document.createElement('div');
-      lowerLabel.className = 'reference-label';
-      lowerLabel.textContent = `${interval.lower} months`;
-      lowerLabel.style.left = `${(interval.lower - 1) * xScale}px`;
-      
-      // Create upper reference line
-      const upperLine = document.createElement('div');
-      upperLine.className = 'reference-line';
-      upperLine.style.left = `${(interval.upper - 1) * xScale}px`;
-      
-      const upperLabel = document.createElement('div');
-      upperLabel.className = 'reference-label';
-      upperLabel.textContent = `${interval.upper} months`;
-      upperLabel.style.left = `${(interval.upper - 1) * xScale}px`;
-      
-      referencesContainer.appendChild(lowerLine);
-      referencesContainer.appendChild(lowerLabel);
-      referencesContainer.appendChild(upperLine);
-      referencesContainer.appendChild(upperLabel);
+      // Apply annotations to chart
+      chart.options.plugins.annotation.annotations = annotations;
     }
     
     // Update the results text
@@ -507,13 +507,6 @@
     window.addEventListener('load', () => {
       initChart();
       initUI();
-      // Add a slight delay for reference lines to ensure chart is fully rendered
-      setTimeout(updateReferenceLines, 500);
-    });
-    
-    // Handle window resize for reference lines
-    window.addEventListener('resize', () => {
-      setTimeout(updateReferenceLines, 200);
     });
   </script>
 </body>
