@@ -119,6 +119,8 @@ Organizations mirror dissipative systems through:
 > physical systems that spontaneously reorganize when hit by sufficiently strong fluctuations. This reframes "progress"
 > as a cycle of instability → mutation → temporary order.
 
+> **Interactive Tool**: Explore an [interactive visualization of dissipative systems theory applied to organizational dynamics](../html/dissipative_sys_and_org_dynamics.html). This tool allows you to manipulate parameters like environmental turbulence, resource flow rate, and boundary permeability to see how organizations respond when operating in ordered, critical, or chaotic regimes.
+
 
 ![Organization as Dissipative System](../images/org-as-dissipative-sys.svg)
 
@@ -129,9 +131,11 @@ The theory suggests that:
 - Systems must maintain state far from equilibrium
 - Balance between stability and adaptation is crucial
 
+> **Note:** While "equilibrium" might sound desirable, in dissipative systems it represents a state of stagnation rather than optimal functioning. In thermodynamic terms, equilibrium means no energy flows occur, while in organizational systems, equilibrium indicates a lack of the energy exchanges needed for growth and adaptation.
+
 ### Bifurcation Points and Phase Transitions
 
-Dissipative systems often exhibit bifurcation points—critical thresholds where small changes in environmental conditions
+Dissipative systems often exhibit [bifurcation points](http://www.scholarpedia.org/article/Bifurcation)—critical thresholds where small changes in environmental conditions
 trigger dramatic reorganization of the system structure.
 
 These phase transitions relate to underfitting and overfitting:
@@ -143,6 +147,8 @@ These phase transitions relate to underfitting and overfitting:
 
 The ability to selectively trigger and navigate bifurcations represents a sophisticated adaptation mechanism that helps
 maintain appropriate complexity across changing conditions.
+
+> **Example:** The emergence of AI-augmented knowledge work can be considered a bifurcation point for organizations—a critical threshold where small additional improvements in AI capabilities trigger qualitative restructuring of work processes, skill requirements, and organizational forms.
 
 ### Implications for Organizational Models
 
