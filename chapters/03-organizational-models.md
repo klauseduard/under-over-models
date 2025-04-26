@@ -70,7 +70,7 @@ each offering distinct advantages and disadvantages. This trade-off is central t
 Various frameworks and methodologies exist to help organizations navigate this complexity trade-off. For organizations
 focused on software development, [Domain-Driven Design](https://www.domainlanguage.com/ddd/) (DDD) offers strategic
 tools for managing complexity by aligning team boundaries with domain boundaries. Similarly, [Team Topologies](https://teamtopologies.com/) 
-by Matthew Skelton and Manuel Pais directly addresses the relationship between team structure and system architecture (discussed further as "Conway's Law" in Section 3.4) by intentionally designing team structures to produce 
+by Skelton and Pais ([2019](https://teamtopologies.com/book)) directly addresses the relationship between team structure and system architecture (discussed further as "Conway's Law" in Section 3.4) by intentionally designing team structures to produce 
 desired system architectures through well-defined team types and interaction patterns. Team Topologies provides specific organizational patterns focused on optimizing team cognitive load and interaction modes, which we explore in detail in Section 3.5.2. Other approaches like 
 the Spotify Model and scaled agile frameworks (SAFe, LeSS) address organizational structure but with less emphasis on 
 software architecture alignment. The Viable System Model (covered in Section 3.3.7) also provides 
@@ -116,7 +116,7 @@ In contrast, more complex organizational structures, often featuring multiple la
 control, high specialization, and a greater degree of formalization, can provide the necessary framework for managing
 intricate operations.
 
-**Mechanistic structures**, a term coined by Burns and Stalker in their influential work ["The Management of Innovation"](https://books.google.com/books?id=Xt_YWG-CJWIC), represent one end of the organizational spectrum characterized by:
+**Mechanistic structures**, a term coined by Burns and Stalker in their influential work ["The Management of Innovation"](https://academic.oup.com/book/4968) ([1961](https://books.google.com/books?id=Xt_YWG-CJWIC)), represent one end of the organizational spectrum characterized by:
 - High formalization and standardization of processes
 - Clear division of labor and rigid departmentalization
 - Specialized roles with narrowly defined responsibilities
@@ -278,15 +278,15 @@ The concepts of balance, underfitting, and overfitting in organizational models 
 systems theory, which provides a valuable theoretical framework for understanding the interplay between people,
 processes, technology, and structure.
 
-Sociotechnical systems theory originated in the 1950s at the Tavistock Institute through research led by [Trist and
-Bamforth](https://journals.sagepub.com/doi/10.1177/001872675100400101) on coal mining operations. The theory emerged as a response to the dominant "technological imperative" of the
+Sociotechnical systems theory originated in the 1950s at the Tavistock Institute through research led by Trist and
+Bamforth ([1951](https://journals.sagepub.com/doi/10.1177/001872675100400101)) on coal mining operations. The theory emerged as a response to the dominant "technological imperative" of the
 time, proposing instead a "new paradigm" that emphasized the joint optimization of both social and technical subsystems
 within organizations.
 
 At its core, the theory rejects technological determinism in favor of a balanced perspective where:
 
 > "Organizations are made up of people that produce products or services using some technology, and that each affects
-> the operation and appropriateness of the technology as well as the actions of the people who operate it." ([Pasmore et al. (1982) - Sociotechnical systems: A North American reflection](https://journals.sagepub.com/doi/10.1177/001872678203501207))
+> the operation and appropriateness of the technology as well as the actions of the people who operate it." (Pasmore et al., [1982](https://journals.sagepub.com/doi/10.1177/001872678203501207))
 
 This perspective directly mirrors our discussion of organizational models and their tendency toward underfitting or
 overfitting:
@@ -324,7 +324,7 @@ Another valuable theoretical framework for understanding the balance between sim
 models comes from information theory and thermodynamics: the complementary concepts of entropy and negentropy (further
 explored in [Chapter 6](../chapters/06-theoretical-concepts.md)).
 
-As briefly introduced in Section 3.2.3, these concepts from [Shannon's information theory](https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf) provide theoretical underpinning for the complexity spectrum of
+As briefly introduced in Section 3.2.3, these concepts from Shannon's information theory ([1948](https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf)) provide theoretical underpinning for the complexity spectrum of
 organizational models and help explain why finding the appropriate balance is crucial for organizational effectiveness.
 
 **Entropy** in organizational contexts represents the tendency toward disorder, unpredictability, and randomness.
@@ -349,7 +349,7 @@ creating brittleness and inability to adapt despite apparent efficiency.
 
 Successful organizations maintain an appropriate entropy-negentropy balance—sufficient structure to ensure coordination and efficiency,
 while preserving adequate flexibility to adapt to changing conditions. This balance point is not static but shifts based on
-organizational size, industry volatility, and strategic positioning ([Tsoukas, 1991](https://www.jstor.org/stable/2635084)).
+organizational size, industry volatility, and strategic positioning (Tsoukas, [1991](https://www.jstor.org/stable/2635084)).
 
 This information-theoretical framework helps explain why overly simplified "one-size-fits-all" organizational models fail when applied
 across diverse contexts—they cannot accommodate the necessary variations in structure and flexibility required by different environments and
@@ -369,7 +369,7 @@ must carefully navigate between simplicity and complexity. The theory provides a
 extreme on the spectrum—neither overly simplistic nor excessively complex organizational structures—can sustain
 effectiveness over time.
 
-A dissipative system, as described by Nobel laureate [Ilya Prigogine](https://www.nobelprize.org/prizes/chemistry/1977/prigogine/biographical/), is characterized by:
+A dissipative system, as described by Nobel laureate Ilya Prigogine ([1977](https://www.nobelprize.org/prizes/chemistry/1977/prigogine/biographical/)), is characterized by:
 - Operation far from thermodynamic equilibrium
 - Continuous energy and matter exchange with the environment
 - Self-organizing behavior that creates and maintains order
@@ -399,7 +399,7 @@ Prigogine called ["far-from-equilibrium" conditions](https://journal.emergentpub
 This far-from-equilibrium state represents the optimal balance between underfitting and overfitting—creating just enough
 structure to function effectively while maintaining the flexibility to adapt and evolve. The theory explains why
 organizations need continuous energy input (in the form of resources, information, ideas) to maintain their complexity
-and avoid degradation toward either oversimplified or overly rigid states ([Jantsch, 1975](https://www.panarchy.org/jantsch/dissipativestructures.html)).
+and avoid degradation toward either oversimplified or overly rigid states (Jantsch, [1975](https://www.panarchy.org/jantsch/dissipativestructures.html)).
 
 Importantly, dissipative systems theory suggests that periods of instability and reorganization are natural and
 necessary for organizational evolution. When environmental conditions change significantly, a temporary increase in
@@ -425,8 +425,8 @@ systems dynamics.
 ### 3.3.7 Cybernetic Principles in Organizational Design
 
 Cybernetics—the study of control and communication in complex systems—offers another valuable theoretical framework for
-understanding the underfitting/overfitting spectrum in organizational models. Originally developed by [Norbert Wiener](https://www.britannica.com/biography/Norbert-Wiener) and
-expanded upon by Ross Ashby, Stafford Beer, and others, cybernetics provides insights into how organizations maintain
+understanding the underfitting/overfitting spectrum in organizational models. Originally developed by Norbert Wiener ([1948](https://www.britannica.com/biography/Norbert-Wiener))
+and expanded upon by Ross Ashby, Stafford Beer, and others, cybernetics provides insights into how organizations maintain
 stability while adapting to changing environments through regulatory mechanisms.
 
 #### Feedback Loops and Organizational Regulation
@@ -453,8 +453,8 @@ underfitting/overfitting spectrum:
 
 #### Ashby's Law of Requisite Variety
 
-Perhaps the most powerful cybernetic principle for understanding organizational complexity is Ashby's [Law of Requisite
-Variety](http://pcp.vub.ac.be/books/AshbyReqVar.pdf), which states that "only variety can absorb variety." In organizational terms, this means that a system's
+Perhaps the most powerful cybernetic principle for understanding organizational complexity is Ashby's Law of Requisite
+Variety ([1956](http://pcp.vub.ac.be/books/AshbyReqVar.pdf)), which states that "only variety can absorb variety." In organizational terms, this means that a system's
 internal complexity must match the complexity of the environment it operates within.
 
 This principle provides direct theoretical grounding for determining appropriate organizational complexity:
@@ -470,7 +470,7 @@ organizational complexity—enough to handle environmental challenges without un
 
 #### Viable System Model as a Template for Balanced Complexity
 
-Stafford Beer's [Viable System Model](https://www.thevsmtest.org/VSM-Guide/) (VSM) applies cybernetic principles to organizational design by defining the
+Stafford Beer's [Viable System Model](https://www.thevsmtest.org/VSM-Guide/) (VSM) ([1972](https://www.thevsmtest.org/VSM-Guide/)) applies cybernetic principles to organizational design by defining the
 necessary and sufficient functions for system viability. The VSM identifies five essential systems that every viable
 organization must maintain:
 
@@ -493,7 +493,7 @@ complexity balance by providing:
 #### Cybernetics and Organizational Learning
 
 Cybernetic principles reveal how organizations learn and adapt through what Argyris and Schön termed ["single-loop" and
-"double-loop" learning](https://hbr.org/1977/09/double-loop-learning-in-organizations):
+"double-loop" learning](https://hbr.org/1977/09/double-loop-learning-in-organizations) ([1977](https://hbr.org/1977/09/double-loop-learning-in-organizations)):
 
 - **Single-loop learning** operates within existing frameworks, detecting and correcting errors without questioning
   underlying assumptions
@@ -523,18 +523,18 @@ Conway's Law, formulated by computer programmer Melvin Conway in 1967, states th
 
 The law recognizes that software systems inevitably reflect the social boundaries and communication patterns of the organizations that create them. When organizationally separate groups work on different components of a system, interfaces between these components will likely be more formal, less efficient, and updated less frequently than interfaces within components developed by cohesive teams.
 
-Conway's Law has been empirically validated through numerous studies. For example, research at Harvard Business School found strong evidence that the technical architecture of products tends to mirror the structure of the organizations that develop them [Nagappan2008]. This mirroring effect occurs because:
+Conway's Law has been empirically validated through numerous studies. For example, research at Harvard Business School found strong evidence that the technical architecture of products tends to mirror the structure of the organizations that develop them (Nagappan et al., [2008](https://www.microsoft.com/en-us/research/publication/influence-organizational-structure-software-quality-empirical-case-study/)). This mirroring effect occurs because:
 
 1. Communication pathways in an organization determine how effectively teams can coordinate their work
 2. Team boundaries become natural boundaries for system components
 3. Organizational incentives and metrics shape technical decisions
 4. Power dynamics and reporting structures influence architectural decisions
 
-Modern development approaches such as DevOps and microservices explicitly acknowledge Conway's Law, designing both their structures and systems. Ruth Malan's modern interpretation of Conway's Law emphasizes this relationship even more strongly: "If the architecture of the system and the architecture of the organization are at odds, the architecture of the organization wins" [Malan2008].
+Modern development approaches such as DevOps and microservices explicitly acknowledge Conway's Law, designing both their structures and systems. Ruth Malan's modern interpretation of Conway's Law emphasizes this relationship even more strongly: "If the architecture of the system and the architecture of the organization are at odds, the architecture of the organization wins" (Malan, [2008](https://web.archive.org/web/20181014080259/http://www.ruthmalan.com/Journal/2008/2008JournalFebruary.htm#2008Feb01)).
 
 ### 3.4.1 Strategic Implications of Conway's Law
 
-Conway's Law reveals that organizational design is not merely an administrative activity but a strategic one with direct impact on an organization's ability to deliver effective software systems. According to Skelton and Pais, organizations face two common challenges in their structural design [Skelton2020]:
+Conway's Law reveals that organizational design is not merely an administrative activity but a strategic one with direct impact on an organization's ability to deliver effective software systems. According to Skelton and Pais ([2020](https://teamtopologies.com/)), organizations face two common challenges in their structural design:
 
 1. **Underfitting**: When an organization's structure is too simplistic relative to the complexity of the system it aims to build. This typically manifests as monolithic teams or rigid functional silos that fail to account for the domains and bounded contexts needed in the system architecture.
 
@@ -546,7 +546,7 @@ Both underfitting and overfitting represent misalignments between organizational
 
 When Conway's Law operates unrecognized in an organization, system architecture emerges as an accidental byproduct of organizational structure rather than through intentional design. This often leads to suboptimal technical outcomes that are difficult and costly to change. 
 
-Michael Nygard captures this reality succinctly: "Team assignments are the first draft of the architecture" [Skelton2020]. This insight underscores how early decisions about team formation and organizational structure implicitly shape technical outcomes, often before any formal architectural design has been undertaken.
+Michael Nygard captures this reality succinctly: "Team assignments are the first draft of the architecture" (Skelton and Pais, [2020](https://teamtopologies.com/)). This insight underscores how early decisions about team formation and organizational structure implicitly shape technical outcomes, often before any formal architectural design has been undertaken.
 
 Organizations that recognize the power of Conway's Law can instead harness it proactively by designing their organizational structures to facilitate the creation of desired system architectures – an approach known as the Inverse Conway Maneuver, which we explore in the next section.
 
@@ -556,13 +556,13 @@ In practice, recognizing Conway's Law means acknowledging that decisions about o
 
 An important evolution of Conway's Law concerns its application in remote and hybrid work environments. Recent research indicates that Conway's Law doesn't disappear in distributed organizations—it simply manifests differently as digital communication patterns replace physical proximity.
 
-Research from Microsoft on 60,000 employees showed that after shifting to remote work, cross-group interactions decreased while in-group clustering increased (Yang et al., 2022). This "digital gravity" effect has significant implications for system architecture:
+Research from Microsoft on 60,000 employees showed that after shifting to remote work, cross-group interactions decreased while in-group clustering increased (Yang et al., [2022](https://www.nature.com/articles/s41562-021-01196-4)). This "digital gravity" effect has significant implications for system architecture:
 
 1. **Silos deepen and cross-team ties shrink**: Remote work tends to reinforce existing organizational boundaries as communication naturally flows more frequently within established teams rather than across them.
 
 2. **Communication shifts from synchronous to asynchronous**: Email and instant messaging traffic typically replaces meetings and calls, with rich-media cues being lost in the process. This can push teams toward adding coarse-grained APIs rather than engaging in fine-grained collaboration.
 
-3. **Trust and morale face new pressures**: Phenomenological studies across multiple sectors report heightened oversight, slower feedback, and reduced personal connection in remote settings (Aguillon & Cronin-Gilmore, 2024). This can lead to "contract-first but context-lost" designs.
+3. **Trust and morale face new pressures**: Phenomenological studies across multiple sectors report heightened oversight, slower feedback, and reduced personal connection in remote settings (Aguillon and Cronin-Gilmore, [2024](https://www.tandfonline.com/doi/abs/10.1080/01608061.2024.2285410)). This can lead to "contract-first but context-lost" designs.
 
 4. **Innovation networks weaken**: The informal, serendipitous interactions that often drive innovation become less frequent, requiring intentional replacements.
 
@@ -578,7 +578,7 @@ Organizations must therefore actively manage their digital communication structu
 
 ## 3.5 The Inverse Conway Maneuver: Restructuring Teams to Shape System Architecture
 
-The Inverse Conway Maneuver is a strategic approach that inverts Conway's Law: instead of allowing organizational structure to unconsciously shape system design, it deliberately structures teams to encourage desired architectural outcomes. This concept, popularized by Thoughtworks' Technology Radar, suggests that organizations should proactively design their team structures to mirror the architecture they want their systems to have [ThoughtWorks2015].
+The Inverse Conway Maneuver is a strategic approach that inverts Conway's Law: instead of allowing organizational structure to unconsciously shape system design, it deliberately structures teams to encourage desired architectural outcomes. This concept, popularized by Thoughtworks' Technology Radar, suggests that organizations should proactively design their team structures to mirror the architecture they want their systems to have (ThoughtWorks, [2015](https://www.thoughtworks.com/radar/techniques/inverse-conway-maneuver)).
 
 For example, if an organization desires a modular, service-oriented architecture with clear boundaries between components, it should consider organizing teams around these services and components with explicit communication pathways that respect the desired boundaries. This approach acknowledges Conway's Law as a powerful force and harnesses it intentionally rather than letting it operate implicitly.
 
@@ -636,7 +636,7 @@ For example, an e-commerce company might identify bounded contexts for Order Pro
 
 By applying DDD context mapping to organizational design, companies can create team structures that naturally produce architectures with appropriate boundaries, interfaces, and relationships. This strategic approach to organizational design prevents both underfitting (organizational structures that fail to reflect domain complexity) and overfitting (excessively fragmented teams that create unnecessary coordination overhead).
 
-*Further exploration of these concepts can be found in Eric Evans' seminal work "Domain-Driven Design" [Evans2003] and in Vaughn Vernon's "Implementing Domain-Driven Design" [Vernon2013].*
+*Further exploration of these concepts can be found in Eric Evans' seminal work "Domain-Driven Design" (Evans, [2003](https://www.domainlanguage.com/ddd/)) and in Vaughn Vernon's "Implementing Domain-Driven Design" (Vernon, [2013](https://www.informit.com/store/implementing-domain-driven-design-9780321834577)).*
 
 ### 3.5.2 Team Topologies for Organizational Structure
 
@@ -678,7 +678,7 @@ The rise of remote and hybrid work has created new challenges for applying the I
 
 #### Remote-Aware Team Structures
 
-Team Topologies advocates recommend three key practices for effective remote team design (Skelton and Pais, 2020):
+Team Topologies advocates recommend three key practices for effective remote team design (Skelton and Pais, [2020](https://teamtopologies.com/)):
 
 1. **Explicit boundaries**: Clear delineation of team responsibilities becomes even more crucial when hallway conversations are no longer available to resolve ambiguities.
 
@@ -791,7 +791,7 @@ By establishing clear feedback loops, defining appropriate homeostatic boundarie
 control systems, organizations can develop the minimally sufficient complexity needed to leverage AI capabilities while
 maintaining coherence, adaptability, and human agency. This cybernetic approach to organizational design represents not
 just an engineering challenge but a theoretical reimagining of how human and artificial intelligence can combine to
-create systems with emergent capabilities greater than either could achieve alone (as explored in [research on AI-human collaboration in science](https://www.nature.com/articles/s41586-023-06221-2)).
+create systems with emergent capabilities greater than either could achieve alone (as explored in research on AI-human collaboration in science by Strickland et al., [2023](https://www.nature.com/articles/s41586-023-06221-2)).
 
 While these theoretical principles provide valuable foundations for understanding AI-augmented organizational design, organizations also need frameworks for implementation testing. The following section explores emerging theoretical approaches that could translate these concepts into research-based organizational models that balance appropriate complexity with adaptability.
 
@@ -846,22 +846,15 @@ these theoretically-grounded adaptation strategies, several of which are support
 1. **Integration Interfaces:** Design specific organizational interfaces that enable human-AI teams to integrate with
 traditional teams without imposing unnecessary process overhead.
 This approach aligns with emerging frameworks for human-AI collaboration that
-emphasize structured interaction patterns, as confirmed by *Frontiers'* comprehensive review of human-AI teaming [[1]](https://www.frontiersin.org/articles/10.3389/frai.2023.1250725/full) and research on pattern-based human-AI teamwork interface design [[2]](https://www.researchgate.net/publication/383426629_Human-AI_Teamwork_Interface_Design_Using_Patterns_of_Interactions).
+emphasize structured interaction patterns, as confirmed by *Frontiers'* comprehensive review of human-AI teaming (Berretta et al., [2023](https://www.frontiersin.org/articles/10.3389/frai.2023.1250725/full)) and research on pattern-based human-AI teamwork interface design (Ashktorab et al., [2024](https://www.researchgate.net/publication/383426629_Human-AI_Teamwork_Interface_Design_Using_Patterns_of_Interactions)).
 
-2. **Differentiated Complexity Zones:** Rather than uniformly simple or complex organizational models, develop differentiated complexity zones that align with Beer's Viable System Model principle of recursion, where greater structural elaboration is justified by domain complexity or strategic importance. This approach is well-documented in Espinosa's i2 Insights explainer on VSM [[3]](https://i2insights.org/2023/01/24/viable-system-model/).
+2. **Differentiated Complexity Zones:** Rather than uniformly simple or complex organizational models, develop differentiated complexity zones that align with Beer's Viable System Model principle of recursion, where greater structural elaboration is justified by domain complexity or strategic importance. This approach is well-documented in Espinosa's i2 Insights explainer on VSM (Espinosa, [2023](https://i2insights.org/2023/01/24/viable-system-model/)).
 
-3. **Adaptive Structural Reconfiguration:** Create organizational structures that can temporarily increase or decrease in complexity as needed, implementing [Ashby's Law of Requisite Variety](https://en.wikipedia.org/wiki/Variety_(cybernetics)) by modulating the appropriate level of structural detail based on environmental conditions. This approach is supported by Alves et al.'s research on configuring viable systems during crises [[4]](https://www.sciencedirect.com/science/article/pii/S0377221724002340).
+3. **Adaptive Structural Reconfiguration:** Create organizational structures that can temporarily increase or decrease in complexity as needed, implementing [Ashby's Law of Requisite Variety](https://en.wikipedia.org/wiki/Variety_(cybernetics)) by modulating the appropriate level of structural detail based on environmental conditions. This approach is supported by Alves et al.'s research on configuring viable systems during crises (Alves et al., [2024](https://www.sciencedirect.com/science/article/pii/S0377221724002340)).
 
-4. **Complexity Pattern Recognition:** Leverage AI's analytical capabilities to recognize patterns in organizational behavior and identify where existing structures are overfitting or underfitting, a capability described in Cognitive Talent Solutions' white paper on organizational network analysis and AI integration [[5]](https://www.cognitivetalentsolutions.com/organizational-network-analysis-ona-concept-use-cases-and-integration-of-ai-capabilities/). AI-enhanced organizational network analysis can:
-   - Visualize both formal and informal relationships that exist within organizations
-   - Map actual communication flows versus theoretical structures
-   - Identify informal leaders who can be positioned as early adopters of AI integration
-   - Detect organizational silos and bottlenecks that may impede information flow
-   - Pinpoint where employees act as bridges between otherwise disconnected groups
+4. **Complexity Pattern Recognition:** Leverage AI's analytical capabilities to recognize patterns in organizational behavior and identify where existing structures are overfitting or underfitting, a capability described in Cognitive Talent Solutions' white paper on organizational network analysis and AI integration (Cognitive Talent Solutions, [2024](https://www.cognitivetalentsolutions.com/organizational-network-analysis-ona-concept-use-cases-and-integration-of-ai-capabilities/)).
 
-   This approach provides empirical evidence of how organizational structures actually function versus how they were designed, offering a data-driven foundation for determining whether structures are appropriately complex or unnecessarily rigid.
-
-5. **Temporal Continuity Management:** Design organizational processes that can leverage extended operational timeframes of AI systems while ensuring effective handoffs and information flow between human and AI working periods. This is illustrated in early field deployments of always-on AI agents [[6]](https://gloriumtech.com/custom-ai-agent-development/). *Rigorous human-factor studies are still pending; pilot carefully before large-scale rollout.*
+5. **Temporal Continuity Management:** Design organizational processes that can leverage extended operational timeframes of AI systems while ensuring effective handoffs and information flow between human and AI working periods. This is illustrated in early field deployments of always-on AI agents (Glorium Technologies, [2024](https://gloriumtech.com/custom-ai-agent-development/)). *Rigorous human-factor studies are still pending; pilot carefully before large-scale rollout.*
 
 6. **Team Topology Evolution:** As organizations integrate AI capabilities, their team topologies will need to evolve:
    - Establish clear interaction modes between human teams and AI systems (collaboration, service, facilitation)
@@ -870,7 +863,7 @@ emphasize structured interaction patterns, as confirmed by *Frontiers'* comprehe
    - Recognize when AI systems are handling complicated subsystems and define appropriate boundaries
    - Implement a structured assessment approach to determine optimal team types for AI integration
    
-   Recent research from Team Topologies suggests Stream-aligned Teams often provide the best framework for generative AI integration due to their direct user interaction, adaptability, and alignment with business goals. However, Enabling Teams may be more appropriate when organizations need to overcome initial adoption barriers or build foundational knowledge [[7]](https://teamtopologies.com/news-blogs-newsletters/2025/1/28/how-team-topologies-can-transform-generative-ai-integration). This team selection should be guided by a systematic assessment of factors including technical complexity, required speed of delivery, and integration with existing workflows. These approaches are further supported by AIS studies on generative-AI cognitive load dynamics [[9]](https://aisel.aisnet.org/context/icis2024/article/1190/viewcontent/2697_doc.pdf).
+   Recent research from Team Topologies suggests Stream-aligned Teams often provide the best framework for generative AI integration due to their direct user interaction, adaptability, and alignment with business goals. However, Enabling Teams may be more appropriate when organizations need to overcome initial adoption barriers or build foundational knowledge (Lingnau de Oliveira, [2024](https://teamtopologies.com/news-blogs-newsletters/2025/1/28/how-team-topologies-can-transform-generative-ai-integration)). This team selection should be guided by a systematic assessment of factors including technical complexity, required speed of delivery, and integration with existing workflows. These approaches are further supported by AIS studies on generative-AI cognitive load dynamics (Wagner et al., [2024](https://aisel.aisnet.org/context/icis2024/article/1190/viewcontent/2697_doc.pdf)).
 
 
 These considerations suggest that effective organizational models in AI-augmented environments will likely neither be
@@ -893,7 +886,7 @@ While the field of AI-augmented organizational design remains nascent, several t
 
 #### Cognitive Load Distribution Framework
 
-Building directly on Team Topologies principles ([Skelton and Pais, 2019](https://teamtopologies.com/)), this emerging theoretical framework could help organizations intentionally distribute cognitive workload between humans and AI systems:
+Building directly on Team Topologies principles (Skelton and Pais, [2019](https://teamtopologies.com/)), this emerging theoretical framework could help organizations intentionally distribute cognitive workload between humans and AI systems:
 
 **Theoretical Foundation:**
 This framework extends the cognitive load management principles from Team Topologies into human-AI collaborative contexts, drawing on both organizational design theory and cognitive science research on human-computer interaction.
@@ -926,7 +919,7 @@ This framework could help organizations avoid both underfitting (failing to leve
 This theoretical model applies sociotechnical systems theory (Section 3.3.4) specifically to AI integration challenges:
 
 **Theoretical Foundation:**
-Building on Trist and Bamforth's (1951) sociotechnical systems theory and more recent work on technological integration, this model examines how social and technical subsystems must co-evolve during AI implementation. This approach is well-supported by Carayon et al.'s framework for AI in clinical care [[10]](https://pmc.ncbi.nlm.nih.gov/articles/PMC9873227/).
+Building on Trist and Bamforth's (1951) sociotechnical systems theory and more recent work on technological integration, this model examines how social and technical subsystems must co-evolve during AI implementation. This approach is well-supported by Carayon et al.'s framework for AI in clinical care (Carayon et al., [2023](https://pmc.ncbi.nlm.nih.gov/articles/PMC9873227/)).
 
 **Key Principles:**
 1. **Joint Optimization Assessment**: Evaluate current organizational processes across both social and technical dimensions:
