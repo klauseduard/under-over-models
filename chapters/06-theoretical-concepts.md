@@ -441,6 +441,8 @@ unpredictability, negentropy quantifies a system's degree of organization and ab
 
 In software development, negentropy manifests through practices that reduce uncertainty and create structure:
 
+> **Interactive Tool**: Explore our [interactive visualization of entropy and negentropy in software development](../html/entropy_in_software.html). This simulation demonstrates how negentropy-building activities like documentation, testing, code standards, and knowledge sharing can counteract the natural tendency toward increasing entropy in software systems.
+
 <figure> <img src="../images/negentropy-software.svg" alt="Negentropy Sources in Software Development - showing how
 different practices reduce uncertainty" width="700" /> <figcaption>Figure 6.4: Sources of negentropy in software
 development processes</figcaption> </figure>

@@ -51,6 +51,7 @@ Throughout the publication, you'll find various visualizations that illustrate i
    - **[Interactive Long Tail Risk Visualization](html/long_and_fat_tail_risks.html)** - Explore how common vs. rare risks affect project estimation and outcomes
 5. **[AI Productivity Variance](chapters/02-software-time-estimation.md#225-estimating-ai-assisted-development-new-uncertainties)** - Comparing development time across task types with AI assistance
 6. **[Dissipative Systems & Organizational Dynamics](html/dissipative_sys_and_org_dynamics.html)** - Interactive simulation showing how organizations function as dissipative systems under varying conditions of environmental turbulence, resource flow, and connectivity
+7. **[Entropy and Negentropy in Software](html/entropy_in_software.html)** - Interactive demonstration of how entropy increases in software systems over time and how negentropy-building practices can counteract it
 
 ## How to Use These Tools
 
