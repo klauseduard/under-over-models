@@ -1,0 +1,14 @@
+title: Underfitting and Overfitting in Software Development
+description: An analysis of underfitting and overfitting concepts in software development and organizational models
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+  - chapters/*.md 
