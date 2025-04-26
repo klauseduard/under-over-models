@@ -103,8 +103,8 @@ formalization, tend to be easier to understand and can foster greater agility an
 
 **Examples:**
 - Startups often thrive with simpler, flatter structures allowing quick pivots and direct communication.
-- Companies like Buurtzorg have shown that minimizing traditional management layers can lead to significant agility and
-  growth.
+- Companies like [Buurtzorg have shown](https://www.adaptconsultingcompany.com/2024/07/06/buurtzorgs-organizational-structure/) that minimizing traditional 
+management layers can lead to significant agility and growth.
 
 **Potential Drawbacks:**
 - Might lack the depth of specialization needed for highly intricate tasks.
@@ -116,7 +116,7 @@ In contrast, more complex organizational structures, often featuring multiple la
 control, high specialization, and a greater degree of formalization, can provide the necessary framework for managing
 intricate operations.
 
-**Mechanistic structures**, a term coined by Burns and Stalker in their influential work ["The Management of Innovation"](https://academic.oup.com/book/4968) ([1961](https://books.google.com/books?id=Xt_YWG-CJWIC)), represent one end of the organizational spectrum characterized by:
+**Mechanistic structures**, a term coined by Burns and Stalker in their influential work ["The Management of Innovation"](https://academic.oup.com/book/4968) ([1961](https://academic.oup.com/book/4968)), represent one end of the organizational spectrum characterized by:
 - High formalization and standardization of processes
 - Clear division of labor and rigid departmentalization
 - Specialized roles with narrowly defined responsibilities
@@ -128,16 +128,9 @@ These structures stand in direct contrast to the Organic structures described in
 - Facilitate deep specialization within different functional areas.
 - Provide clear control and coordination for large, diverse operations.
 - Often necessary for large, established corporations with diverse product lines or global reach, allowing focused
-  management (e.g., divisional structures).
+  management (e.g., divisional structures). Large corporations often adopt complex structures, and firm size often correlates with Management Information Systems (MIS) centralization, suggesting a tendency towards complexity in certain aspects for larger organizations.
 
-**Examples:**
-- Large corporations often adopt complex structures.
-- Firm size often correlates with Management Information Systems (MIS) centralization, suggesting a tendency towards complexity in certain aspects for
-  larger organizations.
-- [Matrix Organizations](https://asana.com/resources/matrix-organization), while sometimes used in startups, represent a
-  complex model with dual reporting and cross-functional teams.
-
-**Matrix Organizations** feature overlapping lines of authority where employees report to both functional managers (specialized by function like marketing or engineering) and project/product managers (focused on specific projects or products). This dual reporting structure creates a grid or "matrix" that increases complexity but can enhance cross-functional collaboration.
+- [Matrix Organizations](https://asana.com/resources/matrix-organization), while sometimes used in startups, represent a complex model with dual reporting and cross-functional teams. **Matrix Organizations** feature overlapping lines of authority where employees report to both functional managers (specialized by function like marketing or engineering) and project/product managers (focused on specific projects or products). This dual reporting structure creates a grid or "matrix" that increases complexity but can enhance cross-functional collaboration.
 
 **Potential Drawbacks:**
 - Can lead to bureaucracy and slower decision-making.
