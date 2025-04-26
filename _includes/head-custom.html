@@ -151,32 +151,24 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('toggle-mode').addEventListener('click', function() {
     if (currentMode === 'light') {
       // Switch to sepia mode
+      document.body.classList.remove('dark-mode');
       body.style.backgroundColor = '#f5edd3';
       document.querySelector('.wrapper').style.backgroundColor = '#fffbec';
       currentMode = 'sepia';
     } else if (currentMode === 'sepia') {
       // Switch to dark mode
-      body.style.backgroundColor = '#282520';
-      body.style.color = '#e8e0cc';
-      document.querySelector('.wrapper').style.backgroundColor = '#32302a';
-      document.querySelectorAll('h1, h2, h3, h4').forEach(h => {
-        h.style.color = '#f3ead3';
-      });
-      document.querySelectorAll('a').forEach(a => {
-        a.style.color = '#e3c987';
-      });
+      document.body.classList.add('dark-mode');
+      // Clear any inline styles that may have been set
+      body.style.backgroundColor = '';
+      body.style.color = '';
+      document.querySelector('.wrapper').style.backgroundColor = '';
       currentMode = 'dark';
     } else {
       // Switch back to light mode
+      document.body.classList.remove('dark-mode');
       body.style.backgroundColor = '#fffaed';
       body.style.color = '#333333';
       document.querySelector('.wrapper').style.backgroundColor = '#fffdf5';
-      document.querySelectorAll('h1, h2, h3, h4').forEach(h => {
-        h.style.color = '#5c4a1c';
-      });
-      document.querySelectorAll('a').forEach(a => {
-        a.style.color = '#956a00';
-      });
       currentMode = 'light';
     }
   });
