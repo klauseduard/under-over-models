@@ -648,6 +648,8 @@ These might include:
 
 In certain high-risk or complex projects, we may also encounter **fat-tail distributions** of risk, where extreme events occur with much higher probability than would be predicted by standard statistical models. These fat-tail risks (explored in detail in [Chapter 6](06-theoretical-concepts.md#61-software-project-risks-and-long-tail-distributions)) represent truly catastrophic outliers—not merely uncommon events, but "black swan" events with the potential to derail entire projects. Fat-tail risks in software projects might include mission-critical security breaches, fundamental flaws in core architectural assumptions, or severe compatibility issues discovered only in production environments.
 
+> **Interactive Tool**: Explore our [interactive visualization of long tail and fat tail distributions in software project risks](../html/long_and_fat_tail_risks.html). This tool allows you to toggle between standard and fat tail distributions to see how they affect project estimation outcomes at different complexity levels.
+
 Estimation models that primarily focus on typical tasks and average scenarios often fail to incorporate contingencies
 for these "long-tail" risks, leading to underestimation of the overall project effort and potential for delays when
 these unforeseen events materialize. The problem becomes even more severe when fat-tail risks are present but unaccounted for in planning.
