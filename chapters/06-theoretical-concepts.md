@@ -353,7 +353,7 @@ While entropy is often framed as uncertainty that challenges predictability, it 
 
 3. **Edge of Chaos**: Complex adaptive systems theory suggests that the most generative state exists at the "[edge of chaos](https://en.wikipedia.org/wiki/Edge_of_chaos)"—a sweet spot between rigid order and complete randomness. This balanced entropy state maximizes adaptive potential while maintaining sufficient coherence.
 
-<figure> <img src="../images/generative-entropy.svg" alt="Generative Entropy Sweet Spot - showing the balance between structure and chaos for innovation" width="700" /> <figcaption>Figure 6.4a: The optimal zone for innovation balances generative entropy with sufficient structure</figcaption> </figure>
+> **Interactive Tool**: Explore the [interactive generative entropy and innovation simulator](../html/generative_entropy_simulator.html). This simulation demonstrates how the balance between order and chaos affects innovation potential and execution capability.
 
 4. **Deliberate Entropy Introduction**: Some innovation methodologies deliberately introduce entropy to break established patterns:
    - Diverse team composition to ensure varied perspectives
@@ -370,8 +370,6 @@ While entropy is often framed as uncertainty that challenges predictability, it 
 Organizations must develop the capability to modulate entropy—increasing it to generate novel solutions, then decreasing it to implement those solutions effectively. This dynamic entropy management represents a core capability for adaptive organizations.
 
 In the context of software development, generative entropy manifests as spaces for experimentation (innovation labs, 20% time), practices that encourage creative recombination (cross-team collaboration, knowledge sharing), and methodologies that embrace uncertainty as a source of opportunity rather than merely a challenge to be minimized.
-
-> **Interactive Tool**: Explore our [interactive visualization of dissipative structures and organizational dynamics](../html/dissipative_sys_and_org_dynamics.html). This simulation demonstrates how environmental turbulence, resource flow, and structural configurations affect entropy production, adaptability, and innovation rates in organizational systems.
 
 ### Negentropy in Software Development
 
