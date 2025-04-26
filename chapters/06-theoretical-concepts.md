@@ -297,18 +297,27 @@ Heylighen, F., & Joslyn, C. (2001). [Cybernetics and Second-Order Cybernetics](h
 
 ### Information Entropy in Software Development
 
-[Information entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)), a concept introduced by Claude
-Shannon, quantifies uncertainty or unpredictability within a system. In software development contexts, entropy can be
+[Information entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)), a concept introduced by [Claude
+Shannon](https://en.wikipedia.org/wiki/Claude_Shannon), quantifies uncertainty or unpredictability within a system. In software development contexts, entropy can be
 understood as a measure of the unpredictability inherent in projects:
 
 - Higher entropy = Greater uncertainty = Less predictable outcomes
 - Lower entropy = More certainty = More predictable outcomes
 
-![Information Entropy in Software Projects](../images/software-entropy.svg)
-
 ### Entropy as a Framework for Estimation Challenges
 
 Entropy provides a theoretical foundation for understanding why software estimation is fundamentally challenging:
+
+Mathematically, information entropy (often denoted as $S$) for a system with various possible states or outcomes ($i$) is calculated using the probabilities ($p_i$) of those states:
+
+$$ S = -\sum_{i} p_i \log_b(p_i) $$
+
+Where:
+- $p_i$ is the probability of the system being in state $i$.
+- The sum is over all possible states the system can be in.
+- The logarithm ($\log_b$) can be base 2 (giving entropy in bits), base e (nats), or base 10 (hartleys). The base choice affects the units but not the relative uncertainty measurement.
+
+This formula quantifies the average "surprise" or inherent unpredictability associated with the system's potential outcomes. A system with many equally likely states (high uncertainty) will have higher entropy than a system with few states or one state that is highly probable (low uncertainty). This provides a concrete measure for the complexity and unpredictability that software estimation models (as discussed in Chapter 2) attempt to grapple with. Misjudging this inherent entropy—either by underestimating it (leading to underfitting) or by modeling noise as if it were predictable signal (leading to overfitting)—is a key challenge in creating reliable forecasts.
 
 1. **Complexity Increases Entropy**: As software systems grow in complexity (more components, interactions,
 dependencies), entropy naturally increases. Each additional variable introduces new possible states and outcomes.
@@ -335,9 +344,7 @@ The long tail distribution of software risks directly connects to entropy theory
 
 ### Negentropy in Software Development
 
-[Negentropy](https://en.wikipedia.org/wiki/Negentropy) (negative entropy) represents the counterforce to entropy—the
-creation of order, structure, and certainty within complex systems. While entropy measures disorder and
-unpredictability, negentropy quantifies a system's degree of organization and ability to produce reliable outcomes.
+[Negentropy](https://en.wikipedia.org/wiki/Negentropy) (negative entropy) is a concept used to **quantify the degree of order or organization** within a system. While entropy measures disorder and unpredictability, negentropy measures the extent to which a system is structured and produces reliable outcomes, effectively representing a reduction from its maximum possible entropy.
 
 In software development, negentropy manifests through practices that reduce uncertainty and create structure:
 
@@ -365,18 +372,18 @@ entropy.
 
 #### The Negentropy-Entropy Balance and Model Fitting
 
-The balance between negentropy (order) and entropy (uncertainty) directly parallels the underfitting-overfitting spectrum:
-- Too little negentropy (high disorder) → Chaos, unpredictability → Parallel to underfitting
-- Optimal negentropy balance → Productive creativity within structure → Well-calibrated models
-- Too much negentropy (rigid order) → Bureaucracy, inflexibility → Parallel to overfitting
+The balance between entropy (uncertainty) and negentropy (structure) directly parallels the underfitting-overfitting spectrum:
+- High entropy (disorder) → Chaos, unpredictability → Parallel to underfitting
+- Optimal entropy balance → Productive creativity within structure → Well-calibrated models
+- Low entropy (rigid order) → Bureaucracy, inflexibility → Parallel to overfitting
 
-In the context of software estimation, negentropy-building activities (documentation, testing, standardization) can significantly improve model accuracy by reducing variability in development processes and creating more consistent, predictable workflows. However, the *process* of creating this order must itself be accounted for in time estimates. Organizations sometimes underestimate projects because they ignore the time required for these critical uncertainty-reducing activities.
+In the context of software estimation, entropy-reducing activities (documentation, testing, standardization) can significantly improve model accuracy by reducing variability in development processes and creating more consistent, predictable workflows. However, the *process* of creating this order must itself be accounted for in time estimates. Organizations sometimes underestimate projects because they ignore the time required for these critical uncertainty-reducing activities.
 
 ### Practical Implications
 
 Understanding entropy in software development enables more realistic assessment of estimation limitations, better quantification of uncertainty in different project types, improved risk models that account for inherent unpredictability, and development of estimation techniques that explicitly incorporate uncertainty measures.
 
-This entropy framework provides a theoretical basis for many practical observations throughout this book, from the challenges of time estimation (Chapter 2) to the optimization of organizational models (Chapters 7 and 8).
+This entropy framework provides a theoretical basis for many practical observations throughout this publication, from the challenges of time estimation ([Chapter 2](02-software-time-estimation.md)) to the optimization of organizational models ([Chapter 3](03-organizational-structures.md)) and the impact of AI integration ([Chapter 8](08-ai-integration.md)).
 
 ## 6.5 Bayesian Statistics and Uncertainty Management
 
