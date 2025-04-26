@@ -233,9 +233,7 @@ deviation
 5. **Use uncertainty for planning**: Schedule buffers based on the calculated uncertainty, not arbitrary padding
 6. **Track accuracy**: Compare actual outcomes to the full distribution, not just the expected value
 
-> For a practical, interactive way to experiment with three-point estimation, try [interactive Three-Point Estimation Calculator](../html/three_point_estimation_calculator.html). This calculator allows you to adjust optimistic, most likely, and pessimistic estimates and instantly see how they affect the expected duration, standard deviation, and confidence intervals. You can also explore how different distribution methods (PERT vs. Triangular) impact the results, and see how factors like task complexity and team experience influence the final estimates. Or you can have a look at external calculator with some additional parameters: [Agile Task
-> Estimation Calculator](https://www.shedloadofcode.com/tools/
-agile-task-estimation-calculator)
+> For a practical, interactive way to experiment with three-point estimation, try [interactive Three-Point Estimation Calculator](../html/three_point_estimation_calculator.html). This calculator allows you to adjust optimistic, most likely, and pessimistic estimates and instantly see how they affect the expected duration, standard deviation, and confidence intervals. You can also explore how different distribution methods (PERT vs. Triangular) impact the results, and see how factors like task complexity and team experience influence the final estimates.
 
 Three-point estimation serves as an accessible entry point to probabilistic thinking for teams transitioning from
 traditional point-based estimates toward more sophisticated uncertainty modeling.
@@ -260,12 +258,9 @@ Monte Carlo simulation extends probabilistic modeling by:
 3. **Running thousands of randomized scenarios** to build a comprehensive distribution of outcomes
 4. **Generating rich statistical outputs** beyond simple means and standard deviations
 
-The fundamental process involves:
+> **Interactive Demonstration**: Try our [Monte Carlo Project Simulation](../html/monte_carlo_demo.html) tool to see how task distributions, correlations between activities, and multiple simulation runs combine to create a comprehensive project forecast with confidence levels and sensitivity analysis.
 
-1. Defining probability distributions for each task duration (often using three-point estimates as inputs)
-2. Specifying correlation coefficients between tasks (e.g., if one task runs long, related tasks are likely to as well)
-3. Running thousands of simulated project executions by randomly sampling from these distributions
-4. Analyzing the resulting aggregate distribution of project completion times
+This fundamental process is illustrated in the figure below:
 
 <figure> <img src="../images/monte-carlo-simulation.svg" alt="Monte Carlo Simulation Process - showing how individual
 task distributions are combined through simulation to produce project-level probability distributions" width="700" />
@@ -311,8 +306,8 @@ To effectively implement Monte Carlo simulation for software estimation you migh
 1. **Start with three-point estimates** as the foundation for task distributions
 2. **Use appropriate distribution types**:
    - Triangular or PERT for well-understood tasks
-   - Lognormal for tasks with potential for significant overruns
-   - Uniform for highly uncertain tasks with little historical basis
+   - [Lognormal](https://en.wikipedia.org/wiki/Log-normal_distribution) for tasks with potential for significant overruns
+   - [Uniform](https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)) for highly uncertain tasks with little historical basis
 
 3. **Model correlations thoughtfully**:
    - Between similar task types (e.g., all UI components)

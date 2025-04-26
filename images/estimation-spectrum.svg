@@ -38,12 +38,12 @@
     <text x="250" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">2</text>
     
     <!-- Three-Point Estimation -->
-    <circle cx="350" cy="250" r="15" fill="rgba(144, 238, 144, 0.3)" stroke="rgba(144, 238, 144, 0.8)" stroke-width="1.5" />
-    <text x="350" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">3</text>
+    <circle cx="450" cy="250" r="15" fill="rgba(144, 238, 144, 0.3)" stroke="rgba(144, 238, 144, 0.8)" stroke-width="1.5" />
+    <text x="450" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">3</text>
     
     <!-- Planning Poker -->
-    <circle cx="450" cy="250" r="15" fill="rgba(144, 238, 144, 0.3)" stroke="rgba(144, 238, 144, 0.8)" stroke-width="1.5" />
-    <text x="450" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">4</text>
+    <circle cx="350" cy="250" r="15" fill="rgba(144, 238, 144, 0.3)" stroke="rgba(144, 238, 144, 0.8)" stroke-width="1.5" />
+    <text x="350" y="255" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333">4</text>
     
     <!-- Monte Carlo Simulation -->
     <circle cx="550" cy="250" r="15" fill="rgba(144, 238, 144, 0.3)" stroke="rgba(144, 238, 144, 0.8)" stroke-width="1.5" />
@@ -77,11 +77,11 @@
     <text x="250" y="330" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Expert</text>
     <text x="250" y="348" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Judgment</text>
     
-    <text x="350" y="330" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Three-Point</text>
-    <text x="350" y="348" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Estimation</text>
+    <text x="350" y="330" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Planning</text>
+    <text x="350" y="348" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Poker</text>
     
-    <text x="450" y="330" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Planning</text>
-    <text x="450" y="348" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Poker</text>
+    <text x="450" y="330" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Three-Point</text>
+    <text x="450" y="348" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Estimation</text>
     
     <text x="550" y="330" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Monte Carlo</text>
     <text x="550" y="348" font-family="Arial, sans-serif" font-size="13" text-anchor="middle" fill="#333">Simulation</text>

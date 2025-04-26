@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monte Carlo Simulation for Project Estimation</title>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #3498db;
+      --accent-color: #e74c3c;
+      --light-bg: #f5f7fa;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --border-radius: 8px;
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      --task-a-color: #3498db;
+      --task-b-color: #e74c3c;
+      --task-c-color: #2ecc71;
+      --task-d-color: #f39c12;
+      --project-color: #9b59b6;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--light-bg);
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1, h2, h3 {
+      margin-bottom: 0.5em;
+      color: var(--primary-color);
+    }
+    
+    p {
+      margin-bottom: 1em;
+    }
+    
+    .card {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    
+    input[type="number"], select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    input[type="range"] {
+      width: 100%;
+      margin: 10px 0;
+    }
+    
+    button {
+      background-color: var(--secondary-color);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+    }
+    
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .helper-text {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+    
+    .chart-container {
+      position: relative;
+      height: 250px;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    
+    .project-container {
+      height: 300px;
+    }
+    
+    .task-card {
+      border-left: 4px solid var(--secondary-color);
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .task-card h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .task-a { border-color: var(--task-a-color); }
+    .task-b { border-color: var(--task-b-color); }
+    .task-c { border-color: var(--task-c-color); }
+    .task-d { border-color: var(--task-d-color); }
+    
+    .distribution-type {
+      font-size: 14px;
+      color: #666;
+      font-weight: normal;
+    }
+    
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .stat-box {
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    .stat-label {
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .correlation-matrix {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    
+    .correlation-matrix th,
+    .correlation-matrix td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+    
+    .correlation-matrix th {
+      background-color: #f2f2f2;
+    }
+    
+    .correlation-matrix input {
+      width: 60px;
+      text-align: center;
+    }
+    
+    .sensitivity-bars {
+      margin-top: 20px;
+    }
+    
+    .sensitivity-bar {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .sensitivity-label {
+      width: 80px;
+      font-size: 14px;
+    }
+    
+    .sensitivity-track {
+      flex-grow: 1;
+      height: 20px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .sensitivity-value {
+      height: 100%;
+      background-color: var(--secondary-color);
+    }
+    
+    .sensitivity-percentage {
+      width: 50px;
+      text-align: right;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+    
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .simulation-count {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    
+    .note {
+      background-color: #fffde7;
+      border-left: 4px solid #ffd54f;
+      padding: 10px;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+    
+    .percentile-line {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    
+    .percentile-label {
+      font-weight: bold;
+    }
+    
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+    
+    .tab {
+      padding: 10px 15px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-bottom: none;
+      margin-right: 5px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
+    
+    .tab.active {
+      background-color: white;
+      border-color: #ddd;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    .infobox {
+      padding: 15px;
+      background-color: #e3f2fd;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--secondary-color);
+    }
+    
+    .task-input-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .input-col {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .input-col label {
+      font-size: 12px;
+      margin-bottom: 3px;
+    }
+    
+    .input-col input {
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Monte Carlo Simulation for Project Estimation</h1>
+    
+    <div class="infobox">
+      <p>This interactive visualization demonstrates how Monte Carlo simulation works for software project estimation. It allows you to define probability distributions for individual tasks, set correlations between them, and run thousands of simulations to model the overall project duration.</p>
+    </div>
+    
+    <div class="grid">
+      <div>
+        <div class="card">
+          <h2>Task Definitions</h2>
+          
+          <div class="task-card task-a">
+            <h3>
+              Task A: Requirements Analysis
+              <span class="distribution-type">PERT</span>
+            </h3>
+            <div class="task-input-grid">
+              <div class="input-col">
+                <label for="taskA-min">Optimistic (days)</label>
+                <input type="number" id="taskA-min" min="1" value="5" step="1">
+              </div>
+              <div class="input-col">
+                <label for="taskA-likely">Most Likely (days)</label>
+                <input type="number" id="taskA-likely" min="1" value="10" step="1">
+              </div>
+              <div class="input-col">
+                <label for="taskA-max">Pessimistic (days)</label>
+                <input type="number" id="taskA-max" min="1" value="20" step="1">
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="taskAChart"></canvas>
+            </div>
+          </div>
+          
+          <div class="task-card task-b">
+            <h3>
+              Task B: Development
+              <span class="distribution-type">Lognormal</span>
+            </h3>
+            <div class="task-input-grid">
+              <div class="input-col">
+                <label for="taskB-min">Optimistic (days)</label>
+                <input type="number" id="taskB-min" min="1" value="15" step="1">
+              </div>
+              <div class="input-col">
+                <label for="taskB-likely">Most Likely (days)</label>
+                <input type="number" id="taskB-likely" min="1" value="25" step="1">
+              </div>
+              <div class="input-col">
+                <label for="taskB-max">Pessimistic (days)</label>
+                <input type="number" id="taskB-max" min="1" value="45" step="1">
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="taskBChart"></canvas>
+            </div>
+          </div>
+          
+          <div class="task-card task-c">
+            <h3>
+              Task C: Testing
+              <span class="distribution-type">Triangular</span>
+            </h3>
+            <div class="task-input-grid">
+              <div class="input-col">
+                <label for="taskC-min">Optimistic (days)</label>
+                <input type="number" id="taskC-min" min="1" value="7" step="1">
+              </div>
+              <div class="input-col">
+                <label for="taskC-likely">Most Likely (days)</label>
+                <input type="number" id="taskC-likely" min="1" value="12" step="1">
+              </div>
+              <div class="input-col">
+                <label for="taskC-max">Pessimistic (days)</label>
+                <input type="number" id="taskC-max" min="1" value="25" step="1">
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="taskCChart"></canvas>
+            </div>
+          </div>
+          
+          <div class="task-card task-d">
+            <h3>
+              Task D: Deployment
+              <span class="distribution-type">Uniform</span>
+            </h3>
+            <div class="task-input-grid">
+              <div class="input-col">
+                <label for="taskD-min">Minimum (days)</label>
+                <input type="number" id="taskD-min" min="1" value="3" step="1">
+              </div>
+              <div class="input-col">
+                <label for="taskD-max">Maximum (days)</label>
+                <input type="number" id="taskD-max" min="1" value="10" step="1">
+              </div>
+              <div class="input-col">
+                <!-- Empty for alignment -->
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="taskDChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="card">
+          <h2>Task Correlations</h2>
+          <p>Define how tasks affect each other (values from -1 to 1):</p>
+          
+          <table class="correlation-matrix">
+            <tr>
+              <th></th>
+              <th>Task A</th>
+              <th>Task B</th>
+              <th>Task C</th>
+              <th>Task D</th>
+            </tr>
+            <tr>
+              <th>Task A</th>
+              <td>1.0</td>
+              <td><input type="number" id="corr-AB" min="-1" max="1" step="0.1" value="0.7"></td>
+              <td><input type="number" id="corr-AC" min="-1" max="1" step="0.1" value="0.3"></td>
+              <td><input type="number" id="corr-AD" min="-1" max="1" step="0.1" value="0.1"></td>
+            </tr>
+            <tr>
+              <th>Task B</th>
+              <td>0.7</td>
+              <td>1.0</td>
+              <td><input type="number" id="corr-BC" min="-1" max="1" step="0.1" value="0.8"></td>
+              <td><input type="number" id="corr-BD" min="-1" max="1" step="0.1" value="0.4"></td>
+            </tr>
+            <tr>
+              <th>Task C</th>
+              <td>0.3</td>
+              <td>0.8</td>
+              <td>1.0</td>
+              <td><input type="number" id="corr-CD" min="-1" max="1" step="0.1" value="0.6"></td>
+            </tr>
+            <tr>
+              <th>Task D</th>
+              <td>0.1</td>
+              <td>0.4</td>
+              <td>0.6</td>
+              <td>1.0</td>
+            </tr>
+          </table>
+          
+          <div class="helper-text">
+            <p>Correlation values: 
+              <strong>1.0</strong> = perfect positive correlation, 
+              <strong>0.0</strong> = no correlation, 
+              <strong>-1.0</strong> = perfect negative correlation
+            </p>
+            <p>Higher positive correlations mean if one task takes longer, related tasks are more likely to also take longer.</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h2>Simulation Controls</h2>
+          
+          <div class="form-group">
+            <label for="simulation-count">Number of Simulations:</label>
+            <select id="simulation-count">
+              <option value="100">100 runs (quick)</option>
+              <option value="500">500 runs</option>
+              <option value="1000" selected>1,000 runs (recommended)</option>
+              <option value="5000">5,000 runs (detailed)</option>
+              <option value="10000">10,000 runs (comprehensive)</option>
+            </select>
+          </div>
+          
+          <div class="controls">
+            <button id="run-simulation" class="primary">Run Monte Carlo Simulation</button>
+            <button id="reset-simulation">Reset</button>
+          </div>
+          
+          <div class="simulation-count" id="simulation-status">No simulation run yet</div>
+        </div>
+        
+        <div class="card">
+          <h2>Simulation Results</h2>
+          
+          <div class="tabs">
+            <div class="tab active" data-tab="results">Project Duration</div>
+            <div class="tab" data-tab="sensitivity">Sensitivity Analysis</div>
+            <div class="tab" data-tab="percentiles">Confidence Levels</div>
+          </div>
+          
+          <div class="tab-content active" id="results-tab">
+            <div class="chart-container project-container">
+              <canvas id="projectChart"></canvas>
+            </div>
+            
+            <div class="stats-container">
+              <div class="stat-box">
+                <div class="stat-label">Expected (Mean)</div>
+                <div class="stat-value" id="expected-duration">-</div>
+                <div class="stat-label">days</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Minimum</div>
+                <div class="stat-value" id="min-duration">-</div>
+                <div class="stat-label">days</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Maximum</div>
+                <div class="stat-value" id="max-duration">-</div>
+                <div class="stat-label">days</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-label">Std. Deviation</div>
+                <div class="stat-value" id="std-dev">-</div>
+                <div class="stat-label">days</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="sensitivity-tab">
+            <p>Tornado chart showing which tasks have the most impact on overall project duration:</p>
+            
+            <div class="sensitivity-bars">
+              <div class="sensitivity-bar">
+                <div class="sensitivity-label">Task A</div>
+                <div class="sensitivity-track">
+                  <div class="sensitivity-value" id="sensitivity-A" style="width: 0%"></div>
+                </div>
+                <div class="sensitivity-percentage" id="sensitivity-A-value">0%</div>
+              </div>
+              
+              <div class="sensitivity-bar">
+                <div class="sensitivity-label">Task B</div>
+                <div class="sensitivity-track">
+                  <div class="sensitivity-value" id="sensitivity-B" style="width: 0%"></div>
+                </div>
+                <div class="sensitivity-percentage" id="sensitivity-B-value">0%</div>
+              </div>
+              
+              <div class="sensitivity-bar">
+                <div class="sensitivity-label">Task C</div>
+                <div class="sensitivity-track">
+                  <div class="sensitivity-value" id="sensitivity-C" style="width: 0%"></div>
+                </div>
+                <div class="sensitivity-percentage" id="sensitivity-C-value">0%</div>
+              </div>
+              
+              <div class="sensitivity-bar">
+                <div class="sensitivity-label">Task D</div>
+                <div class="sensitivity-track">
+                  <div class="sensitivity-value" id="sensitivity-D" style="width: 0%"></div>
+                </div>
+                <div class="sensitivity-percentage" id="sensitivity-D-value">0%</div>
+              </div>
+            </div>
+            
+            <div class="note">
+              <p>Sensitivity analysis shows which tasks contribute most to the uncertainty in the overall project schedule. Focus risk management efforts on tasks with higher sensitivity values.</p>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="percentiles-tab">
+            <p>Confidence levels for project completion:</p>
+            
+            <div class="chart-container">
+              <canvas id="cumulativeChart"></canvas>
+            </div>
+            
+            <div class="percentile-line">
+              <span class="percentile-label">P50 (50% confidence):</span>
+              <span id="p50-value">-</span>
+            </div>
+            
+            <div class="percentile-line">
+              <span class="percentile-label">P80 (80% confidence):</span>
+              <span id="p80-value">-</span>
+            </div>
+            
+            <div class="percentile-line">
+              <span class="percentile-label">P90 (90% confidence):</span>
+              <span id="p90-value">-</span>
+            </div>
+            
+            <div class="percentile-line">
+              <span class="percentile-label">P95 (95% confidence):</span>
+              <span id="p95-value">-</span>
+            </div>
+            
+            <div class="note">
+              <p>These values represent the project duration at which there is the specified probability of completion. For example, the P80 value means there's an 80% chance the project will be completed within that timeframe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script>
+    // DOM Elements
+    const simulationCountSelect = document.getElementById('simulation-count');
+    const runSimulationButton = document.getElementById('run-simulation');
+    const resetSimulationButton = document.getElementById('reset-simulation');
+    const simulationStatus = document.getElementById('simulation-status');
+    
+    // Task input elements
+    const taskInputs = {
+      A: {
+        min: document.getElementById('taskA-min'),
+        likely: document.getElementById('taskA-likely'),
+        max: document.getElementById('taskA-max')
+      },
+      B: {
+        min: document.getElementById('taskB-min'),
+        likely: document.getElementById('taskB-likely'),
+        max: document.getElementById('taskB-max')
+      },
+      C: {
+        min: document.getElementById('taskC-min'),
+        likely: document.getElementById('taskC-likely'),
+        max: document.getElementById('taskC-max')
+      },
+      D: {
+        min: document.getElementById('taskD-min'),
+        max: document.getElementById('taskD-max')
+      }
+    };
+    
+    // Correlation matrix inputs
+    const correlationInputs = {
+      AB: document.getElementById('corr-AB'),
+      AC: document.getElementById('corr-AC'),
+      AD: document.getElementById('corr-AD'),
+      BC: document.getElementById('corr-BC'),
+      BD: document.getElementById('corr-BD'),
+      CD: document.getElementById('corr-CD')
+    };
+    
+    // Results elements
+    const expectedDuration = document.getElementById('expected-duration');
+    const minDuration = document.getElementById('min-duration');
+    const maxDuration = document.getElementById('max-duration');
+    const stdDev = document.getElementById('std-dev');
+    
+    // Sensitivity elements
+    const sensitivityElements = {
+      A: {
+        bar: document.getElementById('sensitivity-A'),
+        value: document.getElementById('sensitivity-A-value')
+      },
+      B: {
+        bar: document.getElementById('sensitivity-B'),
+        value: document.getElementById('sensitivity-B-value')
+      },
+      C: {
+        bar: document.getElementById('sensitivity-C'),
+        value: document.getElementById('sensitivity-C-value')
+      },
+      D: {
+        bar: document.getElementById('sensitivity-D'),
+        value: document.getElementById('sensitivity-D-value')
+      }
+    };
+    
+    // Percentile elements
+    const p50Value = document.getElementById('p50-value');
+    const p80Value = document.getElementById('p80-value');
+    const p90Value = document.getElementById('p90-value');
+    const p95Value = document.getElementById('p95-value');
+    
+    // Tab handling
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs and contents
+        tabs.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked tab and corresponding content
+        tab.classList.add('active');
+        const tabId = tab.getAttribute('data-tab');
+        document.getElementById(`${tabId}-tab`).classList.add('active');
+      });
+    });
+    
+    // Chart contexts
+    const taskACtx = document.getElementById('taskAChart').getContext('2d');
+    const taskBCtx = document.getElementById('taskBChart').getContext('2d');
+    const taskCCtx = document.getElementById('taskCChart').getContext('2d');
+    const taskDCtx = document.getElementById('taskDChart').getContext('2d');
+    const projectCtx = document.getElementById('projectChart').getContext('2d');
+    const cumulativeCtx = document.getElementById('cumulativeChart').getContext('2d');
+    
+    // Chart objects
+    let taskAChart, taskBChart, taskCChart, taskDChart, projectChart, cumulativeChart;
+    
+    // Simulation results
+    let simulationResults = [];
+    
+    // Initialize charts
+    function initCharts() {
+      // Common options for task charts
+      const taskChartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return `Probability: ${context.raw.toFixed(4)}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Duration (days)'
+            }
+          },
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Probability'
+            }
+          }
+        }
+      };
+      
+      // Task A Chart (PERT)
+      taskAChart = new Chart(taskACtx, {
+        type: 'line',
+        data: {
+          labels: [],
+          datasets: [{
+            label: 'Task A: PERT Distribution',
+            data: [],
+            borderColor: 'rgba(52, 152, 219, 1)',
+            backgroundColor: 'rgba(52, 152, 219, 0.1)',
+            borderWidth: 2,
+            pointRadius: 0,
+            fill: true
+          }]
+        },
+        options: taskChartOptions
+      });
+      
+      // Task B Chart (Lognormal)
+      taskBChart = new Chart(taskBCtx, {
+        type: 'line',
+        data: {
+          labels: [],
+          datasets: [{
+            label: 'Task B: Lognormal Distribution',
+            data: [],
+            borderColor: 'rgba(231, 76, 60, 1)',
+            backgroundColor: 'rgba(231, 76, 60, 0.1)',
+            borderWidth: 2,
+            pointRadius: 0,
+            fill: true
+          }]
+        },
+        options: taskChartOptions
+      });
+      
+      // Task C Chart (Triangular)
+      taskCChart = new Chart(taskCCtx, {
+        type: 'line',
+        data: {
+          labels: [],
+          datasets: [{
+            label: 'Task C: Triangular Distribution',
+            data: [],
+            borderColor: 'rgba(46, 204, 113, 1)',
+            backgroundColor: 'rgba(46, 204, 113, 0.1)',
+            borderWidth: 2,
+            pointRadius: 0,
+            fill: true
+          }]
+        },
+        options: taskChartOptions
+      });
+      
+      // Task D Chart (Uniform)
+      taskDChart = new Chart(taskDCtx, {
+        type: 'line',
+        data: {
+          labels: [],
+          datasets: [{
+            label: 'Task D: Uniform Distribution',
+            data: [],
+            borderColor: 'rgba(243, 156, 18, 1)',
+            backgroundColor: 'rgba(243, 156, 18, 0.1)',
+            borderWidth: 2,
+            pointRadius: 0,
+            fill: true
+          }]
+        },
+        options: taskChartOptions
+      });
+      
+      // Project Chart (Histogram)
+      projectChart = new Chart(projectCtx, {
+        type: 'bar',
+        data: {
+          labels: [],
+          datasets: [{
+            label: 'Project Duration Distribution',
+            data: [],
+            backgroundColor: 'rgba(155, 89, 182, 0.7)',
+            borderColor: 'rgba(155, 89, 182, 1)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return `Frequency: ${context.raw}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Project Duration (days)'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Frequency'
+              }
+            }
+          }
+        }
+      });
+      
+      // Cumulative Chart (S-curve)
+      cumulativeChart = new Chart(cumulativeCtx, {
+        type: 'line',
+        data: {
+          labels: [],
+          datasets: [{
+            label: 'Cumulative Probability',
+            data: [],
+            borderColor: 'rgba(41, 128, 185, 1)',
+            backgroundColor: 'rgba(41, 128, 185, 0.1)',
+            borderWidth: 2,
+            pointRadius: 0,
+            fill: true
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return `Probability: ${(context.raw * 100).toFixed(1)}%`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Project Duration (days)'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              max: 1,
+              ticks: {
+                callback: function(value) {
+                  return (value * 100) + '%';
+                }
+              },
+              title: {
+                display: true,
+                text: 'Cumulative Probability'
+              }
+            }
+          }
+        }
+      });
+    }
+    
+    // Generate PERT distribution data
+    function generatePERTDistribution(min, likely, max, numPoints = 50) {
+      const range = max - min;
+      const step = range / (numPoints - 1);
+      const alpha = 1 + 4 * (likely - min) / range;
+      const beta = 1 + 4 * (max - likely) / range;
+      
+      const points = [];
+      
+      for (let i = 0; i < numPoints; i++) {
+        const x = min + i * step;
+        
+        // Normalized position (0 to 1)
+        const z = (x - min) / range;
+        
+        // Beta distribution approximation
+        let y = 0;
+        if (z >= 0 && z <= 1) {
+          y = Math.pow(z, alpha - 1) * Math.pow(1 - z, beta - 1);
+          
+          // Normalize
+          const maxPertY = Math.pow(alpha / (alpha + beta), alpha - 1) * 
+                         Math.pow(beta / (alpha + beta), beta - 1);
+          y = y / maxPertY / range;
+        }
+        
+        points.push({ x, y });
+      }
+      
+      return points;
+    }
+    
+    // Generate Lognormal distribution data
+    function generateLognormalDistribution(min, likely, max, numPoints = 50) {
+      // Approximate lognormal parameters from three-point estimates
+      const mu = Math.log(likely);
+      const sigma = (Math.log(max) - Math.log(min)) / 3.29; // Assumes 90% confidence interval
+      
+      const points = [];
+      const range = max - min;
+      const buffer = range * 0.1;
+      const start = Math.max(0.1, min - buffer); // Avoid very small values for lognormal
+      const end = max + buffer;
+      const step = (end - start) / (numPoints - 1);
+      
+      for (let i = 0; i < numPoints; i++) {
+        const x = start + i * step;
+        
+        // Lognormal PDF
+        const y = (1 / (x * sigma * Math.sqrt(2 * Math.PI))) * 
+                  Math.exp(-Math.pow(Math.log(x) - mu, 2) / (2 * sigma * sigma));
+        
+        points.push({ x, y });
+      }
+      
+      return points;
+    }
+    
+    // Generate Triangular distribution data
+    function generateTriangularDistribution(min, likely, max, numPoints = 50) {
+      const range = max - min;
+      const step = range / (numPoints - 1);
+      
+      const points = [];
+      
+      for (let i = 0; i < numPoints; i++) {
+        const x = min + i * step;
+        let y = 0;
+        
+        if (x >= min && x <= likely) {
+          y = 2 * (x - min) / ((max - min) * (likely - min));
+        } else if (x > likely && x <= max) {
+          y = 2 * (max - x) / ((max - min) * (max - likely));
+        }
+        
+        points.push({ x, y });
+      }
+      
+      return points;
+    }
+    
+    // Generate Uniform distribution data
+    function generateUniformDistribution(min, max, numPoints = 50) {
+      const range = max - min;
+      const step = range / (numPoints - 1);
+      const height = 1 / range; // Constant height for uniform distribution
+      
+      const points = [];
+      
+      for (let i = 0; i < numPoints; i++) {
+        const x = min + i * step;
+        const y = (x >= min && x <= max) ? height : 0;
+        
+        points.push({ x, y });
+      }
+      
+      return points;
+    }
+    
+    // Update task charts with current input values
+    function updateTaskCharts() {
+      // Task A (PERT)
+      const taskAMin = parseFloat(taskInputs.A.min.value);
+      const taskALikely = parseFloat(taskInputs.A.likely.value);
+      const taskAMax = parseFloat(taskInputs.A.max.value);
+      
+      const taskAData = generatePERTDistribution(taskAMin, taskALikely, taskAMax);
+      taskAChart.data.labels = taskAData.map(point => point.x);
+      taskAChart.data.datasets[0].data = taskAData.map(point => point.y);
+      taskAChart.update();
+      
+      // Task B (Lognormal)
+      const taskBMin = parseFloat(taskInputs.B.min.value);
+      const taskBLikely = parseFloat(taskInputs.B.likely.value);
+      const taskBMax = parseFloat(taskInputs.B.max.value);
+      
+      const taskBData = generateLognormalDistribution(taskBMin, taskBLikely, taskBMax);
+      taskBChart.data.labels = taskBData.map(point => point.x);
+      taskBChart.data.datasets[0].data = taskBData.map(point => point.y);
+      taskBChart.update();
+      
+      // Task C (Triangular)
+      const taskCMin = parseFloat(taskInputs.C.min.value);
+      const taskCLikely = parseFloat(taskInputs.C.likely.value);
+      const taskCMax = parseFloat(taskInputs.C.max.value);
+      
+      const taskCData = generateTriangularDistribution(taskCMin, taskCLikely, taskCMax);
+      taskCChart.data.labels = taskCData.map(point => point.x);
+      taskCChart.data.datasets[0].data = taskCData.map(point => point.y);
+      taskCChart.update();
+      
+      // Task D (Uniform)
+      const taskDMin = parseFloat(taskInputs.D.min.value);
+      const taskDMax = parseFloat(taskInputs.D.max.value);
+      
+      const taskDData = generateUniformDistribution(taskDMin, taskDMax);
+      taskDChart.data.labels = taskDData.map(point => point.x);
+      taskDChart.data.datasets[0].data = taskDData.map(point => point.y);
+      taskDChart.update();
+    }
+    
+    // Generate a random sample from PERT distribution
+    function samplePERT(min, likely, max) {
+      // PERT mean and standard deviation
+      const mu = (min + 4 * likely + max) / 6;
+      const sigma = (max - min) / 6;
+      
+      // Use Box-Muller to generate a normal random variable
+      let u1 = Math.random();
+      let u2 = Math.random();
+      
+      const z = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+      
+      // Convert to PERT by approximating with normal and clamping
+      let sample = mu + z * sigma;
+      
+      // Clamp to min-max range
+      return Math.max(min, Math.min(max, sample));
+    }
+    
+    // Generate a random sample from Lognormal distribution
+    function sampleLognormal(min, likely, max) {
+      // Approximate lognormal parameters
+      const mu = Math.log(likely);
+      const sigma = (Math.log(max) - Math.log(min)) / 3.29; // Assumes 90% confidence interval
+      
+      // Generate normal random using Box-Muller
+      let u1 = Math.random();
+      let u2 = Math.random();
+      
+      const z = Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+      
+      // Convert to lognormal
+      let sample = Math.exp(mu + z * sigma);
+      
+      // Clamp to min-max range
+      return Math.max(min, Math.min(max, sample));
+    }
+    
+    // Generate a random sample from Triangular distribution
+    function sampleTriangular(min, likely, max) {
+      const f = (likely - min) / (max - min);
+      const rand = Math.random();
+      
+      if (rand < f) {
+        return min + Math.sqrt(rand * (max - min) * (likely - min));
+      } else {
+        return max - Math.sqrt((1 - rand) * (max - min) * (max - likely));
+      }
+    }
+    
+    // Generate a random sample from Uniform distribution
+    function sampleUniform(min, max) {
+      return min + Math.random() * (max - min);
+    }
+    
+    // Generate correlated random samples
+    function generateCorrelatedSamples() {
+      // Get correlation coefficients
+      const correlations = {
+        AB: parseFloat(correlationInputs.AB.value),
+        AC: parseFloat(correlationInputs.AC.value),
+        AD: parseFloat(correlationInputs.AD.value),
+        BC: parseFloat(correlationInputs.BC.value),
+        BD: parseFloat(correlationInputs.BD.value),
+        CD: parseFloat(correlationInputs.CD.value)
+      };
+      
+      // Generate uncorrelated standard normal samples
+      const z1 = boxMullerTransform();
+      const z2 = boxMullerTransform();
+      const z3 = boxMullerTransform();
+      const z4 = boxMullerTransform();
+      
+      // Apply Cholesky decomposition of correlation matrix (simplified)
+      // This is a very simplified approach to generating correlated samples
+      const x1 = z1;
+      const x2 = correlations.AB * z1 + Math.sqrt(1 - correlations.AB * correlations.AB) * z2;
+      const x3 = correlations.AC * z1 + correlations.BC * z2 + 
+                Math.sqrt(1 - correlations.AC * correlations.AC - correlations.BC * correlations.BC) * z3;
+      const x4 = correlations.AD * z1 + correlations.BD * z2 + correlations.CD * z3 + 
+                Math.sqrt(1 - correlations.AD * correlations.AD - correlations.BD * correlations.BD - 
+                         correlations.CD * correlations.CD) * z4;
+      
+      // Convert back to uniform(0,1) using the normal CDF approximation
+      const u1 = normalCDF(x1);
+      const u2 = normalCDF(x2);
+      const u3 = normalCDF(x3);
+      const u4 = normalCDF(x4);
+      
+      return [u1, u2, u3, u4];
+    }
+    
+    // Box-Muller transform to generate standard normal random variable
+    function boxMullerTransform() {
+      const u1 = Math.random();
+      const u2 = Math.random();
+      
+      return Math.sqrt(-2 * Math.log(u1)) * Math.cos(2 * Math.PI * u2);
+    }
+    
+    // Approximation of the normal CDF
+    function normalCDF(x) {
+      // Abramowitz and Stegun approximation
+      const b1 = 0.319381530;
+      const b2 = -0.356563782;
+      const b3 = 1.781477937;
+      const b4 = -1.821255978;
+      const b5 = 1.330274429;
+      const p = 0.2316419;
+      const c = 0.39894228;
+      
+      if (x >= 0) {
+        const t = 1.0 / (1.0 + p * x);
+        return 1.0 - c * Math.exp(-x * x / 2) * t * 
+               (t * (t * (t * (t * b5 + b4) + b3) + b2) + b1);
+      } else {
+        const t = 1.0 / (1.0 - p * x);
+        return c * Math.exp(-x * x / 2) * t * 
+               (t * (t * (t * (t * b5 + b4) + b3) + b2) + b1);
+      }
+    }
+    
+    // Run Monte Carlo simulation
+    function runSimulation() {
+      const numSimulations = parseInt(simulationCountSelect.value);
+      
+      // Get task parameters
+      const taskParams = {
+        A: {
+          min: parseFloat(taskInputs.A.min.value),
+          likely: parseFloat(taskInputs.A.likely.value),
+          max: parseFloat(taskInputs.A.max.value)
+        },
+        B: {
+          min: parseFloat(taskInputs.B.min.value),
+          likely: parseFloat(taskInputs.B.likely.value),
+          max: parseFloat(taskInputs.B.max.value)
+        },
+        C: {
+          min: parseFloat(taskInputs.C.min.value),
+          likely: parseFloat(taskInputs.C.likely.value),
+          max: parseFloat(taskInputs.C.max.value)
+        },
+        D: {
+          min: parseFloat(taskInputs.D.min.value),
+          max: parseFloat(taskInputs.D.max.value)
+        }
+      };
+      
+      // Array to store simulation results
+      simulationResults = [];
+      
+      // Arrays to store individual task durations for sensitivity analysis
+      const taskADurations = [];
+      const taskBDurations = [];
+      const taskCDurations = [];
+      const taskDDurations = [];
+      
+      // Run simulations
+      for (let i = 0; i < numSimulations; i++) {
+        // Generate correlated random values
+        const [u1, u2, u3, u4] = generateCorrelatedSamples();
+        
+        // Sample from each distribution using the correlated random values
+        const durationA = samplePERT(taskParams.A.min, taskParams.A.likely, taskParams.A.max);
+        const durationB = sampleLognormal(taskParams.B.min, taskParams.B.likely, taskParams.B.max);
+        const durationC = sampleTriangular(taskParams.C.min, taskParams.C.likely, taskParams.C.max);
+        const durationD = sampleUniform(taskParams.D.min, taskParams.D.max);
+        
+        // Store individual durations
+        taskADurations.push(durationA);
+        taskBDurations.push(durationB);
+        taskCDurations.push(durationC);
+        taskDDurations.push(durationD);
+        
+        // For this simple simulation, we'll assume sequential tasks (A → B → C → D)
+        // In a real project, you'd use a more complex network logic
+        const totalDuration = durationA + durationB + durationC + durationD;
+        
+        simulationResults.push(totalDuration);
+      }
+      
+      // Update simulation status
+      simulationStatus.textContent = `Completed ${numSimulations} simulation runs`;
+      
+      // Calculate statistics
+      calculateStatistics(simulationResults, taskADurations, taskBDurations, taskCDurations, taskDDurations);
+      
+      // Update charts
+      updateResultsCharts(simulationResults);
+    }
+    
+    // Calculate statistics from simulation results
+    function calculateStatistics(durations, taskADurations, taskBDurations, taskCDurations, taskDDurations) {
+      // Sort durations for percentile calculations
+      const sortedDurations = [...durations].sort((a, b) => a - b);
+      
+      // Basic statistics
+      const mean = durations.reduce((sum, val) => sum + val, 0) / durations.length;
+      const min = Math.min(...durations);
+      const max = Math.max(...durations);
+      
+      // Standard deviation
+      const variance = durations.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / durations.length;
+      const stdev = Math.sqrt(variance);
+      
+      // Update statistics display
+      expectedDuration.textContent = mean.toFixed(1);
+      minDuration.textContent = min.toFixed(1);
+      maxDuration.textContent = max.toFixed(1);
+      stdDev.textContent = stdev.toFixed(1);
+      
+      // Calculate percentiles
+      const p50 = calculatePercentile(sortedDurations, 0.5);
+      const p80 = calculatePercentile(sortedDurations, 0.8);
+      const p90 = calculatePercentile(sortedDurations, 0.9);
+      const p95 = calculatePercentile(sortedDurations, 0.95);
+      
+      // Update percentile display
+      p50Value.textContent = `${p50.toFixed(1)} days`;
+      p80Value.textContent = `${p80.toFixed(1)} days`;
+      p90Value.textContent = `${p90.toFixed(1)} days`;
+      p95Value.textContent = `${p95.toFixed(1)} days`;
+      
+      // Calculate sensitivity (correlation between each task and total duration)
+      const totalStdev = Math.sqrt(variance);
+      
+      // Calculate correlations for sensitivity analysis
+      const sensitivityA = calculateCorrelation(taskADurations, durations);
+      const sensitivityB = calculateCorrelation(taskBDurations, durations);
+      const sensitivityC = calculateCorrelation(taskCDurations, durations);
+      const sensitivityD = calculateCorrelation(taskDDurations, durations);
+      
+      // Normalize sensitivity values to percentages
+      const sensitivities = [
+        { task: 'A', value: Math.abs(sensitivityA) },
+        { task: 'B', value: Math.abs(sensitivityB) },
+        { task: 'C', value: Math.abs(sensitivityC) },
+        { task: 'D', value: Math.abs(sensitivityD) }
+      ];
+      
+      // Sort by sensitivity
+      sensitivities.sort((a, b) => b.value - a.value);
+      
+      // Calculate total sensitivity for normalization
+      const totalSensitivity = sensitivities.reduce((sum, item) => sum + item.value, 0);
+      
+      // Update sensitivity bars
+      sensitivities.forEach(item => {
+        const percentage = (item.value / totalSensitivity * 100);
+        sensitivityElements[item.task].bar.style.width = `${percentage}%`;
+        sensitivityElements[item.task].value.textContent = `${percentage.toFixed(0)}%`;
+        
+        // Set color based on task
+        sensitivityElements[item.task].bar.style.backgroundColor = 
+          item.task === 'A' ? 'var(--task-a-color)' :
+          item.task === 'B' ? 'var(--task-b-color)' :
+          item.task === 'C' ? 'var(--task-c-color)' :
+          'var(--task-d-color)';
+      });
+    }
+    
+    // Calculate a specific percentile from sorted data
+    function calculatePercentile(sortedData, percentile) {
+      const index = Math.floor(percentile * sortedData.length);
+      return sortedData[index];
+    }
+    
+    // Calculate correlation between two arrays
+    function calculateCorrelation(x, y) {
+      const n = x.length;
+      
+      // Calculate means
+      const xMean = x.reduce((sum, val) => sum + val, 0) / n;
+      const yMean = y.reduce((sum, val) => sum + val, 0) / n;
+      
+      // Calculate covariance and variances
+      let covariance = 0;
+      let xVariance = 0;
+      let yVariance = 0;
+      
+      for (let i = 0; i < n; i++) {
+        const xDiff = x[i] - xMean;
+        const yDiff = y[i] - yMean;
+        
+        covariance += xDiff * yDiff;
+        xVariance += xDiff * xDiff;
+        yVariance += yDiff * yDiff;
+      }
+      
+      covariance /= n;
+      xVariance /= n;
+      yVariance /= n;
+      
+      // Calculate correlation
+      return covariance / (Math.sqrt(xVariance) * Math.sqrt(yVariance));
+    }
+    
+    // Update results charts
+    function updateResultsCharts(durations) {
+      // Sort for cumulative distribution
+      const sortedDurations = [...durations].sort((a, b) => a - b);
+      
+      // Create histogram bins
+      const min = Math.floor(Math.min(...durations));
+      const max = Math.ceil(Math.max(...durations));
+      const range = max - min;
+      const numBins = Math.min(30, Math.ceil(range));
+      const binWidth = range / numBins;
+      
+      const bins = Array(numBins).fill(0);
+      const binLabels = [];
+      
+      // Calculate bin centers
+      for (let i = 0; i < numBins; i++) {
+        const binStart = min + i * binWidth;
+        const binEnd = min + (i + 1) * binWidth;
+        binLabels.push(Math.round((binStart + binEnd) / 2));
+      }
+      
+      // Count frequencies
+      durations.forEach(duration => {
+        const binIndex = Math.min(numBins - 1, Math.floor((duration - min) / binWidth));
+        bins[binIndex]++;
+      });
+      
+      // Update project duration histogram
+      projectChart.data.labels = binLabels;
+      projectChart.data.datasets[0].data = bins;
+      projectChart.update();
+      
+      // Create cumulative distribution
+      const cumulative = [];
+      let count = 0;
+      
+      // Create evenly spaced points for the cumulative chart
+      const numPoints = 100;
+      const step = (max - min) / (numPoints - 1);
+      const cumulativeLabels = [];
+      
+      for (let i = 0; i < numPoints; i++) {
+        const duration = min + i * step;
+        cumulativeLabels.push(duration);
+        
+        // Count values less than or equal to this duration
+        const countLessThan = sortedDurations.filter(d => d <= duration).length;
+        cumulative.push(countLessThan / durations.length);
+      }
+      
+      // Update cumulative chart
+      cumulativeChart.data.labels = cumulativeLabels;
+      cumulativeChart.data.datasets[0].data = cumulative;
+      cumulativeChart.update();
+    }
+    
+    // Reset simulation
+    function resetSimulation() {
+      simulationResults = [];
+      simulationStatus.textContent = 'No simulation run yet';
+      
+      // Reset statistics
+      expectedDuration.textContent = '-';
+      minDuration.textContent = '-';
+      maxDuration.textContent = '-';
+      stdDev.textContent = '-';
+      
+      // Reset percentiles
+      p50Value.textContent = '-';
+      p80Value.textContent = '-';
+      p90Value.textContent = '-';
+      p95Value.textContent = '-';
+      
+      // Reset sensitivity bars
+      ['A', 'B', 'C', 'D'].forEach(task => {
+        sensitivityElements[task].bar.style.width = '0%';
+        sensitivityElements[task].value.textContent = '0%';
+      });
+      
+      // Clear project charts
+      projectChart.data.labels = [];
+      projectChart.data.datasets[0].data = [];
+      projectChart.update();
+      
+      cumulativeChart.data.labels = [];
+      cumulativeChart.data.datasets[0].data = [];
+      cumulativeChart.update();
+    }
+    
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize charts
+      initCharts();
+      
+      // Set up event listeners
+      runSimulationButton.addEventListener('click', runSimulation);
+      resetSimulationButton.addEventListener('click', resetSimulation);
+      
+      // Update task charts when inputs change
+      const allInputs = [
+        ...Object.values(taskInputs.A), 
+        ...Object.values(taskInputs.B), 
+        ...Object.values(taskInputs.C),
+        ...Object.values(taskInputs.D)
+      ];
+      
+      allInputs.forEach(input => {
+        input.addEventListener('change', updateTaskCharts);
+      });
+      
+      // Initial rendering of task charts
+      updateTaskCharts();
+    });
+  </script>
+</body>
+</html>
+
+
+
