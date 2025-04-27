@@ -844,7 +844,7 @@ These evolving practices suggest that the application of the Inverse Conway Mane
 
 ## 3.6 Emerging AI-Organizational Paradigms: Theoretical Implications and Research Directions
 
-> *Note: This section presents emerging theoretical considerations that require further empirical validation.*
+> *Note: This section presents emerging theoretical considerations that require further empirical validation. While we express uncertainty about specific implementations given the rapidly evolving nature of AI capabilities, the underlying organizational challenges discussed remain relevant regardless of technological developments. For detailed exploration of the topic see [Chapter 8](../chapters/08-ai-organizational-impact.md).*
 
 Having explored how traditional organizational structures influence system architectures through Conway's Law and how organizations can intentionally restructure teams to achieve desired architectural outcomes, we now turn to an emerging force reshaping both organizational models and technical architectures: artificial intelligence. As AI capabilities advance, they challenge fundamental assumptions about team structures, coordination mechanisms, and the balance between simplicity and complexity in organizational design. The frameworks discussed in previous sections—from DDD and Team Topologies to the theoretical underpinnings of sociotechnical systems—provide valuable lenses for understanding this transformation, but require extension to fully address the unique challenges and opportunities of AI-augmented organizations.
 
@@ -910,7 +910,7 @@ From a cybernetic perspective, human-AI orchestration represents a potential dev
 
 - **Regulatory capacity**: The ability to process, filter, and respond to more signals from the environment
 - **Requisite variety**: Enhanced ability to match the complexity of problems with appropriate response options
-- **Homeostatic mechanisms**: New systems for maintaining stability while pursuing multiple parallel workstreams
+- **[Homeostatic mechanisms](https://www.britannica.com/science/homeostasis)**: New systems for maintaining stability while pursuing multiple parallel workstreams
 - **Recursive control**: Multi-level regulation where humans govern AI systems that in turn regulate specific processes
 
 This cybernetic enhancement may transform both what organizations can accomplish and how they must be structured.
@@ -925,7 +925,7 @@ maintaining coherence, adaptability, and human agency. This cybernetic approach 
 just an engineering challenge but a theoretical reimagining of how human and artificial intelligence can combine to
 create systems with emergent capabilities greater than either could achieve alone (as explored in research on AI-human collaboration in science by Strickland et al., [2023](https://www.nature.com/articles/s41586-023-06221-2)).
 
-While these theoretical principles provide valuable foundations for understanding AI-augmented organizational design, organizations also need frameworks for implementation testing. The following section explores emerging theoretical approaches that could translate these concepts into research-based organizational models that balance appropriate complexity with adaptability.
+To understand how these principles might unfold over time, it's helpful to examine the potential evolutionary trajectory of AI integration in organizations. The following section explores how AI capabilities may develop across multiple dimensions, and the implications these developments have for organizational complexity and design.
 
 ### 3.6.2 Evolutionary Trajectory of AI Integration
 
@@ -1085,7 +1085,7 @@ This model could help organizations avoid the common pitfall of focusing exclusi
 This theoretical framework applies the principles of Conway's Law and the Inverse Conway Maneuver to AI-augmented organizations:
 
 **Theoretical Foundation:**
-Extending Conway's Law (Section 3.4) to include AI systems as organizational actors, this framework explores how communication patterns between humans and AI systems influence resulting system architectures. Initial industry experience suggests that AI components mirror existing human-and-algorithm communication paths, consistent with Conway's Law [[11]](https://www.linkedin.com/pulse/surprising-way-your-organizational-structure-shapes-ul-hassan-fehqf). However, systematic empirical validation is still needed.
+Extending Conway's Law (Section 3.4) to include AI systems as organizational actors, this framework explores how communication patterns between humans and AI systems influence resulting system architectures. Initial industry experience suggests that AI components mirror existing human-and-algorithm communication paths, consistent with Conway's Law. However, systematic empirical validation is still needed.
 
 **Key Principles:**
 1. **AI Communication Pattern Mapping**: Analyze how information flows between:
@@ -1110,10 +1110,21 @@ Extending Conway's Law (Section 3.4) to include AI systems as organizational act
 
 This framework posits that Conway's Law applies as much to AI-augmented organizations as traditional ones—the communication structures will inevitably shape the resulting system architectures. By intentionally designing these structures, organizations may achieve more effective technical outcomes.
 
-#### Metahuman Systems Framework
+### 3.6.5 Conclusion and Future Directions
 
-Lyytinen, Nickerson, and King's concept of "metahuman systems"—where machines and humans learn together with different speeds, scopes, and scales—offers a functional governance perspective for AI-augmented organizations. This framework identifies four critical organizational functions:
+Throughout this chapter, we've explored how organizational models navigate the tension between underfitting and overfitting—between structures that are too simplistic to handle complexity and those that are too rigid to adapt. We've examined this tension through multiple theoretical lenses, from sociotechnical systems theory to cybernetics, and explored practical approaches like Domain-Driven Design and Team Topologies.
 
+The emerging integration of AI capabilities into organizations represents a significant evolution in this complexity management challenge. AI introduces new dynamics that can simultaneously:
+
+1. Enhance an organization's capacity to handle complexity through improved data processing and coordination
+2. Create new forms of complexity that require thoughtful organizational design
+3. Challenge traditional assumptions about team structures, roles, and communication patterns
+
+The theoretical frameworks presented in this chapter may provide starting points for organizations navigating this evolution, but significant research and practical experimentation remain necessary.
+
+Looking ahead, these organizational complexity considerations intersect with important human and contextual factors. Chapter 4 examines how different stakeholders—particularly management and technical specialists—often have divergent preferences regarding model complexity, with management typically favoring simpler approaches that risk underfitting while technical specialists advocate for more detailed models. These stakeholder dynamics significantly influence how organizations navigate the complexity balance in practice. Meanwhile, Chapter 5 explores how organizational size fundamentally shapes appropriate complexity levels, with larger organizations typically requiring more sophisticated models while facing greater risks of overfitting through excessive formalization.
+
+The integration of AI capabilities adds another dimension to these considerations, as explored further in Chapter 8, which examines emerging patterns of human-AI collaboration and their impact on organizational structures and processes.
 
 ## References
 
