@@ -368,7 +368,7 @@ must carefully navigate between simplicity and complexity. The theory provides a
 extreme on the spectrum—neither overly simplistic nor excessively complex organizational structures—can sustain
 effectiveness over time.
 
-A dissipative system, as described by Nobel laureate Ilya Prigogine ([1977](https://www.nobelprize.org/prizes/chemistry/1977/prigogine/biographical/)), is characterized by:
+A dissipative system, as described by Nobel laureate [Ilya Prigogine](https://www.nobelprize.org/prizes/chemistry/1977/prigogine/biographical/), is characterized by:
 - Operation far from thermodynamic equilibrium
 - Continuous energy and matter exchange with the environment
 - Self-organizing behavior that creates and maintains order
@@ -989,13 +989,6 @@ This framework posits that Conway's Law applies as much to AI-augmented organiza
 
 Lyytinen, Nickerson, and King's concept of "metahuman systems"—where machines and humans learn together with different speeds, scopes, and scales—offers a functional governance perspective for AI-augmented organizations. This framework identifies four critical organizational functions:
 
-### Organizational Review
-
-Organizations are complex adaptive systems. Reviewing organizational design isn't just about structure; it's about the interplay between all components. Periodic reviews are essential to ensure alignment and effectiveness, especially when external conditions or internal strategies shift. Under-overfitting concepts can be applied: overly rigid structures (overfitting) struggle to adapt, while excessively loose structures (underfitting) lack coherence. Effective design finds a balance.
-
-Models can guide these reviews, moving beyond intuition or conformity to standardized patterns. [Galbraith's Star Model](https://jaygalbraith.com/services/star-model/) offers one framework for such reviews, examining alignment between strategy, structure, processes, rewards, and people.
-
-![Galbraith's Star Model](../images/galbraith-star.svg)
 
 ## References
 
