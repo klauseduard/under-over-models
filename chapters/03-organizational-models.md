@@ -346,11 +346,11 @@ creating brittleness and inability to adapt despite apparent efficiency.
 
 Successful organizations maintain an appropriate entropy-negentropy balance—sufficient structure to ensure coordination and efficiency,
 while preserving adequate flexibility to adapt to changing conditions. This balance point is not static but shifts based on
-organizational size, industry volatility, and strategic positioning (Tsoukas, [1991](https://www.jstor.org/stable/2635084)).
+organizational size, industry volatility, and strategic positioning.
 
 This information-theoretical framework helps explain why overly simplified "one-size-fits-all" organizational models fail when applied
 across diverse contexts—they cannot accommodate the necessary variations in structure and flexibility required by different environments and
-challenges. The practical implications of these concepts have led to various frameworks for measuring and managing organizational entropy ([Organizational Entropy Framework, 2019](https://example.com/organizational-entropy)).
+challenges. The practical implications of these concepts have led to various frameworks for measuring and managing organizational entropy.
 
 For a more comprehensive exploration of entropy concepts and their application to organizational systems, see [Chapter 6](../chapters/06-theoretical-concepts.md),
 which examines information entropy, negentropy, and related theoretical frameworks in greater depth.
