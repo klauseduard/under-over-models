@@ -40,6 +40,14 @@ Currently, the following chapters are fully edited and ready for reading:
   </div>
 </div>
 
+<div class="completed-chapter">
+  <h3><a href="chapters/03-organizational-models.html">Chapter 3: Underfitting and Overfitting in Organizational Models</a></h3>
+  <p>A comprehensive analysis of how organizational structures balance simplicity and complexity, examining traditional models through the lens of underfitting and overfitting, with detailed explorations of Conway's Law, Team Topologies, and emerging AI-organizational paradigms.</p>
+  <div class="chapter-metadata">
+    <span class="chapter-date">Last updated: April 2025</span>
+  </div>
+</div>
+
 ## Work in Progress
 
 <div class="wip-notice">
@@ -50,7 +58,6 @@ Currently, the following chapters are fully edited and ready for reading:
   <details>
     <summary>View Work-in-Progress Chapters</summary>
     <ul>
-      <li><a href="chapters/03-organizational-models.html">Chapter 3: Organizational Models</a> (Draft)</li>
       <li><a href="chapters/04-stakeholder-preferences.html">Chapter 4: Stakeholder Preferences</a> (Draft)</li>
       <li><a href="chapters/05-organizational-size-influence.html">Chapter 5: Organizational Size Influence</a> (Draft)</li>
       <li><a href="chapters/07-medical-systems-case.html">Chapter 7: Medical Systems Case</a> (Draft)</li>

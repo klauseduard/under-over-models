@@ -61,9 +61,9 @@ methodologies.
 
 - ✅ **[Chapter 1: Introduction](chapters/01-introduction.md)**
 - ✅ **[Chapter 2: Underfitting and Overfitting in Software Time Estimation](chapters/02-software-time-estimation.md)**
+- ✅ **[Chapter 3: Organizational Models](chapters/03-organizational-models.md)**
 - ✅ **[Chapter 6: Related Theoretical Concepts](chapters/06-theoretical-concepts.md)**
 - ✅ **[Interactive Visualizations & Tools](visualizations.md)**
-- 🚧 [Chapter 3: Organizational Models](chapters/03-organizational-models.md) (Draft)
 - 🚧 [Chapter 4: Stakeholder Preferences](chapters/04-stakeholder-preferences.md) (Draft)
 - 🚧 [Chapter 5: Influence of Organizational Size](chapters/05-organizational-size-influence.md) (Draft)
 - 🚧 [Chapter 7: Medical Information Systems Case](chapters/07-medical-systems-case.md) (Draft)
