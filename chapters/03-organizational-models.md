@@ -421,6 +421,8 @@ manifestation of how organizational structures shape technical outcomes—demons
 theoretical relationships described by sociotechnical systems theory, entropy/negentropy concepts, and dissipative
 systems dynamics.
 
+> **Interactive Tool**: Explore an [interactive simulation of organizational dissipative systems](../html/organizational_dissipative_systems.html). Observe how systems maintain structure, respond to change, and self-reorganize.
+
 ### 3.3.7 Cybernetic Principles in Organizational Design
 
 Cybernetics—the study of control and communication in complex systems—offers another valuable theoretical framework for
@@ -449,6 +451,8 @@ underfitting/overfitting spectrum:
   positive feedback needed for innovation and adaptation.
 
 ![Organizational Feedback Loops](../images/organizational-feedback-loops.svg)
+
+> **Interactive Tool**: Explore an [interactive visualization of organizational feedback loops](../html/cybernetic_feedback_loops.html). Adjust feedback strength and type to see the impact on system stability and adaptation.
 
 #### Ashby's Law of Requisite Variety
 

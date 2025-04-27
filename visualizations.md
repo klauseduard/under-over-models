@@ -17,6 +17,8 @@ This page collects all the interactive visualizations, calculators, and tools av
 - **[Formal vs. Informal Organizational Network](html/formal_vs_informal.html)** - Visualize formal reporting lines and informal communication links, toggle visibility, and explore network connections.
 - **[Organizational Complexity Tradeoffs](html/org_under_over_tradeoffs.html)** - Adjust the complexity slider to see how characteristics like responsiveness, adaptability, coordination overhead, and risk change across the underfitting-overfitting spectrum.
 - **[Organizational Entropy vs. Negentropy](html/organizational_entropy.html)** - Adjust the balance between order (negentropy) and flexibility (entropy) and observe the impact on organizational particles.
+- **[Organizational Dissipative Systems](html/organizational_dissipative_systems.html)** - Observe how systems maintain structure, respond to change, and self-reorganize.
+- **[Organizational Feedback Loops](html/cybernetic_feedback_loops.html)** - Adjust feedback strength and type to see the impact on system stability and adaptation.
 - **[Dissipative Systems & Organizational Dynamics](html/dissipative_sys_and_org_dynamics.html)** - Adjust variables like turbulence, resource flow, and connectivity to see how organizational systems respond.
 - **[Entropy and Negentropy in Software](html/entropy_in_software.html)** - Toggle between practices like documentation and testing to see how they counteract entropy in software.
 
