@@ -33,6 +33,14 @@ Currently, the following chapters are fully edited and ready for reading:
 </div>
 
 <div class="completed-chapter">
+  <h3><a href="chapters/03-organizational-models.html">Chapter 3: Underfitting and Overfitting in Organizational Models</a></h3>
+  <p>A comprehensive analysis of how organizational structures balance simplicity and complexity, examining traditional models through the lens of underfitting and overfitting, with detailed explorations of Conway's Law, Team Topologies, and emerging AI-organizational paradigms.</p>
+  <div class="chapter-metadata">
+    <span class="chapter-date">Last updated: April 2025</span>
+  </div>
+</div>
+
+<div class="completed-chapter">
   <h3><a href="chapters/06-theoretical-concepts.html">Chapter 6: Related Theoretical Concepts</a></h3>
   <p>An exploration of theoretical concepts that support the underfitting/overfitting framework, including long tail distributions, dissipative systems theory, cybernetics, entropy, Bayesian statistics, and sociotechnical systems theory.</p>
   <div class="chapter-metadata">
@@ -40,13 +48,6 @@ Currently, the following chapters are fully edited and ready for reading:
   </div>
 </div>
 
-<div class="completed-chapter">
-  <h3><a href="chapters/03-organizational-models.html">Chapter 3: Underfitting and Overfitting in Organizational Models</a></h3>
-  <p>A comprehensive analysis of how organizational structures balance simplicity and complexity, examining traditional models through the lens of underfitting and overfitting, with detailed explorations of Conway's Law, Team Topologies, and emerging AI-organizational paradigms.</p>
-  <div class="chapter-metadata">
-    <span class="chapter-date">Last updated: April 2025</span>
-  </div>
-</div>
 
 ## Work in Progress
 
