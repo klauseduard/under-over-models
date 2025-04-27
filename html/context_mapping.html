@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive DDD Context Mapping Patterns</title>
+  <style>
+    :root {
+      --primary: #4a6fa5;
+      --secondary: #6c757d;
+      --light: #f8f9fa;
+      --dark: #343a40;
+      --success: #28a745;
+      --danger: #dc3545;
+      --warning: #ffc107;
+      --info: #17a2b8;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 30px;
+      font-weight: 600;
+    }
+    
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--light);
+      padding-bottom: 10px;
+      margin-top: 30px;
+    }
+    
+    .pattern-selection {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    
+    .pattern-btn {
+      padding: 12px 20px;
+      background-color: var(--light);
+      border: 2px solid var(--secondary);
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
+      min-width: 160px;
+      text-align: center;
+    }
+    
+    .pattern-btn:hover {
+      background-color: #e9ecef;
+    }
+    
+    .pattern-btn.active {
+      background-color: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    
+    .visualization-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    @media (min-width: 768px) {
+      .visualization-container {
+        flex-direction: row;
+      }
+    }
+    
+    .diagram-container {
+      flex: 1;
+      min-height: 400px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      position: relative;
+    }
+    
+    .implications-panel {
+      flex: 1;
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    
+    .implications-panel h3 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+    
+    .implications-panel h4 {
+      color: var(--secondary);
+      margin-bottom: 5px;
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+    
+    .implications-panel p {
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    
+    /* SVG Styles */
+    svg {
+      width: 100%;
+      height: 100%;
+      max-height: 380px;
+    }
+    
+    .bounded-context {
+      fill: #f8f9fa;
+      stroke: var(--primary);
+      stroke-width: 2px;
+      rx: 10;
+      ry: 10;
+    }
+    
+    .bc-title {
+      font-weight: bold;
+      fill: var(--dark);
+      text-anchor: middle;
+      font-size: 14px;
+    }
+    
+    .bc-content {
+      fill: var(--secondary);
+      text-anchor: middle;
+      font-size: 12px;
+    }
+    
+    .relationship-line {
+      stroke: var(--secondary);
+      stroke-width: 2px;
+      marker-end: url(#arrowhead);
+    }
+    
+    .shared-area {
+      fill: rgba(74, 111, 165, 0.2);
+      stroke: var(--primary);
+      stroke-width: 1.5px;
+      stroke-dasharray: 5,5;
+    }
+    
+    .acl-box {
+      fill: rgba(255, 193, 7, 0.3);
+      stroke: var(--warning);
+      stroke-width: 2px;
+    }
+    
+    .acl-text {
+      fill: var(--dark);
+      text-anchor: middle;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    
+    .bidirectional-line {
+      stroke: var(--success);
+      stroke-width: 3px;
+    }
+    
+    .relationship-text {
+      font-size: 12px;
+      fill: var(--secondary);
+      text-anchor: middle;
+      font-weight: bold;
+    }
+    
+    .pattern-description {
+      text-align: center;
+      margin: 20px 0;
+      font-style: italic;
+      color: var(--secondary);
+    }
+
+    .label {
+      font-size: 12px;
+      fill: var(--primary);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive DDD Context Mapping Patterns</h1>
+    
+    <p class="pattern-description">
+      Select a pattern below to visualize how different bounded contexts interact and understand the organizational implications.
+    </p>
+    
+    <div class="pattern-selection">
+      <div class="pattern-btn active" data-pattern="shared-kernel">Shared Kernel</div>
+      <div class="pattern-btn" data-pattern="customer-supplier">Customer/Supplier</div>
+      <div class="pattern-btn" data-pattern="conformist">Conformist</div>
+      <div class="pattern-btn" data-pattern="acl">Anticorruption Layer</div>
+      <div class="pattern-btn" data-pattern="partnership">Partnership</div>
+    </div>
+    
+    <div class="visualization-container">
+      <div class="diagram-container">
+        <svg id="diagram-svg" viewBox="0 0 500 400">
+          <!-- Arrowhead marker definition -->
+          <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d" />
+            </marker>
+            <marker id="strong-arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#28a745" />
+            </marker>
+          </defs>
+          
+          <!-- SVG elements will be added dynamically by JavaScript -->
+        </svg>
+      </div>
+      
+      <div class="implications-panel">
+        <h3 id="pattern-title">Shared Kernel</h3>
+        
+        <div id="pattern-implications">
+          <!-- Content will be added dynamically by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Pattern data with organizational implications
+    const patterns = {
+      'shared-kernel': {
+        title: 'Shared Kernel',
+        description: 'Multiple bounded contexts share a subset of domain model code and database design.',
+        drawDiagram: function(svg) {
+          // Clear SVG
+          svg.innerHTML = '';
+          
+          // Add definitions
+          svg.innerHTML += `
+            <defs>
+              <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d" />
+              </marker>
+            </defs>
+          `;
+          
+          // Draw BC1
+          svg.innerHTML += `
+            <rect class="bounded-context" x="100" y="100" width="180" height="120" />
+            <text class="bc-title" x="190" y="130">BC1 - Product Team</text>
+            <text class="bc-content" x="190" y="155">Domain Model A</text>
+          `;
+          
+          // Draw BC2
+          svg.innerHTML += `
+            <rect class="bounded-context" x="220" y="180" width="180" height="120" />
+            <text class="bc-title" x="310" y="210">BC2 - Sales Team</text>
+            <text class="bc-content" x="310" y="235">Domain Model B</text>
+          `;
+          
+          // Draw shared area
+          svg.innerHTML += `
+            <ellipse class="shared-area" cx="220" cy="180" rx="60" ry="40" />
+            <text class="label" x="220" y="180">Shared Kernel</text>
+          `;
+        },
+        implications: {
+          teamStructure: 'Teams must work closely together, typically co-located or with significant scheduled overlap. A governance team or shared model stewards may be needed to manage the shared kernel.',
+          communication: 'Requires high-bandwidth communication channels and regular synchronization meetings. Changes to the shared kernel need consensus from all affected teams.',
+          skillsResponsibilities: 'Model stewards or shared model experts required to maintain the integrity of the shared kernel. All teams need strong understanding of DDD principles.',
+          exampleScenario: 'Product management and sales teams sharing core product definition models, requiring joint modeling sessions and coordinated releases to ensure integrity.'
+        }
+      },
+      'customer-supplier': {
+        title: 'Customer/Supplier',
+        description: 'Upstream (supplier) team provides what downstream (customer) team needs.',
+        drawDiagram: function(svg) {
+          // Clear SVG
+          svg.innerHTML = '';
+          
+          // Add definitions
+          svg.innerHTML += `
+            <defs>
+              <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d" />
+              </marker>
+            </defs>
+          `;
+          
+          // Draw BC1 (Upstream)
+          svg.innerHTML += `
+            <rect class="bounded-context" x="100" y="120" width="180" height="120" />
+            <text class="bc-title" x="190" y="150">BC1 - Product Catalog</text>
+            <text class="bc-content" x="190" y="175">Upstream (U)</text>
+            <text class="bc-content" x="190" y="195">Supplier</text>
+          `;
+          
+          // Draw BC2 (Downstream)
+          svg.innerHTML += `
+            <rect class="bounded-context" x="320" y="120" width="180" height="120" />
+            <text class="bc-title" x="410" y="150">BC2 - Order Processing</text>
+            <text class="bc-content" x="410" y="175">Downstream (D)</text>
+            <text class="bc-content" x="410" y="195">Customer</text>
+          `;
+          
+          // Draw relationship arrow
+          svg.innerHTML += `
+            <line class="relationship-line" x1="280" y1="160" x2="310" y2="160" marker-end="url(#arrowhead)" />
+            <text class="relationship-text" x="295" y="150">U/D</text>
+          `;
+        },
+        implications: {
+          teamStructure: 'Typically separate teams with clear organizational boundaries. Upstream team should have representatives who understand downstream needs.',
+          communication: 'Formal requirements gathering process with clear service-level agreements (SLAs). Regular planning meetings where downstream teams can influence upstream priorities.',
+          skillsResponsibilities: 'Upstream teams need product management skills to prioritize downstream needs. Downstream teams need clear communication skills to articulate requirements.',
+          exampleScenario: 'A product catalog team (upstream) providing catalog services to an order processing team (downstream), with quarterly planning meetings and influence on the roadmap.'
+        }
+      },
+      'conformist': {
+        title: 'Conformist',
+        description: 'Downstream team must use upstream team\'s model as-is with little to no influence.',
+        drawDiagram: function(svg) {
+          // Clear SVG
+          svg.innerHTML = '';
+          
+          // Add definitions
+          svg.innerHTML += `
+            <defs>
+              <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d" />
+              </marker>
+            </defs>
+          `;
+          
+          // Draw BC1 (Upstream)
+          svg.innerHTML += `
+            <rect class="bounded-context" x="100" y="120" width="180" height="120" />
+            <text class="bc-title" x="190" y="150">BC1 - External System</text>
+            <text class="bc-content" x="190" y="175">Upstream (U)</text>
+            <text class="bc-content" x="190" y="195">Dominant Model</text>
+          `;
+          
+          // Draw BC2 (Downstream)
+          svg.innerHTML += `
+            <rect class="bounded-context" x="320" y="120" width="180" height="120" stroke-dasharray="5,5" />
+            <text class="bc-title" x="410" y="150">BC2 - Internal System</text>
+            <text class="bc-content" x="410" y="175">Downstream (D)</text>
+            <text class="bc-content" x="410" y="195">Conforming Model</text>
+          `;
+          
+          // Draw relationship arrow (one-way, thicker)
+          svg.innerHTML += `
+            <line class="relationship-line" x1="280" y1="160" x2="310" y2="160" style="stroke: #dc3545; stroke-width: 3px;" marker-end="url(#arrowhead)" />
+            <text class="relationship-text" x="295" y="150" style="fill: #dc3545;">Conforms</text>
+          `;
+        },
+        implications: {
+          teamStructure: 'Highly asymmetric team relationship. Downstream team has few connections to upstream, often working with different organizations or vendors.',
+          communication: 'Minimal direct communication. Downstream teams primarily consume documentation, APIs, and contracts from upstream.',
+          skillsResponsibilities: 'Downstream teams need strong technical adaptation skills and patience working with external constraints. May need to develop creative translation skills.',
+          exampleScenario: 'An internal system conforming to the data model of a third-party SaaS platform, with minimal ability to influence the platform\'s development direction.'
+        }
+      },
+      'acl': {
+        title: 'Anticorruption Layer',
+        description: 'A translation layer protects one bounded context from another\'s model.',
+        drawDiagram: function(svg) {
+          // Clear SVG
+          svg.innerHTML = '';
+          
+          // Add definitions
+          svg.innerHTML += `
+            <defs>
+              <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d" />
+              </marker>
+            </defs>
+          `;
+          
+          // Draw BC1 (External System)
+          svg.innerHTML += `
+            <rect class="bounded-context" x="80" y="120" width="140" height="120" />
+            <text class="bc-title" x="150" y="150">BC1 - Legacy System</text>
+            <text class="bc-content" x="150" y="175">External Model</text>
+          `;
+          
+          // Draw BC2 (Protected System)
+          svg.innerHTML += `
+            <rect class="bounded-context" x="320" y="120" width="140" height="120" />
+            <text class="bc-title" x="390" y="150">BC2 - New System</text>
+            <text class="bc-content" x="390" y="175">Clean Model</text>
+          `;
+          
+          // Draw ACL
+          svg.innerHTML += `
+            <rect class="acl-box" x="230" y="130" width="80" height="100" />
+            <text class="acl-text" x="270" y="185">ACL</text>
+          `;
+          
+          // Draw arrows
+          svg.innerHTML += `
+            <line class="relationship-line" x1="220" y1="160" x2="230" y2="160" marker-end="url(#arrowhead)" />
+            <line class="relationship-line" x1="310" y1="160" x2="320" y2="160" marker-end="url(#arrowhead)" />
+          `;
+        },
+        implications: {
+          teamStructure: 'Clear separation between teams, with specialized integration roles in the protected team. Often involves a dedicated integration or platform team.',
+          communication: 'Formalized interface specifications and contracts. Protected team maintains documentation of translation patterns.',
+          skillsResponsibilities: 'Integration specialists needed with strong technical skills in both domains. Experience with design patterns, especially adapters and facades, is valuable.',
+          exampleScenario: 'A modern microservice protecting itself from a complex legacy mainframe system through a translation layer, allowing clean domain modeling in the new system.'
+        }
+      },
+      'partnership': {
+        title: 'Partnership',
+        description: 'Two teams have a mutual dependency and must collaborate.',
+        drawDiagram: function(svg) {
+          // Clear SVG
+          svg.innerHTML = '';
+          
+          // Add definitions
+          svg.innerHTML += `
+            <defs>
+              <marker id="strong-arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#28a745" />
+              </marker>
+            </defs>
+          `;
+          
+          // Draw BC1
+          svg.innerHTML += `
+            <rect class="bounded-context" x="100" y="120" width="160" height="120" />
+            <text class="bc-title" x="180" y="150">BC1 - Payments</text>
+            <text class="bc-content" x="180" y="175">Payment Processing</text>
+          `;
+          
+          // Draw BC2
+          svg.innerHTML += `
+            <rect class="bounded-context" x="340" y="120" width="160" height="120" />
+            <text class="bc-title" x="420" y="150">BC2 - Orders</text>
+            <text class="bc-content" x="420" y="175">Order Management</text>
+          `;
+          
+          // Draw bidirectional arrow
+          svg.innerHTML += `
+            <line class="bidirectional-line" x1="260" y1="160" x2="340" y2="160" marker-end="url(#strong-arrowhead)" />
+            <line class="bidirectional-line" x1="340" y1="180" x2="260" y2="180" marker-end="url(#strong-arrowhead)" />
+            <text class="relationship-text" x="300" y="145" style="fill: #28a745;">Partnership</text>
+          `;
+        },
+        implications: {
+          teamStructure: 'Closely aligned teams with strong cross-team relationships. May have shared team members or liaison roles. Often co-located or with overlapping work hours.',
+          communication: 'Frequent synchronization meetings, paired programming sessions across team boundaries, and joint planning/retrospectives.',
+          skillsResponsibilities: 'Team members need strong collaboration skills and openness to compromise. Benefits from having integrators or full-stack developers who understand both domains.',
+          exampleScenario: 'Payment processing and order management teams working in partnership to ensure consistent transaction handling, with joint planning sessions and shared model definitions.'
+        }
+      }
+    };
+
+    // Initialize with Shared Kernel pattern
+    document.addEventListener('DOMContentLoaded', function() {
+      updatePatternView('shared-kernel');
+      
+      // Add click event listeners to pattern buttons
+      document.querySelectorAll('.pattern-btn').forEach(button => {
+        button.addEventListener('click', function() {
+          const pattern = this.getAttribute('data-pattern');
+          // Update active button
+          document.querySelectorAll('.pattern-btn').forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          // Update view
+          updatePatternView(pattern);
+        });
+      });
+    });
+
+    function updatePatternView(patternKey) {
+      const patternData = patterns[patternKey];
+      const svg = document.getElementById('diagram-svg');
+      const titleElement = document.getElementById('pattern-title');
+      const implicationsElement = document.getElementById('pattern-implications');
+      
+      // Update pattern title
+      titleElement.textContent = patternData.title;
+      
+      // Draw diagram
+      patternData.drawDiagram(svg);
+      
+      // Update implications panel
+      const implications = patternData.implications;
+      implicationsElement.innerHTML = `
+        <p><em>${patternData.description}</em></p>
+        
+        <h4>Team Structure</h4>
+        <p>${implications.teamStructure}</p>
+        
+        <h4>Communication</h4>
+        <p>${implications.communication}</p>
+        
+        <h4>Skills & Responsibilities</h4>
+        <p>${implications.skillsResponsibilities}</p>
+        
+        <h4>Example Scenario</h4>
+        <p>${implications.exampleScenario}</p>
+      `;
+    }
+  </script>
+</body>
+</html>

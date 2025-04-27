@@ -579,6 +579,8 @@ The implications for technical architecture are significant. Without attention t
 
 Organizations must therefore actively manage their digital communication structures with the same attentiveness previously given to office layouts and organizational reporting lines.
 
+![Digital Gravity Effect](../images/digital-gravity.svg)
+
 ## 3.5 The Inverse Conway Maneuver: Restructuring Teams to Shape System Architecture
 
 The Inverse Conway Maneuver is a strategic approach that inverts Conway's Law: instead of allowing organizational structure to unconsciously shape system design, it deliberately structures teams to encourage desired architectural outcomes. This concept, popularized by Thoughtworks' Technology Radar, suggests that organizations should proactively design their team structures to mirror the architecture they want their systems to have (ThoughtWorks, [2015](https://www.thoughtworks.com/radar/techniques/inverse-conway-maneuver)).
@@ -586,6 +588,8 @@ The Inverse Conway Maneuver is a strategic approach that inverts Conway's Law: i
 For example, if an organization desires a modular, service-oriented architecture with clear boundaries between components, it should consider organizing teams around these services and components with explicit communication pathways that respect the desired boundaries. This approach acknowledges Conway's Law as a powerful force and harnesses it intentionally rather than letting it operate implicitly.
 
 ### 3.5.1 DDD Context Mapping for Organizational Design
+
+> **Interactive Tool**: Explore an [interactive visualization of DDD Context Mapping patterns](../html/context_mapping.html). Select different patterns to see how bounded contexts interact and understand the organizational implications.
 
 Domain-Driven Design (DDD) provides powerful strategic patterns for defining boundaries and relationships between different parts of a complex domain. These patterns, particularly context mapping techniques, offer a systematic approach to designing organizational structures that align with system architecture needs. Context mapping helps organizations explicitly model the relationships between different bounded contexts, providing a foundation for team organization that reflects the actual domain complexity.
 

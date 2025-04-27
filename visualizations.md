@@ -20,6 +20,7 @@ This page collects all the interactive visualizations, calculators, and tools av
 - **[Organizational Dissipative Systems](html/organizational_dissipative_systems.html)** - Observe how systems maintain structure, respond to change, and self-reorganize.
 - **[Organizational Feedback Loops](html/cybernetic_feedback_loops.html)** - Adjust feedback strength and type to see the impact on system stability and adaptation.
 - **[Dissipative Systems & Organizational Dynamics](html/dissipative_sys_and_org_dynamics.html)** - Adjust variables like turbulence, resource flow, and connectivity to see how organizational systems respond.
+- **[DDD Context Mapping Patterns](html/context_mapping.html)** - Explore relationships like Shared Kernel, Customer/Supplier, and ACL to understand organizational implications.
 - **[Entropy and Negentropy in Software](html/entropy_in_software.html)** - Toggle between practices like documentation and testing to see how they counteract entropy in software.
 
 - **[Generative Entropy & Innovation Simulator](html/generative_entropy_simulator.html)** - Find the sweet spot between order and chaos that maximizes innovation potential.
