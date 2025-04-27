@@ -966,9 +966,12 @@ structures and processes.
 **Temporal Flexibility:** The "always-on" nature of AI systems challenges conventional organizational time structures.
 Organizations with overly simplistic temporal models may miss opportunities for asynchronous operation, while overly
 complex scheduling and handoff mechanisms may introduce unnecessary coordination overhead. The potential "night-shift" capability
-of AI systems, reminiscent of lights-out manufacturing, may enable continuous operation beyond human working hours.
+of AI systems, reminiscent of [lights-out](https://www.sw.siemens.com/en-US/technology/lights-out-factory/) manufacturing and algorithmic trading systems, may enable continuous operation beyond human working hours. The parallels from financial markets demonstrates how organizations can develop sophisticated frameworks for managing autonomous decision-making across time boundaries, creating strategic advantages through temporal flexibility.
 
 Through the lens of dissipative systems theory (Section 3.3.6), this integration trajectory illustrates how organizations must maintain dynamic stability in constantly changing environments. As AI capabilities enable organizations to process more information and respond to more complex demands, traditional organizational structures may struggle to accommodate this increased complexity. Organizations may need to develop adaptive structures that can handle this heightened information flow without either becoming chaotic (excessive entropy) or overly rigid (excessive negentropy). The timeline above represents not merely technological evolution but the organization's progressive development of more effective adaptive structures that can maintain coherence while processing increasingly complex information patterns, consistent with Prigogine's principles of self-organization in far-from-equilibrium conditions.
+
+A particular risk in this accelerated environment is that AI-augmented teams may become highly productive but poorly aligned—moving rapidly in divergent directions. This represents a specific manifestation of excessive entropy, where increased capability and throughput aren't matched with corresponding coordination mechanisms, potentially undermining organizational coherence despite individual team productivity gains.
+
 
 ### 3.6.3 Adaptation Strategies for Human-AI Organizations
 
