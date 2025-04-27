@@ -1,8 +1,11 @@
 # Underfitting and Overfitting in Software Development
 
-This repository contains a publication exploring how concepts like underfitting
-and overfitting as they are used in machine learning and mathematical modeling,
-help us understand various problems of in software development field.
+This publication explores how machine learning concepts—particularly underfitting and overfitting—provide an analytical framework for understanding complexity trade-offs in modern software organizations. It examines how these principles apply to software architecture, engineering processes, and technical decision-making, with particular focus on:
+
+- System design and architectural choices
+- Software development estimation and planning
+- Technical organization design patterns
+- AI's transformative impact on engineering practices
 
 <div class="publication-info">
   <p>Initial Release: April 2025 | Last Updated: April 2025</p>
