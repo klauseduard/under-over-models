@@ -14,6 +14,7 @@ help us understand various problems of in software development field.
 Currently, the following chapters are fully edited and ready for reading:
 
 <div class="completed-chapter">
+  <p>Collection of resources that can be examined independently from the chapters they support.</p>
   <div class="chapter-tools">
     <a href="visualizations.html" class="tool-link">Interactive Tools & Visualizations</a>
   </div>
