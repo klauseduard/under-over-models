@@ -760,6 +760,8 @@ Team Topologies also defines three distinct interaction modes that clarify how t
 
 These interaction modes help organizations manage complexity by providing clarity about how teams should interact in different contexts, reducing ambiguity and unnecessary coordination overhead.
 
+![Team Topologies Framework](../images/team-topologies.svg)
+
 #### Relationship to Organizational Complexity
 
 The Team Topologies approach directly addresses the underfitting/overfitting tension in organizational design:
