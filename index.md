@@ -1,11 +1,11 @@
 # Underfitting and Overfitting in Software Development
 
-This publication explores how machine learning concepts—particularly underfitting and overfitting—provide an analytical framework for understanding complexity trade-offs in modern software organizations. It examines how these principles apply to software architecture, engineering processes, and technical decision-making, with particular focus on:
+This publication explores how concepts of underfitting and overfitting provide an analytical framework for understanding complexity trade-offs in modern software organizations. It examines how these principles apply to software architecture, engineering processes, and technical decision-making, with particular focus on:
 
 - System design and architectural choices
 - Software development estimation and planning
 - Technical organization design patterns
-- AI's transformative impact on engineering practices
+- AI's transformative impact on organizational practices
 
 <div class="publication-info">
   <p>Initial Release: April 2025 | Last Updated: April 2025</p>
@@ -75,10 +75,6 @@ Currently, the following chapters are fully edited and ready for reading:
     </ul>
   </details>
 </div>
-
-## About This Publication
-
-This work explores how different kinds of organizations might evolve in response to AI advances, with particular focus on those producing software. Despite the increasing capabilities of AI systems in code generation and software development tasks, they do not eliminate the need for software-producing organizations. Rather, they transform how these organizations operate, shifting the nature of human contributions and potentially reshaping organizational structures, team dynamics, and development methodologies.
 
 ### Authorship Note
 
