@@ -247,6 +247,7 @@ The [Law of Requisite Variety](https://en.wikipedia.org/wiki/Variety_(cybernetic
 
 Organizations face a fundamental tension: simplifying control mechanisms improves efficiency but reduces adaptability—creating a critical balance between order and flexibility.
 
+> **Interactive Tool**: Explore an [interactive visualization of Ashby's Law of Requisite Variety](../html/ashbys_law_of_requisite_variety.html). This tool demonstrates how organizational complexity must match environmental complexity for effective management, illustrating the consequences of underfitting (insufficient variety) and overfitting (excessive variety).
 
 ### Cybernetic Hierarchy and Viable System Model
 

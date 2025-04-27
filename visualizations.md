@@ -22,6 +22,7 @@ This page collects all the interactive visualizations, calculators, and tools av
 - **[Dissipative Systems & Organizational Dynamics](html/dissipative_sys_and_org_dynamics.html)** - Adjust variables like turbulence, resource flow, and connectivity to see how organizational systems respond.
 - **[DDD Context Mapping Patterns](html/context_mapping.html)** - Explore relationships like Shared Kernel, Customer/Supplier, and ACL to understand organizational implications.
 - **[Entropy and Negentropy in Software](html/entropy_in_software.html)** - Toggle between practices like documentation and testing to see how they counteract entropy in software.
+- **[Ashby's Law of Requisite Variety](html/ashbys_law_of_requisite_variety.html)** - Experiment with matching organizational complexity to environmental complexity to visualize the principle "Only variety can absorb variety."
 
 - **[Generative Entropy & Innovation Simulator](html/generative_entropy_simulator.html)** - Find the sweet spot between order and chaos that maximizes innovation potential.
 

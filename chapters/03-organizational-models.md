@@ -21,6 +21,9 @@
     Adaptation](#336-dissipative-systems-theory-and-organizational-adaptation)
   - [3.3.7 Cybernetic Principles in Organizational Design](#337-cybernetic-principles-in-organizational-design)
 - [3.4 Conway's Law: How Organizational Structure Shapes System Architecture](#34-conways-law-how-organizational-structure-shapes-system-architecture)
+  - [3.4.1 Strategic Implications of Conway's Law](#341-strategic-implications-of-conways-law)
+  - [3.4.2 Conway's Law in Practice](#342-conways-law-in-practice)
+  - [3.4.3 Conway's Law in Remote and Hybrid Environments](#343-conways-law-in-remote-and-hybrid-environments)
 - [3.5 The Inverse Conway Maneuver: Restructuring Teams to Shape System Architecture](#35-the-inverse-conway-maneuver-restructuring-teams-to-shape-system-architecture)
   - [3.5.1 DDD Context Mapping for Organizational Design](#351-ddd-context-mapping-for-organizational-design)
   - [3.5.2 Team Topologies for Organizational Structure](#352-team-topologies-for-organizational-structure)
@@ -471,6 +474,8 @@ The concept of requisite variety offers a scientific basis for determining the m
 organizational complexity—enough to handle environmental challenges without unnecessary overhead. This aligns with the
 "simplicity on the far side of complexity" principle mentioned in Section 3.3.3.
 
+> **Interactive Tool**: Explore an [interactive visualization of Ashby's Law of Requisite Variety](../html/ashbys_law_of_requisite_variety.html). This tool demonstrates how organizational complexity must match environmental complexity for effective system control, and illustrates the consequences of underfitting (insufficient variety) and overfitting (excessive variety).
+
 #### Viable System Model as a Template for Balanced Complexity
 
 Stafford Beer's [Viable System Model](https://www.thevsmtest.org/VSM-Guide/) (VSM) ([1972](https://www.thevsmtest.org/VSM-Guide/)) applies cybernetic principles to organizational design by defining the
@@ -533,7 +538,7 @@ Conway's Law has been empirically validated through numerous studies. For exampl
 3. Organizational incentives and metrics shape technical decisions
 4. Power dynamics and reporting structures influence architectural decisions
 
-Modern development approaches such as DevOps and microservices explicitly acknowledge Conway's Law, designing both their structures and systems. Ruth Malan's modern interpretation of Conway's Law emphasizes this relationship even more strongly: "If the architecture of the system and the architecture of the organization are at odds, the architecture of the organization wins" (Malan, [2008](https://web.archive.org/web/20181014080259/http://www.ruthmalan.com/Journal/2008/2008JournalFebruary.htm#2008Feb01)).
+Modern development approaches such as DevOps and microservices explicitly acknowledge Conway's Law, designing both their structures and systems. Enterprise architecture expert Ruth Malan, known for her influential work on architecture and systems thinking, articulated a modern interpretation of Conway's Law that emphasizes this relationship even more strongly: "If the architecture of the system and the architecture of the organization are at odds, the architecture of the organization wins" (Malan, [2008](https://web.archive.org/web/20181014080259/http://www.ruthmalan.com/Journal/2008/2008JournalFebruary.htm#2008Feb01)).
 
 ### 3.4.1 Strategic Implications of Conway's Law
 
@@ -559,39 +564,83 @@ In practice, recognizing Conway's Law means acknowledging that decisions about o
 
 An important evolution of Conway's Law concerns its application in remote and hybrid work environments. Recent research indicates that Conway's Law doesn't disappear in distributed organizations—it simply manifests differently as digital communication patterns replace physical proximity.
 
-Research from Microsoft on 60,000 employees showed that after shifting to remote work, cross-group interactions decreased while in-group clustering increased (Yang et al., [2022](https://www.nature.com/articles/s41562-021-01196-4)). This "digital gravity" effect has significant implications for system architecture:
+Research from Microsoft on 60,000 employees showed that after shifting to remote work, cross-group interactions decreased while in-group clustering increased (Yang et al., [2022](https://www.nature.com/articles/s41562-021-01196-4)). This "digital gravity" effect suggests several potential implications for system architecture:
 
-1. **Silos deepen and cross-team ties shrink**: Remote work tends to reinforce existing organizational boundaries as communication naturally flows more frequently within established teams rather than across them.
+1. **Silos deepen and cross-team ties shrink**: Remote work appears to reinforce existing organizational boundaries as communication naturally flows more frequently within established teams rather than across them.
 
-2. **Communication shifts from synchronous to asynchronous**: Email and instant messaging traffic typically replaces meetings and calls, with rich-media cues being lost in the process. This can push teams toward adding coarse-grained APIs rather than engaging in fine-grained collaboration.
+2. **Communication shifts from synchronous to asynchronous**: Email and instant messaging traffic typically replaces meetings and calls, with rich-media cues being lost in the process. This shift may influence teams toward implementing coarse-grained APIs rather than engaging in fine-grained collaboration.
 
-3. **Trust and morale face new pressures**: Phenomenological studies across multiple sectors report heightened oversight, slower feedback, and reduced personal connection in remote settings (Aguillon and Cronin-Gilmore, [2024](https://www.tandfonline.com/doi/abs/10.1080/01608061.2024.2285410)). This can lead to "contract-first but context-lost" designs.
+3. **Trust and morale face new pressures**: (A limited) phenomenological study across multiple sectors reports heightened oversight, slower feedback, and reduced personal connection in remote settings (Aguillon and Cronin-Gilmore, [2024](https://jbam.scholasticahq.com/article/126836-how-remote-work-changes-communication-in-organizations)).
 
-4. **Innovation networks weaken**: The informal, serendipitous interactions that often drive innovation become less frequent, requiring intentional replacements.
+4. **Innovation networks weaken**: The informal, serendipitous interactions that often drive innovation become less frequent, potentially requiring intentional alternatives.
 
-These changes reshape the "communication structures" referenced in Conway's Law from being primarily defined by organizational charts and physical proximity to being determined by digital interaction patterns—which teams share Slack channels, who participates in which video meetings, where documentation is shared, and how timezone hand-offs occur.
+These changes appear to reshape the "communication structures" referenced in Conway's Law from being primarily defined by organizational charts and physical proximity to being determined by digital interaction patterns—which teams share Slack channels, who participates in which video meetings, where documentation is shared, and how timezone hand-offs occur.
 
-The implications for technical architecture are significant. Without attention to these digital communication patterns, remote and hybrid organizations risk:
+The implications for technical architecture could be significant. Without attention to these digital communication patterns, remote and hybrid organizations might experience:
 
 - Services and interfaces gravitating toward vertical "stovepipes"
 - Shared modules stagnating due to reduced cross-team collaboration
 - Governance layers becoming increasingly rigid as organizations attempt to compensate for coordination challenges
 
-Organizations must therefore actively manage their digital communication structures with the same attentiveness previously given to office layouts and organizational reporting lines.
+Organizations that successfully navigate remote and hybrid work environments may benefit from applying similar attentiveness to their digital communication structures as was traditionally given to office layouts and organizational reporting lines.
 
 ![Digital Gravity Effect](../images/digital-gravity.svg)
 
 ## 3.5 The Inverse Conway Maneuver: Restructuring Teams to Shape System Architecture
 
-The Inverse Conway Maneuver is a strategic approach that inverts Conway's Law: instead of allowing organizational structure to unconsciously shape system design, it deliberately structures teams to encourage desired architectural outcomes. This concept, popularized by Thoughtworks' Technology Radar, suggests that organizations should proactively design their team structures to mirror the architecture they want their systems to have (ThoughtWorks, [2015](https://www.thoughtworks.com/radar/techniques/inverse-conway-maneuver)).
+[The Inverse Conway Maneuver](https://www.thoughtworks.com/insights/blog/customer-experience/inverse-conway-maneuver-product-development-teams) is a strategic approach that inverts Conway's Law: instead of allowing organizational structure to unconsciously shape system design, it deliberately structures teams to encourage desired architectural outcomes. This concept suggests that organizations should proactively design their team structures to mirror the architecture they want their systems to have.
 
 For example, if an organization desires a modular, service-oriented architecture with clear boundaries between components, it should consider organizing teams around these services and components with explicit communication pathways that respect the desired boundaries. This approach acknowledges Conway's Law as a powerful force and harnesses it intentionally rather than letting it operate implicitly.
 
 ### 3.5.1 DDD Context Mapping for Organizational Design
 
-> **Interactive Tool**: Explore an [interactive visualization of DDD Context Mapping patterns](../html/context_mapping.html). Select different patterns to see how bounded contexts interact and understand the organizational implications.
+While the Inverse Conway Maneuver provides the strategic concept of aligning team structures with desired architecture, it doesn't specify *how* to determine appropriate boundaries for those teams. This is where Domain-Driven Design (DDD) offers valuable complementary practices. DDD provides a systematic approach for identifying meaningful domain boundaries based on business concepts rather than technical components, creating a foundation for both architectural boundaries and team structures that reflect actual business complexity. By combining the Inverse Conway Maneuver with DDD, organizations can shape team boundaries around business domains first, confident that the resulting system architecture will naturally follow these well-designed boundaries.
 
-Domain-Driven Design (DDD) provides powerful strategic patterns for defining boundaries and relationships between different parts of a complex domain. These patterns, particularly context mapping techniques, offer a systematic approach to designing organizational structures that align with system architecture needs. Context mapping helps organizations explicitly model the relationships between different bounded contexts, providing a foundation for team organization that reflects the actual domain complexity.
+Before discussing specific context mapping patterns, it's important to understand how Domain-Driven Design distinguishes between different types of domains within a business landscape. These distinctions have profound implications for organizational design, resource allocation, and team structures.
+
+#### Strategic Domain Classification
+
+Domain-Driven Design encourages organizations to classify their domains according to business value and competitive differentiation (Evans, [2004](https://www.domainlanguage.com/ddd/); Vernon, [2013](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577)):
+
+1. **Core Domain**: Represents the organization's competitive advantage and primary value proposition. This is where the business stands to gain or lose the most, and where unique intellectual property is developed. Core domains:
+   - Warrant the highest investment in talent, resources, and modeling effort
+   - Benefit from stable, long-term teams with deep domain expertise
+   - Should typically be developed in-house with focused attention
+   - Often require more sophisticated designs to capture complex domain logic
+
+2. **Supporting Domains**: Important but non-differentiating areas that enable the core business functions. While necessary for operations, they don't provide competitive advantage. Supporting domains:
+   - Deserve professional implementation but with less investment than core domains
+   - May be staffed with stable teams but potentially with different skill compositions
+   - Could be developed in-house or through strategic partnerships
+   - Often benefit from simpler designs focused on reliability and maintainability
+
+3. **Generic Subdomains**: Common business functions that are similar across many organizations with well-established solutions. These provide no competitive differentiation. Generic subdomains:
+   - Warrant minimal custom development investment
+   - May be appropriate for temporary teams, contractors, or outsourcing
+   - Could be purchased as off-the-shelf solutions or services
+   - Benefit from standardized approaches rather than bespoke solutions
+
+This strategic classification directly informs organizational design decisions. In terms of underfitting and overfitting, organizations face common pitfalls in each domain type:
+
+- **Underfitting in domain classification** occurs when organizations fail to distinguish between these domain types, applying uniform team structures and investment levels across all domains. This typically results in underinvestment in core domains (where competitive advantage is built) and overinvestment in generic subdomains (where standard solutions would suffice).
+
+- **Overfitting in domain classification** manifests when organizations create excessively granular domain distinctions or attempt to treat too many areas as "core," leading to scattered focus, fragmented expertise, and inability to prioritize effectively.
+
+In practice, the domain classification should inform fundamental organizational decisions:
+
+1. **Team Composition and Longevity**: Core domains benefit from stable, cross-functional teams with deep expertise, while generic subdomains might be appropriate for temporary teams or standardized approaches.
+
+2. **Knowledge Investment**: The depth and breadth of domain knowledge cultivation should align with domain classification—intensive in core domains, moderate in supporting domains, and minimal in generic subdomains.
+
+3. **Build-vs-Buy Decisions**: Generic subdomains are prime candidates for off-the-shelf solutions, while core domains typically warrant custom development to capture unique business logic.
+
+4. **Architectural Focus**: Core domains may justify more sophisticated architectures to capture complex business rules, while generic subdomains benefit from simplicity and standardization.
+
+With this strategic classification in mind, organizations can approach context mapping with a clearer understanding of where different relationship patterns are most appropriate.
+
+#### Context Mapping Patterns
+
+> **Interactive Tool**: Explore an [interactive visualization of DDD Context Mapping patterns](../html/context_mapping.html). Select different patterns to see how bounded contexts interact and understand the organizational implications.
 
 The core context mapping patterns most relevant to organizational design include:
 
@@ -675,9 +724,9 @@ To successfully implement the Inverse Conway Maneuver, organizations typically p
 
 4. **Implementing organizational changes**: Roll out the new organizational design, providing support for teams as they adapt to new ways of working.
 
-5. **Validating through architectural fitness functions**: Establish measurable criteria to evaluate whether the evolving system architecture aligns with the intended design [Malan2008].
+5. **Validating through architectural [fitness functions](https://www.thoughtworks.com/insights/articles/fitness-function-driven-development)**: Establish measurable criteria to evaluate whether the evolving system architecture aligns with the intended design (Ford et al., [2017](https://www.thoughtworks.com/content/dam/thoughtworks/documents/books/bk_building_evolutionary_architectures_second_edition_free_chapter.pdf)).
 
-As Ruth Malan has noted, "if the architecture of the system and the architecture of the organization are at odds, the architecture of the organization wins." This perspective underscores the critical importance of proactively aligning organizational structures with technological goals, a consideration that becomes especially relevant when integrating AI capabilities into existing systems and processes.
+The principle articulated by enterprise architecture expert Ruth Malan that "if the architecture of the system and the architecture of the organization are at odds, the architecture of the organization wins" underscores the critical importance of proactively aligning organizational structures with technological goals, a consideration that becomes especially relevant when integrating AI capabilities into existing systems and processes.
 
 ### 3.5.4 Remote-Aware Team Topologies and Inverse Conway Maneuvers
 
