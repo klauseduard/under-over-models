@@ -14,6 +14,12 @@ help us understand various problems of in software development field.
 Currently, the following chapters are fully edited and ready for reading:
 
 <div class="completed-chapter">
+  <div class="chapter-tools">
+    <a href="visualizations.html" class="tool-link">Interactive Tools & Visualizations</a>
+  </div>
+</div>  
+
+<div class="completed-chapter">
   <h3><a href="chapters/01-introduction.html">Chapter 1: Introduction</a></h3>
   <p>An overview of the underfitting and overfitting concepts and their application as an analytical framework for software development and organizational models. This chapter establishes the core analogy that will be explored throughout the publication.</p>
   <div class="chapter-metadata">
@@ -24,9 +30,6 @@ Currently, the following chapters are fully edited and ready for reading:
 <div class="completed-chapter">
   <h3><a href="chapters/02-software-time-estimation.html">Chapter 2: Underfitting and Overfitting in Software Time Estimation</a></h3>
   <p>An in-depth analysis of how software estimation techniques can either oversimplify (underfit) or overspecialize (overfit), with detailed discussions of COCOMO, Function Points, Planning Poker, Expert Judgment, and the impact of AI assistance on estimation practices.</p>
-  <div class="chapter-tools">
-    <a href="visualizations.html" class="tool-link">Interactive Tools & Visualizations</a>
-  </div>
   <div class="chapter-metadata">
     <span class="chapter-date">Last updated: April 2025</span>
   </div>
