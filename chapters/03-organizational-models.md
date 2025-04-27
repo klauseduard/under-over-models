@@ -596,6 +596,8 @@ For example, if an organization desires a modular, service-oriented architecture
 
 While the Inverse Conway Maneuver provides the strategic concept of aligning team structures with desired architecture, it doesn't specify *how* to determine appropriate boundaries for those teams. This is where Domain-Driven Design (DDD) offers valuable complementary practices. DDD provides a systematic approach for identifying meaningful domain boundaries based on business concepts rather than technical components, creating a foundation for both architectural boundaries and team structures that reflect actual business complexity. By combining the Inverse Conway Maneuver with DDD, organizations can shape team boundaries around business domains first, confident that the resulting system architecture will naturally follow these well-designed boundaries.
 
+> **Interactive Tool**: Explore the [DDD Interactive Explorer](../html/ddd_interactive_explorer.html) to experiment with domain classification, Conway's Law relationships, team structures, and their effects on architecture. This tool helps visualize how DDD concepts translate to organizational design decisions.
+
 Before discussing specific context mapping patterns, it's important to understand how Domain-Driven Design distinguishes between different types of domains within a business landscape. These distinctions have profound implications for organizational design, resource allocation, and team structures.
 
 #### Strategic Domain Classification

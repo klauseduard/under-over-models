@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DDD Interactive Visualization</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+    
+    .container {
+      margin-bottom: 30px;
+    }
+    
+    .tab-nav {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+    
+    .tab-button {
+      padding: 10px 15px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      color: #666;
+    }
+    
+    .tab-button.active {
+      color: #1a73e8;
+      border-bottom: 2px solid #1a73e8;
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    /* Domain Explorer Styles */
+    .domain-explorer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    
+    .domain-circles {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      flex-shrink: 0;
+    }
+    
+    .domain-circle {
+      position: absolute;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .domain-circle:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .domain-circle.generic {
+      width: 100%;
+      height: 100%;
+      background-color: #f8d7da;
+      border: 2px solid #dc3545;
+      z-index: 1;
+    }
+    
+    .domain-circle.supporting {
+      width: 65%;
+      height: 65%;
+      top: 17.5%;
+      left: 17.5%;
+      background-color: #fff3cd;
+      border: 2px solid #ffc107;
+      z-index: 2;
+    }
+    
+    .domain-circle.core {
+      width: 30%;
+      height: 30%;
+      top: 35%;
+      left: 35%;
+      background-color: #d1e7dd;
+      border: 2px solid #198754;
+      z-index: 3;
+    }
+    
+    .domain-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    
+    .legend-item:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .legend-item.active {
+      background-color: #e9ecef;
+    }
+    
+    .legend-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+    }
+    
+    .legend-color.generic {
+      background-color: #f8d7da;
+      border: 1px solid #dc3545;
+    }
+    
+    .legend-color.supporting {
+      background-color: #fff3cd;
+      border: 1px solid #ffc107;
+    }
+    
+    .legend-color.core {
+      background-color: #d1e7dd;
+      border: 1px solid #198754;
+    }
+    
+    .domain-info {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      padding: 15px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .domain-info h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    
+    .domain-info p {
+      margin-bottom: 10px;
+    }
+    
+    .domain-characteristics {
+      padding-left: 20px;
+    }
+    
+    /* Conway Toggle Styles */
+    .toggle-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .toggle-label {
+      margin: 0 10px;
+    }
+    
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+    }
+    
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .toggle-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    
+    .toggle-slider:before {
+      position: absolute;
+      content: "";
+      height: 22px;
+      width: 22px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .toggle-slider {
+      background-color: #2196F3;
+    }
+    
+    input:checked + .toggle-slider:before {
+      transform: translateX(30px);
+    }
+    
+    .toggle-label.active {
+      font-weight: bold;
+    }
+    
+    .conway-container {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    
+    .conway-box {
+      width: 45%;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      position: relative;
+    }
+    
+    .conway-box.active {
+      border-color: #1a73e8;
+      background-color: #e8f0fe;
+    }
+    
+    .conway-title {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    
+    .conway-flow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .flow-item {
+      width: 200px;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .team-box {
+      background-color: #cfe2ff;
+      border: 1px solid #9ec5fe;
+    }
+    
+    .arch-box {
+      background-color: #d1e7dd;
+      border: 1px solid #a3cfbb;
+    }
+    
+    .flow-arrow {
+      font-size: 24px;
+      margin: 5px 0;
+    }
+    
+    /* Team Structure Simulator Styles */
+    .team-structure {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    
+    .team-row, .arch-row {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 10px;
+    }
+    
+    .connection-area {
+      height: 80px;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    
+    .connection-line {
+      position: absolute;
+      border-left: 2px dashed #6c757d;
+      height: 100%;
+    }
+    
+    .team-item, .arch-item {
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-align: center;
+      width: 100px;
+    }
+    
+    .team-item {
+      background-color: #cfe2ff;
+      border: 1px solid #9ec5fe;
+      cursor: pointer;
+    }
+    
+    .arch-item {
+      background-color: #d1e7dd;
+      border: 1px solid #a3cfbb;
+    }
+    
+    .team-options {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .team-option {
+      padding: 5px 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .team-option.active {
+      background-color: #e9ecef;
+      font-weight: bold;
+    }
+    
+    /* Fitting Demo Styles */
+    .fitting-slider-container {
+      width: 100%;
+      margin: 30px 0;
+    }
+    
+    .fitting-slider {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .slider-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #666;
+    }
+    
+    .fitting-viz {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    
+    .fitting-title {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    
+    .underfit-viz {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .overfit-viz {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    
+    .optimal-viz {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    .big-team {
+      padding: 20px;
+      background-color: #cfe2ff;
+      border: 2px solid #9ec5fe;
+      border-radius: 5px;
+      width: 200px;
+      text-align: center;
+    }
+    
+    .micro-team {
+      padding: 10px;
+      background-color: #cfe2ff;
+      border: 1px solid #9ec5fe;
+      border-radius: 5px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    
+    .domain-team {
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    
+    .core-team {
+      background-color: #d1e7dd;
+      border: 2px solid #198754;
+      width: 120px;
+    }
+    
+    .supporting-team {
+      background-color: #fff3cd;
+      border: 1px solid #ffc107;
+      width: 100px;
+    }
+    
+    .generic-team {
+      background-color: #f8f9fa;
+      border: 1px solid #adb5bd;
+      width: 90px;
+    }
+    
+    .issues-list, .benefits-list {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+    
+    .impact-box {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Domain-Driven Design Interactive Explorer</h1>
+    
+    <div class="tab-nav">
+      <button class="tab-button active" data-tab="domain-tab">Domain Classification</button>
+      <button class="tab-button" data-tab="conway-tab">Conway's Law</button>
+      <button class="tab-button" data-tab="team-tab">Team Structure Impact</button>
+      <button class="tab-button" data-tab="fitting-tab">Fit Analysis</button>
+    </div>
+    
+    <!-- Domain Classification Tab -->
+    <div id="domain-tab" class="tab-content active">
+      <h2>Domain Classification Explorer</h2>
+      <p>Click on a domain type in the legend or directly on the circles to learn more about its characteristics.</p>
+      
+      <div class="domain-explorer">
+        <div class="domain-circles">
+          <div class="domain-circle generic" data-domain="generic"></div>
+          <div class="domain-circle supporting" data-domain="supporting"></div>
+          <div class="domain-circle core" data-domain="core"></div>
+        </div>
+        
+        <div class="domain-legend">
+          <div class="legend-item" data-domain="generic">
+            <div class="legend-color generic"></div>
+            <div><strong>Generic Subdomains</strong></div>
+          </div>
+          <div class="legend-item" data-domain="supporting">
+            <div class="legend-color supporting"></div>
+            <div><strong>Supporting Domains</strong></div>
+          </div>
+          <div class="legend-item" data-domain="core">
+            <div class="legend-color core"></div>
+            <div><strong>Core Domain</strong></div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="domain-info" class="domain-info" style="display: none;">
+        <h3 id="domain-title"></h3>
+        <p id="domain-description"></p>
+        <h4>Characteristics:</h4>
+        <ul id="domain-characteristics" class="domain-characteristics"></ul>
+      </div>
+    </div>
+    
+    <!-- Conway's Law Tab -->
+    <div id="conway-tab" class="tab-content">
+      <h2>Conway's Law vs Inverse Conway Maneuver</h2>
+      <p>Toggle between traditional Conway's Law and the Inverse Conway Maneuver to understand the difference in approach.</p>
+      
+      <div class="toggle-container">
+        <span class="toggle-label traditional active">Traditional</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="conway-toggle">
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="toggle-label inverse">Inverse</span>
+      </div>
+      
+      <div class="conway-container">
+        <!-- Traditional Conway -->
+        <div class="conway-box traditional active">
+          <div class="conway-title">Conway's Law</div>
+          <div class="conway-flow">
+            <div class="flow-item team-box">
+              <div><strong>Team Structure</strong></div>
+              <div style="display: flex; justify-content: space-around; margin-top: 5px;">
+                <span>Team A</span>
+                <span>Team B</span>
+              </div>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-item arch-box">
+              <div><strong>System Architecture</strong></div>
+              <div style="display: flex; justify-content: space-around; margin-top: 5px;">
+                <span>Module A</span>
+                <span>Module B</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 14px; margin-top: 15px;">
+            Conway's Law states that organizations design systems that mirror their communication structure.
+          </p>
+        </div>
+        
+        <!-- Inverse Conway -->
+        <div class="conway-box inverse">
+          <div class="conway-title">Inverse Conway Maneuver</div>
+          <div class="conway-flow">
+            <div class="flow-item arch-box">
+              <div><strong>Desired Architecture</strong></div>
+              <div style="display: flex; justify-content: space-around; margin-top: 5px;">
+                <span>Module A</span>
+                <span>Module B</span>
+              </div>
+            </div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-item team-box">
+              <div><strong>Team Structure</strong></div>
+              <div style="display: flex; justify-content: space-around; margin-top: 5px;">
+                <span>Team A</span>
+                <span>Team B</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 14px; margin-top: 15px;">
+            Inverse Conway deliberately structures teams to encourage desired architectural outcomes.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Team Structure Tab -->
+    <div id="team-tab" class="tab-content">
+      <h2>Team Structure Impact Simulator</h2>
+      <p>Select from different team configurations to see how they impact system architecture.</p>
+      
+      <div class="team-options">
+        <div class="team-option active" data-structure="functional">Functional Teams</div>
+        <div class="team-option" data-structure="feature">Feature Teams</div>
+        <div class="team-option" data-structure="domain">Domain Teams</div>
+      </div>
+      
+      <div class="team-structure">
+        <h3>Team Organization</h3>
+        <div id="team-row" class="team-row">
+          <!-- Will be filled by JavaScript -->
+        </div>
+        
+        <div class="connection-area">
+          <div id="connection-lines"></div>
+        </div>
+        
+        <h3>Resulting Architecture</h3>
+        <div id="arch-row" class="arch-row">
+          <!-- Will be filled by JavaScript -->
+        </div>
+      </div>
+      
+      <div id="team-impact" style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 5px;">
+        <h3 style="margin-top: 0;">Impact on System Architecture</h3>
+        <p id="impact-description"></p>
+      </div>
+    </div>
+    
+    <!-- Fitting Demo Tab -->
+    <div id="fitting-tab" class="tab-content">
+      <h2>Domain Fit Analysis</h2>
+      <p>Move the slider to see the effects of underfitting, optimal fitting, and overfitting in domain classification.</p>
+      
+      <div class="fitting-slider-container">
+        <input type="range" min="0" max="100" value="50" class="fitting-slider" id="fitting-slider">
+        <div class="slider-labels">
+          <span>Underfitting</span>
+          <span>Optimal Balance</span>
+          <span>Overfitting</span>
+        </div>
+      </div>
+      
+      <div id="fitting-viz" class="fitting-viz">
+        <!-- Will be filled by JavaScript -->
+      </div>
+      
+      <div class="impact-box">
+        <h3>Impact on Business Outcomes</h3>
+        <p id="fitting-impact">Optimal domain classification aligns team structure with business value. Core domains receive focused attention and investment, while supporting and generic domains have appropriate resourcing.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Domain data
+    const domainData = {
+      core: {
+        title: "Core Domain",
+        description: "Represents the organization's competitive advantage and primary value proposition.",
+        characteristics: [
+          "Highest investment in talent and resources",
+          "Stable, long-term teams with deep domain expertise",
+          "Typically developed in-house with focused attention",
+          "More sophisticated designs for complex domain logic"
+        ]
+      },
+      supporting: {
+        title: "Supporting Domain",
+        description: "Important but non-differentiating areas that enable core business functions.",
+        characteristics: [
+          "Professional implementation but less investment than core",
+          "Stable teams but different skill compositions",
+          "In-house or strategic partnerships",
+          "Simpler designs focused on reliability"
+        ]
+      },
+      generic: {
+        title: "Generic Subdomain",
+        description: "Common business functions with well-established solutions.",
+        characteristics: [
+          "Minimal custom development investment",
+          "Suitable for temporary teams or outsourcing",
+          "Can use off-the-shelf solutions",
+          "Standardized approaches over bespoke solutions"
+        ]
+      }
+    };
+    
+    // Team structure data
+    const teamStructures = {
+      functional: {
+        teams: ["Backend Team", "Frontend Team", "Database Team"],
+        architecture: ["API Layer", "UI Components", "Data Storage"],
+        impact: "Functional teams tend to create horizontally layered architectures with strong separation between technical concerns but weaker domain cohesion. This can lead to increased hand-offs between teams when implementing end-to-end features."
+      },
+      feature: {
+        teams: ["Search Team", "Checkout Team", "Profile Team"],
+        architecture: ["Search Service", "Checkout Service", "Profile Service"],
+        impact: "Feature teams align with end-user functionality, creating more vertical slices through the architecture. This improves delivery of user-visible features but may result in duplication of technical components and inconsistent implementation approaches."
+      },
+      domain: {
+        teams: ["Inventory Domain", "Customer Domain", "Orders Domain"],
+        architecture: ["Inventory Bounded Context", "Customer Bounded Context", "Orders Bounded Context"],
+        impact: "Domain-aligned teams create bounded contexts with clear responsibilities and interfaces. This approach best supports the Inverse Conway Maneuver, as team boundaries naturally reflect domain boundaries, leading to more maintainable and evolvable architectures."
+      }
+    };
+    
+    // Tab Navigation
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        // Hide all tabs
+        document.querySelectorAll('.tab-content').forEach(tab => {
+          tab.classList.remove('active');
+        });
+        
+        // Remove active class from all buttons
+        document.querySelectorAll('.tab-button').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        
+        // Show selected tab
+        button.classList.add('active');
+        const tabId = button.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+    
+    // Domain Explorer
+    function showDomainInfo(domain) {
+      const domainInfo = document.getElementById('domain-info');
+      const domainTitle = document.getElementById('domain-title');
+      const domainDescription = document.getElementById('domain-description');
+      const domainCharacteristics = document.getElementById('domain-characteristics');
+      
+      // Update the active legend item
+      document.querySelectorAll('.legend-item').forEach(item => {
+        if (item.getAttribute('data-domain') === domain) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+      
+      domainTitle.textContent = domainData[domain].title;
+      domainDescription.textContent = domainData[domain].description;
+      
+      // Clear previous characteristics
+      domainCharacteristics.innerHTML = '';
+      
+      // Add new characteristics
+      domainData[domain].characteristics.forEach(char => {
+        const li = document.createElement('li');
+        li.textContent = char;
+        domainCharacteristics.appendChild(li);
+      });
+      
+      domainInfo.style.display = 'block';
+    }
+    
+    // Add click handlers to domain circles
+    document.querySelectorAll('.domain-circle').forEach(circle => {
+      circle.addEventListener('click', () => {
+        const domain = circle.getAttribute('data-domain');
+        showDomainInfo(domain);
+      });
+    });
+    
+    // Add click handlers to legend items
+    document.querySelectorAll('.legend-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const domain = item.getAttribute('data-domain');
+        showDomainInfo(domain);
+      });
+    });
+    
+    // Conway Toggle
+    const conwayToggle = document.getElementById('conway-toggle');
+    const traditionalLabel = document.querySelector('.toggle-label.traditional');
+    const inverseLabel = document.querySelector('.toggle-label.inverse');
+    const traditionalBox = document.querySelector('.conway-box.traditional');
+    const inverseBox = document.querySelector('.conway-box.inverse');
+    
+    conwayToggle.addEventListener('change', () => {
+      if (conwayToggle.checked) {
+        // Inverse mode
+        traditionalLabel.classList.remove('active');
+        inverseLabel.classList.add('active');
+        traditionalBox.classList.remove('active');
+        inverseBox.classList.add('active');
+      } else {
+        // Traditional mode
+        traditionalLabel.classList.add('active');
+        inverseLabel.classList.remove('active');
+        traditionalBox.classList.add('active');
+        inverseBox.classList.remove('active');
+      }
+    });
+    
+    // Team Structure Simulator
+    function updateTeamStructure(structure) {
+      const teamRow = document.getElementById('team-row');
+      const archRow = document.getElementById('arch-row');
+      const impactDescription = document.getElementById('impact-description');
+      
+      // Clear previous content
+      teamRow.innerHTML = '';
+      archRow.innerHTML = '';
+      
+      // Add new teams
+      teamStructures[structure].teams.forEach(team => {
+        const teamItem = document.createElement('div');
+        teamItem.className = 'team-item';
+        teamItem.textContent = team;
+        teamRow.appendChild(teamItem);
+      });
+      
+      // Add new architecture components
+      teamStructures[structure].architecture.forEach(arch => {
+        const archItem = document.createElement('div');
+        archItem.className = 'arch-item';
+        archItem.textContent = arch;
+        archRow.appendChild(archItem);
+      });
+      
+      // Update impact description
+      impactDescription.textContent = teamStructures[structure].impact;
+      
+      // Update connection lines
+      updateConnectionLines();
+    }
+    
+    function updateConnectionLines() {
+      const connectionLines = document.getElementById('connection-lines');
+      connectionLines.innerHTML = '';
+      
+      const teamItems = document.querySelectorAll('.team-item');
+      
+      teamItems.forEach((item, index) => {
+        const itemRect = item.getBoundingClientRect();
+        const parentRect = item.parentElement.getBoundingClientRect();
+        
+        const line = document.createElement('div');
+        line.className = 'connection-line';
+        line.style.left = (itemRect.left - parentRect.left + itemRect.width / 2) + 'px';
+        
+        connectionLines.appendChild(line);
+      });
+    }
+    
+    // Team structure options
+    document.querySelectorAll('.team-option').forEach(option => {
+      option.addEventListener('click', () => {
+        document.querySelectorAll('.team-option').forEach(opt => {
+          opt.classList.remove('active');
+        });
+        
+        option.classList.add('active');
+        const structure = option.getAttribute('data-structure');
+        updateTeamStructure(structure);
+      });
+    });
+    
+    // Initialize team structure
+    updateTeamStructure('functional');
+    
+    // Fitting Slider
+    const fittingSlider = document.getElementById('fitting-slider');
+    const fittingViz = document.getElementById('fitting-viz');
+    const fittingImpact = document.getElementById('fitting-impact');
+    
+    function updateFittingViz() {
+      const value = fittingSlider.value;
+      
+      let vizContent = '';
+      let impactText = '';
+      
+      if (value < 33) {
+        // Underfitting
+        vizContent = `
+          <div class="fitting-title" style="color: #dc3545;">Underfitting</div>
+          <div class="underfit-viz">
+            <div class="big-team">
+              <div style="font-weight: bold;">One Large Team</div>
+              <div style="margin-top: 10px;">All Domain Types</div>
+              <div style="margin-top: 15px; color: #dc3545; font-size: 14px;">Issues:</div>
+              <ul class="issues-list" style="text-align: left;">
+                <li>Underinvestment in core domains</li>
+                <li>Overinvestment in generic domains</li>
+                <li>Lack of specialized expertise</li>
+              </ul>
+            </div>
+          </div>
+        `;
+        
+        impactText = "Underfitting leads to wasted resources on non-core domains while underinvesting in competitive advantage areas. Teams lack domain specialization and contextual understanding.";
+      } else if (value > 66) {
+        // Overfitting
+        vizContent = `
+          <div class="fitting-title" style="color: #fd7e14;">Overfitting</div>
+          <div class="overfit-viz">
+            ${Array(6).fill(0).map((_, i) => `<div class="micro-team">Micro-Team ${i+1}</div>`).join('')}
+          </div>
+          <div style="text-align: center; margin-top: 15px; color: #fd7e14; font-size: 14px;">Issues:</div>
+          <ul class="issues-list" style="max-width: 400px; margin: 0 auto;">
+            <li>Excessive fragmentation</li>
+            <li>High coordination overhead</li>
+            <li>Duplicated work</li>
+            <li>Too many domains treated as "core"</li>
+          </ul>
+        `;
+        
+        impactText = "Overfitting creates excessive coordination overhead and fragmentation. Too many teams with overlapping responsibilities increase communication costs and reduce efficiency.";
+      } else {
+        // Optimal
+        vizContent = `
+          <div class="fitting-title" style="color: #198754;">Optimal Domain Fit</div>
+          <div class="optimal-viz">
+            <div class="domain-team core-team">
+              <div style="font-weight: bold;">Core Team</div>
+              <div style="font-size: 12px; margin-top: 5px;">High investment</div>
+            </div>
+            <div class="domain-team supporting-team">
+              <div style="font-weight: bold;">Supporting</div>
+              <div style="font-size: 12px; margin-top: 5px;">Medium investment</div>
+            </div>
+            <div class="domain-team generic-team">
+              <div style="font-weight: bold;">Generic</div>
+              <div style="font-size: 12px; margin-top: 5px;">Buy vs. Build</div>
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: 15px; color: #198754; font-size: 14px;">Benefits:</div>
+          <ul class="benefits-list" style="max-width: 400px; margin: 0 auto;">
+            <li>Appropriate resource allocation</li>
+            <li>Clear team ownership boundaries</li>
+            <li>Strategic investment focus</li>
+          </ul>
+        `;
+        
+        impactText = "Optimal domain classification aligns team structure with business value. Core domains receive focused attention and investment, while supporting and generic domains have appropriate resourcing.";
+      }
+      
+      fittingViz.innerHTML = vizContent;
+      fittingImpact.textContent = impactText;
+    }
+    
+    fittingSlider.addEventListener('input', updateFittingViz);
+    
+    // Initialize fitting visualization
+    updateFittingViz();
+  </script>
+</body>
+</html>
