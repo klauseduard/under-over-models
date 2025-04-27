@@ -306,8 +306,8 @@ To effectively implement Monte Carlo simulation for software estimation you migh
 1. **Start with three-point estimates** as the foundation for task distributions
 2. **Use appropriate distribution types**:
    - Triangular or PERT for well-understood tasks
-   - [Lognormal](https://en.wikipedia.org/wiki/Log-normal_distribution) for tasks with potential for significant overruns
-   - [Uniform](https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)) for highly uncertain tasks with little historical basis
+   - [Lognormal](https://en.wikipedia.org/wiki/Log-normal_distribution) for tasks with potential for significant overruns (suitable for variables that are positively skewed, like task durations which cannot be negative but can extend much longer than expected)
+   - [Uniform](https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)) for highly uncertain tasks with little historical basis (assumes any outcome between the minimum and maximum estimate is equally likely)
 
 3. **Model correlations thoughtfully**:
    - Between similar task types (e.g., all UI components)
@@ -340,33 +340,6 @@ toward more sophisticated uncertainty management.
 from simplistic to sophisticated approaches and their relationship to underfitting and overfitting risks" width="700" />
 <figcaption>Figure 2.1e: Spectrum of estimation approaches showing trade-offs between simplicity and
 accuracy</figcaption> </figure>
-
-#### Software Tools and Implementation
-
-⚠️ **REVIEW NEEDED: Several tools facilitate Monte Carlo simulation for software project estimation, each with different levels of sophistication and learning curves:
-
-1. **Specialized project risk tools**:
-   - Oracle Crystal Ball and Palisade @RISK provide comprehensive simulation capabilities integrated with Microsoft Excel
-   - Risky Project offers project-specific Monte Carlo analysis with advanced visualization
-   - Safran Risk combines scheduling capabilities with Monte Carlo simulation features
-
-2. **Agile-focused Monte Carlo tools**:
-   - ActionableAgile Analytics offers Monte Carlo forecasting based on historical cycle time
-   - Nave's flow metrics tools provide probabilistic delivery forecasts
-   - Focused Objective's Forecasting Spreadsheet enables simulation without specialized software
-   - Simulert provides team-level delivery probability simulations
-
-3. **Programming libraries and frameworks**:
-   - Python libraries (SimPy, NumPy, PyMC) for custom simulation development
-   - R statistical packages (MCMCpack, mc2d) for advanced statistical modeling
-   - Discrete event simulation frameworks that can model complex project interactions
-
-4. **Lightweight web-based options**:
-   - SimulAr provides browser-based Monte Carlo simulation with minimal setup
-   - Online Monte Carlo Simulator offers basic probabilistic modeling capabilities
-   - Various cloud-based project simulation services with subscription models
-
-The appropriate implementation depends on organizational maturity, available expertise, and the complexity of projects being estimated. Teams new to Monte Carlo approaches often benefit from starting with pre-built templates or web-based tools before investing in specialized software or custom development.
 
 #### Limitations and Considerations
 
