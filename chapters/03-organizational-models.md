@@ -698,7 +698,79 @@ By applying DDD context mapping to organizational design, companies can create t
 
 ### 3.5.2 Team Topologies for Organizational Structure
 
-Team Topologies, developed by Skelton and Pais, provides patterns for organizing teams to optimize flow, reduce cognitive load, and enable rapid software delivery. It defines four fundamental team types (stream-aligned, platform, enabling, and complicated-subsystem) and three interaction modes (collaboration, X-as-a-Service, and facilitating) that help organizations design effective team structures.
+Team Topologies, developed by Skelton and Pais ([2019](https://teamtopologies.com/)), provides patterns for organizing teams to optimize flow, reduce cognitive load, and enable rapid software delivery. This framework directly addresses the complexity balance in organizational design by focusing on team cognitive load and interaction modes rather than traditional hierarchical relationships.
+
+#### Four Fundamental Team Types
+
+The Team Topologies approach defines four essential team types, each with distinct purposes, responsibilities, and characteristics:
+
+1. **Stream-aligned Teams**: These teams are aligned to a particular value stream or product, delivering value directly to end users or customers. They are:
+   - Cross-functional, with all the skills needed to deliver end-to-end value
+   - Empowered to make decisions within their domain
+   - Designed to minimize dependencies on other teams
+   - Focused on fast flow and rapid feedback
+
+   Stream-aligned teams represent the primary team type in most organizations, with other team types supporting them in various ways.
+
+2. **Platform Teams**: These teams create internal products, tools, and services that reduce the cognitive load of stream-aligned teams. They:
+   - Provide self-service capabilities that stream-aligned teams can consume
+   - Abstract away complexity through well-designed interfaces and APIs
+   - Create foundations that enable stream-aligned teams to innovate faster
+   - Treat their platforms as products with users (the stream-aligned teams)
+
+   Platform teams help manage complexity by encapsulating it behind well-designed interfaces, allowing stream-aligned teams to focus on delivering business value rather than dealing with underlying technical complexities.
+
+3. **Enabling Teams**: These teams help other teams build capability and adopt new technologies or practices. They:
+   - Actively collaborate with other teams to fill knowledge or skill gaps
+   - Focus on researching, experimenting, and sharing knowledge
+   - Have an explicitly temporary engagement model
+   - Act as capability multipliers rather than delivery units
+
+   Enabling teams address complexity by building organizational capability, helping other teams navigate complex technical or domain challenges.
+
+4. **Complicated-Subsystem Teams**: These teams handle specific components that require deep specialist knowledge. They:
+   - Focus on parts of the system that require specialized expertise
+   - Reduce cognitive load by encapsulating complexity
+   - Provide well-defined interfaces to their subsystems
+   - Typically address areas where incorrect implementation would have severe consequences
+
+   Complicated-subsystem teams are used sparingly when specific components require deep specialization that would otherwise overload stream-aligned teams.
+
+#### Three Team Interaction Modes
+
+Team Topologies also defines three distinct interaction modes that clarify how teams should work together:
+
+1. **Collaboration Mode**: Teams work closely together for a period, with regular synchronization and shared goals. This mode:
+   - Is high-bandwidth and relatively costly in terms of coordination overhead
+   - Should be used for discovery of new approaches or complex problem-solving
+   - Is explicitly time-bounded to prevent creating implicit dependencies
+   - Enables rapid learning across team boundaries
+
+2. **X-as-a-Service Mode**: One team provides a service that another team consumes asynchronously with minimal collaboration. This mode:
+   - Reduces inter-team coordination through clear service boundaries
+   - Relies on well-defined interfaces and documentation
+   - Treats the provided capability as a product with a clear user experience
+   - Emphasizes self-service consumption where possible
+
+3. **Facilitating Mode**: One team helps another team learn or adopt a new approach. This mode:
+   - Focuses on building capability rather than delivering features
+   - Typically involves enabling teams working with stream-aligned teams
+   - Is explicitly temporary, with a goal of knowledge transfer
+   - Aims to reduce organizational dependency on specialists
+
+These interaction modes help organizations manage complexity by providing clarity about how teams should interact in different contexts, reducing ambiguity and unnecessary coordination overhead.
+
+#### Relationship to Organizational Complexity
+
+The Team Topologies approach directly addresses the underfitting/overfitting tension in organizational design:
+
+- **Addressing underfitting**: By providing sufficient structure through clear team types and interaction modes, Team Topologies helps organizations avoid the chaos and confusion of overly simplistic structures.
+
+- **Preventing overfitting**: By focusing on cognitive load and emphasizing team autonomy, the framework helps prevent the excessive coordination overhead and bureaucracy of overly complex structures.
+
+This approach aligns with Conway's Law by making team boundaries and interactions explicit, helping organizations intentionally design team structures that will naturally produce the desired system architectures. When combined with DDD's strategic design principles, Team Topologies offers a powerful framework for aligning organizational structure with business domains and technical architecture.
+
+In subsequent sections, we'll explore how these Team Topologies concepts can be adapted for remote work environments (Section 3.5.4) and how they might evolve in AI-augmented organizations (Section 3.6.1).
 
 ### 3.5.3 Organizational Evolution Through Conway's Law
 
@@ -795,9 +867,7 @@ While Chapter 8 will explore the broader impacts of AI on organizations, includi
 
 ### 3.6.1 Human Orchestration of AI Teams
 
-A particularly significant emerging pattern is the ability of individual knowledge workers to orchestrate multiple
-specialized AI assistants in parallel. This represents a fundamentally different coordination model than traditional
-human-to-human collaboration.
+An emerging pattern worth examination is the potential ability of individual knowledge workers to orchestrate multiple specialized AI assistants in parallel. This coordination model differs from traditional human-to-human collaboration patterns and may represent either a lasting organizational paradigm or a transitional phase in human-AI integration. Whether this pattern becomes a sustained feature of organizational structures or merely a stepping stone toward more autonomous AI systems remains an open question.
 
 From a socio-technical perspective, this shift involves viewing AI not merely as technological tools but as potential team members with complementary capabilities, requiring us to rethink traditional team structures and interaction patterns. As Berretta et al. (2023) note in their comprehensive review, effective human-AI teaming "leverages the respective strengths of each party" with "diverse but complementary capabilities" that "foster effective collaboration and enable the achievement of complex goals while ensuring human wellbeing, motivation, and productivity." This human-centered approach to AI implementation at work emphasizes the synergistic combination of human and AI capabilities to accomplish shared goals.
 
