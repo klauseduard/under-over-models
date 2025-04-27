@@ -968,54 +968,14 @@ Organizations with overly simplistic temporal models may miss opportunities for 
 complex scheduling and handoff mechanisms may introduce unnecessary coordination overhead. The potential "night-shift" capability
 of AI systems, reminiscent of [lights-out](https://www.sw.siemens.com/en-US/technology/lights-out-factory/) manufacturing and algorithmic trading systems, may enable continuous operation beyond human working hours. The parallels from financial markets demonstrates how organizations can develop sophisticated frameworks for managing autonomous decision-making across time boundaries, creating strategic advantages through temporal flexibility.
 
+![Temporal Flexibility in AI-Integrated Organizations](../images/ai_temporal_flexibility.svg)
+
 Through the lens of dissipative systems theory (Section 3.3.6), this integration trajectory illustrates how organizations must maintain dynamic stability in constantly changing environments. As AI capabilities enable organizations to process more information and respond to more complex demands, traditional organizational structures may struggle to accommodate this increased complexity. Organizations may need to develop adaptive structures that can handle this heightened information flow without either becoming chaotic (excessive entropy) or overly rigid (excessive negentropy). The timeline above represents not merely technological evolution but the organization's progressive development of more effective adaptive structures that can maintain coherence while processing increasingly complex information patterns, consistent with Prigogine's principles of self-organization in far-from-equilibrium conditions.
 
 A particular risk in this accelerated environment is that AI-augmented teams may become highly productive but poorly aligned—moving rapidly in divergent directions. This represents a specific manifestation of excessive entropy, where increased capability and throughput aren't matched with corresponding coordination mechanisms, potentially undermining organizational coherence despite individual team productivity gains.
 
 
-### 3.6.3 Adaptation Strategies for Human-AI Organizations
-
-Organizations seeking to effectively integrate AI capabilities while maintaining appropriate complexity should consider
-these theoretically-grounded adaptation strategies, several of which are supported by emerging empirical evidence:
-
-1. **Integration Interfaces:** Design specific organizational interfaces that enable human-AI teams to integrate with
-traditional teams without imposing unnecessary process overhead.
-This approach aligns with emerging frameworks for human-AI collaboration that
-emphasize structured interaction patterns, as confirmed by *Frontiers'* comprehensive review of human-AI teaming (Berretta et al., [2023](https://www.frontiersin.org/articles/10.3389/frai.2023.1250725/full)) and research on pattern-based human-AI teamwork interface design (Ashktorab et al., [2024](https://www.researchgate.net/publication/383426629_Human-AI_Teamwork_Interface_Design_Using_Patterns_of_Interactions)).
-
-2. **Differentiated Complexity Zones:** Rather than uniformly simple or complex organizational models, develop differentiated complexity zones that align with Beer's Viable System Model principle of recursion, where greater structural elaboration is justified by domain complexity or strategic importance. This approach is well-documented in Espinosa's i2 Insights explainer on VSM (Espinosa, [2023](https://i2insights.org/2023/01/24/viable-system-model/)).
-
-3. **Adaptive Structural Reconfiguration:** Create organizational structures that can temporarily increase or decrease in complexity as needed, implementing [Ashby's Law of Requisite Variety](https://en.wikipedia.org/wiki/Variety_(cybernetics)) by modulating the appropriate level of structural detail based on environmental conditions. This approach is supported by Alves et al.'s research on configuring viable systems during crises (Alves et al., [2024](https://www.sciencedirect.com/science/article/pii/S0377221724002340)).
-
-4. **Complexity Pattern Recognition:** Leverage AI's analytical capabilities to recognize patterns in organizational behavior and identify where existing structures are overfitting or underfitting, a capability described in Cognitive Talent Solutions' white paper on organizational network analysis and AI integration (Cognitive Talent Solutions, [2024](https://www.cognitivetalentsolutions.com/organizational-network-analysis-ona-concept-use-cases-and-integration-of-ai-capabilities/)).
-
-5. **Temporal Continuity Management:** Design organizational processes that can leverage extended operational timeframes of AI systems while ensuring effective handoffs and information flow between human and AI working periods. This is illustrated in early field deployments of always-on AI agents (Glorium Technologies, [2024](https://gloriumtech.com/custom-ai-agent-development/)). *Rigorous human-factor studies are still pending; pilot carefully before large-scale rollout.*
-
-6. **Team Topology Evolution:** As organizations integrate AI capabilities, their team topologies will need to evolve:
-   - Establish clear interaction modes between human teams and AI systems (collaboration, service, facilitation)
-   - Manage cognitive load by appropriately distributing work between humans and AI
-   - Create platform teams focused on enabling effective human-AI interfaces
-   - Recognize when AI systems are handling complicated subsystems and define appropriate boundaries
-   - Implement a structured assessment approach to determine optimal team types for AI integration
-   
-   Recent research from Team Topologies suggests Stream-aligned Teams often provide the best framework for generative AI integration due to their direct user interaction, adaptability, and alignment with business goals. However, Enabling Teams may be more appropriate when organizations need to overcome initial adoption barriers or build foundational knowledge (Lingnau de Oliveira, [2024](https://teamtopologies.com/news-blogs-newsletters/2025/1/28/how-team-topologies-can-transform-generative-ai-integration)). This team selection should be guided by a systematic assessment of factors including technical complexity, required speed of delivery, and integration with existing workflows. These approaches are further supported by AIS studies on generative-AI cognitive load dynamics (Wagner et al., [2024](https://aisel.aisnet.org/context/icis2024/article/1190/viewcontent/2697_doc.pdf)).
-
-
-These considerations suggest that effective organizational models in AI-augmented environments will likely neither be
-uniformly simple nor complex, but rather embody "requisite complexity" - matching their structural sophistication to the
-specific domains, tasks, and contexts they encompass, while avoiding both the rigidity of excessive simplicity and the
-coordination costs of unnecessary complexity.
-
-Cybernetics offers particularly valuable guidance for organizations navigating this transition. The principle of
-requisite variety provides a theoretical foundation for determining appropriate organizational complexity—not based on
-abstract ideals of simplicity or comprehensiveness, but on matching internal regulatory capacity to environmental
-demands. As organizations integrate AI systems, they may gain enhanced capabilities for environmental sensing,
-information processing, and response generation. Cybernetic principles suggest that this enhanced regulatory capacity
-should be balanced with adaptive governance mechanisms that provide sufficient guidance without unnecessary constraints.
-
-While these theoretical principles provide valuable foundations for understanding AI-augmented organizational design, organizations also need frameworks for implementation testing. The following section explores emerging theoretical approaches that could translate these concepts into research-based organizational models that balance appropriate complexity with adaptability.
-
-### 3.6.4 Theoretical Frameworks for AI-Augmented Organizations
+### 3.6.3 Theoretical Frameworks for AI-Augmented Organizations
 
 While the field of AI-augmented organizational design remains nascent, several theoretical frameworks are beginning to emerge that apply the concepts discussed throughout this chapter. These frameworks offer potential approaches for implementing balanced organizational models that neither underfit nor overfit the opportunities and challenges presented by AI integration.
 
@@ -1113,7 +1073,7 @@ Extending Conway's Law (Section 3.4) to include AI systems as organizational act
 
 This framework posits that Conway's Law applies as much to AI-augmented organizations as traditional ones—the communication structures will inevitably shape the resulting system architectures. By intentionally designing these structures, organizations may achieve more effective technical outcomes.
 
-### 3.6.5 Conclusion and Future Directions
+### 3.6.4 Conclusion and Future Directions
 
 Throughout this chapter, we've explored how organizational models navigate the tension between underfitting and overfitting—between structures that are too simplistic to handle complexity and those that are too rigid to adapt. We've examined this tension through multiple theoretical lenses, from sociotechnical systems theory to cybernetics, and explored practical approaches like Domain-Driven Design and Team Topologies.
 
