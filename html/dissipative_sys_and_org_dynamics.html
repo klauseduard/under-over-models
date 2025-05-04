@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dissipative Systems Theory & Organizational Dynamics</title>
+    <style>
+        :root {
+            --primary-color: #3a86ff;
+            --secondary-color: #ff006e;
+            --tertiary-color: #8338ec;
+            --background-color: #f8f9fa;
+            --ordered-color: #3498db;
+            --critical-color: #2ecc71;
+            --chaotic-color: #e74c3c;
+            --shadow-color: rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, var(--primary-color), var(--tertiary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        h2, h3 {
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .panel {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px var(--shadow-color);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .left-panel {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .right-panel {
+            flex: 2;
+            min-width: 500px;
+        }
+
+        .control-panel {
+            background-color: #f1f3f5;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .parameter-control {
+            margin-bottom: 15px;
+        }
+
+        .parameter-control label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .parameter-control input[type="range"] {
+            width: 100%;
+            height: 8px;
+            background: #ddd;
+            outline: none;
+            border-radius: 4px;
+        }
+
+        .parameter-control .range-values {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        .parameter-value {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #333;
+            text-align: center;
+            width: 60px;
+            margin-left: 10px;
+        }
+
+        .state-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .state-button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .state-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .ordered {
+            background-color: var(--ordered-color);
+        }
+
+        .critical {
+            background-color: var(--critical-color);
+        }
+
+        .chaotic {
+            background-color: var(--chaotic-color);
+        }
+
+        .canvas-container {
+            width: 100%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            background-color: #fafafa;
+            border: 1px solid #eee;
+        }
+
+        #visualization-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        .metrics-panel {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .metric-card {
+            flex: 1;
+            min-width: 150px;
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 3px 6px var(--shadow-color);
+            text-align: center;
+        }
+
+        .metric-card h3 {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .info-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #ccc;
+            color: white;
+            text-align: center;
+            line-height: 16px;
+            font-size: 12px;
+            margin-left: 5px;
+            cursor: help;
+            position: relative;
+        }
+
+        .info-icon:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            width: 200px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .legend {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .legend-label {
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .bifurcation-point {
+            animation: pulse 2s infinite;
+            transform-origin: center;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dissipative Systems Theory & Organizational Dynamics</h1>
+            <p>Explore how organizations function as dissipative systems, exchanging energy, information, and resources with their environment while maintaining internal order</p>
+        </header>
+
+        <div class="flex-container">
+            <div class="left-panel panel">
+                <h2>System Parameters</h2>
+                <p>Adjust the parameters below to see how they affect organizational dynamics and system behavior</p>
+                
+                <div class="control-panel">
+                    <div class="parameter-control">
+                        <label for="environmental-turbulence">Environmental Turbulence <span class="info-icon" data-tooltip="Represents the level of unpredictability and rate of change in the external environment">?</span></label>
+                        <input type="range" id="environmental-turbulence" min="0" max="100" value="30">
+                        <div class="parameter-value" id="turbulence-value">30%</div>
+                        <div class="range-values">
+                            <span>Stable</span>
+                            <span>Turbulent</span>
+                        </div>
+                    </div>
+                    
+                    <div class="parameter-control">
+                        <label for="resource-flow">Resource Flow Rate <span class="info-icon" data-tooltip="The rate at which resources enter and exit the system">?</span></label>
+                        <input type="range" id="resource-flow" min="0" max="100" value="50">
+                        <div class="parameter-value" id="resource-value">50%</div>
+                        <div class="range-values">
+                            <span>Low</span>
+                            <span>High</span>
+                        </div>
+                    </div>
+                    
+                    <div class="parameter-control">
+                        <label for="internal-connectivity">Internal Connectivity <span class="info-icon" data-tooltip="Density of connections between organizational elements">?</span></label>
+                        <input type="range" id="internal-connectivity" min="0" max="100" value="40">
+                        <div class="parameter-value" id="connectivity-value">40%</div>
+                        <div class="range-values">
+                            <span>Sparse</span>
+                            <span>Dense</span>
+                        </div>
+                    </div>
+                    
+                    <div class="parameter-control">
+                        <label for="boundary-permeability">Boundary Permeability <span class="info-icon" data-tooltip="How easily energy, information and resources cross organizational boundaries">?</span></label>
+                        <input type="range" id="boundary-permeability" min="0" max="100" value="60">
+                        <div class="parameter-value" id="permeability-value">60%</div>
+                        <div class="range-values">
+                            <span>Closed</span>
+                            <span>Open</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Explore Organizational States</h3>
+                <p>Click to observe different behavioral regimes:</p>
+                
+                <div class="state-buttons">
+                    <button class="state-button ordered" id="ordered-btn">Ordered Regime</button>
+                    <button class="state-button critical" id="critical-btn">Critical Regime</button>
+                    <button class="state-button chaotic" id="chaotic-btn">Chaotic Regime</button>
+                </div>
+                
+                <div class="metrics-panel">
+                    <div class="metric-card">
+                        <h3>Entropy Production</h3>
+                        <div class="metric-value" id="entropy-value">0.28</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Adaptability</h3>
+                        <div class="metric-value" id="adaptability-value">0.45</div>
+                    </div>
+                    <div class="metric-card">
+                        <h3>Innovation Rate</h3>
+                        <div class="metric-value" id="innovation-value">0.32</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-panel panel">
+                <h2>Interactive Visualization</h2>
+                <div class="canvas-container">
+                    <canvas id="visualization-canvas"></canvas>
+                </div>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--primary-color);"></div>
+                        <div class="legend-label">Information Flow</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--secondary-color);"></div>
+                        <div class="legend-label">Energy Flow</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--tertiary-color);"></div>
+                        <div class="legend-label">Resource Flow</div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #f39c12;"></div>
+                        <div class="legend-label">Bifurcation Points</div>
+                    </div>
+                </div>
+                
+                <div class="panel" style="margin-top: 20px;">
+                    <h3>Current System State</h3>
+                    <p id="system-state-description">
+                        The organization is currently operating in a balanced state between order and chaos. In this critical regime, the system maintains enough structure to function efficiently while allowing for adaptation and innovation. Environmental information flows freely across permeable boundaries, and internal components self-organize in response to external changes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Interactive visualization of dissipative systems theory as applied to organizational dynamics</p>
+    </footer>
+
+    <script>
+        // Canvas setup and variables
+        const canvas = document.getElementById('visualization-canvas');
+        const ctx = canvas.getContext('2d');
+        let width, height, centerX, centerY;
+        let animationFrameId;
+        let particles = [];
+        let nodes = [];
+        let currentState = 'critical';
+        let environmentalTurbulence = 30;
+        let resourceFlow = 50;
+        let internalConnectivity = 40;
+        let boundaryPermeability = 60;
+        
+        // System metrics
+        let entropyProduction = 0.28;
+        let adaptabilityIndex = 0.45;
+        let innovationRate = 0.32;
+        
+        // Organizational parameters based on state
+        const stateParameters = {
+            ordered: {
+                turbulence: 10,
+                flow: 20,
+                connectivity: 80,
+                permeability: 30,
+                entropy: 0.15,
+                adaptability: 0.20,
+                innovation: 0.10,
+                description: "The organization is operating in a highly ordered state with rigid structures. While stable, it lacks adaptability to environmental changes. Information flows are limited, innovation is constrained, and the system risks becoming obsolete in rapidly changing environments."
+            },
+            critical: {
+                turbulence: 50,
+                flow: 60,
+                connectivity: 50,
+                permeability: 60,
+                entropy: 0.45,
+                adaptability: 0.75,
+                innovation: 0.65,
+                description: "The organization is currently operating in a balanced state between order and chaos. In this critical regime, the system maintains enough structure to function efficiently while allowing for adaptation and innovation. Environmental information flows freely across permeable boundaries, and internal components self-organize in response to external changes."
+            },
+            chaotic: {
+                turbulence: 90,
+                flow: 90,
+                connectivity: 20,
+                permeability: 90,
+                entropy: 0.85,
+                adaptability: 0.50,
+                innovation: 0.30,
+                description: "The organization exists in a highly chaotic state with minimal structure. While capable of rapid change, it lacks coordination and coherence. There is excessive energy dissipation, unproductive entropy production, and difficulty in maintaining organizational identity and purpose."
+            }
+        };
+        
+        // Bifurcation points
+        const bifurcationPoints = [
+            { param: 'turbulence', value: 40, description: "At this point, increasing environmental turbulence causes the organization to shift from ordered to critical behavior" },
+            { param: 'turbulence', value: 75, description: "High turbulence pushes the organization from critical to chaotic behavior" },
+            { param: 'connectivity', value: 65, description: "High internal connectivity can lead to rigidity and resistance to change" },
+            { param: 'connectivity', value: 25, description: "Low connectivity results in fragmentation and lack of coordination" },
+            { param: 'permeability', value: 45, description: "Below this threshold, the organization becomes too closed to environmental information" }
+        ];
+
+        // Color schemes
+        const colorSchemes = {
+            ordered: {
+                background: '#e3f2fd',
+                nodes: '#2196f3',
+                boundary: '#0d47a1',
+                particles: ['#64b5f6', '#1e88e5', '#0d47a1']
+            },
+            critical: {
+                background: '#e8f5e9',
+                nodes: '#4caf50',
+                boundary: '#2e7d32',
+                particles: ['#81c784', '#43a047', '#2e7d32']
+            },
+            chaotic: {
+                background: '#ffebee',
+                nodes: '#f44336',
+                boundary: '#b71c1c',
+                particles: ['#e57373', '#e53935', '#b71c1c']
+            }
+        };
+
+        // Initialize canvas dimensions
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            canvas.width = container.clientWidth;
+            canvas.height = container.clientHeight;
+            width = canvas.width;
+            height = canvas.height;
+            centerX = width / 2;
+            centerY = height / 2;
+            
+            // Recreate nodes on resize
+            createNodes();
+        }
+
+        // Create organizational nodes
+        function createNodes() {
+            nodes = [];
+            const numNodes = Math.floor(10 + internalConnectivity / 10);
+            const radius = Math.min(width, height) * 0.3;
+            
+            // Create central node
+            nodes.push({
+                x: centerX,
+                y: centerY,
+                radius: 15,
+                isCentral: true
+            });
+            
+            // Create peripheral nodes
+            for (let i = 0; i < numNodes; i++) {
+                const angle = (i / numNodes) * Math.PI * 2;
+                const nodeRadius = 10;
+                const distance = radius * (0.8 + Math.random() * 0.4);
+                
+                nodes.push({
+                    x: centerX + Math.cos(angle) * distance,
+                    y: centerY + Math.sin(angle) * distance,
+                    radius: nodeRadius,
+                    angle: angle,
+                    isCentral: false
+                });
+            }
+        }
+
+        // Create particle system for energy/information/resource flows
+        function createParticles() {
+            // Clear existing particles
+            particles = [];
+            
+            // Create new particles based on flow rate
+            const numParticles = Math.floor(resourceFlow / 2);
+            const flowTypes = ['information', 'energy', 'resource'];
+            
+            for (let i = 0; i < numParticles; i++) {
+                const type = flowTypes[Math.floor(Math.random() * flowTypes.length)];
+                let color;
+                
+                switch (type) {
+                    case 'information':
+                        color = '#3a86ff';
+                        break;
+                    case 'energy':
+                        color = '#ff006e';
+                        break;
+                    case 'resource':
+                        color = '#8338ec';
+                        break;
+                    default:
+                        color = '#ffffff';
+                }
+                
+                const direction = Math.random() > 0.5 ? 'inward' : 'outward';
+                const angle = Math.random() * Math.PI * 2;
+                const speed = 0.5 + Math.random() * 1.5;
+                const size = 3 + Math.random() * 3;
+                
+                let x, y;
+                const boundaryRadius = Math.min(width, height) * 0.4;
+                
+                if (direction === 'inward') {
+                    // Start outside boundary
+                    x = centerX + Math.cos(angle) * (boundaryRadius + 50);
+                    y = centerY + Math.sin(angle) * (boundaryRadius + 50);
+                } else {
+                    // Start inside
+                    const innerRadius = boundaryRadius * 0.8 * Math.random();
+                    x = centerX + Math.cos(angle) * innerRadius;
+                    y = centerY + Math.sin(angle) * innerRadius;
+                }
+                
+                particles.push({
+                    x: x,
+                    y: y,
+                    size: size,
+                    speed: speed,
+                    angle: direction === 'inward' ? angle + Math.PI : angle,
+                    color: color,
+                    type: type,
+                    direction: direction,
+                    active: true,
+                    lifespan: 100 + Math.random() * 100
+                });
+            }
+        }
+
+        // Draw the organizational boundary
+        function drawBoundary() {
+            const radius = Math.min(width, height) * 0.4;
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+            ctx.strokeStyle = colorSchemes[currentState].boundary;
+            ctx.lineWidth = 2;
+            
+            // Make the boundary dashed to represent permeability
+            const dashLength = Math.max(2, 20 - boundaryPermeability / 5);
+            ctx.setLineDash([dashLength, dashLength]);
+            ctx.stroke();
+            ctx.setLineDash([]);
+        }
+
+        // Draw organizational nodes
+        function drawNodes() {
+            nodes.forEach(node => {
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
+                ctx.fillStyle = colorSchemes[currentState].nodes;
+                ctx.fill();
+                
+                // Draw connections between nodes based on connectivity
+                if (!node.isCentral && internalConnectivity > 20) {
+                    // Connect to central node
+                    ctx.beginPath();
+                    ctx.moveTo(node.x, node.y);
+                    ctx.lineTo(centerX, centerY);
+                    ctx.strokeStyle = colorSchemes[currentState].nodes + '80'; // Add transparency
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                    
+                    // Connect to adjacent nodes based on connectivity
+                    if (internalConnectivity > 40) {
+                        const adjNodes = nodes.filter(n => !n.isCentral && n !== node);
+                        const connections = Math.floor((internalConnectivity / 20) - 1);
+                        
+                        for (let i = 0; i < connections && i < adjNodes.length; i++) {
+                            const angleDiff = Math.abs(node.angle - adjNodes[i].angle);
+                            if (angleDiff < 1.5 || angleDiff > 4.5) {
+                                ctx.beginPath();
+                                ctx.moveTo(node.x, node.y);
+                                ctx.lineTo(adjNodes[i].x, adjNodes[i].y);
+                                ctx.strokeStyle = colorSchemes[currentState].nodes + '50'; // More transparent
+                                ctx.lineWidth = 0.5;
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Draw particles representing flows
+        function drawParticles() {
+            particles.forEach(particle => {
+                if (!particle.active) return;
+                
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                ctx.fillStyle = particle.color;
+                ctx.fill();
+                
+                // Add glow effect
+                const gradient = ctx.createRadialGradient(
+                    particle.x, particle.y, 0,
+                    particle.x, particle.y, particle.size * 2
+                );
+                gradient.addColorStop(0, particle.color + 'aa');
+                gradient.addColorStop(1, particle.color + '00');
+                
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
+                ctx.fillStyle = gradient;
+                ctx.fill();
+                
+                // Add trail
+                ctx.beginPath();
+                ctx.moveTo(particle.x, particle.y);
+                ctx.lineTo(
+                    particle.x - Math.cos(particle.angle) * particle.speed * 5,
+                    particle.y - Math.sin(particle.angle) * particle.speed * 5
+                );
+                ctx.strokeStyle = particle.color + '70';
+                ctx.lineWidth = particle.size / 2;
+                ctx.stroke();
+            });
+        }
+
+        // Draw bifurcation points
+        function drawBifurcationPoints() {
+            const boundaryRadius = Math.min(width, height) * 0.4;
+            
+            bifurcationPoints.forEach(point => {
+                let paramValue;
+                switch(point.param) {
+                    case 'turbulence': paramValue = environmentalTurbulence; break;
+                    case 'connectivity': paramValue = internalConnectivity; break;
+                    case 'permeability': paramValue = boundaryPermeability; break;
+                    default: paramValue = 0;
+                }
+                
+                // Draw only if we're close to the bifurcation point
+                if (Math.abs(paramValue - point.value) < 10) {
+                    const distance = Math.abs(paramValue - point.value) / 10; // 0 to 1
+                    const opacity = 1 - distance;
+                    
+                    // Position based on parameter
+                    let angle;
+                    switch(point.param) {
+                        case 'turbulence': angle = Math.PI / 6; break;
+                        case 'connectivity': angle = Math.PI * 5/6; break;
+                        case 'permeability': angle = Math.PI * 3/2; break;
+                        default: angle = 0;
+                    }
+                    
+                    const x = centerX + Math.cos(angle) * boundaryRadius;
+                    const y = centerY + Math.sin(angle) * boundaryRadius;
+                    
+                    // Draw pulsing circle
+                    ctx.beginPath();
+                    ctx.arc(x, y, 10 + 5 * Math.sin(Date.now() / 300), 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(243, 156, 18, ${opacity * 0.7})`;
+                    ctx.fill();
+                    ctx.beginPath();
+                    ctx.arc(x, y, 5, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(243, 156, 18, ${opacity})`;
+                    ctx.fill();
+                    
+                    // Draw label
+                    ctx.font = '12px sans-serif';
+                    ctx.fillStyle = `rgba(0, 0, 0, ${opacity})`;
+                    ctx.textAlign = 'center';
+                    ctx.fillText('Bifurcation Point', x, y - 20);
+                }
+            });
+        }
+
+        // Update particle positions
+        function updateParticles() {
+            particles.forEach(particle => {
+                if (!particle.active) return;
+                
+                // Move particle
+                particle.x += Math.cos(particle.angle) * particle.speed;
+                particle.y += Math.sin(particle.angle) * particle.speed;
+                
+                // Add some chaos based on turbulence
+                if (Math.random() < environmentalTurbulence / 500) {
+                    particle.angle += (Math.random() - 0.5) * Math.PI / 4;
+                }
+                
+                // Check if crossed boundary
+                const boundaryRadius = Math.min(width, height) * 0.4;
+                const distanceFromCenter = Math.sqrt(
+                    Math.pow(particle.x - centerX, 2) + 
+                    Math.pow(particle.y - centerY, 2)
+                );
+                
+                // Decide if particle can cross boundary based on permeability
+                if (Math.abs(distanceFromCenter - boundaryRadius) < 5) {
+                    const canCross = Math.random() * 100 < boundaryPermeability;
+                    
+                    if (!canCross) {
+                        // Bounce off boundary
+                        const angle = Math.atan2(particle.y - centerY, particle.x - centerX);
+                        if (particle.direction === 'inward') {
+                            particle.direction = 'outward';
+                            particle.angle = angle;
+                        } else {
+                            particle.direction = 'inward';
+                            particle.angle = angle + Math.PI;
+                        }
+                    }
+                }
+                
+                // Check if particle reached center or went too far
+                if (distanceFromCenter < 20 || distanceFromCenter > boundaryRadius * 2) {
+                    particle.active = false;
+                }
+                
+                // Reduce lifespan
+                particle.lifespan--;
+                if (particle.lifespan <= 0) {
+                    particle.active = false;
+                }
+            });
+            
+            // Replace inactive particles
+            const inactiveCount = particles.filter(p => !p.active).length;
+            if (inactiveCount > 0 && Math.random() < resourceFlow / 500) {
+                createParticles();
+            }
+        }
+
+        // Main render function
+        function render() {
+            ctx.clearRect(0, 0, width, height);
+            
+            // Draw background based on state
+            ctx.fillStyle = colorSchemes[currentState].background;
+            ctx.fillRect(0, 0, width, height);
+            
+            drawBoundary();
+            drawNodes();
+            updateParticles();
+            drawParticles();
+            drawBifurcationPoints();
+            
+            animationFrameId = requestAnimationFrame(render);
+        }
+
+        // Initialize everything
+        function init() {
+            resizeCanvas();
+            createParticles();
+            
+            // Start animation
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+            render();
+            
+            // Update metrics display
+            updateMetricsDisplay();
+        }
+
+        // Update metrics based on parameters
+        function updateMetrics() {
+            // Entropy calculation - increases with turbulence and permeability, decreases with connectivity
+            entropyProduction = (environmentalTurbulence * 0.5 + boundaryPermeability * 0.5) / 100 - internalConnectivity / 200;
+            entropyProduction = Math.max(0.1, Math.min(0.9, entropyProduction));
+            
+            // Adaptability calculation - highest at critical values, lower at extremes
+            const turbulenceEffect = 1 - Math.abs(environmentalTurbulence - 50) / 50;
+            const connectivityEffect = 1 - Math.abs(internalConnectivity - 50) / 50;
+            const permeabilityFactor = boundaryPermeability / 100;
+            
+            adaptabilityIndex = (turbulenceEffect * 0.4 + connectivityEffect * 0.4 + permeabilityFactor * 0.2);
+            adaptabilityIndex = Math.max(0.1, Math.min(0.9, adaptabilityIndex));
+            
+            // Innovation calculation - increases with moderate turbulence and high permeability, decreases with very high connectivity
+            const innovationTurbulence = environmentalTurbulence < 70 ? environmentalTurbulence / 70 : (100 - environmentalTurbulence) / 30;
+            const innovationConnectivity = internalConnectivity < 60 ? internalConnectivity / 60 : (100 - internalConnectivity) / 40;
+            
+            innovationRate = (innovationTurbulence * 0.4 + innovationConnectivity * 0.3 + permeabilityFactor * 0.3);
+            innovationRate = Math.max(0.1, Math.min(0.9, innovationRate));
+        }
+
+        // Update display of metrics
+        function updateMetricsDisplay() {
+            document.getElementById('entropy-value').textContent = entropyProduction.toFixed(2);
+            document.getElementById('adaptability-value').textContent = adaptabilityIndex.toFixed(2);
+            document.getElementById('innovation-value').textContent = innovationRate.toFixed(2);
+            
+            document.getElementById('turbulence-value').textContent = environmentalTurbulence + '%';
+            document.getElementById('resource-value').textContent = resourceFlow + '%';
+            document.getElementById('connectivity-value').textContent = internalConnectivity + '%';
+            document.getElementById('permeability-value').textContent = boundaryPermeability + '%';
+        }
+
+        // Update system state description
+        function updateStateDescription() {
+            const description = document.getElementById('system-state-description');
+            
+            // Check if we're near a bifurcation point
+            let nearBifurcation = false;
+            let bifurcationDescription = '';
+            
+            bifurcationPoints.forEach(point => {
+                let paramValue;
+                switch(point.param) {
+                    case 'turbulence': paramValue = environmentalTurbulence; break;
+                    case 'connectivity': paramValue = internalConnectivity; break;
+                    case 'permeability': paramValue = boundaryPermeability; break;
+                }
+                
+                if (Math.abs(paramValue - point.value) < 5) {
+                    nearBifurcation = true;
+                    bifurcationDescription = point.description;
+                }
+            });
+            
+            if (nearBifurcation) {
+                description.textContent = `The system is approaching a critical bifurcation point: ${bifurcationDescription}`;
+            } else {
+                // Determine which state we're closest to
+                const states = ['ordered', 'critical', 'chaotic'];
+                let closestState = currentState;
+                let minDistance = Infinity;
+                
+                states.forEach(state => {
+                    const turbulenceDiff = Math.abs(environmentalTurbulence - stateParameters[state].turbulence);
+                    const connectivityDiff = Math.abs(internalConnectivity - stateParameters[state].connectivity);
+                    const permeabilityDiff = Math.abs(boundaryPermeability - stateParameters[state].permeability);
+                    
+                    const totalDiff = turbulenceDiff + connectivityDiff + permeabilityDiff;
+                    
+                    if (totalDiff < minDistance) {
+                        minDistance = totalDiff;
+                        closestState = state;
+                    }
+                });
+                
+                description.textContent = stateParameters[closestState].description;
+            }
+        }
+
+        // Set parameters for a specific state
+        function setStateParameters(state) {
+            currentState = state;
+            environmentalTurbulence = stateParameters[state].turbulence;
+            resourceFlow = stateParameters[state].flow;
+            internalConnectivity = stateParameters[state].connectivity;
+            boundaryPermeability = stateParameters[state].permeability;
+            
+            // Update UI sliders
+            document.getElementById('environmental-turbulence').value = environmentalTurbulence;
+            document.getElementById('resource-flow').value = resourceFlow;
+            document.getElementById('internal-connectivity').value = internalConnectivity;
+            document.getElementById('boundary-permeability').value = boundaryPermeability;
+            
+            // Update metrics
+            entropyProduction = stateParameters[state].entropy;
+            adaptabilityIndex = stateParameters[state].adaptability;
+            innovationRate = stateParameters[state].innovation;
+            
+            // Update displays
+            updateMetricsDisplay();
+            updateStateDescription();
+            
+            // Recreate system
+            createNodes();
+            createParticles();
+        }
+
+        // Event listeners
+        window.addEventListener('resize', resizeCanvas);
+        
+        document.getElementById('environmental-turbulence').addEventListener('input', function(e) {
+            environmentalTurbulence = parseInt(e.target.value);
+            updateMetrics();
+            updateMetricsDisplay();
+            updateStateDescription();
+        });
+        
+        document.getElementById('resource-flow').addEventListener('input', function(e) {
+            resourceFlow = parseInt(e.target.value);
+            updateMetrics();
+            updateMetricsDisplay();
+            updateStateDescription();
+            createParticles();
+        });
+        
+        document.getElementById('internal-connectivity').addEventListener('input', function(e) {
+            internalConnectivity = parseInt(e.target.value);
+            updateMetrics();
+            updateMetricsDisplay();
+            updateStateDescription();
+            createNodes();
+        });
+        
+        document.getElementById('boundary-permeability').addEventListener('input', function(e) {
+            boundaryPermeability = parseInt(e.target.value);
+            updateMetrics();
+            updateMetricsDisplay();
+            updateStateDescription();
+        });
+        
+        document.getElementById('ordered-btn').addEventListener('click', function() {
+            setStateParameters('ordered');
+        });
+        
+        document.getElementById('critical-btn').addEventListener('click', function() {
+            setStateParameters('critical');
+        });
+        
+        document.getElementById('chaotic-btn').addEventListener('click', function() {
+            setStateParameters('chaotic');
+        });
+
+        // Start visualization
+        init();
+    </script>
+</body>
+</html>

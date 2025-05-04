@@ -1,0 +1,426 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 850">
+  <defs>
+    <style>
+      @keyframes pulse {
+        0% { stroke-opacity: 0.2; }
+        50% { stroke-opacity: 0.8; }
+        100% { stroke-opacity: 0.2; }
+      }
+      
+      @keyframes intermittentPulse {
+        0% { stroke-opacity: 0; }
+        10% { stroke-opacity: 0.6; }
+        20% { stroke-opacity: 0; }
+        100% { stroke-opacity: 0; }
+      }
+      
+      @keyframes sparkle {
+        0% { opacity: 0; }
+        50% { opacity: 0.7; }
+        100% { opacity: 0; }
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+      
+      @keyframes moveRight {
+        from { transform: translateX(0); }
+        to { transform: translateX(500px); }
+      }
+      
+      @keyframes moveLeft {
+        from { transform: translateX(500px); }
+        to { transform: translateX(0); }
+      }
+      
+      @keyframes growDenser {
+        from { stroke-width: 2; }
+        to { stroke-width: 4; }
+      }
+      
+      @keyframes growThinner {
+        from { stroke-width: 2; }
+        to { stroke-width: 1; }
+      }
+      
+      .team-area {
+        fill-opacity: 0.1;
+        stroke-width: 2;
+      }
+      
+      .node {
+        fill: #333;
+        stroke: #fff;
+        stroke-width: 1.5;
+      }
+      
+      .in-group-link {
+        stroke: #3498db;
+        stroke-width: 2;
+        stroke-opacity: 0.6;
+      }
+      
+      .cross-group-link {
+        stroke: #e67e22;
+        stroke-width: 2;
+        stroke-opacity: 0.4;
+      }
+      
+      .informal-link {
+        stroke: #9b59b6;
+        stroke-width: 1;
+        stroke-dasharray: 3,3;
+        stroke-opacity: 0.2;
+      }
+      
+      .spark {
+        fill: #f39c12;
+        opacity: 0;
+      }
+      
+      .label {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        text-anchor: middle;
+      }
+      
+      .sublabel {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-style: italic;
+        text-anchor: middle;
+      }
+      
+      .legend-text {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        text-anchor: start;
+      }
+      
+      .title {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-anchor: middle;
+      }
+      
+      .description {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="500" y="40" class="title">Digital Gravity Effect in Remote Work</text>
+  <text x="500" y="70" class="description">Communication patterns shift when organizations move from co-located to fully remote work</text>
+  
+  <!-- State A (left side) -->
+  <g id="stateA">
+    <text x="250" y="120" class="label">State A: Co-located/Hybrid</text>
+    <text x="250" y="145" class="sublabel">Balanced cross-team interaction</text>
+    
+    <!-- Team areas -->
+    <circle cx="150" cy="250" r="90" class="team-area" fill="#3498db" stroke="#3498db" />
+    <circle cx="350" cy="250" r="90" class="team-area" fill="#e67e22" stroke="#e67e22" />
+    <circle cx="250" cy="400" r="90" class="team-area" fill="#2ecc71" stroke="#2ecc71" />
+    
+    <!-- Team labels -->
+    <text x="150" y="250" class="sublabel" fill="#3498db">Team A</text>
+    <text x="350" y="250" class="sublabel" fill="#e67e22">Team B</text>
+    <text x="250" y="400" class="sublabel" fill="#2ecc71">Team C</text>
+    
+    <!-- Team A Nodes -->
+    <circle cx="120" cy="210" r="10" class="node" />
+    <circle cx="170" cy="220" r="10" class="node" />
+    <circle cx="140" cy="260" r="10" class="node" />
+    <circle cx="180" cy="280" r="10" class="node" />
+    <circle cx="110" cy="280" r="10" class="node" />
+    
+    <!-- Team B Nodes -->
+    <circle cx="320" cy="210" r="10" class="node" />
+    <circle cx="370" cy="220" r="10" class="node" />
+    <circle cx="340" cy="260" r="10" class="node" />
+    <circle cx="380" cy="280" r="10" class="node" />
+    <circle cx="310" cy="280" r="10" class="node" />
+    
+    <!-- Team C Nodes -->
+    <circle cx="220" cy="370" r="10" class="node" />
+    <circle cx="270" cy="380" r="10" class="node" />
+    <circle cx="240" cy="420" r="10" class="node" />
+    <circle cx="280" cy="430" r="10" class="node" />
+    <circle cx="210" cy="430" r="10" class="node" />
+    
+    <!-- In-group links (Team A) -->
+    <line x1="120" y1="210" x2="170" y2="220" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="0.2s" />
+    </line>
+    <line x1="120" y1="210" x2="140" y2="260" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="1.2s" />
+    </line>
+    <line x1="170" y1="220" x2="180" y2="280" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="2.1s" />
+    </line>
+    <line x1="140" y1="260" x2="110" y2="280" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="0.5s" />
+    </line>
+    
+    <!-- In-group links (Team B) -->
+    <line x1="320" y1="210" x2="370" y2="220" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="0.3s" />
+    </line>
+    <line x1="320" y1="210" x2="340" y2="260" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="1.7s" />
+    </line>
+    <line x1="370" y1="220" x2="380" y2="280" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="1.1s" />
+    </line>
+    <line x1="340" y1="260" x2="310" y2="280" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="2.5s" />
+    </line>
+    
+    <!-- In-group links (Team C) -->
+    <line x1="220" y1="370" x2="270" y2="380" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="0.8s" />
+    </line>
+    <line x1="220" y1="370" x2="240" y2="420" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="1.5s" />
+    </line>
+    <line x1="270" y1="380" x2="280" y2="430" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="2.2s" />
+    </line>
+    <line x1="240" y1="420" x2="210" y2="430" class="in-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" begin="0.4s" />
+    </line>
+    
+    <!-- Cross-group links (A-B) -->
+    <line x1="170" y1="220" x2="320" y2="210" class="cross-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" begin="0.5s" />
+    </line>
+    <line x1="180" y1="280" x2="310" y2="280" class="cross-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" begin="2.3s" />
+    </line>
+    
+    <!-- Cross-group links (B-C) -->
+    <line x1="310" y1="280" x2="270" y2="380" class="cross-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" begin="1.7s" />
+    </line>
+    <line x1="340" y1="260" x2="240" y2="420" class="cross-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" begin="3.1s" />
+    </line>
+    
+    <!-- Cross-group links (A-C) -->
+    <line x1="140" y1="260" x2="220" y2="370" class="cross-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" begin="1.1s" />
+    </line>
+    <line x1="110" y1="280" x2="210" y2="430" class="cross-group-link">
+      <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" begin="2.9s" />
+    </line>
+    
+    <!-- Informal/Serendipitous links (appear randomly) -->
+    <line x1="120" y1="210" x2="340" y2="260" class="informal-link">
+      <animate attributeName="stroke-opacity" values="0;0.6;0" dur="7s" repeatCount="indefinite" begin="1.3s" />
+    </line>
+    <line x1="370" y1="220" x2="220" y2="370" class="informal-link">
+      <animate attributeName="stroke-opacity" values="0;0.6;0" dur="8s" repeatCount="indefinite" begin="2.7s" />
+    </line>
+    <line x1="180" y1="280" x2="270" y2="380" class="informal-link">
+      <animate attributeName="stroke-opacity" values="0;0.6;0" dur="6s" repeatCount="indefinite" begin="4.1s" />
+    </line>
+    <line x1="170" y1="220" x2="240" y2="420" class="informal-link">
+      <animate attributeName="stroke-opacity" values="0;0.6;0" dur="9s" repeatCount="indefinite" begin="0.9s" />
+    </line>
+    
+    <!-- Random sparks of communication -->
+    <circle cx="245" cy="290" r="5" class="spark">
+      <animate attributeName="opacity" values="0;0.7;0" dur="4s" repeatCount="indefinite" begin="1s" />
+    </circle>
+    <circle cx="200" cy="330" r="5" class="spark">
+      <animate attributeName="opacity" values="0;0.7;0" dur="5s" repeatCount="indefinite" begin="2.5s" />
+    </circle>
+    <circle cx="300" cy="330" r="5" class="spark">
+      <animate attributeName="opacity" values="0;0.7;0" dur="6s" repeatCount="indefinite" begin="3.8s" />
+    </circle>
+  </g>
+  
+  <!-- State B (right side) -->
+  <g id="stateB" transform="translate(500, 0)">
+    <text x="250" y="120" class="label">State B: Fully Remote</text>
+    <text x="250" y="145" class="sublabel">"Digital gravity" effect</text>
+    
+    <!-- Team areas -->
+    <circle cx="150" cy="250" r="90" class="team-area" fill="#3498db" stroke="#3498db" />
+    <circle cx="350" cy="250" r="90" class="team-area" fill="#e67e22" stroke="#e67e22" />
+    <circle cx="250" cy="400" r="90" class="team-area" fill="#2ecc71" stroke="#2ecc71" />
+    
+    <!-- Team labels -->
+    <text x="150" y="250" class="sublabel" fill="#3498db">Team A</text>
+    <text x="350" y="250" class="sublabel" fill="#e67e22">Team B</text>
+    <text x="250" y="400" class="sublabel" fill="#2ecc71">Team C</text>
+    
+    <!-- Team A Nodes -->
+    <circle cx="120" cy="210" r="10" class="node" />
+    <circle cx="170" cy="220" r="10" class="node" />
+    <circle cx="140" cy="260" r="10" class="node" />
+    <circle cx="180" cy="280" r="10" class="node" />
+    <circle cx="110" cy="280" r="10" class="node" />
+    
+    <!-- Team B Nodes -->
+    <circle cx="320" cy="210" r="10" class="node" />
+    <circle cx="370" cy="220" r="10" class="node" />
+    <circle cx="340" cy="260" r="10" class="node" />
+    <circle cx="380" cy="280" r="10" class="node" />
+    <circle cx="310" cy="280" r="10" class="node" />
+    
+    <!-- Team C Nodes -->
+    <circle cx="220" cy="370" r="10" class="node" />
+    <circle cx="270" cy="380" r="10" class="node" />
+    <circle cx="240" cy="420" r="10" class="node" />
+    <circle cx="280" cy="430" r="10" class="node" />
+    <circle cx="210" cy="430" r="10" class="node" />
+    
+    <!-- In-group links (Team A) - more dense and frequent -->
+    <line x1="120" y1="210" x2="170" y2="220" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.2s" />
+    </line>
+    <line x1="120" y1="210" x2="140" y2="260" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1.2s" />
+    </line>
+    <line x1="170" y1="220" x2="180" y2="280" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.7s" />
+    </line>
+    <line x1="140" y1="260" x2="110" y2="280" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.5s" />
+    </line>
+    <line x1="120" y1="210" x2="110" y2="280" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1.5s" />
+    </line>
+    <line x1="170" y1="220" x2="140" y2="260" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.9s" />
+    </line>
+    
+    <!-- In-group links (Team B) - more dense and frequent -->
+    <line x1="320" y1="210" x2="370" y2="220" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.3s" />
+    </line>
+    <line x1="320" y1="210" x2="340" y2="260" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1.7s" />
+    </line>
+    <line x1="370" y1="220" x2="380" y2="280" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1.1s" />
+    </line>
+    <line x1="340" y1="260" x2="310" y2="280" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.8s" />
+    </line>
+    <line x1="320" y1="210" x2="310" y2="280" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="2.0s" />
+    </line>
+    <line x1="370" y1="220" x2="340" y2="260" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1.4s" />
+    </line>
+    
+    <!-- In-group links (Team C) - more dense and frequent -->
+    <line x1="220" y1="370" x2="270" y2="380" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.8s" />
+    </line>
+    <line x1="220" y1="370" x2="240" y2="420" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1.5s" />
+    </line>
+    <line x1="270" y1="380" x2="280" y2="430" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.6s" />
+    </line>
+    <line x1="240" y1="420" x2="210" y2="430" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="0.4s" />
+    </line>
+    <line x1="220" y1="370" x2="210" y2="430" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1.9s" />
+    </line>
+    <line x1="270" y1="380" x2="240" y2="420" class="in-group-link" stroke-width="4" stroke-opacity="0.8">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" begin="1.0s" />
+    </line>
+    
+    <!-- Cross-group links (A-B) - fewer and thinner -->
+    <line x1="170" y1="220" x2="320" y2="210" class="cross-group-link" stroke-width="1" stroke-opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.1;0.3;0.1" dur="8s" repeatCount="indefinite" begin="2.5s" />
+    </line>
+    
+    <!-- Cross-group links (B-C) - fewer and thinner -->
+    <line x1="310" y1="280" x2="270" y2="380" class="cross-group-link" stroke-width="1" stroke-opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.1;0.3;0.1" dur="8s" repeatCount="indefinite" begin="5.7s" />
+    </line>
+    
+    <!-- Cross-group links (A-C) - fewer and thinner -->
+    <line x1="140" y1="260" x2="220" y2="370" class="cross-group-link" stroke-width="1" stroke-opacity="0.3">
+      <animate attributeName="stroke-opacity" values="0.1;0.3;0.1" dur="8s" repeatCount="indefinite" begin="4.1s" />
+    </line>
+  </g>
+  
+  <!-- Transition Animation Controller -->
+  <rect x="425" y="350" width="150" height="40" rx="10" ry="10" fill="#34495e" stroke="#2c3e50" stroke-width="2">
+    <animate attributeName="opacity" values="0;1" dur="1s" begin="1s" fill="freeze" />
+  </rect>
+  <text x="500" y="375" class="label" fill="white" font-size="16">Transition</text>
+  
+  <!-- Conway's Law Implication -->
+  <g id="conways-law" transform="translate(0, 520)">
+    <text x="500" y="70" class="label">Conway's Law Implication</text>
+    <text x="500" y="95" class="description">System architecture tends to reflect communication patterns</text>
+    <rect x="150" y="115" width="300" height="20" fill="#3498db" fill-opacity="0.7" rx="5" ry="5" />
+    <rect x="150" y="140" width="300" height="20" fill="#e67e22" fill-opacity="0.7" rx="5" ry="5" />
+    <rect x="150" y="165" width="300" height="20" fill="#2ecc71" fill-opacity="0.7" rx="5" ry="5" />
+    
+    <text x="170" y="130" class="legend-text" text-anchor="end">System A</text>
+    <text x="170" y="155" class="legend-text" text-anchor="end">System B</text>
+    <text x="170" y="180" class="legend-text" text-anchor="end">System C</text>
+    
+    <!-- Right side - siloed system -->
+    <rect x="550" y="115" width="100" height="20" fill="#3498db" fill-opacity="0.7" rx="5" ry="5" />
+    <rect x="660" y="115" width="100" height="20" fill="#3498db" fill-opacity="0.7" rx="5" ry="5" />
+    <rect x="770" y="115" width="100" height="20" fill="#3498db" fill-opacity="0.7" rx="5" ry="5" />
+    
+    <rect x="550" y="140" width="100" height="20" fill="#e67e22" fill-opacity="0.7" rx="5" ry="5" />
+    <rect x="660" y="140" width="100" height="20" fill="#e67e22" fill-opacity="0.7" rx="5" ry="5" />
+    <rect x="770" y="140" width="100" height="20" fill="#e67e22" fill-opacity="0.7" rx="5" ry="5" />
+    
+    <rect x="550" y="165" width="100" height="20" fill="#2ecc71" fill-opacity="0.7" rx="5" ry="5" />
+    <rect x="660" y="165" width="100" height="20" fill="#2ecc71" fill-opacity="0.7" rx="5" ry="5" />
+    <rect x="770" y="165" width="100" height="20" fill="#2ecc71" fill-opacity="0.7" rx="5" ry="5" />
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(325, 720)">
+    <rect x="0" y="0" width="350" height="70" fill="white" stroke="#ccc" stroke-width="1" rx="5" ry="5" />
+    
+    <line x1="20" y1="15" x2="50" y2="15" class="in-group-link" stroke-width="4" />
+    <text x="60" y="20" class="legend-text">In-group communication (within team)</text>
+    
+    <line x1="20" y1="35" x2="50" y2="35" class="cross-group-link" />
+    <text x="60" y="40" class="legend-text">Cross-group communication (between teams)</text>
+    
+    <line x1="20" y1="55" x2="50" y2="55" class="informal-link" />
+    <text x="60" y="60" class="legend-text">Informal/serendipitous communication</text>
+  </g>
+  
+  <!-- Digital Gravity Effect Description -->
+  <rect x="150" y="500" width="700" height="60" fill="#f8f9fa" stroke="#34495e" stroke-width="1" rx="10" ry="10" />
+  <text x="500" y="525" class="description" font-weight="bold">The "Digital Gravity" Effect</text>
+  <text x="500" y="545" class="description">Remote work increases in-group communication but reduces cross-group collaboration</text>
+  
+  <!-- Animation controllers -->
+  <script type="text/javascript">
+    // This SVG animation is self-contained with CSS animations
+    // The transitions would be controlled by CSS keyframes
+  </script>
+</svg>

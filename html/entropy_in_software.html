@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entropy and Negentropy in Software Development</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #4e937a;
+            --light: #e4f0f5;
+            --dark: #1b2733;
+            --danger: #c25450;
+            --success: #5bae6a;
+            --neutral: #888;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            background-color: var(--dark);
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content {
+            padding: 20px;
+            position: relative;
+        }
+        
+        h1, h2, h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        
+        .sidebar h1, .sidebar h2, .sidebar h3 {
+            color: white;
+        }
+        
+        h1 {
+            font-weight: 300;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-weight: 400;
+            font-size: 1.6rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h3 {
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+        
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .controls {
+            margin-bottom: 30px;
+        }
+        
+        .slider-container {
+            margin-bottom: 15px;
+        }
+        
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .slider {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-light {
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .metric-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .metric-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metric-title {
+            font-size: 0.9rem;
+            color: var(--neutral);
+            margin-bottom: 5px;
+        }
+        
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .timeline-container {
+            position: relative;
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+        
+        .timeline-slider {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--neutral);
+        }
+        
+        .info-panel {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            pointer-events: none;
+            z-index: 100;
+            max-width: 200px;
+            transform: translate(-50%, -100%);
+            margin-top: -10px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        
+        .activity-controls {
+            margin-top: 20px;
+        }
+        
+        .activity-group {
+            margin-bottom: 15px;
+        }
+        
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider-toggle {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        
+        .slider-toggle:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider-toggle {
+            background-color: var(--accent);
+        }
+        
+        input:checked + .slider-toggle:before {
+            transform: translateX(26px);
+        }
+        
+        .activity-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .activity-label {
+            font-weight: 500;
+        }
+        
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 3px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Entropy in Software</h1>
+            <div class="activity-controls">
+                <h3>Negentropy Activities</h3>
+                <div class="activity-group">
+                    <div class="activity-item">
+                        <label class="switch">
+                            <input type="checkbox" id="documentation-toggle" checked>
+                            <span class="slider-toggle"></span>
+                        </label>
+                        <span class="activity-label">Documentation</span>
+                    </div>
+                    <div class="activity-item">
+                        <label class="switch">
+                            <input type="checkbox" id="testing-toggle" checked>
+                            <span class="slider-toggle"></span>
+                        </label>
+                        <span class="activity-label">Testing</span>
+                    </div>
+                    <div class="activity-item">
+                        <label class="switch">
+                            <input type="checkbox" id="standards-toggle" checked>
+                            <span class="slider-toggle"></span>
+                        </label>
+                        <span class="activity-label">Code Standards</span>
+                    </div>
+                    <div class="activity-item">
+                        <label class="switch">
+                            <input type="checkbox" id="knowledge-toggle" checked>
+                            <span class="slider-toggle"></span>
+                        </label>
+                        <span class="activity-label">Knowledge Sharing</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-container">
+                <h3>System Complexity</h3>
+                <input type="range" min="3" max="15" value="7" class="slider" id="complexity-slider">
+                <div class="slider-label">
+                    <span>Simple</span>
+                    <span>Complex</span>
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button class="btn btn-primary" id="reset-btn">Reset System</button>
+                <button class="btn btn-accent" id="auto-btn">Auto-Play</button>
+            </div>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #4a6fa5;"></div>
+                    <span>Component</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: rgba(194, 84, 80, 0.4);"></div>
+                    <span>Entropy Cloud</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #888;"></div>
+                    <span>Connection</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #5bae6a;"></div>
+                    <span>Negentropy Effect</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h1>Entropy and Negentropy in Software Development</h1>
+            
+            <div class="metric-container">
+                <div class="metric-card">
+                    <div class="metric-title">System Entropy</div>
+                    <div class="metric-value" id="entropy-value">42%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">System Stability</div>
+                    <div class="metric-value" id="stability-value">78%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Technical Debt</div>
+                    <div class="metric-value" id="debt-value">23%</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-title">Project Progress</div>
+                    <div class="metric-value" id="progress-value">34%</div>
+                </div>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="system-canvas"></canvas>
+                <div id="tooltip" class="tooltip"></div>
+            </div>
+            
+            <div class="timeline-container">
+                <h3>Project Timeline</h3>
+                <input type="range" min="0" max="100" value="0" class="timeline-slider" id="timeline-slider">
+                <div class="timeline-labels">
+                    <span>Project Start</span>
+                    <span>MVP</span>
+                    <span>Release</span>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <h3>About Entropy in Software Development</h3>
+                <p>Software entropy represents the gradual deterioration of software systems over time. As codebases grow more complex, they naturally accumulate uncertainty, inconsistency, and unpredictability – leading to higher maintenance costs and reduced development velocity.</p>
+                <p>Negentropy activities are practices that introduce order, predictability, and structure back into the system:</p>
+                <ul>
+                    <li><strong>Documentation</strong> reduces uncertainty around components</li>
+                    <li><strong>Testing</strong> strengthens connection reliability between components</li>
+                    <li><strong>Code Standards</strong> reduces variability in component behavior</li>
+                    <li><strong>Knowledge Sharing</strong> reduces entropy across the entire system</li>
+                </ul>
+                <p>This visualization demonstrates how neglecting these activities leads to increasing system entropy and eventual collapse of predictability.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Canvas setup
+        const canvas = document.getElementById('system-canvas');
+        const ctx = canvas.getContext('2d');
+        const tooltip = document.getElementById('tooltip');
+        
+        // Set canvas resolution
+        function setupCanvas() {
+            const dpr = window.devicePixelRatio || 1;
+            const rect = canvas.getBoundingClientRect();
+            canvas.width = rect.width * dpr;
+            canvas.height = rect.height * dpr;
+            ctx.scale(dpr, dpr);
+            canvas.style.width = `${rect.width}px`;
+            canvas.style.height = `${rect.height}px`;
+        }
+        
+        window.addEventListener('resize', setupCanvas);
+        setupCanvas();
+        
+        // Constants and variables
+        const NODE_RADIUS = 15;
+        const MAX_ENTROPY = 80;
+        let nodes = [];
+        let connections = [];
+        let complexityLevel = 7;
+        let entropyLevel = 30;
+        let timelinePosition = 0;
+        let isAutoPlaying = false;
+        let autoPlayInterval;
+        
+        // Activity toggles
+        let documentationActive = true;
+        let testingActive = true;
+        let standardsActive = true;
+        let knowledgeSharingActive = true;
+        
+        // Event listeners
+        document.getElementById('complexity-slider').addEventListener('input', (e) => {
+            complexityLevel = parseInt(e.target.value);
+            resetSystem();
+        });
+        
+        document.getElementById('timeline-slider').addEventListener('input', (e) => {
+            timelinePosition = parseInt(e.target.value);
+            updateSystem();
+        });
+        
+        document.getElementById('documentation-toggle').addEventListener('change', (e) => {
+            documentationActive = e.target.checked;
+            updateSystem();
+        });
+        
+        document.getElementById('testing-toggle').addEventListener('change', (e) => {
+            testingActive = e.target.checked;
+            updateSystem();
+        });
+        
+        document.getElementById('standards-toggle').addEventListener('change', (e) => {
+            standardsActive = e.target.checked;
+            updateSystem();
+        });
+        
+        document.getElementById('knowledge-toggle').addEventListener('change', (e) => {
+            knowledgeSharingActive = e.target.checked;
+            updateSystem();
+        });
+        
+        document.getElementById('reset-btn').addEventListener('click', () => {
+            timelinePosition = 0;
+            document.getElementById('timeline-slider').value = 0;
+            resetSystem();
+        });
+        
+        document.getElementById('auto-btn').addEventListener('click', toggleAutoPlay);
+        
+        // Tooltip behavior
+        canvas.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const node = findNodeUnderCursor(x, y);
+            if (node) {
+                tooltip.style.opacity = 1;
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+                tooltip.innerHTML = `<strong>${node.name}</strong><br>
+                                    Entropy: ${Math.round(node.entropy)}%<br>
+                                    Connections: ${node.connections}`;
+            } else {
+                tooltip.style.opacity = 0;
+            }
+        });
+        
+        canvas.addEventListener('mouseleave', () => {
+            tooltip.style.opacity = 0;
+        });
+        
+        // Helper functions
+        function findNodeUnderCursor(x, y) {
+            for (const node of nodes) {
+                const distance = Math.sqrt((node.x - x) ** 2 + (node.y - y) ** 2);
+                if (distance <= NODE_RADIUS) {
+                    return node;
+                }
+            }
+            return null;
+        }
+        
+        function toggleAutoPlay() {
+            const autoBtn = document.getElementById('auto-btn');
+            isAutoPlaying = !isAutoPlaying;
+            
+            if (isAutoPlaying) {
+                autoBtn.textContent = 'Pause';
+                autoBtn.classList.replace('btn-accent', 'btn-secondary');
+                
+                autoPlayInterval = setInterval(() => {
+                    if (timelinePosition < 100) {
+                        timelinePosition += 1;
+                        document.getElementById('timeline-slider').value = timelinePosition;
+                        updateSystem();
+                    } else {
+                        toggleAutoPlay();
+                    }
+                }, 200);
+            } else {
+                autoBtn.textContent = 'Auto-Play';
+                autoBtn.classList.replace('btn-secondary', 'btn-accent');
+                clearInterval(autoPlayInterval);
+            }
+        }
+        
+        // Core visualization functions
+        function resetSystem() {
+            // Clear existing nodes and connections
+            nodes = [];
+            connections = [];
+            
+            // Generate node positions based on complexity
+            const centerX = canvas.width / (2 * window.devicePixelRatio);
+            const centerY = canvas.height / (2 * window.devicePixelRatio);
+            const radius = Math.min(centerX, centerY) * 0.7;
+            
+            // Create nodes around a circle
+            for (let i = 0; i < complexityLevel; i++) {
+                const angle = (i / complexityLevel) * Math.PI * 2;
+                const x = centerX + Math.cos(angle) * radius;
+                const y = centerY + Math.sin(angle) * radius;
+                
+                nodes.push({
+                    id: i,
+                    name: `Component ${i + 1}`,
+                    x: x,
+                    y: y,
+                    entropy: Math.random() * 20 + 10, // Initial entropy between 10-30%
+                    connections: 0
+                });
+            }
+            
+            // Create connections between nodes
+            const connectionDensity = 0.3 + (complexityLevel / 30); // More complex = more connections
+            
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    if (Math.random() < connectionDensity) {
+                        connections.push({
+                            source: i,
+                            target: j,
+                            strength: Math.random() * 0.5 + 0.5, // Initial strength between 0.5-1
+                        });
+                        
+                        nodes[i].connections++;
+                        nodes[j].connections++;
+                    }
+                }
+            }
+            
+            // Ensure all nodes have at least one connection
+            for (let i = 0; i < nodes.length; i++) {
+                if (nodes[i].connections === 0) {
+                    const target = (i + 1) % nodes.length;
+                    connections.push({
+                        source: i,
+                        target: target,
+                        strength: Math.random() * 0.5 + 0.5,
+                    });
+                    
+                    nodes[i].connections++;
+                    nodes[target].connections++;
+                }
+            }
+            
+            // Reset timeline and entropy
+            timelinePosition = 0;
+            entropyLevel = 30;
+            
+            updateSystem();
+        }
+        
+        function updateSystem() {
+            // Calculate base entropy increase based on timeline progress and complexity
+            const baseEntropyIncrease = (timelinePosition / 100) * (complexityLevel / 10);
+            
+            // Calculate negentropy effects
+            let negentropyFactor = 0;
+            
+            if (documentationActive) negentropyFactor += 0.4;
+            if (testingActive) negentropyFactor += 0.3;
+            if (standardsActive) negentropyFactor += 0.2;
+            if (knowledgeSharingActive) negentropyFactor += 0.5;
+            
+            // Update overall system entropy
+            entropyLevel = Math.min(
+                MAX_ENTROPY,
+                30 + (baseEntropyIncrease * 30) - (negentropyFactor * 25)
+            );
+            
+            // Update node entropy based on overall system entropy and their connections
+            for (const node of nodes) {
+                const connectionFactor = 1 + (node.connections / (2 * complexityLevel));
+                let nodeEntropyTarget = entropyLevel * connectionFactor;
+                
+                // Apply negentropy effects
+                if (documentationActive) nodeEntropyTarget *= 0.85;
+                if (standardsActive) nodeEntropyTarget *= 0.9;
+                if (knowledgeSharingActive) nodeEntropyTarget *= 0.8;
+                
+                // Smooth transition to target entropy
+                node.entropy = node.entropy * 0.8 + nodeEntropyTarget * 0.2;
+            }
+            
+            // Update connection strength based on testing
+            for (const connection of connections) {
+                const baseStrength = 0.3 + (1 - timelinePosition / 100) * 0.5;
+                connection.strength = testingActive ? Math.min(0.9, baseStrength + 0.3) : baseStrength;
+            }
+            
+            // Update metrics display
+            document.getElementById('entropy-value').textContent = `${Math.round(entropyLevel)}%`;
+            document.getElementById('stability-value').textContent = `${Math.round(100 - entropyLevel)}%`;
+            document.getElementById('debt-value').textContent = `${Math.round(entropyLevel * 0.8)}%`;
+            document.getElementById('progress-value').textContent = `${Math.round(timelinePosition)}%`;
+            
+            draw();
+        }
+        
+        function draw() {
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width / window.devicePixelRatio, canvas.height / window.devicePixelRatio);
+            
+            // Draw connections
+            for (const connection of connections) {
+                const source = nodes[connection.source];
+                const target = nodes[connection.target];
+                
+                ctx.beginPath();
+                ctx.moveTo(source.x, source.y);
+                ctx.lineTo(target.x, target.y);
+                
+                // Line style based on connection strength
+                const alpha = 0.3 + connection.strength * 0.5;
+                ctx.strokeStyle = `rgba(136, 136, 136, ${alpha})`;
+                ctx.lineWidth = 1 + connection.strength * 2;
+                ctx.stroke();
+                
+                // Draw negentropy effect if testing is active
+                if (testingActive && timelinePosition > 20) {
+                    const midX = (source.x + target.x) / 2;
+                    const midY = (source.y + target.y) / 2;
+                    
+                    ctx.beginPath();
+                    ctx.arc(midX, midY, 4, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(91, 174, 106, 0.7)';
+                    ctx.fill();
+                }
+            }
+            
+            // Draw nodes and entropy clouds
+            for (const node of nodes) {
+                // Draw entropy cloud
+                const entropyRadius = NODE_RADIUS + (node.entropy / 100) * 50;
+                const entropyGradient = ctx.createRadialGradient(
+                    node.x, node.y, NODE_RADIUS,
+                    node.x, node.y, entropyRadius
+                );
+                
+                entropyGradient.addColorStop(0, 'rgba(194, 84, 80, 0.4)');
+                entropyGradient.addColorStop(1, 'rgba(194, 84, 80, 0)');
+                
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, entropyRadius, 0, Math.PI * 2);
+                ctx.fillStyle = entropyGradient;
+                ctx.fill();
+                
+                // Draw documentation effect if active
+                if (documentationActive && timelinePosition > 10) {
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, entropyRadius * 0.7, 0, Math.PI * 2);
+                    ctx.strokeStyle = 'rgba(91, 174, 106, 0.2)';
+                    ctx.lineWidth = 3;
+                    ctx.stroke();
+                }
+                
+                // Draw node
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, NODE_RADIUS, 0, Math.PI * 2);
+                ctx.fillStyle = '#4a6fa5';
+                ctx.fill();
+                
+                // Draw node border
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
+                ctx.lineWidth = 2;
+                ctx.stroke();
+                
+                // Draw node label
+                ctx.fillStyle = 'white';
+                ctx.font = '10px Arial';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText((node.id + 1).toString(), node.x, node.y);
+            }
+            
+            // Draw knowledge sharing effect if active
+            if (knowledgeSharingActive && timelinePosition > 30) {
+                const centerX = canvas.width / (2 * window.devicePixelRatio);
+                const centerY = canvas.height / (2 * window.devicePixelRatio);
+                
+                const knowledgeGradient = ctx.createRadialGradient(
+                    centerX, centerY, 10,
+                    centerX, centerY, 150
+                );
+                
+                knowledgeGradient.addColorStop(0, 'rgba(91, 174, 106, 0.2)');
+                knowledgeGradient.addColorStop(1, 'rgba(91, 174, 106, 0)');
+                
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, 150, 0, Math.PI * 2);
+                ctx.fillStyle = knowledgeGradient;
+                ctx.fill();
+            }
+            
+            // Draw code standards effect if active
+            if (standardsActive && timelinePosition > 15) {
+                for (const node of nodes) {
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, NODE_RADIUS + 4, 0, Math.PI * 2);
+                    ctx.strokeStyle = 'rgba(74, 111, 165, 0.3)';
+                    ctx.lineWidth = 2;
+                    ctx.stroke();
+                }
+            }
+        }
+        
+        // Initialize the system
+        resetSystem();
+    </script>
+</body>
+</html>

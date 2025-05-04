@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galbraith's Star Model</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .star-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .visualization {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        svg {
+            width: 100%;
+            height: auto;
+        }
+        .star-point {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .star-point:hover .point-circle {
+            r: 45;
+        }
+        .info-section {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        .info-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .info-description {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .examples-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .examples-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .examples-list li {
+            margin-bottom: 5px;
+        }
+        .review-section {
+            margin-top: 15px;
+        }
+        .review-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        .info-card {
+            display: none;
+        }
+        .info-card.active {
+            display: block;
+        }
+        .bottom-section {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        .element-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .nav-button {
+            padding: 8px 15px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .nav-button:hover {
+            transform: scale(1.05);
+        }
+        .nav-button.strategy {
+            background-color: #3498db;
+        }
+        .nav-button.structure {
+            background-color: #e74c3c;
+        }
+        .nav-button.processes {
+            background-color: #2ecc71;
+        }
+        .nav-button.rewards {
+            background-color: #f39c12;
+        }
+        .nav-button.people {
+            background-color: #9b59b6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Galbraith's Star Model</h1>
+        
+        <div class="star-container">
+            <div class="visualization">
+                <svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Star lines -->
+                    <line class="star-line" x1="400" y1="150" x2="600" y2="300" stroke="#666" stroke-width="2" />
+                    <line class="star-line" x1="600" y1="300" x2="500" y2="500" stroke="#666" stroke-width="2" />
+                    <line class="star-line" x1="500" y1="500" x2="300" y2="500" stroke="#666" stroke-width="2" />
+                    <line class="star-line" x1="300" y1="500" x2="200" y2="300" stroke="#666" stroke-width="2" />
+                    <line class="star-line" x1="200" y1="300" x2="400" y2="150" stroke="#666" stroke-width="2" />
+                    
+                    <!-- Cross lines -->
+                    <line class="cross-line" x1="400" y1="150" x2="500" y2="500" stroke="#666" stroke-width="2" opacity="0.5" />
+                    <line class="cross-line" x1="400" y1="150" x2="300" y2="500" stroke="#666" stroke-width="2" opacity="0.5" />
+                    <line class="cross-line" x1="600" y1="300" x2="300" y2="500" stroke="#666" stroke-width="2" opacity="0.5" />
+                    <line class="cross-line" x1="600" y1="300" x2="200" y2="300" stroke="#666" stroke-width="2" opacity="0.5" />
+                    <line class="cross-line" x1="500" y1="500" x2="200" y2="300" stroke="#666" stroke-width="2" opacity="0.5" />
+                    
+                    <!-- Center text -->
+                    <text x="400" y="330" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">ORGANIZATIONAL</text>
+                    <text x="400" y="355" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">DESIGN</text>
+                    
+                    <!-- Strategy Point -->
+                    <g class="star-point" onclick="showInfo('strategy')">
+                        <circle class="point-circle" cx="400" cy="150" r="40" fill="#3498db" stroke="#333" stroke-width="2" />
+                        <text x="400" y="150" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="14" font-weight="bold">STRATEGY</text>
+                    </g>
+                    
+                    <!-- Structure Point -->
+                    <g class="star-point" onclick="showInfo('structure')">
+                        <circle class="point-circle" cx="600" cy="300" r="40" fill="#e74c3c" stroke="#333" stroke-width="2" />
+                        <text x="600" y="300" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="14" font-weight="bold">STRUCTURE</text>
+                    </g>
+                    
+                    <!-- Processes Point -->
+                    <g class="star-point" onclick="showInfo('processes')">
+                        <circle class="point-circle" cx="500" cy="500" r="40" fill="#2ecc71" stroke="#333" stroke-width="2" />
+                        <text x="500" y="500" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="14" font-weight="bold">PROCESSES</text>
+                    </g>
+                    
+                    <!-- Rewards Point -->
+                    <g class="star-point" onclick="showInfo('rewards')">
+                        <circle class="point-circle" cx="300" cy="500" r="40" fill="#f39c12" stroke="#333" stroke-width="2" />
+                        <text x="300" y="500" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="14" font-weight="bold">REWARDS</text>
+                    </g>
+                    
+                    <!-- People Point -->
+                    <g class="star-point" onclick="showInfo('people')">
+                        <circle class="point-circle" cx="200" cy="300" r="40" fill="#9b59b6" stroke="#333" stroke-width="2" />
+                        <text x="200" y="300" text-anchor="middle" dominant-baseline="middle" fill="white" font-size="14" font-weight="bold">PEOPLE</text>
+                    </g>
+                </svg>
+            </div>
+            
+            <div class="element-nav">
+                <button class="nav-button strategy" onclick="showInfo('strategy')">Strategy</button>
+                <button class="nav-button structure" onclick="showInfo('structure')">Structure</button>
+                <button class="nav-button processes" onclick="showInfo('processes')">Processes</button>
+                <button class="nav-button rewards" onclick="showInfo('rewards')">Rewards</button>
+                <button class="nav-button people" onclick="showInfo('people')">People</button>
+            </div>
+            
+            <div class="info-section">
+                <!-- Strategy Information -->
+                <div class="info-card active" id="strategy-info">
+                    <div class="info-title" style="color: #3498db;">Strategy</div>
+                    <div class="info-description">
+                        Determines direction through goals, objectives, values, and mission. Defines the criteria for selecting organizational activities.
+                    </div>
+                    <div class="examples-title">Examples:</div>
+                    <ul class="examples-list">
+                        <li>Mission and vision statements</li>
+                        <li>Strategic objectives and goals</li>
+                        <li>Competitive positioning and market focus</li>
+                        <li>Value propositions</li>
+                        <li>Business model definition</li>
+                    </ul>
+                    <div class="review-section">
+                        <div class="review-title">Organizational Review:</div>
+                        <textarea id="strategy-textarea" placeholder="Describe your organization's strategy here..."></textarea>
+                    </div>
+                </div>
+                
+                <!-- Structure Information -->
+                <div class="info-card" id="structure-info">
+                    <div class="info-title" style="color: #e74c3c;">Structure</div>
+                    <div class="info-description">
+                        Determines the location of formal power and authority. Involves decisions about specialization, distribution of power, departmentalization, and shape.
+                    </div>
+                    <div class="examples-title">Examples:</div>
+                    <ul class="examples-list">
+                        <li>Hierarchy levels and reporting relationships</li>
+                        <li>Centralized vs. decentralized decision-making</li>
+                        <li>Functional vs. divisional organization</li>
+                        <li>Matrix or network structures</li>
+                        <li>Span of control considerations</li>
+                    </ul>
+                    <div class="review-section">
+                        <div class="review-title">Organizational Review:</div>
+                        <textarea id="structure-textarea" placeholder="Describe your organization's structure here..."></textarea>
+                    </div>
+                </div>
+                
+                <!-- Processes Information -->
+                <div class="info-card" id="processes-info">
+                    <div class="info-title" style="color: #2ecc71;">Processes</div>
+                    <div class="info-description">
+                        Information and decision processes that cut across the organizational structure. The flow of information and decisions for work activities.
+                    </div>
+                    <div class="examples-title">Examples:</div>
+                    <ul class="examples-list">
+                        <li>Planning and budgeting processes</li>
+                        <li>Information systems and communication flows</li>
+                        <li>Decision-making processes</li>
+                        <li>Resource allocation mechanisms</li>
+                        <li>Performance management systems</li>
+                    </ul>
+                    <div class="review-section">
+                        <div class="review-title">Organizational Review:</div>
+                        <textarea id="processes-textarea" placeholder="Describe your organization's processes here..."></textarea>
+                    </div>
+                </div>
+                
+                <!-- Rewards Information -->
+                <div class="info-card" id="rewards-info">
+                    <div class="info-title" style="color: #f39c12;">Rewards</div>
+                    <div class="info-description">
+                        Aligns individual goals with organizational objectives. Includes compensation, recognition, promotion systems, and other incentives.
+                    </div>
+                    <div class="examples-title">Examples:</div>
+                    <ul class="examples-list">
+                        <li>Compensation and salary structures</li>
+                        <li>Bonus and incentive systems</li>
+                        <li>Recognition and appreciation programs</li>
+                        <li>Career advancement opportunities</li>
+                        <li>Non-monetary benefits</li>
+                    </ul>
+                    <div class="review-section">
+                        <div class="review-title">Organizational Review:</div>
+                        <textarea id="rewards-textarea" placeholder="Describe your organization's reward systems here..."></textarea>
+                    </div>
+                </div>
+                
+                <!-- People Information -->
+                <div class="info-card" id="people-info">
+                    <div class="info-title" style="color: #9b59b6;">People</div>
+                    <div class="info-description">
+                        Human resource policies that influence and define employees' mindsets and skills. Includes recruitment, development, and culture-building activities.
+                    </div>
+                    <div class="examples-title">Examples:</div>
+                    <ul class="examples-list">
+                        <li>Recruitment and selection practices</li>
+                        <li>Training and development programs</li>
+                        <li>Leadership development</li>
+                        <li>Workforce planning</li>
+                        <li>Organizational culture initiatives</li>
+                    </ul>
+                    <div class="review-section">
+                        <div class="review-title">Organizational Review:</div>
+                        <textarea id="people-textarea" placeholder="Describe your organization's people practices here..."></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-section">
+                <h2>How to Use This Model</h2>
+                <p>Jay Galbraith's Star Model emphasizes that all five elements must be aligned for organizational effectiveness. When one element changes, all others usually need to be adjusted.</p>
+                <ol>
+                    <li>Click on each star point or navigation button to learn about that element and document your current practices.</li>
+                    <li>Evaluate alignment between elements - misalignment often causes organizational problems.</li>
+                    <li>Consider how changes in one element would require adjustments in others to maintain alignment.</li>
+                    <li>Use this tool both for diagnosing organizational issues and for planning organizational change.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showInfo(element) {
+            // Hide all info cards
+            document.querySelectorAll('.info-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            
+            // Show the selected info card
+            document.getElementById(element + '-info').classList.add('active');
+        }
+        
+        // Set strategy as active on load
+        document.addEventListener('DOMContentLoaded', function() {
+            showInfo('strategy');
+        });
+    </script>
+</body>
+</html>

@@ -5,7 +5,7 @@
   - [Bayesian Approaches to Estimation](#bayesian-approaches-to-estimation)
   - [Three-Point Estimation: Practical Uncertainty Modeling](#three-point-estimation-practical-uncertainty-modeling)
   - [Monte Carlo Simulation: Advanced Uncertainty Modeling](#monte-carlo-simulation-advanced-uncertainty-modeling)
-- [2.2 Analysis of Common Software Time Estimation Models](#22-analysis-of-common-software-time-estimation-models)
+- [2.2 Software Estimation Approaches: Analysis Through the Underfitting-Overfitting Lens](#22-software-estimation-approaches-analysis-through-the-underfitting-overfitting-lens)
   - [COCOMO (Constructive Cost Model)](#cocomo-constructive-cost-model)
   - [Function Points (FPs)](#function-points-fps)
   - [Planning Poker](#planning-poker)
@@ -75,6 +75,8 @@ might express "there's a 50% probability of completion within 3 months, 80% with
 estimates are updated as project evidence accumulates" width="700" /> <figcaption>Figure 2.1a: Bayesian updating of a
 project estimate as new information becomes available</figcaption> </figure>
 
+> **Interactive Visualization**: To better understand how Bayesian estimation evolves through a project lifecycle, explore our [interactive Bayesian Project Estimation visualization](../html/bayesian_estimation.html) that demonstrates how probability distributions narrow as confidence increases through different project stages.
+
 Bayesian estimation addresses both underfitting and overfitting in complementary ways:
 
 **Countering Underfitting**:
@@ -104,8 +106,8 @@ remains challenging due to:
 - Cultural resistance to probabilistic rather than deterministic estimates
 
 Despite these challenges, the increasing availability of probabilistic programming tools and the growing recognition of
-uncertainty in software development make Bayesian approaches increasingly practical for addressing the fundamental
-limitations of traditional estimation techniques.
+uncertainty in software development suggest that Bayesian approaches may become increasingly practical for addressing the fundamental
+limitations of traditional estimation techniques, though more empirical validation is needed in industrial settings.
 
 ### Three-Point Estimation: Practical Uncertainty Modeling
 
@@ -231,12 +233,7 @@ deviation
 5. **Use uncertainty for planning**: Schedule buffers based on the calculated uncertainty, not arbitrary padding
 6. **Track accuracy**: Compare actual outcomes to the full distribution, not just the expected value
 
-> For a practical, interactive way to experiment with three-point estimation, have a look at the web-based "[Agile Task
-> Estimation Calculator](https://www.shedloadofcode.com/tools/agile-task-estimation-calculator)". This calculator
-> incorporates many of the principles discussed in this section, including PERT calculations, standard deviation, and
-> confidence intervals. It also considers contextual factors such as task complexity, team experience, and
-> cross-functional dependencies that influence estimation uncertainty. By adjusting different parameters, users can see
-> how various factors affect estimation outcomes and uncertainty ranges.
+> For a practical, interactive way to experiment with three-point estimation, try [interactive Three-Point Estimation Calculator](../html/three_point_estimation_calculator.html). This calculator allows you to adjust optimistic, most likely, and pessimistic estimates and instantly see how they affect the expected duration, standard deviation, and confidence intervals. You can also explore how different distribution methods (PERT vs. Triangular) impact the results, and see how factors like task complexity and team experience influence the final estimates.
 
 Three-point estimation serves as an accessible entry point to probabilistic thinking for teams transitioning from
 traditional point-based estimates toward more sophisticated uncertainty modeling.
@@ -261,12 +258,9 @@ Monte Carlo simulation extends probabilistic modeling by:
 3. **Running thousands of randomized scenarios** to build a comprehensive distribution of outcomes
 4. **Generating rich statistical outputs** beyond simple means and standard deviations
 
-The fundamental process involves:
+> **Interactive Demonstration**: Try our [Monte Carlo Project Simulation](../html/monte_carlo_demo.html) tool to see how task distributions, correlations between activities, and multiple simulation runs combine to create a comprehensive project forecast with confidence levels and sensitivity analysis.
 
-1. Defining probability distributions for each task duration (often using three-point estimates as inputs)
-2. Specifying correlation coefficients between tasks (e.g., if one task runs long, related tasks are likely to as well)
-3. Running thousands of simulated project executions by randomly sampling from these distributions
-4. Analyzing the resulting aggregate distribution of project completion times
+This fundamental process is illustrated in the figure below:
 
 <figure> <img src="../images/monte-carlo-simulation.svg" alt="Monte Carlo Simulation Process - showing how individual
 task distributions are combined through simulation to produce project-level probability distributions" width="700" />
@@ -278,9 +272,9 @@ Monte Carlo simulation directly counters underfitting in several ways:
 
 1. **Capturing complexity**: Models intricate task dependencies that simple formulas cannot express
 2. **Revealing hidden risks**: Exposes "fat tails" in completion probabilities that deterministic methods ignore
+   - **Fat tails** are probability distributions where extreme events (those in the "tail" of the distribution) occur with significantly higher probability than would be predicted by normal distributions. Unlike standard long-tail distributions, fat-tail distributions feature truly catastrophic outliers that can single-handedly dominate outcomes. In software projects, fat-tail events might include critical security vulnerabilities requiring complete redesign, fundamental algorithmic flaws discovered late in testing, or unexpected regulatory changes that invalidate core assumptions.
 3. **Quantifying uncertainty precisely**: Provides percentile-based estimates (e.g., P50, P90) rather than single values
-4. **Integrating multiple risk factors**: Combines schedule, resource, and complexity uncertainties into unified
-distributions
+4. **Integrating multiple risk factors**: Combines schedule, resource, and complexity uncertainties into unified distributions
 
 Traditional approaches underfit reality by ignoring the compounding effect of multiple uncertainties interacting in
 complex ways. In contrast, Monte Carlo methods can model these systemic interactions without requiring simplistic
@@ -312,8 +306,8 @@ To effectively implement Monte Carlo simulation for software estimation you migh
 1. **Start with three-point estimates** as the foundation for task distributions
 2. **Use appropriate distribution types**:
    - Triangular or PERT for well-understood tasks
-   - Lognormal for tasks with potential for significant overruns
-   - Uniform for highly uncertain tasks with little historical basis
+   - [Lognormal](https://en.wikipedia.org/wiki/Log-normal_distribution) for tasks with potential for significant overruns (suitable for variables that are positively skewed, like task durations which cannot be negative but can extend much longer than expected)
+   - [Uniform](https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)) for highly uncertain tasks with little historical basis (assumes any outcome between the minimum and maximum estimate is equally likely)
 
 3. **Model correlations thoughtfully**:
    - Between similar task types (e.g., all UI components)
@@ -347,18 +341,6 @@ from simplistic to sophisticated approaches and their relationship to underfitti
 <figcaption>Figure 2.1e: Spectrum of estimation approaches showing trade-offs between simplicity and
 accuracy</figcaption> </figure>
 
-#### Software Tools and Implementation
-
-Several tools facilitate Monte Carlo simulation for software project estimation:
-
-1. **Specialized project risk tools**: Full-featured commercial applications like @RISK, Crystal Ball, and Risky Project
-2. **Spreadsheet-based approaches**: Excel add-ins and templates that enable simulation without specialized software
-3. **Programming libraries**: Python (SimPy), R (MCMCpack), and other statistical packages for custom implementations
-4. **Integrated project management tools**: Advanced features in tools like Primavera and specialized Agile tools
-
-The appropriate implementation depends on organizational maturity, available expertise, and the complexity of projects
-being estimated.
-
 #### Limitations and Considerations
 
 Despite its strengths, Monte Carlo simulation has limitations:
@@ -371,7 +353,9 @@ Despite its strengths, Monte Carlo simulation has limitations:
 Organizations should balance simulation sophistication with their ability to effectively gather inputs and interpret
 outputs, gradually increasing model complexity as estimation maturity grows.
 
-## 2.2 Analysis of Common Software Time Estimation Models
+## 2.2 Software Estimation Approaches: Analysis Through the Underfitting-Overfitting Lens
+
+Having explored the theoretical underpinnings of estimation as a modeling problem and examined various uncertainty modeling techniques, we now turn to specific estimation models widely used in software development. These models exist along the spectrum introduced in Figure 2.1e, with each approach balancing different trade-offs between simplicity and accuracy. This section analyzes how these models exhibit tendencies toward underfitting (oversimplification) or overfitting (excessive specificity) in different contexts. We progress from algorithmic models that often underfit by design toward increasingly context-specific approaches that risk overfitting to historical patterns.
 
 ### COCOMO (Constructive Cost Model)
 
@@ -381,6 +365,16 @@ costs. It employs the size of the project, typically measured in Kilo Source Lin
 cost drivers, including 5 scale factors and 17 effort multipliers, to estimate the total effort required in
 person-months.
 
+**Historical Context:** COCOMO was originally developed by Barry Boehm in 1981, with COCOMO II appearing in 2000 as a significant update to address modern software development practices. The model emerged during the era of waterfall development methodologies when upfront estimation was considered essential for contract negotiation and resource planning.
+
+**Contemporary Usage:** Today, COCOMO remains in use primarily in:
+- Government and defense sectors where formal estimation models are often contractually required
+- Large systems engineering projects with significant hardware components
+- Academic settings for teaching algorithmic estimation concepts
+- Organizations with established measurement programs
+
+However, its usage has significantly declined in commercial software development as more iterative and agile approaches have gained prominence. Industry surveys suggest that less than 15% of commercial software organizations now use COCOMO as their primary estimation method, though it may be used as a supplementary technique.
+
 <figure> <img src="../images/cocomo-model.svg" alt="COCOMO II Model Framework - showing inputs, processing elements, and
 outputs of the model" width="700" /> <figcaption>Figure 2.2: COCOMO II Model Framework with inputs, processing, and
 outputs</figcaption> </figure>
@@ -388,7 +382,7 @@ outputs</figcaption> </figure>
 A potential limitation of COCOMO is that the values of its parameter coefficients are often constant for similar types
 of projects.  This assumption of uniformity might lead to underfitting, as the model may fail to capture the significant
 variations that can exist between different organizations or even between different projects within the same
-organization.
+organization. Unlike the Bayesian approaches discussed in section 2.1, COCOMO does not naturally incorporate uncertainty or update its parameters as new evidence emerges.
 
 <figure> <img src="../images/cocomo-estimation-actual-scatter.svg" alt="COCOMO Estimation vs Actual Effort - showing how
 algorithmic models often underfit real project complexity" width="700" /> <figcaption>Figure 2.2a: Scatter plot showing
@@ -399,6 +393,68 @@ oversimplification.  Research indicates that [integrating COCOMO with Artificial
 Networks](https://www.researchgate.net/publication/386371108_ANN-based_software_cost_estimation_with_input_from_COCOMO_CANN_model)
 can yield improved results, implying that COCOMO's standalone model might not fully account for the complex
 relationships between its parameters.
+
+### Expert Judgment
+
+Expert judgment involves leveraging the knowledge and experience of specialists to estimate project details. This
+approach is particularly useful when empirical data is scarce or for tackling complex, ill-defined problems.
+
+**Historical Context:** Expert judgment represents the oldest and most fundamental estimation approach, predating formal software engineering methodologies. It was the default approach in the nascent software industry of the 1950s and 1960s before more structured methods emerged.
+
+**Contemporary Usage:** Despite the proliferation of formal estimation techniques, expert judgment remains ubiquitous across all sectors of the software industry:
+- Startups and small teams rely heavily on expert judgment due to its low overhead
+- Even organizations using formal methods frequently "adjust" model outputs based on expert opinion
+- Industry surveys consistently show that 60-80% of organizations consider expert judgment a primary component of their estimation process
+- For novel or innovative projects where historical data is limited, expert judgment often becomes the default approach
+
+The trend has shifted toward "structured expert judgment" where experts provide estimates within formal frameworks (like Wideband Delphi or Planning Poker) rather than pure individual assessment.
+
+However, expert judgment is highly susceptible to various [cognitive
+biases](https://en.wikipedia.org/wiki/Cognitive_bias) (similar to those affecting three-point estimation, discussed in
+[Section 2.1](#estimation-biases)), which can lead to both underfitting and overfitting:
+- [Optimism](https://en.wikipedia.org/wiki/Optimism_bias) bias might cause experts to underestimate the effort required
+- [Anchoring](https://en.wikipedia.org/wiki/Anchoring_effect) bias could lead to estimates being unduly influenced by
+  initial figures
+- [Overconfidence](https://en.wikipedia.org/wiki/Overconfidence_effect) can result in experts overlooking potential
+  challenges or the need for more detailed analysis, leading to underfitting.
+
+Conversely, experts might rely too heavily on specific past experiences that are not entirely relevant to the current
+project, potentially leading to overfitting by incorporating unnecessary details or inflating estimates. Studies have
+shown a significant degree of inconsistency in expert judgment-based effort estimates, highlighting the unreliability of
+this method when used in isolation.
+
+Unlike the Monte Carlo simulations discussed in section 2.1, expert judgment rarely quantifies uncertainty explicitly, making it difficult to assess confidence levels or probability distributions for outcomes.
+
+### Planning Poker
+
+[Planning Poker](https://en.wikipedia.org/wiki/Planning_poker) is a widely used consensus-based agile estimation
+technique that employs story points as relative units of effort or complexity. In this method, the development team
+discusses user stories or tasks, and each member anonymously votes using cards with values from a modified Fibonacci
+sequence. The team then discusses any significant discrepancies in the estimates to reach a consensus.
+
+**Historical Context:** Planning Poker was formally introduced by James Grenning in 2002 and gained widespread popularity through its inclusion in Mike Cohn's influential 2005 book "Agile Estimating and Planning." The technique evolved from the Wideband Delphi method (developed in the 1970s at RAND Corporation) but was specifically adapted for agile contexts with an emphasis on team consensus and relative sizing.
+
+**Contemporary Usage:** Planning Poker has become the dominant estimation technique in organizations adopting agile methodologies:
+- Used by approximately 75% of Scrum teams according to recent industry surveys
+- Has crossed beyond software into other project management domains
+- Widely supported in agile project management tools (JIRA, Azure DevOps, etc.)
+- Often adapted into hybrid forms combining elements of other techniques
+
+The trend toward remote and distributed teams has led to increasing adoption of digital Planning Poker tools rather than physical cards, but the core methodology remains largely unchanged since its introduction.
+
+<figure> <img src="../images/planning-poker-process.svg" alt="Planning Poker Process Flow - showing the sequence of
+steps in this consensus-based estimation technique" width="700" /> <figcaption>Figure 2.7: Planning Poker process
+workflow showing interaction between participants</figcaption> </figure>
+
+While Planning Poker fosters team collaboration and shared understanding, its reliance on abstract units like story
+points, which are not directly tied to time or resources, can lead to underfitting. The process also carries the risk of
+"groupthink" or pressure to conform to certain estimates, potentially overlooking individual complexities or risks.
+Research indicates that accurately estimating hours using Planning Poker can be challenging, as it is more effective for
+relative comparisons. Teams sometimes defaulting to a single value for story points might also indicate an
+underestimation of the true effort involved. Furthermore, the influence of senior team members or the desire to avoid
+conflict can lead to estimates that do not fully reflect the perceived difficulty of a task.
+
+Planning Poker represents a middle ground on the estimation spectrum presented in Figure 2.1e, incorporating elements of three-point estimation through team discussion while remaining more accessible than formal Monte Carlo approaches.
 
 ### Function Points (FPs)
 
@@ -413,11 +469,19 @@ the customer by considering five user function types:
 
 Each is categorized by complexity and adjusted using 14 general system characteristics.
 
+**Historical Context:** Function Points were developed by Allan Albrecht at IBM in 1979 in response to the limitations of lines of code as a size metric. The International Function Point Users Group (IFPUG) was established in 1986 to standardize the methodology, leading to ISO standardization in 2003. Various adaptations have emerged over time, including COSMIC Function Points and NESMA Function Points.
+
+**Contemporary Usage:** Function Points have maintained a significant niche in specific sectors:
+- Financial services and banking, where they remain popular for contracting and project governance
+- Government and regulatory contexts where standardized measurements are required
+- Organizations focused on process improvement programs like CMMI
+- Outsourcing arrangements where contractual metrics are needed
+
+Industry surveys suggest approximately 25% of organizations use Function Points in some capacity, though usage has gradually declined since the early 2000s. The approach remains more popular in Europe, Japan, and Brazil than in North America. Recent years have seen attempts to adapt Function Points to agile contexts, though with limited widespread adoption.
+
 <figure> <img src="../images/function-points-model.svg" alt="Function Points Analysis Model - showing the five function
 types and complexity classification" width="700" /> <figcaption>Figure 2.3: Function Points Analysis Model with
 complexity weights</figcaption> </figure>
-
-
 
 While aiming for an objective measure, the process of defining and weighting these function points involves a degree of
 subjectivity. This subjectivity, coupled with the risk of developing overly complex models based on limited data or
@@ -427,49 +491,23 @@ the subjective nature of weight assignments. These limitations suggest that esti
 become too specific to past projects or individual interpretations, potentially overfitting the data used to derive them
 and hindering generalization to new projects with different characteristics.
 
-### Planning Poker
-
-[Planning Poker](https://en.wikipedia.org/wiki/Planning_poker) is a widely used consensus-based agile estimation
-technique that employs story points as relative units of effort or complexity. In this method, the development team
-discusses user stories or tasks, and each member anonymously votes using cards with values from a modified Fibonacci
-sequence. The team then discusses any significant discrepancies in the estimates to reach a consensus.
-
-<figure> <img src="../images/planning-poker-process.svg" alt="Planning Poker Process Flow - showing the sequence of
-steps in this consensus-based estimation technique" width="700" /> <figcaption>Figure 2.7: Planning Poker process
-workflow showing interaction between participants</figcaption> </figure>
-
-While Planning Poker fosters team collaboration and shared understanding, its reliance on abstract units like story
-points, which are not directly tied to time or resources, can lead to underfitting. The process also carries the risk of
-"groupthink" or pressure to conform to certain estimates, potentially overlooking individual complexities or risks.
-Research indicates that accurately estimating hours using Planning Poker can be challenging, as it is more effective for
-relative comparisons. Teams sometimes defaulting to a single value for story points might also indicate an
-underestimation of the true effort involved. Furthermore, the influence of senior team members or the desire to avoid
-conflict can lead to estimates that do not fully reflect the perceived difficulty of a task.
-
-### Expert Judgment
-
-Expert judgment involves leveraging the knowledge and experience of specialists to estimate project details. This
-approach is particularly useful when empirical data is scarce or for tackling complex, ill-defined problems.
-
-However, expert judgment is highly susceptible to various [cognitive
-biases](https://en.wikipedia.org/wiki/Cognitive_bias) (similar to those affecting three-point estimation, discussed in
-[Section 2.1](#estimation-biases)), which can lead to both underfitting and overfitting:
-- [Optimism](https://en.wikipedia.org/wiki/Optimism_bias) bias might cause experts to underestimate the effort required
-- [Anchoring](https://en.wikipedia.org/wiki/Anchoring_effect) bias could lead to estimates being unduly influenced by
-  initial figures
-- [Overconfidence](https://en.wikipedia.org/wiki/Overconfidence_effect) can result in experts overlooking potential
-  challenges or the need for more detailed analysis, leading to overfitting.
-
-Conversely, experts might rely too heavily on specific past experiences that are not entirely relevant to the current
-project, potentially leading to overfitting by incorporating unnecessary details or inflating estimates. Studies have
-shown a significant degree of inconsistency in expert judgment-based effort estimates, highlighting the unreliability of
-this method when used in isolation.
+Unlike the uncertainty-embracing approaches discussed in section 2.1, Function Points attempt to create deterministic measures of size and complexity, potentially masking the inherent uncertainty in software development projects.
 
 ### 2.2.5 Estimating AI-Assisted Development: New Uncertainties
 
 The rapid emergence of AI assistants in software development workflows (including code generation, refactoring,
 documentation, and testing) introduces significant new uncertainties to the time estimation process. These uncertainties
 directly affect both underfitting and overfitting in estimation models in several ways:
+
+**Historical Context:** The widespread adoption of AI coding assistants is an extremely recent phenomenon, with tools like GitHub Copilot only becoming generally available in 2022 and more advanced LLM-based assistants emerging in 2023. This represents the most significant shift in development workflows since the advent of agile methodologies, creating an unprecedented challenge for established estimation approaches.
+
+**Contemporary Usage:** Organizations are currently in the experimental phase with AI-assisted development estimation:
+- Most teams are still applying pre-AI estimation techniques while informally adjusting for perceived productivity changes
+- Early adopters are developing custom calibration factors based on initial experiences with AI tools
+- Limited empirical data exists on how AI assistance affects estimate accuracy across different project types
+- A significant "productivity inequality" is emerging between teams that effectively leverage AI tools and those that don't
+
+The trend is toward rapid experimentation and evaluation, with organizations actively seeking new estimation frameworks specifically designed for AI-augmented development workflows.
 
 <figure> <img src="../images/ai-estimation-challenges.svg" alt="Estimation Challenges in AI-Assisted Development -
 showing four key challenges affecting traditional estimation models" width="700" /> <figcaption>Figure 2.4: Examples of
@@ -494,8 +532,8 @@ across different task types with and without AI assistance" width="700" /> <figc
 across task types when using AI assistance (illustrative, not using real metrics)</figcaption> </figure> <br/><br/>
 
 **Incomplete Experience Base:** Organizations lack sufficient historical data about AI-assisted workflows to create
-reliable estimation models. Traditional models trained on pre-AI data will inherently *underfit* the new reality by
-missing crucial interaction patterns between developers and AI tools. Conversely, early attempts to build new models
+reliable estimation methods. Traditional estimation approaches based on pre-AI development experiences will inherently *underfit* the new reality by
+missing crucial interaction patterns between developers and AI tools. Conversely, early attempts to develop new estimation techniques
 based on limited AI-assisted experiences risk *overfitting* to specific tool capabilities or early adoption patterns
 that may not generalize.
 
@@ -536,6 +574,8 @@ attempting to maintain traditional estimation approaches in AI-augmented environ
 in estimation accuracy until new models that explicitly account for AI impact factors can be developed and calibrated.
 This represents a classic model adaptation challenge, where the data distribution has fundamentally shifted, requiring a
 corresponding shift in modeling approach.
+
+In this context, the probabilistic approaches discussed in section 2.1—particularly Bayesian methods and Monte Carlo simulation—may offer the flexibility needed to incorporate these new uncertainties into estimation processes.
 
 > **Note on Rapid Evolution:** Given the accelerating pace of AI tool development and adoption, the estimation
 > challenges described in this section should be considered a snapshot of current understanding rather than definitive
@@ -579,9 +619,13 @@ These might include:
 - Unexpected dependencies on other teams or systems
 - Significant changes in requirements late in the project
 
+In certain high-risk or complex projects, we may also encounter **fat-tail distributions** of risk, where extreme events occur with much higher probability than would be predicted by standard statistical models. These fat-tail risks (explored in detail in [Chapter 6](06-theoretical-concepts.md#61-software-project-risks-and-long-tail-distributions)) represent truly catastrophic outliers—not merely uncommon events, but "black swan" events with the potential to derail entire projects. Fat-tail risks in software projects might include mission-critical security breaches, fundamental flaws in core architectural assumptions, or severe compatibility issues discovered only in production environments.
+
+> **Interactive Tool**: Explore our [interactive visualization of long tail and fat tail distributions in software project risks](../html/long_and_fat_tail_risks.html). This tool allows you to toggle between standard and fat tail distributions to see how they affect project estimation outcomes at different complexity levels.
+
 Estimation models that primarily focus on typical tasks and average scenarios often fail to incorporate contingencies
 for these "long-tail" risks, leading to underestimation of the overall project effort and potential for delays when
-these unforeseen events materialize.
+these unforeseen events materialize. The problem becomes even more severe when fat-tail risks are present but unaccounted for in planning.
 
 From an [information entropy](06-theoretical-concepts.md#63-entropy-and-software-complexity) standpoint, these rare but
 high-impact events represent high-entropy elements in the project risk distribution. Traditional estimation models focus

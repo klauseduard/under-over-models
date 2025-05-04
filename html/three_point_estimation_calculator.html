@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three-Point Estimation Calculator</title>
+  <style>
+    :root {
+      --primary-color: #4a6fa5;
+      --secondary-color: #6b8cae;
+      --accent-color: #ff7f50;
+      --light-bg: #f5f7fa;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --border-radius: 8px;
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--light-bg);
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1, h2, h3 {
+      margin-bottom: 0.5em;
+      color: var(--primary-color);
+    }
+    
+    .card {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    
+    input[type="number"], select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    
+    input[type="range"] {
+      width: 100%;
+      margin: 10px 0;
+    }
+    
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #666;
+    }
+    
+    .helper-text {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+    
+    .result-box {
+      background-color: #f0f7ff;
+      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .result-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    .result-label {
+      font-size: 14px;
+      color: #666;
+    }
+    
+    .row {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .col {
+      flex: 1;
+    }
+    
+    .formula {
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      padding: 8px;
+      font-family: monospace;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+    
+    #chart-container {
+      position: relative;
+      height: 300px;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    canvas {
+      background-color: white;
+    }
+    
+    .chart-legend {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+    
+    .legend-color {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      margin-right: 5px;
+      border-radius: 3px;
+    }
+    
+    .note {
+      background-color: #fffde7;
+      border-left: 4px solid #ffd54f;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+  </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHDG8Y6DVF"></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZHDG8Y6DVF');
+    </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Three-Point Estimation Calculator</h1>
+    
+    <div class="grid">
+      <div>
+        <div class="card">
+          <h2>Time Estimates (days)</h2>
+          
+          <div class="form-group">
+            <label for="optimistic">Optimistic (O):</label>
+            <input type="number" id="optimistic" min="1" value="5" step="1">
+            <p class="helper-text">Best case scenario (10% probability)</p>
+          </div>
+          
+          <div class="form-group">
+            <label for="mostLikely">Most Likely (M):</label>
+            <input type="number" id="mostLikely" min="1" value="10" step="1">
+            <p class="helper-text">Realistic estimate (highest probability)</p>
+          </div>
+          
+          <div class="form-group">
+            <label for="pessimistic">Pessimistic (P):</label>
+            <input type="number" id="pessimistic" min="1" value="20" step="1">
+            <p class="helper-text">Worst case scenario (10% probability)</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h2>Calculation Options</h2>
+          
+          <div class="form-group">
+            <label for="method">Estimation Method:</label>
+            <select id="method">
+              <option value="pert">PERT (Beta Distribution)</option>
+              <option value="triangular">Triangular Distribution</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="complexity">Task Complexity: <span id="complexityValue">1.0</span>x</label>
+            <input type="range" id="complexity" min="0.5" max="2" step="0.1" value="1">
+            <div class="range-labels">
+              <span>Simple</span>
+              <span>Complex</span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="experience">Team Experience: <span id="experienceValue">1.0</span>x</label>
+            <input type="range" id="experience" min="0.5" max="2" step="0.1" value="1">
+            <div class="range-labels">
+              <span>Novice</span>
+              <span>Expert</span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="confidence">Confidence Level: <span id="confidenceValue">80</span>%</label>
+            <input type="range" id="confidence" min="60" max="99" step="5" value="80">
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <div class="card">
+          <h2>Results</h2>
+          
+          <div class="row">
+            <div class="col result-box" style="background-color: #e6f2ff;">
+              <div class="result-label">Expected Duration</div>
+              <div class="result-value" id="expectedDuration">10.8</div>
+              <div class="helper-text">days</div>
+            </div>
+            
+            <div class="col result-box" style="background-color: #fff0e6;">
+              <div class="result-label">Standard Deviation</div>
+              <div class="result-value" id="stdDeviation">±2.5</div>
+              <div class="helper-text">days</div>
+            </div>
+          </div>
+          
+          <div class="result-box" style="background-color: #e6fff0;">
+            <div class="result-label"><span id="confidenceDisplay">80</span>% Confidence Interval</div>
+            <div class="result-value" id="confidenceInterval">8.6 - 14.0</div>
+            <div class="helper-text">days</div>
+          </div>
+          
+          <div id="formulaExplanation">
+            <p>Using the <strong id="methodDisplay">PERT</strong> distribution formula:</p>
+            <div class="formula" id="expectedFormula">E = (O + 4M + P) / 6</div>
+            <div class="formula" id="stdDevFormula">σ = (P - O) / 6</div>
+            <p class="helper-text">Both complexity and team experience factors are applied as multipliers to the final estimates.</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h2>Probability Distribution</h2>
+          
+          <div id="chart-container">
+            <canvas id="distributionChart"></canvas>
+          </div>
+          
+          <div class="chart-legend">
+            <div class="legend-item">
+              <span class="legend-color" style="background-color: rgba(136, 132, 216, 0.7);"></span>
+              <span>Triangular</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color" style="background-color: rgba(130, 202, 157, 0.7);"></span>
+              <span>PERT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <script>
+    // DOM Elements
+    const optimisticInput = document.getElementById('optimistic');
+    const mostLikelyInput = document.getElementById('mostLikely');
+    const pessimisticInput = document.getElementById('pessimistic');
+    const methodSelect = document.getElementById('method');
+    const complexitySlider = document.getElementById('complexity');
+    const experienceSlider = document.getElementById('experience');
+    const confidenceSlider = document.getElementById('confidence');
+    
+    // Display elements
+    const complexityValue = document.getElementById('complexityValue');
+    const experienceValue = document.getElementById('experienceValue');
+    const confidenceValue = document.getElementById('confidenceValue');
+    const confidenceDisplay = document.getElementById('confidenceDisplay');
+    const methodDisplay = document.getElementById('methodDisplay');
+    const expectedFormula = document.getElementById('expectedFormula');
+    const stdDevFormula = document.getElementById('stdDevFormula');
+    
+    // Result elements
+    const expectedDuration = document.getElementById('expectedDuration');
+    const stdDeviation = document.getElementById('stdDeviation');
+    const confidenceInterval = document.getElementById('confidenceInterval');
+    
+    // Chart
+    const ctx = document.getElementById('distributionChart').getContext('2d');
+    let distributionChart;
+    
+    // Initialize the chart
+    function initChart() {
+      distributionChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: [],
+          datasets: [
+            {
+              label: 'Triangular',
+              data: [],
+              borderColor: 'rgba(136, 132, 216, 1)',
+              backgroundColor: 'rgba(136, 132, 216, 0.1)',
+              borderWidth: 2,
+              pointRadius: 0,
+              tension: 0.4
+            },
+            {
+              label: 'PERT',
+              data: [],
+              borderColor: 'rgba(130, 202, 157, 1)',
+              backgroundColor: 'rgba(130, 202, 157, 0.1)',
+              borderWidth: 2,
+              pointRadius: 0,
+              tension: 0.4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              title: {
+                display: true,
+                text: 'Duration (days)'
+              }
+            },
+            y: {
+              title: {
+                display: true,
+                text: 'Probability Density'
+              },
+              beginAtZero: true
+            }
+          },
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return `Probability: ${context.raw.toFixed(4)}`;
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+    
+    // Update slider display values
+    complexitySlider.addEventListener('input', () => {
+      complexityValue.textContent = parseFloat(complexitySlider.value).toFixed(1);
+      calculateEstimates();
+    });
+    
+    experienceSlider.addEventListener('input', () => {
+      experienceValue.textContent = parseFloat(experienceSlider.value).toFixed(1);
+      calculateEstimates();
+    });
+    
+    confidenceSlider.addEventListener('input', () => {
+      const confValue = parseInt(confidenceSlider.value);
+      confidenceValue.textContent = confValue;
+      confidenceDisplay.textContent = confValue;
+      calculateEstimates();
+    });
+    
+    // Update formulas when method changes
+    methodSelect.addEventListener('change', () => {
+      const method = methodSelect.value;
+      methodDisplay.textContent = method === 'pert' ? 'PERT' : 'Triangular';
+      
+      if (method === 'pert') {
+        expectedFormula.textContent = 'E = (O + 4M + P) / 6';
+        stdDevFormula.textContent = 'σ = (P - O) / 6';
+      } else {
+        expectedFormula.textContent = 'E = (O + M + P) / 3';
+        stdDevFormula.textContent = 'σ = √[(O² + M² + P² - OM - OP - MP) / 18]';
+      }
+      
+      calculateEstimates();
+    });
+    
+    // Update when any input changes
+    [optimisticInput, mostLikelyInput, pessimisticInput].forEach(input => {
+      input.addEventListener('input', calculateEstimates);
+    });
+    
+    // Format number for display
+    function formatNumber(num) {
+      return Math.round(num * 10) / 10;
+    }
+    
+    // Generate distribution data
+    function generateDistributionData() {
+      const optimistic = parseFloat(optimisticInput.value);
+      const mostLikely = parseFloat(mostLikelyInput.value);
+      const pessimistic = parseFloat(pessimisticInput.value);
+      const complexityFactor = parseFloat(complexitySlider.value);
+      const experienceFactor = parseFloat(experienceSlider.value);
+      
+      // Validate inputs
+      if (optimistic >= mostLikely || mostLikely >= pessimistic) {
+        return {
+          labels: [],
+          triangular: [],
+          pert: []
+        };
+      }
+      
+      // Create x-axis points
+      const range = pessimistic - optimistic;
+      const buffer = range * 0.2;
+      const start = Math.max(0, optimistic - buffer);
+      const end = pessimistic + buffer;
+      const step = range / 40;
+      
+      const labels = [];
+      const triangularData = [];
+      const pertData = [];
+      
+      for (let x = start; x <= end; x += step) {
+        labels.push(x.toFixed(1));
+        
+        // Triangular distribution
+        let triangularY = 0;
+        if (x >= optimistic && x <= mostLikely) {
+          triangularY = 2 * (x - optimistic) / ((pessimistic - optimistic) * (mostLikely - optimistic));
+        } else if (x > mostLikely && x <= pessimistic) {
+          triangularY = 2 * (pessimistic - x) / ((pessimistic - optimistic) * (pessimistic - mostLikely));
+        }
+        
+        // PERT distribution (beta approximation)
+        let pertY = 0;
+        if (x >= optimistic && x <= pessimistic) {
+          const alpha = 1 + 4 * (mostLikely - optimistic) / (pessimistic - optimistic);
+          const beta = 1 + 4 * (pessimistic - mostLikely) / (pessimistic - optimistic);
+          
+          const z = (x - optimistic) / (pessimistic - optimistic);
+          pertY = Math.pow(z, alpha - 1) * Math.pow(1 - z, beta - 1);
+          
+          // Normalize
+          const maxPertY = Math.pow(alpha / (alpha + beta), alpha - 1) * 
+                         Math.pow(beta / (alpha + beta), beta - 1);
+          pertY = pertY / maxPertY * 2 / (pessimistic - optimistic);
+        }
+        
+        // Apply factors
+        const adjustedTriangularY = triangularY * Math.pow(experienceFactor, 0.5) / Math.pow(complexityFactor, 0.5);
+        const adjustedPertY = pertY * Math.pow(experienceFactor, 0.5) / Math.pow(complexityFactor, 0.5);
+        
+        triangularData.push(adjustedTriangularY);
+        pertData.push(adjustedPertY);
+      }
+      
+      return {
+        labels,
+        triangular: triangularData,
+        pert: pertData
+      };
+    }
+    
+    // Calculate estimates and update UI
+    function calculateEstimates() {
+      const optimistic = parseFloat(optimisticInput.value);
+      const mostLikely = parseFloat(mostLikelyInput.value);
+      const pessimistic = parseFloat(pessimisticInput.value);
+      const method = methodSelect.value;
+      const complexityFactor = parseFloat(complexitySlider.value);
+      const experienceFactor = parseFloat(experienceSlider.value);
+      const confidenceLevel = parseInt(confidenceSlider.value);
+      
+      // Validate inputs
+      if (isNaN(optimistic) || isNaN(mostLikely) || isNaN(pessimistic) ||
+          optimistic >= mostLikely || mostLikely >= pessimistic) {
+        expectedDuration.textContent = 'Invalid';
+        stdDeviation.textContent = 'Invalid';
+        confidenceInterval.textContent = 'Invalid';
+        return;
+      }
+      
+      // Calculate expected value
+      let expected;
+      if (method === 'pert') {
+        expected = (optimistic + 4 * mostLikely + pessimistic) / 6;
+      } else { // triangular
+        expected = (optimistic + mostLikely + pessimistic) / 3;
+      }
+      
+      // Apply adjustment factors
+      expected = expected * complexityFactor * (1 / experienceFactor);
+      
+      // Calculate standard deviation
+      let stdDev;
+      if (method === 'pert') {
+        stdDev = (pessimistic - optimistic) / 6;
+      } else { // triangular
+        stdDev = Math.sqrt((Math.pow(optimistic, 2) + Math.pow(mostLikely, 2) + 
+                 Math.pow(pessimistic, 2) - optimistic * mostLikely - 
+                 optimistic * pessimistic - mostLikely * pessimistic) / 18);
+      }
+      
+      // Apply adjustment factors
+      stdDev = stdDev * complexityFactor * (1 / experienceFactor);
+      
+      // Calculate confidence interval
+      // Convert confidence level to z-score (approximation)
+      const zScore = confidenceLevel >= 99 ? 2.576 :
+                  confidenceLevel >= 95 ? 1.96 :
+                  confidenceLevel >= 90 ? 1.645 :
+                  confidenceLevel >= 85 ? 1.44 :
+                  confidenceLevel >= 80 ? 1.28 :
+                  confidenceLevel >= 75 ? 1.15 :
+                  confidenceLevel >= 70 ? 1.04 :
+                  confidenceLevel >= 65 ? 0.93 : 0.84; // 60%
+      
+      const lower = Math.max(0, expected - zScore * stdDev);
+      const upper = expected + zScore * stdDev;
+      
+      // Update UI
+      expectedDuration.textContent = formatNumber(expected);
+      stdDeviation.textContent = '±' + formatNumber(stdDev);
+      confidenceInterval.textContent = `${formatNumber(lower)} - ${formatNumber(upper)}`;
+      
+      // Update chart
+      updateChart(expected, mostLikely, lower, upper);
+    }
+    
+    // Update the chart
+    function updateChart(expected, mostLikely, lowerBound, upperBound) {
+      const distributionData = generateDistributionData();
+      const method = methodSelect.value;
+      
+      // Update chart data
+      distributionChart.data.labels = distributionData.labels;
+      distributionChart.data.datasets[0].data = distributionData.triangular;
+      distributionChart.data.datasets[1].data = distributionData.pert;
+      
+      // Set line widths based on selected method
+      distributionChart.data.datasets[0].borderWidth = method === 'triangular' ? 3 : 1;
+      distributionChart.data.datasets[1].borderWidth = method === 'pert' ? 3 : 1;
+      
+      // Remove any existing annotations
+      if (distributionChart.options.plugins.annotation) {
+        distributionChart.options.plugins.annotation.annotations = {};
+      } else {
+        distributionChart.options.plugins.annotation = {
+          annotations: {}
+        };
+      }
+      
+      // Add vertical lines for key points
+      const annotations = {
+        mostLikely: {
+          type: 'line',
+          xMin: mostLikely,
+          xMax: mostLikely,
+          borderColor: '#555555',
+          borderWidth: 1,
+          borderDash: [5, 5],
+          label: {
+            content: 'Most Likely',
+            enabled: true,
+            position: 'top'
+          }
+        },
+        expected: {
+          type: 'line',
+          xMin: expected,
+          xMax: expected,
+          borderColor: '#0000FF',
+          borderWidth: 1,
+          borderDash: [5, 5],
+          label: {
+            content: 'Expected',
+            enabled: true,
+            position: 'top'
+          }
+        },
+        lowerBound: {
+          type: 'line',
+          xMin: lowerBound,
+          xMax: lowerBound,
+          borderColor: '#008000',
+          borderWidth: 1,
+          borderDash: [5, 5]
+        },
+        upperBound: {
+          type: 'line',
+          xMin: upperBound,
+          xMax: upperBound,
+          borderColor: '#008000',
+          borderWidth: 1,
+          borderDash: [5, 5]
+        }
+      };
+      
+      distributionChart.options.plugins.annotation = {
+        annotations: annotations
+      };
+      
+      distributionChart.update();
+    }
+    
+    // Initialize everything on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      initChart();
+      calculateEstimates();
+    });
+  </script>
+</body>
+</html>

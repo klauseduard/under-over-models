@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    {% include head-custom.html %}
+    
+    <!-- MathJax Configuration -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <!-- Load MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHDG8Y6DVF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZHDG8Y6DVF');
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        {% endif %}
+
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+          <ol class="chapters-nav">
+            <li><a href="{{ '/' | absolute_url }}" class="nav-link">Home</a></li>
+            <li><a href="{{ '/visualizations.html' | absolute_url }}" class="nav-link">Interactive Visualizations</a></li>
+          </ol>
+          
+          <h3>Chapters</h3>
+          <ol class="chapters-nav">
+            <li><a href="{{ '/chapters/01-introduction.html' | absolute_url }}">Introduction</a> <span class="completed-indicator">✓</span></li>
+            <li><a href="{{ '/chapters/02-software-time-estimation.html' | absolute_url }}">Software Time Estimation</a> <span class="completed-indicator">✓</span></li>
+            <li><a href="{{ '/chapters/03-organizational-models.html' | absolute_url }}">Organizational Models</a> <span class="completed-indicator">✓</span></li>
+            <li><a href="{{ '/chapters/04-stakeholder-preferences.html' | absolute_url }}">Stakeholder Preferences</a></li>
+            <li><a href="{{ '/chapters/05-organizational-size-influence.html' | absolute_url }}">Organizational Size</a> <span class="draft-indicator">Draft</span></li>
+            <li><a href="{{ '/chapters/06-theoretical-concepts.html' | absolute_url }}">Theoretical Concepts</a> <span class="completed-indicator">✓</span></li>
+            <li><a href="{{ '/chapters/07-medical-systems-case.html' | absolute_url }}">Medical Systems Case</a> <span class="draft-indicator">Draft</span></li>
+            <li><a href="{{ '/chapters/08-ai-organizational-impact.html' | absolute_url }}">AI Organizational Impact</a> <span class="draft-indicator">Draft</span></li>
+            <li><a href="{{ '/chapters/09-ai-people-theory-practice.html' | absolute_url }}">AI: Theory and Practice</a> <span class="draft-indicator">Draft</span></li>
+            <li><a href="{{ '/chapters/10-conclusion.html' | absolute_url }}">Conclusion</a> <span class="draft-indicator">Draft</span></li>
+          </ol>
+        </nav>
+
+        {% if site.github.is_project_page %}
+        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
+        {% endif %}
+
+        {% if site.github.is_user_page %}
+        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+        {% endif %}
+
+        {% if site.show_downloads %}
+        <ul class="downloads">
+          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
+          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+        </ul>
+        {% endif %}
+      </header>
+      <section>
+
+      <!-- Show draft banner for incomplete chapters -->
+      {% if page.path contains 'chapters/' and page.path != 'chapters/02-software-time-estimation.md' and page.path != 'chapters/01-introduction.md' and page.path != 'chapters/03-organizational-models.md' and page.path != 'chapters/06-theoretical-concepts.md' %}
+        <div class="draft-banner">
+          <strong>⚠️ DRAFT</strong> - This chapter is a work in progress and may contain incomplete or unedited content.
+          <a href="{{ '/' | absolute_url }}">Return to the home page</a> for completed chapters.
+        </div>
+      {% endif %}
+
+      <!-- Show chapter metadata if available -->
+      {% if page.path contains 'chapters/' %}
+        <div class="chapter-metadata">
+          {% if page.path == 'chapters/01-introduction.md' %}
+            <div class="chapter-date">Last updated: <strong>April 2025</strong></div>
+          {% endif %}
+          {% if page.path == 'chapters/02-software-time-estimation.md' %}
+            <div class="chapter-date">Last updated: <strong>April 2025</strong></div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <!-- Auto-generate table of contents for chapters -->
+      {% if page.path contains 'chapters/' %}
+        <div class="chapter-toc">
+          <h2>Contents</h2>
+          <div id="auto-toc"></div>
+        </div>
+      {% endif %}
+
+      {{ content }}
+
+      </section>
+      <footer>
+        {% if site.github.is_project_page %}
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p class="publication-date"><small>Publication initial release: April 2025 | Last updated: {{ site.time | date: '%B %Y' }}</small></p>
+        <p class="version-note"><small>AI capabilities evolve rapidly - please consider the publication date when reading</small></p>
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    
+    <!-- Script to auto-generate table of contents -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Only run on chapter pages
+        if (window.location.pathname.includes('/chapters/')) {
+          const tocDiv = document.getElementById('auto-toc');
+          const headings = document.querySelectorAll('h2, h3, h4');
+          
+          if (tocDiv && headings.length > 0) {
+            const toc = document.createElement('ul');
+            toc.className = 'auto-toc-list';
+            
+            let currentList = toc;
+            let previousLevel = 2;
+            
+            headings.forEach(heading => {
+              // Get the heading level (2 for h2, 3 for h3, etc.)
+              const level = parseInt(heading.tagName.substr(1));
+              
+              // Create id for the heading if it doesn't have one
+              if (!heading.id) {
+                heading.id = heading.textContent
+                  .toLowerCase()
+                  .replace(/[^\w\s-]/g, '')
+                  .replace(/\s+/g, '-');
+              }
+              
+              // Create the li element
+              const li = document.createElement('li');
+              const a = document.createElement('a');
+              a.href = '#' + heading.id;
+              a.textContent = heading.textContent;
+              li.appendChild(a);
+              
+              // Handle nesting of headings
+              if (level > previousLevel) {
+                // Create a nested list
+                const newList = document.createElement('ul');
+                currentList.lastChild.appendChild(newList);
+                currentList = newList;
+              } else if (level < previousLevel) {
+                // Go back up to the parent list
+                for (let i = 0; i < previousLevel - level; i++) {
+                  currentList = currentList.parentNode.parentNode;
+                }
+              }
+              
+              // Add the li to the current list
+              currentList.appendChild(li);
+              previousLevel = level;
+            });
+            
+            tocDiv.appendChild(toc);
+          }
+        }
+      });
+    </script>
+  </body>
+</html> 

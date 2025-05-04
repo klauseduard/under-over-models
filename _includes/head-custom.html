@@ -1,0 +1,223 @@
+<!-- MathJax Configuration -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      tags: 'ams'
+    },
+    svg: {
+      fontCache: 'global'
+    },
+    options: {
+      renderActions: {
+        /* Add custom styling to block math environments */
+        addBlockCSS: [100, (doc) => {
+          if (!doc.blockElements) {
+            doc.blockElements = new Set();
+          }
+        }, (math, doc) => {
+          if (math.display) {
+            doc.blockElements.add(math.typesetRoot);
+          }
+        }, (math, doc) => {
+          if (doc.blockElements && doc.blockElements.has(math.typesetRoot)) {
+            math.typesetRoot.classList.add('math-block');
+          }
+        }]
+      }
+    }
+  };
+</script>
+<!-- Load MathJax -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<!-- Reader mode font and text size controls -->
+<div id="reader-controls" style="display: none;">
+  <button id="font-smaller" title="Decrease font size">A-</button>
+  <button id="font-larger" title="Increase font size">A+</button>
+  <button id="toggle-serif" title="Toggle serif/sans-serif font">Font</button>
+  <button id="toggle-mode" title="Toggle light/sepia/dark mode">Mode</button>
+</div>
+
+<!-- Interactive Tools Enhancement -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Find all links to interactive tools and enhance them
+  const interactiveLinks = document.querySelectorAll('a[href*="html/"]');
+  
+  interactiveLinks.forEach(link => {
+    // Check if it's an interactive tool link
+    if (link.href.includes('calculator.html') || 
+        link.href.includes('demo.html') || 
+        link.href.includes('simulation.html') ||
+        link.href.includes('visualization.html') ||
+        link.href.includes('bayesian_estimation.html') || 
+        link.href.includes('monte_carlo_demo.html') || 
+        link.href.includes('three_point_estimation_calculator.html')) {
+      
+      // Get the parent paragraph
+      let container = link.parentNode;
+      
+      // If it's inside a blockquote, use that as the container
+      if (container.closest('blockquote')) {
+        container = container.closest('blockquote');
+      } else if (container.tagName !== 'P' && container.tagName !== 'BLOCKQUOTE') {
+        // If it's not in a paragraph, wrap it in one
+        const wrapper = document.createElement('div');
+        link.parentNode.insertBefore(wrapper, link);
+        wrapper.appendChild(link);
+        container = wrapper;
+      }
+      
+      // Add the interactive-tool class
+      container.classList.add('interactive-tool');
+    }
+  });
+  
+  // Enhance figures with visualization class
+  const figures = document.querySelectorAll('figure');
+  figures.forEach(figure => {
+    // Add a hover effect
+    figure.addEventListener('mouseenter', function() {
+      this.style.boxShadow = '0 4px 12px rgba(158, 134, 80, 0.18)';
+      this.style.transform = 'translateY(-2px)';
+      this.style.transition = 'all 0.3s ease';
+    });
+    
+    figure.addEventListener('mouseleave', function() {
+      this.style.boxShadow = '0 2px 5px rgba(158, 134, 80, 0.08)';
+      this.style.transform = 'translateY(0)';
+    });
+  });
+  
+  // Initialize reader controls
+  const controls = document.getElementById('reader-controls');
+  const body = document.body;
+  let fontSize = parseInt(getComputedStyle(body).fontSize);
+  let currentMode = 'light';
+  let isSerif = true;
+  
+  // Add controls to the page
+  controls.style.display = 'flex';
+  controls.style.position = 'fixed';
+  controls.style.bottom = '20px';
+  controls.style.right = '20px';
+  controls.style.background = 'rgba(255, 250, 237, 0.9)';
+  controls.style.padding = '8px';
+  controls.style.borderRadius = '8px';
+  controls.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+  controls.style.zIndex = '1000';
+  
+  // Style the buttons
+  const buttons = controls.querySelectorAll('button');
+  buttons.forEach(button => {
+    button.style.margin = '0 4px';
+    button.style.padding = '4px 8px';
+    button.style.border = '1px solid #d9cfa8';
+    button.style.borderRadius = '4px';
+    button.style.background = '#fffdf5';
+    button.style.color = '#5c4a1c';
+    button.style.cursor = 'pointer';
+  });
+  
+  // Event listeners for font size control
+  document.getElementById('font-smaller').addEventListener('click', function() {
+    if (fontSize > 14) {
+      fontSize -= 1;
+      body.style.fontSize = fontSize + 'px';
+    }
+  });
+  
+  document.getElementById('font-larger').addEventListener('click', function() {
+    if (fontSize < 24) {
+      fontSize += 1;
+      body.style.fontSize = fontSize + 'px';
+    }
+  });
+  
+  // Event listener for font family toggle
+  document.getElementById('toggle-serif').addEventListener('click', function() {
+    isSerif = !isSerif;
+    if (isSerif) {
+      body.style.fontFamily = 'Georgia, serif';
+    } else {
+      body.style.fontFamily = '"Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif';
+    }
+  });
+  
+  // Event listener for mode toggle
+  document.getElementById('toggle-mode').addEventListener('click', function() {
+    if (currentMode === 'light') {
+      // Switch to sepia mode
+      document.body.classList.remove('dark-mode');
+      body.style.backgroundColor = '#f5edd3';
+      document.querySelector('.wrapper').style.backgroundColor = '#fffbec';
+      currentMode = 'sepia';
+    } else if (currentMode === 'sepia') {
+      // Switch to dark mode
+      document.body.classList.add('dark-mode');
+      // Clear any inline styles that may have been set
+      body.style.backgroundColor = '';
+      body.style.color = '';
+      document.querySelector('.wrapper').style.backgroundColor = '';
+      currentMode = 'dark';
+    } else {
+      // Switch back to light mode
+      document.body.classList.remove('dark-mode');
+      body.style.backgroundColor = '#fffaed';
+      body.style.color = '#333333';
+      document.querySelector('.wrapper').style.backgroundColor = '#fffdf5';
+      currentMode = 'light';
+    }
+  });
+});
+</script>
+
+<!-- Additional styles for print media -->
+<style>
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .wrapper {
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+  
+  header, footer {
+    display: none !important;
+  }
+  
+  .interactive-tool, figure {
+    page-break-inside: avoid;
+    border: 1px solid #ddd !important;
+  }
+  
+  #reader-controls {
+    display: none !important;
+  }
+}
+
+/* Focus state improvements */
+a:focus, button:focus {
+  outline: 2px solid #956a00;
+  outline-offset: 2px;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+</style> 

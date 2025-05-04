@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generative Entropy & Innovation Simulator</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0047AB;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+    .control-panel {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: linear-gradient(to right, #f0f4f8, #e6f7ff);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .slider-container {
+      width: 45%;
+    }
+    .slider-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #0047AB;
+    }
+    input[type="range"] {
+      width: 100%;
+      height: 8px;
+      border-radius: 4px;
+      -webkit-appearance: none;
+      background: linear-gradient(to right, #0047AB, #50C878, #FF4500);
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      border: 2px solid #0047AB;
+      cursor: pointer;
+    }
+    #simulation-canvas {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      position: relative;
+      overflow: hidden;
+      background-color: #f8f9fa;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      transition: background-color 0.5s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .innovation-marker {
+      position: absolute;
+      border-radius: 50%;
+      background-color: gold;
+      border: 2px solid #333;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      color: #333;
+      box-shadow: 0 0 10px rgba(255,215,0,0.7);
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .metrics {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+    .metric-box {
+      width: 30%;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .metric-box:hover {
+      transform: translateY(-3px);
+    }
+    .metric-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .metric-value {
+      font-size: 26px;
+      font-weight: bold;
+      color: #0047AB;
+    }
+    .help-text {
+      font-style: italic;
+      color: #666;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .stage-indicator {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+    }
+    .stage {
+      padding: 10px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      opacity: 0.6;
+      transition: all 0.3s;
+    }
+    .stage.active {
+      opacity: 1;
+      transform: scale(1.05);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    #divergent {
+      background-color: #FF7F50;
+      color: white;
+    }
+    #selective {
+      background-color: #9370DB;
+      color: white;
+    }
+    #convergent {
+      background-color: #4682B4;
+      color: white;
+    }
+    #implementation {
+      background-color: #2E8B57;
+      color: white;
+    }
+    .button-panel {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.2s;
+      margin: 0 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    #reset-button {
+      background-color: #0047AB;
+      color: white;
+    }
+    #pause-button {
+      background-color: #4682B4;
+      color: white;
+    }
+    #manual-cycle-button {
+      background-color: #2E8B57;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Generative Entropy & Innovation Simulator</h1>
+    
+    <div class="control-panel">
+      <div class="slider-container">
+        <label class="slider-label" for="entropy-slider">System Entropy: <span id="entropy-value">50</span>%</label>
+        <input type="range" id="entropy-slider" min="0" max="100" value="50">
+        <div class="help-text">Low = Order/Structure, High = Chaos/Randomness</div>
+      </div>
+      
+      <div class="slider-container">
+        <label class="slider-label" for="diversity-slider">Element Diversity: <span id="diversity-value">50</span>%</label>
+        <input type="range" id="diversity-slider" min="0" max="100" value="50">
+        <div class="help-text">Low = Homogeneous, High = Diverse Perspectives</div>
+      </div>
+    </div>
+    
+    <div class="button-panel" style="text-align: center; margin-bottom: 15px;">
+      <button id="reset-button" style="padding: 8px 16px; background-color: #0047AB; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Reset Simulation</button>
+      <button id="pause-button" style="padding: 8px 16px; background-color: #4682B4; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; margin-left: 10px;">Pause/Resume</button>
+      <button id="manual-cycle-button" style="padding: 8px 16px; background-color: #2E8B57; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; margin-left: 10px;">Next Cycle Stage</button>
+    </div>
+    
+    <div id="simulation-canvas"></div>
+    
+    <div class="metrics">
+      <div class="metric-box" style="background-color: #e6f7ff;">
+        <div class="metric-title">Innovation Potential</div>
+        <div class="metric-value" id="innovation-value">50%</div>
+      </div>
+      
+      <div class="metric-box" style="background-color: #e6ffe6;">
+        <div class="metric-title">Execution Capability</div>
+        <div class="metric-value" id="execution-value">50%</div>
+      </div>
+      
+      <div class="metric-box" style="background-color: #fff5e6;">
+        <div class="metric-title">Novel Combinations</div>
+        <div class="metric-value" id="combinations-value">0</div>
+      </div>
+    </div>
+    
+    <div class="stage-indicator">
+      <div class="stage" id="divergent">Divergent</div>
+      <div class="stage" id="selective">Selective Retention</div>
+      <div class="stage" id="convergent">Convergent</div>
+      <div class="stage" id="implementation">Implementation</div>
+    </div>
+    
+    <div class="info-panel" style="background: linear-gradient(to right, #f8f8ff, #e6f7ff); border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); padding: 20px;">
+      <div class="info-title" style="font-size: 18px; color: #333; margin-bottom: 15px; border-bottom: 2px solid #4682B4; padding-bottom: 8px;">Current System State</div>
+      
+      <div style="display: flex; margin-bottom: 15px;">
+        <div style="flex: 0 0 40px; display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 20px; color: #0047AB;">📊</span>
+        </div>
+        <p id="system-state-primary" style="flex: 1; font-weight: 600; margin: 0; line-height: 1.5; color: #333;"></p>
+      </div>
+      
+      <div style="display: flex; margin-bottom: 15px;">
+        <div style="flex: 0 0 40px; display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 20px; color: #0047AB;">🔄</span>
+        </div>
+        <p id="system-state-diversity" style="flex: 1; margin: 0; line-height: 1.5; color: #0047AB;"></p>
+      </div>
+      
+      <div style="display: flex; margin-bottom: 15px;">
+        <div style="flex: 0 0 40px; display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 20px; color: #2E8B57;">⏱️</span>
+        </div>
+        <p id="system-state-stage" style="flex: 1; margin: 0; line-height: 1.5; color: #2E8B57;"></p>
+      </div>
+      
+      <div class="auto-adjust-notice" style="background-color: #fff0f0; padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 14px; display: none; border-left: 4px solid #FF7F50;" id="auto-adjust-notice">
+        <strong>Note:</strong> The system is automatically adjusting entropy during different stages of the innovation cycle. Toggle "Auto-Adjust" off if you prefer manual control.
+      </div>
+    </div>
+    
+    <div style="background-color: #f5f5f5; border-radius: 8px; padding: 15px; margin-top: 20px; border-left: 4px solid #9370DB;">
+      <h3 style="margin-top: 0; color: #333; font-size: 16px;">How Innovation Emerges</h3>
+      <p style="margin-bottom: 0; color: #555; line-height: 1.5;">
+        <strong>Collisions = Innovations:</strong> When diverse elements (colored circles) with innovation potential collide, they can generate new ideas (golden "!" markers). This models how innovation often emerges at the intersection of different domains and perspectives.
+      </p>
+    </div>
+    
+    <div style="text-align: center; margin-top: 15px;">
+      <label style="font-weight: bold; margin-right: 10px; background-color: #f0f0f0; padding: 8px 15px; border-radius: 20px; display: inline-block;">
+        <input type="checkbox" id="auto-adjust-checkbox" checked> 
+        Auto-Adjust Entropy During Cycle Phases
+      </label>
+    </div>
+  </div>
+
+  <script>
+    // DOM Elements
+    const entropySlider = document.getElementById('entropy-slider');
+    const diversitySlider = document.getElementById('diversity-slider');
+    const entropyValue = document.getElementById('entropy-value');
+    const diversityValue = document.getElementById('diversity-value');
+    const simulationCanvas = document.getElementById('simulation-canvas');
+    const innovationValue = document.getElementById('innovation-value');
+    const executionValue = document.getElementById('execution-value');
+    const combinationsValue = document.getElementById('combinations-value');
+    const systemState = document.getElementById('system-state');
+    const resetButton = document.getElementById('reset-button');
+    const pauseButton = document.getElementById('pause-button');
+    const manualCycleButton = document.getElementById('manual-cycle-button');
+    const stages = {
+      divergent: document.getElementById('divergent'),
+      selective: document.getElementById('selective'),
+      convergent: document.getElementById('convergent'),
+      implementation: document.getElementById('implementation')
+    };
+    
+    // Simulation variables
+    let particles = [];
+    const particleCount = 30;
+    let innovations = [];
+    let combinations = 0;
+    let currentStage = 'divergent';
+    let cycleTime = 0;
+    
+    // Initialize simulation
+    function initSimulation() {
+      // Clear canvas
+      simulationCanvas.innerHTML = '';
+      particles = [];
+      innovations = [];
+      
+      // Create particles
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random properties
+        const size = 10 + Math.random() * 15;
+        const color = getRandomColor(diversitySlider.value);
+        
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.backgroundColor = color;
+        
+        // Random initial position - distribute across entire canvas instead of left edge
+        const left = Math.random() * (simulationCanvas.clientWidth - size);
+        const top = Math.random() * (simulationCanvas.clientHeight - size);
+        particle.style.left = left + 'px';
+        particle.style.top = top + 'px';
+        
+        // Store particle data
+        const particleData = {
+          element: particle,
+          x: left,
+          y: top,
+          size: size,
+          color: color,
+          vx: getRandomVelocity(entropySlider.value),
+          vy: getRandomVelocity(entropySlider.value),
+          innovation: Math.random() > 0.7 // Some particles have innovation potential
+        };
+        
+        particles.push(particleData);
+        simulationCanvas.appendChild(particle);
+      }
+    }
+    
+    // Random color generation based on diversity
+    function getRandomColor(diversity) {
+      if (diversity < 33) {
+        // Low diversity - shades of blue
+        return `hsl(210, ${50 + Math.random() * 50}%, ${40 + Math.random() * 40}%)`;
+      } else if (diversity < 66) {
+        // Medium diversity - blues and greens
+        return `hsl(${160 + Math.random() * 100}, ${50 + Math.random() * 50}%, ${40 + Math.random() * 40}%)`;
+      } else {
+        // High diversity - full spectrum
+        return `hsl(${Math.random() * 360}, ${50 + Math.random() * 50}%, ${40 + Math.random() * 40}%)`;
+      }
+    }
+    
+    // Get random velocity based on entropy
+    function getRandomVelocity(entropy) {
+      const baseVelocity = entropy / 100 * 5; // Max velocity of 5px per frame at 100% entropy
+      return (Math.random() - 0.5) * baseVelocity;
+    }
+    
+    // Update particle positions and handle interactions
+    function updateSimulation() {
+      const entropyLevel = entropySlider.value / 100;
+      const canvasWidth = simulationCanvas.clientWidth;
+      const canvasHeight = simulationCanvas.clientHeight;
+      
+      // Update cycle time and stage
+      cycleTime += 1;
+      if (cycleTime >= 200) {
+        cycleTime = 0;
+        updateInnovationStage();
+      }
+      
+      // Apply current stage effects
+      applyStageEffects();
+      
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        
+        // Apply random motion based on entropy
+        if (Math.random() < entropyLevel) {
+          p.vx += (Math.random() - 0.5) * 0.5;
+          p.vy += (Math.random() - 0.5) * 0.5;
+        }
+        
+        // Limit velocity based on entropy
+        const maxVelocity = 0.5 + (entropyLevel * 4);
+        const velocity = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+        if (velocity > maxVelocity) {
+          p.vx = (p.vx / velocity) * maxVelocity;
+          p.vy = (p.vy / velocity) * maxVelocity;
+        }
+        
+        // Update position
+        p.x += p.vx;
+        p.y += p.vy;
+        
+        // Boundary checks
+        if (p.x < 0) { p.x = 0; p.vx *= -1; }
+        if (p.y < 0) { p.y = 0; p.vy *= -1; }
+        if (p.x > canvasWidth - p.size) { p.x = canvasWidth - p.size; p.vx *= -1; }
+        if (p.y > canvasHeight - p.size) { p.y = canvasHeight - p.size; p.vy *= -1; }
+        
+        // Update DOM element
+        p.element.style.left = p.x + 'px';
+        p.element.style.top = p.y + 'px';
+        
+        // Check for collisions and potential innovation
+        checkCollisions(p, i);
+      }
+      
+      // Update metrics
+      updateMetrics();
+    }
+    
+    // Check for collisions between particles
+    function checkCollisions(particle, index) {
+      for (let i = index + 1; i < particles.length; i++) {
+        const other = particles[i];
+        const dx = particle.x - other.x;
+        const dy = particle.y - other.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance < (particle.size + other.size) / 2) {
+          // Collision response - simple bounce
+          const angle = Math.atan2(dy, dx);
+          const sin = Math.sin(angle);
+          const cos = Math.cos(angle);
+          
+          // Rotate velocities
+          particle.vx = particle.vx * cos + particle.vy * sin;
+          particle.vy = particle.vy * cos - particle.vx * sin;
+          other.vx = other.vx * cos + other.vy * sin;
+          other.vy = other.vy * cos - other.vx * sin;
+          
+          // Apply collision
+          particle.vx *= -1;
+          other.vx *= -1;
+          
+          // Rotate velocities back
+          const newVx1 = particle.vx * cos - particle.vy * sin;
+          const newVy1 = particle.vy * cos + particle.vx * sin;
+          const newVx2 = other.vx * cos - other.vy * sin;
+          const newVy2 = other.vy * cos + other.vx * sin;
+          
+          particle.vx = newVx1;
+          particle.vy = newVy1;
+          other.vx = newVx2;
+          other.vy = newVy2;
+          
+          // Chance of creating innovation if both particles have innovation potential
+          if (particle.innovation && other.innovation && Math.random() < 0.2 && 
+              currentStage === 'divergent' && innovations.length < 5) {
+            createInnovation((particle.x + other.x) / 2, (particle.y + other.y) / 2);
+          }
+        }
+      }
+    }
+    
+    // Create a visual innovation marker
+    function createInnovation(x, y) {
+      const innovation = document.createElement('div');
+      innovation.className = 'innovation-marker';
+      innovation.textContent = '!';
+      
+      // Size and position
+      const size = 20;
+      innovation.style.width = size + 'px';
+      innovation.style.height = size + 'px';
+      innovation.style.left = (x - size/2) + 'px';
+      innovation.style.top = (y - size/2) + 'px';
+      
+      simulationCanvas.appendChild(innovation);
+      innovations.push({
+        element: innovation,
+        x: x,
+        y: y,
+        size: size,
+        age: 0,
+        selected: false
+      });
+      
+      combinations++;
+      combinationsValue.textContent = combinations;
+    }
+    
+    // Update the innovation stage in the cycle
+    function updateInnovationStage() {
+      const stages = ['divergent', 'selective', 'convergent', 'implementation'];
+      const currentIndex = stages.indexOf(currentStage);
+      const nextIndex = (currentIndex + 1) % stages.length;
+      currentStage = stages[nextIndex];
+      
+      // Update UI
+      updateStageIndicator();
+    }
+    
+    // Apply different effects based on the current innovation stage
+    function applyStageEffects() {
+      const autoAdjustEnabled = document.getElementById('auto-adjust-checkbox').checked;
+      const autoAdjustNotice = document.getElementById('auto-adjust-notice');
+      
+      // Show/hide auto-adjust notice
+      if (autoAdjustEnabled) {
+        autoAdjustNotice.style.display = 'block';
+      } else {
+        autoAdjustNotice.style.display = 'none';
+      }
+      
+      switch(currentStage) {
+        case 'divergent':
+          // High entropy to encourage exploration, but only if auto-adjust is enabled
+          if (autoAdjustEnabled && entropySlider.value < 70) {
+            entropySlider.value = Math.min(entropySlider.value + 0.5, 70);
+            entropyValue.textContent = Math.round(entropySlider.value);
+          }
+          break;
+          
+        case 'selective':
+          // Process innovations - remove some
+          if (cycleTime % 40 === 0 && innovations.length > 0) {
+            // Randomly select some innovations to keep
+            for (let i = innovations.length - 1; i >= 0; i--) {
+              if (Math.random() > 0.5 || innovations[i].selected) {
+                innovations[i].selected = true;
+                innovations[i].element.style.backgroundColor = '#32CD32';
+                innovations[i].element.style.border = '2px solid #006400';
+              } else {
+                innovations[i].element.remove();
+                innovations.splice(i, 1);
+              }
+            }
+          }
+          break;
+          
+        case 'convergent':
+          // Reduce entropy to focus on implementation, but only if auto-adjust is enabled
+          if (autoAdjustEnabled && entropySlider.value > 30) {
+            entropySlider.value = Math.max(entropySlider.value - 0.5, 30);
+            entropyValue.textContent = Math.round(entropySlider.value);
+          }
+          break;
+          
+        case 'implementation':
+          // Move innovations to structured positions
+          if (innovations.length > 0 && cycleTime % 10 === 0) {
+            const spacing = simulationCanvas.clientWidth / (innovations.length + 1);
+            for (let i = 0; i < innovations.length; i++) {
+              const targetX = spacing * (i + 1);
+              const targetY = simulationCanvas.clientHeight / 2;
+              
+              // Move toward target
+              innovations[i].x += (targetX - innovations[i].x) * 0.1;
+              innovations[i].y += (targetY - innovations[i].y) * 0.1;
+              
+              innovations[i].element.style.left = (innovations[i].x - innovations[i].size/2) + 'px';
+              innovations[i].element.style.top = (innovations[i].y - innovations[i].size/2) + 'px';
+            }
+          }
+          
+          // End of cycle - prepare for new cycle
+          if (cycleTime >= 190) {
+            // Clear innovations for next cycle
+            for (const innovation of innovations) {
+              innovation.element.remove();
+            }
+            innovations = [];
+          }
+          break;
+      }
+    }
+    
+    // Update the stage indicator UI
+    function updateStageIndicator() {
+      for (const stage in stages) {
+        stages[stage].classList.remove('active');
+      }
+      stages[currentStage].classList.add('active');
+    }
+    
+    // Update metric displays and system state description
+    function updateMetrics() {
+      const entropy = entropySlider.value;
+      const diversity = diversitySlider.value;
+      
+      // Calculate innovation potential
+      // Highest at medium-high entropy (40-70) and high diversity
+      let innovation = 0;
+      if (entropy >= 40 && entropy <= 70) {
+        innovation = 60 + (diversity / 100 * 40);
+      } else if (entropy < 40) {
+        innovation = (entropy / 40 * 60) + (diversity / 100 * 20);
+      } else {
+        innovation = (1 - (entropy - 70) / 30) * 60 + (diversity / 100 * 20);
+      }
+      
+      // Calculate execution capability
+      // Highest at low-medium entropy (20-50)
+      let execution = 0;
+      if (entropy >= 20 && entropy <= 50) {
+        execution = 100 - (entropy - 20) / 30 * 20;
+      } else if (entropy < 20) {
+        execution = 80 + (20 - entropy) / 20 * 20;
+      } else {
+        execution = 80 - (entropy - 50) / 50 * 80;
+      }
+      
+      // Update UI
+      innovationValue.textContent = Math.round(innovation) + '%';
+      executionValue.textContent = Math.round(execution) + '%';
+      
+      // Get DOM elements for the separated state descriptions
+      const statePrimary = document.getElementById('system-state-primary');
+      const stateDiversity = document.getElementById('system-state-diversity');
+      const stateStage = document.getElementById('system-state-stage');
+      
+      // Determine primary system state description
+      if (entropy < 30) {
+        statePrimary.textContent = 'HIGHLY ORDERED SYSTEM: This provides stability and efficiency for execution, but limits the potential for new ideas and innovation.';
+      } else if (entropy >= 30 && entropy <= 70) {
+        statePrimary.textContent = 'EDGE OF CHAOS: The system is balanced between order and chaos where innovation potential is maximized while maintaining sufficient structure.';
+      } else {
+        statePrimary.textContent = 'HIGH ENTROPY SYSTEM: This creates many novel combinations, but makes it difficult to execute and implement ideas effectively.';
+      }
+      
+      // Add diversity context
+      if (diversity < 30) {
+        stateDiversity.textContent = 'LOW DIVERSITY: Limited perspective variety reduces potential for cross-domain insights.';
+      } else if (diversity >= 30 && diversity <= 70) {
+        stateDiversity.textContent = 'MODERATE DIVERSITY: A healthy mix of perspectives enables some cross-domain innovation.';
+      } else {
+        stateDiversity.textContent = 'HIGH DIVERSITY: Multiple perspectives significantly increase potential for cross-domain innovation.';
+      }
+      
+      // Add stage context
+      if (currentStage === 'divergent') {
+        stateStage.textContent = 'DIVERGENT PHASE: The system is exploring possibilities and generating ideas.';
+      } else if (currentStage === 'selective') {
+        stateStage.textContent = 'SELECTIVE RETENTION PHASE: Promising ideas are being identified and retained.';
+      } else if (currentStage === 'convergent') {
+        stateStage.textContent = 'CONVERGENT PHASE: The focus is on refining selected ideas into viable solutions.';
+      } else {
+        stateStage.textContent = 'IMPLEMENTATION PHASE: Solutions are being stabilized and standardized.';
+      }
+    }
+    
+    // Event listeners
+    entropySlider.addEventListener('input', function() {
+      entropyValue.textContent = this.value;
+      updateParticleVelocities();
+      updateMetrics();
+    });
+    
+    diversitySlider.addEventListener('input', function() {
+      diversityValue.textContent = this.value;
+      updateParticleColors();
+      updateMetrics();
+    });
+    
+    // Update particle velocities when entropy changes
+    function updateParticleVelocities() {
+      const entropyLevel = entropySlider.value / 100;
+      
+      for (const particle of particles) {
+        // Add some randomness to velocity while preserving direction
+        if (Math.random() < 0.2) {
+          particle.vx = getRandomVelocity(entropySlider.value);
+          particle.vy = getRandomVelocity(entropySlider.value);
+        }
+      }
+    }
+    
+    // Update particle colors when diversity changes
+    function updateParticleColors() {
+      const diversityLevel = diversitySlider.value;
+      
+      for (const particle of particles) {
+        // Change some particles' colors
+        if (Math.random() < 0.3) {
+          particle.color = getRandomColor(diversityLevel);
+          particle.element.style.backgroundColor = particle.color;
+        }
+      }
+    }
+    
+    // Animation loop
+    let animationRunning = true;
+    let animationId;
+    
+    function animate() {
+      if (animationRunning) {
+        updateSimulation();
+        animationId = requestAnimationFrame(animate);
+      }
+    }
+    
+    // Reset the simulation
+    function resetSimulation() {
+      // Clear any existing animations
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+      
+      // Reset variables
+      combinations = 0;
+      combinationsValue.textContent = combinations;
+      cycleTime = 0;
+      currentStage = 'divergent';
+      
+      // Reset sliders to default values
+      entropySlider.value = 50;
+      diversitySlider.value = 50;
+      entropyValue.textContent = '50';
+      diversityValue.textContent = '50';
+      
+      // Reinitialize
+      initSimulation();
+      updateStageIndicator();
+      updateMetrics();
+      
+      // Restart animation if it was running
+      if (animationRunning) {
+        animate();
+      }
+    }
+    
+    // Toggle pause/resume
+    function togglePause() {
+      animationRunning = !animationRunning;
+      
+      // Update button text
+      pauseButton.textContent = animationRunning ? 'Pause' : 'Resume';
+      
+      // Resume animation if needed
+      if (animationRunning) {
+        animate();
+      }
+    }
+    
+    // Manual cycle stage change
+    function advanceCycleStage() {
+      updateInnovationStage();
+    }
+    
+    // Add event listeners for new buttons
+    resetButton.addEventListener('click', resetSimulation);
+    pauseButton.addEventListener('click', togglePause);
+    manualCycleButton.addEventListener('click', advanceCycleStage);
+    
+    // Initialize and start simulation
+    initSimulation();
+    updateStageIndicator();
+    animate();
+  </script>
+</body>
+</html>

@@ -1,0 +1,524 @@
+@import "{{ site.theme }}";
+
+/* Warmer color scheme with improved readability for technical content */
+body {
+  background-color: #fffaed; /* Warmer, light cream background */
+  color: #333333;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.wrapper {
+  background-color: #fffdf5; /* Very light warm paper color */
+  border-radius: 8px;
+  box-shadow: 0 3px 15px rgba(158, 134, 80, 0.12);
+  padding: 30px;
+  max-width: 960px;
+}
+
+section {
+  width: 620px;
+}
+
+header {
+  border-right: 1px solid #e8dfca;
+  width: 250px;
+  overflow-x: hidden; /* Prevent content from spilling out */
+}
+
+/* Responsive adjustments for sidebar when zoomed or on smaller screens */
+@media screen and (max-width: 960px) {
+  header {
+    width: 220px;
+  }
+  section {
+    width: 580px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  header {
+    width: 180px;
+    padding-right: 5px;
+  }
+  section {
+    width: 500px;
+  }
+  .chapters-nav {
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .wrapper {
+    width: auto;
+    margin: 0;
+  }
+  header {
+    float: none;
+    position: static;
+    width: auto;
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 1px solid #e8dfca;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  section {
+    float: none;
+    width: auto;
+    padding: 0 10px;
+  }
+  
+  /* Fix project attribution in mobile view */
+  p.view {
+    display: block;
+    position: static;
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  /* Make navigation cleaner */
+  .main-nav {
+    display: block;
+    margin: 15px auto;
+    max-width: 400px;
+  }
+  
+  .chapters-nav {
+    padding-left: 20px;
+    text-align: left;
+  }
+  
+  /* Fix page footer positioning */
+  footer {
+    position: static;
+    width: auto;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e8dfca;
+  }
+}
+
+/* Publication date and version information */
+.publication-date {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.version-note {
+  margin-top: 5px;
+  font-style: italic;
+  color: #856404;
+}
+
+/* Chapter metadata */
+.chapter-metadata {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #e3dac9;
+}
+
+.chapter-date {
+  font-size: 14px;
+  color: #6e6e6e;
+}
+
+/* Draft and completed indicators for navigation */
+.draft-indicator {
+  font-size: 11px;
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+  font-weight: normal;
+  vertical-align: middle;
+  border: 1px solid #ffeeba;
+}
+
+.completed-indicator {
+  font-size: 12px;
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1px 4px;
+  border-radius: 3px;
+  margin-left: 5px;
+  font-weight: bold;
+  vertical-align: middle;
+  border: 1px solid #c3e6cb;
+}
+
+/* Draft banner for incomplete chapters */
+.draft-banner {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.draft-banner a {
+  color: #775c11;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.draft-banner a:hover {
+  color: #5c470d;
+}
+
+/* Typography improvements for readability */
+p {
+  margin-bottom: 1.5em;
+}
+
+a {
+  color: #956a00; /* Deeper gold for better contrast */
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #c28100;
+}
+
+/* Navigation styling */
+.main-nav {
+  margin: 20px 0;
+}
+
+.nav-link {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #f5edd3; /* Warmer yellow-beige for nav buttons */
+  border-radius: 4px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.nav-link:hover {
+  background-color: #eee0b9;
+  text-decoration: none;
+}
+
+.chapters-nav {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.chapters-nav li {
+  margin-bottom: 8px;
+  position: relative;
+  line-height: 1.3;
+  padding-right: 10px;
+  word-wrap: break-word; /* Allow long chapter names to wrap */
+}
+
+.chapters-nav a {
+  font-size: 15px;
+}
+
+/* Auto-generated table of contents styling */
+.chapter-toc {
+  background-color: #f9f4e3; /* Warm ivory color */
+  padding: 18px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(158, 134, 80, 0.08);
+}
+
+.chapter-toc h2 {
+  margin-top: 0;
+  font-size: 1.3em;
+  color: #5c4b24;
+  border-bottom: 1px solid #e3dac9;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.auto-toc-list {
+  padding-left: 20px;
+}
+
+.auto-toc-list li {
+  margin-bottom: 6px;
+}
+
+.auto-toc-list ul {
+  padding-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.auto-toc-list a {
+  text-decoration: none;
+}
+
+.auto-toc-list a:hover {
+  text-decoration: underline;
+}
+
+/* Formula styling - ensure formulas start on their own line */
+.MathJax_Display {
+  margin: 1.8em 0 !important;
+  padding: 15px;
+  background-color: #fffbed; /* Very light warm yellow */
+  border-left: 3px solid #e3d6b9;
+  overflow-x: auto;
+}
+
+/* Visualization highlighting */
+figure {
+  margin: 2.2em 0;
+  padding: 20px;
+  background-color: #fffcf0; /* Light warm cream */
+  border: 1px solid #e9dfbf;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(158, 134, 80, 0.08);
+}
+
+figcaption {
+  font-style: italic;
+  margin-top: 12px;
+  text-align: center;
+  color: #665e4d;
+  font-size: 0.9em;
+}
+
+/* Interactive tool callouts */
+.interactive-tool {
+  margin: 2.2em 0;
+  padding: 20px;
+  background-color: #f1f8f8; /* Light blue-green, softer than before */
+  border: 1px solid #d3e3e6;
+  border-radius: 6px;
+  position: relative;
+}
+
+.interactive-tool::before {
+  content: "🧮 Interactive Tool";
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #436b77;
+}
+
+/* Table of contents styling */
+#markdown-toc {
+  background-color: #f9f4e3;
+  padding: 20px 20px 20px 35px;
+  border-radius: 6px;
+  margin-bottom: 35px;
+}
+
+#markdown-toc::before {
+  content: "Contents";
+  font-weight: bold;
+  display: block;
+  margin-bottom: 12px;
+  margin-left: -15px;
+  font-size: 1.1em;
+}
+
+/* Code block styling */
+pre, code {
+  background-color: #f7f2e0 !important; /* Lighter yellowish code bg */
+  border: 1px solid #e3dac9 !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+pre {
+  padding: 12px !important;
+}
+
+/* Section headings */
+h1, h2, h3, h4 {
+  color: #5c4a1c; /* Warmer brown for headings */
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 1.9em;
+}
+
+h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid #e3dac9;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.15em;
+}
+
+/* Reading comfort improvements */
+ul, ol {
+  padding-left: 25px;
+  margin-bottom: 1.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+blockquote {
+  padding: 15px 20px;
+  margin-bottom: 1.5em;
+  background-color: #f9f5e5;
+  border-left: 3px solid #d9cfa8;
+  color: #4c4635;
+  font-style: italic;
+}
+
+/* Print optimizations */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+  }
+  
+  .wrapper {
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+  
+  header, footer {
+    display: none !important;
+  }
+  
+  pre, code {
+    font-size: 10pt !important;
+  }
+  
+  section {
+    width: 100% !important;
+  }
+  
+  .draft-banner {
+    display: none !important;
+  }
+} 
+
+/* Dark mode optimizations */
+.dark-mode {
+  background-color: #282520 !important;
+  color: #e8e0cc !important;
+  
+  .wrapper {
+    background-color: #32302a !important;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3) !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #f3ead3 !important;
+  }
+  
+  a {
+    color: #ffd54f !important; /* Brighter gold for dark mode links */
+  }
+  
+  a:hover {
+    color: #ffe082 !important; /* Even brighter on hover */
+  }
+  
+  /* Navigation links */
+  .nav-link {
+    background-color: #3e3a32 !important; 
+    color: #e3c987 !important;
+  }
+  
+  .nav-link:hover {
+    background-color: #4a4639 !important;
+  }
+  
+  /* Tables of contents */
+  .chapter-toc, #markdown-toc {
+    background-color: #3a372e !important;
+    border: 1px solid #4a4639 !important;
+  }
+  
+  /* Code blocks */
+  pre, code {
+    background-color: #353129 !important;
+    border-color: #4a4639 !important;
+  }
+  
+  /* Blockquotes */
+  blockquote {
+    background-color: #3a372e !important;
+    border-left-color: #4a4639 !important;
+    color: #ddd6c0 !important;
+  }
+  
+  /* Make indicators more visible on dark mode */
+  .draft-indicator {
+    background-color: #5c4200 !important;
+    color: #ffe082 !important;
+    border-color: #7a5900 !important;
+  }
+  
+  .completed-indicator {
+    background-color: #1b5e20 !important;
+    color: #c8e6c9 !important;
+    border-color: #2e7d32 !important;
+  }
+  
+  /* Draft banner */
+  .draft-banner {
+    background-color: #5c4200 !important;
+    color: #ffe082 !important;
+    border-color: #7a5900 !important;
+  }
+  
+  .draft-banner a {
+    color: #ffd54f !important; /* Brighter gold for dark mode links */
+    text-decoration: underline;
+  }
+  
+  .draft-banner a:hover {
+    color: #ffe082 !important;
+  }
+  
+  /* Interactive tool backgrounds */
+  .interactive-tool {
+    background-color: #2c3b3b !important;
+    border-color: #394a4a !important;
+  }
+  
+  .interactive-tool::before {
+    color: #81c9c9 !important;
+  }
+  
+  /* Figure backgrounds */
+  figure {
+    background-color: #36322a !important;
+    border-color: #4a4639 !important;
+  }
+  
+  figcaption {
+    color: #c5bba7 !important;
+  }
+} 

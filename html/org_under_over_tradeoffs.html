@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizational Complexity: Underfitting vs. Overfitting Tradeoffs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .slider-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 30px;
+        }
+        .slider-labels {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 8px;
+        }
+        .slider-label {
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            color: #666;
+        }
+        .balance-zone {
+            position: absolute;
+            bottom: 0;
+            left: 35%;
+            width: 30%;
+            text-align: center;
+            background-color: rgba(46, 204, 113, 0.2);
+            border-radius: 10px;
+            padding: 2px 10px;
+            font-size: 14px;
+            color: #27ae60;
+        }
+        .controls {
+            margin: 30px 0;
+        }
+        #complexitySlider {
+            width: 100%;
+            height: 20px;
+            -webkit-appearance: none;
+            background: linear-gradient(to right, 
+                #e74c3c, /* Red - underfitting */
+                #2ecc71, /* Green - balanced */
+                #3498db  /* Blue - overfitting */
+            );
+            outline: none;
+            border-radius: 10px;
+        }
+        #complexitySlider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #2c3e50;
+            cursor: pointer;
+            border: 3px solid white;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+        #complexitySlider::-moz-range-thumb {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #2c3e50;
+            cursor: pointer;
+            border: 3px solid white;
+        }
+        .characteristics-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .characteristic {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+        }
+        .characteristic-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+        .characteristic-title {
+            font-weight: bold;
+            margin: 0;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        .characteristic-value {
+            font-weight: bold;
+            color: #3498db;
+        }
+        .bar-container {
+            height: 18px;
+            background-color: #ecf0f1;
+            border-radius: 9px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bar {
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 9px 0 0 9px;
+            transition: width 0.5s ease;
+        }
+        .description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #7f8c8d;
+            line-height: 1.4;
+        }
+        .complexity-display {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .explanation {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+        }
+        .explanation h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Organizational Complexity: Underfitting vs. Overfitting Tradeoffs</h1>
+    
+    <div class="container">
+        <div class="explanation">
+            <h3>Understanding the Visualization</h3>
+            <p>This interactive tool demonstrates how organizational characteristics change as the structure moves from too simple (underfitting) to too complex (overfitting). The "balanced zone" represents an ideal middle ground where many aspects of organizational performance are optimized.</p>
+            <p>Move the slider to see how different organizational characteristics respond to changes in complexity. Notice how some characteristics improve with simplicity while others benefit from more structure, highlighting the inherent tradeoffs in organizational design.</p>
+        </div>
+        
+        <div class="controls">
+            <div class="complexity-display">
+                Complexity Level: <span id="complexityValue">50</span>%
+            </div>
+            
+            <div class="slider-container">
+                <input type="range" min="0" max="100" value="50" id="complexitySlider">
+                <div class="slider-labels">
+                    <div class="slider-label">Too Simple<br>(Underfitting)</div>
+                    <div class="slider-label">Balanced<br>Complexity</div>
+                    <div class="slider-label">Too Complex<br>(Overfitting)</div>
+                </div>
+                <div class="balance-zone">Balance Zone</div>
+            </div>
+        </div>
+        
+        <div class="characteristics-container">
+            <div class="characteristic">
+                <div class="characteristic-header">
+                    <h3 class="characteristic-title">Responsiveness / Agility</h3>
+                    <span class="characteristic-value" id="responsivenessValue">60</span>
+                </div>
+                <div class="bar-container">
+                    <div class="bar" id="responsivenessBar" style="width: 60%;"></div>
+                </div>
+                <div class="description">
+                    How quickly the organization can respond to changes. Simpler structures tend to be more responsive.
+                </div>
+            </div>
+            
+            <div class="characteristic">
+                <div class="characteristic-header">
+                    <h3 class="characteristic-title">Adaptability</h3>
+                    <span class="characteristic-value" id="adaptabilityValue">60</span>
+                </div>
+                <div class="bar-container">
+                    <div class="bar" id="adaptabilityBar" style="width: 60%;"></div>
+                </div>
+                <div class="description">
+                    How well the organization adapts to changing environments. Optimal in balanced structures.
+                </div>
+            </div>
+            
+            <div class="characteristic">
+                <div class="characteristic-header">
+                    <h3 class="characteristic-title">Efficiency</h3>
+                    <span class="characteristic-value" id="efficiencyValue">24</span>
+                </div>
+                <div class="bar-container">
+                    <div class="bar" id="efficiencyBar" style="width: 24%;"></div>
+                </div>
+                <div class="description">
+                    Operational efficiency follows a complex pattern, influenced by both simplicity and specialization.
+                </div>
+            </div>
+            
+            <div class="characteristic">
+                <div class="characteristic-header">
+                    <h3 class="characteristic-title">Coordination Overhead</h3>
+                    <span class="characteristic-value" id="coordinationValue">55</span>
+                </div>
+                <div class="bar-container">
+                    <div class="bar" id="coordinationBar" style="width: 55%;"></div>
+                </div>
+                <div class="description">
+                    Resources required to coordinate activities. Increases substantially with complexity.
+                </div>
+            </div>
+            
+            <div class="characteristic">
+                <div class="characteristic-header">
+                    <h3 class="characteristic-title">Specialization Depth</h3>
+                    <span class="characteristic-value" id="specializationValue">55</span>
+                </div>
+                <div class="bar-container">
+                    <div class="bar" id="specializationBar" style="width: 55%;"></div>
+                </div>
+                <div class="description">
+                    Degree to which roles are specialized. Higher in more complex structures.
+                </div>
+            </div>
+            
+            <div class="characteristic">
+                <div class="characteristic-header">
+                    <h3 class="characteristic-title">Risk of Chaos</h3>
+                    <span class="characteristic-value" id="chaosValue">50</span>
+                </div>
+                <div class="bar-container">
+                    <div class="bar" id="chaosBar" style="width: 50%;"></div>
+                </div>
+                <div class="description">
+                    Risk of inconsistent approaches and lack of coordination. Highest in simple structures.
+                </div>
+            </div>
+            
+            <div class="characteristic">
+                <div class="characteristic-header">
+                    <h3 class="characteristic-title">Risk of Rigidity</h3>
+                    <span class="characteristic-value" id="rigidityValue">52.5</span>
+                </div>
+                <div class="bar-container">
+                    <div class="bar" id="rigidityBar" style="width: 52.5%;"></div>
+                </div>
+                <div class="description">
+                    Risk of bureaucracy and inflexibility. Increases with organizational complexity.
+                </div>
+            </div>
+            
+            <div class="characteristic">
+                <div class="characteristic-header">
+                    <h3 class="characteristic-title">Cost to Maintain Structure</h3>
+                    <span class="characteristic-value" id="costValue">57.5</span>
+                </div>
+                <div class="bar-container">
+                    <div class="bar" id="costBar" style="width: 57.5%;"></div>
+                </div>
+                <div class="description">
+                    Resources required to maintain organizational structures. Rises with complexity.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to calculate characteristic values based on complexity
+        function calculateCharacteristicValues(complexity) {
+            // Normalize to 0-1 range
+            const c = complexity / 100;
+            
+            return {
+                responsiveness: 100 - (80 * c), // High at simple end, decreases as complexity increases
+                adaptability: 60 - 120 * Math.pow(c - 0.5, 2), // Curve - highest in the middle
+                efficiency: 40 + 100 * Math.pow(c - 0.3, 2) - 40 * c, // Complex curve
+                coordinationOverhead: 10 + 90 * c, // Low at simple end, increases with complexity
+                specialization: 10 + 90 * c, // Low at simple end, increases with complexity
+                riskOfChaos: 90 - 80 * c, // High at simple end, decreases with complexity
+                riskOfRigidity: 10 + 85 * c, // Low at simple end, increases with complexity
+                costToMaintain: 15 + 85 * c // Low at simple end, increases with complexity
+            };
+        }
+
+        // Function to update the visualization based on slider value
+        function updateVisualization(complexity) {
+            // Update complexity display
+            document.getElementById('complexityValue').textContent = complexity;
+            
+            // Calculate new values
+            const values = calculateCharacteristicValues(complexity);
+            
+            // Update each characteristic
+            updateCharacteristic('responsiveness', values.responsiveness);
+            updateCharacteristic('adaptability', values.adaptability);
+            updateCharacteristic('efficiency', values.efficiency);
+            updateCharacteristic('coordination', values.coordinationOverhead);
+            updateCharacteristic('specialization', values.specialization);
+            updateCharacteristic('chaos', values.riskOfChaos);
+            updateCharacteristic('rigidity', values.riskOfRigidity);
+            updateCharacteristic('cost', values.costToMaintain);
+            
+            // Update slider color based on position
+            updateSliderColor(complexity);
+        }
+        
+        // Function to update a single characteristic
+        function updateCharacteristic(id, value) {
+            // Round to 1 decimal place
+            const roundedValue = Math.round(value * 10) / 10;
+            
+            // Update text value
+            document.getElementById(`${id}Value`).textContent = roundedValue;
+            
+            // Update bar width
+            document.getElementById(`${id}Bar`).style.width = `${roundedValue}%`;
+            
+            // Update bar color based on value
+            const bar = document.getElementById(`${id}Bar`);
+            
+            // Different color schemes for different attributes
+            if (id === 'responsiveness' || id === 'adaptability' || id === 'efficiency') {
+                // Higher is better for these
+                const hue = 120 * (roundedValue / 100);
+                bar.style.backgroundColor = `hsl(${hue}, 70%, 45%)`;
+            } else if (id === 'chaos' || id === 'rigidity' || id === 'cost') {
+                // Lower is better for these
+                const hue = 120 * (1 - roundedValue / 100);
+                bar.style.backgroundColor = `hsl(${hue}, 70%, 45%)`;
+            } else {
+                // Neutral for coordination and specialization
+                bar.style.backgroundColor = `hsl(210, 70%, 50%)`;
+            }
+        }
+        
+        // Function to update slider thumb color
+        function updateSliderColor(value) {
+            const slider = document.getElementById('complexitySlider');
+            let color;
+            
+            if (value < 35) {
+                // Red zone for underfitting
+                const intensity = 1 - (value / 35);
+                color = `rgba(231, 76, 60, ${0.5 + intensity * 0.5})`;
+            } else if (value > 65) {
+                // Blue zone for overfitting
+                const intensity = (value - 65) / 35;
+                color = `rgba(52, 152, 219, ${0.5 + intensity * 0.5})`;
+            } else {
+                // Green zone for balanced
+                const distance = Math.abs(value - 50) / 15;
+                color = `rgba(46, 204, 113, ${1 - distance * 0.5})`;
+            }
+            
+            slider.style.boxShadow = `0 0 10px ${color}`;
+        }
+
+        // Initialize slider event listener
+        document.getElementById('complexitySlider').addEventListener('input', function() {
+            updateVisualization(parseInt(this.value));
+        });
+
+        // Initialize with default value
+        updateVisualization(50);
+    </script>
+</body>
+</html>
