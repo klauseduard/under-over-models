@@ -131,24 +131,24 @@ The critical synthesis emerges here: If an organization adopts a structure whose
 
 To effectively navigate the tensions between management and technical specialist preferences regarding model complexity, organizations can adopt several strategies informed by organizational design theory and stakeholder management research:
 
-### Structured Decision-Making Processes
+### 4.3.1 Structured Decision-Making Processes
 Implementing clear, structured processes for evaluating the appropriate level of model complexity for different contexts can help balance stakeholder preferences. These processes might include formal assessments of business requirements, technical constraints, and the relative costs and benefits of different approaches. Burton and Obel's contingency framework for organizational design provides a structured approach to evaluating complexity tradeoffs based on environmental conditions, strategic orientation, and task characteristics[^6].
 
-### Shared Evaluation Criteria
+### 4.3.2 Shared Evaluation Criteria
 Developing shared criteria for evaluating model complexity can help align stakeholder perspectives. These criteria might include factors such as implementation cost, maintenance requirements, scalability, performance, accuracy, and adaptability to future needs. By explicitly acknowledging the importance of both management and technical concerns, these shared criteria can facilitate more balanced decisions.
 
-### Staged Implementation Approaches
+### 4.3.3 Staged Implementation Approaches
 Adopting staged or incremental implementation approaches can help bridge the gap between stakeholder preferences. For example, starting with a simpler model that addresses core requirements while planning for future enhancements to address additional complexity can satisfy both immediate delivery needs and longer-term quality concerns.
 
-### Cross-Functional Collaboration
+### 4.3.4 Cross-Functional Collaboration
 Promoting closer collaboration between management and technical specialists can help build mutual understanding and trust, facilitating more effective negotiation around model complexity. Cross-functional teams, shared planning sessions, and joint problem-solving activities can all support this collaboration.
 
 Mitchell, Agle, and Wood's stakeholder salience framework suggests that organizational decisions are most balanced when all relevant stakeholders have appropriate levels of power, legitimacy, and urgency in the decision-making process[^4]. Organizations can apply this framework to ensure technical specialists have sufficient "voice" in complexity decisions, particularly when they have unique domain expertise that management may lack.
 
-### Organizational Learning and Adaptation
+### 4.3.5 Organizational Learning and Adaptation
 Treating decisions about model complexity as opportunities for organizational learning can help improve future decision-making. By explicitly reviewing the outcomes of previous decisions about model complexity, organizations can refine their approach based on actual experience rather than stakeholder preferences alone.
 
-### 4.3.1 Complex Systems Safety Perspective on Stakeholder Tensions
+### 4.3.6 Complex Systems Safety Perspective on Stakeholder Tensions
 
 The tension between management and technical specialists can be further understood through the lens of complex systems safety theory. Richard Cook's influential work "How Complex Systems Fail"[^9] provides insights that are directly relevant to the underfitting/overfitting tension discussed throughout this chapter. Several of Cook's principles illuminate why the management-technical specialist dynamic is not merely organizational politics, but reflects fundamental properties of complex systems:
 
