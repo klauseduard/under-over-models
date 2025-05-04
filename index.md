@@ -48,6 +48,14 @@ Currently, the following chapters are fully edited and ready for reading:
 </div>
 
 <div class="completed-chapter">
+  <h3><a href="chapters/04-stakeholder-preferences.html">Chapter 4: Stakeholder Preferences and Model Complexity</a></h3>
+  <p>An examination of how different stakeholders - particularly management and technical specialists - tend to favor different positions on the complexity spectrum, creating a tension that organizations must navigate to find appropriate model complexity.</p>
+  <div class="chapter-metadata">
+    <span class="chapter-date">Last updated: May 2025</span>
+  </div>
+</div>
+
+<div class="completed-chapter">
   <h3><a href="chapters/06-theoretical-concepts.html">Chapter 6: Related Theoretical Concepts</a></h3>
   <p>An exploration of theoretical concepts that support the underfitting/overfitting framework, including long tail distributions, dissipative systems theory, cybernetics, entropy, Bayesian statistics, and sociotechnical systems theory.</p>
   <div class="chapter-metadata">
@@ -66,7 +74,6 @@ Currently, the following chapters are fully edited and ready for reading:
   <details>
     <summary>View Work-in-Progress Chapters</summary>
     <ul>
-      <li><a href="chapters/04-stakeholder-preferences.html">Chapter 4: Stakeholder Preferences</a></li>
       <li><a href="chapters/05-organizational-size-influence.html">Chapter 5: Organizational Size Influence</a> (Draft)</li>
       <li><a href="chapters/07-medical-systems-case.html">Chapter 7: Medical Systems Case</a> (Draft)</li>
       <li><a href="chapters/08-ai-organizational-impact.html">Chapter 8: AI Organizational Impact</a> (Draft)</li>
