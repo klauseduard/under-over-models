@@ -1,5 +1,13 @@
 # 4. Stakeholder Preferences and Model Complexity
 
+## Table of Contents
+- [4.1 Management vs. Technical Specialist Preferences](#41-management-vs-technical-specialist-preferences-through-the-lens-of-underfitting-and-overfitting)
+- [4.2 Potential Conflicts and Tradeoffs](#42-potential-conflicts-and-tradeoffs)
+- [4.3 Balancing Stakeholder Perspectives](#43-balancing-stakeholder-perspectives)
+- [4.4 Visualizing Stakeholder Dynamics](#44-visualizing-stakeholder-dynamics-around-model-complexity)
+- [4.5 Case Examples: Stakeholder Tensions in Practice](#45-case-examples-stakeholder-tensions-in-practice)
+- [4.6 AI Integration and Stakeholder Dynamics](#46-ai-integration-and-stakeholder-dynamics)
+
 ## 4.1 Management vs. Technical Specialist Preferences Through the Lens of Underfitting and Overfitting
 
 For the purpose of this chapter, 'model complexity' refers broadly to the intricacy of designs concerning organizational structures, processes, software systems, or the information they handle, viewed through the lens of the underfitting/overfitting spectrum. More formally, organizational complexity can be understood as the amount of differentiation or variety within the elements constituting an organization, such as the number of different professional specializations required (Dooley, 2002) [^14]. The tension of overfitting/underfitting often revolves around correctly identifying and addressing what Fred Brooks termed *essential complexity*—the inherent difficulty of the problem domain—versus managing *accidental complexity* introduced by our tools and methods[^10].
@@ -286,7 +294,7 @@ This approach avoided overfitting while creating a path toward greater sophistic
 
 ---
 
-## 4.6 FORWARD-LOOKING CONSIDERATIONS
+## 4.6 AI Integration and Stakeholder Dynamics
 
 *Note: This section presents emerging considerations rather than established practices. Organizations should adapt these insights to their specific context and risk tolerance.*
 
