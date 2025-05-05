@@ -528,6 +528,47 @@ Recent research on configuring viable systems during crises provides valuable in
 
 These mechanisms align with emerging best practices for maintaining viability during system disruptions - a capability that becomes increasingly critical as organizational dependence on AI systems grows. Organizations implementing tiered degradation approaches would benefit from mapping these approaches to the five VSM systems, ensuring that each system has appropriate fallback mechanisms that maintain organizational coherence during AI disruptions.
 
+#### The Irony of Automation: Organizational Knowledge Preservation
+
+Bainbridge's (1983) research on the "Ironies of Automation" identifies a fundamental paradox relevant to AI-augmented organizations: as systems become more automated, humans are increasingly expected to monitor these systems and intervene only when automation fails—precisely when situations are most complex and demanding.
+
+At an organizational level, this creates a significant resilience challenge. As AI systems handle routine operations, organizational knowledge of these operations may erode over time. This creates vulnerabilities where:
+
+1. Institutional memory of manual processes diminishes, particularly as employees who predated AI integration leave
+2. Monitoring effectiveness decreases as the task becomes increasingly passive
+3. Intervention capabilities degrade precisely when they are most needed during system failures
+
+Organizations can address these challenges through structural approaches that preserve operational knowledge:
+
+- Establishing periodic practice of critical functions without AI assistance
+- Documenting core processes before AI integration
+- Developing simulation training for AI failure scenarios
+- Implementing staff rotation between AI-augmented and conventional operations
+
+These measures complement technical resilience frameworks by addressing the human and organizational dimensions of AI dependency. They directly counter the risk of organizational structures that neglect knowledge preservation requirements.
+
+#### The Monitoring Paradox and Failure Design
+
+Bainbridge's work highlights another critical paradox directly relevant to AI-dependent organizations: "The automatic control system has been put in because it can do the job better than the operator, but yet the operator is being asked to monitor that it is working effectively." This creates a fundamental challenge for organizational resilience.
+
+Human monitoring of automated systems faces inherent cognitive limitations:
+
+1. **Vigilance degradation**: Sustained attention to automated systems that rarely require intervention is cognitively difficult to maintain
+2. **Passive processing**: Monitoring without active engagement reduces situation awareness
+3. **Confirmation bias**: Humans tend to see what they expect to see in system operations
+4. **Reduced feedback**: Automation often removes informative cues humans previously used to understand system states
+
+Organizations implementing AI face a critical design choice that affects their resilience posture. Traditional approaches often emphasize "graceful degradation" of AI systems—attempting to preserve partial functionality during failures. However, Bainbridge's insights suggest an alternative approach may be more effective for maintaining organizational resilience: designing for obvious, detectable failures rather than subtle degradation.
+
+This "failure obviousness" approach includes:
+
+- Creating clear, unambiguous indicators when AI systems shift from normal operation
+- Designing explicit state transitions rather than gradual capability reduction
+- Implementing monitoring systems that actively require human engagement rather than passive observation
+- Providing explicit contextual cues about AI system limitations during degraded states
+
+This approach directly addresses the cognitive monitoring limitations that traditional fault-tolerant designs often overlook. By making failures more obvious rather than more graceful, organizations can better activate human intervention capabilities when most needed.
+
 **Strategic Questions:** How can organizations balance the benefits of AI integration with appropriate resilience? What safeguards are necessary to prevent critical dependency on AI systems with potential points of failure?
 
 ### 8.6.2 Economic Structures
@@ -1264,28 +1305,99 @@ Each phase of this lifecycle involves specific governance considerations:
 - Maintaining comprehensive documentation of changes
 - Evaluating business impact of refinements
 
-While Chapter 9 explores specific testing methodologies and evaluation frameworks for prompts, this lifecycle view emphasizes how prompt engineering integrates with broader organizational processes.
+While Chapter 9 explores specific testing methodologies and evaluation frameworks for 
+prompts, this lifecycle view emphasizes how prompt engineering integrates with broader 
+organizational processes.
 
 #### Building Organizational Prompt Engineering Capabilities
-
-Organizations seeking to develop prompt engineering as a strategic capability should consider several key initiatives:
-
-1. **Establishing Communities of Practice** - Creating cross-functional groups to share prompt engineering knowledge and best practices
-2. **Developing Internal Guidelines** - Creating organization-specific frameworks for prompt development, documentation, and governance
-3. **Implementing Prompt Libraries** - Building repositories of effective prompts that can be reused and adapted across multiple use cases
-4. **Training Programs** - Developing educational resources that enhance prompt engineering skills across technical and business teams
-
-These initiatives help transform prompt engineering from an individual skill to an organizational capability that can be systematically developed, measured, and improved over time.
-
+Organizations seeking to develop prompt engineering as a strategic capability should 
+consider several key initiatives:
+1. **Establishing Communities of Practice** - Creating cross-functional groups to share 
+prompt engineering knowledge and best practices
+2. **Developing Internal Guidelines** - Creating organization-specific frameworks for 
+prompt development, documentation, and governance
+3. **Implementing Prompt Libraries** - Building repositories of effective prompts that 
+can be reused and adapted across multiple use cases
+4. **Training Programs** - Developing educational resources that enhance prompt 
+engineering skills across technical and business teams
+These initiatives help transform prompt engineering from an individual skill to an 
+organizational capability that can be systematically developed, measured, and improved 
+over time.
 #### Integration with Multi-Agent Orchestration
+When implementing the multi-agent patterns discussed in Section 8.8.2, prompt engineering 
+becomes particularly critical for:
+1. **Agent Specialization** - Designing prompts that establish clear boundaries between 
+specialized agent capabilities
+2. **Coordination Mechanisms** - Creating effective prompts for manager agents that 
+orchestrate workflows
+3. **Human-AI Interfaces** - Developing prompts that facilitate smooth transitions 
+between AI and human contributors
 
-When implementing the multi-agent patterns discussed in Section 8.8.2, prompt engineering becomes particularly critical for:
+By treating prompt engineering as a distinct organizational capability integrated with 
+broader AI governance frameworks, organizations can achieve more consistent, effective, 
+and responsible outcomes from their multi-agent AI implementations.
 
-1. **Agent Specialization** - Designing prompts that establish clear boundaries between specialized agent capabilities
-2. **Coordination Mechanisms** - Creating effective prompts for manager agents that orchestrate workflows
-3. **Human-AI Interfaces** - Developing prompts that facilitate smooth transitions between AI and human contributors
 
-By treating prompt engineering as a distinct organizational capability integrated with broader AI governance frameworks, organizations can achieve more consistent, effective, and responsible outcomes from their multi-agent AI implementations.
+
+### 8.8.7 Human-Computer Collaboration Models in Multi-Agent Systems
+
+Bainbridge's (1983) research on human-computer collaboration provides valuable insights for organizations implementing multi-agent AI systems. Her work, though preceding modern AI by decades, identified collaboration patterns that remain relevant for designing effective human-AI work systems.
+
+#### Four Types of Computer Assistance
+
+Bainbridge identified four primary approaches to human-computer collaboration that provide a framework for designing multi-agent systems:
+
+**1. Instructions and Advice**
+Early computer systems primarily provided instructions or advice to human operators. In multi-agent AI environments, this evolves into systems that generate recommendations while leaving decision authority with humans. The design challenge identified by Bainbridge remains relevant: ensuring recommendations are delivered with appropriate context that enables humans to evaluate their validity rather than creating blind reliance.
+
+**2. Error Mitigation**
+Computer systems can detect and correct human errors. In AI-augmented organizations, this takes the form of AI agents that validate human actions, check for inconsistencies, or identify potential process defects. However, Bainbridge notes that poorly designed error mitigation can create new problems when:
+- The system incorrectly flags valid actions as errors
+- Error messages lack sufficient context for correction
+- The interaction design creates unnecessary interruptions
+
+**3. Sophisticated Displays**
+Information presentation significantly affects human-computer collaboration effectiveness. Bainbridge highlights that display design must balance completeness with cognitive processing limitations. In multi-agent systems, this translates to designing interfaces that provide visibility into AI agent actions without overwhelming human monitors with excessive detail. As agents proliferate, organizations need deliberate strategies for what information to surface about agent operations.
+
+**4. Workload Management**
+Perhaps most relevant to modern multi-agent systems is Bainbridge's analysis of computer-assisted workload management. She identified that computerized assistance can sometimes increase rather than decrease human workload when:
+- The system requires monitoring that demands continuous attention
+- Automation creates new coordination requirements
+- The human must maintain situation awareness to intervene effectively
+- The system introduces tool management overhead
+
+#### The Workload Paradox in Multi-Agent Systems
+
+A critical insight from Bainbridge is that computer assistance does not automatically reduce human workload. This "workload paradox" is particularly relevant for organizations implementing multi-agent AI systems. As Bainbridge observed, "more sophisticated on-line methods of adapting computer aiding to human workload will only be possible if the workload computations can be done in real time."
+
+In multi-agent implementations, this manifests in several ways:
+
+1. **Coordination Overhead**: As agent numbers increase, humans often spend more time coordinating between agents and less time on direct value-adding activities
+
+2. **Interface Proliferation**: Each agent may have its own interface, creating cognitive switching costs that offset productivity gains
+
+3. **Prompt Management Burden**: Maintaining effective prompts across multiple agents requires ongoing effort that constitutes a new form of work
+
+4. **Uncertainty Handling**: When agents produce inconsistent outputs, resolving these inconsistencies falls to humans
+
+Organizations can address these challenges through:
+
+- Unified interfaces that provide consistent interaction patterns across multiple agents
+- Clear allocation of responsibilities between humans and various AI agents
+- Explicit consideration of cognitive work required to supervise multi-agent systems
+- Measurement systems that track coordination costs alongside productivity gains
+
+#### Implications for Organizational Design
+
+Bainbridge's research suggests that effective multi-agent systems require organizational structures that explicitly account for human-AI interaction patterns. Organizations implementing such systems should consider:
+
+
+- Creating roles specifically focused on agent orchestration and supervision
+- Establishing feedback mechanisms that rapidly identify increased coordination burdens
+- Developing metrics that capture the full cognitive work of human-AI collaboration
+- Designing processes that maintain human understanding of system operations
+
+By incorporating these considerations into multi-agent implementation strategies, organizations can better navigate the balance between automation benefits and the new forms of work that such systems create.
 
 ## 8.9 Adaptation Strategies for Human-AI Organizations
 
@@ -1338,6 +1450,8 @@ While this chapter has focused on the structural and organizational impacts of A
 ## References
 
 Ateeq, A., Milhem, M., Alzoraiki, M., Dawwas, M. I. F., Ali, S. A., & Yahia Al Astal, A. (2024). The impact of AI as a mediator on effective communication: enhancing interaction in the digital age. Frontiers in Human Dynamics, 6, 1467384. https://doi.org/10.3389/fhumd.2024.1467384
+
+Bainbridge, L. (1983). Ironies of automation. Automatica, 19(6), 775-779. https://doi.org/10.1016/0005-1098(83)90046-8
 
 Berretta, S., Tausch, A., Ontrup, G., Gilles, B., Peifer, C., & Kluge, A. (2023). Defining human-AI teaming the human-centered way: a scoping review and network analysis. Frontiers in Artificial Intelligence, 6, 1250725. https://doi.org/10.3389/frai.2023.1250725
 
