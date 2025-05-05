@@ -48,7 +48,7 @@ Currently, the following chapters are fully edited and ready for reading:
 </div>
 
 <div class="completed-chapter">
-  <h3><a href="chapters/04-stakeholder-preferences.html">Chapter 4: Stakeholder Preferences and Model Complexity</a></h3>
+  <h3><a href="chapters/04-stakeholder-preferences.html">Chapter 4: Stakeholder Dynamics: Competing Perspectives on Domain Complexity</a></h3>
   <p>An examination of how different stakeholders - particularly management and technical specialists - tend to favor different positions on the complexity spectrum, creating a tension that organizations must navigate to find appropriate model complexity.</p>
   <div class="chapter-metadata">
     <span class="chapter-date">Last updated: May 2025</span>

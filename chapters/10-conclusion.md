@@ -8,7 +8,7 @@ This book has explored the application of underfitting and overfitting analogies
 
 **Organizational Models (Chapter 3):** Organizational structures were examined as models reflecting communication and hierarchy. The inherent trade-off between simpler (agile, potentially underfitting) and complex (hierarchical, potentially overfitting) structures was discussed, highlighting the role of DDD concepts like Bounded Contexts in managing this. AI was introduced as a factor potentially enabling flatter, more dynamic structures while adding new coordination complexities.
 
-**Stakeholder Preferences (Chapter 4):** The tension between management preferences for simpler, scalable models and technical specialists' need for detailed approaches was explored, emphasizing the need for balance.
+**Stakeholder Dynamics (Chapter 4):** The tension between management perspectives favoring simpler domain models and technical specialists advocating for more detailed approaches was explored, emphasizing how stakeholders often focus on different dimensions of complexity.
 
 **Organizational Size (Chapter 5):** We saw how large organizations often lean towards standardization (risking underfitting), while smaller specialized firms might overfit to their niche. AI was presented as a potential tool to help moderate these tendencies, though AI adoption strategies themselves can be influenced by size.
 
