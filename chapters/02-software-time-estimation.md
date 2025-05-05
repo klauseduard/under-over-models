@@ -522,14 +522,23 @@ depending on:
 This increased variance challenges both expert judgment and historical data-based estimations, as the fundamental
 relationships between task complexity and time required have been disrupted.
 
+<figure> <img src="../images/ai-productivity-variance.svg" alt="AI Productivity Variance - comparing development time
+across different task types with and without AI assistance" width="700" /> <figcaption>Figure 2.5: Productivity variance
+across task types when using AI assistance (illustrative, not using real metrics)</figcaption> </figure> <br/><br/>
+
+**Skill Deterioration and Manual Takeover:** A challenge identified by Bainbridge (1983) in her work "Ironies of Automation" applies to AI-assisted development. Bainbridge noted that "physical skills deteriorate when they are not used, particularly the refinements of gain and timing" and that "a formerly experienced operator who has been monitoring an automated process may now be an inexperienced one" (Bainbridge, 1983). In software development, developers who rely on AI assistance may experience:
+
+- Atrophy of manual coding skills, particularly for complex algorithms or optimizations
+- Reduced ability to estimate tasks when AI tools prove insufficient
+- Difficulty taking over when AI generates code requiring manual intervention
+- Degraded calibration of effort estimates as task complexity becomes less apparent
+
+This creates an automation paradox: AI tools that make development more efficient may undermine the frameworks developers need to provide reliable estimates and handle exceptions.
+
 From an [entropy](06-theoretical-concepts.md#63-entropy-and-software-complexity) perspective, AI tools increase the
 overall system entropy by introducing new variables with uncertain impacts. The relationship between task complexity and
 completion time—previously somewhat predictable—becomes more probabilistic and less deterministic, making traditional
 estimation models less reliable.
-
-<figure> <img src="../images/ai-productivity-variance.svg" alt="AI Productivity Variance - comparing development time
-across different task types with and without AI assistance" width="700" /> <figcaption>Figure 2.5: Productivity variance
-across task types when using AI assistance (illustrative, not using real metrics)</figcaption> </figure> <br/><br/>
 
 **Incomplete Experience Base:** Organizations lack sufficient historical data about AI-assisted workflows to create
 reliable estimation methods. Traditional estimation approaches based on pre-AI development experiences will inherently *underfit* the new reality by
@@ -537,21 +546,20 @@ missing crucial interaction patterns between developers and AI tools. Conversely
 based on limited AI-assisted experiences risk *overfitting* to specific tool capabilities or early adoption patterns
 that may not generalize.
 
-**AI-Specific Optimism Bias:** AI tools introduce a new dimension of optimism bias in estimation:
-- The tendency to overestimate productivity gains based on carefully curated demos or best-case scenarios
-- "AI solutionism" - believing AI can solve complex problems with minimal human intervention
-- Discounting learning curves and adaptation periods needed for effective AI tool usage
-- Management pressure to reduce estimates based on general AI hype rather than measured team performance
+**AI-Specific Optimism Bias:** AI tools introduce new estimation biases:
+- Overestimating productivity gains based on demos or best-case scenarios
+- Assuming AI can solve complex problems with minimal human intervention
+- Discounting learning curves needed for effective AI tool usage
+- Pressure to reduce estimates based on AI capabilities rather than measured performance
+- Overlooking what Bainbridge (1983) identified as an automation irony: automating routine development tasks may increase the complexity of remaining human tasks like troubleshooting and exception handling
 
-This AI-specific optimism bias compounds traditional estimation biases and can lead to severe underestimation,
-especially for novel or complex tasks where AI tools have yet to demonstrate consistent productivity gains.
+These biases can lead to underestimation, especially for novel tasks where AI tools lack proven productivity gains.
 
-**Hidden Overhead Costs:** While AI promises productivity gains, it introduces new overhead activities that remain
-poorly quantified in most estimation approaches:
+**Hidden Overhead Costs:** AI introduces overhead activities often missing from estimation approaches:
 - Prompt engineering and refinement time
-- Verification and quality control of AI-generated code
-- Troubleshooting AI-specific errors and limitations
-- Learning curves for effectively using AI tools
+- Verification of AI-generated code
+- Troubleshooting AI-specific errors
+- Learning curves for new AI tools
 
 **New Classes of Errors and Challenges:** AI-assisted development introduces novel error types and challenges that
 impact estimation:
