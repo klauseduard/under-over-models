@@ -14,7 +14,7 @@ This publication explores how concepts of underfitting and overfitting provide a
 
 ## Available Chapters
 
-Currently, the following chapters are fully edited and ready for reading:
+Currently, the following chapters are (somewhat) edited and ready for reading:
 
 <div class="completed-chapter">
   <p>Collection of resources that can be examined independently from the chapters they support.</p>
