@@ -33,7 +33,7 @@ Currently, the following chapters are fully edited and ready for reading:
 
 <div class="completed-chapter">
   <h3><a href="chapters/02-software-time-estimation.html">Chapter 2: Underfitting and Overfitting in Software Time Estimation</a></h3>
-  <p>An in-depth analysis of how software estimation techniques can either oversimplify (underfit) or overspecialize (overfit), with detailed discussions of COCOMO, Function Points, Planning Poker, Expert Judgment, and the impact of AI assistance on estimation practices.</p>
+  <p>An exploration of software time estimation as a modeling problem, examining how different approaches from Bayesian methods to Monte Carlo simulation handle uncertainty. Analyzes traditional techniques (COCOMO, Function Points, Planning Poker, Expert Judgment) through the underfitting/overfitting lens, and explores how AI integration creates new estimation challenges. Introduces the concept of long-tail risk distributions in software projects.</p>
   <div class="chapter-metadata">
     <span class="chapter-date">Last updated: April 2025</span>
   </div>
