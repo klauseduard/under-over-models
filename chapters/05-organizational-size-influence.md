@@ -275,6 +275,8 @@ Looking ahead, it is important to recognize that organizational forms and bounda
 
 IBM's transformation in the early 1990s under CEO Lou Gerstner initially demonstrated promising results in recalibrating an overfitted organizational structure. By the early 1990s, IBM had developed into a complex bureaucracy with seven management layers between front-line employees and executive leadership. This elaborate structure exhibited characteristic signs of overfitting: slow decision-making, inability to adapt to market changes, and declining customer satisfaction.
 
+![Microsoft Pivot](../images/ibm-consolidation.svg)
+
 The initial restructuring included:
 - Reducing management layers from seven to five
 - Creating cross-functional teams focused on key customer journeys

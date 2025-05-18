@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="500" fill="#f8f9fa" rx="10" ry="10"/>
+    
+    <!-- Title -->
+    <text x="400" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">IBM Consolidation: Seven-Layer to Five-Layer Hierarchy</text>
+    
+    <!-- Before and After Labels -->
+    <text x="200" y="70" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#555">BEFORE: Complex Hierarchy</text>
+    <text x="600" y="70" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#555">AFTER: Streamlined Structure</text>
+    
+    <!-- Before Structure (Left Side) -->
+    <!-- Level 1: CEO -->
+    <rect x="125" y="100" width="150" height="30" rx="5" ry="5" fill="#1F77B4" stroke="#12659E" stroke-width="1"/>
+    <text x="200" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">CEO (Level 1)</text>
+    
+    <line x1="200" y1="130" x2="200" y2="140" stroke="#666" stroke-width="2"/>
+    
+    <!-- Level 2: Executive VPs -->
+    <rect x="125" y="140" width="150" height="30" rx="5" ry="5" fill="#2A87C8" stroke="#1E71AC" stroke-width="1"/>
+    <text x="200" y="160" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Executive VPs (Level 2)</text>
+    
+    <line x1="200" y1="170" x2="200" y2="180" stroke="#666" stroke-width="2"/>
+    
+    <!-- Level 3: Division Presidents -->
+    <rect x="125" y="180" width="150" height="30" rx="5" ry="5" fill="#3498DB" stroke="#2880B9" stroke-width="1"/>
+    <text x="200" y="200" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Division Presidents (L3)</text>
+    
+    <line x1="200" y1="210" x2="200" y2="220" stroke="#666" stroke-width="2"/>
+    <line x1="65" y1="220" x2="335" y2="220" stroke="#666" stroke-width="2"/>
+    
+    <line x1="100" y1="220" x2="100" y2="230" stroke="#666" stroke-width="1"/>
+    <line x1="200" y1="220" x2="200" y2="230" stroke="#666" stroke-width="1"/>
+    <line x1="300" y1="220" x2="300" y2="230" stroke="#666" stroke-width="1"/>
+    
+    <!-- Level 4: General Managers -->
+    <rect x="25" y="230" width="150" height="30" rx="5" ry="5" fill="#5DADE2" stroke="#4A8BC0" stroke-width="1"/>
+    <text x="100" y="250" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">General Managers (L4)</text>
+    
+    <rect x="225" y="230" width="150" height="30" rx="5" ry="5" fill="#5DADE2" stroke="#4A8BC0" stroke-width="1"/>
+    <text x="300" y="250" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">General Managers (L4)</text>
+    
+    <line x1="100" y1="260" x2="100" y2="270" stroke="#666" stroke-width="1"/>
+    <line x1="300" y1="260" x2="300" y2="270" stroke="#666" stroke-width="1"/>
+    
+    <!-- Level 5: Directors -->
+    <rect x="25" y="270" width="150" height="30" rx="5" ry="5" fill="#85C1E9" stroke="#6FA8CE" stroke-width="1"/>
+    <text x="100" y="290" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Directors (Level 5)</text>
+    
+    <rect x="225" y="270" width="150" height="30" rx="5" ry="5" fill="#85C1E9" stroke="#6FA8CE" stroke-width="1"/>
+    <text x="300" y="290" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Directors (Level 5)</text>
+    
+    <line x1="100" y1="300" x2="100" y2="310" stroke="#666" stroke-width="1"/>
+    <line x1="300" y1="300" x2="300" y2="310" stroke="#666" stroke-width="1"/>
+    
+    <!-- Level 6: Managers -->
+    <rect x="25" y="310" width="150" height="30" rx="5" ry="5" fill="#AED6F1" stroke="#93BBD6" stroke-width="1"/>
+    <text x="100" y="330" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Managers (Level 6)</text>
+    
+    <rect x="225" y="310" width="150" height="30" rx="5" ry="5" fill="#AED6F1" stroke="#93BBD6" stroke-width="1"/>
+    <text x="300" y="330" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Managers (Level 6)</text>
+    
+    <line x1="100" y1="340" x2="100" y2="350" stroke="#666" stroke-width="1"/>
+    <line x1="300" y1="340" x2="300" y2="350" stroke="#666" stroke-width="1"/>
+    
+    <!-- Level 7: Team Members -->
+    <rect x="25" y="350" width="150" height="30" rx="5" ry="5" fill="#D6EAF8" stroke="#B9CDDB" stroke-width="1"/>
+    <text x="100" y="370" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">Team Members (L7)</text>
+    
+    <rect x="225" y="350" width="150" height="30" rx="5" ry="5" fill="#D6EAF8" stroke="#B9CDDB" stroke-width="1"/>
+    <text x="300" y="370" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#333">Team Members (L7)</text>
+    
+    <!-- Departmental silos -->
+    <rect x="25" y="390" width="150" height="30" rx="5" ry="5" fill="#E8F8F5" stroke="#C5D9D7" stroke-width="1" stroke-dasharray="5,3"/>
+    <text x="100" y="410" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">Functional Silos</text>
+    
+    <rect x="225" y="390" width="150" height="30" rx="5" ry="5" fill="#E8F8F5" stroke="#C5D9D7" stroke-width="1" stroke-dasharray="5,3"/>
+    <text x="300" y="410" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">Functional Silos</text>
+    
+    <line x1="100" y1="380" x2="100" y2="390" stroke="#666" stroke-width="1" stroke-dasharray="5,3"/>
+    <line x1="300" y1="380" x2="300" y2="390" stroke="#666" stroke-width="1" stroke-dasharray="5,3"/>
+    
+    <!-- Limited cross-functional collaboration -->
+    <line x1="175" y1="370" x2="225" y2="370" stroke="#666" stroke-width="1" stroke-dasharray="2,2"/>
+    
+    <!-- After Structure (Right Side) -->
+    <!-- Level 1: CEO -->
+    <rect x="525" y="100" width="150" height="30" rx="5" ry="5" fill="#1F77B4" stroke="#12659E" stroke-width="1"/>
+    <text x="600" y="120" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">CEO (Level 1)</text>
+    
+    <line x1="600" y1="130" x2="600" y2="140" stroke="#666" stroke-width="2"/>
+    
+    <!-- Level 2: Executive Leadership -->
+    <rect x="525" y="140" width="150" height="30" rx="5" ry="5" fill="#2A87C8" stroke="#1E71AC" stroke-width="1"/>
+    <text x="600" y="160" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Executive Leaders (L2)</text>
+    
+    <line x1="600" y1="170" x2="600" y2="180" stroke="#666" stroke-width="2"/>
+    <line x1="470" y1="180" x2="730" y2="180" stroke="#666" stroke-width="2"/>
+    
+    <line x1="525" y1="180" x2="525" y2="190" stroke="#666" stroke-width="1"/>
+    <line x1="600" y1="180" x2="600" y2="190" stroke="#666" stroke-width="1"/>
+    <line x1="675" y1="180" x2="675" y2="190" stroke="#666" stroke-width="1"/>
+    
+    <!-- Level 3: Business Unit Leaders -->
+    <rect x="450" y="190" width="150" height="30" rx="5" ry="5" fill="#3498DB" stroke="#2880B9" stroke-width="1"/>
+    <text x="525" y="210" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Business Unit Leads (L3)</text>
+    
+    <rect x="625" y="190" width="150" height="30" rx="5" ry="5" fill="#3498DB" stroke="#2880B9" stroke-width="1"/>
+    <text x="700" y="210" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Business Unit Leads (L3)</text>
+    
+    <line x1="525" y1="220" x2="525" y2="235" stroke="#666" stroke-width="1"/>
+    <line x1="700" y1="220" x2="700" y2="235" stroke="#666" stroke-width="1"/>
+    
+    <!-- Level 4: Team Leaders -->
+    <rect x="450" y="235" width="150" height="30" rx="5" ry="5" fill="#5DADE2" stroke="#4A8BC0" stroke-width="1"/>
+    <text x="525" y="255" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Team Leaders (Level 4)</text>
+    
+    <rect x="625" y="235" width="150" height="30" rx="5" ry="5" fill="#5DADE2" stroke="#4A8BC0" stroke-width="1"/>
+    <text x="700" y="255" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Team Leaders (Level 4)</text>
+    
+    <line x1="525" y1="265" x2="525" y2="280" stroke="#666" stroke-width="1"/>
+    <line x1="700" y1="265" x2="700" y2="280" stroke="#666" stroke-width="1"/>
+    
+    <!-- Level 5: Team Members -->
+    <rect x="450" y="280" width="150" height="30" rx="5" ry="5" fill="#85C1E9" stroke="#6FA8CE" stroke-width="1"/>
+    <text x="525" y="300" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Team Members (Level 5)</text>
+    
+    <rect x="625" y="280" width="150" height="30" rx="5" ry="5" fill="#85C1E9" stroke="#6FA8CE" stroke-width="1"/>
+    <text x="700" y="300" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="white">Team Members (Level 5)</text>
+    
+    <!-- Cross-functional teams -->
+    <rect x="450" y="330" width="325" height="50" rx="5" ry="5" fill="#A3E4D7" stroke="#8BC4B9" stroke-width="1"/>
+    <text x="612" y="350" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Cross-Functional Teams</text>
+    <text x="612" y="370" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">Product, Engineering, Design, Operations, Support</text>
+    
+    <line x1="525" y1="310" x2="525" y2="330" stroke="#666" stroke-width="1"/>
+    <line x1="700" y1="310" x2="700" y2="330" stroke="#666" stroke-width="1"/>
+    
+    <!-- Strong cross-unit collaboration -->
+    <line x1="600" y1="250" x2="625" y2="250" stroke="#666" stroke-width="2"/>
+    <line x1="600" y1="295" x2="625" y2="295" stroke="#666" stroke-width="2"/>
+    
+    <!-- Agile teams -->
+    <rect x="450" y="390" width="155" height="30" rx="5" ry="5" fill="#E8F8F5" stroke="#C5D9D7" stroke-width="1"/>
+    <text x="528" y="410" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">Agile Product Teams</text>
+    
+    <rect x="620" y="390" width="155" height="30" rx="5" ry="5" fill="#E8F8F5" stroke="#C5D9D7" stroke-width="1"/>
+    <text x="698" y="410" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#333">DevOps Teams</text>
+    
+    <line x1="528" y1="380" x2="528" y2="390" stroke="#666" stroke-width="1"/>
+    <line x1="698" y1="380" x2="698" y2="390" stroke="#666" stroke-width="1"/>
+    
+    <!-- Arrow connecting before and after -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+        </marker>
+    </defs>
+    <line x1="375" y1="245" x2="415" y2="245" stroke="#666" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+    
+    <!-- Key changes annotation -->
+    <rect x="330" y="100" width="100" height="90" rx="5" ry="5" fill="#FFC000" fill-opacity="0.2" stroke="#D9A600" stroke-width="1"/>
+    <text x="380" y="120" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Key Changes:</text>
+    <text x="380" y="140" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• 7 → 5 layers</text>
+    <text x="380" y="155" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Reduced middle</text>
+    <text x="380" y="170" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">  management</text>
+    <text x="380" y="185" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">• Cross-functional</text>
+</svg>
