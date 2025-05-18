@@ -6,6 +6,8 @@ The relationship between an organization's size, its life-cycle phase, and the a
 
 In this context, **efficiency** refers to doing things in the most resource-saving way possible — minimizing time, effort, or cost. **Effectiveness**, on the other hand, means achieving the desired outcomes or goals, even if it requires more resources. Throughout an organization's life cycle, the balance between efficiency and effectiveness shifts, influencing the appropriate complexity of operating models. Small organizations often prioritize efficiency with simpler models, while large organizations typically emphasize effectiveness through more sophisticated frameworks. During phases of contraction or pivoting, organizations face distinct challenges in recalibrating these models to maintain appropriate fit.
 
+> **Note on Public Sector Models:** This efficiency-effectiveness tension is particularly acute in government organizations, where a disproportionate focus on efficiency can undermine effectiveness. While private sector organizations primarily answer to shareholders seeking return on investment, public organizations must serve broader societal goals that often resist straightforward measurement. Recent government reform initiatives often emphasize private-sector-style efficiency, yet public service delivery fundamentally requires effectiveness – achieving outcomes for citizens even when doing so is not the most "efficient" use of resources. This represents a critical distinction when modeling public versus private operating frameworks, as government agencies operate in domains where markets cannot or should not dominate and where multiple competing values beyond efficiency must be balanced.
+
 ![Organizational Size and Model Complexity Relationship](../images/org-complexity-size-relationship.svg)
 
 ### 5.1.2 Complexity Growth with Size
@@ -424,16 +426,22 @@ Blau, P. M. (1970). A Formal Theory of Differentiation in Organizations. America
 
 Chandler, A. D. (1962). Strategy and Structure: Chapters in the History of the American Industrial Enterprise. MIT Press.
 
+Colvard, J. (2001). "Effectiveness vs. efficiency." Government Executive. https://www.govexec.com/magazine/magazine-management/2001/04/effectiveness-vs-efficiency/8737/
+
+Davenport, T. H., & Mittal, N. (2022). "How Generative AI Is Changing Creative Work." Harvard Business Review. https://hbr.org/2022/11/how-generative-ai-is-changing-creative-work
+
 Lawrence, P. R., & Lorsch, J. W. (1967). Organization and Environment: Managing Differentiation and Integration. Harvard Business School Press.
 
 Mintzberg, H. (1980). Structure in 5's: A Synthesis of the Research on Organization Design. Management Science, 26(3), 322-341.
 
-Westerman, G., Bonnet, D., & McAfee, A. (2014). Leading Digital: Turning Technology into Business Transformation. Harvard Business Review Press.
+Narain, K., Ghosh, B., Wilson, H. J., & Shukla, P. (2025). "3 Ways AI Is Changing How Companies Work." Harvard Business Review. https://hbr.org/2025/01/3-ways-ai-is-changing-how-companies-work
+
+Ramanna, K. (2024). "Governments Should Be Effective, Not Efficient." Harvard Business Review. https://hbr.org/2024/12/governments-should-be-effective-not-efficient
+
+Sahni, N., & Singhal, S. (2023). "US government productivity: The roles government plays." McKinsey. https://www.mckinsey.com/industries/public-sector/our-insights/us-government-productivity-the-roles-government-plays
 
 "The Nine Elements of Digital Transformation." MIT Sloan Management Review. https://sloanreview.mit.edu/article/the-nine-elements-of-digital-transformation/
 
-Davenport, T. H., & Mittal, N. (2022). "How Generative AI Is Changing Creative Work." Harvard Business Review. https://hbr.org/2022/11/how-generative-ai-is-changing-creative-work
+Westerman, G., Bonnet, D., & McAfee, A. (2014). Leading Digital: Turning Technology into Business Transformation. Harvard Business Review Press.
 
 Zao-Sanders, M. (2024). "How AI Can Change the Way Your Company Gets Work Done." Harvard Business Review. https://hbr.org/2024/07/how-ai-can-change-the-way-your-company-gets-work-done
-
-Narain, K., Ghosh, B., Wilson, H. J., & Shukla, P. (2025). "3 Ways AI Is Changing How Companies Work." Harvard Business Review. https://hbr.org/2025/01/3-ways-ai-is-changing-how-companies-work
