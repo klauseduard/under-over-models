@@ -357,7 +357,7 @@ Looking ahead, it is important to recognize that organizational forms and bounda
 
 ## 5.6 Case Studies: Model Fit Beyond Growth
 
-**TODO: Review**: The case studies below illustrate how organizations adapt their structural models during periods of consolidation or strategic pivoting. While growth-focused transformations often involve adding complexity, these examples demonstrate how organizations can recalibrate their models without necessarily changing size—sometimes requiring simplification, other times requiring targeted restructuring. The visualization below illustrates typical structural changes during pivots and consolidations, highlighting how organizations realign their components to support new strategic directions or adapt to changed circumstances.
+The case studies below illustrate how organizations adapt their structural models during periods of consolidation or strategic pivoting. While growth-focused transformations often involve adding complexity, these examples demonstrate how organizations can recalibrate their models without necessarily changing size—sometimes requiring simplification, other times requiring targeted restructuring. The visualization below illustrates typical structural changes during pivots and consolidations, highlighting how organizations realign their components to support new strategic directions or adapt to changed circumstances.
 
 ![Pivot and Consolidation Structural Changes](../images/pivot-consolidation-structural-changes.svg)
 
