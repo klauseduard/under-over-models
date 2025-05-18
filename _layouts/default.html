@@ -167,13 +167,6 @@
       {{ content }}
       </div>
       
-      <!-- Corner controls panel -->
-      <div id="corner-controls" class="corner-controls">
-        <button id="sidebar-toggle" class="control-button" title="Toggle sidebar">☰</button>
-        <button id="theme-toggle" class="control-button" title="Change theme">🎨</button>
-      </div>
-      
-
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     
@@ -187,8 +180,6 @@
         const sidebar = document.getElementById('sidebar');
         const content = document.getElementById('content');
         const resizeHandle = document.getElementById('resize-handle');
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
         
         // Default values
@@ -257,46 +248,6 @@
           localStorage.setItem('sidebarWidth', defaultSidebarWidth);
         });
         
-        // Sidebar toggle
-        sidebarToggle.addEventListener('click', function() {
-          sidebar.classList.toggle('hidden');
-          content.classList.toggle('full-width');
-          resizeHandle.classList.toggle('hidden');
-          localStorage.setItem('sidebarHidden', sidebar.classList.contains('hidden'));
-        });
-        
-        // Restore sidebar state
-        if (localStorage.getItem('sidebarHidden') === 'true') {
-          sidebar.classList.add('hidden');
-          content.classList.add('full-width');
-          resizeHandle.classList.add('hidden');
-        }
-        
-        // Theme toggle cycles through themes: warm -> light -> dark -> warm
-        themeToggle.addEventListener('click', function() {
-          const currentTheme = localStorage.getItem('theme') || 'warm';
-          let newTheme;
-          
-          if (currentTheme === 'warm') {
-            newTheme = 'light';
-            body.classList.remove('warm-mode', 'dark-mode');
-            body.classList.add('light-mode');
-          } else if (currentTheme === 'light') {
-            newTheme = 'dark';
-            body.classList.remove('warm-mode', 'light-mode');
-            body.classList.add('dark-mode');
-          } else {
-            newTheme = 'warm';
-            body.classList.remove('light-mode', 'dark-mode');
-            body.classList.add('warm-mode');
-          }
-          
-          localStorage.setItem('theme', newTheme);
-          
-          // Update the button tooltip to show current theme
-          themeToggle.title = `Theme: ${newTheme.charAt(0).toUpperCase() + newTheme.slice(1)}`;
-        });
-        
         // Load saved theme
         const savedTheme = localStorage.getItem('theme') || 'warm';
         if (savedTheme === 'light') {
@@ -306,9 +257,6 @@
         } else {
           body.classList.add('warm-mode');
         }
-        
-        // Update the button tooltip to show current theme
-        themeToggle.title = `Theme: ${savedTheme.charAt(0).toUpperCase() + savedTheme.slice(1)}`;
         
         // Table of contents generation
         if (window.location.pathname.includes('/chapters/')) {

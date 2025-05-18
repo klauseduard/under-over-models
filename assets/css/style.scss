@@ -132,36 +132,7 @@ body.resizing .resize-handle {
   display: block;
 }
 
-/* Corner controls */
-.corner-controls {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 30;
-  display: flex;
-  gap: 8px;
-}
 
-.control-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  background-color: rgba(255, 255, 255, 0.95);
-  border: 1px solid #ddd;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-  transition: all 0.2s ease;
-}
-
-.control-button:hover {
-  background-color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
 
 body.resizing {
   cursor: col-resize;
@@ -490,11 +461,7 @@ body.light-mode .theme-toggles {
     right: 10px;
   }
   
-  .corner-controls {
-    bottom: 10px;
-    right: 10px;
-    flex-direction: row;
-  }
+
   
   .theme-selector {
     bottom: auto;
@@ -1230,19 +1197,14 @@ body.styles-loaded .content.full-width {
     width: 100%;
   }
   
-  .corner-controls {
-    top: 10px;
-    right: 10px;
-  }
+
 }
 
 /* Print styling */
 @media print {
   .sidebar, 
   .resize-handle,
-  .corner-controls {
-    display: none !important;
-  }
+
   
   .content {
     margin-left: 0 !important;
