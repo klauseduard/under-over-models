@@ -99,6 +99,9 @@
         </details>
       </header>
 
+      <!-- Draggable resize border between sidebar and content -->
+      <div id="resize-border" class="resize-border" title="Drag to resize"></div>
+
       <section id="content" class="content">
       <!-- Show draft banner for incomplete chapters -->
       {% if page.path contains 'chapters/' and page.path != 'chapters/01-introduction.md' and page.path != 'chapters/02-software-time-estimation.md' and page.path != 'chapters/03-organizational-models.md' and page.path != 'chapters/04-stakeholder-preferences.md' and page.path != 'chapters/06-theoretical-concepts.md' %}
@@ -156,6 +159,7 @@
       document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.getElementById('sidebar');
         const content = document.getElementById('content');
+        const resizeBorder = document.getElementById('resize-border');
         const sidebarToggle = document.getElementById('sidebar-toggle');
         const themeToggle = document.getElementById('theme-toggle');
         const themeSelector = document.getElementById('theme-selector');
@@ -165,44 +169,103 @@
         const widthIncrease = document.getElementById('width-increase');
         const widthDecrease = document.getElementById('width-decrease');
         const body = document.body;
+        const wrapper = document.querySelector('.wrapper');
         
-        // Default content width in pixels
-        const defaultWidth = 620;
+        // Default values
         const defaultSidebarWidth = 250;
-        let currentWidth = parseInt(localStorage.getItem('contentWidth')) || defaultWidth;
+        let currentSidebarWidth = parseInt(localStorage.getItem('sidebarWidth')) || defaultSidebarWidth;
         
-        // Set initial content width
-        content.style.width = currentWidth + 'px';
-        
-        // Width adjustment functions
-        function setContentWidth(width) {
-          // Enforce min and max widths
-          width = Math.max(500, Math.min(1200, width));
-          content.style.width = width + 'px';
-          currentWidth = width;
-          localStorage.setItem('contentWidth', width);
+        // Apply stored sidebar width if available
+        if (localStorage.getItem('sidebarWidth')) {
+          sidebar.style.width = currentSidebarWidth + 'px';
+          resizeBorder.style.left = (currentSidebarWidth + 29) + 'px';
+          content.style.marginLeft = (currentSidebarWidth + 20) + 'px';
         }
         
-        // Width buttons
+        // Draggable resize border functionality
+        let isResizing = false;
+        
+        resizeBorder.addEventListener('mousedown', function(e) {
+          isResizing = true;
+          document.body.classList.add('resizing');
+          e.preventDefault();
+        });
+        
+        document.addEventListener('mousemove', function(e) {
+          if (!isResizing) return;
+          
+          // Calculate sidebar width based on mouse position
+          const sidebarLeft = sidebar.getBoundingClientRect().left;
+          let newWidth = e.clientX - sidebarLeft;
+          
+          // Set min and max width limits
+          newWidth = Math.max(150, Math.min(400, newWidth));
+          
+          // Update sidebar width
+          sidebar.style.width = newWidth + 'px';
+          
+          // Update border position
+          resizeBorder.style.left = (newWidth + 29) + 'px';
+          
+          // Update content margin
+          content.style.marginLeft = (newWidth + 20) + 'px';
+          
+          // Save values
+          currentSidebarWidth = newWidth;
+          localStorage.setItem('sidebarWidth', newWidth);
+        });
+        
+        document.addEventListener('mouseup', function() {
+          if (isResizing) {
+            isResizing = false;
+            document.body.classList.remove('resizing');
+          }
+        });
+        
+        // Reset to default on double-click
+        resizeBorder.addEventListener('dblclick', function() {
+          sidebar.style.width = defaultSidebarWidth + 'px';
+          resizeBorder.style.left = (defaultSidebarWidth + 29) + 'px';
+          content.style.marginLeft = (defaultSidebarWidth + 20) + 'px';
+          localStorage.removeItem('sidebarWidth');
+        });
+        
+        // Width adjustment buttons
+        function adjustContentMargin() {
+          if (!sidebar.classList.contains('hidden')) {
+            content.style.marginLeft = (currentSidebarWidth + 20) + 'px';
+          }
+        }
+        
         widthIncrease.addEventListener('click', function() {
-          setContentWidth(currentWidth + 50);
+          currentSidebarWidth = Math.max(150, currentSidebarWidth - 30);
+          sidebar.style.width = currentSidebarWidth + 'px';
+          resizeBorder.style.left = (currentSidebarWidth + 29) + 'px';
+          adjustContentMargin();
+          localStorage.setItem('sidebarWidth', currentSidebarWidth);
         });
         
         widthDecrease.addEventListener('click', function() {
-          setContentWidth(currentWidth - 50);
+          currentSidebarWidth = Math.min(400, currentSidebarWidth + 30);
+          sidebar.style.width = currentSidebarWidth + 'px';
+          resizeBorder.style.left = (currentSidebarWidth + 29) + 'px';
+          adjustContentMargin();
+          localStorage.setItem('sidebarWidth', currentSidebarWidth);
         });
         
         // Sidebar toggle
         sidebarToggle.addEventListener('click', function() {
           sidebar.classList.toggle('hidden');
           content.classList.toggle('full-width');
+          resizeBorder.classList.toggle('hidden');
           localStorage.setItem('sidebarHidden', sidebar.classList.contains('hidden'));
         });
         
-        // Restore sidebar state
+        // Restore sidebar visibility state
         if (localStorage.getItem('sidebarHidden') === 'true') {
           sidebar.classList.add('hidden');
           content.classList.add('full-width');
+          resizeBorder.classList.add('hidden');
         }
         
         // Theme toggle and selector
