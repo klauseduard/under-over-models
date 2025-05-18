@@ -4,7 +4,7 @@
 
 The relationship between the size of an organization and the appropriate complexity of its operating model is neither linear nor trivial. As organizations grow, the demands on their operational frameworks multiply exponentially, creating a tension between efficiency and effectiveness.
 
-In this context, **efficiency** refers to doing things in the most resource-saving way possible—minimizing time, effort, or cost. **Effectiveness**, on the other hand, means achieving the desired outcomes or goals, even if it requires more resources. As organizations grow, they often face a trade-off: highly efficient processes may not always be the most effective at handling complex or changing situations, and vice versa.
+In this context, **efficiency** refers to doing things in the most resource-saving way possible — minimizing time, effort, or cost. **Effectiveness**, on the other hand, means achieving the desired outcomes or goals, even if it requires more resources. As organizations grow, they often face a trade-off: highly efficient processes may not always be the most effective at handling complex or changing situations, and vice versa.
 
 ![Organizational Size and Model Complexity Relationship](../images/org-complexity-size-relationship.svg)
 
@@ -35,18 +35,21 @@ Organizations of different sizes tend to exhibit distinctive patterns in how the
 - **Model characteristics**: Flat structures, generalist roles, informal coordination
 - **Risk profile**: More prone to underfitting by applying overly simple models to problems that may require more nuanced handling
 - **Adaptation mechanism**: Rely on direct communication and tacit knowledge to handle complexity not captured in formal models
+- **Efficiency/Effectiveness Note**: This focus on efficiency — doing more with less — often leads small organizations to favor simple, flexible models. While this maximizes resource use, it can result in underfitting: the organization's models may be too simplistic to address emerging complexities, sacrificing effectiveness for efficiency.
 
 #### Medium Organizations (50-500 employees)
 - **Typical approach**: Begin formalizing structures while maintaining adaptability
 - **Model characteristics**: Emerging departmentalization, initial process standardization
 - **Risk profile**: Experience tension between underfitting and overfitting as they develop more sophisticated models
-- **Adaptation mechanism**: Develop middle management layers to translate between strategic models and operational realities
+- **Adaptation mechanism**: Develop middle management layers that act as "translators" between high-level strategic models and day-to-day operations. For example, a middle manager might take a company-wide initiative to "improve customer satisfaction" and translate it into specific process changes, training programs, and metrics for their team while adapting it to their team's unique challenges and capabilities. This translation layer helps prevent both overfitting (by customizing broad directives to local needs) and underfitting (by ensuring high-level strategies are implemented with appropriate detail)
+- **Efficiency/Effectiveness Note**: As organizations grow, they must balance efficiency and effectiveness. Medium-sized organizations often experience tension between maintaining efficient, streamlined processes and introducing more effective, structured approaches. This balancing act can lead to both underfitting (if efficiency is overemphasized) and overfitting (if effectiveness is pursued through excessive formalization).
 
 #### Large Organizations (500+ employees)
 - **Typical approach**: Implement comprehensive formal models and frameworks
 - **Model characteristics**: Hierarchical structures, specialized departments, formalized processes
 - **Risk profile**: More prone to overfitting by creating excessively detailed models that may be rigid or disconnected from changing realities
-- **Adaptation mechanism**: Establish specialized units for adaptation and innovation outside standard processes
+- **Adaptation mechanism**: Establish specialized units for adaptation and innovation outside standard processes, while maintaining middle management's translation role. For example, a large technology company might create an "innovation lab" that operates with startup-like agility to prototype new ideas, while middle managers help integrate successful innovations back into the main organization by adapting them to their teams' specific contexts and capabilities. Another example is when large organizations establish "digital transformation offices" that develop new technological approaches, with middle management acting as crucial bridges to ensure these initiatives are appropriately tailored to different business units' needs
+- **Efficiency/Effectiveness Note**: Large organizations tend to prioritize effectiveness — ensuring that processes and structures can handle a wide range of scenarios and risks. However, this drive for effectiveness can lead to overfitting: models become so complex and resource-intensive that efficiency suffers, making the organization less agile and more costly to operate.
 
 ## 5.2 Empirical Evidence from Organizational Research
 
@@ -54,13 +57,16 @@ Research from organizational science provides substantial evidence for the relat
 
 ### 5.2.1 Blau's Studies on Bureaucratization
 
-Peter Blau's seminal research on organizational structure demonstrated that as organizations grow, they tend to develop more elaborate administrative hierarchies and greater formalization. His studies, which examined diverse organizations ranging from government agencies to manufacturing firms, found that structural differentiation—both vertical (hierarchical layers) and horizontal (departmentalization)—increases with organizational size, though at a decreasing rate.
+Peter Blau's research on organizational structure (Blau, 1970; Blau & Schoenherr, 1971) demonstrated that as organizations grow, they tend to develop more elaborate administrative hierarchies and greater formalization. His studies, which examined diverse organizations ranging from government agencies to manufacturing firms, found that structural differentiation — both vertical (hierarchical layers) and horizontal (departmentalization) — increases with organizational size, though at a decreasing rate.
+
+> Blau, P. M. (1970). A formal theory of differentiation in organizations. American Sociological Review, 35(2), 201-218.
+> Blau, P. M., & Schoenherr, R. A. (1971). The Structure of Organizations. Basic Books.
 
 This pattern suggests that larger organizations develop more complex models to manage their operations, potentially leading to higher risks of overfitting as structures become more elaborate than operational needs may require.
 
 ### 5.2.2 Contingency Theory and Organizational Size
 
-Research in contingency theory, particularly work by scholars like Henry Mintzberg, indicates that effective organizational design depends on aligning structural complexity with contextual factors, with size being a critical determinant. Mintzberg's configurations framework suggests that as organizations grow, they tend to progress from simple structures to more complex forms like machine bureaucracies or divisionalized forms.
+Research in contingency theory — which proposes that there is no single best way to organize and that different environments require different organizational approaches — particularly work by scholars like Henry Mintzberg, indicates that effective organizational design depends on aligning structural complexity with contextual factors, with size being a critical determinant. Mintzberg's configurations framework suggests that as organizations grow, they tend to progress from simple structures to more complex forms like machine bureaucracies (characterized by highly standardized work processes, formalized procedures, and clear hierarchies of authority) or divisionalized forms.
 
 This progression reflects an increasing formalization of organizational models that corresponds with growth, with the risk that larger organizations may develop structural configurations that are more rigid than dynamic environments warrant.
 
@@ -86,6 +92,8 @@ The leadership team addressed this by implementing:
 
 Importantly, they avoided overcorrection toward excessive formalization, maintaining flexibility while adding sufficient structure to address coordination needs. This evolution represents a calibration from potential underfitting toward appropriate model complexity.
 
+**Efficiency/Effectiveness Note:** Initially, the startup's emphasis on efficiency—minimal structure and rapid communication—enabled quick decision-making but eventually underfit the growing complexity, reducing overall effectiveness. By introducing targeted structures, the company improved effectiveness while maintaining much of its original efficiency.
+
 ### 5.3.2 Enterprise Reorganization: Addressing Overfitting
 
 A large financial services institution with over 10,000 employees had developed highly detailed organizational structures and processes over decades of operation. The organization featured:
@@ -102,6 +110,8 @@ This elaborate model increasingly revealed signs of overfitting: slow decision-m
 
 This restructuring represented a deliberate recalibration from overfitting toward more appropriate complexity—complex enough to manage a large enterprise but sufficiently flexible to adapt to changing conditions.
 
+**Efficiency/Effectiveness Note:** The large financial institution's pursuit of effectiveness led to highly detailed processes and multiple management layers. While these structures aimed to ensure robust outcomes, they undermined efficiency, resulting in slow decision-making and high operational costs. The reorganization sought to restore efficiency by simplifying structures, without sacrificing necessary effectiveness.
+
 ### 5.3.3 Mid-Sized Company Transformation: Finding the Balance
 
 A mid-sized manufacturing company with approximately 350 employees faced challenges as it grew beyond its original entrepreneurial structure but hadn't yet developed adequate organizational systems for its size. The company experienced:
@@ -117,6 +127,8 @@ The organization needed to develop more sophisticated models without overenginee
 - Documented core processes while allowing for appropriate discretion
 
 This approach exemplifies the particular challenge mid-sized organizations face in finding appropriate model complexity—developing sufficient structure without overcommitting to rigid frameworks that limit adaptability.
+
+**Efficiency/Effectiveness Note:** The company's journey highlights the need to balance efficiency and effectiveness. Overemphasizing efficiency risked underfitting, while too much focus on effectiveness could have led to overfitting. Their solution was to incrementally add structure, seeking a dynamic balance between the two.
 
 ## 5.4 Strategies for Appropriate Model Scaling
 
@@ -349,6 +361,20 @@ Organizations anticipating the evolution of team structures with AI integration 
 4. Implementing performance frameworks that evaluate both individual contributions and collaborative effectiveness
 
 While these considerations remain forward-looking, proactive organizations can begin preparing for these potential developments through strategic planning, targeted experiments, and ongoing evaluation of emerging team structures and dynamics.
+
+## Summary Table: Organization Size, Efficiency/Effectiveness, and Model Fit
+
+| Organization Size | Efficiency Focus | Effectiveness Focus | Typical Risk      | Model Fit Challenge         |
+|-------------------|-----------------|--------------------|-------------------|----------------------------|
+| Small             | High            | Low                | Underfitting      | Too simple for complexity  |
+| Medium            | Balanced        | Balanced           | Both (Tension)    | Finding the right balance  |
+| Large             | Lower           | High               | Overfitting       | Too complex, less agile    |
+
+*Table: This table summarizes how organizations of different sizes tend to prioritize efficiency and effectiveness, and how this relates to the risks of underfitting or overfitting their operating models.*
+
+## Concluding Note: Efficiency, Effectiveness, and Model Fit
+
+Throughout organizational growth, the interplay between efficiency and effectiveness shapes the risk of underfitting or overfitting. Small organizations may sacrifice effectiveness for efficiency, while large organizations may do the opposite. Recognizing and managing this trade-off is key to developing appropriately complex models that support both operational excellence and adaptability.
 
 ---
 
