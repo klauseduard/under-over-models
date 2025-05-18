@@ -884,3 +884,75 @@ body.light-mode {
     border-color: #d3e0e6;
   }
 } 
+
+/* Width toggle button for content */
+.width-toggle {
+  position: fixed;
+  top: 32px;
+  right: 150px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e8dfca;
+  border-radius: 4px;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  opacity: 0.7;
+}
+
+.width-toggle:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.width-toggle.active {
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 1;
+}
+
+.width-icon {
+  font-size: 18px;
+}
+
+/* Wide view mode for content */
+.content.wide-view {
+  width: calc(100% - 290px);
+  max-width: 1200px;
+}
+
+.content.wide-view.full-width {
+  width: calc(100% - 40px);
+  max-width: 1500px;
+}
+
+/* Responsive adjustments for width toggle */
+@media screen and (max-width: 960px) {
+  .width-toggle {
+    right: 120px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .width-toggle {
+    right: 90px;
+    top: 10px;
+  }
+  
+  .content.wide-view,
+  .content.wide-view.full-width {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+/* Light mode adjustments */
+body.light-mode .width-toggle {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-color: #dddddd;
+} 

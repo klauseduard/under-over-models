@@ -54,6 +54,11 @@
           <span class="theme-icon">🌙</span>
         </button>
       </div>
+      
+      <!-- Width toggle button for content -->
+      <button id="width-toggle" class="width-toggle" aria-label="Toggle content width">
+        <span class="width-icon">↔️</span>
+      </button>
 
       <header id="sidebar" class="sidebar visible">
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
@@ -112,6 +117,7 @@
             <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
             <p class="publication-date"><small>Publication initial release: April 2025 | Last updated: {{ site.time | date: '%B %Y' }}</small></p>
             <p class="version-note"><small>AI capabilities evolve rapidly - please consider the publication date when reading</small></p>
+            <p class="copyright-note"><small>© {{ site.time | date: '%Y' }} {{ site.github.owner_name }} | <a href="{{ site.github.repository_url }}">GitHub</a></small></p>
           </div>
         </details>
       </header>
@@ -151,8 +157,7 @@
       {{ content }}
       </section>
       <footer>
-        <!-- Mobile/responsive footer - simplified for better readability -->
-        <p class="mobile-footer-note"><small>© {{ site.time | date: '%Y' }} {{ site.github.owner_name }} | <a href="{{ site.github.repository_url }}">GitHub</a></small></p>
+        <!-- Empty footer, content moved to site info section -->
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
@@ -160,6 +165,25 @@
     <!-- Script to auto-generate table of contents -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // Width toggle functionality
+        const widthToggle = document.getElementById('width-toggle');
+        const content = document.getElementById('content');
+        
+        if (widthToggle && content) {
+          widthToggle.addEventListener('click', function() {
+            content.classList.toggle('wide-view');
+            widthToggle.classList.toggle('active');
+            // Save state to localStorage
+            localStorage.setItem('wideContent', content.classList.contains('wide-view'));
+          });
+          
+          // Restore content width state from localStorage
+          if (localStorage.getItem('wideContent') === 'true') {
+            content.classList.add('wide-view');
+            widthToggle.classList.add('active');
+          }
+        }
+      
         // Theme toggle functionality
         const lightModeToggle = document.getElementById('light-mode-toggle');
         const warmModeToggle = document.getElementById('warm-mode-toggle');
@@ -209,7 +233,6 @@
         // Sidebar toggle functionality
         const sidebarToggle = document.getElementById('sidebar-toggle');
         const sidebar = document.getElementById('sidebar');
-        const content = document.getElementById('content');
         
         if (sidebarToggle && sidebar && content) {
           sidebarToggle.addEventListener('click', function() {
