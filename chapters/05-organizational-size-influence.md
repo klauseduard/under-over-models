@@ -1,10 +1,10 @@
-# 5. Organization Size and Approach to Complexity
+# 5. Organizational Size, Life-Cycle Phases, and Model Adaptation
 
-## 5.1 The Relationship Between Organizational Size and Model Complexity
+## 5.1 The Relationship Between Organizational Size, Life-Cycle Phase, and Model Adaptation
 
-The relationship between the size of an organization and the appropriate complexity of its operating model is neither linear nor trivial. As organizations grow, the demands on their operational frameworks multiply exponentially, creating a tension between efficiency and effectiveness. While this chapter primarily discusses growth, organizations also face periods of contraction or stagnation, which require different approaches to model adaptation and complexity management.
+The relationship between an organization's size, its life-cycle phase, and the appropriate complexity of its operating model is neither linear nor trivial. As organizations grow, contract, pivot, or stagnate, the demands on their operational frameworks change significantly, creating a dynamic tension between efficiency and effectiveness. Organizations must continuously adapt their operating models to maintain appropriate fit through these transitions.
 
-In this context, **efficiency** refers to doing things in the most resource-saving way possible — minimizing time, effort, or cost. **Effectiveness**, on the other hand, means achieving the desired outcomes or goals, even if it requires more resources. As organizations grow, they often face a trade-off: highly efficient processes may not always be the most effective at handling complex or changing situations, and vice versa.
+In this context, **efficiency** refers to doing things in the most resource-saving way possible — minimizing time, effort, or cost. **Effectiveness**, on the other hand, means achieving the desired outcomes or goals, even if it requires more resources. Throughout an organization's life cycle, the balance between efficiency and effectiveness shifts, influencing the appropriate complexity of operating models. Small organizations often prioritize efficiency with simpler models, while large organizations typically emphasize effectiveness through more sophisticated frameworks. During phases of contraction or pivoting, organizations face distinct challenges in recalibrating these models to maintain appropriate fit.
 
 ![Organizational Size and Model Complexity Relationship](../images/org-complexity-size-relationship.svg)
 
@@ -408,9 +408,11 @@ While these considerations remain forward-looking, proactive organizations can b
 
 **Pivot:** A significant change in organizational strategy or business model, often in response to external pressures or new opportunities.
 
-## Concluding Note: Efficiency, Effectiveness, and Model Fit
+## Concluding Note: Efficiency, Effectiveness, and Model Adaptation Through Life-Cycle Phases
 
-Throughout organizational growth, the interplay between efficiency and effectiveness shapes the risk of underfitting or overfitting. Small organizations may sacrifice effectiveness for efficiency, while large organizations may do the opposite. Recognizing and managing this trade-off is key to developing appropriately complex models that support both operational excellence and adaptability.
+Throughout an organization's life cycle, the interplay between efficiency and effectiveness shapes the risk of underfitting or overfitting. Small organizations may prioritize efficiency with simpler models, while large organizations often emphasize effectiveness through more complex frameworks. As organizations experience different phases—whether growth, contraction, stagnation, or pivoting—they face unique challenges in adapting their operating models to maintain appropriate fit.
+
+Recognizing these dynamics enables organizations to develop more deliberate approaches to model adaptation, ensuring that their structures and processes remain appropriately scaled for their current size and phase. The ability to recalibrate models as circumstances change is increasingly important in rapidly evolving environments, particularly as AI capabilities further transform organizational workflows and structures.
 
 ---
 

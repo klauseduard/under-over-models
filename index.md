@@ -74,7 +74,7 @@ Currently, the following chapters are (somewhat) edited and ready for reading:
   <details>
     <summary>View Work-in-Progress Chapters</summary>
     <ul>
-      <li><a href="chapters/05-organizational-size-influence.html">Chapter 5: Organizational Size Influence</a> (Draft)</li>
+      <li><a href="chapters/05-organizational-size-influence.html">Chapter 5: Organizational Size, Life-Cycle Phases, and Model Adaptation</a> (Draft)</li>
       <li><a href="chapters/07-medical-systems-case.html">Chapter 7: Medical Systems Case</a> (Draft)</li>
       <li><a href="chapters/08-ai-organizational-impact.html">Chapter 8: AI Organizational Impact</a> (Draft)</li>
       <li><a href="chapters/09-ai-people-theory-practice.html">Chapter 9: AI: Theory and Practice</a> (Draft)</li>

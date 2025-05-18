@@ -10,7 +10,7 @@ This book has explored the application of underfitting and overfitting analogies
 
 **Stakeholder Dynamics (Chapter 4):** The tension between management perspectives favoring simpler domain models and technical specialists advocating for more detailed approaches was explored, emphasizing how stakeholders often focus on different dimensions of complexity.
 
-**Organizational Size (Chapter 5):** We saw how large organizations often lean towards standardization (risking underfitting), while smaller specialized firms might overfit to their niche. AI was presented as a potential tool to help moderate these tendencies, though AI adoption strategies themselves can be influenced by size.
+**Organizational Size, Life-Cycle Phases, and Model Adaptation (Chapter 5):** We examined how organizations at different sizes and life-cycle phases require appropriately scaled operating models. The chapter highlighted how small organizations tend to prioritize efficiency with simpler models (risking underfitting), while larger organizations emphasize effectiveness through more complex frameworks (risking overfitting). Additionally, it explored how organizations during phases of contraction, stagnation, or pivoting face unique challenges in recalibrating their models. AI was presented as a potential tool to help moderate these tendencies, though AI adoption strategies themselves can be influenced by organizational size and phase.
 
 **Theoretical Concepts (Chapter 6):** Long-tail risks were linked to underfitting in estimation. Dissipative systems theory and cybernetics provided frameworks for understanding organizational adaptation, with AI noted as enhancing feedback loops while adding new control challenges.
 
