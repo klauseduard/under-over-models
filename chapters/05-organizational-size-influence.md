@@ -57,18 +57,13 @@ Research from organizational science provides substantial evidence for the relat
 
 ### 5.2.1 Blau's Studies on Bureaucratization
 
-Peter Blau's research on organizational structure (Blau, 1970; Blau & Schoenherr, 1971) demonstrated that as organizations grow, they tend to develop more elaborate administrative hierarchies and greater formalization. His studies, which examined diverse organizations ranging from government agencies to manufacturing firms, found that structural differentiation — both vertical (hierarchical layers) and horizontal (departmentalization) — increases with organizational size, though at a decreasing rate.
-
-> Blau, P. M. (1970). A formal theory of differentiation in organizations. American Sociological Review, 35(2), 201-218.
-> Blau, P. M., & Schoenherr, R. A. (1971). The Structure of Organizations. Basic Books.
-
-This pattern suggests that larger organizations develop more complex models to manage their operations, potentially leading to higher risks of overfitting as structures become more elaborate than operational needs may require.
+Peter Blau's research on organizational structure (Blau, 1970; Blau & Schoenherr, 1971) demonstrated that as organizations grow, they tend to develop more elaborate administrative hierarchies and greater formalization. His studies, which examined diverse organizations ranging from government agencies to manufacturing firms, found that structural differentiation — both vertical (hierarchical layers) and horizontal (departmentalization) — increases with organizational size, though at a decreasing rate (Blau, 1970).
 
 ### 5.2.2 Contingency Theory and Organizational Size
 
-Research in contingency theory — which proposes that there is no single best way to organize and that different environments require different organizational approaches — particularly work by scholars like Henry Mintzberg, indicates that effective organizational design depends on aligning structural complexity with contextual factors, with size being a critical determinant. Mintzberg's configurations framework suggests that as organizations grow, they tend to progress from simple structures to more complex forms like machine bureaucracies (characterized by highly standardized work processes, formalized procedures, and clear hierarchies of authority) or divisionalized forms.
+Research in contingency theory — which proposes that there is no single best way to organize and that different environments require different organizational approaches — particularly work by scholars like Henry Mintzberg (Mintzberg, 1980), indicates that effective organizational design depends on aligning structural complexity with contextual factors, with size being a critical determinant. Mintzberg's configurations framework suggests that as organizations grow, they tend to progress from simple structures to more complex forms like machine bureaucracies (characterized by highly standardized work processes, formalized procedures, and clear hierarchies of authority) or divisionalized forms.
 
-This progression reflects an increasing formalization of organizational models that corresponds with growth, with the risk that larger organizations may develop structural configurations that are more rigid than dynamic environments warrant.
+This perspective is further supported by foundational work in organizational theory, including Chandler's analysis of the relationship between strategy and structure (Chandler, 1962), and Lawrence & Lorsch's research on managing differentiation and integration in organizations (Lawrence & Lorsch, 1967).
 
 ### 5.2.3 Studies on Digital Transformation and Size
 
@@ -375,3 +370,13 @@ Throughout organizational growth, the interplay between efficiency and effective
 ---
 
 [Back to Table of Contents](../README.md)
+
+## Selected References
+
+Blau, P. M. (1970). A Formal Theory of Differentiation in Organizations. American Sociological Review, 35(2), 201-218.
+
+Chandler, A. D. (1962). Strategy and Structure: Chapters in the History of the American Industrial Enterprise. MIT Press.
+
+Lawrence, P. R., & Lorsch, J. W. (1967). Organization and Environment: Managing Differentiation and Integration. Harvard Business School Press.
+
+Mintzberg, H. (1980). Structure in 5's: A Synthesis of the Research on Organization Design. Management Science, 26(3), 322-341.
