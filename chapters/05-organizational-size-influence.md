@@ -291,6 +291,8 @@ However, IBM's subsequent performance has been mixed, suggesting the challenges 
 
 Adobe's shift from packaged software to subscription-based services represents a case study in consolidation without growth. In 2013, Adobe announced that it would discontinue its Creative Suite packaged software in favor of the Creative Cloud subscription model, requiring significant organizational restructuring while maintaining similar organizational size.
 
+![Adobe Consolidationt](../images/adobe-consolidation.svg)
+
 This transition required Adobe to reorganize multiple aspects of its operations:
 - Development teams shifted from major release cycles (18-24 months) to continuous delivery
 - Customer support restructured for ongoing relationships rather than one-time purchases
