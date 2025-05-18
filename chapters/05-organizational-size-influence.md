@@ -1,14 +1,53 @@
 # 5. Organizational Size, Life-Cycle Phases, and Model Adaptation
 
+## Table of Contents
+- [5.1 The Relationship Between Organizational Size, Life-Cycle Phase, and Model Adaptation](#51-the-relationship-between-organizational-size-life-cycle-phase-and-model-adaptation)
+  - [5.1.1 Efficiency vs. Effectiveness](#511-efficiency-vs-effectiveness)
+  - [5.1.2 Complexity Growth with Size](#512-complexity-growth-with-size)
+  - [5.1.3 Organizational Response Patterns](#513-organizational-response-patterns)
+- [5.2 Empirical Evidence from Organizational Research](#52-empirical-evidence-from-organizational-research)
+  - [5.2.1 Blau's Studies on Bureaucratization](#521-blaus-studies-on-bureaucratization)
+  - [5.2.2 Contingency Theory and Organizational Size](#522-contingency-theory-and-organizational-size)
+  - [5.2.3 Studies on Digital Transformation and Size](#523-studies-on-digital-transformation-and-size)
+- [5.3 Case Studies: Organizational Size and Growth Patterns](#53-case-studies-organizational-size-and-growth-patterns)
+  - [5.3.1 Zappos' Holacracy Experiment](#531-zappos-holacracy-experiment-ambition-and-challenge-in-organizational-restructuring)
+  - [5.3.2 NASA's Matrix Organization](#532-nasas-matrix-organization-managing-complexity-in-large-scale-projects)
+  - [5.3.3 Haier's RenDanHeYi Model](#533-haiers-rendanheyi-model-radical-decentralization-in-a-large-organization)
+- [5.4 Strategies for Appropriate Model Scaling](#54-strategies-for-appropriate-model-scaling)
+  - [5.4.1 Incremental Formalization](#541-incremental-formalization)
+  - [5.4.2 Regular Model Assessment](#542-regular-model-assessment)
+  - [5.4.3 Differentiated Formalization](#543-differentiated-formalization)
+  - [5.4.4 Minimum Viable Bureaucracy](#544-minimum-viable-bureaucracy)
+- [5.5 Model Complexity in Downsizing, Consolidation, Pivoting, and Stagnation](#55-model-complexity-in-downsizing-consolidation-pivoting-and-stagnation)
+  - [5.5.1 Downsizing and Consolidation](#551-downsizing-and-consolidation)
+  - [5.5.2 Stagnation and Pivoting](#552-stagnation-and-pivoting)
+  - [5.5.3 Case Example: Simplification After Contraction](#553-case-example-simplification-after-contraction)
+  - [5.5.4 Forward-Looking Considerations](#554-forward-looking-considerations)
+- [5.6 Case Studies: Model Fit Beyond Growth](#56-case-studies-model-fit-beyond-growth)
+  - [5.6.1 IBM's Transformation Under Lou Gerstner](#561-ibms-transformation-under-lou-gerstner-and-beyond-mixed-results-from-structural-changes)
+  - [5.6.2 Adobe's Transition to Cloud Subscription Model](#562-adobes-transition-to-cloud-subscription-model-consolidation-around-new-business-model)
+  - [5.6.3 Microsoft's Transformation Under Satya Nadella](#563-microsofts-transformation-under-satya-nadella-structural-change-enabling-strategic-pivot)
+  - [5.6.4 Slack's Transformation](#564-slacks-transformation-from-game-development-to-communication-platform)
+- [5.7 Parallel Human-AI Teams](#57-parallel-human-ai-teams)
+  - [5.7.1 Specialization and Integration](#571-specialization-and-integration)
+  - [5.7.2 Coordination Mechanisms](#572-coordination-mechanisms)
+  - [5.7.3 Authority Structures](#573-authority-structures)
+  - [5.7.4 Evaluation and Performance](#574-evaluation-and-performance)
+  - [5.7.5 Strategic Considerations for Practitioners](#575-strategic-considerations-for-practitioners)
+
 ## 5.1 The Relationship Between Organizational Size, Life-Cycle Phase, and Model Adaptation
 
 The relationship between an organization's size, its life-cycle phase, and the appropriate complexity of its operating model is neither linear nor trivial. As organizations grow, contract, pivot, or stagnate, the demands on their operational frameworks change significantly, creating a dynamic tension between efficiency and effectiveness. Organizations must continuously adapt their operating models to maintain appropriate fit through these transitions.
 
+### 5.1.1 Efficiency vs. Effectiveness
+
 In this context, **efficiency** refers to doing things in the most resource-saving way possible — minimizing time, effort, or cost. **Effectiveness**, on the other hand, means achieving the desired outcomes or goals, even if it requires more resources. Throughout an organization's life cycle, the balance between efficiency and effectiveness shifts, influencing the appropriate complexity of operating models. Small organizations often prioritize efficiency with simpler models, while large organizations typically emphasize effectiveness through more sophisticated frameworks. During phases of contraction or pivoting, organizations face distinct challenges in recalibrating these models to maintain appropriate fit.
 
 > **Note on Public Sector Models:** This efficiency-effectiveness tension is particularly acute in government organizations, where a disproportionate focus on efficiency can undermine effectiveness. While private sector organizations primarily answer to shareholders seeking return on investment, public organizations must serve broader societal goals that often resist straightforward measurement. Recent government reform initiatives often emphasize private-sector-style efficiency, yet public service delivery fundamentally requires effectiveness – achieving outcomes for citizens even when doing so is not the most "efficient" use of resources. This represents a critical distinction when modeling public versus private operating frameworks, as government agencies operate in domains where markets cannot or should not dominate and where multiple competing values beyond efficiency must be balanced.
+> 
+> Interestingly, government also plays a second critical role as an **enabler of innovation** in various industries. As discussed by Sahni and Singhal (2023) in "US government productivity: The roles government plays," governments can catalyze industry-level productivity improvements through market creation, subsidies, and price signals. This enabling function applies particularly to emerging technologies like AI-assisted software development, where government can serve as both adopter and accelerator. By establishing procurement standards, funding research, creating demonstration projects, and developing ethical guidelines, government organizations can reduce adoption barriers across the software industry while addressing legitimate public concerns. This dual nature—simultaneously pursuing internal efficiency while enabling broader ecosystem effectiveness—creates unique modeling challenges for public sector organizations, requiring frameworks that balance immediate operational metrics with longer-term innovation catalysis that may resist traditional measurement approaches.
 
-As organizations progress through different life-cycle phases—from startup to growth, maturity, and potential decline or renewal—the appropriate complexity of their operating models must adapt accordingly. The visualization below illustrates how model complexity should evolve across these phases, highlighting the risks of both insufficient complexity (underfitting) and excessive complexity (overfitting) at each stage. Organizations must continuously calibrate their structural approaches to maintain the optimal balance between simplicity and sophistication as they navigate transitions in size and strategic focus.
+As organizations progress through different life-cycle phases—from startup to growth, maturity, and potential decline or renewal—the appropriate complexity of their operating models must adapt accordingly. The visualization below illustrates how model complexity might evolve across these phases, highlighting the risks of both insufficient complexity (underfitting) and excessive complexity (overfitting) at each stage. Organizations must continuously calibrate their structural approaches to maintain the optimal balance between simplicity and sophistication as they navigate transitions in size and strategic focus.
 
 ![Organization Life-Cycle Model Adaptation Curve](../images/org-lifecycle-model-adaptation.svg)
 
@@ -28,9 +67,11 @@ In response to this growing complexity, organizations develop increasingly sophi
 
 ![Organizational Complexity Growth with Size](../images/org-size-complexity-growth.svg)
 
-### 5.1.2 Organizational Response Patterns
+### 5.1.3 Organizational Response Patterns
 
-Organizations of different sizes tend to exhibit distinctive patterns in how they approach model complexity:
+> **TODO: Review:** Organizations of different sizes tend to exhibit distinctive patterns in how they approach model complexity, each facing characteristic risks along the underfitting-overfitting spectrum. As organizations grow, they typically shift from simple, efficient models that may underfit complex realities to more sophisticated approaches that risk overfitting through excessive formalization. This progression represents a fundamental tension in organizational design: ensuring sufficient structural complexity to address operational needs while avoiding unnecessary bureaucracy that can impede adaptation.
+
+> **TODO: Review:** The visualization below illustrates this spectrum of organizational responses by size, highlighting the characteristic approaches, risks, and adaptation mechanisms at each stage. Moving from small to large organizations, we see a progressive shift in focus from efficiency to effectiveness, with corresponding changes in structural approach and distinctive model fit challenges.
 
 ![Organizational Response Patterns by Size](../images/org-size-response-patterns.svg)
 
@@ -131,6 +172,10 @@ The Haier case illustrates how even very large organizations migth be able to ma
 
 ## 5.4 Strategies for Appropriate Model Scaling
 
+**TODO: Review** Selecting the right approach to model scaling requires a structured decision-making process that considers an organization's current size, growth trajectory, environmental conditions, and existing structural characteristics. The decision tree below provides a practical framework for organizations to determine which scaling strategy might be most appropriate for their specific context, helping them navigate the common pitfalls of under- or over-engineering their operational models.
+
+![Model Scaling Strategies Decision Tree](../images/model-scaling-decision-tree.svg)
+
 Organizations can use several strategies to develop appropriate model complexity as they grow:
 
 ### 5.4.1 Incremental Formalization
@@ -222,6 +267,10 @@ Looking ahead, it is important to recognize that organizational forms and bounda
 
 ## 5.6 Case Studies: Model Fit Beyond Growth
 
+**TODO: Review**: The case studies below illustrate how organizations adapt their structural models during periods of consolidation or strategic pivoting. While growth-focused transformations often involve adding complexity, these examples demonstrate how organizations can recalibrate their models without necessarily changing size—sometimes requiring simplification, other times requiring targeted restructuring. The visualization below illustrates typical structural changes during pivots and consolidations, highlighting how organizations realign their components to support new strategic directions or adapt to changed circumstances.
+
+![Pivot and Consolidation Structural Changes](../images/pivot-consolidation-structural-changes.svg)
+
 ### 5.6.1 IBM's Transformation Under Lou Gerstner and Beyond: Mixed Results from Structural Changes
 
 IBM's transformation in the early 1990s under CEO Lou Gerstner initially demonstrated promising results in recalibrating an overfitted organizational structure. By the early 1990s, IBM had developed into a complex bureaucracy with seven management layers between front-line employees and executive leadership. This elaborate structure exhibited characteristic signs of overfitting: slow decision-making, inability to adapt to market changes, and declining customer satisfaction.
@@ -248,13 +297,13 @@ This transition required Adobe to reorganize multiple aspects of its operations:
 
 The consolidation effort involved finding a balance between maintaining existing customer relationships and establishing new operational models. Adobe needed to streamline processes while developing new capabilities, presenting classic challenges of managing appropriate complexity during organizational transformation.
 
-Adobe's subscription transition demonstrates how the structure-strategy relationship works in software organizations. The company didn't simply change its pricing model but fundamentally reorganized its development, release, and support structures to enable continuous delivery and ongoing customer relationships.
-
-**Efficiency/Effectiveness Note:** Adobe's restructuring demonstrates how software organizations can realign internal processes to improve both efficiency (through more streamlined development cycles) and effectiveness (through closer customer relationships) during business model transitions. The move to Creative Cloud resulted in improved financial performance and customer retention despite initial market concerns.
+**Efficiency/Effectiveness Note:** Adobe's subscription transition demonstrates how software organizations can realign internal processes to improve both efficiency (through more streamlined development cycles) and effectiveness (through closer customer relationships) during business model transitions. The move to Creative Cloud resulted in improved financial performance and customer retention despite initial market concerns.
 
 ### 5.6.3 Microsoft's Transformation Under Satya Nadella: Structural Change Enabling Strategic Pivot
 
 Microsoft's pivot from a Windows-centric company to a cloud and services provider under CEO Satya Nadella presents a case of restructuring a large organization without changing its overall size. This transformation demonstrates the use of organizational redesign to enable strategic repositioning.
+
+![Microsoft Pivot](../images/microsoft-pivot.svg)
 
 Nadella observed that Microsoft's organizational structure reflected its historical product divisions rather than customer needs or emerging market opportunities. By reorganizing into more customer-centric divisions and removing organizational barriers between previously siloed teams, Microsoft improved its ability to deliver integrated solutions while pivoting toward cloud services.
 
@@ -288,7 +337,9 @@ The restructuring enabled the development of an organization optimized for its n
 
 *Note: This section presents emerging considerations rather than established practices. Organizations should adapt these insights to their specific context and risk tolerance.*
 
-As organizations integrate AI capabilities, traditional team structures and coordination mechanisms are likely to evolve in significant ways. The following discussion points examine potential implications for team dynamics at different time horizons. These observations draw from early implementations and emerging trends, providing strategic considerations for forward-thinking practitioners rather than established theory.
+As organizations integrate AI capabilities, traditional team structures and coordination mechanisms are likely to evolve in significant ways. This evolution will unfold across distinct time horizons, each characterized by different patterns of human-AI collaboration, coordination approaches, and authority structures. The visualization below illustrates this temporal progression, showing how organizational structures for human-AI teams are likely to develop from relatively simple, human-centered configurations in the near term toward more sophisticated and integrated frameworks over time.
+
+The evolution spans three key time horizons: near-term (current or imminent state), emerging, and long-term. At each stage, organizations face different challenges in structuring work, coordinating activities, establishing authority relationships, and evaluating performance in hybrid human-AI environments. This temporal perspective helps organizations not only respond to immediate integration needs but also prepare for more sophisticated human-AI collaboration patterns as both technological capabilities and organizational practices mature.
 
 ![Parallel Human-AI Teams: Specialization and Integration](../images/parallel-human-ai-teams.svg)
 
