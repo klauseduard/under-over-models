@@ -67,9 +67,11 @@ This perspective is further supported by foundational work in organizational the
 
 ### 5.2.3 Studies on Digital Transformation and Size
 
-More recent research on digital transformation indicates that organizational size significantly influences approach to technology adoption and integration. Larger organizations typically develop more comprehensive digital transformation frameworks but may struggle with implementation flexibility. Smaller organizations often take more incremental, less formalized approaches but may lack the necessary structural sophistication for complex technological integration.
+More recent research on digital transformation indicates that organizational size significantly influences approach to technology adoption and integration. Larger organizations typically develop more comprehensive digital transformation frameworks but may struggle with implementation flexibility. Smaller organizations often take more incremental, less formalized approaches but may lack the necessary structural sophistication for complex technological integration. This pattern is well-documented in digital transformation research, which finds that larger organizations often require more formalized frameworks and governance structures to manage technology adoption, while smaller organizations tend to rely on informal, incremental approaches (Westerman, Bonnet, & McAfee, 2014; MIT Sloan Management Review, 2014).
 
 This pattern illustrates how size influences not only structural models but also the frameworks organizations develop for managing technological change, with corresponding risks of under- or overfitting.
+
+As organizations move beyond digital transformation toward the integration of advanced AI capabilities, these size-related patterns are likely to persist and even intensify. Large organizations may develop comprehensive AI governance frameworks, specialized roles (such as AI product managers or ethics officers), and formalized MLOps pipelines, which can increase both the sophistication and rigidity of their operations. In contrast, smaller organizations may experiment more rapidly with AI tools for automation and prototyping, but may lack the resources for robust oversight or integration at scale. For software engineering teams, this shift means that the structure, processes, and even the nature of engineering work may evolve differently depending on organizational size. AI agents may increasingly participate in or automate activities such as code review, testing, and deployment, further shaping how complexity is managed within organizations of varying sizes (Davenport & Mittal, 2022; Zao-Sanders, 2024; Narain et al., 2025).
 
 ## 5.3 Case Studies: Size and Model Complexity
 
@@ -380,3 +382,13 @@ Chandler, A. D. (1962). Strategy and Structure: Chapters in the History of the A
 Lawrence, P. R., & Lorsch, J. W. (1967). Organization and Environment: Managing Differentiation and Integration. Harvard Business School Press.
 
 Mintzberg, H. (1980). Structure in 5's: A Synthesis of the Research on Organization Design. Management Science, 26(3), 322-341.
+
+Westerman, G., Bonnet, D., & McAfee, A. (2014). Leading Digital: Turning Technology into Business Transformation. Harvard Business Review Press.
+
+"The Nine Elements of Digital Transformation." MIT Sloan Management Review. https://sloanreview.mit.edu/article/the-nine-elements-of-digital-transformation/
+
+Davenport, T. H., & Mittal, N. (2022). "How Generative AI Is Changing Creative Work." Harvard Business Review. https://hbr.org/2022/11/how-generative-ai-is-changing-creative-work
+
+Zao-Sanders, M. (2024). "How AI Can Change the Way Your Company Gets Work Done." Harvard Business Review. https://hbr.org/2024/07/how-ai-can-change-the-way-your-company-gets-work-done
+
+Narain, K., Ghosh, B., Wilson, H. J., & Shukla, P. (2025). "3 Ways AI Is Changing How Companies Work." Harvard Business Review. https://hbr.org/2025/01/3-ways-ai-is-changing-how-companies-work
