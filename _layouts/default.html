@@ -34,6 +34,33 @@
 
       gtag('config', 'G-ZHDG8Y6DVF');
     </script>
+    
+    <!-- Critical layout styles -->
+    <style>
+      /* Only essential styles needed before CSS loads */
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 10;
+      }
+      
+      .content {
+        margin-left: 260px;
+        box-sizing: border-box;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
@@ -149,7 +176,11 @@
     
     <!-- Script for layout controls and TOC generation -->
     <script>
+      // Add a class to body when styles are loaded
       document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('styles-loaded');
+        
+        // Main initialization
         const sidebar = document.getElementById('sidebar');
         const content = document.getElementById('content');
         const resizeHandle = document.getElementById('resize-handle');
@@ -173,19 +204,20 @@
           if (!isResizing) return;
           
           // Calculate sidebar width based on mouse position
-          let newWidth = e.clientX - 30; // Adjust for sidebar's left offset
+          let newWidth = e.clientX; // Use exact mouse position
           
           // Set min and max width limits
-          newWidth = Math.max(150, Math.min(500, newWidth));
+          newWidth = Math.max(150, Math.min(800, newWidth));
           
           // Update sidebar width
           sidebar.style.width = newWidth + 'px';
           
           // Update handle position
-          resizeHandle.style.left = (newWidth + 5) + 'px';
+          resizeHandle.style.left = newWidth + 'px';
           
-          // Update content margin
-          content.style.marginLeft = (newWidth + 20) + 'px';
+          // Update content margin and width
+          content.style.marginLeft = (newWidth + 10) + 'px';
+          content.style.width = `calc(100% - ${newWidth + 10}px)`;
           
           // Save the width
           localStorage.setItem('sidebarWidth', newWidth);
@@ -198,21 +230,28 @@
           }
         });
         
+        // Prevent text selection during resize
+        document.addEventListener('selectstart', function(e) {
+          if (isResizing) e.preventDefault();
+        });
+        
         // Load saved width if available
         const savedWidth = localStorage.getItem('sidebarWidth');
         if (savedWidth) {
           const width = parseInt(savedWidth);
           sidebar.style.width = width + 'px';
-          resizeHandle.style.left = (width + 5) + 'px';
-          content.style.marginLeft = (width + 20) + 'px';
+          resizeHandle.style.left = width + 'px';
+          content.style.marginLeft = (width + 10) + 'px';
+          content.style.width = `calc(100% - ${width + 10}px)`;
         }
         
         // Double click to reset width
         resizeHandle.addEventListener('dblclick', function() {
           sidebar.style.width = defaultSidebarWidth + 'px';
-          resizeHandle.style.left = (defaultSidebarWidth + 5) + 'px';
-          content.style.marginLeft = (defaultSidebarWidth + 20) + 'px';
-          localStorage.removeItem('sidebarWidth');
+          resizeHandle.style.left = defaultSidebarWidth + 'px';
+          content.style.marginLeft = (defaultSidebarWidth + 10) + 'px';
+          content.style.width = `calc(100% - ${defaultSidebarWidth + 10}px)`;
+          localStorage.setItem('sidebarWidth', defaultSidebarWidth);
         });
         
         // Sidebar toggle
