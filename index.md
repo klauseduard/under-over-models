@@ -1,4 +1,4 @@
-# Underfitting and Overfitting in Software Development
+# The Complexity Balance: Underfitting and Overfitting in Software Engineering Organizations
 
 This publication explores how concepts of underfitting and overfitting provide an analytical framework for understanding complexity trade-offs in modern software organizations. It examines how these principles apply to software architecture, engineering processes, and technical decision-making, with particular focus on:
 
@@ -56,6 +56,14 @@ Currently, the following chapters are (somewhat) edited and ready for reading:
 </div>
 
 <div class="completed-chapter">
+  <h3><a href="chapters/05-organizational-size-influence.html">Chapter 5: Organizational Size, Life-Cycle Phases, and Model Adaptation</a></h3>
+  <p>An analysis of how organizational size and life-cycle phases influence the appropriate complexity of operating models, with case studies on adapting structures during growth, contraction, and strategic pivots.</p>
+  <div class="chapter-metadata">
+    <span class="chapter-date">Last updated: May 2025</span>
+  </div>
+</div>
+
+<div class="completed-chapter">
   <h3><a href="chapters/06-theoretical-concepts.html">Chapter 6: Related Theoretical Concepts</a></h3>
   <p>An exploration of theoretical concepts that support the underfitting/overfitting framework, including long tail distributions, dissipative systems theory, cybernetics, entropy, Bayesian statistics, and sociotechnical systems theory.</p>
   <div class="chapter-metadata">
@@ -74,7 +82,7 @@ Currently, the following chapters are (somewhat) edited and ready for reading:
   <details>
     <summary>View Work-in-Progress Chapters</summary>
     <ul>
-      <li><a href="chapters/05-organizational-size-influence.html">Chapter 5: Organizational Size, Life-Cycle Phases, and Model Adaptation</a> (Draft)</li>
+
       <li><a href="chapters/07-medical-systems-case.html">Chapter 7: Medical Systems Case</a> (Draft)</li>
       <li><a href="chapters/08-ai-organizational-impact.html">Chapter 8: AI Organizational Impact</a> (Draft)</li>
       <li><a href="chapters/09-ai-people-theory-practice.html">Chapter 9: AI: Theory and Practice</a> (Draft)</li>
