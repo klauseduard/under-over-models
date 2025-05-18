@@ -177,6 +177,15 @@ Selecting the right approach to model scaling requires a structured decision-mak
 
 ![Zoomable Model Scaling Diagram](../images/model-scaling-top.svg)
 
+<div class="svg-container">
+  <object type="image/svg+xml" data="../images/model-scaling-top.svg" class="svg-content">
+    Your browser does not support SVG embedding. Please see the static image above.
+  </object>
+</div>
+
+<details>
+  <summary>Alternative Mermaid Diagram (click to expand)</summary>
+  
 ```mermaid
 flowchart TD
     title["Model Scaling Strategies Decision Tree"]
@@ -259,6 +268,7 @@ flowchart TD
     %% Notes
     note1["Note: Blue risk indicates underfitting danger\nRed risk indicates overfitting danger"]
 ```
+</details>
 
 Organizations can use several strategies to develop appropriate model complexity as they grow:
 

@@ -1,0 +1,152 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title and background -->
+  <rect width="900" height="700" fill="#f8f9fa" rx="10" ry="10" />
+  <text x="450" y="40" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" font-weight="bold">Contraction Scaling Strategies</text>
+  <text x="450" y="70" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-style="italic">For organizations experiencing downsizing or restructuring</text>
+  
+  <!-- Back to overview button -->
+  <a id="back-to-overview" href="model-scaling-top.svg">
+    <rect x="50" y="30" width="140" height="30" rx="15" ry="15" fill="#ddd" stroke="#333" stroke-width="1" />
+    <text x="120" y="50" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">← Back to Overview</text>
+  </a>
+  
+  <!-- Organization Size decision point -->
+  <polygon points="450,110 510,170 450,230 390,170" fill="#f9f" stroke="#333" stroke-width="2" />
+  <text x="450" y="165" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Organization</text>
+  <text x="450" y="185" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Size?</text>
+  
+  <!-- Organization size paths -->
+  <line x1="390" y1="170" x2="250" y2="250" stroke="#666" stroke-width="2" />
+  <line x1="510" y1="170" x2="650" y2="250" stroke="#666" stroke-width="2" />
+  
+  <!-- Organization size boxes -->
+  <rect x="180" y="250" width="140" height="50" rx="5" ry="5" fill="#bbf" stroke="#333" stroke-width="2" />
+  <text x="250" y="275" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Small/Medium</text>
+  <text x="250" y="295" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" font-style="italic">Contracting</text>
+  
+  <rect x="580" y="250" width="140" height="50" rx="5" ry="5" fill="#bbf" stroke="#333" stroke-width="2" />
+  <text x="650" y="275" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Large</text>
+  <text x="650" y="295" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" font-style="italic">Contracting</text>
+  
+  <!-- Primary Challenge level for Small/Medium -->
+  <line x1="250" y1="300" x2="250" y2="350" stroke="#666" stroke-width="2" />
+  <polygon points="250,350 290,390 250,430 210,390" fill="#f9f" stroke="#333" stroke-width="2" />
+  <text x="250" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Primary</text>
+  <text x="250" y="395" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Challenge?</text>
+  
+  <!-- Primary Challenge level for Large -->
+  <line x1="650" y1="300" x2="650" y2="350" stroke="#666" stroke-width="2" />
+  <polygon points="650,350 690,390 650,430 610,390" fill="#f9f" stroke="#333" stroke-width="2" />
+  <text x="650" y="375" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Primary</text>
+  <text x="650" y="395" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Challenge?</text>
+  
+  <!-- Small/Medium Challenge paths -->
+  <line x1="210" y1="390" x2="150" y2="450" stroke="#666" stroke-width="2" />
+  <line x1="290" y1="390" x2="350" y2="450" stroke="#666" stroke-width="2" />
+  
+  <!-- Large Challenge paths -->
+  <line x1="610" y1="390" x2="550" y2="450" stroke="#666" stroke-width="2" />
+  <line x1="690" y1="390" x2="750" y2="450" stroke="#666" stroke-width="2" />
+  
+  <!-- Challenge boxes for Small/Medium -->
+  <rect x="80" y="450" width="140" height="40" rx="5" ry="5" fill="#ccf" stroke="#333" stroke-width="1" />
+  <text x="150" y="475" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Coordination Issues</text>
+  
+  <rect x="280" y="450" width="140" height="40" rx="5" ry="5" fill="#ccf" stroke="#333" stroke-width="1" />
+  <text x="350" y="475" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Process Inefficiency</text>
+  
+  <!-- Challenge boxes for Large -->
+  <rect x="480" y="450" width="140" height="40" rx="5" ry="5" fill="#ccf" stroke="#333" stroke-width="1" />
+  <text x="550" y="475" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Bureaucratic Friction</text>
+  
+  <rect x="680" y="450" width="140" height="40" rx="5" ry="5" fill="#ccf" stroke="#333" stroke-width="1" />
+  <text x="750" y="475" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Cultural Resistance</text>
+  
+  <!-- Environment factor for Small/Medium Process Inefficiency -->
+  <line x1="350" y1="490" x2="350" y2="530" stroke="#666" stroke-width="2" />
+  <polygon points="350,530 390,570 350,610 310,570" fill="#f9f" stroke="#333" stroke-width="2" />
+  <text x="350" y="575" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Environment?</text>
+  
+  <!-- Environment factor for Large Bureaucratic Friction -->
+  <line x1="550" y1="490" x2="550" y2="530" stroke="#666" stroke-width="2" />
+  <polygon points="550,530 590,570 550,610 510,570" fill="#f9f" stroke="#333" stroke-width="2" />
+  <text x="550" y="575" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Environment?</text>
+  
+  <!-- Environment paths -->
+  <line x1="310" y1="570" x2="270" y2="630" stroke="#666" stroke-width="2" />
+  <line x1="390" y1="570" x2="430" y2="630" stroke="#666" stroke-width="2" />
+  
+  <line x1="510" y1="570" x2="470" y2="630" stroke="#666" stroke-width="2" />
+  <line x1="590" y1="570" x2="630" y2="630" stroke="#666" stroke-width="2" />
+  
+  <!-- Environment boxes -->
+  <rect x="230" y="630" width="80" height="30" rx="5" ry="5" fill="#ddf" stroke="#333" stroke-width="1" />
+  <text x="270" y="650" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Stable</text>
+  
+  <rect x="390" y="630" width="80" height="30" rx="5" ry="5" fill="#ddf" stroke="#333" stroke-width="1" />
+  <text x="430" y="650" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Volatile</text>
+  
+  <rect x="430" y="630" width="80" height="30" rx="5" ry="5" fill="#ddf" stroke="#333" stroke-width="1" />
+  <text x="470" y="650" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Stable</text>
+  
+  <rect x="590" y="630" width="80" height="30" rx="5" ry="5" fill="#ddf" stroke="#333" stroke-width="1" />
+  <text x="630" y="650" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Volatile</text>
+  
+  <!-- Strategy outcomes - specific for contraction scenarios -->
+  <rect x="215" y="670" width="110" height="70" rx="5" ry="5" fill="#dfd" stroke="#333" stroke-width="1" />
+  <text x="270" y="685" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Strategy:</text>
+  <text x="270" y="700" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Targeted Model</text>
+  <text x="270" y="715" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Simplification</text>
+  <text x="270" y="730" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="blue">⬤ Underfitting Risk</text>
+  
+  <rect x="375" y="670" width="110" height="70" rx="5" ry="5" fill="#dfd" stroke="#333" stroke-width="1" />
+  <text x="430" y="685" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Strategy:</text>
+  <text x="430" y="700" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Rapid Model</text>
+  <text x="430" y="715" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Reassessment</text>
+  <text x="430" y="730" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="blue">⬤ Underfitting Risk</text>
+  <text x="430" y="740" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Example: Zappos</text>
+  
+  <rect x="415" y="670" width="110" height="70" rx="5" ry="5" fill="#dfd" stroke="#333" stroke-width="1" />
+  <text x="470" y="685" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Strategy:</text>
+  <text x="470" y="700" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Strategic</text>
+  <text x="470" y="715" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Streamlining</text>
+  <text x="470" y="730" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="red">⬤ Overfitting Risk</text>
+  <text x="470" y="740" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Example: IBM</text>
+  
+  <rect x="575" y="670" width="110" height="70" rx="5" ry="5" fill="#dfd" stroke="#333" stroke-width="1" />
+  <text x="630" y="685" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" font-weight="bold">Strategy:</text>
+  <text x="630" y="700" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Adaptive</text>
+  <text x="630" y="715" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">Simplification</text>
+  <text x="630" y="730" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="red">⬤ Overfitting Risk</text>
+  
+  <!-- Special note for contraction scenarios -->
+  <rect x="50" y="520" width="200" height="100" fill="#ffe6e6" stroke="#c00" stroke-width="1" rx="10" ry="10" opacity="0.8" />
+  <text x="150" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold" fill="#900">Contraction Warning</text>
+  <text x="150" y="560" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#900">Risk of overcorrection</text>
+  <text x="150" y="575" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#900">during model simplification</text>
+  <text x="150" y="595" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#900">Consider preserving critical</text>
+  <text x="150" y="610" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#900">governance mechanisms</text>
+  
+  <!-- Legend -->
+  <rect x="720" y="520" width="150" height="140" fill="white" stroke="#333" stroke-width="1" rx="5" ry="5" />
+  <text x="795" y="540" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" font-weight="bold">Legend</text>
+  
+  <polygon points="740,560 760,570 740,580 720,570" fill="#f9f" stroke="#333" stroke-width="1" />
+  <text x="795" y="570" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Decision Point</text>
+  
+  <rect x="725" y="585" width="30" height="15" fill="#bbf" stroke="#333" stroke-width="1" />
+  <text x="795" y="595" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Option/Category</text>
+  
+  <rect x="725" y="605" width="30" height="15" fill="#dfd" stroke="#333" stroke-width="1" />
+  <text x="795" y="615" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Strategy Outcome</text>
+  
+  <rect x="725" y="625" width="30" height="15" fill="#ffe6e6" stroke="#c00" stroke-width="1" />
+  <text x="795" y="635" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Warning/Special Note</text>
+  
+  <!-- Risk indicators -->
+  <text x="740" y="655" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="blue">⬤</text>
+  <text x="760" y="655" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Underfitting Risk (Blue)</text>
+  
+  <text x="740" y="675" font-family="Arial, sans-serif" font-size="12" text-anchor="start" fill="red">⬤</text>
+  <text x="760" y="675" font-family="Arial, sans-serif" font-size="12" text-anchor="start">Overfitting Risk (Red)</text>
+</svg>
