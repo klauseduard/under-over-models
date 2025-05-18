@@ -526,7 +526,7 @@ relationships between task complexity and time required have been disrupted.
 across different task types with and without AI assistance" width="700" /> <figcaption>Figure 2.5: Productivity variance
 across task types when using AI assistance (illustrative, not using real metrics)</figcaption> </figure> <br/><br/>
 
-**Skill Deterioration and Manual Takeover:** A challenge identified by Bainbridge (1983) in her work "Ironies of Automation" applies to AI-assisted development. Bainbridge noted that "physical skills deteriorate when they are not used, particularly the refinements of gain and timing" and that "a formerly experienced operator who has been monitoring an automated process may now be an inexperienced one" (Bainbridge, 1983). In software development, developers who rely on AI assistance may experience:
+**Skill Deterioration and Manual Takeover:** A challenge identified by Bainbridge [1983] in her work "Ironies of Automation" applies to AI-assisted development. Bainbridge noted that "physical skills deteriorate when they are not used, particularly the refinements of gain and timing" and that "a formerly experienced operator who has been monitoring an automated process may now be an inexperienced one" [Bainbridge, 1983]. In software development, developers who rely on AI assistance may experience:
 
 - Atrophy of manual coding skills, particularly for complex algorithms or optimizations
 - Reduced ability to estimate tasks when AI tools prove insufficient
@@ -551,7 +551,7 @@ that may not generalize.
 - Assuming AI can solve complex problems with minimal human intervention
 - Discounting learning curves needed for effective AI tool usage
 - Pressure to reduce estimates based on AI capabilities rather than measured performance
-- Overlooking what Bainbridge (1983) identified as an automation irony: automating routine development tasks may increase the complexity of remaining human tasks like troubleshooting and exception handling
+- Overlooking what Bainbridge [1983] identified as an automation irony: automating routine development tasks may increase the complexity of remaining human tasks like troubleshooting and exception handling
 
 These biases can lead to underestimation, especially for novel tasks where AI tools lack proven productivity gains.
 
@@ -604,6 +604,8 @@ during the initial estimation phase, leading to an oversimplified view of the pr
 - Impact of team changes and internal controversies
 - Increased uncertainty associated with novel work
 
+A significant example of this underfitting occurs with distributed teams. Research by Herbsleb & Mockus [2003] found that globally distributed development work took 2.5x longer than co-located work, primarily due to coordination challenges. This substantial multiplier is rarely adequately accounted for in traditional estimation approaches, leading to systematic underestimation for distributed projects.
+
 <figure> <img src="../images/hidden-complexities-model.svg" alt="Hidden Complexities in Software Estimation - factors
 often overlooked in traditional estimation approaches" width="700" /> <figcaption>Figure 2.6: Hidden complexity factors
 that contribute to estimation errors</figcaption> </figure> <br/><br/>
@@ -647,3 +649,9 @@ create more predictable outcomes in software projects. However, the time require
 activities themselves is often overlooked in estimation models, further contributing to the underfitting problem.
 
 [Back to Table of Contents](../README.md) 
+
+## References
+
+Bainbridge, L. (1983). Ironies of automation. Automatica, 19(6), 775-779.
+
+Herbsleb, J. D., & Mockus, A. (2003). An empirical study of speed and communication in globally distributed software development. IEEE Transactions on Software Engineering, 29(6), 481-494.
