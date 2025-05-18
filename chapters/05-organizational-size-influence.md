@@ -101,6 +101,8 @@ NASA's implementation created what has been described as "a hierarchy of purpose
 
 The NASA case demonstrates how large organizations can develop sophisticated structures to manage extremely complex projects while balancing technical specialization with cross-functional coordination. The matrix approach, while powerful, also introduced challenges such as potential conflicts between project and functional managers, requiring clear communication and strong leadership to resolve.
 
+*However, it is worth noting that later attempts within NASA to adopt a "faster, better, cheaper" (FBC) approach under Administrator Daniel Goldin drew considerable attention and analysis. This initiative, which aimed to increase mission frequency and reduce costs, involved a shift in management philosophy and practice. While it had some successes, the FBC era was also marked by significant mission failures. Scholarly assessments, such as McCurdy (2001), have detailed both the innovations and the inherent difficulties of the FBC model, including the challenges of simultaneously optimizing cost, schedule, and reliability. Critiques, like that of Colvard (2001), argued that an excessive focus on efficiency, mimicking business models, at the expense of robust oversight and technical support, could undermine mission effectiveness crucial for an organization with NASA's unique public responsibilities.*
+
 **Efficiency/Effectiveness Note:** NASA's matrix structure prioritized effectiveness — ensuring that the organization could coordinate vast technical expertise and resources to achieve ambitious goals. While this increased structural complexity, it was necessary to manage the scale and risk of the Apollo missions, illustrating how large organizations may need to accept greater complexity to achieve effectiveness in highly demanding environments.
 
 **References:**
@@ -420,7 +422,9 @@ Recognizing these dynamics enables organizations to develop more deliberate appr
 
 [Back to Table of Contents](../README.md)
 
-## Selected References
+## General References
+
+### Cited References
 
 Blau, P. M. (1970). A Formal Theory of Differentiation in Organizations. American Sociological Review, 35(2), 201-218.
 
@@ -445,3 +449,15 @@ Sahni, N., & Singhal, S. (2023). "US government productivity: The roles governme
 Westerman, G., Bonnet, D., & McAfee, A. (2014). Leading Digital: Turning Technology into Business Transformation. Harvard Business Review Press.
 
 Zao-Sanders, M. (2024). "How AI Can Change the Way Your Company Gets Work Done." Harvard Business Review. https://hbr.org/2024/07/how-ai-can-change-the-way-your-company-gets-work-done
+
+McCurdy, H. E. (2001). *Faster, Better, Cheaper: Low-Cost Innovation in the U.S. Space Program*. Johns Hopkins University Press.
+
+### Foundational Works
+
+Aldrich, H. E. (1979). *Organizations and Environments*. Prentice-Hall.
+
+Hannan, M. T., & Freeman, J. (1984). Structural Inertia and Organizational Change. *American Sociological Review, 49*(2), 149–164.
+
+Kimberly, J. R. (1976). Organizational Size and the Structuralist Perspective: A Review, Critique, and Proposal. *Administrative Science Quarterly, 21*(4), 571–597.
+
+Pfeffer, J., & Salancik, G. R. (1978). *The External Control of Organizations: A Resource Dependence Perspective*. Harper & Row.
