@@ -21,7 +21,7 @@
     <text x="200" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Organization</text>
   </a>
   
-  <a id="medium-org-link" href="model-scalling-medium-orgs.svg">
+  <a id="medium-org-link" href="model-scaling-medium-orgs.svg">
     <rect x="330" y="280" width="140" height="70" rx="10" ry="10" fill="#bbf" stroke="#333" stroke-width="2" />
     <text x="400" y="315" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">Medium</text>
     <text x="400" y="335" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">Organization</text>

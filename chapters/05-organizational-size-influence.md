@@ -175,8 +175,6 @@ The Haier case illustrates how even very large organizations migth be able to ma
 Selecting the right approach to model scaling requires a structured decision-making process that considers an organization's current size, growth trajectory, environmental conditions, and existing structural characteristics. The decision tree below provides a practical framework for organizations to determine which scaling strategy might be most appropriate for their specific context, helping them navigate the common pitfalls of under- or over-engineering their operational models.
 
 
-![Zoomable Model Scaling Diagram](../images/model-scaling-top.svg)
-
 <div class="svg-container">
   <object type="image/svg+xml" data="../images/model-scaling-top.svg" class="svg-content">
     Your browser does not support SVG embedding. Please see the static image above.
