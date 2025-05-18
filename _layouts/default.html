@@ -37,7 +37,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <header id="sidebar" class="sidebar">
+      <div id="sidebar" class="sidebar">
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
         {% if site.logo %}
@@ -97,12 +97,12 @@
             <p class="copyright-note"><small>© {{ site.time | date: '%Y' }} {{ site.github.owner_name }} | <a href="{{ site.github.repository_url }}">GitHub</a></small></p>
           </div>
         </details>
-      </header>
+      </div>
 
-      <!-- Draggable resize border between sidebar and content -->
-      <div id="resize-border" class="resize-border" title="Drag to resize"></div>
+      <!-- Visible resize handle -->
+      <div id="resize-handle" class="resize-handle"></div>
 
-      <section id="content" class="content">
+      <div id="content" class="content">
       <!-- Show draft banner for incomplete chapters -->
       {% if page.path contains 'chapters/' and page.path != 'chapters/01-introduction.md' and page.path != 'chapters/02-software-time-estimation.md' and page.path != 'chapters/03-organizational-models.md' and page.path != 'chapters/04-stakeholder-preferences.md' and page.path != 'chapters/06-theoretical-concepts.md' %}
         <div class="draft-banner">
@@ -135,22 +135,15 @@
       {% endif %}
 
       {{ content }}
-      </section>
+      </div>
       
       <!-- Corner controls panel -->
       <div id="corner-controls" class="corner-controls">
         <button id="sidebar-toggle" class="control-button" title="Toggle sidebar">📑</button>
         <button id="theme-toggle" class="control-button" title="Change theme">🎨</button>
-        <button id="width-increase" class="control-button" title="Increase content width">⬅️➡️</button>
-        <button id="width-decrease" class="control-button" title="Decrease content width">➡️⬅️</button>
       </div>
       
-      <!-- Theme selection dropdown (hidden initially) -->
-      <div id="theme-selector" class="theme-selector">
-        <button id="light-theme" class="theme-option">Light Mode ☀️</button>
-        <button id="warm-theme" class="theme-option">Warm Mode 📜</button>
-        <button id="dark-theme" class="theme-option">Dark Mode 🌙</button>
-      </div>
+
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     
@@ -159,33 +152,18 @@
       document.addEventListener('DOMContentLoaded', function() {
         const sidebar = document.getElementById('sidebar');
         const content = document.getElementById('content');
-        const resizeBorder = document.getElementById('resize-border');
+        const resizeHandle = document.getElementById('resize-handle');
         const sidebarToggle = document.getElementById('sidebar-toggle');
         const themeToggle = document.getElementById('theme-toggle');
-        const themeSelector = document.getElementById('theme-selector');
-        const lightTheme = document.getElementById('light-theme');
-        const warmTheme = document.getElementById('warm-theme');
-        const darkTheme = document.getElementById('dark-theme');
-        const widthIncrease = document.getElementById('width-increase');
-        const widthDecrease = document.getElementById('width-decrease');
         const body = document.body;
-        const wrapper = document.querySelector('.wrapper');
         
         // Default values
         const defaultSidebarWidth = 250;
-        let currentSidebarWidth = parseInt(localStorage.getItem('sidebarWidth')) || defaultSidebarWidth;
         
-        // Apply stored sidebar width if available
-        if (localStorage.getItem('sidebarWidth')) {
-          sidebar.style.width = currentSidebarWidth + 'px';
-          resizeBorder.style.left = (currentSidebarWidth + 29) + 'px';
-          content.style.marginLeft = (currentSidebarWidth + 20) + 'px';
-        }
-        
-        // Draggable resize border functionality
+        // Draggable resize functionality
         let isResizing = false;
         
-        resizeBorder.addEventListener('mousedown', function(e) {
+        resizeHandle.addEventListener('mousedown', function(e) {
           isResizing = true;
           document.body.classList.add('resizing');
           e.preventDefault();
@@ -195,23 +173,21 @@
           if (!isResizing) return;
           
           // Calculate sidebar width based on mouse position
-          const sidebarLeft = sidebar.getBoundingClientRect().left;
-          let newWidth = e.clientX - sidebarLeft;
+          let newWidth = e.clientX - 30; // Adjust for sidebar's left offset
           
           // Set min and max width limits
-          newWidth = Math.max(150, Math.min(400, newWidth));
+          newWidth = Math.max(150, Math.min(500, newWidth));
           
           // Update sidebar width
           sidebar.style.width = newWidth + 'px';
           
-          // Update border position
-          resizeBorder.style.left = (newWidth + 29) + 'px';
+          // Update handle position
+          resizeHandle.style.left = (newWidth + 5) + 'px';
           
           // Update content margin
           content.style.marginLeft = (newWidth + 20) + 'px';
           
-          // Save values
-          currentSidebarWidth = newWidth;
+          // Save the width
           localStorage.setItem('sidebarWidth', newWidth);
         });
         
@@ -222,89 +198,61 @@
           }
         });
         
-        // Reset to default on double-click
-        resizeBorder.addEventListener('dblclick', function() {
-          sidebar.style.width = defaultSidebarWidth + 'px';
-          resizeBorder.style.left = (defaultSidebarWidth + 29) + 'px';
-          content.style.marginLeft = (defaultSidebarWidth + 20) + 'px';
-          localStorage.removeItem('sidebarWidth');
-        });
-        
-        // Width adjustment buttons
-        function adjustContentMargin() {
-          if (!sidebar.classList.contains('hidden')) {
-            content.style.marginLeft = (currentSidebarWidth + 20) + 'px';
-          }
+        // Load saved width if available
+        const savedWidth = localStorage.getItem('sidebarWidth');
+        if (savedWidth) {
+          const width = parseInt(savedWidth);
+          sidebar.style.width = width + 'px';
+          resizeHandle.style.left = (width + 5) + 'px';
+          content.style.marginLeft = (width + 20) + 'px';
         }
         
-        widthIncrease.addEventListener('click', function() {
-          currentSidebarWidth = Math.max(150, currentSidebarWidth - 30);
-          sidebar.style.width = currentSidebarWidth + 'px';
-          resizeBorder.style.left = (currentSidebarWidth + 29) + 'px';
-          adjustContentMargin();
-          localStorage.setItem('sidebarWidth', currentSidebarWidth);
-        });
-        
-        widthDecrease.addEventListener('click', function() {
-          currentSidebarWidth = Math.min(400, currentSidebarWidth + 30);
-          sidebar.style.width = currentSidebarWidth + 'px';
-          resizeBorder.style.left = (currentSidebarWidth + 29) + 'px';
-          adjustContentMargin();
-          localStorage.setItem('sidebarWidth', currentSidebarWidth);
+        // Double click to reset width
+        resizeHandle.addEventListener('dblclick', function() {
+          sidebar.style.width = defaultSidebarWidth + 'px';
+          resizeHandle.style.left = (defaultSidebarWidth + 5) + 'px';
+          content.style.marginLeft = (defaultSidebarWidth + 20) + 'px';
+          localStorage.removeItem('sidebarWidth');
         });
         
         // Sidebar toggle
         sidebarToggle.addEventListener('click', function() {
           sidebar.classList.toggle('hidden');
           content.classList.toggle('full-width');
-          resizeBorder.classList.toggle('hidden');
+          resizeHandle.classList.toggle('hidden');
           localStorage.setItem('sidebarHidden', sidebar.classList.contains('hidden'));
         });
         
-        // Restore sidebar visibility state
+        // Restore sidebar state
         if (localStorage.getItem('sidebarHidden') === 'true') {
           sidebar.classList.add('hidden');
           content.classList.add('full-width');
-          resizeBorder.classList.add('hidden');
+          resizeHandle.classList.add('hidden');
         }
         
-        // Theme toggle and selector
-        themeToggle.addEventListener('click', function(e) {
-          themeSelector.classList.toggle('visible');
-          // Position the theme selector near the toggle button
-          const rect = themeToggle.getBoundingClientRect();
-          themeSelector.style.bottom = (window.innerHeight - rect.top + 10) + 'px';
-          themeSelector.style.right = (window.innerWidth - rect.right + 10) + 'px';
-          e.stopPropagation();
-        });
-        
-        // Close theme selector when clicking elsewhere
-        document.addEventListener('click', function(e) {
-          if (!themeSelector.contains(e.target) && e.target !== themeToggle) {
-            themeSelector.classList.remove('visible');
+        // Theme toggle cycles through themes: warm -> light -> dark -> warm
+        themeToggle.addEventListener('click', function() {
+          const currentTheme = localStorage.getItem('theme') || 'warm';
+          let newTheme;
+          
+          if (currentTheme === 'warm') {
+            newTheme = 'light';
+            body.classList.remove('warm-mode', 'dark-mode');
+            body.classList.add('light-mode');
+          } else if (currentTheme === 'light') {
+            newTheme = 'dark';
+            body.classList.remove('warm-mode', 'light-mode');
+            body.classList.add('dark-mode');
+          } else {
+            newTheme = 'warm';
+            body.classList.remove('light-mode', 'dark-mode');
+            body.classList.add('warm-mode');
           }
-        });
-        
-        // Theme option buttons
-        lightTheme.addEventListener('click', function() {
-          body.classList.remove('warm-mode', 'dark-mode');
-          body.classList.add('light-mode');
-          localStorage.setItem('theme', 'light');
-          themeSelector.classList.remove('visible');
-        });
-        
-        warmTheme.addEventListener('click', function() {
-          body.classList.remove('light-mode', 'dark-mode');
-          body.classList.add('warm-mode');
-          localStorage.setItem('theme', 'warm');
-          themeSelector.classList.remove('visible');
-        });
-        
-        darkTheme.addEventListener('click', function() {
-          body.classList.remove('light-mode', 'warm-mode');
-          body.classList.add('dark-mode');
-          localStorage.setItem('theme', 'dark');
-          themeSelector.classList.remove('visible');
+          
+          localStorage.setItem('theme', newTheme);
+          
+          // Update the button tooltip to show current theme
+          themeToggle.title = `Theme: ${newTheme.charAt(0).toUpperCase() + newTheme.slice(1)}`;
         });
         
         // Load saved theme
@@ -317,7 +265,10 @@
           body.classList.add('warm-mode');
         }
         
-        // Only run TOC generation on chapter pages
+        // Update the button tooltip to show current theme
+        themeToggle.title = `Theme: ${savedTheme.charAt(0).toUpperCase() + savedTheme.slice(1)}`;
+        
+        // Table of contents generation
         if (window.location.pathname.includes('/chapters/')) {
           const tocDiv = document.getElementById('auto-toc');
           const headings = document.querySelectorAll('h2, h3, h4');
