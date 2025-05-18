@@ -73,7 +73,7 @@ This pattern illustrates how size influences not only structural models but also
 
 As organizations move beyond digital transformation toward the integration of advanced AI capabilities, these size-related patterns are likely to persist and even intensify. Large organizations may develop comprehensive AI governance frameworks, specialized roles (such as AI product managers or ethics officers), and formalized MLOps pipelines, which can increase both the sophistication and rigidity of their operations. In contrast, smaller organizations may experiment more rapidly with AI tools for automation and prototyping, but may lack the resources for robust oversight or integration at scale. For software engineering teams, this shift means that the structure, processes, and even the nature of engineering work may evolve differently depending on organizational size. AI agents may increasingly participate in or automate activities such as code review, testing, and deployment, further shaping how complexity is managed within organizations of varying sizes (Davenport & Mittal, 2022; Zao-Sanders, 2024; Narain et al., 2025).
 
-## 5.3 Case Studies: Size and Model Complexity
+## 5.3 Case Studies: Organizational Size and Growth Patterns
 
 ### 5.3.1 Zappos' Holacracy Experiment: Ambition and Challenge in Organizational Restructuring
 
@@ -214,7 +214,71 @@ As organizations increasingly integrate AI, downsizing and stagnation may also i
 
 Looking ahead, it is important to recognize that organizational forms and boundaries will continue to evolve in response to a range of technological, economic, and social factors. While AI is a particularly important driver of change and will be discussed in detail in the following sections, other forces — such as globalization, remote work, and new business models—also contribute to the ongoing transformation of how organizations manage size, complexity, and adaptation.
 
-## 5.6 Parallel Human-AI Teams
+## 5.6 Case Studies: Model Fit Beyond Growth
+
+### 5.6.1 IBM's Transformation Under Lou Gerstner and Beyond: Mixed Results from Structural Changes
+
+IBM's transformation in the early 1990s under CEO Lou Gerstner initially demonstrated promising results in recalibrating an overfitted organizational structure. By the early 1990s, IBM had developed into a complex bureaucracy with seven management layers between front-line employees and executive leadership. This elaborate structure exhibited characteristic signs of overfitting: slow decision-making, inability to adapt to market changes, and declining customer satisfaction.
+
+The initial restructuring included:
+- Reducing management layers from seven to five
+- Creating cross-functional teams focused on key customer journeys
+- Simplifying approval processes based on risk assessment
+- Developing more flexible resource allocation mechanisms
+
+However, IBM's subsequent performance has been mixed, suggesting the challenges of maintaining appropriate organizational complexity in a rapidly evolving technology landscape. While the company successfully pivoted to services under Gerstner, it has struggled to maintain consistent growth and market leadership in emerging areas like cloud computing and AI, despite multiple reorganization attempts. Recent years have seen IBM spin off its managed infrastructure business (Kyndryl) and acquire Red Hat for $34 billion, reflecting ongoing efforts to find the right organizational structure and market focus.
+
+**Efficiency/Effectiveness Note:** While IBM's initial transformation under Gerstner showed how reducing structural complexity could improve both efficiency and effectiveness, the company's subsequent history highlights the ongoing challenge of maintaining this balance. This suggests that organizational restructuring, while sometimes necessary, may provide only temporary advantages without continuous adaptation to changing market conditions.
+
+### 5.6.2 Adobe's Transition to Cloud Subscription Model: Consolidation Around New Business Model
+
+Adobe's shift from packaged software to subscription-based services represents a case study in consolidation without growth. In 2013, Adobe announced that it would discontinue its Creative Suite packaged software in favor of the Creative Cloud subscription model, requiring significant organizational restructuring while maintaining similar organizational size.
+
+This transition required Adobe to reorganize multiple aspects of its operations:
+- Development teams shifted from major release cycles (18-24 months) to continuous delivery
+- Customer support restructured for ongoing relationships rather than one-time purchases
+- Financial systems reoriented around recurring revenue rather than large periodic sales
+- Marketing approaches adapted to emphasize subscription value rather than upgrade benefits
+
+The consolidation effort involved finding a balance between maintaining existing customer relationships and establishing new operational models. Adobe needed to streamline processes while developing new capabilities, presenting classic challenges of managing appropriate complexity during organizational transformation.
+
+Adobe's subscription transition demonstrates how the structure-strategy relationship works in software organizations. The company didn't simply change its pricing model but fundamentally reorganized its development, release, and support structures to enable continuous delivery and ongoing customer relationships.
+
+**Efficiency/Effectiveness Note:** Adobe's restructuring demonstrates how software organizations can realign internal processes to improve both efficiency (through more streamlined development cycles) and effectiveness (through closer customer relationships) during business model transitions. The move to Creative Cloud resulted in improved financial performance and customer retention despite initial market concerns.
+
+### 5.6.3 Microsoft's Transformation Under Satya Nadella: Structural Change Enabling Strategic Pivot
+
+Microsoft's pivot from a Windows-centric company to a cloud and services provider under CEO Satya Nadella presents a case of restructuring a large organization without changing its overall size. This transformation demonstrates the use of organizational redesign to enable strategic repositioning.
+
+Nadella observed that Microsoft's organizational structure reflected its historical product divisions rather than customer needs or emerging market opportunities. By reorganizing into more customer-centric divisions and removing organizational barriers between previously siloed teams, Microsoft improved its ability to deliver integrated solutions while pivoting toward cloud services.
+
+Key elements of Microsoft's structural transformation included:
+- Reorganizing from product-centric divisions to solution areas aligned with customer needs
+- Dismantling the "Windows-first" culture that had prioritized the operating system over other opportunities
+- Implementing more collaborative decision-making processes to reduce internal competition
+- Creating cross-functional teams focused on emerging opportunities like cloud services
+
+This transformation illustrates the "Inverse Conway Maneuver" discussed in Chapter 3, where organizational structure was deliberately changed to enable the creation of more integrated products and services. The case shows how a large organization can pivot by recalibrating its organizational complexity to match new strategic priorities.
+
+**Efficiency/Effectiveness Note:** Microsoft's transformation under Nadella indicates how structural changes can improve both efficiency (through reduced internal competition and duplication) and effectiveness (through better alignment with customer needs) during a strategic pivot. By reshaping organizational boundaries and incentives, Microsoft redirected resources toward emerging opportunities while maintaining its scale and core capabilities.
+
+### 5.6.4 Slack's Transformation: From Game Development to Communication Platform
+
+Slack's evolution from game development studio to communication platform provider offers an instructive case of pivoting through organizational restructuring. The company began as Tiny Speck, developing an online game called Glitch. When the game proved unsuccessful in 2012, the company faced a critical decision point regarding its future direction.
+
+Rather than pursuing new gaming concepts, the company pivoted to focus on the internal communication tool they had built for their development team. This pivot required comprehensive reorganization:
+- Engineering teams redirected from game development to platform infrastructure
+- Design focus shifted from gaming experiences to workplace productivity
+- Marketing and sales functions developed for B2B rather than consumer markets
+- Product management realigned around enterprise needs rather than consumer engagement
+
+What makes this case particularly relevant is how the company maintained approximately the same size during this transition while completely transforming its product direction and organizational structure. Slack's reconfiguration demonstrates how software organizations can realign structural elements to support fundamentally different products and markets without necessarily scaling headcount.
+
+The restructuring enabled the development of an organization optimized for its new direction rather than one carrying legacy structures from its previous incarnation. By essentially rebuilding the organization around the new product focus, Slack avoided the common challenge of organizational structures misaligned with current strategic priorities.
+
+**Efficiency/Effectiveness Note:** Slack's transformation illustrates how organizational restructuring can enable both efficiency and effectiveness during pivots. By realigning all aspects of the organization around a new product focus, Slack created appropriate structural alignment with its new strategic direction, avoiding the inefficiencies that often result from partial organizational adaptations during pivots.
+
+## 5.7 Parallel Human-AI Teams
 
 *Note: This section presents emerging considerations rather than established practices. Organizations should adapt these insights to their specific context and risk tolerance.*
 
@@ -222,7 +286,7 @@ As organizations integrate AI capabilities, traditional team structures and coor
 
 ![Parallel Human-AI Teams: Specialization and Integration](../images/parallel-human-ai-teams.svg)
 
-### 5.6.1 Specialization and Integration
+### 5.7.1 Specialization and Integration
 
 **Context:** As AI capabilities mature, organizations face questions about how to structure work when multiple specialized AI agents collaborate with humans on complex tasks. This includes considerations of task decomposition, information flow, and integration of work outputs.
 
@@ -245,7 +309,7 @@ As organizations integrate AI capabilities, traditional team structures and coor
 
 **Strategic Questions:** How should work be structured when multiple specialized AI agents collaborate with humans? What frameworks best support the integration of outputs from diverse human and AI contributors?
 
-### 5.6.2 Coordination Mechanisms
+### 5.7.2 Coordination Mechanisms
 
 **Context:** The integration of AI agents into team structures necessitates reconsideration of traditional coordination mechanisms. This includes both technical protocols for AI-AI coordination and broader frameworks for human-AI collaboration.
 
@@ -268,7 +332,7 @@ As organizations integrate AI capabilities, traditional team structures and coor
 
 **Strategic Questions:** What coordination mechanisms best facilitate effective collaboration in hybrid human-AI teams? How might organizations manage coordination across teams with diverse AI and human contributors?
 
-### 5.6.3 Authority Structures
+### 5.7.3 Authority Structures
 
 **Context:** The integration of increasingly capable AI agents into teams raises important questions about authority, decision rights, and leadership in hybrid human-AI contexts.
 
@@ -291,7 +355,7 @@ As organizations integrate AI capabilities, traditional team structures and coor
 
 **Strategic Questions:** How might authority structures evolve when AI agents can provide expert guidance? What frameworks best balance appropriate human oversight with effective leveraging of AI capabilities?
 
-### 5.6.4 Evaluation and Performance
+### 5.7.4 Evaluation and Performance
 
 **Context:** The integration of AI agents into teams creates significant challenges for traditional performance management approaches, requiring new frameworks for evaluating both individual and team effectiveness.
 
@@ -314,7 +378,7 @@ As organizations integrate AI capabilities, traditional team structures and coor
 
 **Strategic Questions:** How should organizations evaluate performance in human-AI collaborative environments? What metrics best capture the value created through effective human-AI teamwork?
 
-### 5.6.5 Strategic Considerations for Practitioners
+### 5.7.5 Strategic Considerations for Practitioners
 
 Organizations anticipating the evolution of team structures with AI integration should consider:
 
