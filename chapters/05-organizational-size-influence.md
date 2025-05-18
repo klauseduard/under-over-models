@@ -8,7 +8,9 @@ In this context, **efficiency** refers to doing things in the most resource-savi
 
 > **Note on Public Sector Models:** This efficiency-effectiveness tension is particularly acute in government organizations, where a disproportionate focus on efficiency can undermine effectiveness. While private sector organizations primarily answer to shareholders seeking return on investment, public organizations must serve broader societal goals that often resist straightforward measurement. Recent government reform initiatives often emphasize private-sector-style efficiency, yet public service delivery fundamentally requires effectiveness – achieving outcomes for citizens even when doing so is not the most "efficient" use of resources. This represents a critical distinction when modeling public versus private operating frameworks, as government agencies operate in domains where markets cannot or should not dominate and where multiple competing values beyond efficiency must be balanced.
 
-![Organizational Size and Model Complexity Relationship](../images/org-complexity-size-relationship.svg)
+As organizations progress through different life-cycle phases—from startup to growth, maturity, and potential decline or renewal—the appropriate complexity of their operating models must adapt accordingly. The visualization below illustrates how model complexity should evolve across these phases, highlighting the risks of both insufficient complexity (underfitting) and excessive complexity (overfitting) at each stage. Organizations must continuously calibrate their structural approaches to maintain the optimal balance between simplicity and sophistication as they navigate transitions in size and strategic focus.
+
+![Organization Life-Cycle Model Adaptation Curve](../images/org-lifecycle-model-adaptation.svg)
 
 ### 5.1.2 Complexity Growth with Size
 
