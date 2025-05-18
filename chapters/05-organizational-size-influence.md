@@ -2,7 +2,7 @@
 
 ## 5.1 The Relationship Between Organizational Size and Model Complexity
 
-The relationship between the size of an organization and the appropriate complexity of its operating model is neither linear nor trivial. As organizations grow, the demands on their operational frameworks multiply exponentially, creating a tension between efficiency and effectiveness.
+The relationship between the size of an organization and the appropriate complexity of its operating model is neither linear nor trivial. As organizations grow, the demands on their operational frameworks multiply exponentially, creating a tension between efficiency and effectiveness. While this chapter primarily discusses growth, organizations also face periods of contraction or stagnation, which require different approaches to model adaptation and complexity management.
 
 In this context, **efficiency** refers to doing things in the most resource-saving way possible — minimizing time, effort, or cost. **Effectiveness**, on the other hand, means achieving the desired outcomes or goals, even if it requires more resources. As organizations grow, they often face a trade-off: highly efficient processes may not always be the most effective at handling complex or changing situations, and vice versa.
 
@@ -137,6 +137,8 @@ Rather than implementing comprehensive structural changes, organizations can gra
 
 This incremental approach helps avoid premature overfitting by allowing the organization to develop complexity in response to demonstrated needs rather than anticipatory design.
 
+- Regularly reassess model fit not only during growth, but also in times of contraction or stagnation, to ensure structures remain appropriate for current realities.
+
 ### 5.4.2 Regular Model Assessment
 
 Organizations can establish regular review processes to evaluate whether their structural models remain appropriate for their current size and operational needs. These assessments might consider:
@@ -167,82 +169,50 @@ Organizations can adopt a "minimum viable bureaucracy" approach that deliberatel
 
 This approach creates a counterbalance to the natural tendency toward increasing formalization, helping maintain appropriate model complexity across growth stages.
 
-## 5.5 FORWARD-LOOKING CONSIDERATIONS
+## 5.5 Model Complexity in Downsizing, Consolidation, Pivoting, and Stagnation
 
-*Note: This section presents emerging considerations rather than established practices. Organizations should adapt these insights to their specific context and risk tolerance.*
+While much organizational research and practice focuses on growth, many organizations experience periods of downsizing, consolidation, pivoting, or stagnation. These phases present unique challenges for maintaining appropriate model complexity and adapting structures to fit new realities. Consolidation — merging departments, streamlining roles, or centralizing functions — is a common response to contraction, especially in governmental and public sector organizations facing fiscal pressures. Alternatively, some organizations may choose to pivot, fundamentally changing their strategic direction or business model to adapt to new circumstances rather than simply shrinking.
 
-As organizations navigate complexities of growth while integrating AI capabilities, several emerging considerations will influence their approach to finding appropriate model complexity. These observations draw from current organizational developments and technology trends, providing strategic considerations rather than established theory.
+### 5.5.1 Downsizing and Consolidation
 
-### 5.5.1 AI-Enabled Structural Flexibility
+When organizations shrink — whether due to market pressures, strategic realignment, or crisis—they often find that previously effective models become overfitted: processes, hierarchies, and formalization levels that made sense at a larger scale may now hinder agility, increase costs, or create bottlenecks. In governmental organizations, these dynamics are often intensified by legal, regulatory, and cultural factors that can make simplification and adaptation more complex.
 
-**Context:** Advanced AI systems may enable organizations to maintain simpler formal structures while managing greater complexity through intelligent coordination systems rather than hierarchical management layers.
+**Key challenges:**
+- **Legacy Overfitting:** Retaining excessive bureaucracy or specialized roles that are no longer justified by the organization's size.
+- **Cultural Inertia:** Difficulty in letting go of established processes or structures, even when they are no longer effective.
+- **Adaptation Mechanisms:** The need to "prune" complexity, simplify reporting lines, and re-empower generalists.
 
-**Time Horizon Considerations:**
+**Strategies:**
+- Conduct regular audits to identify and eliminate unnecessary processes or roles.
+- Revisit decision rights and decentralize where possible to restore flexibility.
+- Encourage a culture of simplification and continuous improvement.
+- Consider strategic pivots — shifting focus to new markets, products, or services — as an alternative to contraction, which may require rethinking model complexity and structure.
 
-*Near-term:*
-- Organizations begin using AI tools to enhance coordination within existing structures
-- Limited impact on formal organizational design, with AI primarily supporting existing processes
+### 5.5.2 Stagnation and Pivoting
 
-*Emerging:*
-- Development of AI systems specifically designed for organizational coordination
-- Reduction in middle management coordination roles in organizations with strong AI capabilities
+Periods of stagnation — where growth plateaus or the environment becomes more challenging — can also create model fit issues. Organizations may find themselves with models that are either too complex (overfitting) or too simple (underfitting) for their current context. In some cases, organizations may choose to pivot, fundamentally changing their business model, product focus, or market orientation to break out of stagnation and realign their structure with new strategic goals.
 
-*Long-term:*
-- Potential emergence of "flatter but smarter" organizational models where sophisticated AI systems enable simpler formal structures despite organizational size
-- Organizations may develop hybrid human-AI coordination models that significantly alter traditional size-complexity relationships
+**Key challenges:**
+- **Complacency:** Failing to adapt models to new challenges, leading to underfitting.
+- **Resource Constraints:** Pressure to cut costs may lead to over-simplification and loss of critical capabilities.
+- **Innovation Stagnation:** Rigid structures may stifle the experimentation needed to break out of stagnation.
+- **Pivot Execution Risk:** Rapid or poorly planned pivots may result in misalignment between structure and new strategy.
 
-**Strategic Questions:** How might AI capabilities change the relationship between organizational size and necessary structural complexity? What coordination functions currently requiring management layers might be effectively handled through AI systems?
+**Strategies:**
+- Use stagnation as an opportunity to reassess model fit and experiment with new approaches.
+- Balance efficiency drives with targeted investments in innovation or capability-building.
+- Foster open communication to surface bottlenecks and adaptation needs.
+- When pivoting, ensure that structural changes are aligned with the new strategic direction and that the organization is prepared for rapid adaptation.
 
-### 5.5.2 Dynamic Organizational Boundaries
+### 5.5.3 Case Example: Simplification After Contraction
 
-**Context:** AI capabilities may enable more fluid organizational boundaries, allowing organizations to dynamically reconfigure their effective size and complexity in response to changing needs.
+A mid-sized technology company, after a major market downturn, reduced its workforce by 30%. By flattening its hierarchy, streamlining decision-making, and empowering cross-functional teams, the company restored agility and improved morale, ultimately returning to growth with a simpler, more adaptive structure.
 
-**Time Horizon Considerations:**
+### 5.5.4 Forward-Looking Considerations
 
-*Near-term:*
-- Organizations increasingly use technology to support temporary collaborations and project-based structures
-- Growing use of advanced talent platforms to expand and contract organizational capabilities
+As organizations increasingly integrate AI, downsizing and stagnation may also involve rethinking which coordination and decision functions can be automated or simplified, and how to maintain adaptability with fewer resources. In both public and private organizations, the adoption of AI may be framed either as a means to extend organizational capacity or as a tool for workforce reduction. The implications for model complexity and adaptation will depend on which path is pursued — a topic explored in greater depth in later chapters. For now, AI should be considered as a future factor in shaping organizational adaptation, rather than a central theme of this chapter.
 
-*Emerging:*
-- Development of AI-enabled organizational orchestration systems that facilitate rapid reconfiguration
-- Increasing use of hybrid models blending stable core structures with dynamic peripheral arrangements
-
-*Long-term:*
-- Potential emergence of "breathing organizations" that can substantially change their effective size and structure in response to environmental conditions
-- The concept of organizational size itself may become more fluid as boundaries between internal and external resources blur
-
-**Strategic Questions:** How might AI enable more dynamic organizational boundaries? What implications would more fluid organizational boundaries have for model complexity requirements?
-
-### 5.5.3 Networked Intelligence Distribution
-
-**Context:** Distributed AI capabilities may change how organizations manage complexity across their size spectrum, potentially altering the traditional relationship between size and formalization.
-
-**Time Horizon Considerations:**
-
-*Near-term:*
-- Organizations begin implementing localized AI tools to manage complexity at department levels
-- Limited integration between different AI capabilities across the organization
-
-*Emerging:*
-- Development of networked AI systems that enable coordinated intelligence distribution
-- Growing capability to manage complexity through distributed intelligence rather than hierarchical structures
-
-*Long-term:*
-- Potential emergence of organizational models where complexity is managed through intelligence distribution rather than structural formalization
-- Organizations may develop new coordination mechanisms based on networked intelligence rather than reporting relationships
-
-**Strategic Questions:** How might distributed AI capabilities change the way organizations manage complexity as they grow? What new organizational structures might emerge when intelligence can be effectively distributed throughout the organization?
-
-### 5.5.4 Strategic Considerations for Practitioners
-
-Organizations navigating growth while preparing for AI integration should consider:
-
-1. Evaluating which aspects of structural complexity currently serve coordination needs versus control needs
-2. Identifying coordination functions that might be effectively supported by emerging AI capabilities
-3. Experimenting with more flexible structural arrangements supported by enhanced coordination technologies
-4. Developing frameworks for assessing appropriate model complexity that account for the impact of AI capabilities
-
-While these considerations remain forward-looking, forward-thinking organizations can begin preparing for these potential developments by adopting more flexible approaches to structural design and remaining attentive to the evolving relationship between size, complexity, and technology.
+Looking ahead, it is important to recognize that organizational forms and boundaries will continue to evolve in response to a range of technological, economic, and social factors. While AI is a particularly important driver of change and will be discussed in detail in the following sections, other forces — such as globalization, remote work, and new business models—also contribute to the ongoing transformation of how organizations manage size, complexity, and adaptation.
 
 ## 5.6 Parallel Human-AI Teams
 
@@ -357,13 +327,22 @@ While these considerations remain forward-looking, proactive organizations can b
 
 ## Summary Table: Organization Size, Efficiency/Effectiveness, and Model Fit
 
-| Organization Size | Efficiency Focus | Effectiveness Focus | Typical Risk      | Model Fit Challenge         |
-|-------------------|-----------------|--------------------|-------------------|----------------------------|
-| Small             | High            | Low                | Underfitting      | Too simple for complexity  |
-| Medium            | Balanced        | Balanced           | Both (Tension)    | Finding the right balance  |
-| Large             | Lower           | High               | Overfitting       | Too complex, less agile    |
+| Organization Size/Phase | Efficiency Focus | Effectiveness Focus | Typical Risk      | Model Fit Challenge         |
+|-------------------------|-----------------|--------------------|-------------------|----------------------------|
+| Small                   | High            | Low                | Underfitting      | Too simple for complexity  |
+| Medium                  | Balanced        | Balanced           | Both (Tension)    | Finding the right balance  |
+| Large                   | Lower           | High               | Overfitting       | Too complex, less agile    |
+| Contracting/Stagnant    | Variable        | Variable           | Legacy overfitting or loss of capability | Pruning or revitalizing model fit |
+| Consolidation           | High            | Variable           | Loss of flexibility or innovation | Over-pruning, rigidity     |
+| Pivot                   | Variable        | High               | Misalignment, execution risk     | Rapid adaptation needed    |
 
-*Table: This table summarizes how organizations of different sizes tend to prioritize efficiency and effectiveness, and how this relates to the risks of underfitting or overfitting their operating models.*
+*Table: This table summarizes how organizations of different sizes and phases tend to prioritize efficiency and effectiveness, and how this relates to the risks of underfitting or overfitting their operating models. Consolidation refers to merging or streamlining units to improve efficiency; pivot refers to a significant change in strategy or business model.*
+
+## Glossary
+
+**Consolidation:** The process of merging or streamlining organizational units to improve efficiency or adapt to reduced size.
+
+**Pivot:** A significant change in organizational strategy or business model, often in response to external pressures or new opportunities.
 
 ## Concluding Note: Efficiency, Effectiveness, and Model Fit
 
