@@ -1,21 +1,92 @@
 @import "{{ site.theme }}";
 
-/* Warmer color scheme with improved readability for technical content */
+/* Theme settings */
 body {
-  background-color: #fffaed; /* Warmer, light cream background */
-  color: #333333;
-  font-family: Georgia, serif;
   line-height: 1.6;
   font-size: 17px;
+  font-family: Georgia, serif;
 }
 
+/* Default theme is warm mode */
+body:not(.light-mode):not(.dark-mode) {
+  background-color: #fffaed; /* Warmer, light cream background */
+  color: #333333;
+}
+
+/* Light mode - clean white background */
+body.light-mode {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+/* Dark mode is handled by its own section */
+
 .wrapper {
-  background-color: #fffdf5; /* Very light warm paper color */
   border-radius: 8px;
-  box-shadow: 0 3px 15px rgba(158, 134, 80, 0.12);
   padding: 30px;
   max-width: 960px;
   position: relative; /* For sidebar toggle positioning */
+}
+
+/* Set appropriate backgrounds based on theme */
+body:not(.light-mode):not(.dark-mode) .wrapper {
+  background-color: #fffdf5; /* Very light warm paper color */
+  box-shadow: 0 3px 15px rgba(158, 134, 80, 0.12);
+}
+
+body.light-mode .wrapper {
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Theme toggle buttons */
+.theme-toggles {
+  position: fixed;
+  top: 32px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  padding: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  margin: 0 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  opacity: 0.6;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.theme-toggle.active {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.theme-icon {
+  font-size: 16px;
+}
+
+/* Light mode theme toggle styles */
+body.light-mode .theme-toggles {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
 /* Sidebar toggle button */
@@ -232,6 +303,11 @@ body {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #e8dfca;
+  }
+  
+  .theme-toggles {
+    top: 10px;
+    right: 10px;
   }
 }
 
@@ -724,4 +800,87 @@ details summary:hover {
 .mermaid {
   margin: 15px 0;
   overflow-x: auto;
+}
+
+/* Light mode styling adjustments */
+body.light-mode {
+  .sidebar {
+    background-color: #ffffff;
+    border-right-color: #eeeeee;
+  }
+  
+  .sidebar-toggle {
+    background-color: #ffffff;
+    border-color: #dddddd;
+  }
+  
+  .site-info-details {
+    border-top-color: #eeeeee;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #222222;
+  }
+  
+  a {
+    color: #0066cc;
+  }
+  
+  a:hover {
+    color: #004499;
+  }
+  
+  .nav-link {
+    background-color: #f5f5f5;
+  }
+  
+  .nav-link:hover {
+    background-color: #e8e8e8;
+  }
+  
+  .chapter-toc, #markdown-toc {
+    background-color: #f8f8f8;
+    border: 1px solid #eeeeee;
+  }
+  
+  pre, code {
+    background-color: #f5f5f5 !important;
+    border-color: #eeeeee !important;
+  }
+  
+  blockquote {
+    background-color: #f8f8f8;
+    border-left-color: #dddddd;
+    color: #444444;
+  }
+  
+  .draft-indicator {
+    background-color: #fff8e6;
+    border-color: #ffe0a1;
+  }
+  
+  .completed-indicator {
+    background-color: #e6f5e9;
+    border-color: #c2e0c9;
+  }
+  
+  .draft-banner {
+    background-color: #fff8e6;
+    border-color: #ffe0a1;
+  }
+  
+  .MathJax_Display {
+    background-color: #f9f9f9;
+    border-left-color: #dddddd;
+  }
+  
+  figure {
+    background-color: #f9f9f9;
+    border-color: #eeeeee;
+  }
+  
+  .interactive-tool {
+    background-color: #f0f7fa;
+    border-color: #d3e0e6;
+  }
 } 

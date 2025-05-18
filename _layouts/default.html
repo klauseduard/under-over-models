@@ -42,6 +42,19 @@
         <span class="toggle-icon"></span>
       </button>
 
+      <!-- Theme toggle buttons -->
+      <div id="theme-toggles" class="theme-toggles">
+        <button id="light-mode-toggle" class="theme-toggle" aria-label="Light Mode (White Background)">
+          <span class="theme-icon">☀️</span>
+        </button>
+        <button id="warm-mode-toggle" class="theme-toggle active" aria-label="Warm Mode (Default Cream Background)">
+          <span class="theme-icon">📜</span>
+        </button>
+        <button id="dark-mode-toggle" class="theme-toggle" aria-label="Dark Mode">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+
       <header id="sidebar" class="sidebar visible">
         <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
@@ -147,6 +160,52 @@
     <!-- Script to auto-generate table of contents -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // Theme toggle functionality
+        const lightModeToggle = document.getElementById('light-mode-toggle');
+        const warmModeToggle = document.getElementById('warm-mode-toggle');
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or set a default
+        const savedTheme = localStorage.getItem('theme') || 'warm-mode';
+        
+        // Apply theme on load
+        body.classList.remove('light-mode', 'warm-mode', 'dark-mode');
+        body.classList.add(savedTheme);
+        
+        // Update active button state based on current theme
+        function updateActiveThemeButton() {
+          lightModeToggle.classList.toggle('active', body.classList.contains('light-mode'));
+          warmModeToggle.classList.toggle('active', !body.classList.contains('light-mode') && !body.classList.contains('dark-mode'));
+          darkModeToggle.classList.toggle('active', body.classList.contains('dark-mode'));
+        }
+        
+        updateActiveThemeButton();
+        
+        // Light mode button
+        lightModeToggle.addEventListener('click', function() {
+          body.classList.remove('warm-mode', 'dark-mode');
+          body.classList.add('light-mode');
+          localStorage.setItem('theme', 'light-mode');
+          updateActiveThemeButton();
+        });
+        
+        // Warm mode button (default)
+        warmModeToggle.addEventListener('click', function() {
+          body.classList.remove('light-mode', 'dark-mode');
+          body.classList.add('warm-mode');
+          localStorage.setItem('theme', 'warm-mode');
+          updateActiveThemeButton();
+        });
+        
+        // Dark mode button
+        darkModeToggle.addEventListener('click', function() {
+          body.classList.remove('light-mode', 'warm-mode');
+          body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark-mode');
+          updateActiveThemeButton();
+        });
+
         // Sidebar toggle functionality
         const sidebarToggle = document.getElementById('sidebar-toggle');
         const sidebar = document.getElementById('sidebar');
