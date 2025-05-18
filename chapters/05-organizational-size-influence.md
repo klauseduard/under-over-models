@@ -176,6 +176,89 @@ The Haier case illustrates how even very large organizations migth be able to ma
 
 ![Model Scaling Strategies Decision Tree](../images/model-scaling-decision-tree.svg)
 
+```mermaid
+flowchart TD
+    title["Model Scaling Strategies Decision Tree"]
+    
+    start([Start]) --> orgSize{"What is your\norganization size?"}
+    
+    orgSize -->|Small| small["Small Org"]
+    orgSize -->|Medium| medium["Medium Org"] 
+    orgSize -->|Large| large["Large Org"]
+    
+    small --> growthS{"Growth\nTrajectory?"}
+    medium --> growthM{"Growth\nTrajectory?"}
+    large --> growthL{"Growth\nTrajectory?"}
+    
+    growthS -->|Rapid Growth| rapidS["Rapid Growth\nSmall Org"]
+    growthS -->|Steady Growth| steadyS["Steady Growth\nSmall Org"]
+    growthS -->|Plateau| plateauS["Plateau\nSmall Org"]
+    growthS -->|Contraction| contractS["Contraction\nSmall Org"]
+    
+    growthM -->|Rapid Growth| rapidM["Rapid Growth\nMedium Org"]
+    growthM -->|Steady Growth| steadyM["Steady Growth\nMedium Org"]
+    growthM -->|Plateau| plateauM["Plateau\nMedium Org"]
+    growthM -->|Contraction| contractM["Contraction\nMedium Org"]
+    
+    growthL -->|Rapid Growth| rapidL["Rapid Growth\nLarge Org"]
+    growthL -->|Steady Growth| steadyL["Steady Growth\nLarge Org"]
+    growthL -->|Plateau| plateauL["Plateau\nLarge Org"]
+    growthL -->|Contraction| contractL["Contraction\nLarge Org"]
+    
+    %% Small org challenges
+    rapidS --> challengeRS{"Primary\nChallenge?"}
+    challengeRS -->|Coordination Issues| sRCoord["Coordination\nIssues"]
+    challengeRS -->|Process Inconsistencies| sRProcess["Process\nInconsistencies"]
+    challengeRS -->|Bureaucratic Friction| sRBureau["Bureaucratic\nFriction"]
+    
+    steadyS --> challengeSS{"Primary\nChallenge?"}
+    challengeSS -->|Coordination Issues| sSCoord["Coordination\nIssues"]
+    challengeSS -->|Process Inconsistencies| sSProcess["Process\nInconsistencies"]
+    challengeSS -->|Bureaucratic Friction| sSBureau["Bureaucratic\nFriction"]
+    
+    %% Medium org - focusing on just one growth path for brevity
+    rapidM --> challengeRM{"Primary\nChallenge?"}
+    challengeRM -->|Coordination Issues| mRCoord["Coordination\nIssues"]
+    challengeRM -->|Process Inconsistencies| mRProcess["Process\nInconsistencies"]
+    challengeRM -->|Bureaucratic Friction| mRBureau["Bureaucratic\nFriction"]
+    
+    %% Environment factors - Small, Rapid, Coordination
+    sRCoord --> envSRC{"Environment?"}
+    envSRC -->|Stable| stableSRC["Stable Environment"]
+    envSRC -->|Volatile| volatileSRC["Volatile Environment"]
+    
+    %% Strategies for Small, Rapid, Coordination, Stable
+    stableSRC --> stratSRCS["Strategy:\nIncremental Formalization\n📘 Blue Risk: Underfitting\nEffectiveness: ★★★★☆"]
+    
+    volatileSRC --> stratSRCV["Strategy:\nMinimum Viable Bureaucracy\n📘 Blue Risk: Underfitting\nEffectiveness: ★★★★★\nExample: Zappos"]
+    
+    %% Another example path for Medium, Rapid, Process, Volatile
+    mRProcess --> envMRP{"Environment?"}
+    envMRP -->|Stable| stableMRP["Stable Environment"]
+    envMRP -->|Volatile| volatileMRP["Volatile Environment"]
+    
+    volatileMRP --> stratMRPV["Strategy:\nDifferentiated Formalization\n📕 Red Risk: Overfitting\nEffectiveness: ★★★☆☆\nExample: Adobe"]
+    
+    %% Large org path example 
+    plateauL --> challengePL{"Primary\nChallenge?"}
+    challengePL -->|Bureaucratic Friction| lPBureau["Bureaucratic\nFriction"]
+    lPBureau --> envLPB{"Environment?"}
+    envLPB -->|Stable| stableLPB["Stable Environment"]
+    stableLPB --> stratLPBS["Strategy:\nRegular Model Assessment\n📕 Red Risk: Overfitting\nEffectiveness: ★★★★☆\nExample: Microsoft"]
+    
+    %% Legend and styling
+    classDef decision fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef outcome fill:#bbf,stroke:#333,stroke-width:1px;
+    classDef strategy fill:#dfd,stroke:#333,stroke-width:1px;
+    
+    class orgSize,growthS,growthM,growthL,challengeRS,challengeSS,challengeRM,challengePL,envSRC,envMRP,envLPB decision;
+    class small,medium,large,rapidS,steadyS,plateauS,contractS,rapidM,steadyM,plateauM,contractM,rapidL,steadyL,plateauL,contractL outcome;
+    class stratSRCS,stratSRCV,stratMRPV,stratLPBS strategy;
+    
+    %% Notes
+    note1["Note: Blue risk indicates underfitting danger\nRed risk indicates overfitting danger"]
+```
+
 Organizations can use several strategies to develop appropriate model complexity as they grow:
 
 ### 5.4.1 Incremental Formalization
