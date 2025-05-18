@@ -15,35 +15,167 @@ body {
   box-shadow: 0 3px 15px rgba(158, 134, 80, 0.12);
   padding: 30px;
   max-width: 960px;
+  position: relative; /* For sidebar toggle positioning */
 }
 
-section {
-  width: 620px;
+/* Sidebar toggle button */
+.sidebar-toggle {
+  position: fixed;
+  top: 32px;
+  left: 10px;
+  z-index: 1000;
+  background-color: #f5f0e5;
+  border: 1px solid #e8dfca;
+  border-radius: 4px;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  opacity: 0.7;
 }
 
-header {
+.sidebar-toggle:hover {
+  opacity: 1;
+  background-color: #eee0b9;
+}
+
+.sidebar-toggle .toggle-icon {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background-color: #6e6e6e;
+  transition: all 0.3s;
+}
+
+.sidebar-toggle .toggle-icon:before,
+.sidebar-toggle .toggle-icon:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #6e6e6e;
+  transition: all 0.3s;
+}
+
+.sidebar-toggle .toggle-icon:before {
+  top: -6px;
+}
+
+.sidebar-toggle .toggle-icon:after {
+  top: 6px;
+}
+
+.sidebar-toggle.active .toggle-icon {
+  background-color: transparent;
+}
+
+.sidebar-toggle.active .toggle-icon:before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.sidebar-toggle.active .toggle-icon:after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Sidebar and content layout */
+.sidebar {
   border-right: 1px solid #e8dfca;
   width: 250px;
   overflow-x: hidden; /* Prevent content from spilling out */
+  overflow-y: auto; /* Allow scrolling for long sidebars */
+  position: fixed;
+  top: 30px;
+  bottom: 30px;
+  left: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding-right: 15px;
+  max-height: calc(100vh - 60px);
+}
+
+.sidebar.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.sidebar:not(.visible) {
+  transform: translateX(-280px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.content {
+  margin-left: 270px;
+  width: 620px;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.content.full-width {
+  margin-left: 20px;
+  width: calc(100% - 40px);
+}
+
+/* Collapsible site info in sidebar */
+.site-info-details {
+  margin-top: 20px;
+  border-top: 1px solid #e8dfca;
+  padding-top: 15px;
+}
+
+.site-info-details summary {
+  cursor: pointer;
+  color: #956a00;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.site-info-details summary:hover {
+  color: #c28100;
+}
+
+.site-info-content {
+  padding: 8px 0;
+  font-size: 0.9em;
+}
+
+.site-info-content p {
+  margin-bottom: 10px;
+}
+
+/* Mobile footer note */
+.mobile-footer-note {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
 }
 
 /* Responsive adjustments for sidebar when zoomed or on smaller screens */
 @media screen and (max-width: 960px) {
-  header {
+  .sidebar {
     width: 220px;
   }
-  section {
-    width: 580px;
+  .content:not(.full-width) {
+    margin-left: 240px;
+    width: calc(100% - 260px);
+  }
+  .sidebar-toggle {
+    display: flex;
   }
 }
 
 @media screen and (max-width: 860px) {
-  header {
+  .sidebar {
     width: 180px;
-    padding-right: 5px;
   }
-  section {
-    width: 500px;
+  .content:not(.full-width) {
+    margin-left: 200px;
+    width: calc(100% - 220px);
   }
   .chapters-nav {
     padding-left: 10px;
@@ -55,29 +187,29 @@ header {
     width: auto;
     margin: 0;
   }
-  header {
-    float: none;
-    position: static;
-    width: auto;
-    padding-right: 0;
-    border-right: 0;
-    border-bottom: 1px solid #e8dfca;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+  .sidebar {
+    width: 240px;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    background-color: #fffdf5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 900;
+    padding: 15px;
   }
-  section {
-    float: none;
-    width: auto;
+  .content {
+    margin-left: 0;
+    width: 100%;
     padding: 0 10px;
+    float: none;
   }
-  
-  /* Fix project attribution in mobile view */
-  p.view {
-    display: block;
-    position: static;
-    margin: 10px 0;
-    text-align: center;
+  .content.full-width {
+    margin-left: 0;
+  }
+  .sidebar-toggle {
+    top: 10px;
+    display: flex;
   }
   
   /* Make navigation cleaner */
@@ -100,6 +232,42 @@ header {
     margin-top: 30px;
     padding-top: 20px;
     border-top: 1px solid #e8dfca;
+  }
+}
+
+/* Printer-friendly styles that hide the sidebar */
+@media print {
+  .sidebar, .sidebar-toggle {
+    display: none !important;
+  }
+  .content {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+  }
+  
+  .wrapper {
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+  
+  pre, code {
+    font-size: 10pt !important;
+  }
+  
+  .draft-banner {
+    display: none !important;
   }
 }
 
@@ -386,42 +554,6 @@ blockquote {
   font-style: italic;
 }
 
-/* Print optimizations */
-@media print {
-  body {
-    background-color: white !important;
-    color: black !important;
-    font-size: 12pt !important;
-  }
-  
-  .wrapper {
-    box-shadow: none !important;
-    padding: 0 !important;
-    max-width: 100% !important;
-  }
-  
-  a {
-    color: black !important;
-    text-decoration: underline !important;
-  }
-  
-  header, footer {
-    display: none !important;
-  }
-  
-  pre, code {
-    font-size: 10pt !important;
-  }
-  
-  section {
-    width: 100% !important;
-  }
-  
-  .draft-banner {
-    display: none !important;
-  }
-} 
-
 /* Dark mode optimizations */
 .dark-mode {
   background-color: #282520 !important;
@@ -496,6 +628,31 @@ blockquote {
   .draft-banner a {
     color: #ffd54f !important; /* Brighter gold for dark mode links */
     text-decoration: underline;
+  }
+  
+  /* Dark mode sidebar and toggle */
+  .sidebar {
+    background-color: #32302a !important;
+    border-right-color: #4a4639 !important;
+  }
+  
+  .sidebar-toggle {
+    background-color: #3e3a32 !important;
+    border-color: #4a4639 !important;
+  }
+  
+  .sidebar-toggle:hover {
+    background-color: #4a4639 !important;
+  }
+  
+  .sidebar-toggle .toggle-icon,
+  .sidebar-toggle .toggle-icon:before,
+  .sidebar-toggle .toggle-icon:after {
+    background-color: #e3c987 !important;
+  }
+  
+  .site-info-details {
+    border-top-color: #4a4639 !important;
   }
   
   .draft-banner a:hover {
