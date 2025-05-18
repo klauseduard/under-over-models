@@ -863,6 +863,8 @@ The principle articulated by enterprise architecture expert Ruth Malan that "if 
 
 The rise of remote and hybrid work has created new challenges for applying the Inverse Conway Maneuver effectively. Organizations must now explicitly design digital communication pathways to shape the desired architecture, not merely rely on team composition and physical proximity. Several patterns have emerged from practitioners in this space:
 
+Quantifying the impact of these challenges, Herbsleb & Mockus (2003) found that globally distributed development work took 2.5x longer than co-located work, primarily due to coordination challenges. This empirical finding underscores the critical importance of explicitly designing team structures and communication pathways in distributed environments.
+
 #### Remote-Aware Team Structures
 
 Team Topologies advocates recommend three key practices for effective remote team design (Skelton and Pais, [2020](https://teamtopologies.com/)):
