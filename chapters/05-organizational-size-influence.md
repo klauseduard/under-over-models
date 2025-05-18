@@ -65,13 +65,11 @@ As organizations grow in size, they naturally encounter greater operational and 
 
 In response to this growing complexity, organizations develop increasingly sophisticated models and frameworks to manage their operations. This progression follows a general pattern where operational realities drive increased structural complexity.
 
-![Organizational Complexity Growth with Size](../images/org-size-complexity-growth.svg)
-
 ### 5.1.3 Organizational Response Patterns
 
-> **TODO: Review:** Organizations of different sizes tend to exhibit distinctive patterns in how they approach model complexity, each facing characteristic risks along the underfitting-overfitting spectrum. As organizations grow, they typically shift from simple, efficient models that may underfit complex realities to more sophisticated approaches that risk overfitting through excessive formalization. This progression represents a fundamental tension in organizational design: ensuring sufficient structural complexity to address operational needs while avoiding unnecessary bureaucracy that can impede adaptation.
+Organizations of different sizes tend to exhibit distinctive patterns in how they approach model complexity, each facing characteristic risks along the underfitting-overfitting spectrum. As organizations grow, they typically shift from simple, efficient models that may underfit complex realities to more sophisticated approaches that risk overfitting through excessive formalization. This progression represents a fundamental tension in organizational design: ensuring sufficient structural complexity to address operational needs while avoiding unnecessary bureaucracy that can impede adaptation.
 
-> **TODO: Review:** The visualization below illustrates this spectrum of organizational responses by size, highlighting the characteristic approaches, risks, and adaptation mechanisms at each stage. Moving from small to large organizations, we see a progressive shift in focus from efficiency to effectiveness, with corresponding changes in structural approach and distinctive model fit challenges.
+The visualization below illustrates this spectrum of organizational responses by size, highlighting the characteristic approaches, risks, and adaptation mechanisms at each stage. Moving from small to large organizations, we see a progressive shift in focus from efficiency to effectiveness, with corresponding changes in structural approach and distinctive model fit challenges.
 
 ![Organizational Response Patterns by Size](../images/org-size-response-patterns.svg)
 

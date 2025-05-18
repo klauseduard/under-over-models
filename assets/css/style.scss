@@ -69,7 +69,7 @@ body {
   left: 250px;
   width: 10px;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.1);
   cursor: col-resize;
   z-index: 20;
   transition: background-color 0.2s;
@@ -78,7 +78,7 @@ body {
 .resize-handle:hover, 
 .resize-handle:active,
 body.resizing .resize-handle {
-  background-color: rgba(0, 120, 212, 0.5);
+  background-color: rgba(0, 120, 212, 0.7);
 }
 
 .resize-handle:after {
@@ -86,15 +86,15 @@ body.resizing .resize-handle {
   position: absolute;
   top: 50%;
   left: 3px;
-  height: 40px;
+  height: 80px;
   width: 4px;
-  margin-top: -20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: -40px;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 }
 
 .resize-handle:hover:after {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .resize-handle.hidden {
@@ -135,29 +135,32 @@ body.resizing .resize-handle {
 /* Corner controls */
 .corner-controls {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   z-index: 30;
   display: flex;
-  gap: 5px;
+  gap: 8px;
 }
 
 .control-button {
-  width: 36px;
-  height: 36px;
-  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
   border: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s ease;
 }
 
 .control-button:hover {
-  background-color: #f0f0f0;
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 body.resizing {
