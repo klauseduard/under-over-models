@@ -4,6 +4,8 @@
 
 The relationship between the size of an organization and the appropriate complexity of its operating model is neither linear nor trivial. As organizations grow, the demands on their operational frameworks multiply exponentially, creating a tension between efficiency and effectiveness.
 
+In this context, **efficiency** refers to doing things in the most resource-saving way possible—minimizing time, effort, or cost. **Effectiveness**, on the other hand, means achieving the desired outcomes or goals, even if it requires more resources. As organizations grow, they often face a trade-off: highly efficient processes may not always be the most effective at handling complex or changing situations, and vice versa.
+
 ![Organizational Size and Model Complexity Relationship](../images/org-complexity-size-relationship.svg)
 
 ### 5.1.2 Complexity Growth with Size
