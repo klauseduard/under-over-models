@@ -122,6 +122,9 @@
         </details>
       </header>
 
+      <!-- Resize handle -->
+      <div id="resize-handle" class="resize-handle" title="Drag to resize"></div>
+
       <section id="content" class="content">
       <!-- Show draft banner for incomplete chapters -->
       {% if page.path contains 'chapters/' and page.path != 'chapters/01-introduction.md' and page.path != 'chapters/02-software-time-estimation.md' and page.path != 'chapters/03-organizational-models.md' and page.path != 'chapters/04-stakeholder-preferences.md' and page.path != 'chapters/06-theoretical-concepts.md' %}
@@ -165,9 +168,86 @@
     <!-- Script to auto-generate table of contents -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // Resize handle functionality
+        const resizeHandle = document.getElementById('resize-handle');
+        const sidebar = document.getElementById('sidebar');
+        const content = document.getElementById('content');
+        const wrapper = document.querySelector('.wrapper');
+        
+        if (resizeHandle && sidebar && content) {
+          // Initialize with stored width values if available
+          const storedSidebarWidth = localStorage.getItem('sidebarWidth');
+          const storedContentWidth = localStorage.getItem('contentWidth');
+          
+          if (storedSidebarWidth && storedContentWidth) {
+            sidebar.style.width = storedSidebarWidth + 'px';
+            content.style.width = storedContentWidth + 'px';
+            content.style.marginLeft = storedSidebarWidth + 20 + 'px';
+          }
+          
+          let isResizing = false;
+          let initialX = 0;
+          let initialSidebarWidth = 0;
+          
+          resizeHandle.addEventListener('mousedown', function(e) {
+            isResizing = true;
+            initialX = e.clientX;
+            initialSidebarWidth = sidebar.offsetWidth;
+            
+            // Add a class to indicate resizing is active
+            document.body.classList.add('resizing');
+            
+            // Prevent text selection during resize
+            e.preventDefault();
+          });
+          
+          document.addEventListener('mousemove', function(e) {
+            if (!isResizing) return;
+            
+            // Calculate new widths
+            const newSidebarWidth = initialSidebarWidth + (e.clientX - initialX);
+            
+            // Set minimum and maximum sizes
+            if (newSidebarWidth >= 150 && newSidebarWidth <= 400) {
+              // Update sidebar width
+              sidebar.style.width = newSidebarWidth + 'px';
+              
+              // Update content position and width based on the new sidebar width
+              const contentMarginLeft = newSidebarWidth + 20;
+              content.style.marginLeft = contentMarginLeft + 'px';
+              
+              // Update content width to fill available space
+              const maxContentWidth = wrapper.offsetWidth - contentMarginLeft - 40;
+              content.style.width = maxContentWidth + 'px';
+              
+              // Save the values
+              localStorage.setItem('sidebarWidth', newSidebarWidth);
+              localStorage.setItem('contentWidth', maxContentWidth);
+            }
+          });
+          
+          document.addEventListener('mouseup', function() {
+            if (isResizing) {
+              isResizing = false;
+              document.body.classList.remove('resizing');
+            }
+          });
+          
+          // Double click to reset to default
+          resizeHandle.addEventListener('dblclick', function() {
+            // Reset to default values
+            sidebar.style.width = '';
+            content.style.marginLeft = '';
+            content.style.width = '';
+            
+            // Clear stored values
+            localStorage.removeItem('sidebarWidth');
+            localStorage.removeItem('contentWidth');
+          });
+        }
+        
         // Width toggle functionality
         const widthToggle = document.getElementById('width-toggle');
-        const content = document.getElementById('content');
         
         if (widthToggle && content) {
           widthToggle.addEventListener('click', function() {
@@ -232,7 +312,6 @@
 
         // Sidebar toggle functionality
         const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebar = document.getElementById('sidebar');
         
         if (sidebarToggle && sidebar && content) {
           sidebarToggle.addEventListener('click', function() {
