@@ -32,7 +32,9 @@ This complementary perspective acknowledges that successful AI integration requi
 // - Impact of AI on different job functions and levels
 // - Skills assessment and gap analysis methodologies
 
-The integration of AI into organizational processes is catalyzing a substantial shift in the skills demanded of professionals at all levels. The following diagram illustrates the evolution of workplace skills in the AI era:
+The integration of AI into organizational processes is catalyzing a substantial shift in the skills demanded of professionals at all levels. To understand this transformation, it is essential to recognize how AI differs from previous automation waves. As Autor (2015) demonstrates, previous technological changes systematically automated routine tasks — those that can be accomplished by following explicit rules. AI represents a fundamental departure by targeting what Autor terms "abstract tasks" requiring problem-solving capabilities, intuition, creativity, and persuasion — skills traditionally considered the domain of highly educated professionals.
+
+This shift creates both challenges and opportunities for skill development. The following diagram illustrates the evolution of workplace skills in the AI era:
 
 ```mermaid
 graph TD
@@ -74,6 +76,8 @@ graph TD
 We are witnessing not merely an evolution but a fundamental reconfiguration of the skill landscape, with certain capabilities becoming exponentially more valuable while others face automation.
 
 As AI takes over more routine tasks, the demand for skills often considered uniquely human, such as emotional intelligence, creativity, critical thinking, and adaptability, may grow. Roles requiring analytical thinking, creative problem-solving, and interpretation of complex information could become more prominent. 
+
+This transformation directly relates to the underfitting/overfitting framework central to this work. Organizations that underfit their approach to skill development — treating AI as simply another efficiency tool without recognizing its impact on abstract tasks — risk failing to prepare their workforce for the complementarity opportunities that Autor identifies. Conversely, organizations that overfit by rigidly categorizing skills as either "human" or "AI" may miss the dynamic, evolving nature of human-AI collaboration where the most valuable professionals are those who can effectively combine their capabilities with AI systems.
 
 #### The Automation Paradox: Manual and Cognitive Skills
 
@@ -132,7 +136,13 @@ Furthermore, effective collaboration with AI tools may necessitate a certain lev
 
 ### 9.2.2 Transformation of Traditional Roles
 
-AI integration can enable a redefinition of traditional roles, potentially making them more dynamic. By automating routine tasks, AI may allow professionals to shift focus towards more strategic or creative work aspects. For instance, customer service representatives might transition from handling basic inquiries (potentially handled by chatbots) to resolving more complex issues requiring empathy and problem-solving. Similarly, in fields like finance or marketing, AI might take over some data analysis and reporting, allowing professionals to concentrate more on strategic decision-making or campaign development. Alongside the evolution of existing roles, AI integration is leading to the creation of new roles (e.g., data scientists, machine learning engineers, AI ethicists, AI trainers) reflecting specialized skills needed to develop, implement, and govern AI technologies.
+AI integration can enable a redefinition of traditional roles, potentially making them more dynamic. By automating routine tasks, AI may allow professionals to shift focus towards more strategic or creative work aspects. However, understanding this transformation requires recognizing that AI's impact on roles is not simply subtractive—it often involves complex complementarity effects that can actually increase the value of human contributions.
+
+Autor's (2015) analysis of bank tellers and ATMs provides a compelling example of this dynamic. While ATMs automated routine cash-handling tasks, bank teller employment actually rose modestly over a 30-year period. Two forces worked in opposite directions: ATMs reduced the cost of operating bank branches (leading to more branches), and information technology enabled tellers to evolve from "checkout clerks" to relationship-building salespersons who could introduce customers to additional services. This example illustrates how automation can increase rather than decrease demand for human skills when those skills complement rather than compete with technological capabilities.
+
+For instance, customer service representatives might transition from handling basic inquiries (potentially handled by chatbots) to resolving more complex issues requiring empathy and problem-solving. Similarly, in fields like finance or marketing, AI might take over some data analysis and reporting, allowing professionals to concentrate more on strategic decision-making or campaign development. The key insight from Autor's framework is that professionals whose skills complement AI capabilities—rather than simply competing with them—are more likely to experience enhanced rather than diminished professional value.
+
+Alongside the evolution of existing roles, AI integration is leading to the creation of new roles (e.g., data scientists, machine learning engineers, AI ethicists, AI trainers) reflecting specialized skills needed to develop, implement, and govern AI technologies.
 
 Recent research on human-AI teaming has highlighted the need to view AI not merely as tools but as potential team members that collaborate with humans to accomplish shared goals (Berretta et al., 2023). This human-centered perspective recognizes that effective integration requires understanding both human factors (trust, cognitive load, attitudes) and technological capabilities in designing collaborative work systems. Rather than simply substituting human labor, the most effective AI implementations complement human capabilities and create synergies that transform the nature of roles.
 
@@ -967,6 +977,8 @@ Our exploration of practical adaptation approaches centered on human needs—how
 Together with Chapter 8, this human-centered perspective provides a comprehensive view of how organizations and individuals can successfully adapt to AI, balancing the technical and structural requirements with the fundamental human needs for meaning, agency, skill development, and social connection that remain essential even as AI transforms the landscape of work.
 
 ## References
+
+Autor, D. H. (2015). Why are there still so many jobs? The history and future of workplace automation. Journal of Economic Perspectives, 29(3), 3-30. https://doi.org/10.1257/jep.29.3.3
 
 Bainbridge, L. (1983). Ironies of Automation. *Automatica*, 19(6), 775-779.
 
