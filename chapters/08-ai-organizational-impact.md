@@ -103,6 +103,48 @@ These failure modes create specific organizational design challenges that extend
 
 The transparency challenges inherent in AI systems compound existing organizational opacity problems, creating what might be termed "double black box" scenarios where AI decision-making processes operate within already opaque organizational structures. This combination can erode trust at multiple levels—both in the AI system itself and in the organizational processes that govern its use. Organizations must therefore address transparency not only at the technical level but also in their governance structures, ensuring that human oversight mechanisms are themselves transparent and accountable. The European Union's AI Act Article 13 mandates explainability for high-risk AI systems, but organizations must develop internal capabilities to translate technical explainability into organizational accountability (European Commission, 2024).
 
+### Organizational Design Implications of AI Failure Modes
+
+These failure modes create fundamental challenges for organizational design that directly relate to the underfitting/overfitting balance explored throughout this chapter. Each failure mode manifests differently depending on how organizations structure their AI integration approach, creating specific risks that must be addressed through deliberate organizational design choices.
+
+Recent organizational design research emphasizes that effective organizational structures must balance multiple competing demands while maintaining adaptability to environmental changes (Burton & Obel, 2024). This fundamental tension becomes particularly acute in AI integration contexts, where organizations must simultaneously manage technological complexity, human-AI collaboration dynamics, and evolving regulatory requirements. The failure modes identified in this section represent specific manifestations of organizational design challenges that require sophisticated responses beyond traditional structural approaches.
+
+**Underfitting Risks in AI Failure Mode Management**
+
+Organizations that underfit their response to AI failure modes typically exhibit insufficient structural complexity to manage the nuanced challenges of human-AI collaboration. Common underfitting patterns include:
+
+- **Simplistic governance structures** that treat AI systems as conventional software tools, failing to account for their adaptive and potentially unpredictable behaviors
+- **Inadequate monitoring frameworks** that lack the sophistication to detect subtle degradation in AI performance or emerging over-reliance patterns
+- **Binary decision-making processes** that force either full AI adoption or complete rejection, missing opportunities for nuanced integration approaches
+- **Uniform policies** applied across diverse organizational contexts without consideration for varying risk profiles and use cases
+
+These underfitting approaches often emerge from organizational cultures that prefer simple, standardized solutions but prove inadequate for managing the complexity inherent in AI integration. As Burton & Obel (2024) note, organizations facing technological disruption often initially respond with oversimplified structures that fail to capture the multidimensional nature of the challenges they face, leading to suboptimal outcomes and missed opportunities for value creation.
+
+**Overfitting Risks in AI Failure Mode Management**
+
+Conversely, organizations may overfit their response by creating excessively complex structures that impede effective AI utilization. Overfitting patterns include:
+
+- **Bureaucratic approval processes** that require extensive documentation and multiple sign-offs for routine AI applications, effectively negating efficiency benefits
+- **Over-engineered monitoring systems** that generate excessive alerts and require constant human attention, creating new forms of cognitive overload
+- **Rigid role definitions** that prevent adaptive collaboration between humans and AI systems as capabilities evolve
+- **Excessive specialization** in AI governance roles that creates coordination overhead and slows decision-making
+
+These overfitting responses often stem from risk-averse organizational cultures that attempt to control every aspect of AI integration but end up creating structures too rigid to capture AI's adaptive benefits.
+
+**A Note on Standardization in AI Integration**
+
+While standardization appears in both underfitting and overfitting contexts above, this reflects the multidimensional nature of AI integration challenges. The key distinction lies in whether standardization supports or hinders effective human-AI collaboration: underfitting involves insufficient differentiation across diverse AI use cases, while overfitting involves excessive rigidity that prevents adaptive collaboration as AI capabilities evolve.
+
+**Implications for Multi-Agent System Design**
+
+As organizations progress toward the multi-agent AI workflows discussed in Sections 8.7-8.8, these failure modes become more complex and potentially more consequential. In multi-agent environments:
+
+- **Over-reliance risks** can cascade across multiple AI systems, creating systemic vulnerabilities where human oversight becomes increasingly difficult to maintain
+- **Under-reliance patterns** may emerge when the complexity of multi-agent interactions makes it difficult for humans to understand and trust system recommendations
+- **Transparency challenges** multiply as the number of AI agents increases, making it difficult to trace decision-making processes across the system
+
+Organizations designing multi-agent systems must therefore incorporate failure mode mitigation directly into their architectural choices, ensuring that agent specialization and coordination mechanisms actively support rather than undermine human oversight capabilities. The organizational design principles established for managing these failure modes in single-agent contexts become foundational requirements for effective multi-agent implementation.
+
 ## 8.3 Emerging Organizational Structures and Models Leveraging AI Agents
 
 ### 8.3.1 Flatter Hierarchies and Decentralized Decision-Making
@@ -1479,9 +1521,13 @@ Bainbridge, L. (1983). Ironies of automation. Automatica, 19(6), 775-779. https:
 
 Berretta, S., Tausch, A., Ontrup, G., Gilles, B., Peifer, C., & Kluge, A. (2023). Defining human-AI teaming the human-centered way: a scoping review and network analysis. Frontiers in Artificial Intelligence, 6, 1250725. https://doi.org/10.3389/frai.2023.1250725
 
+Burton, R. M., & Obel, B. (2024). Organization design: Current insights and future research directions. Organization Science, 35(4), 1271-1292. https://doi.org/10.1177/01492063241271242
+
 Carnat, I. (2024). Human, all too human: Accounting for automation bias in generative large language models. International Data Privacy Law. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5096613
 
 Cherny, B. (2025, April 18). Claude Code: Best practices for agentic coding. Anthropic. https://www.anthropic.com/engineering/claude-code-best-practices
+
+Cognitive Talent Solutions. (2024). Organizational network analysis (ONA): Concept, use cases, and integration of AI capabilities. https://www.cognitivetalentsolutions.com/organizational-network-analysis-ona-concept-use-cases-and-integration-of-ai-capabilities/
 
 Deloitte AI Institute. (2025). State of Generative AI in the Enterprise – Q4 2024. https://www2.deloitte.com/us/en/pages/about-deloitte/articles/press-releases/state-of-generative-ai.html
 
