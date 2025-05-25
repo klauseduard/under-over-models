@@ -65,7 +65,7 @@ methodologies.
 - ✅ **[Chapter 2: Underfitting and Overfitting in Software Time Estimation](chapters/02-software-time-estimation.md)**
 - ✅ **[Chapter 3: Organizational Models](chapters/03-organizational-models.md)**
 - ✅ **[Chapter 4: Stakeholder Dynamics: Competing Perspectives on Domain Complexity](chapters/04-stakeholder-preferences.md)**
-- ✅ **[Chapter 5: Organizational Size, Life-Cycle Phases, and Model Adaptation](chapters/05-organizational-size-influence.md)**
+- ✅ **[Chapter 5: Organizational Size, Life-Cycle Phases, and Model Adaptation](chapters/05-organizational-size-lifecycle-adaptation.md)**
 - ✅ **[Chapter 6: Related Theoretical Concepts](chapters/06-theoretical-concepts.md)**
 - 🚧 [Chapter 7: Medical Information Systems Case](chapters/07-medical-systems-case.md) (Draft)
 - 🚧 [Chapter 8: AI Organizational Impact](chapters/08-ai-organizational-impact.md) (Draft)

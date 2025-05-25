@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+/check-source {{url}} = Please check if the chapter already makes good use of source at url "{{url}}"  and references it properly. Check if the source is worthy of our publication. Check if the chapter would benefit from additional ideas from the source. Make necessary changes to chapter file.

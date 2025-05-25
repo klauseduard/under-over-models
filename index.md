@@ -56,7 +56,7 @@ Currently, the following chapters are (somewhat) edited and ready for reading:
 </div>
 
 <div class="completed-chapter">
-  <h3><a href="chapters/05-organizational-size-influence.html">Chapter 5: Organizational Size, Life-Cycle Phases, and Model Adaptation</a></h3>
+  <h3><a href="chapters/05-organizational-size-lifecycle-adaptation.html">Chapter 5: Organizational Size, Life-Cycle Phases, and Model Adaptation</a></h3>
   <p>An analysis of how organizational size and life-cycle phases influence the appropriate complexity of operating models, with case studies on adapting structures during growth, contraction, and strategic pivots.</p>
   <div class="chapter-metadata">
     <span class="chapter-date">Last updated: May 2025</span>

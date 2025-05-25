@@ -86,7 +86,7 @@
             <li><a href="{{ '/chapters/02-software-time-estimation.html' | absolute_url }}">Software Time Estimation</a> <span class="completed-indicator">✓</span></li>
             <li><a href="{{ '/chapters/03-organizational-models.html' | absolute_url }}">Organizational Models</a> <span class="completed-indicator">✓</span></li>
             <li><a href="{{ '/chapters/04-stakeholder-preferences.html' | absolute_url }}">Stakeholder Dynamics</a> <span class="completed-indicator">✓</span></li>
-            <li><a href="{{ '/chapters/05-organizational-size-influence.html' | absolute_url }}">Organizational Size, Life-Cycle Phases, and Model Adaptation</a> <span class="completed-indicator">✓</span></li>
+            <li><a href="{{ '/chapters/05-organizational-size-lifecycle-adaptation.html' | absolute_url }}">Organizational Size, Life-Cycle Phases, and Model Adaptation</a> <span class="completed-indicator">✓</span></li>
             <li><a href="{{ '/chapters/06-theoretical-concepts.html' | absolute_url }}">Theoretical Concepts</a> <span class="completed-indicator">✓</span></li>
             <li><a href="{{ '/chapters/07-medical-systems-case.html' | absolute_url }}">Medical Systems Case</a> <span class="draft-indicator">Draft</span></li>
             <li><a href="{{ '/chapters/08-ai-organizational-impact.html' | absolute_url }}">AI Organizational Impact</a> <span class="draft-indicator">Draft</span></li>
@@ -131,7 +131,7 @@
 
       <div id="content" class="content">
       <!-- Show draft banner for incomplete chapters -->
-      {% if page.path contains 'chapters/' and page.path != 'chapters/01-introduction.md' and page.path != 'chapters/02-software-time-estimation.md' and page.path != 'chapters/03-organizational-models.md' and page.path != 'chapters/04-stakeholder-preferences.md' and page.path != 'chapters/05-organizational-size-influence.md' and page.path != 'chapters/06-theoretical-concepts.md' %}
+      {% if page.path contains 'chapters/' and page.path != 'chapters/01-introduction.md' and page.path != 'chapters/02-software-time-estimation.md' and page.path != 'chapters/03-organizational-models.md' and page.path != 'chapters/04-stakeholder-preferences.md' and page.path != 'chapters/05-organizational-size-lifecycle-adaptation.md' and page.path != 'chapters/06-theoretical-concepts.md' %}
         <div class="draft-banner">
           <strong>⚠️ DRAFT</strong> - This chapter is a work in progress and may contain incomplete or unedited content.
           <a href="{{ '/' | absolute_url }}">Return to the home page</a> for completed chapters.
@@ -150,7 +150,7 @@
           {% if page.path == 'chapters/04-stakeholder-preferences.md' %}
             <div class="chapter-date">Last updated: <strong>May 2025</strong></div>
           {% endif %}
-          {% if page.path == 'chapters/05-organizational-size-influence.md' %}
+          {% if page.path == 'chapters/05-organizational-size-lifecycle-adaptation.md' %}
             <div class="chapter-date">Last updated: <strong>May 2025</strong></div>
           {% endif %}
         </div>
