@@ -468,6 +468,8 @@ The restructuring enabled the development of an organization optimized for its n
 
 General Electric's digital transformation initiative (2015-2019) illustrates the challenges of organizational recalibration during technological disruption. Facing the Industrial Internet of Things revolution, GE invested over $4 billion attempting to transform from an industrial giant into a digital technology company.
 
+![GE Digital Disruption](../images/ge-digital-disruption.svg)
+
 GE's response exemplified common adaptation challenges: initial underfitting through incremental changes, followed by overcorrection through creating GE Digital as a separate unit with comprehensive governance frameworks, specialized roles, and the Predix platform. However, cultural misalignment between traditional industrial and digital approaches, different skill sets and time horizons, and quarterly financial pressures undermined the initiative.
 
 Despite significant investment, GE ultimately announced in 2019 that GE Digital would become a separate enterprise, effectively acknowledging the integration challenges. The case demonstrates that technological disruption can force organizational recalibration regardless of size or resources, but structural changes alone are insufficient without cultural alignment and sustained commitment.

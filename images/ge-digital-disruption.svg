@@ -1,0 +1,273 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#74b9ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0984e3;stop-opacity:1" />
+    </radialGradient>
+    
+    <radialGradient id="digitalGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff7675;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d63031;stop-opacity:1" />
+    </radialGradient>
+    
+    <filter id="networkGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
+    <pattern id="disconnected" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="4" fill="#2d3436"/>
+      <rect width="2" height="2" fill="#e17055"/>
+    </pattern>
+  </defs>
+  
+  <rect width="1200" height="800" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2d3436">
+    GE Digital Transformation: Network Disconnection Analysis
+  </text>
+  
+  <!-- Traditional GE Core (Left side) -->
+  <text x="200" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0984e3">
+    Traditional GE Network
+  </text>
+  
+  <!-- Central traditional core -->
+  <circle cx="200" cy="200" r="50" fill="url(#coreGrad)" stroke="#0984e3" stroke-width="3" filter="url(#networkGlow)"/>
+  <text x="200" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+    GE
+  </text>
+  <text x="200" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">
+    Core
+  </text>
+  
+  <!-- Connected traditional units -->
+  <g id="traditional-network">
+    <!-- Power -->
+    <circle cx="120" cy="140" r="25" fill="#74b9ff" stroke="#0984e3" stroke-width="2"/>
+    <text x="120" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Power</text>
+    <line x1="200" y1="200" x2="120" y2="140" stroke="#0984e3" stroke-width="3"/>
+    
+    <!-- Aviation -->
+    <circle cx="280" cy="140" r="25" fill="#74b9ff" stroke="#0984e3" stroke-width="2"/>
+    <text x="280" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Aviation</text>
+    <line x1="200" y1="200" x2="280" y2="140" stroke="#0984e3" stroke-width="3"/>
+    
+    <!-- Healthcare -->
+    <circle cx="120" cy="260" r="25" fill="#74b9ff" stroke="#0984e3" stroke-width="2"/>
+    <text x="120" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Health</text>
+    <line x1="200" y1="200" x2="120" y2="260" stroke="#0984e3" stroke-width="3"/>
+    
+    <!-- Manufacturing -->
+    <circle cx="280" cy="260" r="25" fill="#74b9ff" stroke="#0984e3" stroke-width="2"/>
+    <text x="280" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">Mfg</text>
+    <line x1="200" y1="200" x2="280" y2="260" stroke="#0984e3" stroke-width="3"/>
+  </g>
+  
+  <!-- Digital Disruption Force (Center) -->
+  <text x="600" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#e17055">
+    Digital Disruption (2015-2018)
+  </text>
+  
+  <!-- Isolated Digital Network -->
+  <circle cx="600" cy="200" r="40" fill="url(#digitalGrad)" stroke="#d63031" stroke-width="3" filter="url(#networkGlow)"/>
+  <text x="600" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">
+    GE
+  </text>
+  <text x="600" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">
+    Digital
+  </text>
+  
+  <!-- Digital satellites (isolated) -->
+  <g id="digital-network">
+    <!-- Predix -->
+    <circle cx="550" cy="120" r="20" fill="#ff7675" stroke="#d63031" stroke-width="2"/>
+    <text x="550" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Predix</text>
+    <line x1="600" y1="200" x2="550" y2="120" stroke="#d63031" stroke-width="2"/>
+    
+    <!-- CDOs -->
+    <circle cx="650" cy="120" r="20" fill="#ff7675" stroke="#d63031" stroke-width="2"/>
+    <text x="650" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">CDOs</text>
+    <line x1="600" y1="200" x2="650" y2="120" stroke="#d63031" stroke-width="2"/>
+    
+    <!-- Foundries -->
+    <circle cx="550" cy="280" r="20" fill="#ff7675" stroke="#d63031" stroke-width="2"/>
+    <text x="550" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Found</text>
+    <line x1="600" y1="200" x2="550" y2="280" stroke="#d63031" stroke-width="2"/>
+    
+    <!-- Digital Units -->
+    <circle cx="650" cy="280" r="20" fill="#ff7675" stroke="#d63031" stroke-width="2"/>
+    <text x="650" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">Units</text>
+    <line x1="600" y1="200" x2="650" y2="280" stroke="#d63031" stroke-width="2"/>
+  </g>
+  
+  <!-- Broken connections -->
+  <line x1="280" y1="200" x2="550" y2="200" stroke="url(#disconnected)" stroke-width="8" stroke-dasharray="10,10" opacity="0.7"/>
+  <text x="415" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e17055">
+    DISCONNECTED
+  </text>
+  <text x="415" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#636e72">
+    Cultural Gap
+  </text>
+  
+  <!-- Investment flow -->
+  <path d="M 600 280 Q 600 320 600 360" stroke="#d63031" stroke-width="6" marker-end="url(#moneyArrow)"/>
+  <text x="600" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d63031">
+    $4 Billion Investment
+  </text>
+  <text x="600" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#636e72">
+    Structure without Integration
+  </text>
+  
+  <!-- Post-Retreat Structure (Right side) -->
+  <text x="1000" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#636e72">
+    Post-Retreat (2018-2019)
+  </text>
+  
+  <!-- Separated networks -->
+  <g id="separated-networks">
+    <!-- GE Core (simplified) -->
+    <circle cx="950" cy="150" r="35" fill="#95a5a6" stroke="#636e72" stroke-width="2"/>
+    <text x="950" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">GE</text>
+    <text x="950" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Core</text>
+    
+    <!-- Core business units -->
+    <circle cx="900" cy="100" r="15" fill="#b2bec3" stroke="#636e72" stroke-width="1"/>
+    <text x="900" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Power</text>
+    <line x1="950" y1="150" x2="900" y2="100" stroke="#636e72" stroke-width="2"/>
+    
+    <circle cx="1000" cy="100" r="15" fill="#b2bec3" stroke="#636e72" stroke-width="1"/>
+    <text x="1000" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">Aviation</text>
+    <line x1="950" y1="150" x2="1000" y2="100" stroke="#636e72" stroke-width="2"/>
+    
+    <!-- Independent GE Digital -->
+    <circle cx="1050" cy="250" r="30" fill="#ddd" stroke="#636e72" stroke-width="2"/>
+    <text x="1050" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2d3436">Digital</text>
+    <text x="1050" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2d3436">Independent</text>
+    
+    <!-- Separation line -->
+    <line x1="950" y1="190" x2="1050" y2="210" stroke="#636e72" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="1000" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#636e72">
+      Separated
+    </text>
+  </g>
+  
+  <!-- Analysis boxes at bottom -->
+  <rect x="50" y="480" width="350" height="280" fill="#fff5f5" stroke="#d63031" stroke-width="2" rx="8"/>
+  <text x="225" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d63031">
+    Network Analysis: What Went Wrong
+  </text>
+  
+  <text x="70" y="535" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3436">
+    1. Structural Isolation
+  </text>
+  <text x="70" y="555" font-family="Arial, sans-serif" font-size="12" fill="#636e72">
+    Digital units operated separately from core business
+  </text>
+  
+  <text x="70" y="585" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3436">
+    2. Cultural Disconnection
+  </text>
+  <text x="70" y="605" font-family="Arial, sans-serif" font-size="12" fill="#636e72">
+    No bridge between industrial and digital mindsets
+  </text>
+  
+  <text x="70" y="635" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3436">
+    3. Resource Misallocation
+  </text>
+  <text x="70" y="655" font-family="Arial, sans-serif" font-size="12" fill="#636e72">
+    Heavy investment in structure, minimal in integration
+  </text>
+  
+  <text x="70" y="685" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3436">
+    4. Leadership Fragmentation
+  </text>
+  <text x="70" y="705" font-family="Arial, sans-serif" font-size="12" fill="#636e72">
+    Multiple CDOs without unified digital strategy
+  </text>
+  
+  <text x="70" y="735" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#d63031">
+    Result: Network collapse and strategic retreat
+  </text>
+  
+  <!-- Success pattern -->
+  <rect x="450" y="480" width="350" height="280" fill="#e8f8f5" stroke="#00b894" stroke-width="2" rx="8"/>
+  <text x="625" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00b894">
+    Successful Network Pattern
+  </text>
+  
+  <text x="470" y="535" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3436">
+    1. Integrated Architecture
+  </text>
+  <text x="470" y="555" font-family="Arial, sans-serif" font-size="12" fill="#636e72">
+    Digital capabilities embedded in all business units
+  </text>
+  
+  <text x="470" y="585" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3436">
+    2. Cultural Bridge Building
+  </text>
+  <text x="470" y="605" font-family="Arial, sans-serif" font-size="12" fill="#636e72">
+    Continuous dialogue between traditional and digital teams
+  </text>
+  
+  <text x="470" y="635" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3436">
+    3. Shared Leadership Vision
+  </text>
+  <text x="470" y="655" font-family="Arial, sans-serif" font-size="12" fill="#636e72">
+    Single digital strategy across all divisions
+  </text>
+  
+  <text x="470" y="685" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2d3436">
+    4. Gradual Network Evolution
+  </text>
+  <text x="470" y="705" font-family="Arial, sans-serif" font-size="12" fill="#636e72">
+    Step-by-step transformation rather than radical separation
+  </text>
+  
+  <text x="470" y="735" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#00b894">
+    Result: Successful network transformation
+  </text>
+  
+  <!-- Key insight -->
+  <rect x="850" y="480" width="300" height="280" fill="#2d3436" stroke="#e17055" stroke-width="2" rx="8"/>
+  <text x="1000" y="505" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#e17055">
+    Key Network Insight
+  </text>
+  
+  <text x="1000" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+    Digital Transformation
+  </text>
+  <text x="1000" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+    ≠
+  </text>
+  <text x="1000" y="585" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+    Digital Division
+  </text>
+  
+  <text x="870" y="625" font-family="Arial, sans-serif" font-size="12" fill="#ddd">
+    Successful transformation requires
+  </text>
+  <text x="870" y="645" font-family="Arial, sans-serif" font-size="12" fill="#ddd">
+    network integration, not network
+  </text>
+  <text x="870" y="665" font-family="Arial, sans-serif" font-size="12" fill="#ddd">
+    separation. GE created isolated
+  </text>
+  <text x="870" y="685" font-family="Arial, sans-serif" font-size="12" fill="#ddd">
+    digital nodes instead of
+  </text>
+  <text x="870" y="705" font-family="Arial, sans-serif" font-size="12" fill="#ddd">
+    transforming the entire network.
+  </text>
+  
+  <text x="1000" y="735" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fd79a8">
+    Cost: $4B+ and strategic retreat
+  </text>
+  
+  <defs>
+    <marker id="moneyArrow" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0,0 12,4 0,8" fill="#d63031"/>
+    </marker>
+  </defs>
+</svg>
