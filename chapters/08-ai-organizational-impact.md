@@ -83,9 +83,19 @@ graph TD
             TI --> TB
         end
         
+        subgraph "Governance Gaps"
+            GG[Governance Gaps]
+            LF[Lack of Formal Frameworks]
+            RN[Regulatory Non-Compliance]
+            
+            GG --> LF
+            GG --> RN
+        end
+        
         style OR fill:#FF6B6B
         style UR fill:#FFB366
         style TI fill:#90EE90
+        style GG fill:#87CEEB
     end
 ```
 
