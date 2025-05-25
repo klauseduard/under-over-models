@@ -87,7 +87,7 @@ graph TD
     end
 ```
 
-One significant risk is over-reliance on AI (automation bias or AI complacency), where individuals may accept AI recommendations without sufficient scrutiny, leading to a potential decline in critical human skills and oversight. Research suggests that individuals working with AI may tend to trust its recommendations even when flawed, potentially increasing errors and diminishing critical assessment. Conversely, organizations might suffer from under-reliance on AI, where valuable insights are disregarded or not effectively integrated with human expertise, leading to suboptimal outcomes. Moreover, ensuring the transparency and explainability of AI systems is crucial to avoid the "black box" problem, where AI decision-making processes remain opaque. A lack of transparency can erode trust, mask potential biases, and make validating AI-driven decisions difficult. The dynamic interplay between human judgment and AI algorithms in hybrid systems necessitates careful management to mitigate these novel failure modes, ensuring AI integration enhances organizational effectiveness rather than introducing new vulnerabilities.
+One significant risk is over-reliance on AI (automation bias or AI complacency), where individuals may accept AI recommendations without sufficient scrutiny, leading to a potential decline in critical human skills and oversight. Research suggests that individuals working with AI may tend to trust its recommendations even when flawed, potentially increasing errors and diminishing critical assessment. Conversely, organizations might suffer from under-reliance on AI, where valuable insights are disregarded or not effectively integrated with human expertise, leading to suboptimal outcomes. Moreover, ensuring the transparency and explainability of AI systems is crucial to avoid the "black box" problem, where AI decision-making processes remain opaque. A lack of transparency can erode trust, mask potential biases, and make validating AI-driven decisions difficult. These challenges reflect what Autor (2015) calls "Polanyi's Paradox" — the difficulty of codifying tacit knowledge. While AI systems increasingly circumvent this paradox through machine learning, the resulting "black box" problem creates new organizational challenges around transparency and trust. The dynamic interplay between human judgment and AI algorithms in hybrid systems necessitates careful management to mitigate these novel failure modes, ensuring AI integration enhances organizational effectiveness rather than introducing new vulnerabilities.
 
 ## 8.3 Emerging Organizational Structures and Models Leveraging AI Agents
 
@@ -1311,9 +1311,7 @@ Each phase of this lifecycle involves specific governance considerations:
 - Maintaining comprehensive documentation of changes
 - Evaluating business impact of refinements
 
-While Chapter 9 explores specific testing methodologies and evaluation frameworks for 
-prompts, this lifecycle view emphasizes how prompt engineering integrates with broader 
-organizational processes.
+While Chapter 9 explores specific testing methodologies and evaluation frameworks for prompts, this lifecycle view emphasizes how prompt engineering integrates with broader organizational processes.
 
 #### Building Organizational Prompt Engineering Capabilities
 Organizations seeking to develop prompt engineering as a strategic capability should 
