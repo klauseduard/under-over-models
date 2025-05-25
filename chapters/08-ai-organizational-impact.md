@@ -95,6 +95,10 @@ The regulatory response to these challenges has proven inadequate. Carnat (2024)
 
 Moreover, ensuring the transparency and explainability of AI systems is crucial to avoid the "black box" problem, where AI decision-making processes remain opaque. A lack of transparency can erode trust, mask potential biases, and make validating AI-driven decisions difficult. These challenges reflect what Autor (2015) calls "Polanyi's Paradox"—the difficulty of codifying tacit knowledge. While AI systems increasingly circumvent this paradox through machine learning, the resulting "black box" problem creates new organizational challenges around transparency and trust. The dynamic interplay between human judgment and AI algorithms in hybrid systems necessitates careful management to mitigate these novel failure modes, ensuring AI integration enhances organizational effectiveness rather than introducing new vulnerabilities.
 
+However, these failure modes are not inevitable consequences of AI integration but rather context-dependent risks that vary significantly based on implementation approach and organizational factors. Research by Peng et al. (2023) and Pandey et al. (2024) demonstrates substantial productivity benefits when human expertise remains actively engaged with AI systems, suggesting that the risks outlined above can be mitigated through thoughtful design of human-AI collaboration patterns. Their findings indicate that organizations achieving effective human-AI partnerships maintain clear boundaries between human judgment and AI assistance, preserve opportunities for skill development, and design workflows that leverage AI capabilities while sustaining human expertise.
+
+The manifestation of these failure modes depends heavily on organizational context, including the complexity of tasks, the design of human-AI interfaces, the level of user training, and the presence of appropriate oversight mechanisms. Organizations that treat AI as a complement to rather than replacement for human capabilities, implement gradual integration approaches, and maintain explicit focus on preserving human skills and judgment appear better positioned to capture AI benefits while avoiding the pitfalls of over-reliance, under-utilization, or opacity-related trust issues.
+
 ## 8.3 Emerging Organizational Structures and Models Leveraging AI Agents
 
 ### 8.3.1 Flatter Hierarchies and Decentralized Decision-Making
@@ -1526,3 +1530,4 @@ Zappulla, C. (2024, November 19). Comment: Business leaders risk sleepwalking to
 [DORA2022]: DevOps Research and Assessment. (2022). 2022 Accelerate State of DevOps Report. https://dora.dev/research/2022/dora-report/2022-dora-accelerate-state-of-devops-report.pdf
 
 [Back to Table of Contents](../README.md) 
+
