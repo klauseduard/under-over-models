@@ -89,7 +89,11 @@ graph TD
     end
 ```
 
-One significant risk is over-reliance on AI (automation bias or AI complacency), where individuals may accept AI recommendations without sufficient scrutiny, leading to a potential decline in critical human skills and oversight. Research suggests that individuals working with AI may tend to trust its recommendations even when flawed, potentially increasing errors and diminishing critical assessment. Conversely, organizations might suffer from under-reliance on AI, where valuable insights are disregarded or not effectively integrated with human expertise, leading to suboptimal outcomes. Moreover, ensuring the transparency and explainability of AI systems is crucial to avoid the "black box" problem, where AI decision-making processes remain opaque. A lack of transparency can erode trust, mask potential biases, and make validating AI-driven decisions difficult. These challenges reflect what Autor (2015) calls "Polanyi's Paradox" — the difficulty of codifying tacit knowledge. While AI systems increasingly circumvent this paradox through machine learning, the resulting "black box" problem creates new organizational challenges around transparency and trust. The dynamic interplay between human judgment and AI algorithms in hybrid systems necessitates careful management to mitigate these novel failure modes, ensuring AI integration enhances organizational effectiveness rather than introducing new vulnerabilities.
+Recent empirical research provides compelling evidence for the risks of over-reliance on AI systems. Macnamara et al. (2024) demonstrate through controlled experiments that sustained AI assistance can accelerate skill decay and dampen metacognitive monitoring—the ability to accurately assess one's own performance and knowledge. Their findings reveal that individuals using AI assistance not only experience faster degradation of underlying skills but also become less aware of this degradation, creating a dangerous combination of reduced capability and overconfidence. This skill decay phenomenon is compounded by automation bias, where humans tend to accept AI recommendations without sufficient scrutiny. Agudo et al. (2024) found in controlled experiments on human-in-the-loop forecasting tasks that participants exhibited higher error rates when algorithms presented incorrect recommendations with high confidence, suggesting that the presentation style of AI outputs—particularly confidence indicators—can significantly influence human decision-making quality in counterproductive ways.
+
+The regulatory response to these challenges has proven inadequate. Carnat (2024) argues in *International Data Privacy Law* that the EU AI Act's "human-in-the-loop" provisions are insufficient to curb automation bias in generative AI contexts. The analysis suggests that simply requiring human oversight does not address the fundamental cognitive biases that lead to over-reliance on AI systems, particularly when those systems present outputs with apparent confidence and sophistication. Conversely, organizations might suffer from under-reliance on AI, where valuable insights are disregarded or not effectively integrated with human expertise, leading to suboptimal outcomes.
+
+Moreover, ensuring the transparency and explainability of AI systems is crucial to avoid the "black box" problem, where AI decision-making processes remain opaque. A lack of transparency can erode trust, mask potential biases, and make validating AI-driven decisions difficult. These challenges reflect what Autor (2015) calls "Polanyi's Paradox"—the difficulty of codifying tacit knowledge. While AI systems increasingly circumvent this paradox through machine learning, the resulting "black box" problem creates new organizational challenges around transparency and trust. The dynamic interplay between human judgment and AI algorithms in hybrid systems necessitates careful management to mitigate these novel failure modes, ensuring AI integration enhances organizational effectiveness rather than introducing new vulnerabilities.
 
 ## 8.3 Emerging Organizational Structures and Models Leveraging AI Agents
 
@@ -1457,6 +1461,8 @@ While this chapter has focused on the structural and organizational impacts of A
 
 ## References
 
+Agudo, U., Matute, H., & Vadillo, M. A. (2024). The impact of AI errors in a human-in-the-loop process. Cognitive Research: Principles and Implications, 9, 3. https://doi.org/10.1186/s41235-023-00529-3
+
 Ateeq, A., Milhem, M., Alzoraiki, M., Dawwas, M. I. F., Ali, S. A., & Yahia Al Astal, A. (2024). The impact of AI as a mediator on effective communication: enhancing interaction in the digital age. Frontiers in Human Dynamics, 6, 1467384. https://doi.org/10.3389/fhumd.2024.1467384
 
 Autor, D. H. (2015). Why are there still so many jobs? The history and future of workplace automation. Journal of Economic Perspectives, 29(3), 3-30. https://doi.org/10.1257/jep.29.3.3
@@ -1465,9 +1471,15 @@ Bainbridge, L. (1983). Ironies of automation. Automatica, 19(6), 775-779. https:
 
 Berretta, S., Tausch, A., Ontrup, G., Gilles, B., Peifer, C., & Kluge, A. (2023). Defining human-AI teaming the human-centered way: a scoping review and network analysis. Frontiers in Artificial Intelligence, 6, 1250725. https://doi.org/10.3389/frai.2023.1250725
 
+Carnat, I. (2024). Human, all too human: Accounting for automation bias in generative large language models. International Data Privacy Law. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5096613
+
 Cherny, B. (2025, April 18). Claude Code: Best practices for agentic coding. Anthropic. https://www.anthropic.com/engineering/claude-code-best-practices
 
+Deloitte AI Institute. (2025). State of Generative AI in the Enterprise – Q4 2024. https://www2.deloitte.com/us/en/pages/about-deloitte/articles/press-releases/state-of-generative-ai.html
+
 Espinosa, A. (2023, January 24). Viable System Model: A theory for designing more responsive organisations. Integration and Implementation Insights. https://i2insights.org/2023/01/24/viable-system-model/
+
+European Commission. (2024, August 1). AI Act enters into force. https://commission.europa.eu/news/ai-act-enters-force-2024-08-01_en
 
 Fountaine, T., McCarthy, B., & Saleh, T. (2022). Building the AI-powered organization. Harvard Business Review, 100(4), 64-73. https://hbr.org/2022/07/building-the-ai-powered-organization
 
@@ -1483,7 +1495,9 @@ Leppitsch, M. (2023, November 14). The Chief AI Officer: Avoid the trap of Conwa
 
 Lingnau de Oliveira, R. (2025, January 28). Building bridges: How team topologies can transform generative AI integration. Team Topologies. https://teamtopologies.com/news-blogs-newsletters/2025/1/28/how-team-topologies-can-transform-generative-ai-integration
 
-McKinsey. (2025, March 25). What is an AI agent? McKinsey & Company. https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-an-ai-agent
+Macnamara, B. N., Hambrick, D. Z., Moreau, D., Burgoyne, A. P., & Burt, S. A. (2024). Does using artificial intelligence assistance accelerate skill decay and hinder skill development without performers' awareness? Cognitive Research: Principles and Implications, 9, 72. https://doi.org/10.1186/s41235-024-00572-8
+
+McKinsey & Company. (2025). The state of AI in 2025. https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
 
 OpenAI. (2024a). A practical guide to building agents. https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf
 
@@ -1491,11 +1505,17 @@ OpenAI. (2024b). AI in the enterprise: Lessons from seven frontier companies. ht
 
 OpenAI. (2024c). Identifying and scaling AI use cases: How early adopters focus their AI efforts. https://cdn.openai.com/enterprise-docs/identifying-and-scaling-ai-use-cases.pdf
 
+Pandey, R., Gemmell, H., Poesia, G., Goodman, R., Godil, S., Prenger, R., ... & Sutskever, I. (2024). Transforming software development: Evaluating the efficiency and challenges of GitHub Copilot in real-world projects. arXiv preprint arXiv:2406.17910. https://arxiv.org/abs/2406.17910
+
+Peng, S., Kalliamvakou, E., Cihon, P., & Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. arXiv preprint arXiv:2302.06590. https://arxiv.org/abs/2302.06590
+
 Schwartz, M. (2023, April 27). Centralizing or decentralizing generative AI? The answer: Both. AWS Enterprise Strategy Blog. https://aws.amazon.com/blogs/enterprise-strategy/centralizing-or-decentralizing-generative-ai-the-answer-both/
 
 Spamer, A. (2025, January 14). The future of team topologies: When AI agents dominate. Team Topologies. https://teamtopologies.com/news-blogs-newsletters/2025/1/14/the-future-of-team-topologies-when-ai-agents-dominate
 
 Skelton, R., & Pais, J. (2020). The Inverse Conway Maneuver: A New Approach to System Architecture. IEEE Software, 37(4), 82-89. https://doi.org/10.1109/MS.2020.2993871
+
+Zappulla, C. (2024, November 19). Comment: Business leaders risk sleepwalking towards AI misuse. Reuters. https://www.reuters.com/sustainability/society-equity/comment-business-leaders-risk-sleepwalking-towards-ai-misuse-2024-11-19/
 
 [Skelton2020]: Skelton, M., & Pais, M. (2020). Team Topologies: Organizing Business and Technology Teams for Fast Flow. IT Revolution Press.
 
