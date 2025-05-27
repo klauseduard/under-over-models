@@ -1,0 +1,214 @@
+<svg width="1000" height="700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFE5E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFF0E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB366;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F0FFF0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#90EE90;stop-opacity:0.3" />
+    </linearGradient>
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E5F6FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#87CEEB;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="700" fill="#f8f9fa" rx="10"/>
+  
+  <!-- Title -->
+  <text x="500" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#2c3e50">
+    AI Failure Mode Response Matrix
+  </text>
+  <text x="500" y="50" text-anchor="middle" font-family="Arial" font-size="12" fill="#2c3e50">
+    Effective AI Integration Requires Balanced Responses to Specific Failure Modes
+  </text>
+  
+  <!-- Column Headers -->
+  <rect x="220" y="80" width="180" height="40" fill="#FFE5E5" stroke="#FF6B6B" stroke-width="2" rx="5"/>
+  <text x="310" y="95" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">Underfitting Response</text>
+  <text x="310" y="110" text-anchor="middle" font-family="Arial" font-size="10" fill="#2c3e50">(Too Simple)</text>
+  
+  <rect x="410" y="80" width="180" height="40" fill="#E8F5E8" stroke="#27ae60" stroke-width="3" rx="5"/>
+  <text x="500" y="95" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">Balanced Response</text>
+  <text x="500" y="110" text-anchor="middle" font-family="Arial" font-size="10" fill="#2c3e50">(Optimal)</text>
+  
+  <rect x="600" y="80" width="180" height="40" fill="#FFE5E5" stroke="#FF6B6B" stroke-width="2" rx="5"/>
+  <text x="690" y="95" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">Overfitting Response</text>
+  <text x="690" y="110" text-anchor="middle" font-family="Arial" font-size="10" fill="#2c3e50">(Too Complex)</text>
+  
+  <!-- Row 1: Over-Reliance on AI -->
+  <rect x="30" y="140" width="180" height="110" fill="url(#redGradient)" stroke="#FF6B6B" stroke-width="2" rx="5"/>
+  <text x="120" y="160" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">Over-Reliance on AI</text>
+  <text x="40" y="180" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Excessive trust in AI</text>
+  <text x="40" y="195" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Reduced human judgment</text>
+  <text x="40" y="210" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Skill atrophy risk</text>
+  <text x="40" y="225" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Critical thinking decline</text>
+  
+  <!-- Over-Reliance Responses -->
+  <rect x="220" y="140" width="180" height="110" fill="white" stroke="#dc3545" stroke-width="2" rx="3"/>
+  <text x="310" y="158" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Ignore the Problem</text>
+  <text x="230" y="175" font-family="Arial" font-size="9" fill="#2c3e50">• No monitoring systems</text>
+  <text x="230" y="188" font-family="Arial" font-size="9" fill="#2c3e50">• Hope-based approach</text>
+  <text x="230" y="201" font-family="Arial" font-size="9" fill="#2c3e50">• Reactive only</text>
+  <text x="230" y="214" font-family="Arial" font-size="9" fill="#dc3545">Risk: HIGH</text>
+  
+  <rect x="410" y="140" width="180" height="110" fill="white" stroke="#27ae60" stroke-width="3" rx="3"/>
+  <text x="500" y="158" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Structured Human Oversight</text>
+  <text x="420" y="175" font-family="Arial" font-size="9" fill="#2c3e50">• Regular checkpoints</text>
+  <text x="420" y="188" font-family="Arial" font-size="9" fill="#2c3e50">• Validation protocols</text>
+  <text x="420" y="201" font-family="Arial" font-size="9" fill="#2c3e50">• Human-in-the-loop design</text>
+  <text x="420" y="214" font-family="Arial" font-size="9" fill="#27ae60">Risk: LOW</text>
+  
+  <rect x="600" y="140" width="180" height="110" fill="white" stroke="#dc3545" stroke-width="2" rx="3"/>
+  <text x="690" y="158" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Micro-Management</text>
+  <text x="610" y="175" font-family="Arial" font-size="9" fill="#2c3e50">• Excessive approval layers</text>
+  <text x="610" y="188" font-family="Arial" font-size="9" fill="#2c3e50">• Constant intervention</text>
+  <text x="610" y="201" font-family="Arial" font-size="9" fill="#2c3e50">• Paralysis by analysis</text>
+  <text x="610" y="214" font-family="Arial" font-size="9" fill="#dc3545">Risk: HIGH</text>
+  
+  <!-- Row 2: Under-Reliance on AI -->
+  <rect x="30" y="260" width="180" height="110" fill="url(#orangeGradient)" stroke="#FFB366" stroke-width="2" rx="5"/>
+  <text x="120" y="280" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">Under-Reliance on AI</text>
+  <text x="40" y="300" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Missed opportunities</text>
+  <text x="40" y="315" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Competitive disadvantage</text>
+  <text x="40" y="330" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Inefficient processes</text>
+  <text x="40" y="345" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Innovation lag</text>
+  
+  <!-- Under-Reliance Responses -->
+  <rect x="220" y="260" width="180" height="110" fill="white" stroke="#dc3545" stroke-width="2" rx="3"/>
+  <text x="310" y="278" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">AI Avoidance</text>
+  <text x="230" y="295" font-family="Arial" font-size="9" fill="#2c3e50">• Reject AI capabilities</text>
+  <text x="230" y="308" font-family="Arial" font-size="9" fill="#2c3e50">• Status quo maintenance</text>
+  <text x="230" y="321" font-family="Arial" font-size="9" fill="#2c3e50">• Fear-based decisions</text>
+  <text x="230" y="334" font-family="Arial" font-size="9" fill="#dc3545">Risk: HIGH</text>
+  
+  <rect x="410" y="260" width="180" height="110" fill="white" stroke="#27ae60" stroke-width="3" rx="3"/>
+  <text x="500" y="278" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Gradual Integration</text>
+  <text x="420" y="295" font-family="Arial" font-size="9" fill="#2c3e50">• Pilot programs</text>
+  <text x="420" y="308" font-family="Arial" font-size="9" fill="#2c3e50">• Measured adoption</text>
+  <text x="420" y="321" font-family="Arial" font-size="9" fill="#2c3e50">• Learning-based approach</text>
+  <text x="420" y="334" font-family="Arial" font-size="9" fill="#27ae60">Risk: LOW</text>
+  
+  <rect x="600" y="260" width="180" height="110" fill="white" stroke="#dc3545" stroke-width="2" rx="3"/>
+  <text x="690" y="278" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Forced Adoption</text>
+  <text x="610" y="295" font-family="Arial" font-size="9" fill="#2c3e50">• Mandate AI regardless</text>
+  <text x="610" y="308" font-family="Arial" font-size="9" fill="#2c3e50">• Ignore context</text>
+  <text x="610" y="321" font-family="Arial" font-size="9" fill="#2c3e50">• One-size-fits-all</text>
+  <text x="610" y="334" font-family="Arial" font-size="9" fill="#dc3545">Risk: HIGH</text>
+  
+  <!-- Row 3: Transparency Issues -->
+  <rect x="30" y="380" width="180" height="110" fill="url(#greenGradient)" stroke="#90EE90" stroke-width="2" rx="5"/>
+  <text x="120" y="400" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">Transparency Issues</text>
+  <text x="40" y="420" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Black box decisions</text>
+  <text x="40" y="435" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Trust erosion</text>
+  <text x="40" y="450" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Compliance risks</text>
+  <text x="40" y="465" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Accountability gaps</text>
+  
+  <!-- Transparency Responses -->
+  <rect x="220" y="380" width="180" height="110" fill="white" stroke="#dc3545" stroke-width="2" rx="3"/>
+  <text x="310" y="398" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Black Box Acceptance</text>
+  <text x="230" y="415" font-family="Arial" font-size="9" fill="#2c3e50">• No explainability</text>
+  <text x="230" y="428" font-family="Arial" font-size="9" fill="#2c3e50">• Trust-based approach</text>
+  <text x="230" y="441" font-family="Arial" font-size="9" fill="#2c3e50">• Minimal documentation</text>
+  <text x="230" y="454" font-family="Arial" font-size="9" fill="#dc3545">Risk: HIGH</text>
+  
+  <rect x="410" y="380" width="180" height="110" fill="white" stroke="#27ae60" stroke-width="3" rx="3"/>
+  <text x="500" y="398" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Contextual Transparency</text>
+  <text x="420" y="415" font-family="Arial" font-size="9" fill="#2c3e50">• Risk-matched explanation</text>
+  <text x="420" y="428" font-family="Arial" font-size="9" fill="#2c3e50">• Tiered documentation</text>
+  <text x="420" y="441" font-family="Arial" font-size="9" fill="#2c3e50">• Stakeholder-appropriate</text>
+  <text x="420" y="454" font-family="Arial" font-size="9" fill="#27ae60">Risk: LOW</text>
+  
+  <rect x="600" y="380" width="180" height="110" fill="white" stroke="#dc3545" stroke-width="2" rx="3"/>
+  <text x="690" y="398" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Total Explainability</text>
+  <text x="610" y="415" font-family="Arial" font-size="9" fill="#2c3e50">• Explain every decision</text>
+  <text x="610" y="428" font-family="Arial" font-size="9" fill="#2c3e50">• Excessive documentation</text>
+  <text x="610" y="441" font-family="Arial" font-size="9" fill="#2c3e50">• Analysis paralysis</text>
+  <text x="610" y="454" font-family="Arial" font-size="9" fill="#dc3545">Risk: HIGH</text>
+  
+  <!-- Row 4: Governance Gaps -->
+  <rect x="30" y="500" width="180" height="110" fill="url(#blueGradient)" stroke="#87CEEB" stroke-width="2" rx="5"/>
+  <text x="120" y="520" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">Governance Gaps</text>
+  <text x="40" y="540" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Unclear responsibilities</text>
+  <text x="40" y="555" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Inconsistent policies</text>
+  <text x="40" y="570" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Risk exposure</text>
+  <text x="40" y="585" font-family="Arial" font-size="9" fill="#2c3e50">⚠️ Compliance failures</text>
+  
+  <!-- Governance Responses -->
+  <rect x="220" y="500" width="180" height="110" fill="white" stroke="#dc3545" stroke-width="2" rx="3"/>
+  <text x="310" y="518" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">No Formal Framework</text>
+  <text x="230" y="535" font-family="Arial" font-size="9" fill="#2c3e50">• Ad hoc AI usage</text>
+  <text x="230" y="548" font-family="Arial" font-size="9" fill="#2c3e50">• Informal policies</text>
+  <text x="230" y="561" font-family="Arial" font-size="9" fill="#2c3e50">• Reactive governance</text>
+  <text x="230" y="574" font-family="Arial" font-size="9" fill="#dc3545">Risk: HIGH</text>
+  
+  <rect x="410" y="500" width="180" height="110" fill="white" stroke="#27ae60" stroke-width="3" rx="3"/>
+  <text x="500" y="518" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Risk-Based Governance</text>
+  <text x="420" y="535" font-family="Arial" font-size="9" fill="#2c3e50">• Tiered oversight</text>
+  <text x="420" y="548" font-family="Arial" font-size="9" fill="#2c3e50">• Impact-based controls</text>
+  <text x="420" y="561" font-family="Arial" font-size="9" fill="#2c3e50">• Adaptive frameworks</text>
+  <text x="420" y="574" font-family="Arial" font-size="9" fill="#27ae60">Risk: LOW</text>
+  
+  <rect x="600" y="500" width="180" height="110" fill="white" stroke="#dc3545" stroke-width="2" rx="3"/>
+  <text x="690" y="518" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2c3e50">Bureaucratic Control</text>
+  <text x="610" y="535" font-family="Arial" font-size="9" fill="#2c3e50">• Extensive documentation</text>
+  <text x="610" y="548" font-family="Arial" font-size="9" fill="#2c3e50">• Slow approval process</text>
+  <text x="610" y="561" font-family="Arial" font-size="9" fill="#2c3e50">• Innovation barriers</text>
+  <text x="610" y="574" font-family="Arial" font-size="9" fill="#dc3545">Risk: HIGH</text>
+  
+  <!-- Arrows pointing to balanced responses -->
+  <path d="M 380 195 Q 395 195 400 195" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 380 315 Q 395 315 400 315" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 380 435 Q 395 435 400 435" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 380 555 Q 395 555 400 555" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <path d="M 620 195 Q 605 195 600 195" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+  <path d="M 620 315 Q 605 315 600 315" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+  <path d="M 620 435 Q 605 435 600 435" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+  <path d="M 620 555 Q 605 555 600 555" stroke="#27ae60" stroke-width="2" fill="none" marker-end="url(#arrowhead2)"/>
+  
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#27ae60"/>
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <rect x="800" y="140" width="180" height="200" fill="white" stroke="#2c3e50" stroke-width="1" rx="5"/>
+  <text x="890" y="160" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">Legend</text>
+  
+  <rect x="810" y="170" width="15" height="15" fill="#27ae60" stroke="#27ae60"/>
+  <text x="830" y="182" font-family="Arial" font-size="10" fill="#2c3e50">Optimal Response</text>
+  
+  <rect x="810" y="190" width="15" height="15" fill="white" stroke="#dc3545" stroke-width="2"/>
+  <text x="830" y="202" font-family="Arial" font-size="10" fill="#2c3e50">High Risk Response</text>
+  
+  <text x="810" y="220" font-family="Arial" font-size="10" fill="#2c3e50">Risk Levels:</text>
+  <text x="810" y="235" font-family="Arial" font-size="9" fill="#27ae60">• LOW - Balanced approach</text>
+  <text x="810" y="250" font-family="Arial" font-size="9" fill="#ffc107">• MED - Needs adjustment</text>
+  <text x="810" y="265" font-family="Arial" font-size="9" fill="#dc3545">• HIGH - Problematic</text>
+  
+  <text x="810" y="285" font-family="Arial" font-size="10" fill="#2c3e50">Response Types:</text>
+  <text x="810" y="300" font-family="Arial" font-size="9" fill="#2c3e50">• Underfitting: Too simple</text>
+  <text x="810" y="315" font-family="Arial" font-size="9" fill="#2c3e50">• Overfitting: Too complex</text>
+  <text x="810" y="330" font-family="Arial" font-size="9" fill="#2c3e50">• Balanced: Just right</text>
+  
+  <!-- Bottom insight -->
+  <rect x="50" y="630" width="900" height="50" fill="#E8F5E8" stroke="#27ae60" stroke-width="2" rx="5"/>
+  <text x="500" y="650" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50">
+    Key Insight: Organizations must avoid both oversimplified and over-engineered responses to AI integration challenges
+  </text>
+  <text x="500" y="665" text-anchor="middle" font-family="Arial" font-size="10" fill="#2c3e50">
+    Success requires calibrated, risk-appropriate responses matched to specific failure modes
+  </text>
+</svg> 
