@@ -13,6 +13,8 @@ Artificial intelligence enters the organizational landscape not merely as an eff
 
 AI represents a fundamental departure from this pattern by targeting non-routine cognitive tasks that require adaptability, pattern recognition, and contextual judgment. AI-powered systems can analyze vast datasets, identify patterns, adapt, plan, guide, and even participate in decision-making. This capability extends beyond simple process optimization; it enables a fundamental reimagining of how knowledge work is performed, how expertise is developed and accessed, and how individuals and teams collaborate.
 
+![The Evolution of Work Automation](../images/historical-automation-waves.svg)
+
 The organizational implications are profound. Following Autor's framework, AI's encroachment into what he terms "abstract tasks" — those requiring problem-solving capabilities, intuition, creativity, and persuasion — represents a qualitatively different challenge than previous automation waves. The potential lies in AI's ability to lower barriers to complex tasks and potentially reshape skill requirements across the organization. This integration, however, is not frictionless. It requires a careful examination of how AI alters established principles of managing complexity, coordinating work, and structuring organizations, moving beyond simply doing existing tasks faster towards fundamentally new ways of operating.
 
 ### 8.1.2 Chapter Scope and Objectives
