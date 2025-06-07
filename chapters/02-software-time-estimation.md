@@ -652,6 +652,10 @@ activities themselves is often overlooked in estimation models, further contribu
 
 ## References
 
-Bainbridge, L. (1983). Ironies of automation. Automatica, 19(6), 775-779.
+Bainbridge, L. (1983). Ironies of automation. Automatica, 19(6), 775-779. https://doi.org/10.1016/0005-1098(83)90046-8
 
-Herbsleb, J. D., & Mockus, A. (2003). An empirical study of speed and communication in globally distributed software development. IEEE Transactions on Software Engineering, 29(6), 481-494.
+Herbsleb, J. D., & Mockus, A. (2003). An empirical study of speed and communication in globally distributed software development. IEEE Transactions on Software Engineering, 29(6), 481-494. https://doi.org/10.1109/TSE.2003.1205177
+
+Rashid, C. H., Shafi, I., Khattak, B. H. A., Safran, M., Alfarhood, S., & Ashraf, I. (2025). ANN-based software cost estimation with input from COCOMO: CANN model. Alexandria Engineering Journal. https://doi.org/10.1016/j.aej.2024.11.042
+
+Kravcenko, V. (2023). Rules of Thumb for Software Development Estimations. https://vadimkravcenko.com/shorts/project-estimates/
