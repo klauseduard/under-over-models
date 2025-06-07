@@ -913,7 +913,7 @@ solely on technical implementation. The challenges of human-AI coordination, con
 flexibility all represent aspects where optimizing either technical capabilities or human processes in isolation will
 lead to suboptimal outcomes.
 
-> Unverified reference: [Lyytinen, Nickerson, and King on "metahuman systems"](https://journals.sagepub.com/doi/full/10.1177/0268396220915917).
+Lyytinen, Nickerson, and King describe "metahuman systems" that merge human and machine learning capabilities, emphasizing the need for new organizational patterns [Lyytinen2020].
 
 From an entropy perspective (Section 3.3.5), AI integration creates a paradox: these technologies can simultaneously increase an organization's capacity to manage complexity (reducing entropy through enhanced information processing) while introducing new forms of unpredictability and emergent behavior (increasing entropy through novel interaction patterns). This dynamic directly shapes how organizations must balance underfitting versus overfitting in their structures.
 
@@ -989,7 +989,7 @@ To understand how these principles might unfold over time, it's helpful to exami
 Looking beyond current capabilities, we can map the potential evolution of AI integration across multiple dimensions.
 Each stage brings distinct implications for organizational complexity and design.
 
-> Unverified reference: McKinsey's research on [AI's organizational impact](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2023-generative-ais-breakout-year) provides empirical context for these evolutionary patterns.
+Survey data from McKinsey (Chui et al., 2023) provides empirical context for these evolutionary patterns [McKinsey2023].
 
 ![AI Integration Timeline](../images/ai-integration-timeline.svg)
 
@@ -1152,5 +1152,7 @@ The integration of AI capabilities adds another dimension to these consideration
 [Yang2022]: Yang, L., Holtz, D., Jaffe, S., Suri, S., Sinha, S., Weston, J., ... & Teevan, J. (2022). The effects of remote work on collaboration among information workers. Nature Human Behaviour, 6(1), 43-54.
 
 [Aguillon2024]: Aguillon, S., & Cronin-Gilmore, J. (2024). How Remote Work Changes Communication in Organizations. Journal of Behavioral and Applied Management, 24(3), 173-185.
+[Lyytinen2020]: Lyytinen, K., Nickerson, J. V., & King, J. L. (2020). Metahuman systems = humans + machines that learn. Journal of Information Technology, 36(4), 427-445.
+[McKinsey2023]: Chui, M., Yee, L., Hall, B., Singla, A., & Sukharevsky, A. (2023, August 1). The state of AI in 2023: Generative AI's breakout year. McKinsey & Company. https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2023-generative-ais-breakout-year
 
 [Back to Table of Contents](../README.md)
