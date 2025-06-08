@@ -72,7 +72,7 @@ complexity), the prior distributions are updated using Bayes' theorem to produce
 might express "there's a 50% probability of completion within 3 months, 80% within 4 months, and 95% within 5 months."
 
 <figure> <img src="../images/bayesian-estimation-update.svg" alt="Bayesian Estimation Process - showing how initial
-estimates are updated as project evidence accumulates" width="700" /> <figcaption>Figure 2.1a: Bayesian updating of a
+estimates are updated as project evidence accumulates" width="700" /> <figcaption>Figure 2.1: Bayesian updating of a
 project estimate as new information becomes available</figcaption> </figure>
 
 > **Interactive Visualization**: To better understand how Bayesian estimation evolves through a project lifecycle, explore our [interactive Bayesian Project Estimation visualization](../html/bayesian_estimation.html) that demonstrates how probability distributions narrow as confidence increases through different project stages.
@@ -153,7 +153,7 @@ the three points. This equal weighting of all three points makes it particularly
 similar certainty to the extremes.
 
 <figure> <img src="../images/three-point-estimation.svg" alt="Three-Point Estimation Distributions - showing the
-probability distributions produced by PERT and triangular methods" width="700" /> <figcaption>Figure 2.1b: Probability
+probability distributions produced by PERT and triangular methods" width="700" /> <figcaption>Figure 2.2: Probability
 distributions from three-point estimation techniques</figcaption> </figure>
 
 #### When to Use PERT vs. Triangular
@@ -184,7 +184,7 @@ between optimistic and pessimistic estimates, reflecting higher uncertainty.
 Understanding the cognitive biases that affect each point estimate helps teams produce more accurate three-point ranges:
 
 <figure> <img src="../images/estimation-biases.svg" alt="Estimation Biases - showing factors that influence optimistic,
-most likely, and pessimistic estimates" width="700" /> <figcaption>Figure 2.1c: Common biases affecting three-point
+most likely, and pessimistic estimates" width="700" /> <figcaption>Figure 2.3: Common biases affecting three-point
 estimation components</figcaption> </figure>
 
 #### Generating Better Estimates
@@ -239,7 +239,7 @@ Three-point estimation serves as an accessible entry point to probabilistic thin
 traditional point-based estimates toward more sophisticated uncertainty modeling.
 
 <figure> <img src="../images/under-over-estimation-model.svg" alt="Under vs. Over Estimation Tendencies - showing
-factors that lead to each type of estimation error and their consequences" width="700" /> <figcaption>Figure 2.1:
+factors that lead to each type of estimation error and their consequences" width="700" /> <figcaption>Figure 2.4:
 Factors influencing under and over estimation tendencies and their consequences</figcaption> </figure>
 
 ### Monte Carlo Simulation: Advanced Uncertainty Modeling
@@ -264,7 +264,7 @@ This fundamental process is illustrated in the figure below:
 
 <figure> <img src="../images/monte-carlo-simulation.svg" alt="Monte Carlo Simulation Process - showing how individual
 task distributions are combined through simulation to produce project-level probability distributions" width="700" />
-<figcaption>Figure 2.1d: Monte Carlo simulation process for project estimation</figcaption> </figure>
+<figcaption>Figure 2.5: Monte Carlo simulation process for project estimation</figcaption> </figure>
 
 #### Addressing the Underfitting Problem
 
@@ -338,7 +338,7 @@ toward more sophisticated uncertainty management.
 
 <figure> <img src="../images/estimation-spectrum.svg" alt="Software Estimation Methods Spectrum - showing progression
 from simplistic to sophisticated approaches and their relationship to underfitting and overfitting risks" width="700" />
-<figcaption>Figure 2.1e: Spectrum of estimation approaches showing trade-offs between simplicity and
+<figcaption>Figure 2.6: Spectrum of estimation approaches showing trade-offs between simplicity and
 accuracy</figcaption> </figure>
 
 #### Limitations and Considerations
@@ -355,7 +355,7 @@ outputs, gradually increasing model complexity as estimation maturity grows.
 
 ## 2.2 Software Estimation Approaches: Analysis Through the Underfitting-Overfitting Lens
 
-Having explored the theoretical underpinnings of estimation as a modeling problem and examined various uncertainty modeling techniques, we now turn to specific estimation models widely used in software development. These models exist along the spectrum introduced in Figure 2.1e, with each approach balancing different trade-offs between simplicity and accuracy. This section analyzes how these models exhibit tendencies toward underfitting (oversimplification) or overfitting (excessive specificity) in different contexts. We progress from algorithmic models that often underfit by design toward increasingly context-specific approaches that risk overfitting to historical patterns.
+Having explored the theoretical underpinnings of estimation as a modeling problem and examined various uncertainty modeling techniques, we now turn to specific estimation models widely used in software development. These models exist along the spectrum introduced in Figure 2.6, with each approach balancing different trade-offs between simplicity and accuracy. This section analyzes how these models exhibit tendencies toward underfitting (oversimplification) or overfitting (excessive specificity) in different contexts. We progress from algorithmic models that often underfit by design toward increasingly context-specific approaches that risk overfitting to historical patterns.
 
 ### COCOMO (Constructive Cost Model)
 
@@ -376,7 +376,7 @@ person-months.
 However, its usage has significantly declined in commercial software development as more iterative and agile approaches have gained prominence. Industry surveys suggest that less than 15% of commercial software organizations now use COCOMO as their primary estimation method, though it may be used as a supplementary technique.
 
 <figure> <img src="../images/cocomo-model.svg" alt="COCOMO II Model Framework - showing inputs, processing elements, and
-outputs of the model" width="700" /> <figcaption>Figure 2.2: COCOMO II Model Framework with inputs, processing, and
+outputs of the model" width="700" /> <figcaption>Figure 2.7: COCOMO II Model Framework with inputs, processing, and
 outputs</figcaption> </figure>
 
 A potential limitation of COCOMO is that the values of its parameter coefficients are often constant for similar types
@@ -385,7 +385,7 @@ variations that can exist between different organizations or even between differ
 organization. Unlike the Bayesian approaches discussed in section 2.1, COCOMO does not naturally incorporate uncertainty or update its parameters as new evidence emerges.
 
 <figure> <img src="../images/cocomo-estimation-actual-scatter.svg" alt="COCOMO Estimation vs Actual Effort - showing how
-algorithmic models often underfit real project complexity" width="700" /> <figcaption>Figure 2.2a: Scatter plot showing
+algorithmic models often underfit real project complexity" width="700" /> <figcaption>Figure 2.8: Scatter plot showing
 systematic underestimation in COCOMO models, particularly for larger projects</figcaption> </figure>
 
 The difficulty in establishing a single, universally applicable parametric model suggests an inherent risk of
@@ -443,7 +443,7 @@ sequence. The team then discusses any significant discrepancies in the estimates
 The trend toward remote and distributed teams has led to increasing adoption of digital Planning Poker tools rather than physical cards, but the core methodology remains largely unchanged since its introduction.
 
 <figure> <img src="../images/planning-poker-process.svg" alt="Planning Poker Process Flow - showing the sequence of
-steps in this consensus-based estimation technique" width="700" /> <figcaption>Figure 2.7: Planning Poker process
+steps in this consensus-based estimation technique" width="700" /> <figcaption>Figure 2.9: Planning Poker process
 workflow showing interaction between participants</figcaption> </figure>
 
 While Planning Poker fosters team collaboration and shared understanding, its reliance on abstract units like story
@@ -454,7 +454,7 @@ relative comparisons. Teams sometimes defaulting to a single value for story poi
 underestimation of the true effort involved. Furthermore, the influence of senior team members or the desire to avoid
 conflict can lead to estimates that do not fully reflect the perceived difficulty of a task.
 
-Planning Poker represents a middle ground on the estimation spectrum presented in Figure 2.1e, incorporating elements of three-point estimation through team discussion while remaining more accessible than formal Monte Carlo approaches.
+Planning Poker represents a middle ground on the estimation spectrum presented in Figure 2.6, incorporating elements of three-point estimation through team discussion while remaining more accessible than formal Monte Carlo approaches.
 
 ### Function Points (FPs)
 
@@ -480,7 +480,7 @@ Each is categorized by complexity and adjusted using 14 general system character
 Industry surveys suggest approximately 25% of organizations use Function Points in some capacity, though usage has gradually declined since the early 2000s. The approach remains more popular in Europe, Japan, and Brazil than in North America. Recent years have seen attempts to adapt Function Points to agile contexts, though with limited widespread adoption.
 
 <figure> <img src="../images/function-points-model.svg" alt="Function Points Analysis Model - showing the five function
-types and complexity classification" width="700" /> <figcaption>Figure 2.3: Function Points Analysis Model with
+types and complexity classification" width="700" /> <figcaption>Figure 2.10: Function Points Analysis Model with
 complexity weights</figcaption> </figure>
 
 While aiming for an objective measure, the process of defining and weighting these function points involves a degree of
@@ -510,7 +510,7 @@ directly affect both underfitting and overfitting in estimation models in severa
 The trend is toward rapid experimentation and evaluation, with organizations actively seeking new estimation frameworks specifically designed for AI-augmented development workflows.
 
 <figure> <img src="../images/ai-estimation-challenges.svg" alt="Estimation Challenges in AI-Assisted Development -
-showing four key challenges affecting traditional estimation models" width="700" /> <figcaption>Figure 2.4: Examples of
+showing four key challenges affecting traditional estimation models" width="700" /> <figcaption>Figure 2.11: Examples of
 challenges in estimating AI-assisted development work</figcaption> </figure> <br/><br/>
 
 **Productivity Variance Amplification:** AI tools can dramatically amplify the variance in developer productivity,
@@ -523,7 +523,7 @@ This increased variance challenges both expert judgment and historical data-base
 relationships between task complexity and time required have been disrupted.
 
 <figure> <img src="../images/ai-productivity-variance.svg" alt="AI Productivity Variance - comparing development time
-across different task types with and without AI assistance" width="700" /> <figcaption>Figure 2.5: Productivity variance
+across different task types with and without AI assistance" width="700" /> <figcaption>Figure 2.12: Productivity variance
 across task types when using AI assistance (illustrative, not using real metrics)</figcaption> </figure> <br/><br/>
 
 **Skill Deterioration and Manual Takeover:** A challenge identified by Bainbridge [1983] in her work "Ironies of Automation" applies to AI-assisted development. Bainbridge noted that "physical skills deteriorate when they are not used, particularly the refinements of gain and timing" and that "a formerly experienced operator who has been monitoring an automated process may now be an inexperienced one" [Bainbridge, 1983]. In software development, developers who rely on AI assistance may experience:
@@ -607,7 +607,7 @@ during the initial estimation phase, leading to an oversimplified view of the pr
 A significant example of this underfitting occurs with distributed teams. Research by Herbsleb & Mockus [2003] found that globally distributed development work took 2.5x longer than co-located work, primarily due to coordination challenges. This substantial multiplier is rarely adequately accounted for in traditional estimation approaches, leading to systematic underestimation for distributed projects.
 
 <figure> <img src="../images/hidden-complexities-model.svg" alt="Hidden Complexities in Software Estimation - factors
-often overlooked in traditional estimation approaches" width="700" /> <figcaption>Figure 2.6: Hidden complexity factors
+often overlooked in traditional estimation approaches" width="700" /> <figcaption>Figure 2.13: Hidden complexity factors
 that contribute to estimation errors</figcaption> </figure> <br/><br/>
 
 The common practice of multiplying initial software estimates [by a
@@ -621,7 +621,7 @@ software project risks. The "long tail" refers to the distribution of risks wher
 potentially high-impact events can occur alongside the more common risks.
 
 <figure> <img src="../images/long-tail-risks.svg" alt="Long Tail Distribution of Software Project Risks - showing the
-relationship between risk frequency and impact severity" width="700" /> <figcaption>Figure 2.8: Long tail distribution
+relationship between risk frequency and impact severity" width="700" /> <figcaption>Figure 2.14: Long tail distribution
 of software project risks from common to rare, high-impact events</figcaption> </figure>
 
 These might include:
