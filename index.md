@@ -8,8 +8,10 @@ This publication explores how concepts of underfitting and overfitting provide a
 - AI's transformative impact on organizational practices
 
 <div class="publication-info">
-  <p>Initial Release: April 2025 | Last Updated: May 2025</p>
-  <p><em>Note: AI capabilities evolve rapidly. Content reflects understanding as of publication date.</em></p>
+  <p>Initial Release: April 2025 | Edition 2026 Update: In Progress</p>
+  <p><em>Note: AI capabilities evolve rapidly. The 2025 edition is preserved as a historical snapshot.
+  This edition incorporates developments through early 2026.</em></p>
+  <p><em>See <a href="PUBLICATION_HISTORY.html">Publication History</a> for details.</em></p>
 </div>
 
 ## Available Chapters

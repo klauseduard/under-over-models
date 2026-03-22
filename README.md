@@ -5,17 +5,15 @@ and overfitting as they are used in machine learning and mathematical modeling,
 help us understand various problems of in software development field.
 
 
-## Publication Status: Work In Progress
+## Publication Status: Edition 2026 — In Progress
 
-> **Note**: This publication is currently under active development. Chapters 1 (Introduction), 
-> 2 (Software Time Estimation), 3 (Organizational Models), 4 (Stakeholder Dynamics), 
-> 5 (Organizational Size, Life-Cycle Phases), and 6 (Related Theoretical Concepts) are fully edited and ready for reading.
-> Other chapters are in various stages of development and may contain
-> incomplete content.
->
-> **📚 [View the publication
-> website](https://klauseduard.github.io/under-over-models/)** for the properly
-> formatted content.
+**Note**: This is the **2026 edition**, a comprehensive update of the original 2025 publication.
+Chapters 1–6 are fully edited. Chapters 7–10 are undergoing revision and completion.
+The 2025 edition is preserved as a historical snapshot (git tag: `release-2025`).
+
+**📚 [View the publication
+website](https://klauseduard.github.io/under-over-models/)** for the properly
+formatted content.
 
 ## Motivation and Perspective
 
