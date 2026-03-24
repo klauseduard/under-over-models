@@ -16,21 +16,13 @@
 
 ## 2.1 Time Estimation as a Modeling Problem
 
-Software time estimation operates as a predictive model that aims to forecast the duration and effort required to
-complete a software development project. Various estimation techniques, including the use of historical data from past
-projects, the application of expert judgment, and structured methods like Planning Poker and algorithmic models such as
-COCOMO, are employed to create this predictive model.
+Software time estimation is a predictive model: it takes inputs like project size, team experience, and technical
+environment, and produces a forecast of effort and duration. Various techniques — historical data, expert judgment,
+Planning Poker, algorithmic models like COCOMO — attempt this prediction in different ways.
 
-These methods take into account various inputs, such as the size and complexity of the software, the experience and
-skills of the development team, and the technological environment, to produce an estimate of the effort in person-hours
-or person-months and the duration of the project. However, these estimation models are inherently subject to various
-biases, uncertainties, and the dynamic nature of software development itself.
-
-Factors like evolving requirements, unforeseen technical challenges, and the inherent difficulty in accurately
-predicting human effort contribute to the imperfection of these predictive models. Therefore, software time estimation
-can be understood as a complex modeling problem that attempts to predict a future outcome under conditions of
-uncertainty. This perspective highlights why estimation techniques are susceptible to both underfitting
-(oversimplification, missing key risks) and overfitting (overly reliant on specific past data that doesn't generalize).
+All of them are imperfect. Evolving requirements, unforeseen technical challenges, and the difficulty of predicting
+human effort mean that estimation is inherently a modeling problem under uncertainty — susceptible to both underfitting
+(oversimplification, missing key risks) and overfitting (over-reliance on specific past data that doesn't generalize).
 
 From an [information theory](https://www.britannica.com/science/information-theory) perspective, software estimation can
 be viewed as attempting to model a high-entropy system. As project complexity increases, so does the
@@ -111,25 +103,14 @@ limitations of traditional estimation techniques, though more empirical validati
 
 ### Three-Point Estimation: Practical Uncertainty Modeling
 
-While full Bayesian approaches offer powerful theoretical frameworks, simpler probabilistic techniques like [three-point
-estimation](https://www.tutorialspoint.com/estimation_techniques/estimation_techniques_three_point.htm) provide a
-practical middle ground between single-point estimates and comprehensive statistical modeling. These techniques
-explicitly acknowledge uncertainty while remaining accessible to teams without statistical expertise.
+[Three-point estimation](https://www.tutorialspoint.com/estimation_techniques/estimation_techniques_three_point.htm)
+offers a practical middle ground between single-point estimates and full Bayesian modeling. By capturing three
+scenarios — optimistic, most likely, and pessimistic — it acknowledges uncertainty while remaining accessible to
+teams without statistical expertise.
 
-Three-point estimation stands as a bridge between simplistic point estimates and full probabilistic models. By capturing
-three distinct scenarios—optimistic, most likely, and pessimistic—these techniques provide a structured approach to
-quantifying uncertainty while remaining accessible to practitioners without extensive statistical backgrounds.
+#### Method
 
-Three-point estimation techniques address key limitations of single-point estimates by:
-
-1. Explicitly acknowledging uncertainty
-2. Capturing asymmetric risk profiles
-3. Providing a basis for statistical inference
-4. Communicating risk to stakeholders
-
-#### Common Three-Point Estimation Methods
-
-Three-point estimation techniques capture uncertainty by collecting three distinct estimates for each task or project:
+Three-point estimation collects three estimates for each task or project:
 
 1. **Optimistic estimate ($O$)**: The best-case scenario, with a low probability (often ~10%)
 2. **Most likely estimate ($M$)**: The realistic scenario with highest probability
@@ -271,8 +252,7 @@ task distributions are combined through simulation to produce project-level prob
 Monte Carlo simulation directly counters underfitting in several ways:
 
 1. **Capturing complexity**: Models intricate task dependencies that simple formulas cannot express
-2. **Revealing hidden risks**: Exposes "fat tails" in completion probabilities that deterministic methods ignore
-   - **Fat tails** are probability distributions where extreme events (those in the "tail" of the distribution) occur with significantly higher probability than would be predicted by normal distributions. Unlike standard long-tail distributions, fat-tail distributions feature truly catastrophic outliers that can single-handedly dominate outcomes. In software projects, fat-tail events might include critical security vulnerabilities requiring complete redesign, fundamental algorithmic flaws discovered late in testing, or unexpected regulatory changes that invalidate core assumptions.
+2. **Revealing hidden risks**: Exposes "[fat tails](#long-tail-of-software-project-risks)" in completion probabilities that deterministic methods ignore
 3. **Quantifying uncertainty precisely**: Provides percentile-based estimates (e.g., P50, P90) rather than single values
 4. **Integrating multiple risk factors**: Combines schedule, resource, and complexity uncertainties into unified distributions
 
@@ -355,7 +335,7 @@ outputs, gradually increasing model complexity as estimation maturity grows.
 
 ## 2.2 Software Estimation Approaches: Analysis Through the Underfitting-Overfitting Lens
 
-Having explored the theoretical underpinnings of estimation as a modeling problem and examined various uncertainty modeling techniques, we now turn to specific estimation models widely used in software development. These models exist along the spectrum introduced in Figure 2.6, with each approach balancing different trade-offs between simplicity and accuracy. This section analyzes how these models exhibit tendencies toward underfitting (oversimplification) or overfitting (excessive specificity) in different contexts. We progress from algorithmic models that often underfit by design toward increasingly context-specific approaches that risk overfitting to historical patterns.
+The following estimation methods exist along the spectrum introduced in Figure 2.6. We progress from algorithmic models that often underfit by design toward increasingly context-specific approaches that risk overfitting to historical patterns.
 
 ### COCOMO (Constructive Cost Model)
 
